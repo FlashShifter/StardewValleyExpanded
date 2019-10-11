@@ -34,6 +34,10 @@ namespace StardewValleyExpanded
                 asset.AssetNameEquals("Characters/Marlon")
                 || asset.AssetNameEquals("Characters/Morris")
 
+                //Portraits
+                || asset.AssetNameEquals("Portraits/Marlon")
+                || asset.AssetNameEquals("Portraits/Morris")
+
                 //Dialogue
                 || asset.AssetNameEquals("Characters/Dialogue/Marlon")
                 || asset.AssetNameEquals("Characters/Dialogue/Morris")
@@ -54,6 +58,12 @@ namespace StardewValleyExpanded
                 return this.Helper.Content.Load<T>("[SVE] Marlon/assets/Image/Sprite.png");
             if (asset.AssetNameEquals("Characters/Morris"))
                 return this.Helper.Content.Load<T>("[SVE] Morris/assets/Image/Sprite.png");
+
+            //Portraits
+            if (asset.AssetNameEquals("Portraits/Marlon"))
+                return this.Helper.Content.Load<T>("[SVE] Marlon/assets/Image/Marlon.png");
+            if (asset.AssetNameEquals("Portraits/Morris"))
+                return this.Helper.Content.Load<T>("[SVE] Morris/assets/Image/Morris.png");
 
             //Dialogue
             if (asset.AssetNameEquals("Characters/Dialogue/Marlon"))
