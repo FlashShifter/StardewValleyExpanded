@@ -12,6 +12,9 @@ namespace StardewValleyExpanded
         //We default it to true so that any npc we create with this class will be able to socialize.
         public override bool CanSocialize { get; } = true;
 
+        //Empty constructor
+        public SocialNPC() { }
+
         /* This method is what creates the overridden npc. 
            Using the base keyword sets what constructor should be used when creating 
            new instances of this class.

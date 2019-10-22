@@ -29,22 +29,30 @@ namespace StardewValleyExpanded
         //Checks whether this instance can load the initial version of the given asset
         public bool CanLoad<T>(IAssetInfo asset)
         {
-            return
-                //Sprites
-                asset.AssetNameEquals("Characters/Marlon")
-                || asset.AssetNameEquals("Characters/Morris")
-
-                //Portraits
+            /*
+             * Order for assets is:
+             * Sprites
+             * Portraits
+             * Dialogue
+             * Schedule
+             */
+            var marlon = asset.AssetNameEquals("Characters/Marlon")
                 || asset.AssetNameEquals("Portraits/Marlon")
-                || asset.AssetNameEquals("Portraits/Morris")
-
-                //Dialogue
                 || asset.AssetNameEquals("Characters/Dialogue/Marlon")
-                || asset.AssetNameEquals("Characters/Dialogue/Morris")
+                || asset.AssetNameEquals("Characters/Schedules/Marlon");
 
-                //Schedules
-                || asset.AssetNameEquals("Characters/Schedules/Marlon")
-                || asset.AssetNameEquals("Characters/Schedules/Morris");
+            //Checking if player has not completed the CC before checking for Morris' assets
+            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            {
+                var morris = asset.AssetNameEquals("Characters/Morris")
+                    || asset.AssetNameEquals("Portraits/Morris")
+                    || asset.AssetNameEquals("Characters/Dialogue/Morris")
+                    || asset.AssetNameEquals("Characters/Schedules/Morris");
+
+                return marlon || morris;
+            }
+
+            return marlon;
         }
 
         /* Loading the new assets when the found asset names match.
@@ -117,8 +125,16 @@ namespace StardewValleyExpanded
         {
             //Here's where we create our new Npcs to use and set them to those global variables
             this.Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(5, 11));
-            this.Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(8, 5));
-            foreach (SocialNPC npc in new[] { this.Marlon, this.Morris })
+            var npcList = new[] { this.Marlon };
+
+            //If CC hasn't been completed then we create Morris
+            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            {
+                this.Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(8, 5));
+                npcList = new[] { this.Marlon, this.Morris };
+            }
+
+            foreach (SocialNPC npc in npcList)
             {
                 //For each npc in the array, we want to add our overriden npc and remove the original, then reload the data
                 npc.OriginalNpc.currentLocation.characters.Add(npc);
@@ -132,7 +148,14 @@ namespace StardewValleyExpanded
          */
         private void OnSave(object sender, SavingEventArgs args)
         {
-            foreach (SocialNPC npc in new[] { this.Marlon, this.Morris })
+            var npcList = new[] { this.Marlon };
+
+            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            {
+                npcList = new[] { this.Marlon, this.Morris };
+            }
+
+            foreach (SocialNPC npc in npcList)
             {
                 npc.currentLocation.characters.Add(npc.OriginalNpc);
                 npc.currentLocation.characters.Remove(npc);
