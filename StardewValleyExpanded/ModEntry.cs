@@ -42,7 +42,7 @@ namespace StardewValleyExpanded
                 || asset.AssetNameEquals("Characters/Schedules/Marlon");
 
             //Checking if player has not completed the CC before checking for Morris' assets
-            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
                 var morris = asset.AssetNameEquals("Characters/Morris")
                     || asset.AssetNameEquals("Portraits/Morris")
