@@ -107,12 +107,18 @@ namespace StardewValleyExpanded
             if (asset.AssetNameEquals("Data/NPCDispositions"))
             {
                 data["Marlon"] = "adult/neutral/neutral/positive/male/not-datable/null/Town/winter 5//AdventureGuild 6 13/Marlon";
-                data["Morris"] = "adult/polite/neutral/negative/male/not-datable/null/Town/summer 1//JojaMart 27 26/Morris";
-            } 
+                if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
+                {
+                    data["Morris"] = "adult/polite/neutral/negative/male/not-datable/null/Town/summer 1//JojaMart 27 26/Morris";
+                }
+            }
             else if (asset.AssetNameEquals("Data/NPCGiftTastes"))
             {
                 data["Marlon"] = "This is a mighty gift, @. Thank you./244 413 437 439 680/Thanks. I'll find some use of this./346 303 348 459 205 422 287 288/Hmmm... that will be a hard pass. My apologies./-81/This unfortunately doesn't suit me./-80 283 233/Thanks./286 424 426 436 438 803 184 186 420 -28/";
-                data["Morris"] = "Ah! A gift worthy of my attention. Thank you, @./730 727 432 578/This is delightful!/72 348 430 428/I don't like this.../346 459 303 -81/What a despicable gift. Get this away from me./167 -74/That's generous of you./-75 -79 -80/";
+                if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
+                {
+                    data["Morris"] = "Ah! A gift worthy of my attention. Thank you, @./730 727 432 578/This is delightful!/72 348 430 428/I don't like this.../346 459 303 -81/What a despicable gift. Get this away from me./167 -74/That's generous of you./-75 -79 -80/";
+                }
             }
             //Throw an error to the smapi console if we can't edit the assets
             else throw new InvalidOperationException($"Unexpected asset '{asset.AssetName}'");
@@ -124,13 +130,13 @@ namespace StardewValleyExpanded
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             //Here's where we create our new Npcs to use and set them to those global variables
-            this.Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(5, 11));
+            this.Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
             var npcList = new[] { this.Marlon };
 
             //If CC hasn't been completed then we create Morris
-            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
-                this.Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(8, 5));
+                this.Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27));
                 npcList = new[] { this.Marlon, this.Morris };
             }
 
@@ -150,7 +156,7 @@ namespace StardewValleyExpanded
         {
             var npcList = new[] { this.Marlon };
 
-            if (!Game1.MasterPlayer.hasCompletedCommunityCenter())
+            if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
                 npcList = new[] { this.Marlon, this.Morris };
             }

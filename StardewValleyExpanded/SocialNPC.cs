@@ -4,7 +4,7 @@ using StardewValley;
 namespace StardewValleyExpanded
 {
     // Implementing the NPC interface which is what lets us override or create new NPCs
-    class SocialNPC : NPC
+    public class SocialNPC : NPC
     {
         //Variable for the originalNpc
         public NPC OriginalNpc { get; }
