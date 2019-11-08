@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -130,14 +131,26 @@ namespace StardewValleyExpanded
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             //Here's where we create our new Npcs to use and set them to those global variables
-            this.Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
-            var npcList = new[] { this.Marlon };
+            Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
+            var npcList = new[] { Marlon };
 
             //If CC hasn't been completed then we create Morris
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
-                this.Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27));
-                npcList = new[] { this.Marlon, this.Morris };
+                var blah = Game1.getCharacterFromName("Morris", mustBeVillager: true);
+                if (blah == null)
+                {
+                    var morris = new NPC
+                    {
+                        DefaultMap = "JojaMart",
+                        FacingDirection = 3,
+                        Name = "Morris",
+                        Portrait = this.Helper.Content.Load<Texture2D>("[SVE] Morris/assets/Image/Morris.png")
+                    };
+                    Morris = new SocialNPC(morris, new Vector2(27, 27));
+                } else { Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27)); }
+                
+                npcList = new[] { Marlon, Morris };
             }
 
             foreach (SocialNPC npc in npcList)
@@ -154,11 +167,11 @@ namespace StardewValleyExpanded
          */
         private void OnSave(object sender, SavingEventArgs args)
         {
-            var npcList = new[] { this.Marlon };
+            var npcList = new[] { Marlon };
 
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
-                npcList = new[] { this.Marlon, this.Morris };
+                npcList = new[] { Marlon, Morris };
             }
 
             foreach (SocialNPC npc in npcList)
@@ -167,5 +180,18 @@ namespace StardewValleyExpanded
                 npc.currentLocation.characters.Remove(npc);
             }
         }
+
+        public void AddSerializers()
+        {
+            var api = Helper.ModRegistry.GetApi<ISerializerAPI>("Platonymous.Toolkit");
+            api?.AddPreSerialization(ModManifest, (obj) => (obj is SocialNPC snpc) ? (object)snpc.OriginalNpc : obj);
+            api?.AddPostDeserialization(ModManifest, (obj) => (obj is NPC npc) ? npc.Name == "Morris" ? new SocialNPC(npc, new Vector2(27, 27)) : npc.Name == "Marlon" ? new SocialNPC(npc, new Vector2(4, 11)) : obj : obj);
+        }
+    }
+
+    public interface ISerializerAPI
+    {
+        void AddPreSerialization(IManifest manifest, Func<object, object> preserializer);
+        void AddPostDeserialization(IManifest manifest, Func<object, object> postserializer);
     }
 }
