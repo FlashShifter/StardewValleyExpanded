@@ -167,7 +167,6 @@ namespace StardewValleyExpanded
          */
         private void OnSave(object sender, SavingEventArgs args)
         {
-            AddSerializers();
             var npcList = new[] { Marlon };
 
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
