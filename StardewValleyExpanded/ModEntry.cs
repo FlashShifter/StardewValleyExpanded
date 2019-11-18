@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
@@ -16,15 +17,15 @@ namespace StardewValleyExpanded
 
         //The overridden npcs
         //Having these global variables lets us access them throughout the entire class.
-        private SocialNPC Marlon;
-        private SocialNPC Morris;
+        private SocialNPC Marlon = null;
+        private SocialNPC Morris = null;
 
         //The mod entry point, which is called when the mod is loaded
         //The IModHelper parameter is what provides the simplified api for us to use
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
-            helper.Events.GameLoop.Saving += this.OnSave;
+            helper.Events.GameLoop.DayEnding += this.OnDayEnding;
         }
 
         //Checks whether this instance can load the initial version of the given asset
@@ -125,16 +126,50 @@ namespace StardewValleyExpanded
             else throw new InvalidOperationException($"Unexpected asset '{asset.AssetName}'");
         }
 
-        /*
-         * This method is ran when a new day is started or loaded.
-         */
+        /// <summary>
+        /// Start of day routine. Occurs after game load / game saved. Creates the needed NPCs if applicable, then swaps out the Vanilla
+        /// <see cref="NPC"/> instance for the custom <see cref="SocialNPC"/> instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            //Here's where we create our new Npcs to use and set them to those global variables
-            Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
-            var npcList = new[] { Marlon };
+            // Create NPCs, if needed.
+            SetUpMarlon();
+            SetUpMorris();
 
-            //If CC hasn't been completed then we create Morris
+            // Generate list of NPCs
+            var npcList = new List<SocialNPC>() { Marlon };
+            if (Morris != null) npcList.Add(Morris);
+
+            // For each NPC within the list, add wrapped NPC (SocialNPC) and chuck out the vanilla NPC.
+            foreach (SocialNPC npc in npcList)
+            {
+                npc.OriginalNpc.currentLocation.characters.Add(npc);
+                npc.OriginalNpc.currentLocation.characters.Remove(npc.OriginalNpc);
+                npc.ForceReload();
+            }
+        }
+
+        /// <summary>
+        /// Sets up NPC Marlon as a <see cref="SocialNPC"/>, if it wasn't already set up.
+        /// </summary>
+        private void SetUpMarlon()
+        {
+            // Check if NPC was already created
+            if (Marlon != null) return;
+            Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
+        }
+
+        /// <summary>
+        /// Sets up NPC Morris as a <see cref="SocialNPC"/>, if it wasn't already set up.
+        /// </summary>
+        private void SetUpMorris()
+        {
+            // Check if NPC was already created
+            if (Morris != null) return;
+
+            // If CC hasn't been completed then we create Morris
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
                 var blah = Game1.getCharacterFromName("Morris", mustBeVillager: true);
@@ -148,30 +183,26 @@ namespace StardewValleyExpanded
                         Portrait = this.Helper.Content.Load<Texture2D>("[SVE] Morris/assets/Image/Morris.png")
                     };
                     Morris = new SocialNPC(morris, new Vector2(27, 27));
-                } else { Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27)); }
-                
-                npcList = new[] { Marlon, Morris };
-            }
-
-            foreach (SocialNPC npc in npcList)
-            {
-                //For each npc in the array, we want to add our overriden npc and remove the original, then reload the data
-                npc.OriginalNpc.currentLocation.characters.Add(npc);
-                npc.OriginalNpc.currentLocation.characters.Remove(npc.OriginalNpc);
-                npc.ForceReload();
+                }
+                else
+                {
+                    Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27));
+                }
             }
         }
 
-        /*
-         * Here's where we swap back in the original npc before saving the game
-         */
-        private void OnSave(object sender, SavingEventArgs args)
+        /// <summary>
+        /// End of Day routine. Occurs before saving. Swaps the wrapped, custom NPCs (<see cref="SocialNPC"/>) with the Vanilla NPC.
+        /// </summary>
+        /// <param name="sender">The caller of the event.</param>
+        /// <param name="args">Arguments passed in</param>
+        private void OnDayEnding(object sender, DayEndingEventArgs args)
         {
-            var npcList = new[] { Marlon };
+            var npcList = new List<SocialNPC>() { Marlon };
 
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
-                npcList = new[] { Marlon, Morris };
+                npcList.Add(Morris);
             }
 
             foreach (SocialNPC npc in npcList)
@@ -180,18 +211,5 @@ namespace StardewValleyExpanded
                 npc.currentLocation.characters.Remove(npc);
             }
         }
-
-        public void AddSerializers()
-        {
-            var api = Helper.ModRegistry.GetApi<ISerializerAPI>("Platonymous.Toolkit");
-            api?.AddPreSerialization(ModManifest, (obj) => (obj is SocialNPC snpc) ? (object)snpc.OriginalNpc : obj);
-            api?.AddPostDeserialization(ModManifest, (obj) => (obj is NPC npc) ? npc.Name == "Morris" ? new SocialNPC(npc, new Vector2(27, 27)) : npc.Name == "Marlon" ? new SocialNPC(npc, new Vector2(4, 11)) : obj : obj);
-        }
-    }
-
-    public interface ISerializerAPI
-    {
-        void AddPreSerialization(IManifest manifest, Func<object, object> preserializer);
-        void AddPostDeserialization(IManifest manifest, Func<object, object> postserializer);
     }
 }
