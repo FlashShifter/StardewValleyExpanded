@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Netcode;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using xTile.ObjectModel;
 
 namespace StardewValleyExpanded
 {
@@ -13,21 +16,32 @@ namespace StardewValleyExpanded
      */
     public class ModEntry : Mod, IAssetLoader, IAssetEditor
     {
-
         //The overridden npcs
         //Having these global variables lets us access them throughout the entire class.
-        private SocialNPC Marlon;
-        private SocialNPC Morris;
+        private SocialNPC Marlon = null;
+        private SocialNPC Morris = null;
+
+        private bool firstTick = true;
 
         //The mod entry point, which is called when the mod is loaded
         //The IModHelper parameter is what provides the simplified api for us to use
         public override void Entry(IModHelper helper)
         {
+            helper.Events.GameLoop.SaveCreated += this.NpcFixes;
+            helper.Events.GameLoop.SaveLoaded += this.NpcFixes;
+            helper.Events.GameLoop.DayEnding += this.OnDayEnding;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
-            helper.Events.GameLoop.Saving += this.OnSave;
+            helper.Events.GameLoop.ReturnedToTitle += this.Clean;
+
+            helper.ConsoleCommands.Add("listnpcs", "Lists the NPCs currently in memory.\n\nUsage: listnpcs [name]\n - name : Optional value. The name of the npc.", this.ListNpcs);
         }
 
-        //Checks whether this instance can load the initial version of the given asset
+        /// <summary>
+        /// Checks whether an asset can be loaded.
+        /// </summary>
+        /// <typeparam name="T">The generic asset type.</typeparam>
+        /// <param name="asset">The asset data to check against.</param>
+        /// <returns>True if the asset can be loaded. False otherwise.</returns>
         public bool CanLoad<T>(IAssetInfo asset)
         {
             /*
@@ -56,10 +70,12 @@ namespace StardewValleyExpanded
             return marlon;
         }
 
-        /* Loading the new assets when the found asset names match.
-         * So if the original asset found matches the path in the if statement
-         * then we provide the new asset we want to be used which can be found in the provided path
-         */
+        /// <summary>
+        /// Loads new assets when the asset name is found to be a match.
+        /// </summary>
+        /// <typeparam name="T">The generic asset type.</typeparam>
+        /// <param name="asset">The asset data to be loaded.</param>
+        /// <returns>The asset type, loaded into memory.</returns>
         public T Load<T>(IAssetInfo asset)
         {
             //Sprites
@@ -90,17 +106,24 @@ namespace StardewValleyExpanded
             throw new InvalidOperationException($"Unexpected asset '{asset.AssetName}'");
         }
 
-        //Checks to see if we can edit an asset
+        /// <summary>
+        /// Checks to see if the assets can be editted.
+        /// </summary>
+        /// <typeparam name="T">The generic asset type.</typeparam>
+        /// <param name="asset">The asset data to check against.</param>
+        /// <returns>True if the asset can be editted. False otherwise.</returns>
         public bool CanEdit<T>(IAssetInfo asset)
         {
             return asset.AssetNameEquals("Data/NPCDispositions")
                 || asset.AssetNameEquals("Data/NPCGiftTastes");
         }
 
-        /* Here's where we actually edit the asset to be what we want it to be.
-         * In this case we're editing the disposition and gift taste to be how we want them
-         * to be by just setting the strings..
-         */
+        /// <summary>
+        /// Edits the assets to be reconstructed to their proper form for SVE. Edits the disposition and the 
+        /// gift taste of the targeted NPCs.
+        /// </summary>
+        /// <typeparam name="T">The generic asset type.</typeparam>
+        /// <param name="asset">The asset data to edit.</param>
         public void Edit<T>(IAssetData asset)
         {
             var data = asset.AsDictionary<string, string>().Data;
@@ -125,73 +148,215 @@ namespace StardewValleyExpanded
             else throw new InvalidOperationException($"Unexpected asset '{asset.AssetName}'");
         }
 
-        /*
-         * This method is ran when a new day is started or loaded.
-         */
-        private void OnDayStarted(object sender, DayStartedEventArgs e)
-        {
-            //Here's where we create our new Npcs to use and set them to those global variables
-            Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
-            var npcList = new[] { Marlon };
+        /// <summary>
+        /// From Spacechase0's CustomNPCFixes. We just need a bit more control when this triggers.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void NpcFixes(object sender, EventArgs args) {
+            // This needs to be called again so that custom NPCs spawn in locations added after the original call
+            Game1.fixProblems();
 
-            //If CC hasn't been completed then we create Morris
-            if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
+            // Before we populate the route list, we need to fix doors from conditional CP patches and such.
+            // This can be removed once SMAPI 3.0 comes out.
+            foreach (var loc in Game1.locations) {
+                loc.doors.Clear();
+                for (int x = 0; x < loc.map.Layers[0].LayerWidth; ++x) {
+                    for (int y = 0; y < loc.map.Layers[0].LayerHeight; ++y) {
+                        if (loc.map.GetLayer("Buildings").Tiles[x, y] != null) {
+                            PropertyValue propertyValue3 = (PropertyValue)null;
+                            loc.map.GetLayer("Buildings").Tiles[x, y].Properties.TryGetValue("Action", out propertyValue3);
+                            if (propertyValue3 != null && propertyValue3.ToString().Contains("Warp")) {
+                                string[] strArray = propertyValue3.ToString().Split(' ');
+                                if (strArray[0].Equals("WarpCommunityCenter"))
+                                    loc.doors.Add(new Point(x, y), new NetString("CommunityCenter"));
+                                else if ((!loc.name.Equals((object)"Mountain") || x != 8 || y != 20) && strArray.Length > 2)
+                                    loc.doors.Add(new Point(x, y), new NetString(strArray[3]));
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Similarly, this needs to be called again so that pathing works.
+            NPC.populateRoutesFromLocationToLocationList();
+
+            // Schedules for new NPCs don't work the first time.
+            fixSchedules();
+        }
+
+        private void Clean(object sender, EventArgs e) {
+            Marlon = null;
+            Morris = null;
+        }
+
+        /// <summary>
+        /// From Spacechase0's CustomNPCFixes. We just need a bit more control when this triggers.
+        /// </summary>
+        private void fixSchedules() {
+            foreach (var npc in Utility.getAllCharacters()) {
+                if (npc.Schedule == null) {
+                    try {
+                        npc.Schedule = npc.getSchedule(Game1.dayOfMonth);
+                        npc.checkSchedule(Game1.timeOfDay);
+                    } catch (Exception e) {
+                        Monitor.Log("Exception doing schedule for NPC " + npc.Name + ": " + e, LogLevel.Error);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Start of day routine. Occurs after game load / game saved. Creates the needed NPCs if applicable, then swaps out the Vanilla
+        /// <see cref="NPC"/> instance for the custom <see cref="SocialNPC"/> instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnDayStarted(object sender, EventArgs e)
+        {
+            // Create NPCs, if needed.
+            SetUpMarlon();
+            SetUpMorris();
+
+            // Generate list of NPCs
+            var npcList = new List<SocialNPC>() { Marlon };
+            if (Morris != null) npcList.Add(Morris);
+
+            // For each NPC within the list, add wrapped NPC (SocialNPC) and chuck out the vanilla NPC.
+            foreach (SocialNPC npc in npcList)
             {
+                npc.OriginalNpc.currentLocation.characters.Add(npc);
+                if (!npc.OriginalNpc.currentLocation.characters.Remove(npc.OriginalNpc)) {
+                    Monitor.Log($"Unable to remove SocialNPC: {npc.Name}");
+                }
+                npc.ForceReload();
+            }
+
+            Game1.fixProblems();
+            fixSchedules();
+
+            this.PrintNPCs(Marlon.Name);
+            this.PrintNPCs(Morris.Name);
+
+            this.RemoveDuplicates(Marlon.Name);
+            this.RemoveDuplicates(Morris.Name);
+        }
+
+        /// <summary>
+        /// A console command to list NPCs in memory. If a NPC name is provided, display the information regarding NPC.
+        /// If no names are provided, displays a list of all NPCs in memory.
+        /// </summary>
+        /// <param name="command"></param>
+        /// <param name="argv"></param>
+        private void ListNpcs(string command, string[] argv) {
+            if (argv.Length == 0) {
+                foreach (GameLocation loc in Game1.locations) {
+                    foreach (NPC npc in loc.characters) {
+                        this.Monitor.Log($"{npc.Name} - {npc.currentLocation.Name} - {npc.Position}");
+                    }
+                }
+            } else {
+                this.PrintNPCs(argv[0]);
+                //NPC npc = Game1.getCharacterFromName<NPC>(argv[0]);
+                //if (npc != null) {
+                //    this.Monitor.Log($"Name: {npc.Name}");
+                //    this.Monitor.Log($"Location:  { npc.currentLocation.Name }");
+                //    this.Monitor.Log($"Position: {npc.Position}");
+                //    this.Monitor.Log($"Schedule: {npc.Schedule}");
+                //}
+            }
+        }
+
+        /// <summary>
+        /// Sets up NPC Marlon as a <see cref="SocialNPC"/>, if it wasn't already set up.
+        /// </summary>
+        private void SetUpMarlon() {
+            Marlon = new SocialNPC(Game1.getCharacterFromName("Marlon", mustBeVillager: true), new Vector2(4, 11));
+        }
+
+        /// <summary>
+        /// Sets up NPC Morris as a <see cref="SocialNPC"/>, if it wasn't already set up.
+        /// </summary>
+        private void SetUpMorris() {
+
+            // If CC hasn't been completed then we create Morris
+            if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter()) {
                 var blah = Game1.getCharacterFromName("Morris", mustBeVillager: true);
-                if (blah == null)
-                {
-                    var morris = new NPC
-                    {
+                if (blah == null) {
+                    var morris = new NPC {
                         DefaultMap = "JojaMart",
                         FacingDirection = 3,
                         Name = "Morris",
                         Portrait = this.Helper.Content.Load<Texture2D>("[SVE] Morris/assets/Image/Morris.png")
                     };
                     Morris = new SocialNPC(morris, new Vector2(27, 27));
-                } else { Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27)); }
-                
-                npcList = new[] { Marlon, Morris };
-            }
-
-            foreach (SocialNPC npc in npcList)
-            {
-                //For each npc in the array, we want to add our overriden npc and remove the original, then reload the data
-                npc.OriginalNpc.currentLocation.characters.Add(npc);
-                npc.OriginalNpc.currentLocation.characters.Remove(npc.OriginalNpc);
-                npc.ForceReload();
+                } else {
+                    Morris = new SocialNPC(Game1.getCharacterFromName("Morris", mustBeVillager: true), new Vector2(27, 27));
+                }
             }
         }
 
-        /*
-         * Here's where we swap back in the original npc before saving the game
-         */
-        private void OnSave(object sender, SavingEventArgs args)
+        /// <summary>
+        /// End of Day routine. Occurs before saving. Swaps the wrapped, custom NPCs (<see cref="SocialNPC"/>) with the Vanilla NPC.
+        /// </summary>
+        /// <param name="sender">The caller of the event.</param>
+        /// <param name="args">Arguments passed in</param>
+        private void OnDayEnding(object sender, DayEndingEventArgs args)
         {
-            var npcList = new[] { Marlon };
+            if (Marlon == null && Morris == null) return;
+
+            var npcList = new List<SocialNPC>() { Marlon };
 
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
             {
-                npcList = new[] { Marlon, Morris };
+                npcList.Add(Morris);
             }
 
             foreach (SocialNPC npc in npcList)
             {
                 npc.currentLocation.characters.Add(npc.OriginalNpc);
-                npc.currentLocation.characters.Remove(npc);
+                if(!npc.currentLocation.characters.Remove(npc)) {
+                    Monitor.Log($"Unable to remove SocialNPC: {npc.Name}");
+                }
+            }
+
+            this.PrintNPCs(Marlon.Name);
+            this.PrintNPCs(Morris.Name);
+        }
+
+        private List<NPC> FindNPC(string name) {
+            List<NPC> found = new List<NPC>();
+            foreach (GameLocation loc in Game1.locations) {
+                foreach (NPC npc in loc.characters) {
+                    if (npc.Name == name) {
+                        found.Add(npc);
+                    }
+                }
+            }
+
+            return found;  
+        }
+
+        private void RemoveDuplicates(string name) {
+            List<NPC> list = FindNPC(name);
+            foreach (NPC npc in list) {
+                if (npc.GetType() != typeof(SocialNPC)) {
+                    Monitor.Log($"Removing duplicate of {npc.Name}. Type: {npc.GetType()}", LogLevel.Info);
+                    if (npc.currentLocation.characters.Remove(npc)) {
+                        Monitor.Log($"Success!", LogLevel.Info);
+                    }
+                }
             }
         }
 
-        public void AddSerializers()
-        {
-            var api = Helper.ModRegistry.GetApi<ISerializerAPI>("Platonymous.Toolkit");
-            api?.AddPreSerialization(ModManifest, (obj) => (obj is SocialNPC snpc) ? (object)snpc.OriginalNpc : obj);
-            api?.AddPostDeserialization(ModManifest, (obj) => (obj is NPC npc) ? npc.Name == "Morris" ? new SocialNPC(npc, new Vector2(27, 27)) : npc.Name == "Marlon" ? new SocialNPC(npc, new Vector2(4, 11)) : obj : obj);
-        }
-    }
+        private void PrintNPCs(string name) {
+            List<NPC> list = this.FindNPC(name);
 
-    public interface ISerializerAPI
-    {
-        void AddPreSerialization(IManifest manifest, Func<object, object> preserializer);
-        void AddPostDeserialization(IManifest manifest, Func<object, object> postserializer);
+            this.Monitor.Log($"Found {list.Count} cases of {name}.", LogLevel.Info);
+            foreach (NPC npc in list) {
+                Type type = npc.GetType();
+                this.Monitor.Log($"{npc.Name} - {npc.currentLocation.Name} - {npc.Position} - {type.ToString()}");
+            }
+        }
     }
 }

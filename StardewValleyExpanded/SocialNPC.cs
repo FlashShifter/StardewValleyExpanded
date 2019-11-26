@@ -26,16 +26,12 @@ namespace StardewValleyExpanded
         }
 
         //This method forces the npc data to be reloaded
-        public void ForceReload()
-        {
+        public void ForceReload() {
             bool newDay = Game1.newDay;
-            try
-            {
+            try {
                 Game1.newDay = true;
                 this.reloadSprite();
-            }
-            finally
-            {
+            } finally {
                 Game1.newDay = newDay;
             }
 
