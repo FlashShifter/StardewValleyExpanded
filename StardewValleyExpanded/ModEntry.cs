@@ -21,8 +21,6 @@ namespace StardewValleyExpanded
         private SocialNPC Marlon = null;
         private SocialNPC Morris = null;
 
-        private bool firstTick = true;
-
         //The mod entry point, which is called when the mod is loaded
         //The IModHelper parameter is what provides the simplified api for us to use
         public override void Entry(IModHelper helper)
@@ -304,7 +302,7 @@ namespace StardewValleyExpanded
         private void OnDayEnding(object sender, DayEndingEventArgs args)
         {
             if (Marlon == null && Morris == null) return;
-
+			
             var npcList = new List<SocialNPC>() { Marlon };
 
             if (Game1.MasterPlayer != null && !Game1.MasterPlayer.hasCompletedCommunityCenter())
