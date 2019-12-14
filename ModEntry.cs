@@ -6,7 +6,7 @@ using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Locations;
 
-namespace TestMod
+namespace StardewValleyExpanded
 {
     public class ModEntry : Mod
     {
