@@ -1,0 +1,214 @@
+﻿
+{
+	"Format": "1.10",
+  "Changes": [
+
+    {
+      "LogName": "Andy Manifestation",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Andy": "adult/rude/neutral/negative/male/non-datable/null/Other/spring 23//AndyHouse 9 6/Andy"
+      }
+    },
+	
+	{
+
+      "LogName": "Andy Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Andy": "Now this is something I really love! Thank you!/346 459 303 240/This ain't that bad. Thank you kindly for the gift!/167 20 16 416 414/What in tarnation is this? I don't like it!/62 64 66 68 70 72 80 82 84 86 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578/Am I some kind of joke to you? Get this horrible thing away from me. Now./350 348 74/Thanks for the gift./446 395 373/"
+      }
+    },
+	
+	{
+      "LogName": "Andys Animations",
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Andy_Farm1": "16/16 16 16 17 17 17/16",
+        "Andy_Farm2": "18/18 18 18 19 19 19/18",
+        "Andy_Drink1": "24/24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24/24",
+        "Andy_Drink2": "28/28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 29 30 31 31 31 31 31 31 31 31 31 31 31 30 29 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28/28",
+	    "Andy_Drink3": "32/32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32 32 32/32",
+	    "Andy_Stand": "8/8/8",
+		"Andy_Sleep": "21/21/21"
+	 }
+    },
+	
+	{
+      "LogName": "Andy Portraits",
+      "Action": "Load",
+      "Target": "Portraits/Andy",
+      "FromFile": "assets/Image/Andy.png"
+
+    },
+    {
+
+      "LogName": "Andy Sprites",
+      "Action": "Load",
+      "Target": "Characters/Andy",
+      "FromFile": "assets/Image/Sprite.png"
+    },
+	
+	{
+
+      "LogName": "Andy Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Andy",
+      "FromFile": "assets/Schedule/Schedule.json"
+    },
+	
+    {
+
+      "LogName": "Andy Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Andy",
+      "FromFile": "assets/Dialogue/Dialogue.json"
+
+    },
+	
+	{
+      "LogName": "Andy Schedule Dialogue",
+      "Action": "Load",
+      "Target": "Strings/schedules/Andy",
+      "FromFile": "assets/Schedule/ScheduleDialogue.json"
+    },
+	
+	//EGG FESTIVAL
+    { 
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Andy": "The food at these festivals ain't so bad.$1#$e#It'd taste even better if Pierre and Lewis used my crops.$2"
+      }
+    },
+	
+	//FLOWER DANCE
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring24",
+      "Entries": {
+        "Andy": "I found some leeks durin' our walk over here! This stuff is better than most of the food here.$1#$e#Nothin' like some ale with a leek.$0"
+      }
+    },
+	
+	//LUAU
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Andy": "Mayor Lewis has been chattin' up the governor this entire festival. What are those two talkin' about?$2#$e#I hope they're not talkin' bout me. He's probably got nothin' good to say.$2"
+      }
+    },
+	
+	//DANCE OF THE MOONLIGHT JELLIES
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer28",
+      "Entries": {
+        "Andy": "If these jellies don't show in the next 10 minutes, I'm gettin' outta here. Wastin' my evening.$2",
+      }
+    },
+	
+	//STARDEW VALLEY FAIR
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/fall16",
+      "Entries": {
+        "Andy": "I know I don't have a snowball's chance in you-know-where at winnin'. Just wanna show everyone how hard I've been workin' this season.$0#$e#I pride myself in what I do.$1",
+      }
+    },
+	
+	//SPIRITS EVE FESTIVAL
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/fall27",
+      "Entries": {
+        "Andy": "Pierre's spiced pumpkin cider is amazin'! I wish he'd let me buy it off of him!$1#$e#He should at least sell some of it to Gus so I can get it at the saloon.$2#$e#Good luck in that there maze, farmer. I've heard some screams comin' from that direction.$0",
+      }
+    },
+	
+	//ICE FISHING FESTIVAL
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/winter8",
+      "Entries": {
+        "Andy": "I overheard Willy talkin' about you. It'll be a close match between you two.$0#$e#Good luck fishin', @.$1"
+      }
+    },
+	
+	//WINTER STAR FESTIVAL
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/winter25",
+      "Entries": {
+        "Andy": "Best part about today is the free food and drink. I don't care much about gift givin'.$2"
+      }
+    },
+	
+	//ANDY INTRO EVENT
+{
+	 "Action": "EditData",
+	 "Target": "data/events/forest",
+	 "Entries": {
+	 "5000000/f Andy 10/w sunny/z winter/z summer/z fall/y 1/t 700 1700/j 3": "spring_day_ambient/-500 -500/farmer 76 74 3 Andy 70 65 1/pause 500/animate Andy false true 400 16 17/mail AndyStrawberrySeeds/skippable/viewport 73 74 true/pause 250/move farmer -8 0 0 true/viewport move -1 -1 5500 true/pause 4000/emote farmer 8/pause 250/move farmer 0 -6 0/pause 500/stopAnimation Andy/pause 450/move Andy 0 0 2/pause 200/emote Andy 16/pause 100/move Andy -2 0 2/move Andy 0 1 2/pause 150/speak Andy \"Ah, it's the new farmer. How are ya doin' on this fine sunny day?$0#$b#You caught me in the middle of tendin' to my crops. I'm spreadin' some new Joja fertilizer on my crop field.$0#$b#I always use Joja fertilizer. It makes my crops stronger and healthier.$1\"/pause 450/emote Andy 40/pause 100/speak Andy \"Say, you're just startin' out on %farm Farm. I have somethin' for ya to help you out.$0\"/pause 250/emote farmer 8/pause 500/move Andy 0 1 2/pause 500/speak Andy \"I have some strawberry seeds for ya! Fairhaven Farm strawberries have a good reputation in Grampleton and Chestervale.$1\"/pause 300/jump farmer/pause 1100/speak Andy \"You'll receive the strawberry seeds tomorrow in the mail. Gotta get back to the farm work.$0#$b#You have yourself a nice day, @. Go get some dirt on ya!$1\"/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Andy 30/end dialogue Andy \"Sure is nice havin' another farmer in this here valley. You keep up the good work, ya hear?$1\"",
+	 },
+},
+
+    //ANDY MINI EVENT
+{
+	 "Action": "EditData",
+	 "Target": "data/events/farm",
+	 "Entries": {
+	 "1111101/w sunny/j 10/z winter/z summer/z fall/y 1/e 5000000/t 600 700": "spring_day_ambient/64 16/farmer 20 20 2 Andy 20 22 0/pause 600/skippable/pause 1000/speak Andy \"Mornin', @. Just dropped by to warn ya about those crows flyin' about.$2#$b#I woke up to see 'em flockin' over my crop field. Had to scare a few off.$0\"/pause 1000/speak Andy \"Hmm... I think your farm is fine. I live right by that there forest so I get a lot of 'em roostin' in the trees. Darn crows.$2\"/pause 1000/playSound crow/pause 300/move Andy 0 0 3/pause 500/faceDirection farmer 3/pause 200/emote Andy 16 true/pause 200/emote farmer 16 true/pause 300/playSound crow/pause 500/playSound crow/pause 600/speak Andy \"Yup. There they are. Darn scavengers. But looks like they aren't nibblin' at your crops like they did to mine.$0\"/pause 700/move Andy 0 0 0/pause 800/faceDirection farmer 2/pause 1000/speak Andy \"Would be a good idea to build more of 'em scarecrows if you can.$0#$b#Might not be a bad idea to build a few myself. I'll go get started. Good luck farmin'.$0\"/pause 500/globalFade/viewport -1000 -1000/pause 500/playSound crow/pause 600/playSound crow/end",
+	 },
+},
+	
+	//ANDY 2 HEART EVENT
+{
+	 "Action": "EditData",
+	 "Target": "data/events/town",
+	 "Entries": {
+	 "5000001/f Andy 500/z winter/t 1000 1500": "springtown/-500 -500/farmer 28 89 0 Andy 33 60 1 Lewis 35 60 3 Harvey -100 -100 2 Pierre -125 -125 2 Olivia 34 65 3 Caroline 33 64 2 Jodi 32 65 1 Alex 50 68 1 George 51 64 0 Marlon 33 106 2 Krobus 32 106 2 Victor 71 54 0 Pam 79 68 1 Leah 97 104 2 Clint 97 77 0 Maru 43 77 2 Penny 29 55 2/pause 500/skippable/showFrame Penny 18/showFrame Maru 31/viewport 34 61 true/move farmer 0 -29 1 true/pause 1500/speak Lewis \"Andy, as I said before, you can’t ignore-$2\"/speak Andy \"No! You listen to me! What in tarnation is that supposed to mean!?$5#$b#Don't come tellin' me I owe more! I'm doin' just fine with Fairhaven Farm. Don't you go tellin me this bad news!$2\"/pause 500/speak Lewis \"It's out of my hands, Andy. The Ferngill government adjust-$2\"/pause 500/showFrame Andy 20/shake Andy 9999999/speak Andy \"I'M NOT HEARIN' ANY OF THIS! THIS WILL RUIN ME, YA HEAR!?$7\"/shake Andy 350/showFrame Andy 4/showFrame Penny 23/move Olivia 0 0 0/pause 100/move Caroline 0 0 0/pause 200/move Jodi 0 0 0/pause 150/showFrame Penny 0/emote Penny 16 true/pause 100/emote Olivia 16 true/pause 200/emote Jodi 16 true/pause 100/emote Caroline 16 true/pause 200/emote farmer 16 true/pause 250/move Lewis 0 0 2/pause 900/move Lewis 0 0 3/pause 300/speak Andy \"I thought this valley SUPPORTED local farmers!?$5\"/pause 250/playSound doorClose/warp Harvey 36 56/pause 200/emote Harvey 8 true/pause 100/speak Lewis \"The mayor of Grampleton isn't happy with this either. I'm in no way trying to-$2\"pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"NO! THE ANSWER IS NO, LEWIS! I CAN BARELY AFFORD MY SEEDS FOR NEW HARVESTS! I CAN'T AFFORD THIS AT ALL!$7\"/pause 100/emote Olivia 16 true/pause 150/showFrame 4 Andy/shake Andy 1000/emote Jodi 16 true/pause 150/playSound doorClose/emote Penny 16 true/warp Pierre 43 57/pause 125/emote Caroline 16 true/pause 125/move Pierre 0 0 3/pause 250/emote Pierre 8 true/pause 200/showFrame Andy 4/pause 500/speak Lewis \"Andy, everything will be okay. I'm going to divert funds from the fest-$2\"/pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"I DON'T NEED NO ONE'S HELP! I DON'T ACCEPT HANDOUTS! I'LL FIGURE SOMETHIN' OUT!$7\"/shake Andy 1000/showFrame Andy 4/emote Olivia 16 true/pause 250/emote Penny 16 true/pause 150/emote Caroline 16 true/pause 250/speak Lewis \"Andy...$2\"/speak Andy \"THIS CONVERSATION IS OVER! I'M LEAVIN'!!!$7\"/pause 100/move Andy -4 0 2/pause 500/showFrame Andy 22/pause 1000/speak Andy \"...$8\"/move Andy 0 7 2 true/pause 300/move farmer 0 0 2 true/pause 250/move Caroline 0 0 3 true/pause 400/move Jodi 0 0 3 true/pause 300/move Olivia 0 0 3 true/pause 300/globalFade/viewport -1000 -1000/pause 500/warp Andy -400 -400/pause 300/move Jodi 0 0 2/pause 200/viewport 34 61 true/move Olivia 0 0 3/showFrame Penny 16/pause 100/move Caroline 0 0 2/pause 150/showFrame Penny 17/pause 100/move Olivia 0 0 3/pause 50/showFrame Penny 19/pause 200/showFrame Penny 18/pause 200/move Pierre 0 0 1/pause 300/move Caroline 0 0 2/pause 250/playSound doorClose/warp Pierre -200 -200/pause 400/move Harvey 0 0 0/pause 300/warp Harvey -200 -205/playSound doorClose/pause 400/move Jodi 0 0 1/pause 200/move Lewis -5 0 3/pause 500/move farmer 0 0 1/pause 500/speak Lewis \"Hello, @. You heard all of that, didn't you?$2\"/pause 300/emote farmer 40/pause 300/speak Lewis \"*sigh*... The Ferngill government is introducing new 'regulations'.$2#$b#I don't think they understand the negative impact it's having on small communities like this one.$2\"/pause 500/speak Lewis \"Kendra, the mayor of Grampleton, and I have tried negotiating, but they wouldn’t listen to us.$3\"/pause 1000/speak Lewis \"I'm aware Andy is... struggling, and he isn't doing well financially.$0\"/pause 300/emote farmer 60/pause 500/speak Lewis \"Rest assured, @. Kendra and I are drafting an elaborate proposal.$3\"/pause 1000/speak Lewis \"Can you do me a favor and check on Andy?$0\"/pause 500/question fork0 \"#I'll go check on him.#He'll take his anger out on me too...\"/fork 5000001_TalkAndy/pause 500/speak Lewis \"Ah, that's... understandable. I'll check on him later today then.$2\"/pause 600/move Lewis 0 0 2/pause 700/move Lewis 0 0 3/pause 800/speak Lewis \"I'm going to start on that draft now. Have a nice day, @.$0\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end position 28 60",
+	 
+	 "5000001_TalkAndy": "pause 500/speak Lewis \"Thank you, @. This is most appreciated.$1\"/pause 600/move Lewis 0 0 2/pause 800/move Lewis 0 0 3/pause 800/speak Lewis \"I'm going to start on that draft now. Have a nice day, @.$0\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"What's that now? Lewis is gonna draft up a new proposal? Good. That old geezer is doin' somethin' right for once.$0#$e#I have work to do, @. Leave me alone.$2#$e#%Andy is now ignoring you.\"",
+	 },
+},
+
+    //ANDY 6 HEART EVENT
+{
+	 "Action": "EditData",
+	 "Target": "data/events/forest",
+	 "Entries": {
+     "5000002/t 600 1700/z winter/w rainy/f Andy 1500": "rain/-500 -500/farmer 12 70 2 Andy 10 83 3 Marlon -200 -200 2 Wizard -202 -202 2 Krobus -203 -203 0/pause 500/skippable/viewport 14 80 true/move farmer 0 13 3 true/move Andy -10 0 3 true/pause 5000/warp Andy -200 -200/pause 2000/emote farmer 8/halt/pause 500/move farmer -4 0 3/pause 1000/question fork0 \"#Follow Andy#Walk away\"/fork 5000002_Follow/pause 500/emote farmer 40/pause 1000/globalFade/viewport -1000 -1000/pause 500/end position 12 83",                                                            
+
+     "5000002_Follow": "pause 150/move farmer -7 0 3 true/pause 900/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation ForestWest/pause 400/playMusic rain/warp Marlon 53 114/warp Wizard 55 114/warp Krobus 54 117/warp Andy 58 20/warp farmer 58 35/pause 400/viewport 58 22 true/pause 100/move Andy 0 0 0/move farmer 0 -12 0/pause 3000/speak Andy \"...$8\"/pause 3000/speak Andy \"Jerry and Elizabeth used to live here. This was their vineyard.$0\"/pause 2000/speak Andy \"They were good friends of mine.$0\"/pause 1500/move Andy 0 0 2/pause 1100/speak Andy \"You remember that great recession we had? You still had that there office job of yours.$0\"/pause 600/emote farmer 40/pause 700/showFrame Andy 22/pause 1200/speak Andy \"That nosedive in the market had devastatin' effects on the demand for crops, especially artisan goods.$8#$b#Jerry and Elizabeth held out for as long as they could, but eventually gave up.$8\"/pause 1250/move Andy 0 0 0/pause 1200/shake Andy 1000/pause 1200/speak Andy \"Jerry, you Yoba darn fool.$2\"/pause 1000/speak Andy \"I told 'em not to spend all their darn money on that project of theirs or else they'd...\"/pause 750/shake Andy 1000/pause 1500/speak Andy \"I was on the verge of bankruptcy myself. Luckily, I knew where to look for good forage.$0#$b#That forage saved me. Yoba was lookin' after me.$2\"/pause 1250/speak Andy \"Same thing happened to Alexa. That little farmhouse south of Fairhaven Farm...$0\"/pause 1000/speak Andy \"Now some freakish cretin of a mouse lives in there sellin' hats.$2#$b#I think that there wizard has something to do with it. I'm always seein' flashin' lights comin' from his tower.$2\"/pause 1500/move Andy 0 0 2/pause 600/showFrame Andy 22/pause 1000/speak Andy \"I don't know why I'm tellin' you all this...$8#$b#You don't understand what it's like to live paycheck to paycheck, not knowin' if you can afford your expenses or bills.$8\"/pause 1000/speak Andy \"I need to do some ponderin' by myself. Why I came out here. Alone. Now leave.$8\"/pause 500/emote farmer 60/pause 1200/move farmer 0 8 2 true/pause 2250/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"I sometimes write to Jerry. We keep in contact still. He and Elizabeth had a kid recently.$0#$e#They're livin' in Chestervale now. Not the best part of the Ferngill Republic, but it's cheap.$2#$e#I walk over to their old vineyard from time to time. I used to visit 'em after I was done farmin' for the day.$2#$e#... I miss 'em.$8\"",  
+	 },
+},
+
+    //ANDY 8 HEART EVENT
+{
+	 "Action": "EditData",
+	 "Target": "data/events/forest",
+	 "Entries": {
+     "5000003/w sunny/f Andy 2000/z winter/t 900 1500": "spring_day_ambient/-500 -500/farmer 93 74 2 Andy 77 84 0 Marlon 7 20 2 Wizard 7 22 0 Abigail 8 29 0 Marnie 54 21 0 Leah 112 34 0 Shane 86 54 3/pause 500/skippable/viewport 90 82 true/move farmer 0 10 3 true/move Andy 3 0 0 true/pause 1600/playSound leafrustle/pause 800/move Andy 4 0 0 true/pause 2300/playSound leafrustle/pause 300/emote farmer 8/pause 400/move Andy 0 0 1/pause 300/emote Andy 16/pause 250/speak Andy \"Hey there, farmer! You caught me in midst of foragin'.$1\"/pause 1000/speak Andy \"Lots of forage today. The rain makes lots of 'em pop up.$0\"/pause 500/move farmer -5 0 3/pause 400/speak Andy \"I enjoy lookin' for forage in the forest. If I could, I'd make this my full-time job.$1#$b#Not much money in foragin' though. I'd be no better off than that Linus fella'. I for one enjoy sleepin' in a heated house with a fridge.$2\"/pause 1000/move Andy 0 0 2/pause 1200/move Andy 0 0 1/pause 500/speak Andy \"Say, you busy? I have some things to talk with ya about.$0\"/pause 500/question fork0 \"Walk with me over by that there cliff?#Sure.#No thanks.\"/fork 5000003_Cliff/pause 800/speak Andy \"Oh. Okay...$2\"/pause 1000/speak Andy \"You have yourself a nice day.$2\"/pause 500/globalFade/viewport -1000 -1000/pause 500/friendship Andy -250/pause 500/end position 88 84",
+
+     "5000003_Cliff": "pause 600/speak Andy \"Let's get out of these shrubs.$0\"/pause 500/globalFade/viewport -1000 -1000/pause 300/warp Andy 81 99/warp farmer 83 99/pause 100/move Andy 0 0 2/move farmer 0 0 2/pause 100/viewport 82 100 true/playMusic ocean/pause 2500/move Andy 0 0 3/pause 1000/move Andy 0 0 2/pause 1000/speak Andy \"Hmm. That Shane fella left this mess here. I had nothin' to do with it.$2#$b#He used to come here to drink. Don't see him much now.$0\"/pause 300/faceDirection farmer 3/pause 1000/speak Andy \"I do the same at Alexa's abandoned farmhouse. Shane and I don't talk much but we have some things in common.$0\"/pause 1000/speak Andy \"Both support Joja and heavy drinkers. Heh.$1\"/pause 1000/move farmer 0 0 2/pause 1500/speak Andy \"Things are tough when you're all on your own, farmer. I don't have many people I'd call close friends in my life.$2\"/pause 200/emote Andy 40/pause 400/speak Andy \"Ya know, I tried talkin' Mayor Lewis into lettin' Sophia, Susan and I take over your grandpa's farm. It was good land bein' left to spoil.$0#$b#There was nothing Lewis could do 'bout it. Your grandpa still owned the deed to that there land.$2#$b#You showed up outta no where and took it over. Been doin' a Yoba darn good job too.$0\"/pause 300/faceDirection farmer 3/pause 500/shake Andy 1000/pause 1200/showFrame Andy 22/pause 700/stopMusic/speak Andy \"... What I'm tryin' to say is.$8\"/pause 1300/playMusic musicboxsong/pause 500/speak Andy \"I'm proud of you.$8\"/pause 200/emote farmer 16/pause 100/speak Andy \"I won't lie. I used to be jealous of ya. You only started farm work recently, relatively speakin'. I've been doin' this all my life and I haven't amounted to much.$8\"/pause 700/move Andy 0 0 2/pause 600/move Andy 0 0 1/pause 500/speak Andy \"At first, I thought you'd move out of the valley because you couldn't handle the farmwork. City kid. Goin' from that office job to farmin' is a radical change in lifestyle.$0#$b#But you didn't. You kept at it. Kept improvin' and showin' me I was wrong. I can tell you're passionate about farmin' as best you can.$2#$b#You've brought more commerce to the valley with the publicity of %farm Farm. All the farmers are sellin' more as a result.$0\"/pause 400/shake Andy 1000/pause 700/speak Andy \"I suppose what what I'm really tryin' to say here is...\"/pause 750/move Andy 0 0 2/pause 750/showFrame Andy 22/pause 1000/speak Andy \"Thank you.$8\"pause 1000/move Andy 0 0 2/pause 1200/speak Andy \"Thank you for inspirin' me to be a better person and givin' Fairhaven Farm more business. It's helped my life more'n you know.$0\"/pause 1000/emote farmer 32/playMusic ocean/pause 1300/faceDirection farmer 2/pause 3000/speak Andy \"Good view from here.$0#$b#Gotta say. This right here is the Ferngillian dream. Livin' in Stardew Valley.$1#$b#Thanks for bein' a good friend and showin' me compassion, @.\"/pause 1200/move Andy 0 0 1/pause 1000/faceDirection farmer 3/pause 1200/speak Andy \"Now, I'm gonna go back to foragin'. Not quite done yet today.$0\"/pause 1000/speak Andy \"Drop by later. I want to give you somethin'.$1\"/pause 200/globalFade/viewport -1000 -1000/pause 250/friendship Andy 50/end dialogue Andy \"Thanks for everythin', @. I know I might have a strange view on things or act a little weird, but that didn't stop you from bein' a good friend to me.$1#$b#Here, take this. Found it in the forest while foragin'. Not so sure what it is. Maybe you could use 'em.[114]$0#$e#Have an excellent day, farmer. Keep up all the good work you're always doin'.$1\"",
+	 },
+},
+
+    //ANDY HOUSE CLEAN EVENT
+{   
+	"Action": "EditData",
+	"Target": "data/events/andyhouse",
+	"Entries": { 
+    "5000005/e 191393": "kindadumbautumn/-500 -500/farmer -200 -200 0 Andy 12 16 0/pause 700/skippable/viewport 12 18 true/pause 1500/warp farmer 12 22/playSound doorClose/pause 400/faceDirection Andy 2/pause 350/textAboveHead Andy \"Hey there, farmer!\"/pause 1000/move farmer 0 -3 0/pause 800/faceDirection farmer 3/pause 1000/faceDirection farmer 1/pause 700/faceDirection farmer 0/pause 400/speak Andy \"What do ya think? Cleaned up the house and bought new furniture.$1#$b#Been usin' Pierre's seeds instead of Joja's and as a result I've been earnin' more.$0\"/pause 800/faceDirection Andy 1/pause 600/faceDirection Andy 2/pause 300/speak Andy \"Say, want something to eat? Just made a nice farmer's lunch.$0\"/pause 300/emote farmer 32 true/pause 200/globalFade/viewport -1000 -1000/pause 1000/message \"Andy's house is in good shape now! The meal we ate together was prepared with fresh forage outside. Delicious!\"/pause 1000/end dialogue Andy \"Since Joja left town, I've had a change in life style.$0#$e#Not gettin' rid of this here hat though. It's my favorite.$2\"",
+    },
+},
+	
+  ]
+}
+		
+		
