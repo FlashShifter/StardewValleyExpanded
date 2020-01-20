@@ -23,6 +23,7 @@
         "Susan": "This looks delicious! Thank you!/230 211 220 221 223 222 608 233 234 611 612/Oh, goodness! For me? Thank you./60 709 336 335 334 339 373 74 446/That's very kind of you. Thanks./346 459 303/This isn't something I like.../167 226 283/That's generous of you./348 350 395/"
       }
     },
+	
 	{
 
       "LogName": "Susan's Animations",
@@ -38,6 +39,7 @@
 	    "Susan_Sleep": "29/29/29"
       }
     },
+	
 	{
 
       "LogName": "Susan's Portraits",
@@ -70,6 +72,158 @@
       "FromFile": "assets/Dialogue/Dialogue.json"
 
     },
+	
+	//MOVIE THEATER
+	
+    {
+    "Action": "EditData",
+    "Target": "Data/ConcessionTastes",
+    "Entries": {
+    "Name": "Susan",
+    "LovedTags": [
+      "Candy", "Sweet", "Cotton Candy"
+    ],
+    "LikedTags": [
+      "Jasmine Tea", "Hot"
+    ],
+    "DislikedTags": [
+      "Healthy"
+         ]
+       },
+    },
+	
+	{
+    "Action": "EditData",
+    "Target": "Data/MoviesReactions",
+    "Entries": {
+    "Susan": {
+    "NPCName": "Susan",
+    "Reactions": [
+      {
+        "Tag": "Classic",
+        "Response": "love",
+        "Whitelist": [],
+        "SpecialResponses": null,
+        "ID": "reaction_0"
+      },
+      {
+        "Tag": "horror",
+        "Response": "dislike",
+        "Whitelist": [],
+        "SpecialResponses": null,
+        "ID": "reaction_1"
+      },
+      {
+        "Tag": "spring_movie_0",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "This movie is about a sapling. How cute.$0"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Aww. The sappling is so adorable!$1"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Thanks for inviting me out, @. I want to go home and water my little babies.$0"
+          }
+        },
+        "ID": "reaction_2"
+      },
+      {
+        "Tag": "winter_movie_0",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Brr... It's freezing. I'm glad the building is warm.$0"
+          },
+		  "DuringMovie": null,
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "The film felt very authentic, with the story and special effects.$0"
+          }
+        },
+        "ID": "reaction_3"
+      },
+      {
+        "Tag": "love",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I hope there are still seats left.$0"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "/shake Susan 2000/pause 500/message \"Susan is giggling!\"",
+            "Text": "Hehe!$1"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I enjoyed the movie. Did anything stand out to you?$0"
+          }
+        },
+        "ID": "reaction_4"
+      },
+      {
+        "Tag": "like",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I haven't seen this genre in forever. I'm anxious to see it!$0"
+          },
+          "DuringMovie": null,
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I wonder if this film will come out on VHS soon! I'll get it!$0"
+          }
+        },
+        "ID": "reaction_5"
+      },
+      {
+        "Tag": "dislike",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "It isn't my favorite genra, but I'll give it a go.$0"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I'm getting sleepy...$2"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "*yawn* Thanks for inviting me, @.$0"
+          }
+        },
+        "ID": "reaction_6"
+       }
+     ]
+	}
+  }
+},
 	
     { //EGG FESTIVAL
       "Action": "EditData",
@@ -169,7 +323,7 @@
 	 "Action": "EditData",
 	 "Target": "data/events/Railroad",
 	 "Entries": {
-     "1000078/f Susan 500/t 600 1150/z winter/w sunny": "breezy/-500 -500/farmer 34 54 1 Susan 45 52 2 Marlon 15 20 2 Wizard 15 22 0/pause 500/skippable/viewport 35 51 true/viewport move 1 0 6100 true/move farmer 4 0 0/move farmer 0 -2 1/move farmer 2 0 1/pause 900/move Susan 0 0 3/pause 500/speak Susan \"@! Hello!$1#$b#I'm refreshing my little guys with patented homemade fertilizer.$0#$b#Nitrogen, potassium, and phosphorous are part of what makes Emerald Farm's produce delicous.$4#$b#Just add sunshine, water, and some love, and you've got yourself a profitable season!$1\"/pause 900/move Susan -2 0 3/pause 1200/move Susan 0 0 0/pause 1000/speak Susan \"Emerald Farm is small in comparison to %farm Farm. I can't imagine managing that much space.$0\"/pause 100/question fork0 \"How are you able to keep up with all of that land?#Honestly, it's because I never take breaks.#I automate watering with sprinklers.\"/fork 1000078_NoBreaks/pause 500/move Susan 0 0 3/pause 350/speak Susan \"Oh! I've tried crafting some sprinklers, but I can't seem to get the plumbing just right.$0#$b#I'm amazed you can craft such sophisticated devices.$4\"/pause 700/speak Susan \"With how many acres %farm Farm covers, if you want to use all that space, automation's probably a must.$1#$b#I don't think it'd be possible for one person to maintain, unless you hired a few farmhands to help.$0#$b#Most farmers near Pelican Town are small enough to be self-sufficient, but the orchards in Chestervale bring on seasonal help for the harvest.$1\"/pause 1000/move Susan 0 0 2/pause 500/speak Susan \"I need to finish fertilizing before the afternoon heat hits. Talk to you soon!$1\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/message \"Susan was in a cheerful mood today!\"/end dialogue Susan \"Thank you for visiting me earlier, @.$1#$e#The way you handle running a farm that big makes me feel motivated to chase bigger dreams.$4#$e#Have a nice day, dear!$1\"",
+     "1000078/f Susan 500/t 600 1150/z winter/w sunny": "breezy/-500 -500/farmer 34 54 1 Susan 45 52 2 MarlonFay 15 20 2 Wizard 15 22 0/pause 500/skippable/viewport 35 51 true/viewport move 1 0 6100 true/move farmer 4 0 0/move farmer 0 -2 1/move farmer 2 0 1/pause 900/move Susan 0 0 3/pause 500/speak Susan \"@! Hello!$1#$b#I'm refreshing my little guys with patented homemade fertilizer.$0#$b#Nitrogen, potassium, and phosphorous are part of what makes Emerald Farm's produce delicous.$4#$b#Just add sunshine, water, and some love, and you've got yourself a profitable season!$1\"/pause 900/move Susan -2 0 3/pause 1200/move Susan 0 0 0/pause 1000/speak Susan \"Emerald Farm is small in comparison to %farm Farm. I can't imagine managing that much space.$0\"/pause 100/question fork0 \"How are you able to keep up with all of that land?#Honestly, it's because I never take breaks.#I automate watering with sprinklers.\"/fork 1000078_NoBreaks/pause 500/move Susan 0 0 3/pause 350/speak Susan \"Oh! I've tried crafting some sprinklers, but I can't seem to get the plumbing just right.$0#$b#I'm amazed you can craft such sophisticated devices.$4\"/pause 700/speak Susan \"With how many acres %farm Farm covers, if you want to use all that space, automation's probably a must.$1#$b#I don't think it'd be possible for one person to maintain, unless you hired a few farmhands to help.$0#$b#Most farmers near Pelican Town are small enough to be self-sufficient, but the orchards in Chestervale bring on seasonal help for the harvest.$1\"/pause 1000/move Susan 0 0 2/pause 500/speak Susan \"I need to finish fertilizing before the afternoon heat hits. Talk to you soon!$1\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/message \"Susan was in a cheerful mood today!\"/end dialogue Susan \"Thank you for visiting me earlier, @.$1#$e#The way you handle running a farm that big makes me feel motivated to chase bigger dreams.$4#$e#Have a nice day, dear!$1\"",
 
      "1000078_NoBreaks": "pause 500/move Susan 0 0 3/pause 700/speak Susan \"I've noticed you work through every weekend, and sometimes don't head into town for days. Don't push yourself too hard, honey.$2#$b#Taking a day or two off won't be the end of the world.$0\"/pause 1200/speak Susan \"Maybe we can take a trip to Grampleton sometime? I'd love to introduce you to my crafting instructor.$1\"/pause 1000/move Susan 0 0 2/pause 500/speak Susan \"I need to finish fertilizing before the afternoon heat hits. Talk to you soon!$1\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/message \"Susan was in a cheerful mood today!\"/end dialogue Susan \"Thank you for visiting me earlier, @!$1#$b#My crafting instructor's name is Charlotte. She's an accomplished woodworker. You should meet her sometime!$0\"",
 	 },

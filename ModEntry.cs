@@ -13,6 +13,15 @@ namespace StardewValleyExpanded
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
+            helper.Events.GameLoop.DayStarted += this.OnDayStarted;
+        }
+
+        private void OnDayStarted(object sender, DayStartedEventArgs e)
+        {
+            //Removes Morris from the game when community center completion = 'true'
+            if (Game1.MasterPlayer.mailReceived.Contains("ccIsComplete") || Game1.MasterPlayer.hasCompletedCommunityCenter())
+
+                Game1.removeCharacterFromItsLocation("MorrisTod");
         }
 
         private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
@@ -27,6 +36,11 @@ namespace StardewValleyExpanded
             FarmAnimal whiteCow1 = new FarmAnimal("White Cow", multiplayer.getNewID(), -1L)
             {
                 Position = new Vector2(96 * Game1.tileSize, 19 * Game1.tileSize)
+            };
+
+            FarmAnimal brownCow2 = new FarmAnimal("Brown Cow", multiplayer.getNewID(), -1L)
+            {
+                Position = new Vector2(118 * Game1.tileSize, 18 * Game1.tileSize)
             };
 
             FarmAnimal brownCow1 = new FarmAnimal("Brown Cow", multiplayer.getNewID(), -1L)
@@ -57,6 +71,7 @@ namespace StardewValleyExpanded
             // Adds animals to Marnie's Ranch
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(whiteCow1);
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(brownCow1);
+            (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(brownCow2);
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(goat1);
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(pig1);
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(babyCow1);

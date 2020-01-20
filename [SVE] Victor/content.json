@@ -96,6 +96,164 @@
       }
     },
 	
+	//MOVIE THEATER
+	
+	{
+    "Action": "EditData",
+    "Target": "Data/ConcessionTastes",
+    "Entries": {
+    "Name": "Victor",
+    "LovedTags": [
+      "Gourmet", "Jasmine Tea"
+    ],
+    "LikedTags": [
+      "Sandwich", "popcorn"
+    ],
+    "DislikedTags": [
+      "Healthy",
+      "Candy"
+    ]
+      },
+    },
+	
+	{
+    "Action": "EditData",
+    "Target": "Data/MoviesReactions",
+    "Entries": {
+    "Victor": {
+    "NPCName": "Victor",
+    "Reactions": [
+      {
+        "Tag": "sci-fi",
+        "Response": "love",
+        "Whitelist": [],
+        "SpecialResponses": null,
+        "ID": "reaction_0"
+      },
+      {
+        "Tag": "horror",
+        "Response": "dislike",
+        "Whitelist": [],
+        "SpecialResponses": null,
+        "ID": "reaction_1"
+      },
+      {
+        "Tag": "summer_movie_1",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Ah. This should be quite an interesting film.$1"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "This is quite intriguing!$1"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Really puts the world in perspective. Do you think we'll ever visit the stars someday?$1"
+          }
+        },
+        "ID": "reaction_2"
+      },
+      {
+        "Tag": "summer_movie_0",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "You know, I never did beat this game. I'll watch it, though!$1"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I wonder who will win!$3"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "That was great. I want to play the game now!$3"
+          }
+        },
+        "ID": "reaction_3"
+      },
+      {
+        "Tag": "love",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "I'm looking forward to this movie.$1"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "/shake Victor 3000/pause 500/message \"Victor is laughing!\"",
+            "Text": "Haha! Quite the spectacle!$1"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "This was a wonderful idea. Which part of the movie was your favorite?$3"
+          }
+        },
+        "ID": "reaction_4"
+      },
+      {
+        "Tag": "like",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Hey. Thanks for inviting me.$1"
+          },
+          "DuringMovie": null,
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Must say, I did enjoy myself. I appreciate you taking me out, @.$3"
+          }
+        },
+        "ID": "reaction_5"
+      },
+      {
+        "Tag": "dislike",
+        "Response": "like",
+        "Whitelist": [],
+        "SpecialResponses": {
+          "BeforeMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "At least the seats are comfy...$2"
+          },
+          "DuringMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "*yawn*... is it over yet?$2"
+          },
+          "AfterMovie": {
+            "ResponsePoint": null,
+            "Script": "",
+            "Text": "Err. The acting wasn't the best. I expected a bit more.$2"
+          }
+        },
+        "ID": "reaction_6"
+       }
+     ]
+	}
+  }
+},
+	
+	
     { //EGG FESTIVAL
       "Action": "EditData",
       "Target": "data/festivals/spring13",
@@ -286,7 +444,7 @@
       "Entries": {
         "2000002/f Victor 1500/t 1000 1700/w sunny": "spring_day_ambient/-500 -500/farmer 89 56 2 Victor 97 61 1/pause 400/skippable/showFrame Victor 43/viewport 95 62 true/move farmer 0 7 1/pause 1150/emote farmer 8/pause 1000/move farmer 8 0 0/pause 750/showFrame Victor 4/pause 1000/move Victor 0 0 2/pause 600/speak Victor \"Hi, @.$6\"/pause 400/emote farmer 40/speak Victor \"Oh, what am I doing? I'm... well, just thinking at the moment. I have a lot on my mind.$6\"/pause 600/move Victor 0 0 1/pause 550/showFrame Victor 43/pause 700/playMusic desolate/pause 1500/speak Victor \"My mother told me she's disappointed I haven't found a job yet. I came to the park to get out of the house for a while.$2#$b#I can't blame her for feeling that way. I graduated from university a year ago and I'm still living at home.$2#$b#Maybe she thinks I'm just lazy and comfortable living at home forever because we're financially secure.$6#$b#But that's... not the case at all.$2\"/pause 1100/speak Victor \"Over the last year, I've turned down dozens of internships and job offers. None of them appealed to me.$2#$b#I don't want to move out of the valley and work myself to death in the city.$2#$b#I want a career where I'm free to be who I am, not who I'm told to become.$6\"/pause 1000/showFrame Victor 4/pause 1000/move Victor 0 0 2/pause 750/speak Victor \"You understand what I'm saying, @. You quit your office job because that wasn't true to who you were.$6#$b#You took a leap of faith and took over your grandpa's farm. Just look at how that transformed your life!$3#$b#In a way... I envy you, @.$2\"/pause 1200/question fork0 \"#Working at Joja was the worst.#You should move to the city and get a job.\"/fork 2000002_FindYourPassion/pause 800/move Victor 0 0 1/pause 1000/showFrame Victor 43/pause 1000/speak Victor \"I know there aren't many jobs here in the valley, @. You can't do much here unless you freelance or are willing to commute two hours to Zuzu City.$2#$b#Like I said before, I don't want to move away. I love living here, and I can't see myself going anywhere else.$6\"/pause 1500/speak Victor \"I lived in Zuzu City all my life with my parents. Moving to Stardew Valley... it was the first time I felt like I was home.$6\"/pause 1250/speak Victor \"Imagine how you would feel if you suddenly moved back to your city after finding this place. It'd feel like being a plant, uprooted.$6\"/pause 1050/emote farmer 60/pause 600/speak Victor \"Then you understand what I mean.$6\"/pause 300/globalFade/viewport -1000 -1000/pause 800/friendship Victor -125/end dialogue Victor \"Hi, @. I appreciate you talking to me at the park. You're a good listener.$6\"",
       
-	    "2000002_FindYourPassion": "pause 750/speak Victor \"A career like that sounds dreadful. Having a boss telling you what to do and how to feel.$2#$b#Working that much... that's essentially over half your life that doesn't belong to you.$6\"/pause 1250/move Victor 0 0 1/pause 1000/showFrame Victor 43/pause 1000/speak Victor \"Sophia wouldn't understand what I'm going through...$6\"/pause 1500/speak Victor \"My mother and the rest of my family keep pressuring me to jump into a high-paying career. It seems like no one cares how I feel about it.$2\"/pause 2000/speak Victor \"There aren't many jobs here in the valley unless you freelance work or are willing to commute an hour to Zuzu City.$6#$b#That's two hours a day, with good traffic...$2\"/pause 1250/showFrame Victor 4/pause 800/move Victor 0 0 2/pause 1000/speak Victor \"I'm optimistic I'll figure this all out soon enough, @.$3#$e#Thanks for hearing me out. See you around.$1/pause 500/globalFade/viewport -1000 -1000/pause 800/friendship Victor 75/end dialogue Victor \"Hi, @. I appreciate you talking to me at the park. You're a good listener.$3#$b#I consider you one of my closest friends.$1\"",
+	    "2000002_FindYourPassion": "pause 750/speak Victor \"A career like that sounds dreadful. Having a boss telling you what to do and how to feel.$2#$b#Working that much... that's essentially over half your life that doesn't belong to you.$6\"/pause 1250/move Victor 0 0 1/pause 1000/showFrame Victor 43/pause 1000/speak Victor \"My mother doesn't understand what I'm going through...$6#$e#She and the rest of my family keep pressuring me to jump into a high-paying career. It seems like no one cares how I feel about it.$2#$e#There aren't many jobs here in the valley unless you freelance work or are willing to commute an hour to Zuzu City.$6#$b#That's two hours a day, with good traffic...$2\"/pause 1250/showFrame Victor 4/pause 800/move Victor 0 0 2/pause 1000/speak Victor \"I'm optimistic I'll figure this all out soon enough, @.$3#$e#Thanks for hearing me out. See you around.$1/pause 500/globalFade/viewport -1000 -1000/pause 800/friendship Victor 75/end dialogue Victor \"Hi, @. I appreciate you talking to me at the park. You're a good listener.$3#$b#I consider you one of my closest friends.$1\"",
 	  }
     },
 	
@@ -308,9 +466,9 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "2000004/e 2000003/t 600 1150/f Victor 2500/w sunny": "none/-500 -500/farmer -300 -300 1 Victor -301 -301 2 Marlon 34 104 2 Wizard 33 106 2 Krobus 32 104 2/pause 400/skippable/viewport 59 53 true/showFrame Marlon 12/showFrame Wizard 18/pause 2750/playSound doorClose/warp Victor 59 52/playMusic jaunty/pause 1150/textAboveHead Victor \"Yawn...\"/shake Victor 1000/pause 2000/move Victor 0 1 1/viewport move 1 0 3500 true/move Victor 7 0 0/pause 800/shake Victor 500/playSound trashcanlid/pause 800/textAboveHead Victor \"Trash got picked up.\"/pause 2000/playSound trashcanlid/shake Victor 500/pause 700/move Victor 1 0 0/pause 600/playSound openBox/shake Victor 400/pause 1200/emote Victor 8/pause 600/playSound newRecipe/pause 800/emote Victor 40/pause 700/stopMusic/emote Victor 16/pause 500/jump Victor/pause 900/speed Victor 4/move Victor -9 0 3 true/globalFade/viewport -1000 -1000/warp farmer 5 54/warp Victor 27 54/pause 750/viewport 18 54 true/move farmer 6 0 1 true/speed Victor 4/move Victor -14 0 3 true/pause 300/emote farmer 16/speak Victor \"@!!! I was just running over to your farm!$1\"/pause 500/emote farmer 8/pause 500/speed Victor 3/move Victor -1 0 3/speak Victor \"It's official, @!$1\"/pause 300/playSound newRecipe/pause 500/speak Victor \"I just received my formal acceptance letter from the town of Grampleton and credentials from the Ferngil Bridge Engineering Association!$1#$b#I haven't told anyone yet. You're the first!$1\"/emote farmer 16/speak Victor \"Want to walk up to the summit with me?$3\"/pause 400/question fork0 \"#I'd love to walk up to the summit with you.#I can't. Sorry, Victor.\"/fork 2000004_Summit/pause 350/showFrame Victor 40/pause 750/speak Victor \"Oh... that's okay. I'll see you later then.$2\"/pause 1300/globalFade/viewport -1000 -1000/pause 800/friendship Victor -250/end dialogue Victor \"I'm not in a good mood, @. I wanted to talk to you about something important, and it really stung when you said no.$2$e#I'll get over it soon. Talk to you later.$5#$e#Just give me some space, @.$2\"",
+        "2000004/e 2000003/t 600 1150/f Victor 2500/w sunny": "none/-500 -500/farmer -300 -300 1 Victor -301 -301 2 MarlonFay 34 104 2 Wizard 33 106 2 Krobus 32 104 2/pause 400/skippable/viewport 59 53 true/showFrame MarlonFay 12/showFrame Wizard 18/pause 2750/playSound doorClose/warp Victor 59 52/playMusic jaunty/pause 1150/textAboveHead Victor \"Yawn...\"/shake Victor 1000/pause 2000/move Victor 0 1 1/viewport move 1 0 3500 true/move Victor 7 0 0/pause 800/shake Victor 500/playSound trashcanlid/pause 800/textAboveHead Victor \"Trash got picked up.\"/pause 2000/playSound trashcanlid/shake Victor 500/pause 700/move Victor 1 0 0/pause 600/playSound openBox/shake Victor 400/pause 1200/emote Victor 8/pause 600/playSound newRecipe/pause 800/emote Victor 40/pause 700/stopMusic/emote Victor 16/pause 500/jump Victor/pause 900/speed Victor 4/move Victor -9 0 3 true/globalFade/viewport -1000 -1000/warp farmer 5 54/warp Victor 27 54/pause 750/viewport 18 54 true/move farmer 6 0 1 true/speed Victor 4/move Victor -14 0 3 true/pause 300/emote farmer 16/speak Victor \"@!!! I was just running over to your farm!$1\"/pause 500/emote farmer 8/pause 500/speed Victor 3/move Victor -1 0 3/speak Victor \"It's official, @!$1\"/pause 300/playSound newRecipe/pause 500/speak Victor \"I just received my formal acceptance letter from the town of Grampleton and credentials from the Ferngil Bridge Engineering Association!$1#$b#I haven't told anyone yet. You're the first!$1\"/emote farmer 16/speak Victor \"Want to walk up to the summit with me?$3\"/pause 400/question fork0 \"#I'd love to walk up to the summit with you.#I can't. Sorry, Victor.\"/fork 2000004_Summit/pause 350/showFrame Victor 40/pause 750/speak Victor \"Oh... that's okay. I'll see you later then.$2\"/pause 1300/globalFade/viewport -1000 -1000/pause 800/friendship Victor -250/end dialogue Victor \"I'm not in a good mood, @. I wanted to talk to you about something important, and it really stung when you said no.$2$e#I'll get over it soon. Talk to you later.$5#$e#Just give me some space, @.$2\"",
 
-        "2000004_Summit": "pause 400/speak Victor \"!!!$1\"/pause 500/speak Victor \"Here, take my hand.$4\"/pause 300/emote farmer 32/pause 300/move farmer 0 1 2/move farmer 1 0 0 true/pause 200/move Victor 0 0 2/pause 250/emote Victor 20 true/pause 230/emote farmer 20 true/pause 750/speed Victor 2/move Victor 6 0 0 true/move farmer 6 0 0 true/pause 200/globalFade/viewport -1000 -1000/pause 500/warp Wizard -400 -400/warp Krobus -444 -444/warp Marlon -433 -433/warp farmer 15 25/warp Victor 14 25/changeLocation Summit/viewport 15 17 true/move farmer 0 -8 0 true/move Victor 0 -8 0 true/pause 4000/playSound SpringBirds/pause 400/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1400/playSound SpringBirds/pause 500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 1400/speak Victor \"@... It feels like we just met yesterday, but we understand each other so well it's like I've known you all my life.$3\"/pause 400/move farmer 0 0 3/pause 500/speak Victor \"We listen to each other, inspire each other, challenge each other, and grow stronger together every day.$3#$b#I couldn't imagine a single day without you in my life.$4#$b#I've grown so much because of you... I hope I've brought you even a fraction of the joy you've brought me.$3\"/pause 400/emote farmer 20/pause 200/move Victor 0 0 1/pause 400/speak Victor \"You're precious to me, and you always will be.$4\"/pause 100/emote Victor 20/pause 350/speak Victor \"Ah, that was a little cheesy wasn't it.$0#$b#I think I've read too many romance novels.$1\"/pause 200/emote farmer 32/pause 200/speak Victor \"So, I was thinking to celebrate maybe we cou-$4\"/emote Victor 16 true/pause 250/playMusic junimoStarSong/animate farmer true true 9999999 101/showFrame Victor 28/emote farmer 20 true/emote Victor 20/pause 1500/viewport move 0 -1 11000 true/pause 11000/globalFade/viewport -1000 -1000/end dialogue Victor \"That moment on the summit was better than any scene in a book.$4#$e#I love you, @.$4\"",
+        "2000004_Summit": "pause 400/speak Victor \"!!!$1\"/pause 500/speak Victor \"Here, take my hand.$4\"/pause 300/emote farmer 32/pause 300/move farmer 0 1 2/move farmer 1 0 0 true/pause 200/move Victor 0 0 2/pause 250/emote Victor 20 true/pause 230/emote farmer 20 true/pause 750/speed Victor 2/move Victor 6 0 0 true/move farmer 6 0 0 true/pause 200/globalFade/viewport -1000 -1000/pause 500/warp Wizard -400 -400/warp Krobus -444 -444/warp MarlonFay -433 -433/warp farmer 15 25/warp Victor 14 25/changeLocation Summit/viewport 15 17 true/move farmer 0 -8 0 true/move Victor 0 -8 0 true/pause 4000/playSound SpringBirds/pause 400/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1400/playSound SpringBirds/pause 500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 1400/speak Victor \"@... It feels like we just met yesterday, but we understand each other so well it's like I've known you all my life.$3\"/pause 400/move farmer 0 0 3/pause 500/speak Victor \"We listen to each other, inspire each other, challenge each other, and grow stronger together every day.$3#$b#I couldn't imagine a single day without you in my life.$4#$b#I've grown so much because of you... I hope I've brought you even a fraction of the joy you've brought me.$3\"/pause 400/emote farmer 20/pause 200/move Victor 0 0 1/pause 400/speak Victor \"You're precious to me, and you always will be.$4\"/pause 100/emote Victor 20/pause 350/speak Victor \"Ah, that was a little cheesy wasn't it.$0#$b#I think I've read too many romance novels.$1\"/pause 200/emote farmer 32/pause 200/speak Victor \"So, I was thinking to celebrate maybe we cou-$4\"/emote Victor 16 true/pause 250/playMusic junimoStarSong/animate farmer true true 9999999 101/showFrame Victor 28/emote farmer 20 true/emote Victor 20/pause 1500/viewport move 0 -1 11000 true/pause 11000/globalFade/viewport -1000 -1000/end dialogue Victor \"That moment on the summit was better than any scene in a book.$4#$e#I love you, @.$4\"",
     },
         "When": {"Relationship:Victor": "Dating"}
        },
