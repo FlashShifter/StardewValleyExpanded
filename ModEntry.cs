@@ -5,6 +5,7 @@ using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Locations;
+using SuperAardvark.AntiSocial;
 
 namespace StardewValleyExpanded
 {
@@ -14,6 +15,8 @@ namespace StardewValleyExpanded
         {
             helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
+
+            AntiSocialManager.DoSetupIfNecessary(this);
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
