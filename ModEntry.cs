@@ -1,22 +1,37 @@
-﻿using System;
+﻿using Harmony;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
-using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Locations;
 using SuperAardvark.AntiSocial;
+using System;
+using System.Collections.Generic;
 
 namespace StardewValleyExpanded
 {
     public class ModEntry : Mod
     {
+        private static Mod modInstance;
+
         public override void Entry(IModHelper helper)
         {
+            ModEntry.modInstance = this;
+
             helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
 
             AntiSocialManager.DoSetupIfNecessary(this);
+
+            var harmony = HarmonyInstance.Create(this.ModManifest.UniqueID);
+
+            harmony.Patch(
+               original: AccessTools.Method(typeof(StardewValley.Utility), nameof(StardewValley.Utility.getCelebrationPositionsForDatables), new Type[] { typeof(List<string>) }),
+               postfix: new HarmonyMethod(typeof(CustomWeddingGuests), nameof(CustomWeddingGuests.getCelebrationPositionsForDatables_Postfix))
+            );
+
+            helper.Content.AssetLoaders.Add(new CustomWeddingGuests(this));
+
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -80,5 +95,7 @@ namespace StardewValleyExpanded
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(babyCow1);
             (Game1.getLocationFromName("Forest") as Forest).marniesLivestock.Add(babyCow2);
         }
+
+
     }
 }
