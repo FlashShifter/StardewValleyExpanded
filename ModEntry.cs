@@ -38,8 +38,10 @@ namespace StardewValleyExpanded
         {
             //Removes Morris from the game when community center completion = 'true'
             if (Game1.MasterPlayer.mailReceived.Contains("ccIsComplete") || Game1.MasterPlayer.hasCompletedCommunityCenter())
-
+            {
                 Game1.removeCharacterFromItsLocation("MorrisTod");
+            }
+            Game1.removeCharacterFromItsLocation("Marlon");
         }
 
         private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
