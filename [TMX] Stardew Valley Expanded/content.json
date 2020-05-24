@@ -1,4 +1,5 @@
 ﻿{
+  "loadLate": true,
   "addMaps": [ //SVE LOCATIONS
 
     {
@@ -50,8 +51,8 @@
       "file": "assets/SophiaHouse.tbin"
     },
     {
-      "name": "SophiaCellar",
-      "file": "assets/SophiaCellar.tbin"
+      "name": "SophiasCellar",
+      "file": "assets/SophiasCellar.tbin"
     },
     {
       "name": "OliviaCellar",
@@ -193,11 +194,6 @@
       "addLocation": false
     },
   {
-      "name": "SandyHouse", 
-      "file": "assets/SandyHouse.tbin",
-      "addLocation": false
-    },
-  {
       "name": "ScienceHouse", 
       "file": "assets/ScienceHouse.tbin",
       "addLocation": false
@@ -334,6 +330,13 @@
 	  "conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(1305677)",
     },
 	{
+      "name": "SkullCave",
+      "file": "assets/CrimsonBadlandsUnlocked.tbin",
+      "sourceArea": [ 0, 0, 12, 9 ],
+      "position": [ 15, 0 ],
+	  "conditions": "e 1305677",
+    },
+	{
       "name": "TownEast",
       "file": "assets/TownEastUnlocked.tbin",
       "sourceArea": [ 0, 0, 3, 3 ],
@@ -363,6 +366,13 @@
     },
 	{
       "name": "AuroraVineyard",
+      "file": "assets/AuroraVineyardOvergrown.tbin",
+      "sourceArea": [ 0, 0, 35, 42 ],
+      "position": [ 0, 0 ],
+	  "conditions": "e 7775925",
+    },
+	{
+      "name": "AuroraVineyard",
       "file": "assets/AuroraVineyardStarfruits.tbin",
       "sourceArea": [ 0, 0, 35, 42 ],
       "position": [ 0, 0 ],
@@ -388,6 +398,13 @@
       "sourceArea": [ 0, 0, 1, 1 ],
       "position": [ 23, 4 ],
 	  "conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(1724095)",
+    },	
+	{
+      "name": "WizardBasement",
+      "file": "assets/ShrineOfIllusions.tbin",
+      "sourceArea": [ 0, 0, 1, 1 ],
+      "position": [ 23, 4 ],
+	  "conditions": "e 1724095",
     },	
 	
 	//CROP PHASES
@@ -806,14 +823,14 @@
       "file": "assets/AdventureGuildGuestIsaac1.tbin",
       "sourceArea": [ 0, 0, 1, 2 ],
       "position": [ 10, 13 ],
-	  "conditions": "u 27 28/e 7502583"
+	  "conditions": "u 26 27/e 7502583"
     },
 	{
       "name": "AdventureGuild",
       "file": "assets/AdventureGuildGuestIsaac1Gone.tbin",
       "sourceArea": [ 0, 0, 1, 2 ],
       "position": [ 10, 13 ],
-	  "conditions": "u 1/e 7502583"
+	  "conditions": "u 28/e 7502583"
     },
 	{
       "name": "AdventureGuild",
