@@ -1,5 +1,6 @@
 ﻿using Harmony;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -32,6 +33,21 @@ namespace StardewValleyExpanded
 
             helper.Content.AssetLoaders.Add(new CustomWeddingGuests(this));
 
+            harmony.Patch(
+               original: AccessTools.Method(typeof(StardewValley.Menus.ShopMenu), nameof(StardewValley.Menus.ShopMenu.setUpShopOwner), new Type[] { typeof(string) }),
+               postfix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.setUpShopOwner_Postfix))
+            );
+
+        }
+
+        public static void setUpShopOwner_Postfix(string who, ref StardewValley.Menus.ShopMenu __instance)
+        {
+            if ("Traveler".Equals(who))
+            {
+                NPC suki = new NPC();
+                suki.Portrait = Game1.content.Load<Texture2D>("Portraits\\Suki");
+                __instance.portraitPerson = suki;
+            }
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
