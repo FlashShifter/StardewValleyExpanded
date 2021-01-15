@@ -1,0 +1,52 @@
+﻿{
+  "loadLate": true,
+
+  "addMaps": [
+  
+	{
+      "name": "FarmCliff",
+      "file": "assets/FarmCliff.tbin"
+    },
+	{
+      "name": "GrandpasGrove",
+      "file": "assets/GrandpasGrove.tbin"
+    }
+	
+  ],
+  
+  "mergeMaps": [
+  
+  	{
+      "name": "GrandpasShed",
+      "file": "assets/GrandpasShed_Stone.tbin",
+      "sourceArea": [ 0, 0, 2, 2 ],
+      "position": [ 21, 3 ],
+	  "conditions": "e 2554908"
+    },
+	
+  	{
+      "name": "GrandpasShed",
+      "file": "assets/GrandpasShed_StoneRemoved.tbin",
+      "sourceArea": [ 0, 0, 2, 2 ],
+      "position": [ 21, 3 ],
+	  "conditions": "e 2554909"
+    },
+	
+	{
+      "name": "GrandpasShed",
+      "file": "assets/GrandpasShed_Gold.tbin",
+      "sourceArea": [ 0, 0, 1, 2 ],
+      "position": [ 23, 4 ],
+	  "conditions": "e 2554910"
+    },
+	
+  	{
+      "name": "GrandpasShed",
+      "file": "assets/GrandpasShed_GoldRemoved.tbin",
+      "sourceArea": [ 0, 0, 1, 2 ],
+      "position": [ 23, 4 ],
+	  "conditions": "e 2554911"
+    }
+  ],
+  
+}

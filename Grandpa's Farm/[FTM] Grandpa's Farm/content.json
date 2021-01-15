@@ -1,0 +1,510 @@
+{
+  "ForageSpawnEnabled": true,
+  "LargeObjectSpawnEnabled": true,
+  "OreSpawnEnabled": true,
+  "MonsterSpawnEnabled": false,
+  "Forage_Spawn_Settings": {
+    "Areas": [
+      {
+        "SpringItemIndex": null,
+        "SummerItemIndex": null,
+        "FallItemIndex": null,
+        "WinterItemIndex": null,
+        "UniqueAreaID": "Forage",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "119,49;0,0",
+          "119,96;35,50",
+          "162,155;132,83",
+          "34,96;0,78"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "SpringItemIndex": null,
+        "SummerItemIndex": null,
+        "FallItemIndex": [
+          404,
+          420,
+          422
+        ],
+        "WinterItemIndex": null,
+        "UniqueAreaID": "Mushrooms",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "119,47;0,0"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Fall"
+          ],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "SpringItemIndex": [
+          20,
+          16
+        ],
+        "SummerItemIndex": [
+          259,
+          257
+        ],
+        "FallItemIndex": [
+          420,
+          422
+        ],
+        "WinterItemIndex": [
+          414,
+          418
+        ],
+        "UniqueAreaID": "Grove spawns",
+        "MapName": "GrandpasGrove",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 6,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      }
+    ],
+    "PercentExtraSpawnsPerForagingLevel": 2,
+    "SpringItemIndex": [
+      16,
+      18,
+      20,
+      22
+    ],
+    "SummerItemIndex": [
+      259,
+      396,
+      398,
+      402,
+      404
+    ],
+    "FallItemIndex": [
+      257,
+      406,
+      410,
+      408,
+      281,
+      404,
+      420,
+      422
+    ],
+    "WinterItemIndex": [
+      283,
+      414,
+      418
+    ],
+    "CustomTileIndex": []
+  },
+  "Large_Object_Spawn_Settings": {
+    "Areas": [
+      {
+        "ObjectTypes": [
+          "Meteorite"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "Farm Meteorite",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "20,25;20,25"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Medium",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [
+            "1"
+          ],
+          "Seasons": [
+            "Spring"
+          ],
+          "Days": [
+            "1"
+          ],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": 1
+        },
+        "DaysUntilSpawnsExpire": null
+      }
+    ],
+    "CustomTileIndex": []
+  },
+  "Ore_Spawn_Settings": {
+    "Areas": [
+      {
+        "MiningLevelRequired": null,
+        "StartingSpawnChance": null,
+        "LevelTenSpawnChance": null,
+        "UniqueAreaID": "Ore spawns",
+        "MapName": "FarmCliff",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 3,
+        "IncludeTerrainTypes": [
+          "Quarry"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "10,11;3,5"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 6
+      }
+    ],
+    "PercentExtraSpawnsPerMiningLevel": 1,
+    "MiningLevelRequired": {
+      "Stone": 0,
+      "Geode": 0,
+      "FrozenGeode": 4,
+      "MagmaGeode": 8,
+      "Gem": 10,
+      "Copper": 3,
+      "Iron": 5,
+      "Gold": 7,
+      "Iridium": 10,
+      "Mystic": 10,
+      "Diamond": 10,
+      "Ruby": 10,
+      "Jade": 9,
+      "Amethyst": 9,
+      "Topaz": 9,
+      "Emerald": 9,
+      "Aquamarine": 9
+    },
+    "StartingSpawnChance": {
+      "Stone": 60,
+      "Geode": 5,
+      "FrozenGeode": 0,
+      "MagmaGeode": 0,
+      "Gem": 8,
+      "Copper": 15,
+      "Iron": 0,
+      "Gold": 0,
+      "Iridium": 0,
+      "Mystic": 2,
+      "Diamond": 3,
+      "Ruby": 2,
+      "Jade": 2,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0
+    },
+    "LevelTenSpawnChance": {
+      "Stone": 30,
+      "Geode": 15,
+      "FrozenGeode": 10,
+      "MagmaGeode": 5,
+      "Gem": 8,
+      "Copper": 30,
+      "Iron": 30,
+      "Gold": 30,
+      "Iridium": 0,
+      "Mystic": 2,
+      "Diamond": 3,
+      "Ruby": 2,
+      "Jade": 2,
+      "Amethyst": 3,
+      "Topaz": 4,
+      "Emerald": 2,
+      "Aquamarine": 2
+    },
+    "CustomTileIndex": []
+  },
+  "Monster_Spawn_Settings": {
+    "Areas": [
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "shadow brute",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 8
+            }
+          },
+          {
+            "MonsterName": "wilderness golem",
+            "Settings": {
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "MonsterName": "purple slime",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 10,
+              "SpawnWeight": 2
+            }
+          },
+          {
+            "MonsterName": "red slime",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 8,
+              "MaximumSkillLevel": 9,
+              "SpawnWeight": 2
+            }
+          },
+          {
+            "MonsterName": "blue slime",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 4,
+              "MaximumSkillLevel": 7,
+              "SpawnWeight": 2
+            }
+          },
+          {
+            "MonsterName": "green slime",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MaximumSkillLevel": 3,
+              "SpawnWeight": 2
+            }
+          }
+        ],
+        "UniqueAreaID": "Farm monster area 1",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 8,
+        "IncludeTerrainTypes": [
+          "Dirt",
+          "Diggable",
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 1900,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "iridium bat",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 10,
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "MonsterName": "serpent",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 10,
+              "SpawnWeight": 3
+            }
+          },
+          {
+            "MonsterName": "lava bat",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 8,
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "MonsterName": "frost bat",
+            "Settings": {
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 5,
+              "SpawnWeight": 2
+            }
+          },
+          {
+            "MonsterName": "bat",
+            "Settings": {
+              "SpawnWeight": 2
+            }
+          }
+        ],
+        "UniqueAreaID": "Farm monster area 2",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 3,
+        "IncludeTerrainTypes": [
+          "Dirt",
+          "Diggable",
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 1900,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      }
+    ],
+    "CustomTileIndex": []
+  },
+  "QuarryTileIndex": [
+    556,
+    558,
+    583,
+    606,
+    607,
+    608,
+    630,
+    635,
+    636,
+    680,
+    681,
+    685
+  ],
+  "File_Conditions": {
+    "FarmTypes": [
+      "Standard"
+    ],
+    "FarmerNames": [],
+    "SaveFileNames": [],
+    "OtherMods": {
+      "flashshifter.GrandpasFarm": true
+    }
+  }
+}

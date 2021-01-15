@@ -1,0 +1,438 @@
+{
+  "Format": "1.19",
+
+  "ConfigSchema": {
+
+      "SandboxLayout": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+      "RemoveFences": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+      "GrassCropField": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+      "HeavyDebris": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+      "LargerGreenhouse": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+      "RemoveGreenhouseObjects": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   }
+   
+},
+
+  "DynamicTokens": [
+
+    {
+      "Name": "GrandpaShedComplete",
+      "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554906}}"
+    },
+    {
+      "Name": "BridgeComplete",
+      "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554909}}"
+    },
+	{
+      "Name": "GroveComplete",
+      "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554911}}"
+    },
+ ],
+
+  "Changes": [ 
+
+    //Load tilesheets
+    {
+      "Action": "Load",
+      "Target": "Maps/z_petbowl, Maps/z_FarmCliff_Shadow, Maps/GrandpasGrove_Shadows1, Maps/GrandpasGrove_Shadows2, Maps/z_FarmCliff_Copper, Maps/z_FarmCliff_Iron, Maps/z_FarmCliff_Gold, Maps/z_FarmCliff_Gems, Maps/z_FarmCliff_Blank",
+      "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
+    },
+
+	//Load grandpa's farm
+	{
+      "Action": "Load",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/Maps/GrandpasFarm.tbin",
+	  "When": { "SandboxLayout": "false" }
+    },
+	
+	//Load grandpa's farm
+	{
+      "Action": "Load",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/Maps/GrandpasFarm_SandboxLayout.tbin",
+	  "When": { "SandboxLayout": "true" }
+    },
+	
+	
+	//Configurations
+	
+    { //Remove Static Fences
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences.tbin",
+      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
+      "When": { "FarmType": "Standard", "RemoveFences": "true", "SandboxLayout": "false" }
+    },
+	
+    { //Grass crop field
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_GrassCropField.tbin",
+      "ToArea": { "X": 74, "Y": 51, "Width": 40, "Height": 30 },
+      "When": { "FarmType": "Standard", "GrassCropField": "true", "SandboxLayout": "false" }
+    },
+	
+    { //heavy debris config 1
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_HeavyDebris.tbin",
+      "ToArea": { "X": 0, "Y": 0, "Width": 120, "Height": 97 },
+      "When": { "FarmType": "Standard", "HeavyDebris": "true", "SandboxLayout": "false" }
+    },
+	
+    { //heavy debris config 2 - fence area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences_HeavyDebris.tbin",
+      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
+      "When": { "FarmType": "Standard", "HeavyDebris": "true", "RemoveFences": "true", }
+    },
+	
+	//Load greenhouse
+	{
+      "Action": "Load",
+      "Target": "Maps/Greenhouse,Maps",
+      "FromFile": "assets/Maps/Greenhouse_GrandpasFarm.tbin",
+	  "When": { "LargerGreenhouse": "true" }
+    },
+	
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Greenhouse,Maps",
+      "FromFile": "assets/MapPatches/Greenhouse_Cleared_GrandpasFarm.tbin",
+	  "When": { "LargerGreenhouse": "true", "RemoveGreenhouseObjects": "true" },
+	  "ToArea": { "X": 0, "Y": 0, "Width": 27, "Height": 32 }
+    },
+	
+	//Patches surrounding maps with warp tiles + redesigns
+    {
+      "Action": "EditMap",
+      "Target": "Maps/BusStop",
+      "FromFile": "assets/MapPatches/GrandpasFarm_BusStopWarps.tbin",
+      "ToArea": { "X": 0, "Y": 22, "Width": 18, "Height": 8 },
+      "When": { "FarmType": "Standard" }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "assets/MapPatches/GrandpasFarm_ForestMarnieYard.tbin",
+      "ToArea": { "X": 105, "Y": 0, "Width": 15, "Height": 19 },
+      "When": { "FarmType": "Standard" }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "assets/MapPatches/GrandpasFarm_ForestShortcut.tbin",
+      "ToArea": { "X": 37, "Y": 0, "Width": 6, "Height": 8 },
+      "When": { "FarmType": "Standard" }
+    },
+	{
+     "Action": "EditMap",
+     "Target": "Maps/Backwoods",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_BackwoodsBottom.tbin",
+     "ToArea": { "X": 35, "Y": 30, "Width": 15, "Height": 10 },
+	 "When": { "FarmType": "Standard" }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "FromFile": "assets/MapPatches/GrandpasFarm_WoodsWarps.tbin",
+      "ToArea": { "X": 44, "Y": 0, "Width": 6, "Height": 7 },
+      "When": { "FarmType": "Standard" }
+    },
+	
+	//Patches grandpa's farm forest entrance
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_Forest_Joja.tbin",
+      "ToArea": { "X": 66, "Y": 85, "Width": 5, "Height": 15 },
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard" }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "MapProperties": { "Light": "95 49 4 87 93 4 67 95 4" },
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard" }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "MapProperties": { "DayTiles": "AlwaysFront 67 93 907" },
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "MapProperties": { "NightTiles": "AlwaysFront 67 93 908" },
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard" }
+    },
+	
+	//Patches backwoods staircase
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_BackwoodsStairs.tbin",
+      "ToArea": { "X": 76, "Y": 0, "Width": 6, "Height": 3 },
+      "When": { "HasFlag": "communityUpgradeShortcuts", "FarmType": "Standard" }
+    },
+	
+	//Patches traveling merchant
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_ForestTravelingMerchant.tbin",
+      "ToArea": { "X": 23, "Y": 93, "Width": 8, "Height": 4 },
+      "When": { "DayOfWeek": "Friday, Sunday", "FarmType": "Standard" }
+    },
+	
+	//Patches junimo warp
+	{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_Junimowarp.tbin",
+	 "When": { "HasSeenEvent": "7775927" },
+     "ToArea": { "X": 58, "Y": 87, "Width": 9, "Height": 5 }
+    },
+	
+	//Fixes an issue where moving the greenhouse caused glitched tiles.
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Greenhouse_Dirt",
+      "FromFile": "assets/MapPatches/GrandpasFarm_GreenhousePatch.tmx",
+      "When": { "FarmType": "Standard" },
+	  "ToArea": { "X": 0, "Y": 0, "Width": 9, "Height": 6 },
+    }, 
+	
+	//Patches fixed grandpa's shed
+	{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_ShedFixed.tbin",
+	 "When": { "GrandpaShedComplete": true },
+     "ToArea": { "X": 15, "Y": 11, "Width": 11, "Height": 12 }
+    },
+	
+	//Grandpas shed quest - event #8 - Building the bridge
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Farm",
+	 "When": { "HasSeenEvent": "2554907", "FarmType": "Standard" },
+	 "Entries": {
+	 "2554908/t 900 1800": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/pause 1000/speak Robin \"Hi, @!$1#$b#I was reading a stone masonry magazine and its inspired me to try my hand at it!#$b#If you supplied me stone, I could build a little bridge to your refurbished shed.$0#$b#How does that sound?$1\"/pause 200/emote farmer 32/pause 300/speak Robin \"To be on the safe side, I think this project will require 900 pieces of stone.#$b#I'll put a storage chest in the shed so you can drop them off!$0\"/pause 500/end"
+	    },
+    },
+	
+	//Grandpas shed quest  - event #9 - Completed stone requirement
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Farm",
+	 "When": { "FarmType": "Standard" },
+	 "Entries": {
+	 "2554909/t 600 2000/i {{spacechase0.JsonAssets/ObjectId:Stone Manifest}}": "continue/64 15/farmer 64 15 2 Robin 64 17 0/removeItem {{spacechase0.JsonAssets/ObjectId:Stone Manifest}}/skippable/pause 1000/speak Robin \"You gathered the stone I requested!$1#$b#I'll get started on the bridge first thing tomorrow!$0\"/pause 500/end",              
+	    },
+    },
+
+    //Grandpas shed quest  - event #9 - Completed stone requirement - late at night
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Farm",
+	 "When": { "FarmType": "Standard" },
+	 "Entries": {
+	 "2554909/t 2010 2600/i {{spacechase0.JsonAssets/ObjectId:Stone Manifest}}": "continue/64 15/farmer 64 15 2 Robin 64 17 0/removeItem {{spacechase0.JsonAssets/ObjectId:Stone Manifest}}/skippable/pause 1000/speak Robin \"*yawn*...$2\"/pause 740/speak Robin \"I see that you gathered the stone I requsted!$1#$b#This should be enough to build the bridge! I'll get started on it tomorrow.$0\"/pause 500/end",              
+	    },
+    },
+	
+    //Grandpas shed quest - event #10 - A strange commission - Lewis (mayor)
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Mountain",
+	 "When": { "HasSeenEvent": "2554909", "FarmType": "Standard" },
+	 "Entries": {
+	 "2554910/y 2/k 6665293/w sunny/t 900 1700": "continue/-500 -500/farmer 4 26 1 Linus 28 9 1 Lewis -100 -100 2 Robin -100 -100 1 Demetrius -100 -100 3/viewport 15 26 true/skippable/move farmer 7 0 2 true/pause 1500/warp Lewis 12 26/playSound doorClose/move Lewis 0 11 1 true/pause 3000/emote farmer 8 true/pause 300/globalFade/viewport -1000 -1000/warp Lewis -80 -80/viewport 15 26 true/pause 1500/faceDirection farmer 1 true/pause 600/move farmer 1 0 1/pause 300/faceDirection farmer 0/pause 500/warp farmer -70 -70/playSound doorClose/pause 600/globalFade/viewport -1000 -1000/stopMusic/changeLocation Sciencehouse/warp Linus -100 -100/warp Robin 6 20/faceDirection Robin 2 true/showFrame Robin 34 true/warp Demetrius 8 20/warp farmer 6 23/playMusic distantBanjo/viewport 7 20 true/pause 1300/speak Demetrius \"Well, I'll be in the lab if you need me...$2\"/pause 250/speak Robin \"...$6\"/pause 500/faceDirection Demetrius 2 true/pause 200/faceDirection Demetrius 1 true/pause 400/advancedMove Demetrius false 11 0 0 -2/pause 1400/move farmer 0 -1 0/pause 600/showFrame Robin 0 true/pause 400/emote Robin 16/speak Robin \"Oh, hey @. That must have been a little awkward for you.$0#$b#I love my husband, but my commissions are my business.$6\"/pause 500/speak Robin \"I need 30 freshly smelted gold bars, but Clint is backordered...$2\"/pause 600/animate Robin false true 500 34 35/pause 600/textAboveHead Robin \"Hmm...\"/pause 3000/stopAnimation Robin/pause 250/jump Robin/pause 1000/speak Robin \"I know! Maybe if you supplied me the gold I need, I could do some farm work in return?$1#$b#When I was renovating your shed, I noticed there was 'something' blocked by the thicket.$0#$b#It probably leads somewhere very special.$1\"/pause 500/jump farmer/pause 1000/speak Robin \"For consistencies sake, I'll put another drop off chest in your shed just like last time for that stone bridge.#$b#Looking forward to working with you again, @!$1\"/pause 500/end dialogue Robin \"I've never been commissioned to make something out of solid gold before.$0\""
+	    },
+    },
+	
+	//Grandpas shed quest - event #10 - A strange commission - Morris (mayor)
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Mountain",
+	 "When": { "HasSeenEvent": "2554909", "FarmType": "Standard" },
+	 "Entries": {
+	 "2554910/y 2/e 6665293/w sunny/t 900 1700": "continue/-500 -500/farmer 4 26 1 Linus 28 9 1 MorrisTod -100 -100 2 Robin -100 -100 1 Demetrius -100 -100 3/viewport 15 26 true/skippable/move farmer 7 0 2 true/pause 1500/warp MorrisTod 12 26/playSound doorClose/move MorrisTod 0 11 1 true/pause 3000/emote farmer 8 true/pause 300/globalFade/viewport -1000 -1000/warp MorrisTod -80 -80/viewport 15 26 true/pause 1500/faceDirection farmer 1 true/pause 600/move farmer 1 0 1/pause 300/faceDirection farmer 0/pause 500/warp farmer -70 -70/playSound doorClose/pause 600/globalFade/viewport -1000 -1000/stopMusic/changeLocation Sciencehouse/warp Linus -100 -100/warp Robin 6 20/faceDirection Robin 2 true/showFrame Robin 34 true/warp Demetrius 8 20/warp farmer 6 23/playMusic distantBanjo/viewport 7 20 true/pause 1300/speak Demetrius \"Well, I'll be in the lab if you need me...$2\"/pause 250/speak Robin \"...$6\"/pause 500/faceDirection Demetrius 2 true/pause 200/faceDirection Demetrius 1 true/pause 400/advancedMove Demetrius false 11 0 0 -2/pause 1400/move farmer 0 -1 0/pause 600/showFrame Robin 0 true/pause 400/emote Robin 16/speak Robin \"Oh, hey @. That must have been a little awkward for you.$0#$b#I love my husband, but my commissions are my business.$6\"/pause 500/speak Robin \"I need 30 freshly smelted gold bars, but Clint is backordered...$2\"/pause 600/animate Robin false true 500 34 35/pause 600/textAboveHead Robin \"Hmm...\"/pause 3000/stopAnimation Robin/pause 250/jump Robin/pause 1000/speak Robin \"I know! Maybe if you supplied me the gold I need, I could do some farm work in return?$1#$b#When I was renovating your shed, I noticed there was 'something' blocked by the thicket.$0#$b#It probably leads somewhere very special.$1\"/pause 500/jump farmer/pause 1000/speak Robin \"For consistencies sake, I'll put another drop off chest in your shed just like last time for that stone bridge.#$b#Looking forward to working with you again, @!$1\"/pause 500/end dialogue Robin \"I've never been commissioned to make something out of solid gold before.$0\""
+	    },
+    },
+	
+	//Grandpas shed quest - event #11 - Removing the thicket - day
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Farm",
+	 "When": { "FarmType": "Standard" },
+	 "Entries": {
+	 "2554911/e 2554910/t 600 2000/i {{spacechase0.JsonAssets/ObjectId:Gold Manifest}}": "continue/64 15/farmer 64 15 2 Robin 64 17 0/removeItem {{spacechase0.JsonAssets/ObjectId:Gold Manifest}}/skippable/pause 1000/speak Robin \"These gold bars are just what I need to get started on Mayor Lewis' commission! Thank you!$1#$b#I'll get started on clearing away the thicket by the shed tomorrow!$0\"/pause 500/end dialogue Robin \"I don't judge what people commission from me.$6\"",              
+	 	},
+    },
+	
+	//Grandpas shed quest - event #11 - Removing the thicket - night
+    {
+	 "Action": "EditData",
+	 "Target": "data/events/Farm",
+	 "When": { "FarmType": "Standard" },
+	 "Entries": {
+	 "2554911/e 2554910/t 2000 2600/i {{spacechase0.JsonAssets/ObjectId:Gold Manifest}}": "continue/64 15/farmer 64 15 2 Robin 64 17 0/removeItem {{spacechase0.JsonAssets/ObjectId:Gold Manifest}}/skippable/pause 1000/speak Robin \"*yawn*... it's a bit late, @.$2\"/pause 500/speak Robin \"Oh! These gold bars are just what I need to get started on Mayor Lewis' commission! Thank you!$1#$b#I'll get started on clearing away the thicket by the shed tomorrow!$0\"/pause 500/end dialogue Robin \"I don't judge what people commission from me.$0#$e#I do wonder what Mayor Lewis will do with this though.$6\"",              
+	 	},
+    },
+	
+	//Patches bridge
+	{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge.tbin",
+	 "When": { "BridgeComplete": "true", "FarmType": "Standard" },
+     "ToArea": { "X": 31, "Y": 32, "Width": 4, "Height": 5 }
+    },
+	
+    //Patches grove entrance
+	{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_GroveUnlocked.tbin",
+	 "When": { "GroveComplete": "true", "FarmType": "Standard" },
+     "ToArea": { "X": 0, "Y": 17, "Width": 9, "Height": 6 }
+    },
+
+	//Fall leaves
+	{
+     "Action": "EditMap",
+	 "Target": "Maps/Farm",
+	 "FromFile": "Assets/MapPatches/GrandpasFarm_Leaves.tbin",
+	 "When": { "Season": "Fall" },
+	 "ToArea": { "X": 0, "Y": 0, "Width": 120, "Height": 97 }
+    },
+	
+	//Makes gem appearances dynamic to players mining level
+    {
+     "Action": "EditImage",
+	 "Target": "Maps/z_FarmCliff_Copper",
+	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+	 "When": { "SkillLevel:Mining": "1, 2" }
+    },
+	{
+     "Action": "EditImage",
+	 "Target": "Maps/z_FarmCliff_Iron",
+	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+	 "When": { "SkillLevel:Mining": "1, 2, 3, 4, 5" }
+    },
+	{
+     "Action": "EditImage",
+	 "Target": "Maps/z_FarmCliff_Gold",
+	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+	 "When": { "SkillLevel:Mining": "1, 2, 3, 4, 5, 6, 7" }
+    },
+	{
+     "Action": "EditImage",
+	 "Target": "Maps/z_FarmCliff_Gems",
+	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+	 "When": { "SkillLevel:Mining": "1, 2, 3, 4, 5, 6, 7, 9" }
+    },
+	
+	//Patches world map
+	{
+      "Action": "EditImage",
+      "Target": "LooseSprites/map",
+      "FromFile": "Assets/Maps/WorldMaps/{{Season}}_GrandpasFarm_Map.png",
+      "PatchMode": "Overlay",
+      "ToArea": { "X": 58, "Y": 51, "Width": 91, "Height": 59 },
+      "When": { "FarmType": "Standard" }
+    },
+	//Grass Crop Field Configuration
+	{
+      "Action": "EditImage",
+      "Target": "LooseSprites/map",
+      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_GrassCropField.png",
+      "PatchMode": "Overlay",
+      "ToArea": { "X": 110, "Y": 85, "Width": 28, "Height": 11 },
+      "When": { "FarmType": "Standard", "GrassCropField": "true", "SandboxLayout": "false" }
+    },
+	//Remove Fences Configuration
+	{
+      "Action": "EditImage",
+      "Target": "LooseSprites/map",
+      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_RemoveFences.png",
+      "PatchMode": "Overlay",
+      "ToArea": { "X": 89, "Y": 71, "Width": 17, "Height": 24 },
+      "When": { "FarmType": "Standard", "RemoveFences": "true", "SandboxLayout": "false" }
+    },
+	//Sandbox Layout Configuration
+	{
+      "Action": "EditImage",
+      "Target": "LooseSprites/map",
+      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_SandboxLayout.png",
+      "PatchMode": "Overlay",
+      "ToArea": { "X": 89, "Y": 67, "Width": 35, "Height": 30 },
+      "When": { "FarmType": "Standard", "SandboxLayout": "true" }
+    },
+	
+    //Voids dirt under petbowl
+    {
+      "Action": "EditImage",
+      "Target": "Maps/{{season}}_outdoorsTileSheet",
+      "FromFile": "assets/Tilesheets/z_petbowl.png",
+      "ToArea": { "X": 208, "Y": 1232,"Width": 32, "Height": 16 },
+      "When": { "FarmType": "Standard" },
+	  "Update": "OnLocationChange"
+    },
+	
+    //Changes standard farm icon to grandpa
+    {
+      "Action": "EditImage",
+      "Target": "Loosesprites/Cursors",
+      "FromFile": "assets/Tilesheets/Icon.png",
+      "ToArea": { "X": 2, "Y": 324,"Width": 18, "Height": 20 },
+    },
+	
+	//Changes standard farm string
+	{
+	  "Action": "EditData",
+	  "Target": "Strings/UI",
+	  "Entries": {
+	  "Character_FarmStandard": "Grandpa's Farm_Modestly sized farmland with tillable grass, different landmark locations, shortcuts to surrounding areas, and secrets to discover.",
+	  }
+	},
+	
+	//Opening event pathing and viewport fix
+    {
+      "Action": "EditData",
+      "Target": "data/events/busstop",
+	  "When": { "FarmType": "Standard" },
+      "Entries": {
+      "60367/u 0": "none/-1000 -1000/farmer 12 10 2 Robin 12 13 0 Lewis -100 -100 2/skippable/pause 500/playSound busDoorOpen/pause 5000/viewport 13 14 clamp true/move farmer 0 2 2/playMusic SettlingIn/speak Robin \"Hello! You must be @.#$b#I'm Robin, the local carpenter. Mayor Lewis sent me here to fetch you and show you the way to your new home. He's there right now, tidying things up for your arrival.#$b#The farm's right over here, if you'll follow me.\"/viewport move 0 2 800/move Robin 0 5 2 true/pause 800/move farmer 0 4 2 true/fade/speed farmer 2/viewport -200 -200/changeLocation Farm/halt/warp Robin 109 51/faceDirection Robin 3/warp farmer 110 51/faceDirection farmer 3/viewport 105 51 clamp/viewport move -1 0 4000/move Robin -8 0 3 farmer -8 0 3/pause 700/faceDirection Robin 2/speak Robin \"This is %farm farm.\"/pause 500/faceDirection farmer 2/showFrame 94/jump farmer/startJittering/pause 1000/emote farmer 28/showFrame 0/stopJittering/pause 800/faceDirection Robin 1/pause 200/speak Robin \"What's the matter?#$b#Sure, it's a bit overgrown, but there's some good soil underneath that mess!#$b#With a little dedication you'll have it cleaned up in no time.\"/pause 500/faceDirection farmer 3/pause 200/viewport move -1 0 5000/move Robin -7 0 0 farmer -7 0 0/pause 400/faceDirection Robin 0/speak Robin \"...And here we are, your new home.$h\"/pause 300/faceDirection farmer 0/pause 500/playSound doorClose/warp Lewis 95 49/pause 1500/speak Lewis \"Ah, the new farmer!$h\"/move Lewis 0 1 2/move Lewis 1 0 2/move Lewis 0 1 3/faceDirection farmer 1/faceDirection Robin 1/pause 600/speak Lewis \"Welcome! I'm Lewis, Mayor of Pelican Town.#$b#You know, everyone's been asking about you.#$b#It's not every day that someone new moves in. It's quite a big deal!\"/pause 1000/faceDirection Lewis 3/pause 100/faceDirection Lewis 0/pause 500/speak Lewis \"So... You're moving into your grandfather's old cottage.#$b#It's a good house... very 'rustic'.\"/pause 300/faceDirection Robin 0 true/faceDirection farmer 0/viewport move 0 -1 2000/pause 3000/speak Robin \"Rustic? That's one way to put it... $4#$b#'Crusty' might be a little more apt, though.$4\"/faceDirection Lewis 3 true/jump Lewis/shake Lewis 1600/textAboveHead Lewis \"Rude!\"/showFrame Lewis 24/pause 500/faceDirection Robin 1 true/pause 100/faceDirection Robin 2 true/pause 100/animate Robin false true 100 32 33/faceDirection farmer 2/pause 1000/showFrame Lewis 12/stopAnimation Robin/pause 300/faceDirection Robin 1/showFrame Lewis 12/faceDirection farmer 1/speak Lewis \"Don't listen to her, @. She's just trying to make you dissatisfied so that you buy one of her house upgrades.$u\"/showFrame Lewis 12/showFrame Robin 19/shake Robin 800/pause 1200/showFrame Robin 0/pause 600/animate Robin false true 300 34 35/textAboveHead Robin \"Hmmph.\"/pause 1500/speak Lewis \"Anyway... You must be tired from the long journey. You should get some rest.#$b#Tomorrow you ought to explore the town a bit and introduce yourself.#$b#The townspeople would appreciate that.\"/move Lewis 4 0 1 true/viewport move 1 0 2000/pause 3000/proceedPosition Lewis/faceDirection Lewis 0/pause 500/faceDirection Lewis 3/speak Lewis \"Oh, I almost forgot. If you have anything to sell, just place it in this box here. I'll come by during the night to collect it.#$b#Well... Good luck!\"/pause 300/move Lewis 8 0 1 true/faceDirection farmer 0/stopAnimation Robin/advancedMove Robin false 0 1 2 0 0 -1 5 0/pause 1000/globalFade/viewport -1000 -1000/playMusic none/pause 2000/playSound rooster/pause 1000/end beginGame",
+	  }
+    },
+	
+	
+  ]
+}
