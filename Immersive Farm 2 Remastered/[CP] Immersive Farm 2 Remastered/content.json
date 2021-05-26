@@ -1,7 +1,12 @@
 {
-  "Format": "1.18",
+  "Format": "1.22",
 
    "ConfigSchema": {
+
+  "Mist_Effects": {
+  "AllowValues": "true, false",
+  "Default": "true"
+   },
 
   "Farm_Sandbox_Layout": {
   "AllowValues": "true, false",
@@ -63,11 +68,6 @@
   "Default": "false"
    },
    
-  "Remove_Table_From_Backyard": {
-  "AllowValues": "true, false",
-  "Default": "false"
-   },
-   
   "Remove_Fences_From_Backyard": {
   "AllowValues": "true, false",
   "Default": "false"
@@ -83,7 +83,7 @@
   "Default": "false"
    },
    
-  "Minecart_System": {
+  "Remove_Minecart_System": {
   "AllowValues": "true, false",
   "Default": "false"
    },
@@ -100,14 +100,35 @@
    
 },
 
+
+  "CustomLocations": [
+  {
+    "Name": "Custom_DeepCave",
+    "FromMapFile": "Assets/NewLocations/DeepCave.tbin",
+    "MigrateLegacyNames": [ "DeepCave" ]
+  },
+  {
+    "Name": "Custom_MinecartCave",
+    "FromMapFile": "Assets/NewLocations/MinecartCave.tbin",
+    "MigrateLegacyNames": [ "MinecartCave" ]
+  },
+],
+
+
   "Changes": [ 
 
       //Load tilesheets  
     {
       "Action": "Load",
-      "Target": "Maps/Mine_Inverted, Maps/Farm_Shadow, Maps/z_petbowl",
+      "Target": "Maps/z_MineCartCaveShadows, Maps/CavernObjects, Maps/Mine_Inverted, Maps/Farm_Shadow, Maps/z_petbowl",
       "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
-	  "When": { "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+    { //mist tilesheets
+      "Action": "Load",
+      "Target": "Maps/z_IF2R_Mist",
+      "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
+	  "When": { "Mist_Effects": true, "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
 	  //Patch IF2R world map
@@ -128,6 +149,7 @@
 	  "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false },
       "ToArea": { "X": 0, "Y": 24, "Width": 10, "Height": 6 }
     },
+	
 	
     //Load Greenhouse and FarmCave interior maps
     {
@@ -186,7 +208,7 @@
       "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
-    //Changes standard farm icon to grandpa
+    //Changes standard farm icon
     {
       "Action": "EditImage",
       "Target": "Loosesprites/Cursors",
@@ -195,13 +217,13 @@
       "ToArea": { "X": 2, "Y": 324,"Width": 18, "Height": 20 },
     },
 	
-	//Changes standard farm string
+	//Changes standard farm strings
 	{
 	  "Action": "EditData",
 	  "Target": "Strings/UI",
 	  "When": { "HasMod |contains=flashshifter.GrandpasFarm": false },
 	  "Entries": {
-	  "Character_FarmStandard": "Immersive Farm 2 Remastered_A huge plot of land suited for multiplayer. Features tillable grass and secrets to discover.",
+	  "Character_FarmStandard": "Immersive Farm 2 Remastered_A huge plot of land with gated progression. Features tillable grass and secrets to discover.",
 	  }
 	},
 	
@@ -232,7 +254,7 @@
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/Maps/FarmLightDebris.tbin",
+      "FromFile": "assets/MapPatches/FarmLightDebris.tbin",
 	  "ToArea": { "X": 0, "Y": 0, "Width": 163, "Height": 156 },
 	  "When": { "Farm_Light_Debris": "true", "Farm_Sandbox_Layout": "false", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
@@ -343,22 +365,6 @@
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/RemoveTableFromBackyard.tbin",
-	  "ToArea": { "X": 45, "Y": 6, "Width": 3, "Height": 4 },
-	  "When": { "Remove_Table_From_Backyard": "true", "Farm_Sandbox_Layout": "false", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
-    },
-	
-	{
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/RemoveTableFromBackyard_Sandbox.tbin",
-	  "ToArea": { "X": 45, "Y": 6, "Width": 3, "Height": 4 },
-	  "When": { "Remove_Table_From_Backyard": "true", "Farm_Sandbox_Layout": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
-    },
-	
-	{
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/RemovePetHouseFromBackyard.tbin",
 	  "ToArea": { "X": 52, "Y": 4, "Width": 3, "Height": 3 },
 	  "When": { "Remove_Pet_House_From_Backyard": "true", "HasMod |contains=flashshifter.GrandpasFarm": false }
@@ -393,7 +399,7 @@
       "Target": "Maps/Greenhouse,Maps",
       "FromFile": "assets/MapPatches/Greenhouse_Cleared.tbin",
 	  "ToArea": { "X": 6, "Y": 8, "Width": 29, "Height": 33 },
-	  "When": { "Remove_Objects_From_Greenhouse": "true", "HasMod |contains=flashshifter.GrandpasFarm": false }
+	  "When": { "Remove_Objects_From_Greenhouse": "true", "Disable_IF2R_Greenhouse": "false", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
 	//MINECART SYSTEM
@@ -401,44 +407,100 @@
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/Minecart_1.tbin",
+      "FromFile": "assets/MapPatches/RemoveMinecart_1.tbin",
 	  "ToArea": { "X": 74, "Y": 6, "Width": 6, "Height": 10 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+	  "When": { "Remove_Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/Minecart_2.tbin",
+      "FromFile": "assets/MapPatches/RemoveMinecart_2.tbin",
 	  "ToArea": { "X": 0, "Y": 22, "Width": 9, "Height": 11 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+	  "When": { "Remove_Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/Minecart_3.tbin",
+      "FromFile": "assets/MapPatches/RemoveMinecart_3.tbin",
 	  "ToArea": { "X": 123, "Y": 89, "Width": 6, "Height": 7 },
-	  "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+	  "When": { "Remove_Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
-
-    {  //Adds light to minecart lanterns
+	
+	{   //Adds light to minecart lanterns
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
-       "MapProperties": { "Light": "8 6 4 64 14 4 77 7 4 5 24 4 127 91 4" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+       "When": { "Remove_Minecart_System": "false", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false },
+	   "Update": "OnLocationChange",
+       "TextOperations": [
+      {
+       "Operation": "Append",
+       "Target": [ "MapProperties", "Light" ],
+       "Value": "8 6 4 64 14 4 77 7 4 5 24 4 127 91 4",
+       "Delimiter": " "
+      }
+     ]
     },
 	
     {  //Adds day time tiles
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
        "MapProperties": { "DayTiles": "Buildings 77 7 510 Buildings 5 24 510 Buildings 127 91 510" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+       "When": { "Remove_Minecart_System": "false", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
     {  //Adds night time tiles
        "Action": "EditMap",
        "Target": "Maps/Farm,Maps",
        "MapProperties": { "NightTiles": "Buildings 77 7 507 Buildings 5 24 507 Buildings 127 91 507" },
-       "When": { "Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+       "When": { "Remove_Minecart_System": "false", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{ //Sophia spouse area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/IF2R_Sophia_SpouseArea.tbin",
+      "ToArea": { "X": 69, "Y": 7, "Width": 4, "Height": 2 },
+      "When": { "FarmType": "Standard", "Spouse": "Sophia", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{ //Victor spouse area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/IF2R_Victor_SpouseArea.tbin",
+      "ToArea": { "X": 69, "Y": 7, "Width": 4, "Height": 2 },
+      "When": { "FarmType": "Standard", "Spouse": "Victor", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{ //Olivia spouse area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/IF2R_Olivia_SpouseArea.tbin",
+      "ToArea": { "X": 69, "Y": 7, "Width": 4, "Height": 2 },
+      "When": { "FarmType": "Standard", "Spouse": "Olivia", "HasMod |contains=flashshifter.GrandpasFarm": false, "Weather |contains=Winter": false }
+    },
+	
+	{ //Claire spouse area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/IF2R_Claire_SpouseArea.tbin",
+      "ToArea": { "X": 69, "Y": 7, "Width": 4, "Height": 2 },
+      "When": { "FarmType": "Standard", "Spouse": "Claire", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{ //Wizard spouse area
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/IF2R_Wizard_SpouseArea.tbin",
+      "ToArea": { "X": 69, "Y": 8, "Width": 4, "Height": 2 },
+      "When": { "FarmType": "Standard", "Spouse": "Wizard", "HasMod |contains=flashshifter.GrandpasFarm": false }
+    },
+	
+	{ //Adds mist effects to the farm
+     "Action": "EditMap",
+	 "Target": "Maps/Farm",
+	 "FromFile": "Assets/MistEffects/Farm_Mist.tbin",
+	 "When": { "Mist_Effects": true, "Weather": "Rain, Storm", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false },
+	 "ToArea": { "X": 0, "Y": 0, "Width": 163, "Height": 156 }
     },
 	
     //bus stop path

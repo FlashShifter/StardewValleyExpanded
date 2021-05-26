@@ -30,13 +30,31 @@ namespace StardewValleyExpanded
 
             CustomBuffs.Enable(Helper);
 
-            AddSpecialOrdersAfterEvents.Enable(Helper);
+            SpecialOrderNPCIcons.Enable(Helper, Monitor);
+
+            FixIslandToFarmObelisk.Enable(helper, Monitor);
+
+            AddSpecialOrdersAfterEvents.Enable(Helper, Monitor);
 
             var harmony = HarmonyInstance.Create(this.ModManifest.UniqueID);
 
+            EndNexusMusic.Hook(harmony, Monitor);
+
             CustomLocationWateringFixes.ApplyFixes(helper, Monitor, harmony);
 
+            HarmonyPatch_GetFishingLocation.ApplyPatch(harmony, Monitor);
+
             HarmonyPatch_SpousePatioAnimations.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_CustomFishPondColors.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_MovieTheaterNPCs.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_TMXLLoadMapFacingDirection.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_UntimedSpecialOrders.ApplyPatch(harmony, helper, Monitor);
+
+            HarmonyPatch_FixCommunityShortcuts.ApplyPatch(harmony, Helper, Monitor);
 
             harmony.Patch(
                original: AccessTools.Method(typeof(StardewValley.Utility), nameof(StardewValley.Utility.getCelebrationPositionsForDatables), new Type[] { typeof(List<string>) }),
@@ -88,7 +106,9 @@ namespace StardewValleyExpanded
             }
         }
 
-        private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
+
+
+            private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
             if (!Context.IsWorldReady)
                 return;

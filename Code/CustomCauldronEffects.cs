@@ -83,13 +83,95 @@ namespace StardewValleyExpanded
                 }
             },
             {
-                "GrandpasGrove", new List<Vector2>() //add tiles for Grandpa's Grove here
+                "Custom_GrandpasGrove", new List<Vector2>()
                 {
                     //small waterfall
                     new Vector2(21, 12),
                     new Vector2(21, 12),
                     new Vector2(22, 12),
                     new Vector2(22, 12),
+                }
+            },
+            {
+                "Custom_GrenvilleFalls", new List<Vector2>()
+                {
+                    //waterfalls
+                    new Vector2(46, 18),
+                    new Vector2(46, 18),
+                    new Vector2(47, 18),
+                    new Vector2(47, 18),
+                    new Vector2(48, 18),
+                    new Vector2(48, 18),
+                    new Vector2(46, 8),
+                    new Vector2(46, 8),
+                    new Vector2(47, 8),
+                    new Vector2(47, 8),
+                    new Vector2(48, 8),
+                    new Vector2(48, 8),
+                    new Vector2(38, 7),
+                    new Vector2(38, 7),
+                    new Vector2(39, 7),
+                    new Vector2(39, 7),
+                    new Vector2(36, 16),
+                    new Vector2(36, 16),
+                    new Vector2(37, 16),
+                    new Vector2(37, 16),
+                    new Vector2(9, 14),
+                    new Vector2(9, 14),
+                    new Vector2(10, 14),
+                    new Vector2(10, 14),
+                    new Vector2(11, 14),
+                    new Vector2(11, 14),
+                    new Vector2(12, 14),
+                    new Vector2(12, 14),
+                    new Vector2(13, 14),
+                    new Vector2(13, 14),
+                    new Vector2(14, 14),
+                    new Vector2(14, 14),
+                    new Vector2(15, 14),
+                    new Vector2(15, 14),
+                    new Vector2(16, 14),
+                    new Vector2(16, 14),
+                }
+            },
+            {
+                "Custom_AdventurerSummit", new List<Vector2>()
+                {
+                    //waterfall 1
+                    new Vector2(57, 4),
+                    new Vector2(57, 4),
+                    new Vector2(58, 4),
+                    new Vector2(58, 4),
+
+                    //waterfall 2
+                    new Vector2(59, 15),
+                    new Vector2(59, 15),
+                    new Vector2(60, 15),
+                    new Vector2(60, 15),
+
+                    //waterfall 3
+                    new Vector2(60, 25),
+                    new Vector2(60, 25),
+                    new Vector2(61, 25),
+                    new Vector2(61, 25),
+
+                    //waterfall 4
+                    new Vector2(7, 4),
+                    new Vector2(7, 4),
+                    new Vector2(8, 4),
+                    new Vector2(8, 4),
+
+                    //waterfall 5
+                    new Vector2(11, 18),
+                    new Vector2(11, 18),
+                    new Vector2(12, 18),
+                    new Vector2(12, 18),
+
+                    //waterfall 6
+                    new Vector2(15, 36),
+                    new Vector2(15, 36),
+                    new Vector2(16, 36),
+                    new Vector2(16, 36),
                 }
             }
         };
@@ -124,6 +206,7 @@ namespace StardewValleyExpanded
                                 effectPosition,
                                 waterfallColor,
                                 Game1.random.Next(75, 126) //random tick rate
+
                             )
                         );
                     }
@@ -173,7 +256,7 @@ namespace StardewValleyExpanded
 
                     if (effect.LocationName == locationName) //if this effect is for the player's current location
                     {
-                        float randomSpin = Game1.random.Next(-5, 6); //get a random left/right spin value (shared by motion.X and rotationChange)
+                        bool alwaysFront = locationName == "Farm" ? true : false; //only draw above everything else on Grandpa's Farm
 
                         location.temporarySprites.Add //create a sprite for this effect
                         (
@@ -195,7 +278,7 @@ namespace StardewValleyExpanded
                                 scale = 3f, //sprite size multiplier (1 = original size)
                                 scaleChange = 0.01f, //value added to "scale" each tick
                                 rotationChange = (float)Game1.random.Next(-5, 6) * (float)Math.PI / 256f, //value added to "rotation" per tick (in radians?)
-                                drawAboveAlwaysFront = true //true to draw this effect in front of anything else (if possible)
+                                drawAboveAlwaysFront = alwaysFront //true to draw this effect in front of anything else (if possible)
                             }
                         );
                     }

@@ -17,9 +17,10 @@ namespace StardewValleyExpanded
         /// <remarks>Add new farmable locations here when needed. Capitalization generally doesn't matter.</remarks>
         public static List<string> WateringFixLocations { get; set; } = new List<string>()
         {
-            "TownEast",
-            "GrandpasShedGreenhouse",
-            "GrampletonFields"
+            "Custom_TownEast",
+            "Custom_GrandpasShedGreenhouse",
+            "Custom_GrampletonFields",
+            "Custom_Garden"
         };
 
         /// <summary>Applies all watering fixes to a preset list of custom locations.</summary>

@@ -298,6 +298,20 @@ namespace StardewValleyExpanded
                         });
                         break;
 
+
+                    case "Wizard":
+                        __instance.Sprite.setCurrentAnimation(new List<FarmerSprite.AnimationFrame> //create and set this NPC's spouse patio animation
+                        {
+                            //Magnus animation
+                            new FarmerSprite.AnimationFrame(0, 35000),
+                            new FarmerSprite.AnimationFrame(22, 250),
+                            new FarmerSprite.AnimationFrame(21, 250),
+                            new FarmerSprite.AnimationFrame(20, 70000),
+                            new FarmerSprite.AnimationFrame(21, 250),
+                            new FarmerSprite.AnimationFrame(22, 250),
+                        });
+                        break;
+
                     case "Claire":
                         __instance.Sprite.setCurrentAnimation(new List<FarmerSprite.AnimationFrame> //create and set this NPC's spouse patio animation
                         {

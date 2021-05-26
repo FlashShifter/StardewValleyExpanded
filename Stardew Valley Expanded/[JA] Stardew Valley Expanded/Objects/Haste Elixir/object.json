@@ -1,10 +1,11 @@
 {
 	"Name": "Haste Elixir",
-	"Description": "Brewed at Castle Village by Camilla. You'll feel lighter on your feet.",
+	"Description": "You'll feel lighter on your feet. Stacks with attack and defense potions.",
 	"Category": "ArtisanGoods",
 	"Edibility": 2,
 	"EdibleIsDrink": true,
 	"CanSell": false,
+	"Price": 2000,
 	"CategoryTextOverride": "Potion",
 	"CategoryColorOverride": "125, 30, 150, 255",
 	"EdibleBuffs": 
@@ -19,22 +20,36 @@
         "Speed": 3,
         "Defense": 0,
         "Attack": 0,
-        "Duration": 180,
+        "Duration": 300,
     },
-	"Price": 2000,
-	"IsColored": false,
+	"Recipe": {
+    "ResultCount": 1,
+    "Ingredients": [
+      {
+        "Object": "Void Essence",
+        "Count": 35,
+      },
+	  {
+        "Object": "Void Soul",
+        "Count": 5,
+      },
+	  {
+        "Object": "Sugar",
+        "Count": 1,
+      },
+	  {
+        "Object": "Spicy Eel",
+        "Count": 1,
+      },
+    ],
+	"PurchaseFrom": "AlesiaVendor",    
+	"PurchasePrice": 35000,
+	"CanPurchase": true,
+  },
 	"GiftTastes":
 	{
 		"Love": ["MarlonFay", "Abigail", "Wizard"],
 		"Like": ["Morgan"],
-		"Dislike": ["Olivia", "Andy", "Victor", "Martin", "Claire", "Susan", "MorrisTod", "Alex", "Elliott", "Harvey", "Sam", "Sebastian", "Shane", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Clint", "Demetrius", "Dwarf", "Evelyn", "George", "Gus", "Jas", "Jodi", "Kent", "Krobus", "Lewis", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Sandy", "Vincent", "Willy"]
-	},
-	"NameLocalization":
-	{
-		/*to be added in*/
-	},
-	"DescriptionLocalization":
-	{
-		/*to be added in*/
+		"Dislike": ["Apples", "GuntherSilvian", "Sophia", "Leo", "Olivia", "Andy", "Victor", "Martin", "Claire", "Susan", "MorrisTod", "Alex", "Elliott", "Harvey", "Sam", "Sebastian", "Shane", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Clint", "Demetrius", "Dwarf", "Evelyn", "George", "Gus", "Jas", "Jodi", "Kent", "Krobus", "Lewis", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Sandy", "Vincent", "Willy"]
 	},
 }

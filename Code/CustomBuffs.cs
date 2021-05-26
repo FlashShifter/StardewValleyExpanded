@@ -54,7 +54,7 @@ namespace StardewValleyExpanded
             if (!Context.IsPlayerFree || !Game1.game1.IsActive) //if the player is occupied or the game is inactive
                 return; //do nothing
 
-            if (Game1.player.swimming.Value && Game1.currentLocation?.NameOrUniqueName == "GrandpasGrove") //if the player is currently swimming at Grandpa's Grove
+            if (Game1.player.swimming.Value && Game1.currentLocation?.NameOrUniqueName == ("Custom_GrandpasGrove") || Game1.currentLocation?.NameOrUniqueName == "Custom_SpriteSpring") //if the player is currently swimming at Grandpa's Grove
             {
                 secondsSpentSwimming++; //increment swim timer
             }

@@ -1,10 +1,11 @@
 {
 	"Name": "Armor Elixir",
-	"Description": "Brewed at Castle Village by Camilla. Fortifies the body.",
+	"Description": "Fortifies your body. Stacks with speed potions.",
 	"Category": "ArtisanGoods",
 	"Edibility": 2,
 	"EdibleIsDrink": false,
 	"CanSell": false,
+	"Price": 2000,
 	"CategoryTextOverride": "Potion",
 	"CategoryColorOverride": "125, 30, 150, 255",
 	"EdibleBuffs": 
@@ -17,24 +18,38 @@
         "MaxStamina": 0,
         "MagnetRadius": 0,
         "Speed": 0,
-        "Defense": 15,
+        "Defense": 10,
         "Attack": 0,
-        "Duration": 180,
+        "Duration": 240,
     },
-	"Price": 2000,
-	"IsColored": false,
+	"Recipe": {
+    "ResultCount": 1,
+    "Ingredients": [
+      {
+        "Object": "Solar Essence",
+        "Count": 30,
+      },
+	  {
+        "Object": "Void Soul",
+        "Count": 5,
+      },
+	  {
+        "Object": "Vinegar",
+        "Count": 5,
+      },
+	  {
+        "Object": "Bone Fragment",
+        "Count": 5,
+      },
+    ],
+	"PurchaseFrom": "AlesiaVendor",    
+	"PurchasePrice": 50000,
+	"CanPurchase": true,
+	},
 	"GiftTastes":
 	{
 		"Love": ["MarlonFay", "Abigail", "Wizard"],
 		"Like": ["Morgan"],
-		"Dislike": ["Sophia", "Claire", "Olivia", "Martin", "Andy", "Victor", "Susan", "MorrisTod", "Alex", "Elliott", "Harvey", "Sam", "Sebastian", "Shane", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Clint", "Demetrius", "Dwarf", "Evelyn", "George", "Gus", "Jas", "Jodi", "Kent", "Krobus", "Lewis", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Sandy", "Vincent", "Willy"]
-	},
-	"NameLocalization":
-	{
-		/*to be added in*/
-	},
-	"DescriptionLocalization":
-	{
-		/*to be added in*/
+		"Dislike": ["Apples", "GuntherSilvian", "Leo", "Sophia", "Claire", "Olivia", "Martin", "Andy", "Victor", "Susan", "MorrisTod", "Alex", "Elliott", "Harvey", "Sam", "Sebastian", "Shane", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Clint", "Demetrius", "Dwarf", "Evelyn", "George", "Gus", "Jas", "Jodi", "Kent", "Krobus", "Lewis", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Sandy", "Vincent", "Willy"]
 	},
 }
