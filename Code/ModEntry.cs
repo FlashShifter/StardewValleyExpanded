@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
@@ -30,13 +30,15 @@ namespace StardewValleyExpanded
 
             CustomBuffs.Enable(Helper);
 
+            FireflySpawner.Enable(Helper, Monitor);
+
             SpecialOrderNPCIcons.Enable(Helper, Monitor);
 
             FixIslandToFarmObelisk.Enable(helper, Monitor);
 
             AddSpecialOrdersAfterEvents.Enable(Helper, Monitor);
 
-            var harmony = HarmonyInstance.Create(this.ModManifest.UniqueID);
+            var harmony = new Harmony(this.ModManifest.UniqueID);
 
             EndNexusMusic.Hook(harmony, Monitor);
 
@@ -47,6 +49,14 @@ namespace StardewValleyExpanded
             HarmonyPatch_SpousePatioAnimations.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_CustomFishPondColors.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_FarmComputerLocations.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_FixDesertBusWarp.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_DesertSecretNoteTile.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_CustomGrangeJudging.ApplyPatch(harmony, Helper, Monitor);
 
             HarmonyPatch_MovieTheaterNPCs.ApplyPatch(harmony, Monitor);
 

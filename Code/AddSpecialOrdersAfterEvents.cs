@@ -1,7 +1,7 @@
 ﻿using System;
 using StardewModdingAPI;
 using StardewValley;
-using Harmony;
+using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using StardewValley.TerrainFeatures;

@@ -1,7 +1,7 @@
 ﻿using System;
 using StardewModdingAPI;
 using StardewValley;
-using Harmony;
+using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using StardewValley.TerrainFeatures;
@@ -21,7 +21,7 @@ namespace StardewValleyExpanded
 
         private static IMonitor Monitor { get; set; } = null;
 
-        public static void ApplyPatch(HarmonyInstance harmony, IMonitor monitor = null)
+        public static void ApplyPatch(Harmony harmony, IMonitor monitor = null)
         {
             if (IsApplied)
                 return;
@@ -37,7 +37,7 @@ namespace StardewValleyExpanded
             );
         }
 
-        public static void RemovePatch(HarmonyInstance harmony, IMonitor monitor = null)
+        public static void RemovePatch(Harmony harmony, IMonitor monitor = null)
         {
             if (!IsApplied)
                 return;

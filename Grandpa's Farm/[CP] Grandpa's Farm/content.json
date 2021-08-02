@@ -133,9 +133,16 @@
     { //Remove Static Fences
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences.tbin",
+      "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences1.tbin",
       "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
-      "When": { "FarmType": "Standard", "RemoveFences": "true", "SandboxLayout": "false" }
+      "When": { "FarmType": "Standard", "RemoveFences": "true", "RemoveGrassStretch": "true", "SandboxLayout": "false" }
+    },
+	{ //Remove Static Fences
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences2.tbin",
+      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
+      "When": { "FarmType": "Standard", "RemoveFences": "true", "RemoveGrassStretch": "false", "SandboxLayout": "false" }
     },
 	
 	{ //Removes grass stretch
@@ -166,7 +173,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences_HeavyDebris.tbin",
-      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
+      "ToArea": { "X": 35, "Y": 35, "Width": 34, "Height": 50 },
       "When": { "FarmType": "Standard", "HeavyDebris": "true", "RemoveFences": "true", }
     },
 	
@@ -272,7 +279,7 @@
      "Target": "Maps/Farm,Maps",
      "FromFile": "assets/MapPatches/GrandpasFarm_ForestTravelingMerchant_Gone.tbin",
      "ToArea": { "X": 27, "Y": 95,"Width": 1, "Height": 2 },
-     "When": { "Time": "{{Range: 2000, 2600}}", "DayOfWeek": "Friday, Sunday" },
+     "When": { "DayOfWeek": "Friday, Sunday" },
 	 "PatchMode": "Overlay",
 	 "Update": "OnLocationChange"
     },
@@ -613,7 +620,7 @@
 	 "Target": "data/events/ManorHouse",
 	 "When": { "HasSeenEvent |contains=6665293": false },
 	 "Entries": {
-	 "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/showFrame Marnie 32 true/viewport 5 9 clamp true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"Sorry, didn't hear you over the sink. Had to give my hands a good wash.$0\"/pause 600/emote farmer 40/pause 150/speak Lewis \"So, you decided to purchase more property? Great to hear.$0#$b#If there's anyone who'll get good use out of that land, it's you.$1\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"Use the red ledger to buy the property deed, then turn it into me for approval.$0\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"I look forward to seeing what you do with the space, @.$0#$b#Now, I need to go take care of something. Come find me later today with that signed deed.$0\"/pause 500/end dialogueWarpOut Lewis \"That new pond you'll have is in a great spot.$1#$e#Ah, what did I have to take care of? Nothing of your concern.$0#$e#...$3#$e#%Lewis is now ignoring you.\""
+	 "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/viewport 5 9 clamp true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"Sorry, didn't hear you over the sink. Had to give my hands a good wash.$0\"/pause 600/emote farmer 40/pause 150/speak Lewis \"So, you decided to purchase more property? Great to hear.$0#$b#If there's anyone who'll get good use out of that land, it's you.$1\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"Use the red ledger to buy the property deed, then turn it into me for approval.$0\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"I look forward to seeing what you do with the space, @.$0#$b#Now, I need to go take care of something. Come find me later today with that signed deed.$0\"/pause 500/end dialogueWarpOut Lewis \"That new pond you'll have is in a great spot.$1#$e#Ah, what did I have to take care of? Nothing of your concern.$0#$e#...$3#$e#%Lewis is now ignoring you.\""
 	 },
 },
 

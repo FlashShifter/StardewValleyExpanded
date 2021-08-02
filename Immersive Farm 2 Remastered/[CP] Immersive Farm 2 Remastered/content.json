@@ -100,6 +100,14 @@
    
 },
 
+  
+  "DynamicTokens": [
+  {
+    "Name": "GrandpaShedComplete",
+    "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554906}}"
+  },	
+],
+
 
   "CustomLocations": [
   {
@@ -402,6 +410,28 @@
 	  "When": { "Remove_Objects_From_Greenhouse": "true", "Disable_IF2R_Greenhouse": "false", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	
+	//Grandpa's Shed config patch
+	
+	{    
+	  //Refurbished Shed (IF2R)
+      "Action": "EditMap",
+      "Target": "Maps/Farm",
+      "FromFile": "Assets/MapPatches/FarmShedFixed.tbin",
+	  "When": { "GrandpaShedComplete": true, "Farm_Sandbox_Layout": "false", "HasMod |contains=flashshifter.GrandpasFarm": false, "FarmType":"Standard", "HasSeenEvent |Contains=2554908": false },
+      "ToArea": { "X": 138, "Y": 23, "Width": 12, "Height": 12 },
+	  "Update": "OnLocationChange"
+    },
+	{    
+	  //Refurbished Shed (IF2R) - sandbox layout
+      "Action": "EditMap",
+      "Target": "Maps/Farm",
+      "FromFile": "Assets/MapPatches/FarmShedFixed_SandboxLayout.tbin",
+	  "When": { "GrandpaShedComplete": true, "Farm_Sandbox_Layout": "true", "HasMod |contains=flashshifter.GrandpasFarm": false, "FarmType":"Standard", "HasSeenEvent |Contains=2554908": false },
+      "ToArea": { "X": 138, "Y": 23, "Width": 12, "Height": 12 },
+	  "Update": "OnLocationChange"
+    },
+		
+	
 	//MINECART SYSTEM
 	
 	{
@@ -422,7 +452,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/RemoveMinecart_3.tbin",
-	  "ToArea": { "X": 123, "Y": 89, "Width": 6, "Height": 7 },
+	  "ToArea": { "X": 122, "Y": 89, "Width": 7, "Height": 7 },
 	  "When": { "Remove_Minecart_System": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
 	

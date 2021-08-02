@@ -1,7 +1,7 @@
 ﻿using System;
 using StardewModdingAPI;
 using StardewValley;
-using Harmony;
+using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using StardewValley.TerrainFeatures;
@@ -26,7 +26,7 @@ namespace StardewValleyExpanded
         /// <summary>Applies all watering fixes to a preset list of custom locations.</summary>
         /// <param name="helper">This mod's SMAPI helper API, used to apply events and generate log messages.</param>
         /// <param name="harmony">This mod's Harmony instance, used to patch Stardew's code.</param>
-        public static void ApplyFixes(IModHelper helper, IMonitor monitor, HarmonyInstance harmony)
+        public static void ApplyFixes(IModHelper helper, IMonitor monitor, Harmony harmony)
         {
             Monitor = monitor; //use the provided monitor
 
@@ -56,8 +56,8 @@ namespace StardewValleyExpanded
 
                 if (location == null) //if this location doesn't exist
                 {
-                    Monitor?.LogOnce($"Could not find location \"{name}\" to apply crop watering fixes.", LogLevel.Debug);
-                    break; //skip to the next location
+                    Monitor?.LogOnce($"Skipping watering fixes for location \"{name}\" (location not found).", LogLevel.Trace);
+                    continue; //skip to the next location
                 }
 
                 if (Game1.IsRainingHere(location) && location.IsOutdoors) //if it's currently raining at this location AND this location is outdoors
@@ -105,7 +105,7 @@ namespace StardewValleyExpanded
             /// <summary>While true, this patch's fix should not be applied.</summary>
             public static bool SkipGrowthFix = false;
 
-            public static void ApplyPatch(HarmonyInstance harmony)
+            public static void ApplyPatch(Harmony harmony)
             {
                 Monitor?.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FixSprinklerGrowth)}\": prefixing SDV method \"Crop.newDay(int, int, int, int, GameLocation)\".", LogLevel.Trace);
                 harmony.Patch(
