@@ -30,6 +30,8 @@ namespace StardewValleyExpanded
 
             CustomBuffs.Enable(Helper);
 
+            ClintVolumeControl.Enable(Helper, Monitor);
+
             FireflySpawner.Enable(Helper, Monitor);
 
             SpecialOrderNPCIcons.Enable(Helper, Monitor);
