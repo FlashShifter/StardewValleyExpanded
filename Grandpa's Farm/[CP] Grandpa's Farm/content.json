@@ -23,6 +23,11 @@
       "Default": "false"
    },
    
+      "RemovePetHouse": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
       "GrassCropField": {
       "AllowValues": "true, false",
       "Default": "false"
@@ -151,6 +156,14 @@
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveGrassStretch.tbin",
       "ToArea": { "X": 69, "Y": 53, "Width": 11, "Height": 30 },
       "When": { "FarmType": "Standard", "RemoveGrassStretch": "true", "SandboxLayout": "false" }
+    },
+	
+	{ //Removes Pet House
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_RemovePetHouse.tbin",
+      "ToArea": { "X": 101, "Y": 35, "Width": 3, "Height": 5 },
+      "When": { "FarmType": "Standard", "RemovePetHouse": "true" }
     },
 	
     { //Grass crop field

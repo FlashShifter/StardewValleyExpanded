@@ -541,8 +541,8 @@
         "SummerItemIndex": null,
         "FallItemIndex": null,
         "WinterItemIndex": null,
-        "UniqueAreaID": "TownEast forage area 1",
-        "MapName": "TownEast",
+        "UniqueAreaID": "Garden forage area 1",
+        "MapName": "Custom_Garden",
         "MinimumSpawnsPerDay": 0,
         "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [
@@ -552,8 +552,7 @@
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
         "ExcludeCoordinates": [
-          "18,20;11,15",
-          "39,23;0,20"
+          "32,27;13,13"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -1500,6 +1499,47 @@
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "SpringItemIndex": null,
+        "SummerItemIndex": null,
+        "FallItemIndex": null,
+        "WinterItemIndex": [
+          418
+        ],
+        "UniqueAreaID": "Sprite Spring forage - Crocus spawns",
+        "MapName": "Custom_SpriteSpring2",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 6,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "54,28;47,22",
+          "56,24;54,20"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Winter"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
       },
       {
         "SpringItemIndex": [

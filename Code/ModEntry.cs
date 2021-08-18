@@ -58,6 +58,8 @@ namespace StardewValleyExpanded
 
             HarmonyPatch_DesertSecretNoteTile.ApplyPatch(harmony, Monitor);
 
+            HarmonyPatch_DesertFishingItems.ApplyPatch(harmony, Monitor);
+
             HarmonyPatch_CustomGrangeJudging.ApplyPatch(harmony, Helper, Monitor);
 
             HarmonyPatch_MovieTheaterNPCs.ApplyPatch(harmony, Monitor);
@@ -154,12 +156,12 @@ namespace StardewValleyExpanded
                 Position = new Vector2(110 * Game1.tileSize, 14 * Game1.tileSize)
             };
 
-            FarmAnimal babyCow1 = new FarmAnimal("Baby Cow", multiplayer.getNewID(), -1L)
+            FarmAnimal babyCow1 = new FarmAnimal("Dairy Cow", multiplayer.getNewID(), -1L)
             {
                 Position = new Vector2(108 * Game1.tileSize, 16 * Game1.tileSize)
             };
 
-            FarmAnimal babyCow2 = new FarmAnimal("Baby Cow", multiplayer.getNewID(), -1L)
+            FarmAnimal babyCow2 = new FarmAnimal("Dairy Cow", multiplayer.getNewID(), -1L)
             {
                 Position = new Vector2(107 * Game1.tileSize, 8 * Game1.tileSize)
             };
