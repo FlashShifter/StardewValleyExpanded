@@ -97,7 +97,37 @@ namespace StardewValleyExpanded
                 OrderKey = "Apples",
                 HasSeenEvents = "7775926",
                 HasNotSeenEvents = "7775927"
-            }
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "MarlonFay2",
+                HasSeenEvents = "65360183",
+                HasNotSeenEvents = "65360184"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "MorrisTod2",
+                HasSeenEvents = "6663407",
+                HasNotSeenEvents = "6663408"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "MorrisTod3",
+                HasSeenEvents = "746153083",
+                HasNotSeenEvents = "746153084"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "Lance",
+                HasSeenEvents = "65360186",
+                HasNotSeenEvents = "65360187"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "Krobus",
+                HasSeenEvents = "1090506",
+                HasNotSeenEvents = "1090507"
+            },
         };
 
 

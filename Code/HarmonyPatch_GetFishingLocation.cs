@@ -38,9 +38,17 @@ namespace StardewValleyExpanded
         {
             if (__instance?.Name == "Custom_BlueMoonVineyard")
             {
-                __result = tile.Y < 30 // if the player is within the top 30 tiles of the map
+                __result = tile.Y < 30
                     ? 1
                     : 0;
+            }
+
+            else if (__instance?.Name == "Custom_Highlands")
+            {
+                if (tile.X > 121 && tile.Y < 73)
+                    __result = 0;
+                else
+                    __result = 1;
             }
         }
     }

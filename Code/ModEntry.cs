@@ -26,29 +26,31 @@ namespace StardewValleyExpanded
 
             SpiritsEveChestEditor.SpiritsEveChestEditor.Enable(helper);
 
-            CustomCauldronEffects.Enable(Helper);
+            CustomCauldronEffects.Enable(helper);
 
-            CustomBuffs.Enable(Helper);
+            CustomBuffs.Enable(helper, Monitor);
 
-            ClintVolumeControl.Enable(Helper, Monitor);
+            ClintVolumeControl.Enable(helper, Monitor);
 
-            FireflySpawner.Enable(Helper, Monitor);
+            FireflySpawner.Enable(helper, Monitor);
 
-            SpecialOrderNPCIcons.Enable(Helper, Monitor);
+            DisableShadowAttacks.Enable(helper, Monitor);
+
+            SpecialOrderNPCIcons.Enable(helper, Monitor);
+
+            RemoveCropLayerCrops.Enable(helper, Monitor);
 
             FixIslandToFarmObelisk.Enable(helper, Monitor);
 
-            AddSpecialOrdersAfterEvents.Enable(Helper, Monitor);
+            AddSpecialOrdersAfterEvents.Enable(helper, Monitor);
 
             var harmony = new Harmony(this.ModManifest.UniqueID);
 
             EndNexusMusic.Hook(harmony, Monitor);
 
-            CustomLocationWateringFixes.ApplyFixes(helper, Monitor, harmony);
+            TouchActionProperties.Enable(helper, Monitor);
 
             HarmonyPatch_GetFishingLocation.ApplyPatch(harmony, Monitor);
-
-            HarmonyPatch_SpousePatioAnimations.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_CustomFishPondColors.ApplyPatch(harmony, Monitor);
 
@@ -58,17 +60,21 @@ namespace StardewValleyExpanded
 
             HarmonyPatch_DesertSecretNoteTile.ApplyPatch(harmony, Monitor);
 
+            HarmonyPatch_ActionProperties.ApplyPatch(harmony, Monitor);
+
             HarmonyPatch_DesertFishingItems.ApplyPatch(harmony, Monitor);
 
-            HarmonyPatch_CustomGrangeJudging.ApplyPatch(harmony, Helper, Monitor);
+            HarmonyPatch_CustomGrangeJudging.ApplyPatch(harmony, helper, Monitor);
 
             HarmonyPatch_MovieTheaterNPCs.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_DestroyableBushesSVE.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_TMXLLoadMapFacingDirection.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_UntimedSpecialOrders.ApplyPatch(harmony, helper, Monitor);
 
-            HarmonyPatch_FixCommunityShortcuts.ApplyPatch(harmony, Helper, Monitor);
+            HarmonyPatch_FixCommunityShortcuts.ApplyPatch(harmony, helper, Monitor);
 
             harmony.Patch(
                original: AccessTools.Method(typeof(StardewValley.Utility), nameof(StardewValley.Utility.getCelebrationPositionsForDatables), new Type[] { typeof(List<string>) }),

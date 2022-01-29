@@ -52,7 +52,7 @@ namespace StardewValleyExpanded
         /// <returns>The modified volume to set instead of the original, from 0 to 100.</returns>
         public static float VolumeModifier(float originalVolume)
         {
-            float newVolume = originalVolume - ((ShortestDistanceForEngine / 32f) * 1.5f); //reduce volume by 1 per tile of distance
+            float newVolume = originalVolume - ((ShortestDistanceForEngine / 32f) * 1.5f);
             return newVolume;
         }
 
@@ -118,6 +118,11 @@ namespace StardewValleyExpanded
             public bool IsPaused => WrappedCue.IsPaused;
 
             public string Name => WrappedCue.Name;
+
+            public float Pitch { get => WrappedCue.Pitch; set => WrappedCue.Pitch = value; }
+            public float Volume { get => WrappedCue.Volume; set => WrappedCue.Volume = value; }
+
+            public bool IsPitchBeingControlledByRPC => WrappedCue.IsPitchBeingControlledByRPC;
 
             public void Play()
             {

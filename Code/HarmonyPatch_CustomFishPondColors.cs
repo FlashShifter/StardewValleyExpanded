@@ -50,8 +50,16 @@ namespace StardewValleyExpanded
         public static Dictionary<string, Color> FishDataTagsAndPondColors { get; set; } = new Dictionary<string, Color>()
         {
             {
-                "fish_void_eel",
+                "item_void_eel",
                 new Color(120, 20, 110)
+            },
+            {
+                "item_radioactive_bass",
+                new Color(124,252,0)
+            },
+            {
+                "item_butterfish",
+                new Color(255,255,153)
             }
         };
 
