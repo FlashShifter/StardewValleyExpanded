@@ -1,41 +1,43 @@
-﻿using System;
-using StardewModdingAPI;
-using StardewValley;
-using HarmonyLib;
-using System.Collections.Generic;
-using System.Linq;
-using StardewValley.TerrainFeatures;
-using Microsoft.Xna.Framework;
+﻿using StardewModdingAPI;
 using StardewModdingAPI.Events;
-using StardewValley.Locations;
-using StardewValley.Monsters;
-using System.Diagnostics;
-using StardewValley.Objects;
-using StardewValley.Menus;
-using Microsoft.Xna.Framework.Graphics;
-using StardewValley.Events;
-using StardewValley.Characters;
-using xTile.Dimensions;
-using Netcode;
+using StardewModdingAPI.Utilities;
+using StardewValley;
+using System;
 
 namespace StardewValleyExpanded
 {
     /// <summary>Applies customized buffs to the local player under certain conditions.</summary>
     public static class CustomBuffs
     {
+        /*****            *****/
+        /***** Setup Code *****/
+        /*****            *****/
+
         /// <summary>True if this class's features are currently enabled.</summary>
         public static bool Enabled { get; private set; } = false;
+        /// <summary>The SMAPI helper instance to use for events and other API access.</summary>
+        private static IModHelper Helper { get; set; } = null;
+        /// <summary>The monitor instance to use for log messages. Null if not provided.</summary>
+        private static IMonitor Monitor { get; set; } = null;
 
         /// <summary>Enables this class's features by setting up SMAPI events.</summary>
         /// <param name="helper">A SMAPI helper instance, used to set up events.</param>
-        public static void Enable(IModHelper helper)
+        public static void Enable(IModHelper helper, IMonitor monitor)
         {
-            if (!Enabled) //if NOT enabled
+            if (!Enabled && helper != null && monitor != null) //if not already enabled AND valid tools were provided
             {
-                helper.Events.GameLoop.OneSecondUpdateTicking += OneSecondUpdateTicking_GrandpasGroveBuff;
+                Helper = helper; //store the helper
+                Monitor = monitor; //store the monitor
+
+                Helper.Events.GameLoop.OneSecondUpdateTicking += GameLoop_OneSecondUpdateTicking;
+
                 Enabled = true;
             }
         }
+
+        /*****              *****/
+        /***** Mod Settings *****/
+        /*****              *****/
 
         /// <summary>How long (in seconds) the player needs to swim before the buff starts applying.</summary>
         private const int secondsBeforeBuffIsApplied = 3;
@@ -46,27 +48,30 @@ namespace StardewValleyExpanded
         /// </remarks>
         private const int millisecondsBuffDuration = 720000;
 
-        private static int secondsSpentSwimming = 0;
+        /// <summary>How long the current player has been swimming at locations that give buffs.</summary>
+        private static PerScreen<int> secondsSpentSwimming = new PerScreen<int>(() => 0); //set each player's value to 0
 
-        /// <summary>Manages the buffs applied when swimming at the Grandpa's Grove location.</summary>
-        private static void OneSecondUpdateTicking_GrandpasGroveBuff(object sender, OneSecondUpdateTickingEventArgs e)
+        /// <summary>Manage the buffs applied when swimming at certain locations.</summary>
+        private static void GameLoop_OneSecondUpdateTicking(object sender, OneSecondUpdateTickingEventArgs e)
         {
             if (!Context.IsPlayerFree || !Game1.game1.IsActive) //if the player is occupied or the game is inactive
                 return; //do nothing
 
-            if (Game1.player.swimming.Value && Game1.currentLocation?.NameOrUniqueName == ("Custom_GrandpasGrove") || Game1.currentLocation?.NameOrUniqueName == "Custom_SpriteSpring2") //if the player is currently swimming at Grandpa's Grove
+            if (Game1.player.swimming.Value && (Game1.currentLocation?.NameOrUniqueName == ("Custom_GrandpasGrove") || Game1.currentLocation?.NameOrUniqueName == "Custom_SpriteSpring2")) //if the player is currently swimming at Grandpa's Grove
             {
-                secondsSpentSwimming++; //increment swim timer
+                secondsSpentSwimming.Value++; //increment swim timer
             }
             else //if the player is NOT swimming there
             {
-                secondsSpentSwimming = 0; //reset swim timer
+                secondsSpentSwimming.Value = 0; //reset swim timer
                 return; //skip the rest of this method
             }
 
-            if (secondsSpentSwimming >= secondsBeforeBuffIsApplied) //if the buff should be applied
+            if (secondsSpentSwimming.Value >= secondsBeforeBuffIsApplied) //if the buff should be applied
             {
+                Monitor.VerboseLog($"{nameof(CustomBuffs)}: Local player has been swimming at {Game1.currentLocation?.NameOrUniqueName ?? "[null location?]"} for at least {secondsBeforeBuffIsApplied} seconds. Applying (or updating) the local buff.");
                 ApplyGrandpasGroveBuff();
+                secondsSpentSwimming.Value = 0; //reset the swim timer
             }
         }
 

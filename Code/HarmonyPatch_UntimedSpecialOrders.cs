@@ -72,7 +72,12 @@ namespace StardewValleyExpanded
             "Morris",
             "Robin3",
             "Robin4",
-            "Apples"
+            "Apples",
+            "MarlonFay2",
+            "MorrisTod2",
+            "MorrisTod3",
+            "Lance",
+            "Krobus"
         };
 
 

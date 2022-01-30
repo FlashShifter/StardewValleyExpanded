@@ -151,6 +151,112 @@ namespace StardewValleyExpanded
                 }
             },
             {
+                "Custom_Highlands", new List<Vector2>()
+                {
+                    //Small waterfalls 1
+                    new Vector2(144, 144),
+                    new Vector2(144, 144),
+                    new Vector2(145, 144),
+                    new Vector2(145, 144),
+
+                    new Vector2(142, 134),
+                    new Vector2(142, 134),
+                    new Vector2(143, 134),
+                    new Vector2(143, 134),
+
+                    new Vector2(141, 122),
+                    new Vector2(141, 122),
+                    new Vector2(142, 122),
+                    new Vector2(142, 122),
+
+                    //Small waterfalls 2
+                    new Vector2(70, 146),
+                    new Vector2(70, 146),
+                    new Vector2(71, 146),
+                    new Vector2(71, 146),
+
+                    new Vector2(67, 135),
+                    new Vector2(67, 135),
+                    new Vector2(68, 135),
+                    new Vector2(68, 135),
+
+                    //Medium waterfalls
+                    new Vector2(31, 146),
+                    new Vector2(31, 146),
+                    new Vector2(32, 146),
+                    new Vector2(32, 146),
+                    new Vector2(33, 146),
+                    new Vector2(33, 146),
+                    new Vector2(34, 146),
+                    new Vector2(34, 146),
+
+                    new Vector2(31, 136),
+                    new Vector2(31, 136),
+                    new Vector2(32, 136),
+                    new Vector2(32, 136),
+                    new Vector2(33, 136),
+                    new Vector2(33, 136),
+                    new Vector2(34, 136),
+                    new Vector2(34, 136),
+
+                    //Large waterfalls
+                    new Vector2(10, 73),
+                    new Vector2(10, 73),
+                    new Vector2(11, 73),
+                    new Vector2(11, 73),
+                    new Vector2(12, 73),
+                    new Vector2(12, 73),
+                    new Vector2(13, 73),
+                    new Vector2(13, 73),
+                    new Vector2(14, 73),
+                    new Vector2(14, 73),
+
+                    new Vector2(8, 61),
+                    new Vector2(8, 61),
+                    new Vector2(9, 61),
+                    new Vector2(9, 61),
+                    new Vector2(10, 61),
+                    new Vector2(10, 61),
+                    new Vector2(11, 61),
+                    new Vector2(11, 61),
+                    new Vector2(12, 61),
+                    new Vector2(12, 61),
+
+                    new Vector2(6, 51),
+                    new Vector2(6, 51),
+                    new Vector2(7, 51),
+                    new Vector2(7, 51),
+                    new Vector2(8, 51),
+                    new Vector2(8, 51),
+                    new Vector2(9, 51),
+                    new Vector2(9, 51),
+                    new Vector2(10,51),
+                    new Vector2(10, 51),
+
+                    new Vector2(5, 40),
+                    new Vector2(5, 40),
+                    new Vector2(6, 40),
+                    new Vector2(6, 40),
+                    new Vector2(7, 40),
+                    new Vector2(7, 40),
+                    new Vector2(8, 40),
+                    new Vector2(8, 40),
+                    new Vector2(9, 40),
+                    new Vector2(9, 40),
+
+                    new Vector2(6, 26),
+                    new Vector2(6, 26),
+                    new Vector2(7, 26),
+                    new Vector2(7, 26),
+                    new Vector2(8, 26),
+                    new Vector2(8, 26),
+                    new Vector2(9, 26),
+                    new Vector2(9, 26),
+                    new Vector2(10, 26),
+                    new Vector2(10, 26)
+                }
+            },
+            {
                 "Custom_SpriteSpring2", new List<Vector2>()
                 {
                     //waterfall 1

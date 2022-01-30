@@ -50,7 +50,7 @@ namespace StardewValleyExpanded
         {
             if (Game1.currentLocation.NameOrUniqueName == "Custom_EnchantedGrove")
             {
-                Game1.changeMusicTrack("cm:Nexus", music_context: Game1.MusicContext.Default);
+                Game1.changeMusicTrack("Nexus", music_context: Game1.MusicContext.Default);
             }
 
             if (Game1.currentLocation.NameOrUniqueName == "Custom_JojaEmporium")

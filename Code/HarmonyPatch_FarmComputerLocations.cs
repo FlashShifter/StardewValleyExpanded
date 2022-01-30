@@ -88,7 +88,7 @@ namespace StardewValleyExpanded
         /// </remarks>
         public static List<string> FarmLocations = new List<string>()
         {
-            "TownEast", "Garden"
+            "Custom_TownEast", "Custom_Garden", "Custom_ForestWest"
         };
 
         /// <summary>A list of extra location names the Farm Computer should count for "Crops Ready In Greenhouse".</summary>
@@ -98,7 +98,7 @@ namespace StardewValleyExpanded
         /// </remarks>
         public static List<string> GreenhouseLocations = new List<string>()
         {
-            "GrandpasShedGreenhouse"
+            "Custom_GrandpasShedGreenhouse"
         };
 
         /// <summary>Adds any extra farm locations' crops to this method's total.</summary>
