@@ -8862,7 +8862,7 @@
      "Action": "EditMap",
      "Target": "Maps/Railroad",
      "FromFile": "Assets/Maps/MapPatches/Railroad_GrampletonFields.tbin",
-	 "When": { "HasMod": "flashshifter.GrampletonFields", "DaysPlayed |contains=31": true },
+	 "When": { "HasMod": "flashshifter.GrampletonFields" },
      "ToArea": { "X": 67, "Y": 43, "Width": 1, "Height": 2 }
 },
 
@@ -8878,7 +8878,7 @@
      "Action": "EditMap",
      "Target": "Maps/Custom_GrampletonFields",
      "FromFile": "Assets/Maps/MapPatches/Railroad3_GrampletonFields.tbin",
-	 "When": { "HasMod": "flashshifter.GrampletonFields", "DaysPlayed |contains=31": false },
+	 "When": { "HasMod": "flashshifter.GrampletonFields", "query: {{DaysPlayed}} >=31": false },
      "ToArea": { "X": 86, "Y": 8, "Width": 1, "Height": 1 }
 },
 
@@ -8886,7 +8886,7 @@
      "Action": "EditMap",
      "Target": "Maps/Custom_GrampletonFields",
      "FromFile": "Assets/Maps/MapPatches/Railroad4_GrampletonFields.tbin",
-	 "When": { "HasMod": "flashshifter.GrampletonFields", "DaysPlayed |contains=31": false },
+	 "When": { "HasMod": "flashshifter.GrampletonFields", "query: {{DaysPlayed}} >=31": false },
      "ToArea": { "X": 0, "Y": 11, "Width": 1, "Height": 6 }
 },
 
