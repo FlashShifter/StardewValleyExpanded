@@ -68,10 +68,10 @@
   "Default": "false"
    },
    
-   "Remove_Cherry_Blossom_Tree_From_Southeast_Hill": {
+  "Remove_Cherry_Blossom_Tree_From_Southeast_Hill": {
   "AllowValues": "true, false",
   "Default": "false"
-   },   
+   },
    
   "Remove_Fences_From_Backyard": {
   "AllowValues": "true, false",
@@ -414,15 +414,15 @@
 	  "ToArea": { "X": 128, "Y": 72, "Width": 14, "Height": 14 },
 	  "When": { "Remove_Cherry_Blossom_Tree_From_Southeast_Hill": "true", "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
       "Action": "EditMap",
       "Target": "Maps/Greenhouse,Maps",
@@ -549,11 +549,11 @@
       "Target": "characters/dialogue/Robin",
 	  "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false },
       "Entries": {  
-        "robin_event1": "{{i18n: Robin_Event1}}$1",
-        "robin_event2": "{{i18n: Robin_Event2}}$1",
-        "robin_event3": "{{i18n: Robin_Event3_1}}$2#$b#{{i18n: Robin_Event3_2}}$5",
-	    "robin_event4": "{{i18n: Robin_Event4}}$1",
-	    "robin_event6": "{{i18n: Robin_Event6}}$2",
+        "robin_event1": "You're welcome, @!$1",
+        "robin_event2": "Thank you, @!$1",
+        "robin_event3": "Sorry it was so expensive, @...$2#$b#The bridge repairs alone came up to 45,000g. The stone slabs I purchased and equipment I rented wasn't cheap.$5",
+	    "robin_event4": "You're welcome, @!$1",
+	    "robin_event6": "Umm... yeah, no problem.$2",
       }
     },
   ]
