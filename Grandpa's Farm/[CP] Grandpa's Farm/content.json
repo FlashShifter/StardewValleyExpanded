@@ -256,7 +256,14 @@
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_Forest_Joja.tbin",
       "ToArea": { "X": 66, "Y": 82, "Width": 5, "Height": 15 },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "false" }
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "false" }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/MapPatches/GrandpasFarm_Forest_Joja2.tbin",
+      "ToArea": { "X": 66, "Y": 82, "Width": 5, "Height": 15 },
+      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "true" }
     },
 	{
       "Action": "EditMap",

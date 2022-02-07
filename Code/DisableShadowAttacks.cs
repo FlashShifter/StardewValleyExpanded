@@ -128,8 +128,8 @@ namespace StardewValleyExpanded
                         Helper.Reflection.GetField<int>(shaman, "coolDown", false)?.SetValue(int.MaxValue); //set spell cooldown to max
                         shaman.moveTowardPlayerThreshold.Value = 0; //prevent spotting the player (NOTE: seems to work even for shadows that spotted the player earlier, if they leave and return to the location)
                         shaman.DamageToFarmer = 0; //disable contact damage
-                        shaman.MaxHealth = 9999; //resist most damage, including bombs
-                        shaman.Health = 9999;
+                        shaman.MaxHealth = 999999; //resist most damage, including bombs
+                        shaman.Health = 999999;
                         shaman.missChance.Value = 99999; //dodge all attacks that check accuracy
                         shadows++;
                         break;
@@ -137,16 +137,16 @@ namespace StardewValleyExpanded
                         shooter.nextShot = float.MaxValue; //set shot cooldown to max
                         shooter.moveTowardPlayerThreshold.Value = 0; //prevent spotting the player
                         shooter.DamageToFarmer = 0; //disable contact damage
-                        shooter.MaxHealth = 9999; //resist most damage, including bombs
-                        shooter.Health = 9999;
+                        shooter.MaxHealth = 999999; //resist most damage, including bombs
+                        shooter.Health = 999999;
                         shooter.missChance.Value = 99999; //dodge all attacks that check accuracy
                         shadows++;
                         break;
                     case ShadowBrute brute:
                         brute.moveTowardPlayerThreshold.Value = 0; //prevent spotting the player
                         brute.DamageToFarmer = 0; //disable contact damage
-                        brute.MaxHealth = 9999; //resist most damage, including bombs
-                        brute.Health = 9999;
+                        brute.MaxHealth = 999999; //resist most damage, including bombs
+                        brute.Health = 999999;
                         brute.missChance.Value = 99999; //dodge all attacks that check accuracy
                         shadows++;
                         break;
