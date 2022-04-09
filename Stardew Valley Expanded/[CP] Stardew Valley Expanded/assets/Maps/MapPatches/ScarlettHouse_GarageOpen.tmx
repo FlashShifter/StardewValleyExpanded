@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="16" tileheight="16" infinite="0" nextlayerid="27" nextobjectid="118">
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="2213" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="6400" columns="25">
+  <image source="spring_z_extras.png" width="400" height="4096"/>
+  <tile id="2009">
+   <animation>
+    <frame tileid="2009" duration="100"/>
+    <frame tileid="2011" duration="100"/>
+    <frame tileid="2013" duration="100"/>
+    <frame tileid="2015" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2010">
+   <animation>
+    <frame tileid="2010" duration="100"/>
+    <frame tileid="2012" duration="100"/>
+    <frame tileid="2014" duration="100"/>
+    <frame tileid="2016" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2034">
+   <animation>
+    <frame tileid="2034" duration="100"/>
+    <frame tileid="2036" duration="100"/>
+    <frame tileid="2038" duration="100"/>
+    <frame tileid="2040" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2035">
+   <animation>
+    <frame tileid="2035" duration="100"/>
+    <frame tileid="2037" duration="100"/>
+    <frame tileid="2039" duration="100"/>
+    <frame tileid="2041" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="8613" name="zVanillaFurniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="VanillaFurniture.png" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="11589" name="zVanillaWallsAndFloors" tilewidth="16" tileheight="16" tilecount="560" columns="16">
+  <image source="VanillaWallsAndFloors.png" width="256" height="560"/>
+ </tileset>
+ <tileset firstgid="12149" name="ztownInterior_2" tilewidth="16" tileheight="16" tilecount="128" columns="32">
+  <image source="townInterior_2.png" width="512" height="64"/>
+ </tileset>
+ <tileset firstgid="12277" name="zz_SVEbuildingShadow" tilewidth="16" tileheight="16" tilecount="600" columns="24">
+  <image source="z_SVEbuildingShadow.png" width="384" height="400"/>
+ </tileset>
+ <tileset firstgid="12877" name="zVanillaCraftables" tilewidth="16" tileheight="16" tilecount="576" columns="8">
+  <image source="VanillaCraftables.png" width="128" height="1152"/>
+ </tileset>
+ <tileset firstgid="13453" name="z_FireLight" tilewidth="16" tileheight="16" tilecount="81" columns="9">
+  <image source="z_FireLight.png" width="150" height="156"/>
+ </tileset>
+ <tileset firstgid="13534" name="spring_GrampletonSuburbsTilesheet" tilewidth="16" tileheight="16" tilecount="600" columns="20">
+  <image source="spring_GrampletonSuburbsTilesheet.png" width="320" height="480"/>
+ </tileset>
+ <layer id="1" name="Back" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJxzZmBgAAABEABE
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Back2" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="4" name="Back2"/>
+ <layer id="5" name="Back3" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="6" name="Back3"/>
+ <layer id="24" name="Back4" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <layer id="9" name="Buildings" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJzrY2VgAAACSwCU
+  </data>
+ </layer>
+ <objectgroup id="10" name="Buildings">
+  <object id="117" name="TileData" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 13 5 Custom_HanksGarage"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="11" name="Buildings2" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy7YsDAAAAD5AEF
+  </data>
+ </layer>
+ <objectgroup id="12" name="Buildings2"/>
+ <layer id="25" name="Buildings3" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <layer id="13" name="Front" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="14" name="Front"/>
+ <layer id="15" name="Front2" width="1" height="1">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="16" name="Front2"/>
+ <layer id="17" name="Paths" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="18" name="Paths"/>
+ <layer id="19" name="AlwaysFront" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="20" name="AlwaysFront"/>
+ <layer id="21" name="AlwaysFront2" width="1" height="1">
+  <properties>
+   <property name="Draw" value="AlwaysFront"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+ <objectgroup id="22" name="AlwaysFront2"/>
+ <layer id="23" name="AlwaysFront3" width="1" height="1">
+  <properties>
+   <property name="Draw" value="AlwaysFront"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgAAAABAAB
+  </data>
+ </layer>
+</map>

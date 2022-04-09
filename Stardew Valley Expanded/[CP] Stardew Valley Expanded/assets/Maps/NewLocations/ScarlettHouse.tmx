@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="26" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="27" nextobjectid="117">
+ <properties>
+  <property name="DayTiles" value="Back 20 4 507 Back 7 4 507 Back 7 5 539 Back 20 5 539 Front 7 1 225 Front 7 2 257 Front 20 1 225 Front 20 2 257 Front 13 16 225 Front 13 17 257 Front 7 17 225 Front 7 18 257"/>
+  <property name="Doors" value="10 13 1 120 19 13 1 120"/>
+  <property name="NightTiles" value="Back 20 4 604 Back 7 4 604 Back 7 5 635 Back 20 5 635 Front 7 1 1222 Front 7 2 1254 Front 20 1 1222 Front 20 2 1254 Front 13 16 1222 Front 13 17 1254 Front 7 17 1222 Front 7 18 1254"/>
+  <property name="Warp" value="20 29 Custom_GrampletonSuburbs 36 17"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="2213" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="6400" columns="25">
+  <image source="spring_z_extras.png" width="400" height="4096"/>
+  <tile id="2009">
+   <animation>
+    <frame tileid="2009" duration="100"/>
+    <frame tileid="2011" duration="100"/>
+    <frame tileid="2013" duration="100"/>
+    <frame tileid="2015" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2010">
+   <animation>
+    <frame tileid="2010" duration="100"/>
+    <frame tileid="2012" duration="100"/>
+    <frame tileid="2014" duration="100"/>
+    <frame tileid="2016" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2034">
+   <animation>
+    <frame tileid="2034" duration="100"/>
+    <frame tileid="2036" duration="100"/>
+    <frame tileid="2038" duration="100"/>
+    <frame tileid="2040" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="2035">
+   <animation>
+    <frame tileid="2035" duration="100"/>
+    <frame tileid="2037" duration="100"/>
+    <frame tileid="2039" duration="100"/>
+    <frame tileid="2041" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="8613" name="zVanillaFurniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="VanillaFurniture.png" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="11589" name="zVanillaWallsAndFloors" tilewidth="16" tileheight="16" tilecount="560" columns="16">
+  <image source="VanillaWallsAndFloors.png" width="256" height="560"/>
+ </tileset>
+ <tileset firstgid="12149" name="ztownInterior_2" tilewidth="16" tileheight="16" tilecount="128" columns="32">
+  <image source="townInterior_2.png" width="512" height="64"/>
+ </tileset>
+ <tileset firstgid="12277" name="zz_SVEbuildingShadow" tilewidth="16" tileheight="16" tilecount="600" columns="24">
+  <image source="z_SVEbuildingShadow.png" width="384" height="400"/>
+ </tileset>
+ <tileset firstgid="12877" name="zVanillaCraftables" tilewidth="16" tileheight="16" tilecount="576" columns="8">
+  <image source="VanillaCraftables.png" width="128" height="1152"/>
+ </tileset>
+ <tileset firstgid="13453" name="z_FireLight" tilewidth="16" tileheight="16" tilecount="81" columns="9">
+  <image source="z_FireLight.png" width="150" height="156"/>
+ </tileset>
+ <tileset firstgid="13534" name="spring_GrampletonSuburbsTilesheet" tilewidth="16" tileheight="16" tilecount="600" columns="20">
+  <image source="spring_GrampletonSuburbsTilesheet.png" width="320" height="480"/>
+ </tileset>
+ <layer id="1" name="Back" width="26" height="30">
+  <data encoding="base64" compression="zlib">
+   eJy1Vr1O3EAQXluAfB1FSvIjnZwCdH4CEkWiQGl4AqPQQZv+JHgK+qQNApEHgOsSfgQVRahQmsQ8AwnM4B3t5/Hs2URK8enbn5n5ZnZu11c5534TKs8yvho5t0a4hL1KjfuyIEtqXvOxBzQ/pfkZ4dxr/vTgPbbXzP77o0e8Y5a4g6SpdaaAOrh+4fP0MTUmACd6XTqLha3DeR6N+gE1OL+PCsupc3cU7w3xUhEQs9c+sqb7s542URIWPOP6ibcv0yZ4b2z4YH84v3EaUCrGsdiXan+cNtdkrOux7MYG5Pel402z1/VY+etY2j6WV+z+WLlYZyn1WLFxjvcL6xFtKx/0z5J2XmjX9R7gvUbsjWpwPBnHgDbWexDTR52yh06pdKbVg/qDpNkP611D1n3pW893j5Mn8i8/7qrH+k78y7dA19N1HsjYjyH5PpupMXTtfule61yGBmQf46yAzkoPHZ03+2h88Xb6jRYd6/3uqifmwz3enXc7jH3CZCb0/pjGn+i78bkIbOngGZWzbqIhewcUn/GNcEOxt7La/57GhxT7axHY0sEzorgtyJ7WEf+XZPOezjVPAlv9+VHUcbg/67NtSP8wzitavyOfP4S/Rp/lrosOn/FtEcCa155lLr3APpKMW6A4zwkv/L1bpXN8TZiL/A5QpwK+9oz3j3sieS/z/wHCW6+zSXs56MTeHbbDepjzLLwN+r2wOI/Uw3l9oDdwI625UnWxn9hx73UfVrPmPM/a/w8lj22Kv5PGWexYR+e/mYX5Vja9nr7v2zTGfsS+m/8bD98v4QE=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Back2" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztlstOwkAYhScWn0GJuobELugb8B4S9T0k2o1xqREVb1svOxNv9RZl423lBe+voHt159c4hEmZhqEVJMaTfJkyM+c/JWX4K8TvalmOS833ZKUnq1svpRv3/DXl+oUo2ELMwCzM2bV7NpjbVOaLXM9LFmAx4Clo6uTJ2WJuG3ZgV5NzxdytMu9xvSfZh4OAp8znB00df/4O7kPWg3pkz5PkGV4MPDoV08Itan5TPy2PHE/JKWfMfKb7wvRq4PczTPbFzYmb4ctyWpNjIpN7aXddZr75V3so4VTpdGrX1D2NSv0vSSSFa0EHmHrCFLxP9fz1Ub8XeurkRDmzvuetQV/YmZ2kf0zBtKaPWJpnEVV+v7yWPXMAcjAIQzAcsYfV0wh18zAKY+DKnHE5TthV4ugQ/xEcwwmUZL0VxlVYU1hvwnc9peYZnCtcKDnvKSE+4DMVL6fyDCvcBN6Buujz3ZBswXtFmL4AAHxqDg==
+  </data>
+ </layer>
+ <objectgroup id="4" name="Back2"/>
+ <layer id="5" name="Back3" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBhZoMyQgYHXnHQ95NijSAd7aAn2mDEw7DWDsFcC6Z1m5Jnz2gBTbDeSWReA7ItI/LNQ9jkS7cNmz3ky3YwNXMZiPikAm/soUTfQ9oyC4QFolQ4ozS/4AHJZSa90TC97mAdZPTAKCANcaZ3FEIGpAchJg+TkQ3LsoZcecvLHcCsjBgoAAL/XI0U=
+  </data>
+ </layer>
+ <objectgroup id="6" name="Back3"/>
+ <layer id="24" name="Back4" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBie4JEZA8NjIH4CxE/NaGfPN6DZ34H4BxD/pKE9gxnkazEwFABxoRZ1zX1tQF3zBtqeUTAKRsEoGAWjYBSMgqEIAOGPDSE=
+  </data>
+ </layer>
+ <layer id="9" name="Buildings" width="26" height="30">
+  <data encoding="base64" compression="zlib">
+   eJy1VjtrFFEU/rJRiHE70a032awmbCUaJNgIbqNNIii2go0PMFopNiMBTSUmappsLfEPbLM+INtoZeUDEhWDjVqK2vqdnXvxzJ17J3cCHviYmT3n3G/Oc3YIwJAHFeLUCJJdAX2BD0I+o8SwsZErLxnhc2J1VWUf41NVPJccow4xS8wRZ4hVpWt77It82ornhNFbPCPmievEDaKndJdH8vZFPi7PN958mQS2JlPbB+Z9lo2vRVvZv6XtO+K9x2eNxXpaSd9L8+yp5HNh5ck08KOJ5Dth81ZkL/KK+teVbDw23/UpYGyq2N/GI7KftgeIWsBnL3kWkI0nVmx9Yuy2mwM55/gRJB/qSHzxSPwrY+nz0SYw3czarDay+QrhQuAdVxpIFoy+a3jOkuOcw9Mjz1oEj55fmbW+8V9Hdjb1rLo21RI8tg4dm49AnD6bmLzpPrQzOMgH8vOp51TbxPSBjkfmb5O4RWwgO7Mark2ZeEL9ECN6bsrC3dN9de46sv3h7upQj7l7v2ryqOvdUTy+HinKXajH7B6Qekude/hXe8DfI0W9oHtsDtn9LrqT3Fl3iNuNtPZWNszV3e2+vLs51yL5Fx13tuzuwcz/UnuA98k9HnSN34h5YnE0z6P34jFiqQY8JJaJR8TjWr4eMeLySD5OG935gI9bj5BsjQNfx9N7tz4SzxXi/m7gZsBf8r8Z0IXEF8/VwyUP2UZkt7s8MvcXPf9htMR+36x0PTxuDt/UgZ/sp9/En8bgObHf67st4Dnz/4J4SSy2/Dytg8Vzanfavgl++4naRPos+0ryO0P/jzz/E/GZ6B/y80jeyuzsne7Vrvn27nSXxrzH/zpfA4Hf/wLtNpqG
+  </data>
+ </layer>
+ <objectgroup id="10" name="Buildings">
+  <object id="67" name="TileData" x="160" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+  <object id="68" name="TileData" x="304" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+  <object id="70" name="TileData" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.2&quot;"/>
+   </properties>
+  </object>
+  <object id="71" name="TileData" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.3&quot;"/>
+   </properties>
+  </object>
+  <object id="72" name="TileData" x="96" y="160" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.4&quot;"/>
+   </properties>
+  </object>
+  <object id="73" name="TileData" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.4&quot;"/>
+   </properties>
+  </object>
+  <object id="74" name="TileData" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.5&quot;"/>
+   </properties>
+  </object>
+  <object id="75" name="TileData" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="76" name="TileData" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.7&quot;"/>
+   </properties>
+  </object>
+  <object id="77" name="TileData" x="176" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.7&quot;"/>
+   </properties>
+  </object>
+  <object id="78" name="TileData" x="224" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.8&quot;"/>
+   </properties>
+  </object>
+  <object id="79" name="TileData" x="240" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.8&quot;"/>
+   </properties>
+  </object>
+  <object id="80" name="TileData" x="224" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.9&quot;"/>
+   </properties>
+  </object>
+  <object id="82" name="TileData" x="336" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.10&quot;"/>
+   </properties>
+  </object>
+  <object id="83" name="TileData" x="336" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.10&quot;"/>
+   </properties>
+  </object>
+  <object id="84" name="TileData" x="352" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.11&quot;"/>
+   </properties>
+  </object>
+  <object id="85" name="TileData" x="192" y="304" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.12&quot;"/>
+   </properties>
+  </object>
+  <object id="86" name="TileData" x="208" y="304" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.13&quot;"/>
+   </properties>
+  </object>
+  <object id="87" name="TileData" x="320" y="304" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.14&quot;"/>
+   </properties>
+  </object>
+  <object id="88" name="TileData" x="336" y="304" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.14&quot;"/>
+   </properties>
+  </object>
+  <object id="89" name="TileData" x="352" y="368" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.15&quot;"/>
+   </properties>
+  </object>
+  <object id="90" name="TileData" x="352" y="432" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.16&quot;"/>
+   </properties>
+  </object>
+  <object id="91" name="TileData" x="352" y="416" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.16&quot;"/>
+   </properties>
+  </object>
+  <object id="92" name="TileData" x="208" y="448" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.17&quot;"/>
+   </properties>
+  </object>
+  <object id="93" name="TileData" x="224" y="448" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.17&quot;"/>
+   </properties>
+  </object>
+  <object id="94" name="TileData" x="240" y="448" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.17&quot;"/>
+   </properties>
+  </object>
+  <object id="95" name="TileData" x="192" y="416" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.18&quot;"/>
+   </properties>
+  </object>
+  <object id="96" name="TileData" x="96" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="97" name="TileData" x="112" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="98" name="TileData" x="128" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="99" name="TileData" x="96" y="416" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="100" name="TileData" x="112" y="416" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="101" name="TileData" x="128" y="416" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.19&quot;"/>
+   </properties>
+  </object>
+  <object id="102" name="TileData" x="144" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.20&quot;"/>
+   </properties>
+  </object>
+  <object id="103" name="TileData" x="80" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.21&quot;"/>
+   </properties>
+  </object>
+  <object id="107" name="TileData" x="96" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.21&quot;"/>
+   </properties>
+  </object>
+  <object id="108" name="TileData" x="112" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.21&quot;"/>
+   </properties>
+  </object>
+  <object id="109" name="TileData" x="48" y="352" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.22&quot;"/>
+   </properties>
+  </object>
+  <object id="110" name="TileData" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="111" name="TileData" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="112" name="TileData" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.1&quot;"/>
+   </properties>
+  </object>
+  <object id="113" name="TileData" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.1&quot;"/>
+   </properties>
+  </object>
+  <object id="114" name="TileData" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="115" name="TileData" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="116" name="TileData" x="320" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ScarlettHouse.23&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="11" name="Buildings2" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFMLBdnYFhBxDvVIfwm/QZGmBy+zWIN2eyGQPDFDPc8teB5t8A4ptQexYh2UMsWAo0fzkQr8BjDz6wmIk8faOA9kDefKBdMApGweAEk1khGAQ+aCPEQWyYHLIaSkGZIQODgA6CD2IfIKEuIMUeAyR7kNkgkM9FfTuRwXQBBoYZArjlQeG7WwM1zGkBQOGbx4oa5sjgBpXsAYXvFQPMcB6q4K3BQLtgFIwEAABGqCDR
+  </data>
+ </layer>
+ <objectgroup id="12" name="Buildings2"/>
+ <layer id="25" name="Buildings3" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6Cnsql9jeF0kICEy7q2BwAAfDZTQgDM
+  </data>
+ </layer>
+ <layer id="13" name="Front" width="26" height="30">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhYoAXEj4BYh8Z6QICJEcFercbQsAqISdGDCxzUZGA4pAlhTzRDlTulxsBwWg1VbCtQ7TYg3q6JaVYWCwNDNgum+C4zTDEYmGQGtqPhFJJ/HhLhbi5m7OKMwABm0iKsHwa+Av3xDYi/Y/EPCLwmwi2UgiVAfBRNLBEqBsKeHAwMi4G0iQlDww5F3PFepgShRYFxJoYWb9UqlLmxTIVwegMBP3XizSwBuqkUiK+pQfyHDcD8D6JhakDhlUeCPfQGG4D4tTYDgyWU78jKwHAJSM8E4llAvF8DIrZPA6LmAJCeTWY60wYWJJFoYjuBeBeaGLqawQiQ4/ooA/a4B4ElaPJDBTxTh5T9z7GkXWB6aUBiEwQTWRkaJgAxyDwgDeLDAZsGpOxn18DUB0wvcHu4iaiE4sUZGuKAGGRekjgDQ7I4Qg5YB4HqIoYlTAwMV5HKGyC7IZ+LgcEfWKYGaELSKCFQATS3CogrgbgaiGvECeshFjTpMzR8NcAtD8qPwDzYQMicQ8oMDEeUccsvAtrDYkiGA0kEKUbUNQ9X2e5CIG+B8iGucpsUgFzHrVdkYLgMqhOA+LoKmI/VbfgAD4V1gxSa/sVY8hEIEFMnckPN2qAIodkGqN5KBNqbBMTJUPsLofUNcp26bCAcRkcAAK39arw=
+  </data>
+ </layer>
+ <objectgroup id="14" name="Front"/>
+ <layer id="15" name="Front2" width="26" height="30">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0AM8NKO+me4sDAwhbKhiX2lgzygYBaOA/qBOgIGhXmCgXTEKhiLgMaePPQpY7GnkoY/do4C+AAAmFAUs
+  </data>
+ </layer>
+ <objectgroup id="16" name="Front2"/>
+ <layer id="17" name="Paths" width="26" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztVkEOwCAI8+jT2a+XHUwYAaQTl8zZxIsWhg3UlbKRjaPOibk4nEf1fhbJS4HvRDiSr8V4d7L4bT9Sg6UFgp7uSD1obo2D9o6lveRs+Gi6a/p7Z1/DCndYDaMe0MsXjcnsDRIz88RHm7fxxZFZrzbj1ts54qeIl8ycVe9/IfO9eMtvKLl/UfzFV08yfSMF
+  </data>
+ </layer>
+ <objectgroup id="18" name="Paths"/>
+ <layer id="19" name="AlwaysFront" width="26" height="30">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhYMI2VgWEyEE9lpa6eyayoeBtU7VY0cVzqcekZSPBYk4HhiSbx6m8A1d4E4lsk6BkFuAG3Oel6tqnhl5/Mw8AwhYc894DAUSD25IDQMLAETR4XWE6+tTQHyPkNW95Ez8ODIX+OAtzgvQYDwwcN6pmHrfwGAX5gWSdA5fJuqxoKuwFE6wPtMBhB5Sq2OpMW4K0Bbc2nlT2LdSDpgtb2UBs0UzFP0gqA6rdlDBAMY+MCAYwMDIFAHMRIXTeg24/MpxdIZIDU5800tocRCaMDAJJmONo=
+  </data>
+ </layer>
+ <objectgroup id="20" name="AlwaysFront"/>
+ <layer id="21" name="AlwaysFront2" width="26" height="30">
+  <properties>
+   <property name="Draw" value="AlwaysFront"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzVcOAVAURdE3KNPURRdddNFFF1100Q3GHsRNfLgnWb9nG6PT6XS6X89qMcYGOxxwwgU3PBa5jpcvH/wIIIgQwogIdqJ8xRBHAkmkkEZGsJPlK4c8CiiihDIqgp0qXzXU0UATLbTREex0+eqhjwGGGGGMiWBnytcMcyywxAprbAQ7W7522OOAI0444yLYufJ1wx0PPPHCGx/Bjk73r/sClVNBZQ==
+  </data>
+ </layer>
+ <objectgroup id="22" name="AlwaysFront2"/>
+ <layer id="23" name="AlwaysFront3" width="26" height="30">
+  <properties>
+   <property name="Draw" value="AlwaysFront"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzVcOAVAURdE3KNPURRdddNFFF1100Q3GHsT9kLgnWb9nG6PT6XS6f5nVYowNdjjghAtueCxyHS9fPvgRQBAhhBER7ET5iiGOBJJIIY2MYCfLVw55FFBECWVUBDtVvmqoo4EmWmijI9jp8tVDHwMMMcIYE8HOlK8Z5lhgiRXW2Ah2tnztsMcBR5xwxkWwc+XrhjseeOKFNz6CHZ3u1/YFAy1BZQ==
+  </data>
+ </layer>
+</map>

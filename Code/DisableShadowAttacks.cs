@@ -1,5 +1,7 @@
-﻿using StardewModdingAPI;
+﻿using Microsoft.Xna.Framework;
+using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Locations;
 using StardewValley.Monsters;
 using System;
 using System.Collections.Generic;
@@ -35,7 +37,8 @@ namespace StardewValleyExpanded
                 Helper.Events.Multiplayer.ModMessageReceived += Multiplayer_ModMessageReceived;
                 Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
                 Helper.Events.Player.Warped += Player_Warped;
-                
+                Helper.Events.GameLoop.TimeChanged += GameLoop_TimeChanged;
+
                 Enabled = true;
             }
         }
@@ -51,7 +54,7 @@ namespace StardewValleyExpanded
         /// <remarks>This is mainly for use by other mods via reflection (direct C# access).</remarks>
         public static List<string> LocationBlacklist { get; set; } = new List<string>()
         {
-
+            "Custom_Ridgeside_RidgeForest", "Custom_Ridgeside_RSVSpiritRealm"
         };
 
         /// <summary>Indicates whether Shadow monsters' attacks should be disabled at a given location.</summary>
@@ -62,7 +65,7 @@ namespace StardewValleyExpanded
                 location == null //if the location doesn't exist
                 || Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID)) == false //or if NO players have seen the event that disables shadow attacks
                 || LocationBlacklist.Contains(location.Name, StringComparer.OrdinalIgnoreCase) //or if this location's name is in the blacklist
-                ) 
+                )
             {
                 return false; //allow shadow attacks
             }
@@ -99,6 +102,11 @@ namespace StardewValleyExpanded
                 return;
 
             DisableShadowsHere(e.NewLocation); //disable shadow attacks at the new location if necessary
+        }
+
+        private static void GameLoop_TimeChanged(object sender, StardewModdingAPI.Events.TimeChangedEventArgs e)
+        {
+            DisableShadowsHere(Game1.player.currentLocation);
         }
 
         private static void DisableShadowsHere(GameLocation location)
@@ -154,6 +162,39 @@ namespace StardewValleyExpanded
             }
             if (shadows > 0)
                 Monitor.VerboseLog($"Disabled all attacks for {shadows} Shadows at location: {location.Name}");
+
+            if (location is MineShaft mineLevel)
+                FixProgressOnInfestedMineLevels(mineLevel);
+        }
+
+        /// <summary>Spawns a ladder when all non-Shadow enemies have been defeated in an infested mine level (or others that require combat to progress).</summary>
+        private static void FixProgressOnInfestedMineLevels(MineShaft mineLevel)
+        {
+            try
+            {
+                //imitate MineShaft.EnemyCount but exclude shadows
+                int enemyCountWithoutShadows = mineLevel.characters.OfType<Monster>().Where(m => m is not ShadowShaman and not Shooter and not ShadowBrute).Count();
+
+                if (mineLevel.mustKillAllMonstersToAdvance() && enemyCountWithoutShadows <= 0)
+                {
+                    Vector2 p = Helper.Reflection.GetProperty<Vector2>(mineLevel, "tileBeneathLadder", true).GetValue();
+                    if (mineLevel.getTileIndexAt(Utility.Vector2ToPoint(p), "Buildings") == -1)
+                    {
+                        mineLevel.createLadderAt(p, "newArtifact");
+                        if (Game1.player.currentLocation == mineLevel)
+                        {
+                            Game1.showGlobalMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:MineShaft.cs.9484"));
+                        }
+
+                        if (Monitor.IsVerbose)
+                            Monitor.Log($"All non-shadow enemies defeated. Spawned ladder and displayed message for players at location: {mineLevel.Name}", LogLevel.Trace);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Monitor.LogOnce($"{typeof(DisableShadowAttacks)}: An error occurred while trying to spawn a ladder in a mine level. Full error message: \n{ex}", LogLevel.Error);
+            }
         }
     }
 }

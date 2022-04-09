@@ -461,7 +461,7 @@
         "UniqueAreaID": "Desert forage spawns",
         "MapName": "Desert",
         "MinimumSpawnsPerDay": 2,
-        "MaximumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 6,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -694,7 +694,7 @@
         "FallItemIndex": null,
         "WinterItemIndex": null,
         "UniqueAreaID": "BlueMoonVineyard forage area 1",
-        "MapName": "BlueMoonVineyard2",
+        "MapName": "Custom_BlueMoonVineyard",
         "MinimumSpawnsPerDay": 0,
         "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [
@@ -1017,8 +1017,8 @@
         ],
         "UniqueAreaID": "JunimoWoods forage area 6",
         "MapName": "Custom_JunimoWoods",
-        "MinimumSpawnsPerDay": 3,
-        "MaximumSpawnsPerDay": 10,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 20,
         "IncludeTerrainTypes": [
           "Grass",
           "Diggable"
@@ -1133,8 +1133,8 @@
         ],
         "UniqueAreaID": "Forest West forage area 1",
         "MapName": "Custom_ForestWest",
-        "MinimumSpawnsPerDay": 8,
-        "MaximumSpawnsPerDay": 14,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 18,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -2740,7 +2740,7 @@
         "PercentExtraSpawnsPerSkillLevel": 0,
         "RelatedSkill": "Foraging",
         "UniqueAreaID": "Grandpas Shed Logs",
-        "MapName": "GrandpasShedOutside",
+        "MapName": "Custom_GrandpasShedOutside",
         "MinimumSpawnsPerDay": 2,
         "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [],
@@ -3155,7 +3155,7 @@
         "UniqueAreaID": "Highlands Cavern Copper Ore Spawns",
         "MapName": "Custom_HighlandsCavern",
         "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 15,
+        "MaximumSpawnsPerDay": 10,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -3201,7 +3201,7 @@
         "UniqueAreaID": "Highlands Cavern Iron Ore Spawns",
         "MapName": "Custom_HighlandsCavern",
         "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 13,
+        "MaximumSpawnsPerDay": 10,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -3247,7 +3247,7 @@
         "UniqueAreaID": "Highlands Cavern Gold Ore Spawns",
         "MapName": "Custom_HighlandsCavern",
         "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 12,
+        "MaximumSpawnsPerDay": 10,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -3608,108 +3608,6 @@
       {
         "MonsterTypes": [
           {
-            "MonsterName": "purple slime",
-            "Settings": {
-              "SpawnWeight": 3,
-              "Damage": 35,
-              "DodgeChance": 5,
-              "Color": "220 20 60"
-            }
-          },
-          {
-            "MonsterName": "Mummy",
-            "Settings": {
-              "SpawnWeight": 6,
-              "Damage": 65,
-              "DodgeChance": 5,
-              "Sprite": "Characters/Monsters/EvilMummy"
-            }
-          },
-          {
-            "MonsterName": "Skeleton",
-            "Settings": {
-              "SpawnWeight": 4,
-              "Damage": 40,
-              "DodgeChance": 8,
-              "Sprite": "Characters/Monsters/SkeletonDangerous"
-            }
-          },
-          {
-            "MonsterName": "Skeleton Mage",
-            "Settings": {
-              "HP": 1000,
-              "SpawnWeight": 1,
-              "Damage": 50,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/SkeletonMageDangerous",
-              "Loot": [
-                "Void Pebble"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Serpent",
-            "Settings": {
-              "SpawnWeight": 5,
-              "DodgeChance": 5,
-              "Sprite": "Characters/Monsters/BadlandsSerpent"
-            }
-          }
-        ],
-        "UniqueAreaID": "Crimson Badlands Primary Spawns",
-        "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 300,
-        "MaximumSpawnsPerDay": 300,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [
-          "226,16;77,0",
-          "232,93;209,73",
-          "78,14;0,0",
-          "26,93;0,78",
-          "220,155;161,148",
-          "227,143;224,113",
-          "224;39;216,7",
-          "220,109;204,85",
-          "22,111;9,101",
-          "78,72;59,57",
-          "178,54;169,46",
-          "132,106;123,98",
-          "26,78;15,51",
-          "164,155;148,141",
-          "112,43;102,34",
-          "104,30;95,121",
-          "61,100;49,92",
-          "191,116;179,103",
-          "109,77;103,72"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 300,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
             "MonsterName": "Mummy",
             "Settings": {
               "SpawnWeight": 3,
@@ -3726,8 +3624,8 @@
         ],
         "UniqueAreaID": "Crimson Badlands Boneyard Guards",
         "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 25,
-        "MaximumSpawnsPerDay": 25,
+        "MinimumSpawnsPerDay": 22,
+        "MaximumSpawnsPerDay": 22,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -3770,8 +3668,8 @@
         ],
         "UniqueAreaID": "Crimson Badlands Serpent Guards",
         "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 25,
-        "MaximumSpawnsPerDay": 25,
+        "MinimumSpawnsPerDay": 22,
+        "MaximumSpawnsPerDay": 22,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -3830,7 +3728,6 @@
           "25,152;25,152",
           "17,153;17,153",
           "11,150;11,150",
-          "8,148;8,148",
           "4,153;4,153",
           "3,150;3,150",
           "3,147;3,147",
@@ -3898,15 +3795,16 @@
         ],
         "UniqueAreaID": "Crimson Badlands Mummy Cave Guards",
         "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 15,
-        "MaximumSpawnsPerDay": 15,
+        "MinimumSpawnsPerDay": 18,
+        "MaximumSpawnsPerDay": 18,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
           "9,138;5,136",
           "14,141;14,141",
           "24,135;24,135",
-          "8,143;8,143"
+          "8,143;8,143",
+          "8,153;8,151"
         ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "High",
@@ -4189,8 +4087,8 @@
             "MonsterName": "Serpent",
             "Settings": {
               "SpawnWeight": 1,
-              "HP": 1500,
-              "Damage": 65,
+              "HP": 1250,
+              "Damage": 60,
               "DodgeChance": 20,
               "Loot": [
                 "Void Pebble",
@@ -4205,8 +4103,8 @@
         ],
         "UniqueAreaID": "Serpent Guards",
         "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 5,
-        "MaximumSpawnsPerDay": 5,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 10,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -4241,84 +4139,11 @@
       {
         "MonsterTypes": [
           {
-            "MonsterName": "Royal Serpent",
-            "Settings": {
-              "SpawnWeight": 1,
-              "HP": 12500,
-              "Damage": 120,
-              "DodgeChance": 30,
-              "Segments": 7,
-              "Loot": [
-                "Void Shard",
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                769,
-                226
-              ],
-              "Sprite": "Characters/Monsters/Apophis"
-            }
-          }
-        ],
-        "UniqueAreaID": "Apophis Boss Monster",
-        "MapName": "Custom_CrimsonBadlands",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "38,132;48,132"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 1,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
             "MonsterName": "Carbon Ghost",
             "Settings": {
               "SpawnWeight": 1,
-              "HP": 1250,
-              "Damage": 70,
+              "HP": 1500,
+              "Damage": 80,
               "DodgeChance": 0,
               "SeesPlayersAtSpawn": true,
               "Loot": [
@@ -4335,7 +4160,7 @@
         ],
         "UniqueAreaID": "Corrupt Ghosts at iridium quarry",
         "MapName": "Custom_IridiumQuarry",
-        "MinimumSpawnsPerDay": 3,
+        "MinimumSpawnsPerDay": 5,
         "MaximumSpawnsPerDay": 5,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
@@ -4409,394 +4234,6 @@
         "ExtraConditions": {
           "Years": [],
           "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "green slime",
-            "Settings": {
-              "HP": 350,
-              "Damage": 30,
-              "SpawnWeight": 1,
-              "DodgeChance": 15,
-              "Color": "0 255 0",
-              "Loot": [
-                "Slime Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Wilderness Golem",
-            "Settings": {
-              "HP": 525,
-              "Damage": 45,
-              "SpawnWeight": 1,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/WildernessGolemSpring",
-              "Loot": [
-                "Stalk Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Spring]",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 25,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [
-          "142,83;142,83",
-          "155,155;105,90",
-          "155,43;126,0",
-          "118,23;94,9",
-          "31,28;29,24",
-          "51,38;48,34",
-          "21,63;20,62",
-          "15,20;14,19",
-          "54,31;53,30",
-          "89,73;88,72",
-          "137,71;136,70",
-          "138,25;137,24",
-          "21,17;20,16",
-          "23,17;22,16",
-          "58,16;57,15",
-          "55,22;54,21",
-          "49,26;48,25",
-          "41,28;40,27",
-          "33,35;32,34",
-          "30,42;29,41",
-          "24,47;25,48",
-          "22,48;23,49",
-          "19,51;20,50",
-          "30,28;29,27",
-          "48,38;47,37",
-          "50,38;49,37",
-          "49,40;48,39",
-          "46,40;45,39",
-          "51,41;50,40",
-          "47,42;46,41",
-          "49,43;48,42",
-          "25,12;24,11",
-          "24,14;23,13",
-          "21,17;20,16"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Spring"
-          ],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "green slime",
-            "Settings": {
-              "HP": 350,
-              "Damage": 30,
-              "SpawnWeight": 1,
-              "DodgeChance": 15,
-              "Color": "255 255 102",
-              "Loot": [
-                "Slime Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Wilderness Golem",
-            "Settings": {
-              "HP": 525,
-              "Damage": 45,
-              "SpawnWeight": 1,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/WildernessGolemSummer",
-              "Loot": [
-                "Stalk Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Summer]",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 25,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [
-          "142,83;142,83",
-          "155,155;105,90",
-          "155,43;126,0",
-          "118,23;94,9",
-          "31,28;29,24",
-          "51,38;48,34",
-          "21,63;20,62",
-          "15,20;14,19",
-          "54,31;53,30",
-          "89,73;88,72",
-          "137,71;136,70",
-          "138,25;137,24",
-          "21,17;20,16",
-          "23,17;22,16",
-          "58,16;57,15",
-          "55,22;54,21",
-          "49,26;48,25",
-          "41,28;40,27",
-          "33,35;32,34",
-          "30,42;29,41",
-          "24,47;25,48",
-          "22,48;23,49",
-          "19,51;20,50",
-          "30,28;29,27",
-          "48,38;47,37",
-          "50,38;49,37",
-          "49,40;48,39",
-          "46,40;45,39",
-          "51,41;50,40",
-          "47,42;46,41",
-          "49,43;48,42",
-          "25,12;24,11",
-          "24,14;23,13",
-          "21,17;20,16"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Summer"
-          ],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "green slime",
-            "Settings": {
-              "HP": 350,
-              "Damage": 30,
-              "SpawnWeight": 1,
-              "DodgeChance": 15,
-              "Color": "255 153 51",
-              "Loot": [
-                "Slime Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Wilderness Golem",
-            "Settings": {
-              "HP": 525,
-              "Damage": 45,
-              "SpawnWeight": 1,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/WildernessGolemFall",
-              "Loot": [
-                "Stalk Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Fall]",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 25,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [
-          "142,83;142,83",
-          "155,155;105,90",
-          "155,43;126,0",
-          "118,23;94,9",
-          "31,28;29,24",
-          "51,38;48,34",
-          "21,63;20,62",
-          "15,20;14,19",
-          "54,31;53,30",
-          "89,73;88,72",
-          "137,71;136,70",
-          "138,25;137,24",
-          "21,17;20,16",
-          "23,17;22,16",
-          "58,16;57,15",
-          "55,22;54,21",
-          "49,26;48,25",
-          "41,28;40,27",
-          "33,35;32,34",
-          "30,42;29,41",
-          "24,47;25,48",
-          "22,48;23,49",
-          "19,51;20,50",
-          "30,28;29,27",
-          "48,38;47,37",
-          "50,38;49,37",
-          "49,40;48,39",
-          "46,40;45,39",
-          "51,41;50,40",
-          "47,42;46,41",
-          "49,43;48,42",
-          "25,12;24,11",
-          "24,14;23,13",
-          "21,17;20,16"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Fall"
-          ],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "green slime",
-            "Settings": {
-              "HP": 350,
-              "Damage": 30,
-              "SpawnWeight": 1,
-              "DodgeChance": 15,
-              "Color": "51 153 255",
-              "Loot": [
-                "Slime Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Wilderness Golem",
-            "Settings": {
-              "HP": 525,
-              "Damage": 45,
-              "SpawnWeight": 1,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/WildernessGolemWinter",
-              "Loot": [
-                "Stalk Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Winter]",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 25,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [
-          "142,83;142,83",
-          "155,155;105,90",
-          "155,43;126,0",
-          "118,23;94,9",
-          "31,28;29,24",
-          "51,38;48,34",
-          "21,63;20,62",
-          "15,20;14,19",
-          "54,31;53,30",
-          "89,73;88,72",
-          "137,71;136,70",
-          "138,25;137,24",
-          "21,17;20,16",
-          "23,17;22,16",
-          "58,16;57,15",
-          "55,22;54,21",
-          "49,26;48,25",
-          "41,28;40,27",
-          "33,35;32,34",
-          "30,42;29,41",
-          "24,47;25,48",
-          "22,48;23,49",
-          "19,51;20,50",
-          "30,28;29,27",
-          "48,38;47,37",
-          "50,38;49,37",
-          "49,40;48,39",
-          "46,40;45,39",
-          "51,41;50,40",
-          "47,42;46,41",
-          "49,43;48,42",
-          "25,12;24,11",
-          "24,14;23,13",
-          "21,17;20,16"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Winter"
-          ],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
@@ -5156,110 +4593,6 @@
           "EndTime": 600,
           "MinimumTimeBetweenSpawns": 10,
           "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Winter"
-          ],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "Dust Spirit",
-            "Settings": {
-              "HP": 250,
-              "Damage": 40,
-              "SpawnWeight": 1,
-              "DodgeChance": 20,
-              "Sprite": "Characters/Monsters/DustSpiritDangerous",
-              "Loot": [
-                "Fungus Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Ruins Seed Spawns",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 8,
-        "MaximumSpawnsPerDay": 14,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "148,85;101,44"
-        ],
-        "ExcludeCoordinates": [
-          "142,83;142,83"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 8,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [
-            "Spring",
-            "Summer",
-            "Fall"
-          ],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "Dust Spirit",
-            "Settings": {
-              "HP": 250,
-              "Damage": 40,
-              "SpawnWeight": 1,
-              "DodgeChance": 20,
-              "Sprite": "Characters/Monsters/WhiteDustSpiritDangerous",
-              "Loot": [
-                "Fungus Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Fungus Seed - winter",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 8,
-        "MaximumSpawnsPerDay": 14,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [
-          "142,83;142,83"
-        ],
-        "IncludeCoordinates": [
-          "148,85;101,44"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 20,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -7068,121 +6401,6 @@
       {
         "MonsterTypes": [
           {
-            "MonsterName": "Pepper Rex",
-            "Settings": {
-              "HP": 10000,
-              "Damage": 135,
-              "SpawnWeight": 1,
-              "DodgeChance": 5,
-              "Sprite": "Characters/Monsters/BullyRex",
-              "Loot": [
-                "Golden Key",
-                "Ornate Treasure Chest",
-                166,
-                334,
-                334,
-                335,
-                335,
-                334,
-                334,
-                107
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Boss",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "49,13;46,11"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 1,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [
-            "k 55134259"
-          ],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "Pepper Rex",
-            "Settings": {
-              "HP": 10000,
-              "Damage": 135,
-              "SpawnWeight": 1,
-              "DodgeChance": 5,
-              "Sprite": "Characters/Monsters/BullyRex",
-              "Loot": [
-                "Ornate Treasure Chest",
-                166,
-                334,
-                334,
-                335,
-                335,
-                334,
-                334,
-                107
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Custom_Highlands monster area 1",
-        "MapName": "Custom_Highlands",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "49,13;46,11"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 1,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [
-            "e 55134259"
-          ],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
             "MonsterName": "Shadow Brute",
             "Settings": {
               "HP": 400,
@@ -7235,82 +6453,6 @@
         "MapName": "Custom_HighlandsCavern",
         "MinimumSpawnsPerDay": 130,
         "MaximumSpawnsPerDay": 130,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "156,156;0,0"
-        ],
-        "ExcludeCoordinates": [
-          "128,152;112,131",
-          "34,46;16,30",
-          "138,18;94,0"
-        ],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 115,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "Shadow Brute",
-            "Settings": {
-              "HP": 400,
-              "Damage": 60,
-              "SpawnWeight": 1,
-              "DodgeChance": 5,
-              "Sprite": "Characters/Monsters/ShadowBruteDangerous",
-              "Loot": [
-                "Void Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Shadow Shaman",
-            "Settings": {
-              "HP": 300,
-              "Damage": 50,
-              "SpawnWeight": 1,
-              "DodgeChance": 10,
-              "Sprite": "Characters/Monsters/ShadowShamanDangerous",
-              "Loot": [
-                "Void Seed"
-              ]
-            }
-          },
-          {
-            "MonsterName": "Shadow Sniper",
-            "Settings": {
-              "HP": 300,
-              "Damage": 45,
-              "SpawnWeight": 1,
-              "DodgeChance": 15,
-              "Loot": [
-                "Void Seed"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "Highlands Cavern Monster Seeds",
-        "MapName": "Custom_HighlandsCavern",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 30,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -7523,6 +6665,864 @@
           "EndTime": 600,
           "MinimumTimeBetweenSpawns": 10,
           "MaximumSimultaneousSpawns": 10,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "purple slime",
+            "Settings": {
+              "SpawnWeight": 3,
+              "Damage": 35,
+              "DodgeChance": 5,
+              "Color": "220 20 60"
+            }
+          },
+          {
+            "MonsterName": "Mummy",
+            "Settings": {
+              "SpawnWeight": 6,
+              "Damage": 65,
+              "DodgeChance": 5,
+              "Sprite": "Characters/Monsters/EvilMummy"
+            }
+          },
+          {
+            "MonsterName": "Skeleton",
+            "Settings": {
+              "SpawnWeight": 4,
+              "Damage": 40,
+              "DodgeChance": 8,
+              "Sprite": "Characters/Monsters/SkeletonDangerous"
+            }
+          },
+          {
+            "MonsterName": "Skeleton Mage",
+            "Settings": {
+              "HP": 1000,
+              "SpawnWeight": 1,
+              "Damage": 50,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/SkeletonMageDangerous",
+              "Loot": [
+                "Void Pebble"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Serpent",
+            "Settings": {
+              "SpawnWeight": 5,
+              "DodgeChance": 5,
+              "Sprite": "Characters/Monsters/BadlandsSerpent"
+            }
+          }
+        ],
+        "UniqueAreaID": "Crimson Badlands Primary Spawns",
+        "MapName": "Custom_CrimsonBadlands",
+        "MinimumSpawnsPerDay": 300,
+        "MaximumSpawnsPerDay": 300,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "226,16;77,0",
+          "232,93;209,73",
+          "78,14;0,0",
+          "26,93;0,78",
+          "220,155;161,148",
+          "227,143;224,113",
+          "224;39;216,7",
+          "220,109;204,85",
+          "22,111;9,101",
+          "78,72;59,57",
+          "178,54;169,46",
+          "132,106;123,98",
+          "26,78;15,51",
+          "164,155;148,141",
+          "112,43;102,34",
+          "104,30;95,121",
+          "61,100;49,92",
+          "191,116;179,103",
+          "109,77;103,72"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 300,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Shadow Brute",
+            "Settings": {
+              "HP": 400,
+              "Damage": 60,
+              "SpawnWeight": 1,
+              "DodgeChance": 5,
+              "Sprite": "Characters/Monsters/ShadowBruteDangerous",
+              "Loot": [
+                "Void Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Shadow Shaman",
+            "Settings": {
+              "HP": 300,
+              "Damage": 50,
+              "SpawnWeight": 1,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/ShadowShamanDangerous",
+              "Loot": [
+                "Void Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Shadow Sniper",
+            "Settings": {
+              "HP": 300,
+              "Damage": 45,
+              "SpawnWeight": 1,
+              "DodgeChance": 15,
+              "Loot": [
+                "Void Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Cavern Monster Seeds",
+        "MapName": "Custom_HighlandsCavern",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 30,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "156,156;0,0"
+        ],
+        "ExcludeCoordinates": [
+          "128,152;112,131",
+          "34,46;16,30",
+          "138,18;94,0"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 115,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Dust Spirit",
+            "Settings": {
+              "HP": 250,
+              "Damage": 40,
+              "SpawnWeight": 1,
+              "DodgeChance": 20,
+              "Sprite": "Characters/Monsters/DustSpiritDangerous",
+              "Loot": [
+                "Fungus Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Ruins Seed Spawns",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 8,
+        "MaximumSpawnsPerDay": 14,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [
+          "142,83;142,83"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 8,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Spring",
+            "Summer",
+            "Fall"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Dust Spirit",
+            "Settings": {
+              "HP": 250,
+              "Damage": 40,
+              "SpawnWeight": 1,
+              "DodgeChance": 20,
+              "Sprite": "Characters/Monsters/WhiteDustSpiritDangerous",
+              "Loot": [
+                "Fungus Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Fungus Seed - winter",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 8,
+        "MaximumSpawnsPerDay": 14,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [
+          "142,83;142,83"
+        ],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 20,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Winter"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "green slime",
+            "Settings": {
+              "HP": 350,
+              "Damage": 30,
+              "SpawnWeight": 1,
+              "DodgeChance": 15,
+              "Color": "0 255 0",
+              "Loot": [
+                "Slime Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Wilderness Golem",
+            "Settings": {
+              "HP": 525,
+              "Damage": 45,
+              "SpawnWeight": 1,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/WildernessGolemSpring",
+              "Loot": [
+                "Stalk Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Spring]",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 25,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "142,83;142,83",
+          "155,155;105,90",
+          "155,43;126,0",
+          "118,23;94,9",
+          "31,28;29,24",
+          "51,38;48,34",
+          "21,63;20,62",
+          "15,20;14,19",
+          "54,31;53,30",
+          "89,73;88,72",
+          "137,71;136,70",
+          "138,25;137,24",
+          "21,17;20,16",
+          "23,17;22,16",
+          "58,16;57,15",
+          "55,22;54,21",
+          "49,26;48,25",
+          "41,28;40,27",
+          "33,35;32,34",
+          "30,42;29,41",
+          "24,47;25,48",
+          "22,48;23,49",
+          "19,51;20,50",
+          "30,28;29,27",
+          "48,38;47,37",
+          "50,38;49,37",
+          "49,40;48,39",
+          "46,40;45,39",
+          "51,41;50,40",
+          "47,42;46,41",
+          "49,43;48,42",
+          "25,12;24,11",
+          "24,14;23,13",
+          "21,17;20,16"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 115,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Spring"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "green slime",
+            "Settings": {
+              "HP": 350,
+              "Damage": 30,
+              "SpawnWeight": 1,
+              "DodgeChance": 15,
+              "Color": "255 255 102",
+              "Loot": [
+                "Slime Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Wilderness Golem",
+            "Settings": {
+              "HP": 525,
+              "Damage": 45,
+              "SpawnWeight": 1,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/WildernessGolemSummer",
+              "Loot": [
+                "Stalk Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Summer]",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 25,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "142,83;142,83",
+          "155,155;105,90",
+          "155,43;126,0",
+          "118,23;94,9",
+          "31,28;29,24",
+          "51,38;48,34",
+          "21,63;20,62",
+          "15,20;14,19",
+          "54,31;53,30",
+          "89,73;88,72",
+          "137,71;136,70",
+          "138,25;137,24",
+          "21,17;20,16",
+          "23,17;22,16",
+          "58,16;57,15",
+          "55,22;54,21",
+          "49,26;48,25",
+          "41,28;40,27",
+          "33,35;32,34",
+          "30,42;29,41",
+          "24,47;25,48",
+          "22,48;23,49",
+          "19,51;20,50",
+          "30,28;29,27",
+          "48,38;47,37",
+          "50,38;49,37",
+          "49,40;48,39",
+          "46,40;45,39",
+          "51,41;50,40",
+          "47,42;46,41",
+          "49,43;48,42",
+          "25,12;24,11",
+          "24,14;23,13",
+          "21,17;20,16"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 115,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Summer"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "green slime",
+            "Settings": {
+              "HP": 350,
+              "Damage": 30,
+              "SpawnWeight": 1,
+              "DodgeChance": 15,
+              "Color": "255 153 51",
+              "Loot": [
+                "Slime Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Wilderness Golem",
+            "Settings": {
+              "HP": 525,
+              "Damage": 45,
+              "SpawnWeight": 1,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/WildernessGolemFall",
+              "Loot": [
+                "Stalk Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Fall]",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 25,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "142,83;142,83",
+          "155,155;105,90",
+          "155,43;126,0",
+          "118,23;94,9",
+          "31,28;29,24",
+          "51,38;48,34",
+          "21,63;20,62",
+          "15,20;14,19",
+          "54,31;53,30",
+          "89,73;88,72",
+          "137,71;136,70",
+          "138,25;137,24",
+          "21,17;20,16",
+          "23,17;22,16",
+          "58,16;57,15",
+          "55,22;54,21",
+          "49,26;48,25",
+          "41,28;40,27",
+          "33,35;32,34",
+          "30,42;29,41",
+          "24,47;25,48",
+          "22,48;23,49",
+          "19,51;20,50",
+          "30,28;29,27",
+          "48,38;47,37",
+          "50,38;49,37",
+          "49,40;48,39",
+          "46,40;45,39",
+          "51,41;50,40",
+          "47,42;46,41",
+          "49,43;48,42",
+          "25,12;24,11",
+          "24,14;23,13",
+          "21,17;20,16"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 115,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Fall"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "green slime",
+            "Settings": {
+              "HP": 350,
+              "Damage": 30,
+              "SpawnWeight": 1,
+              "DodgeChance": 15,
+              "Color": "51 153 255",
+              "Loot": [
+                "Slime Seed"
+              ]
+            }
+          },
+          {
+            "MonsterName": "Wilderness Golem",
+            "Settings": {
+              "HP": 525,
+              "Damage": 45,
+              "SpawnWeight": 1,
+              "DodgeChance": 10,
+              "Sprite": "Characters/Monsters/WildernessGolemWinter",
+              "Loot": [
+                "Stalk Seed"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Slime Berry and Monster Fruit seeds [Winter]",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 25,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "142,83;142,83",
+          "155,155;105,90",
+          "155,43;126,0",
+          "118,23;94,9",
+          "31,28;29,24",
+          "51,38;48,34",
+          "21,63;20,62",
+          "15,20;14,19",
+          "54,31;53,30",
+          "89,73;88,72",
+          "137,71;136,70",
+          "138,25;137,24",
+          "21,17;20,16",
+          "23,17;22,16",
+          "58,16;57,15",
+          "55,22;54,21",
+          "49,26;48,25",
+          "41,28;40,27",
+          "33,35;32,34",
+          "30,42;29,41",
+          "24,47;25,48",
+          "22,48;23,49",
+          "19,51;20,50",
+          "30,28;29,27",
+          "48,38;47,37",
+          "50,38;49,37",
+          "49,40;48,39",
+          "46,40;45,39",
+          "51,41;50,40",
+          "47,42;46,41",
+          "49,43;48,42",
+          "25,12;24,11",
+          "24,14;23,13",
+          "21,17;20,16"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 115,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [
+            "Winter"
+          ],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Pepper Rex",
+            "Settings": {
+              "HP": 10000,
+              "Damage": 135,
+              "SpawnWeight": 1,
+              "DodgeChance": 5,
+              "Sprite": "Characters/Monsters/BullyRex",
+              "Loot": [
+                "Golden Key",
+                "Ornate Treasure Chest",
+                166,
+                334,
+                334,
+                335,
+                335,
+                334,
+                334,
+                107
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Highlands Boss",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "49,13;46,11"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "k 55134259"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Pepper Rex",
+            "Settings": {
+              "HP": 10000,
+              "Damage": 135,
+              "SpawnWeight": 1,
+              "DodgeChance": 5,
+              "Sprite": "Characters/Monsters/BullyRex",
+              "Loot": [
+                "Ornate Treasure Chest",
+                166,
+                334,
+                334,
+                335,
+                335,
+                334,
+                334,
+                107
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_Highlands monster area 1",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "49,13;46,11"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "e 55134259"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "Royal Serpent",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 12500,
+              "Damage": 120,
+              "DodgeChance": 30,
+              "Segments": 7,
+              "Loot": [
+                "Void Shard",
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                769,
+                226
+              ],
+              "Sprite": "Characters/Monsters/Apophis"
+            }
+          }
+        ],
+        "UniqueAreaID": "Apophis Boss Monster",
+        "MapName": "Custom_CrimsonBadlands",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "38,132;48,132"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 1,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },

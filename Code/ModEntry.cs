@@ -28,13 +28,19 @@ namespace StardewValleyExpanded
 
             CustomCauldronEffects.Enable(helper);
 
+            CPCompatibilityEdits.Enable(helper, Monitor);
+
             CustomBuffs.Enable(helper, Monitor);
 
             ClintVolumeControl.Enable(helper, Monitor);
 
             FireflySpawner.Enable(helper, Monitor);
 
+            ConditionalLightSources.Enable(helper, Monitor);
+
             DisableShadowAttacks.Enable(helper, Monitor);
+
+            CustomBackgrounds.Enable(helper, Monitor);
 
             SpecialOrderNPCIcons.Enable(helper, Monitor);
 
