@@ -506,6 +506,14 @@
 	 "ToArea": { "X": 0, "Y": 0, "Width": 163, "Height": 156 }
     },
 	
+	{ //Patches secret woods path
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "FromFile": "assets/MapPatches/Farm_WoodsWarps.tmx",
+      "ToArea": { "X": 64, "Y": 0, "Width": 8, "Height": 7 },
+      "When": { "FarmType": "Standard" }
+    },
+	
     //bus stop path
     {
       "Action": "EditMap",

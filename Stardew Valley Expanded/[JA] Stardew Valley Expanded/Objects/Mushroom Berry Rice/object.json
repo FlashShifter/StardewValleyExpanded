@@ -1,0 +1,38 @@
+{
+	"Name": "Mushroom Berry Rice",
+	"Description": "An odd dish. Temporarily reduces max stamina when consumed.",
+	"Category": "Cooking",
+	"Edibility": 1,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": 
+	{
+        "Farming": 0,
+        "Fishing": 0,
+        "Mining": 3,
+        "Luck": 0,
+        "Foraging": 0,
+        "MaxStamina": -50,
+        "MagnetRadius": 32,
+        "Speed": 0,
+        "Defense": 3,
+        "Attack": 3,
+        "Duration": 800,
+    },
+	"Recipe":
+    {
+    "ResultCount": 1,
+    "Ingredients": [ { "Object": "Poison Mushroom", "Count": 3, }, { "Object": "Red Baneberry", "Count": 10, }, { "Object": 423, "Count": 1 }, { "Object": 245, "Count": 2 } ],
+    "CanPurchase": true,
+    "PurchaseFrom": "Marlon",
+    "PurchasePrice": 1500,
+    },
+	"CanSell": false,
+	"Price": 115,
+	"GiftTastes":
+	{
+ 		"Like": [ "MarlonFay", "Lance" ],
+		"Neutral": [ "Wizard", "Krobus" ],
+	    "Hate": [ "Gus", "Linus", "Leo", "Pierre", "Willy", "Emily", "Jas", "Robin", "Demetrius", "Maru", "Caroline", "Alex", "George", "Evelyn", "Lewis", "Clint", "Penny", "Pam", "Haley", "Jodi", "Kent", "Sam", "Leah", "Shane", "Marnie", "Elliott", "Dwarf", "Harvey", "Sandy", "MorrisTod", "GuntherSilvian", "Andy", "Susan", "Victor", "Olivia", "Apples", "Claire", "Martin", "Scarlett", "Vincent", "Abigail", "Sebastian", "Sophia", "Morgan" ]
+	},
+	"TranslationKey": "object.mushroom-berry-rice",
+}

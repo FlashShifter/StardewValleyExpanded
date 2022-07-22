@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="12">
+ <properties>
+  <property name="DayTiles" value="Front 5 1 256 Front 5 2 288 Back 5 4 228 Back 5 5 260"/>
+  <property name="NightTiles" value="Front 5 1 1253 Front 5 2 1285 Back 5 4 200 Back 5 5 264"/>
+  <property name="Warp" value="7 10 Forest 104 33"/>
+ </properties>
+ <tileset firstgid="1" name="p" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="37" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2213" name="zVanillaWallsAndFloors" tilewidth="16" tileheight="16" tilecount="560" columns="16">
+  <image source="VanillaWallsAndFloors.png" width="256" height="560"/>
+ </tileset>
+ <tileset firstgid="2773" name="zVanillaFurniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="VanillaFurniture.png" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="5749" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="6400" columns="25">
+  <image source="spring_z_extras.png" width="400" height="4096"/>
+ </tileset>
+ <tileset firstgid="12149" name="zVanillaSpringObjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+  <image source="VanillaSpringObjects.png" width="384" height="624"/>
+ </tileset>
+ <tileset firstgid="13085" name="z_FireLight" tilewidth="16" tileheight="16" tilecount="81" columns="9">
+  <image source="z_FireLight.png" width="150" height="156"/>
+ </tileset>
+ <layer id="1" name="Back" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJyVkl0OwUAUhW+TikpYBR4kbIBHgtpDX/2ktQ0kbXiyri6CN6yBe9wrpkNLJ/lyOmfm5NwmQyRr7/wmb42ZSUmmRn7OLEqyNPIb5mix/cFOs3X+rwvrlbmp1pz3vsvfJ5doQFnO7DUcOe9Z2mEiT/Yha7NC1KcsrYqco79hKO5DE9WYdch3147gKyP22pTtRSbW3sRQgHlCw5t5krf763r+2kfGPLH68Hzvs99WZKC4B+9ggPwq/0k9M4l2AMyQ0pugKl5R3qRn5VP1/lnIY+Y7ydsKXKGo387b72dQst9+P6BM/7c8+h/UwkQF
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Back2" width="16" height="16">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFMKAlyMCgLYgpvp0VE+9kxVSXBdSbjUU/NnATi35ksF+UgeEgEB8SJc48dPAfqI9RjIGBSYw8/YMR7B9oBwww0AGmLV0g1iMyjaEDH6A+XyD2Q9IPAJ5vDQ4=
+  </data>
+ </layer>
+ <objectgroup id="4" name="Back2"/>
+ <layer id="5" name="Buildings" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAeqEMxDKhCMQjsR6MP4DEHWQ6kvwSI7wNxKRL9AEpnMDEwZDJB2IzMDAxMzBC5MiT9U4C4k5GBoQuIpwLZvxkgNAh3APV2MkHYikC9SswggxgYpiG5fwsWN85iYWCYA8QrgHpXAnGCAANDqBADQxgQh0swMGxD0u8NVJcKNDONEY+n0UCEBGr4EQN2cDMw7OSGsPUEEPq1gPZXs5BgEBQg288J1L+MmXi9OUwI/bgwuh3o4AwBt6Hr386KijMJ6IfhVKgYLG3BMD79yACm/yswfr8xItIWqfpFgWEmBsTiQCzBRLp+dECsflAYRAPTy1qg260lGRjeAumXjBBxAHDGMRo=
+  </data>
+ </layer>
+ <objectgroup id="6" name="Buildings" visible="0">
+  <object id="1" name="TileData" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouseSVE.3&quot;"/>
+   </properties>
+  </object>
+  <object id="2" name="TileData" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouseSVE.3&quot;"/>
+   </properties>
+  </object>
+  <object id="3" name="TileData" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.1&quot;"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.2&quot;"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="128" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.3&quot;"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.4&quot;"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouseSVE.2&quot;"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouseSVE.4&quot;"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.5&quot;"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="224" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouse.6&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="192" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;LeahHouseSVE.1&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="7" name="Front" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgUANifSjO40CwkfnqQHxVkIHhmiCErcEAAa5A7AfEs1kYGD4C5T4BsSojhL2LBcIHsX+xMjB8BdLfoGoCgHo8gTgVas5uoNosRqiZUPoWUKwYyE5jhvBFhRgYxIQY4CATiHs5IOxuoLoeRoRcFVBvDQuC7yDAwGAK1GsGxHYSCP0w+1cD9a5B0k8I2Eug6icGzOBmYJjJjd390SxYteAFfRyo9rcxE6/3MivE/qNAfAyIT0FxLgeEPg5VdwKJjQ4y8ZifiqQGxn7FwNAAs+cUAf2tUDXLGVD9eAsYj7cF8GjE45Y/QPwLqPc3EN8gIa6R7fc0YGD4DtT7gxG/+6kJQPZbA93cC7RTSZKB4SyQTmcl3n7kOIbF72kgPgPEACjsQZc=
+  </data>
+ </layer>
+ <objectgroup id="8" name="Front"/>
+ <layer id="9" name="AlwaysFront" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt0beKQmEUhdH7NjqGZq4KZlBHBTM4YwAzjPH9a1dp528rHljd/qoTRc8vEUdRki9SpMmQjQPih/u2j8mRpxDYF+1KlKlQpUY9sG/YNWnxQ5sO3cC+Z9dnwJARYyaB/dTulz9mzFmwDOxXdms2bNmx5xDY/9sdOXHmwpXbi//73PvdHZggGnY=
+  </data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+ <layer id="11" name="Paths" width="16" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBh+gHOgHQAF5LiDkB5c8oPFz7QEw8WPg8kfAIfoAEA=
+  </data>
+ </layer>
+ <objectgroup id="12" name="Paths"/>
+</map>

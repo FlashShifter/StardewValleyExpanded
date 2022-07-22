@@ -28,12 +28,22 @@
       "Default": "false"
    },
    
+      "RemoveLandExpansionPond": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
       "GrassCropField": {
       "AllowValues": "true, false",
       "Default": "false"
    },
    
       "HeavyDebris": {
+      "AllowValues": "true, false",
+      "Default": "false"
+   },
+   
+     "LargerBridgeToGrandpasShed": {
       "AllowValues": "true, false",
       "Default": "false"
    },
@@ -245,8 +255,8 @@
     {
       "Action": "EditMap",
       "Target": "Maps/Woods",
-      "FromFile": "assets/MapPatches/GrandpasFarm_WoodsWarps.tbin",
-      "ToArea": { "X": 44, "Y": 0, "Width": 6, "Height": 7 },
+      "FromFile": "assets/MapPatches/GrandpasFarm_WoodsWarps.tmx",
+      "ToArea": { "X": 64, "Y": 0, "Width": 8, "Height": 7 },
       "When": { "FarmType": "Standard" }
     },
 	
@@ -445,8 +455,17 @@
      "Action": "EditMap",
      "Target": "Maps/Farm,Maps",
      "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge.tbin",
-	 "When": { "BridgeComplete": "true", "FarmType": "Standard" },
+	 "When": { "BridgeComplete": "true", "FarmType": "Standard", "LargerBridgeToGrandpasShed": "false" },
      "ToArea": { "X": 31, "Y": 32, "Width": 4, "Height": 5 }
+    },
+	
+	//Patches bridge (config)
+	{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge2.tbin",
+	 "When": { "BridgeComplete": "true", "FarmType": "Standard", "LargerBridgeToGrandpasShed": "true" },
+     "ToArea": { "X": 31, "Y": 31, "Width": 4, "Height": 6 }
     },
 
 
@@ -790,7 +809,7 @@
 {    //Morris special order event - part 2      --->9033859 tagged for framework
 	 "Action": "EditData",
 	 "Target": "data/events/JojaMart",
-	 //"When": { "HasSeenEvent": "6665293" },
+	 "When": { "HasSeenEvent": "6665293" },
 	 "Entries": {
 	 "9033859/e 8033758/H": "jaunty/-500 -500/farmer 18 20 1 MorrisTod 24 26 3 Martin 9 25 1 Sam 26 7 2 Shane_JojaMart 13 15 3 Andy 25 16 3 Pam 2 17 1 Jodi 9 8 0/animate Martin false true 1000 20 20 20 20 20 21 20 20 20 20 20 20 20 20 20 21 21/animate Sam false true 100 40 40 41 41 42 42 41 41/viewport 22 26 true/skippable/move farmer 3 0 2/move farmer 0 3 2/pause 800/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 600/speak MorrisTod \"Ah, yes? Please come in!$1\"/pause 1000/doAction 21 24/pause 1000/move farmer 0 3 1/move farmer 1 0 1/pause 800/emote farmer 40/pause 500/speak MorrisTod \"So, you decided to purchase more property? Great to hear.$0#$b#If there's anyone who'll get good use out of that land, it's you.$1\"/pause 650/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"There's a ledger in this book shelf. Purchase the property deed, then turn it into me for approval.$0\"/pause 400/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 3 true/pause 500/speak MorrisTod \"I look forward to seeing what you do with the space, @.$0#$b#Now, I need to take care of something. Come find me later today with that signed deed.$0\"/pause 500/end dialogueWarpOut MorrisTod \"Developing land is exciting, isn't it?$1\""
 	 },
@@ -811,14 +830,31 @@
      "Action": "EditMap",
      "Target": "Maps/Farm,Maps",
      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand.tbin",
-	 "When": { "ExtraLand": "true", "GrassCropField": "false", "FarmType": "Standard" },
+	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "false", "GrassCropField": "false", "FarmType": "Standard" },
      "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
 },
+
 { 
      "Action": "EditMap",
      "Target": "Maps/Farm,Maps",
      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField.tbin",
-	 "When": { "ExtraLand": "true", "GrassCropField": "true", "FarmType": "Standard" },
+	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "false", "GrassCropField": "true", "FarmType": "Standard" },
+     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
+},
+
+{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_NoPond.tbin",
+	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "true", "GrassCropField": "false", "FarmType": "Standard" },
+     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
+},
+
+{ 
+     "Action": "EditMap",
+     "Target": "Maps/Farm,Maps",
+     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField_NoPond.tbin",
+	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "true", "GrassCropField": "true", "FarmType": "Standard" },
      "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
 },
 

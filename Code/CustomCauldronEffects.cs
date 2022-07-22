@@ -111,6 +111,20 @@ namespace StardewValleyExpanded
                 }
             },
             {
+                "Woods", new List<Vector2>()
+                {
+                    //waterfalls
+                    new Vector2(44, 10),
+                    new Vector2(44, 10),
+                    new Vector2(45, 10),
+                    new Vector2(45, 10),
+                    new Vector2(47, 39),
+                    new Vector2(47, 39),
+                    new Vector2(48, 39),
+                    new Vector2(48, 39),
+                }
+            },
+            {
                 "Custom_AdventurerSummit", new List<Vector2>()
                 {
                     //waterfall 1

@@ -1,4 +1,39 @@
 {
+
+    "VanillaShops": [
+   {
+	"ShopName": "HarveyShop",
+	  "AddStockAboveVanilla": "False",
+      "ItemStocks": [
+		{
+			"ItemType": "Object",
+			"ItemNames": [ "Sports Drink" ],
+			"StockPrice": 750,
+			"Stock": 3,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [ "Stamina Capsule" ],
+			"StockPrice": 4000,
+			"Stock": 1,
+		},	  
+     ]
+    },
+	{
+	"ShopName": "QiShop",
+	"StoreCurrency": "clubCoins",
+	  "AddStockAboveVanilla": "True",
+      "ItemStocks": [
+		{
+			"ItemType": "BigCraftable",
+			"ItemNames": [ "Statue Of Treasure" ],
+			"StockPrice": 12500,
+			"Stock": 1,
+		},	  
+     ]
+    },
+  ],
+
   "Shops": [
 
     {
@@ -17,7 +52,7 @@
 		{
 			"ItemType": "Object",
 			"ItemNames": [ "Joja Cola" ],
-			"StockPrice": 30,
+			"StockPrice": 75,
 		},
 		/*{
 			"ItemType": "Wallpaper",
@@ -439,7 +474,7 @@
 		{
 			"ItemType": "Object",
 			"ItemNames": [ "Joja Cola" ],
-			"StockPrice": 30,
+			"StockPrice": 75,
 		},
 		/*{
 			"ItemType": "Wallpaper",
@@ -1011,7 +1046,7 @@
 		{
 			"ItemType": "Object",
 			"ItemNames": [ "Joja Cola" ],
-			"StockPrice": 25,
+			"StockPrice": 60,
 		},
 		/*{
 			"ItemType": "Wallpaper",
@@ -1700,6 +1735,13 @@
 			"IsRecipe": "true",
 			"ItemNames": [ "Baked Berry Oatmeal" ],
 			"StockPrice": 12500,
+			"Stock": 1,
+		},
+		{
+			"ItemType": "Object",
+			"IsRecipe": "true",
+			"ItemNames": [ "Flower Cookie" ],
+			"StockPrice": 8750,
 			"Stock": 1,
 		},
 	  ],

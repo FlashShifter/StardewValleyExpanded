@@ -28,7 +28,7 @@ namespace StardewValleyExpanded
 
             CustomCauldronEffects.Enable(helper);
 
-            CPCompatibilityEdits.Enable(helper, Monitor);
+            RidgesideVillage.InstallationChecker.AutoCheck(Helper, Monitor);
 
             CustomBuffs.Enable(helper, Monitor);
 
@@ -38,7 +38,7 @@ namespace StardewValleyExpanded
 
             ConditionalLightSources.Enable(helper, Monitor);
 
-            DisableShadowAttacks.Enable(helper, Monitor);
+            CPCompatibilityEdits.Enable(helper, Monitor);
 
             CustomBackgrounds.Enable(helper, Monitor);
 
@@ -54,6 +54,8 @@ namespace StardewValleyExpanded
 
             EndNexusMusic.Hook(harmony, Monitor);
 
+            DisableShadowAttacks.ApplyPatch(harmony, helper, Monitor);
+
             TouchActionProperties.Enable(helper, Monitor);
 
             HarmonyPatch_GetFishingLocation.ApplyPatch(harmony, Monitor);
@@ -62,11 +64,15 @@ namespace StardewValleyExpanded
 
             HarmonyPatch_FarmComputerLocations.ApplyPatch(harmony, Monitor);
 
+            HarmonyPatch_PiggyBank.ApplyPatch(harmony, Monitor);
+
             HarmonyPatch_FixDesertBusWarp.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_DesertSecretNoteTile.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_ActionProperties.ApplyPatch(harmony, Monitor);
+
+            HarmonyPatch_CatStatue.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_DesertFishingItems.ApplyPatch(harmony, Monitor);
 

@@ -1,0 +1,172 @@
+{
+
+	/******************************
+	** Mods required by other mods
+	******************************/
+
+	// SMAPI (not how it works but w/e)
+	"SMAPI": {
+		"uniqueID": "Pathoschild.SMAPI",
+		"author": "Pathoschild",
+		"name": "SMAPI",
+		"minVersion": "3.14.1",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/2400"
+	},
+
+	// Content Patcher (CP)
+	"CP": {
+		"uniqueID": "Pathoschild.ContentPatcher",
+		"author": "Pathoschild",
+		"name": "Content Patcher",
+		"minVersion": "1.25.0",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/1915",
+		"parents": "SMAPI"
+	},
+
+	// Expanded Preconditions Utility (EPU)
+	"EPU": {
+		"uniqueID": "Cherry.ExpandedPreconditionsUtility",
+		"author": "Cherry",
+		"name": "Expanded Preconditions Utility",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/6529"
+	},
+
+	// SpaceCore (SC)
+	"SC": {
+		"uniqueID": "spacechase0.SpaceCore",
+		"author": "spacechase0",
+		"name": "SpaceCore",
+		"minVersion": "1.8.0",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/1348"
+	},
+
+	/****************************
+	** Required mods with parents
+	*****************************/
+
+	// ExtraMapLayers
+	"EML": {
+		"uniqueID": "aedenthorn.ExtraMapLayers",
+		"author": "aedenthorn",
+		"name": "Extra Map Layers",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/9633",
+		"parents": "SMAPI"
+	},
+
+	// Farm Type Manager (FTM)
+	"FarmTypeManager": {
+		"uniqueID": "Esca.FarmTypeManager",
+		"author": "Esca",
+		"name": "Farm Type Manager (FTM)",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3231",
+		"parents": "Content Patcher"
+	},
+
+	// JSON Assets (JA)
+	"JA": {
+		"uniqueID": "spacechase0.JsonAssets",
+		"author": "spacechase0",
+		"name": "JsonAssets",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/1720",
+		"parents": "SpaceCore, Expanded Preconditions Utility"
+	},
+
+	// Shop Tile Framework (STF)
+	"STF": {
+		"uniqueID": "Cherry.ShopTileFramework",
+		"author": "Cherry",
+		"name": "Shop Tile Framework",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/5005",
+		"parents": "Expanded Preconditions Utility"
+	},
+
+	/*********************************
+	** Required mods without parents
+	** (or a really low SMAPI minimum)
+	**********************************/
+
+	// Custom NPC Exclusions
+	"NPCExclusions": {
+		"uniqueID": "Esca.CustomNPCExclusions",
+		"author": "Esca",
+		"name": "Custom NPC Exclusions",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/7089"
+	},
+
+	// Stardew Audio API and Toolkit (SAAT)
+	"SAAT": {
+		"uniqueID": "ZeroMeters.SAAT.Mod",
+		"author": "ZeroMeters",
+		"name": "SAAT - Audio API and Toolkit",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/10747"
+	},
+
+	/************************************
+	** Bundled components (parts of SVE)
+	************************************/
+
+	"SVE_CP": {
+		"uniqueID": "FlashShifter.StardewValleyExpandedCP",
+		"author": "FlashShifter",
+		"name": "[CP] Stardew Valley Expanded",
+		"minVersion": "1.14.12",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3753",
+		"component": true
+	},
+
+	"SVE_FTM": {
+		"uniqueID": "FlashShifter.SVE-FTM",
+		"author": "FlashShifter",
+		"name": "[FTM] Stardew Valley Expanded",
+		"minVersion": "1.14.12",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3753",
+		"component": true
+	},
+
+	"SVE_JA": {
+		"uniqueID": "FlashShifter.JA.SVE",
+		"author": "FlashShifter",
+		"name": "[JA] Stardew Valley Expanded",
+		"minVersion": "1.14.12",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3753",
+		"component": true
+	},
+
+	"SVE_SAAT": {
+		"uniqueID": "FlashShifter.SAAT.SVE",
+		"author": "FlashShifter",
+		"name": "[SAAT] Stardew Valley Expanded",
+		"minVersion": "1.14.12",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3753",
+		"component": true
+	},
+
+	"SVE_STF": {
+		"uniqueID": "FlashShifter.StardewValleyExpandedALL",
+		"author": "FlashShifter",
+		"name": "[STF] Stardew Valley Expanded",
+		"minVersion": "1.14.12",
+		"required": true,
+		"url": "https://www.nexusmods.com/stardewvalley/mods/3753",
+		"component": true
+	},
+
+	/***************************************
+	** Optional mods (with minimum versions)
+	***************************************/
+
+}
