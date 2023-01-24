@@ -111,6 +111,7 @@ namespace StardewValleyExpanded
                     NPC suki = new NPC();
                     suki.Portrait = Game1.content.Load<Texture2D>("Portraits\\Suki");
                     suki.Name = "Suki";
+                    suki.syncedPortraitPath.Value = "Portraits\\Suki";
                     __instance.portraitPerson = suki;
                 }
                 else if (Game1.dayOfMonth == 8 && Game1.currentSeason == "winter" && Game1.player.currentLocation.NameOrUniqueName == "Temp") //ice festival shop
@@ -118,6 +119,7 @@ namespace StardewValleyExpanded
                     NPC suki = new NPC();
                     suki.Portrait = Game1.content.Load<Texture2D>("Portraits\\Suki_IceFestival");
                     suki.Name = "Suki";
+                    suki.syncedPortraitPath.Value = "Portraits\\Suki_IceFestival";
                     __instance.portraitPerson = suki;
 
                     //imitate skipped code from the original method, adding a dialogue window beneath the portrait
