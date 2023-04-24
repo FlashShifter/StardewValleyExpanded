@@ -58,6 +58,8 @@ namespace StardewValleyExpanded
 
             TouchActionProperties.Enable(helper, Monitor);
 
+            HarmonyPatch_Mountain.Apply(harmony, this.Monitor);
+
             HarmonyPatch_GetFishingLocation.ApplyPatch(harmony, Monitor);
 
             HarmonyPatch_CustomFishPondColors.ApplyPatch(harmony, Monitor);
