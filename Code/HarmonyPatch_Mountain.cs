@@ -156,11 +156,6 @@ namespace StardewValleyExpanded
                 return;
             }
 
-            if (i + 11 >= instructions.Count)
-            {
-                return;
-            }
-
             if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 11, out var xValue) || xValue.opcode != OpCodes.Ldc_I4_S)
             {
                 return;
@@ -194,7 +189,52 @@ namespace StardewValleyExpanded
 
         private static void PatternMatchJojaEvent(List<CodeInstruction> instructions, int i)
         {
-            // TO-DO
+            if (!HarmonyPatch_Mountain.CheckOpCodeAndStrValue(instructions, i, 0, "Mountain"))
+            {
+                return;
+            }
+
+            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 6, out var xValue) || xValue.opcode != OpCodes.Ldc_I4_S)
+            {
+                return;
+            }
+
+            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 8, out var yValue) || yValue.opcode != OpCodes.Ldc_I4_5)
+            {
+                return;
+            }
+
+            // Remove Orange guy
+            instructions.RemoveRange(i + 10, 25);
+
+            // Drill Guy relocated to: 3488, 224
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 22, out var drillGuyX);
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 23, out var drillGuyY);
+
+            drillGuyX.operand = 3104f;
+            drillGuyY.operand = 640f;
+
+            // Tools relocated to: 3072, 496
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 56, out var toolsX);
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 57, out var toolsY);
+
+            toolsX.operand = 3008f;
+            toolsY.operand = 496f;
+
+            // Morris relocated to: 3200, 496
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 81, out var morrisX);
+            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 82, out var morrisY);
+
+            morrisX.operand = 3092f;
+            morrisY.operand = 496f;
+
+            // Move Viewport and Light source.
+            xValue.operand = 48;
+
+            yValue.opcode = OpCodes.Ldc_I4_S;
+            yValue.operand = 11;
+
+            HarmonyPatch_Mountain.patchedJojaRoute = true;
         }
 
         private static bool TryGetInstruction(List<CodeInstruction> instructions, int index, int offset, out CodeInstruction value)
