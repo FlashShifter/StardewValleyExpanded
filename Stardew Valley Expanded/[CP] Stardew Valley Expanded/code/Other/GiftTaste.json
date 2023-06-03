@@ -1,0 +1,47 @@
+{
+    "Changes": [
+        //adds universal gift tastes to JSON ASSETS. Mostly added to prevent NPCs from casually mentioning things like "Hey, Shane doesn't like Void Shard did you know that?". Like. What the heck? How do you know what a void shard is? That's impossible. This patch fixes that.
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Hate"
+                    ],
+                    "Value": "{{spacechase0.JsonAssets/ObjectId:Dulse Seaweed}} {{spacechase0.JsonAssets/ObjectId:Smelly Rafflesia}} {{spacechase0.JsonAssets/ObjectId:Red Baneberry}} {{spacechase0.JsonAssets/ObjectId:Poison Mushroom}} {{spacechase0.JsonAssets/ObjectId:Mushroom Berry Rice}} {{spacechase0.JsonAssets/ObjectId:Void Pebble}} {{spacechase0.JsonAssets/ObjectId:Void Shard}} {{spacechase0.JsonAssets/ObjectId:Swirl Stone}} {{spacechase0.JsonAssets/ObjectId:Void Delight}} {{spacechase0.JsonAssets/ObjectId:Void Soul}} {{spacechase0.JsonAssets/ObjectId:Void Eel}} {{spacechase0.JsonAssets/ObjectId:Void Root}} {{spacechase0.JsonAssets/ObjectId:Daggerfish}} {{spacechase0.JsonAssets/ObjectId:Undeadfish}} {{spacechase0.JsonAssets/ObjectId:Bonefish}} {{spacechase0.JsonAssets/ObjectId:Radioactive Bass}} {{spacechase0.JsonAssets/ObjectId:Monster Fruit}} {{spacechase0.JsonAssets/ObjectId:Slime Berry}} {{spacechase0.JsonAssets/ObjectId:Monster Mushroom}} {{spacechase0.JsonAssets/ObjectId:Rusty Blade}}",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Neutral"
+                    ],
+                    "Value": "{{spacechase0.JsonAssets/ObjectId:Dried Sand Dollar}} {{spacechase0.JsonAssets/ObjectId:Stamina Capsule}} {{spacechase0.JsonAssets/ObjectId:Big Conch}}",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Like"
+                    ],
+                    "Value": "{{spacechase0.JsonAssets/ObjectId:Lucky Four Leaf Clover}}",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Universal_Love"
+                    ],
+                    "Value": "{{spacechase0.JsonAssets/ObjectId:Golden Ocean Flower}}",
+                    "Delimiter": " "
+                }
+            ]
+        },
+    ]
+}

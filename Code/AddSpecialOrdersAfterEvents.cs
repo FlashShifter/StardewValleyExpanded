@@ -128,6 +128,24 @@ namespace StardewValleyExpanded
                 HasSeenEvents = "1090506",
                 HasNotSeenEvents = "1090507"
             },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "CamillaBridge",
+                HasSeenEvents = "1337426",
+                HasNotSeenEvents = "1337427"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "DwarfCaveShortcut",
+                HasSeenEvents = "1337438",
+                HasNotSeenEvents = "1337439"
+            },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "GilMinecarts",
+                HasSeenEvents = "1337430",
+                HasNotSeenEvents = "1337431"
+            },
         };
 
 

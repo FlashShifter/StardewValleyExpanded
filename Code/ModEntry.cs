@@ -38,8 +38,6 @@ namespace StardewValleyExpanded
 
             ConditionalLightSources.Enable(helper, Monitor);
 
-            CPCompatibilityEdits.Enable(helper, Monitor);
-
             CustomBackgrounds.Enable(helper, Monitor);
 
             SpecialOrderNPCIcons.Enable(helper, Monitor);
@@ -57,6 +55,8 @@ namespace StardewValleyExpanded
             DisableShadowAttacks.ApplyPatch(harmony, helper, Monitor);
 
             TouchActionProperties.Enable(helper, Monitor);
+
+            HarmonyPatch_Mountain.Apply(harmony, this.Monitor);
 
             HarmonyPatch_GetFishingLocation.ApplyPatch(harmony, Monitor);
 
@@ -132,7 +132,7 @@ namespace StardewValleyExpanded
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             //Removes Morris from the game when community center completion = 'true'
-            if (Game1.MasterPlayer.mailReceived.Contains("ccIsComplete") || Game1.MasterPlayer.hasCompletedCommunityCenter())
+            if ((Game1.MasterPlayer.mailReceived.Contains("ccIsComplete") || Game1.MasterPlayer.hasCompletedCommunityCenter()) && !this.Helper.ModRegistry.IsLoaded("Yoshimax.MarryMorris"))
             {
                 Game1.removeCharacterFromItsLocation("MorrisTod");
             }

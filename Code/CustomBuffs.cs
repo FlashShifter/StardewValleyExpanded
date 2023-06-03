@@ -57,7 +57,7 @@ namespace StardewValleyExpanded
             if (!Context.IsPlayerFree || !Game1.game1.IsActive) //if the player is occupied or the game is inactive
                 return; //do nothing
 
-            if (Game1.player.swimming.Value && (Game1.currentLocation?.NameOrUniqueName == ("Custom_GrandpasGrove") || Game1.currentLocation?.NameOrUniqueName == "Custom_SpriteSpring2")) //if the player is currently swimming at Grandpa's Grove
+            if (Game1.player.swimming.Value && (Game1.currentLocation?.NameOrUniqueName == ("Custom_GrandpasGrove") || Game1.currentLocation?.NameOrUniqueName == "Custom_SpriteSpring2" || Game1.currentLocation?.NameOrUniqueName == "Custom_FerngillRepublicFrontier_HotSpring"))
             {
                 secondsSpentSwimming.Value++; //increment swim timer
             }
@@ -85,23 +85,23 @@ namespace StardewValleyExpanded
             {
                 case 0:
                     buff = new Buff(0); //farming buff
-                    buff.buffAttributes[0] = 2; //+2 farming
+                    buff.buffAttributes[0] = 3; //+3 farming
                     break;
                 case 1:
                     buff = new Buff(1); //fishing buff
-                    buff.buffAttributes[1] = 2; //+2 fishing
+                    buff.buffAttributes[1] = 3; //+3 fishing
                     break;
                 case 2:
                     buff = new Buff(2); //mining buff
-                    buff.buffAttributes[2] = 2; //+2 mining
+                    buff.buffAttributes[2] = 3; //+3 mining
                     break;
                 case 3:
                     buff = new Buff(5); //foraging buff
-                    buff.buffAttributes[5] = 2; //+2 foraging
+                    buff.buffAttributes[5] = 3; //+3 foraging
                     break;
                 case 4:
                     buff = new Buff(11); //attack buff
-                    buff.buffAttributes[11] = 2; //+2 attack
+                    buff.buffAttributes[11] = 3; //+3 attack
                     break;
             }
 

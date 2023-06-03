@@ -1,0 +1,580 @@
+{
+    "Changes": [
+        { //HARDER MONSTER DATA	
+            "Action": "EditData",
+            "Target": "Data/Monsters",
+            "Fields": {
+                "Green Slime": {
+                    0: 30,
+                    1: 15
+                },
+                "Dust Spirit": {
+                    0: 25,
+                    1: 12
+                },
+                "Bat": {
+                    0: 18,
+                    1: 13
+                },
+                "Frost Bat": {
+                    0: 36,
+                    1: 18
+                },
+                "Lava Bat": {
+                    0: 80,
+                    1: 25
+                },
+                "Iridium Bat": {
+                    0: 300,
+                    1: 40
+                },
+                "Stone Golem": {
+                    0: 50,
+                    1: 20
+                },
+                "Wilderness Golem": {
+                    0: 40,
+                    1: 20
+                },
+                "Grub": {
+                    0: 20,
+                    1: 8
+                },
+                "Fly": {
+                    0: 22,
+                    1: 13
+                },
+                "Frost Jelly": {
+                    0: 80,
+                    1: 20
+                },
+                "Sludge": {
+                    0: 180,
+                    1: 30
+                },
+                "Shadow Guy": {
+                    0: 185,
+                    1: 50
+                },
+                "Ghost": {
+                    0: 96,
+                    1: 40
+                },
+                "Carbon Ghost": {
+                    0: 190,
+                    1: 60
+                },
+                "Rock Crab": {
+                    0: 30,
+                    1: 13
+                },
+                "Lava Crab": {
+                    0: 120,
+                    1: 30
+                },
+                "Iridium Crab": {
+                    0: 260,
+                    1: 40
+                },
+                "Squid Kid": {
+                    0: 1,
+                    1: 50
+                },
+                "Skeleton Warrior": {
+                    0: 300,
+                    1: 25
+                },
+                "Shadow Brute": {
+                    0: 220,
+                    1: 50
+                },
+                "Shadow Shaman": {
+                    0: 100,
+                    1: 40
+                },
+                "Skeleton": {
+                    0: 140,
+                    1: 30
+                },
+                "Skeleton Mage": {
+                    0: 60,
+                    1: 20
+                },
+                "Metal Head": {
+                    0: 150,
+                    1: 35
+                },
+                "Spiker": {
+                    0: 1,
+                    1: 50
+                },
+                "Bug": {
+                    0: 1,
+                    1: 15
+                },
+                "Mummy": {
+                    0: 350,
+                    1: 60
+                },
+                "Big Slime": {
+                    0: 150,
+                    1: 15
+                },
+                "Serpent": {
+                    0: 150,
+                    1: 35
+                },
+                "Pepper Rex": {
+                    0: 550,
+                    1: 65
+                },
+                "Tiger Slime": {
+                    0: 350,
+                    1: 40
+                },
+                "Lava Lurk": {
+                    0: 220,
+                    1: 35
+                },
+                "Hot Head": {
+                    0: 250,
+                    1: 30
+                },
+                "Magma Sprite": {
+                    0: 220,
+                    1: 30
+                },
+                "Magma Sparker": {
+                    0: 310,
+                    1: 25
+                },
+                "False Magma Cap": {
+                    0: 290,
+                    1: 35
+                },
+                "Dwarvish Sentry": {
+                    0: 300,
+                    1: 35
+                },
+                "Putrid Ghost": {
+                    0: 500,
+                    1: 65
+                },
+                "Shadow Sniper": {
+                    0: 300,
+                    1: 38
+                },
+                "Spider": {
+                    0: 150,
+                    1: 25
+                },
+                "Royal Serpent": {
+                    0: 600,
+                    1: 45
+                },
+                "Blue Squid": {
+                    0: 80,
+                    1: 40
+                },
+            },
+            "When": {
+                "StrongerMonsters": true
+            }
+        },
+        { //edit royal serpent sprite at badlands
+            "Action": "EditImage",
+            "Target": "characters/monsters/Royal Serpent",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/Apophis.png",
+            "When": {
+                "LocationName": "Custom_CrimsonBadlands"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //edit serpent sprite at badlands
+            "Action": "EditImage",
+            "Target": "characters/monsters/Serpent",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/BadlandsSerpent.png",
+            "When": {
+                "LocationName": "Custom_CrimsonBadlands"
+            },
+            "Update": "OnLocationChange"
+        },
+        //ADD NEW MONSTERS
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/CorruptMummy",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/CorruptMummy.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/EvilMummy",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/EvilMummy.png" //not in use
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/CorruptBat",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/CorruptBat.png" //not in use
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/EvilBat",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/EvilBat.png" //not in use
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/CorruptSpirit",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/CorruptSpirit.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/CorruptSerpent",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/CorruptSerpent.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/BadlandsSerpent",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/BadlandsSerpent.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/Apophis",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/Apophis.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/FallenAdventurerMale",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/FallenAdventurerMale.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/FallenAdventurerFemale",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/FallenAdventurerFemale.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/DustSpiritDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/DustSpiritDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/GreenDustSpiritDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/GreenDustSpiritDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/WhiteDustSpiritDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/WhiteDustSpiritDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/SkeletonDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/SkeletonDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/SkeletonMageDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/SkeletonMageDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/ShadowBruteDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/ShadowBruteDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/ShadowShamanDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/ShadowShamanDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/StoneGolemDangerous",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/StoneGolemDangerous.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/GoldCrab",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/GoldCrab.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/IronCrab",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/IronCrab.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/CopperCrab",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/CopperCrab.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/BullyRex",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/BullyRex.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/WildernessGolemSpring",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/WildernessGolemSpring.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/WildernessGolemSummer",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/WildernessGolemSummer.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/WildernessGolemFall",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/WildernessGolemFall.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/WildernessGolemWinter",
+            "FromFile": "assets/CharacterFiles/OverworldSprites/Monsters/WildernessGolemWinter.png"
+        },
+        //ADD SECRET NOTES
+        {
+            "Action": "EditImage",
+            "Target": "TileSheets/SecretNotesImages",
+            "FromFile": "assets/SecretNotes/SecretNotesImages.png",
+            "PatchMode": "Overlay"
+        },
+        //EVENT XNB LOADS
+        {
+            "Action": "Load",
+            "Target": "Data/Events/AdventureGuild",
+            "FromFile": "assets/XNBs/AdventureGuild.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_BlueMoonVineyard",
+            "FromFile": "assets/XNBs/BlueMoonVineyard.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_EnchantedGrove",
+            "FromFile": "assets/XNBs/EnchantedGrove.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_Garden",
+            "FromFile": "assets/XNBs/Garden.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_AuroraVineyard",
+            "FromFile": "assets/XNBs/AuroraVineyard.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_ApplesRoom",
+            "FromFile": "assets/XNBs/ApplesRoom.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_SusanHouse",
+            "FromFile": "assets/XNBs/SusanHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_SophiaHouse",
+            "FromFile": "assets/XNBs/SophiaHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_JunimoWoods",
+            "FromFile": "assets/XNBs/JunimoWoods.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_ShearwaterBridge",
+            "FromFile": "assets/XNBs/ShearwaterBridge.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Desert",
+            "FromFile": "assets/XNBs/Desert.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/SkullCave",
+            "FromFile": "assets/XNBs/SkullCave.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_TreasureCave",
+            "FromFile": "assets/XNBs/TreasureCave.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_DesertRailway",
+            "FromFile": "assets/XNBs/DesertRailway.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_Void",
+            "FromFile": "assets/XNBs/Void.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_MarnieShed",
+            "FromFile": "assets/XNBs/MarnieShed.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Summit",
+            "FromFile": "assets/XNBs/Summit.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/JojaMart",
+            "FromFile": "assets/XNBs/JojaMart.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_TownEast",
+            "FromFile": "assets/XNBs/TownEast.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_SpriteSpring2",
+            "FromFile": "assets/XNBs/SpriteSpring.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_ForestWest",
+            "FromFile": "assets/XNBs/ForestWest.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_JenkinsHouse",
+            "FromFile": "assets/XNBs/JenkinsHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_OliviaCellar",
+            "FromFile": "assets/XNBs/OliviaCellar.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_AndyHouse",
+            "FromFile": "assets/XNBs/AndyHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_WizardBasement",
+            "FromFile": "assets/XNBs/WizardBasement.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/MovieTheater",
+            "FromFile": "assets/XNBs/MovieTheater.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrandpasShedRuins",
+            "FromFile": "assets/XNBs/GrandpasShedRuins.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrandpasShed",
+            "FromFile": "assets/XNBs/GrandpasShed.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrandpasShedOutside",
+            "FromFile": "assets/XNBs/GrandpasShedOutside.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_JojaEmporium",
+            "FromFile": "assets/XNBs/JojaEmporium.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_ClaireHouse",
+            "FromFile": "assets/XNBs/ClaireHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Caldera",
+            "FromFile": "assets/XNBs/Caldera.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrampletonFields_small",
+            "FromFile": "assets/XNBs/GrampletonFields_small.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_AdventurerSummit",
+            "FromFile": "assets/XNBs/AdventurerSummit.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_Highlands",
+            "FromFile": "assets/XNBs/Highlands.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_HighlandsCavern",
+            "FromFile": "assets/XNBs/HighlandsCavern.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_HighlandsCavernPrison",
+            "FromFile": "assets/XNBs/HighlandsCavernPrison.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_MorrisProperty",
+            "FromFile": "assets/XNBs/MorrisProperty.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_MorrisHouse",
+            "FromFile": "assets/XNBs/MorrisHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_AuroraVineyardRefurbished",
+            "FromFile": "assets/XNBs/AuroraVineyardRefurbished.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_FirstSlashGuestRoom",
+            "FromFile": "assets/XNBs/FirstSlashGuestRoom.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_FirstSlashGuild",
+            "FromFile": "assets/XNBs/FirstSlashGuild.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_FableReef",
+            "FromFile": "assets/XNBs/FableReef.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_ScarlettHouse",
+            "FromFile": "assets/XNBs/ScarlettHouse.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrampletonSuburbsTrainStation",
+            "FromFile": "assets/XNBs/GrampletonSuburbsTrainStation.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Custom_GrampletonSuburbs",
+            "FromFile": "assets/XNBs/GrampletonSuburbs.xnb"
+        },
+        {
+            "Action": "Load",
+            "Target": "Data/Events/Blacksmith",
+            "When": {
+                "HasMod |contains=Arknir.Lucikiel": false
+            },
+            "FromFile": "assets/XNBs/Blacksmith.xnb"
+        },
+    ]
+}

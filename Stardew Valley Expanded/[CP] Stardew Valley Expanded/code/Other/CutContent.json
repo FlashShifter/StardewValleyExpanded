@@ -1,0 +1,435 @@
+{
+    "Changes": [
+        // CUT CONTENT
+        /*
+{       //HALEY MATURE EVENT
+   "Action": "EditData",
+   "Target": "data/events/town",
+   "Entries": {
+   "1000009/f Haley 1750/w sunny/k 15/u 17 18 19 20 21/z winter/z spring/z summer/t 830 1400": "fall_day_ambient/-500 -500/farmer 89 54 0 Haley 97 62 1/pause 300/viewport 97 62 true/pause 250/textAboveHead Haley \"*sniff*... *sniff*\"/shake Haley 800/move farmer 0 7 2/textAboveHead Haley \"*sniff*...\"/shake Haley 800/move farmer 0 2 1/pause 300/emote farmer 8/pause 200/move farmer 8 0 0/pause 400/faceDirection Haley 2/pause 300/move Haley 0 -2 0/pause 400/emote Haley 28/pause 500/emote farmer 60/pause 1500/speak Haley \"Hi, @...$2\"/pause 400/textAboveHead Haley \"...*sniff*\"/pause 2250/faceDirection Haley 2/pause 400/animate Haley false true 999999 22/pause 1200/speak Haley \"I had a panic attack a little bit ago. I came here to the park to calm down.$2#$b#When they start I can't breathe, I just want to curl up into a ball...$2\"/pause 500/question fork0 \"#That's a really scary feeling...#Panic attacks are easy to deal with.\"/fork 1000009_RespectPrivacy/pause 500/friendship Haley -1000/speak Haley \"That's so mean an insensitive of you to say.$3#$b#Just... leave me alone.$3\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue \"...Don't tell anyone you saw me crying.$2#$b#Sometimes I... things happen to me. It's not a big deal. Okay?$2\"",
+   
+   "1000009_RespectPrivacy": "pause 500/speak Haley \"I... I can't keep this to myself.$2#$b#My sister would never understand. Alex would never understand. You might, though.$2\"/pause 500/stopAnimation Haley/pause 400/textAboveHead Haley \"*sniff*...\"/shake Haley 800/pause 2000/move Haley 0 1 2/pause 500/speak Haley \"Yesterday, during the fair, someone... a stranger...$2\"/pause 700/animate Haley false true 999999 22/pause 500/textAboveHead Haley \"*sniff*\"/pause 1000/speak Haley \"A stranger touched me...$2\"/pause 400/emote farmer 16/pause 300/speak Haley \"I left Alex and went to get some of Gus's burgers. Maru told us the BBQ sauce was delicious, and we wanted to try it.$2\"/pause 500/stopAnimation Haley/pause 400/faceDirection Haley 0/pause 500/textAboveHead Haley \"... *sniff*\"/shake Haley 800/pause 1000/speak Haley \"When I walked up the stairs, an old man came over to me. He... he was bald and reeked of alcohol...$2#$b#He said my outfit was... cute... and that the girls in Stardew Valley were... attractive.$2\"/pause 500/emote Haley 28/pause 350/speak Haley \"He was really creeping me out so I turned to leave and he... he...$2\"/pause 300/speed Haley 4/move Haley 0 -2 0/shake Haley 3000/emote farmer 60 true/pause 350/move farmer 0 -3 0/pause 800/textAboveHead Haley \"*sniff*... *sniff*....\"/shake Haley 1000/pause 1500/speak Haley \"He grabbed me...$2#$b#He put his hands on me, all over me.$2#$b#I kicked him in the groin and yelled at him. I ran to Mayor Lewis and told him what happened.$2\"/pause 500/textAboveHead Haley \"*sniff*...\"/shake Haley 1500/pause 2000/speak Haley \"...We couldn't find him. He was gone.$2\"/pause 500/question fork1 \"#Say nothing and let her talk#You're overreacting about this.\"/fork 1000009_SayNothing/pause 500/shake Haley 4000/pause 500/emote Haley 12/speak Haley \"GET AWAY FROM ME!!! LEAVE!! YOU'RE HORRIBLE!$5\"/pause 100/globalFade/viewport -1000 -1000/pause 700/friendship Haley -1500/end dialogue Haley \"I can't believe what you said to me. You're the most insensitive person I've ever met.$2#$e#I told my sister about what happened to me... and what you said to me. She isn't happy with you either. Now leave.$2#$e#%Haley is ignoring you.\"",
+   
+   "1000009_SayNothing": "pause 500/textAboveHead Haley \"*sniff*...\"/shake Haley 1000/pause 1500/faceDirection Haley 2/animate Haley false true 999999 22/pause 1000/speak Haley \"... I walked home, got into the shower to scrub away that feeling.$2#$b#Nothing like this has ever happened to me before. Sometimes guys in Zuzu City will yell things... but not... not this.$2\"/pause 500/speak Haley \"I don't know how to move forward after what happened... I feel... violated.$2\"/pause 500/question fork1 \"(I know what I have to say)#You need to tell your sister about what happened.\"/fork 1000009_TellSister",
+   
+   "1000009_TellSister": "pause 500/speak Haley \"...You're right. I'll tell Emily. I don't know if she'll understand, but she always listens. It'll at least help me cope with this...$2\"/pause 1000/speak Haley \"I'm... I'm going to go for a walk and take some pictures. That always makes me feel better.$2#$b#I have a favor to ask.$2\"/pause 200/question fork1 \"Can you check on me later today?#Yes#No\"/fork 1000009_CheckOn/pause 500/speak Haley \"Oh... I shouldn't ask too much of you.$2\"/pause 1500/speak Haley \"I'll see you later, @.$2\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Haley \"Hi, @. I told Emily what happened. She was really supportive.$2#$b#It was... it was just what I needed. I still... feel weird, but I'm doing better. Thank you so much for talking me through that.$2\"",
+   
+   "1000009_CheckOn": "pause 500/speak Haley \"...Thanks.$2\"/pause 1000/stopAnimation Haley/pause 1000/friendship Haley 125/speak Haley \"I'm... going to go now.$2\"/pause 500/globalFade/viewport -1000 -1000/mail HaleyTalk/pause 700/end dialogue Haley \"I told Emily what happened. She was really supportive.$2#$b#It was... it was just what I needed. I still... feel weird. Thanks for talking me through that.$2#$e#%Haley is doing much better. She smiles at you.\""
+   
+   },
+   "When": { "MatureEvents": true }
+},
+
+{       //PENNY MATURE EVENT
+   "Action": "EditData",
+   "Target": "data/events/town",
+   "Entries": {
+   "1000012/t 1200 1700/f Penny 1750/k 38/w sunny/z winter/z fall": "spring_day_ambient/-500 -500/farmer 48 53 1 Penny 61 53 0 Pierre -150 -150 2/pause 300/viewport 61 53 true/skippable/pause 250/textAboveHead Penny \"Timothy...\"/move farmer 7 0 1 true/pause 3000/textAboveHead Penny \"I should have done more...\"/move farmer 4 0 1/pause 800/emote farmer 8/move Penny 0 0 3/emote Penny 16/pause 300/speak Penny \"Good afternoon, @.$2\"/pause 1100/question fork0 \"#You look a bit down today.#I'm just strolling on by. Cya.\"/fork 1000012_EverythingAlright/pause 500/speak Penny \"Farewell, @...$2\"/pause 300/end",
+   
+   "1000012_EverythingAlright": "pause 500/speak Penny \"Sorry, I was lost in thought...$2\"/pause 550/playSound doorClose/warp Pierre 44 57/move Pierre 0 1 2/move Pierre 4 0 0 true/pause 1000/move Penny 0 0 0/move Pierre 0 -8 3 true/move Pierre -2 0 0 true/pause 1000/emote Penny 28/pause 400/emote farmer 60/move Pierre -2 0 0 true/speak Penny \"I was walking by the Jenkins' house and was hit by a memory from a long time ago.$2#$b#It was before you came to the valley.$3#$b#There used to be a family that lived here before the Jenkins moved in...$0#$b#They had a son named Timothy I used to tutor along with Jas and Vincent.$3\"/pause 1000/move Penny 0 0 3/pause 1000/move Penny 0 0 2/pause 350/animate Penny false true 999999 23/pause 1000/speak Penny \"Do you mind if we walk over to the bridge, @?$2\"/pause 500/question fork1 \"#Of course, Penny.#Sure, but it better be quick.\"/fork 1000012_WalkBridge/pause 500/speak Penny \"I'll try to not take too much of your time.$2\"/switchEvent 1000012_WalkBridge",
+   
+   "1000012_WalkBridge": "pause 500/speak Penny \"Let's walk to the bridge.$2\"/pause 500/stopAnimation Penny/pause 500/move Penny 7 0 2 true/pause 1200/move farmer 7 0 2 true/globalFade/viewport -1000 -1000/warp farmer 73 54 2/warp Penny 74 54 2/faceDirection farmer 2/faceDirection Penny 2/positionOffset farmer -5 25/stopMusic/pause 600/viewport 73 54 true/pause 1500/animate Penny false true 999999 23/pause 1200/playMusic echos/pause 1700/speak Penny \"Timothy was a lovely child. He was passionate about learning and helping others. He, Jas, and Vincent were all good friends.$2#$b#One day, Timothy was late to his lessons at the library. He was... unusually quiet.$2#$b#Timothy was always so excited for class, I thought it was odd.$2\"/pause 1100/emote Penny 28/pause 250/faceDirection farmer 1/pause 700/faceDirection farmer 2/pause 1000/speak Penny \"...Then I spotted bruises on his arm... and I... I immediately knew what had happened.$2\"/pause 500/faceDirection farmer 1/emote farmer 28/pause 300/speak Penny \"I didn't know what to do... I kept teaching, until I couldn't hold it in anymore.$2#$b#I gave Jas and Vincent a special problem to work on, and I took Timothy off to the side behind the bookshelves.$2#$b#I asked where the bruises came from, and said anything he told me would stay between us.$2#$b#He burst into tears. His dad said he couldn't tell anyone what happened and that it was a secret.$2#$b#If he told someone, his dad would find out and Timothy would be hurt again.$2\"/pause 1000/shake Penny 2000/pause 650/speak Penny \"I wanted to march right over to Timothy's house and scream at his father for what he did.$5#$b#But... I knew that would just cause more problems, and maybe even put Timothy in danger.$2\"/pause 400/emote Penny 28/pause 200/speak Penny \"I finished the lesson for the day and walked the children home.$2#$b#I usually dropped Timothy off first since his house was the closest to the library, but this time I took Vincent and Jas home before him.$2\"/pause 1250/speak Penny \"After Jas and Vincent were safely home, I told Timothy I was going to help, and I promised that his father would never hurt him again. I promised on my life.$2\"/pause 1500/speak Penny \"I took Timothy to the mayor's house and explained what happened. Mayor Lewis was flabbergasted. He called the Zuzu City police and they sent a unit to Timothy's house.$2#$b#The police took his father away and took Timothy into protective custody.$2\"/pause 2000/stopAnimation Penny/faceDirection Penny 3/pause 650/speak Penny \"Their house went up for sale shortly after. I don't know what else happened to Timothy, his father, or his mother, Cindy.$2#$b#Wherever Timothy is... I hope he's doing okay...$2\"/pause 1000/faceDirection Penny 2/pause 600/question fork1 \"Do you think I did the right thing?#You did everything you could.#You should have stayed out of their family's business.\"/fork 1000012_BetterNow/pause 500/stopMusic/faceDirection Penny 3/pause 250/emote Penny 12/shake Penny 999999999/pause 700/speak Penny \"You're saying you'd stand idly by as an innocent child was abused by his father!?$5#$b#You are ABSOLUTELY THE WORST! Get away from me, @!$5\"/emote farmer 28/friendship Penny -1500/end dialogue Penny \"You're utterly unbelievable.$5#$e#%Penny is ignoring you.\"",
+   
+   "1000012_BetterNow": "pause 700/faceDirection Penny 3/pause 500/speak Penny \"Thank you, @.$0\"/pause 1000/faceDirection Penny 0 0 2/pause 1000/faceDirection Penny 3/pause 800/speak Penny \"I'm sorry. I didn't mean to hold you up for so long.$2#$b#I've had this on my mind for a while. I'm grateful you listened to me.$0\"/pause 1000/speak Penny \"I hope you enjoy the rest of your day.$2\"/pause 700/move Penny 6 0 1 true/pause 400/friendship Penny 125/globalFade/viewport -1000 -1000 true/pause 1000/end dialogue Penny \"Hi, @.$0#$b#Umm...$2#$b#Please, keep what I said about Timothy to yourself. We could both get in trouble with the Zuzu City police...$2\""
+    },
+    "When": { "MatureEvents": true }
+},
+
+{  //KENT MATURE EVENT
+   "Action": "EditData",
+   "Target": "data/events/summit",
+   "Entries": {
+   "1000022/f Kent 2500/e 1000018/w sunny/z winter/t 600 1800": "none/14 17/farmer 11 22 0 Kent 12 13 0/stopMusic/playMusic winter_day_ambient/skippable/move farmer 0 -6 0/pause 800/emote farmer 8/pause 1500/faceDirection Kent 1 true/pause 250/faceDirection Kent 2 true/pause 1600/faceDirection Kent 1 true/pause 250/faceDirection Kent 0 true/pause 1800/speak Kent \"I didn't expect to run into anyone up here. It's not exactly the easiest hike.$0\"/pause 1350/speak Kent \"...$0\"/pause 2000/emote Kent 40/pause 1000/speak Kent \"...$2#$b#Still here, huh?$2\"/pause 1000/question fork0 \"#Say nothing#Sorry, I'll go.\"/fork 1000022_AreYouOkay/pause 1000/speak Kent \"...All right. Bye.$2\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogueWarpOut Kent \"Sometimes I go to the summit just to think...$2#$b#It's nice to be alone every once in a while.$0\"",
+   
+   "1000022_AreYouOkay": "pause 1000/faceDirection Kent 1 true/pause 200/faceDirection Kent 2 true/pause 800/speak Kent \"Come enjoy the view with me, @.$2\"/pause 650/faceDirection Kent 1 true/pause 250/faceDirection Kent 0 true/pause 800/viewport move 0 -1 4000 true/move farmer -2 0 0/move farmer 0 -3 0/move farmer 1 0 1/pause 300/faceDirection farmer 0 true/pause 2500/speak Kent \"Tell me. What do you know about the Gotoro Empire?$2\"/pause 750/move farmer 0 0 1/pause 850/speak Kent \"$q -1 null#(What should I say)#$r -1 0 kent_event1#We are at war with them.#$r -1 0 kent_event2#The Gotoro Empire is our enemy.#$r -1 0 kent_event3#I don't know that much about them.\"/pause 850/move farmer 0 0 0/pause 1400/speak Kent \"Well then. You don't know the Gotoro Empire like I do.$2\"/pause 1000/speak Kent \"The things I've seen.$2\"/pause 1200/speak Kent \"The things I've experienced.$2\"/pause 500/stopMusic/pause 1000/speak Kent \"The people who've died...$2\"/pause 1650/speak Kent \"So many good and innocent people...$2\"/pause 1500/emote Kent 12/pause 500/move farmer 0 0 1/pause 700/shake Kent 1500/pause 800/speak Kent \"!!!$3\"/pause 500/shake Kent 25000/playMusic shaneTheme/emote farmer 16 true/pause 300/speak Kent \"Countless innocent people! Dead! And for what!? Tariffs!?$3#$b#So many of our soldiers! Good men and women!!!$3#$b#We are nothing but pawns on a chess board for billionaires!!! We're barely human to them!!$3\"/pause 500/speak Kent \"$q -1 null#(I need to say something)#$r -1 0 kent_event4#Say nothing#$r -1 0 kent_event5#Tell Kent to stop\"/shake Kent 25000/speak Kent \"The villages we bombed!!! The families we ripped apart!!!$3#$b#Gotoro civilians murdered!!!$3#$b#There... there was a farming village like Stardew Valley... We destroyed it!$3\"/pause 500/speak Kent \"$q -1 null#(What should I do)#$r -1 0 kent_event6#Calm Kent down#$r -1 0 kent_event7#Say nothing\"/speak Kent \"I didn't think about anyone other than myself!!!$3#$b#I abandoned my comrades!!! I should have died instead of them!!$3#$b#William! I'm sorry!$3\"/shake Kent 20000/pause 1000/speak Kent \"The torture... The screams... The starvation... The isolation...$3\"/shake Kent 6000/pause 2000/speak Kent \"I... I...!!!!!!$3\"/pause 500/jump farmer/pause 1000/playMusic spring_day_ambient/pause 500/move Kent 0 0 3/pause 2000/speak Kent \"...$2\"/pause 1500/question fork1 \"#It hurts me to see you like this.#You're scaring me...\"/fork 1000022_ScaredAndConfused/stopMusic/pause 1200/speak Kent \"...$2\"/switchEvent 1000022_ScaredAndConfused",
+   
+   "1000022_ScaredAndConfused": "pause 2000/emote Kent 28/pause 300/move Kent 0 0 2/pause 700/animate Kent false true 999999 16/pause 1100/playMusic echos/pause 1000/speak Kent \"The doctors say I have severe PTSD... well, they're probably right.$2\"/pause 1300/speak Kent \"I haven't been the same since I left the valley. The person I used to be before all of this... I don't think he's coming back.$2#$b#I can't ever forgive the Gotoro Empire for torturing me and killing my friends.$2#$b#But people are people. Not everyone there is bad.$2#$b#The news stations here play us up as the good guys, and the war as good vs. evil.$2\"/pause 1500/speak Kent \"Truthfully? I think we're the bad guys.$2\"/pause 2000/speak Kent \"The amount of carnage and death we've brought to the Empire is unprecedented. And all with the wonders of modern technology.$2#$b#The destruction we've caused doesn't come close to what they did to us in the bombing of Jewel Inlet.\"/pause 1200/speak Kent \"...I hope this war will be over soon.$2\"/pause 1000/playMusic spring_day_ambient/pause 1250/stopAnimation Kent/pause 1250/move Kent 0 0 3/pause 1000/speak Kent \"You know, I think you're a good person. Thanks for hearing me out. That kind of stuff is really taxing.$0#$b#I know it was shocking and hard on you. I sometimes...$0#$b#Just need someone to listen. I watch the news and they spread lies, my family doesn't understand... Having someone else helps tremendously.$2\"/pause 1000/emote Kent 40/pause 600/faceDirection Kent 3 true/pause 500/faceDirection farmer 1 true/pause 500/speak Kent \"I need to spend some time with my wife and kids.$0#$b#...$2#$b#And please, keep everything you heard from me a secret, @.$0#$b#If my superiors ever got wind of this, there's a good chance they would lock me up.$2#$b#But I trust you.$0\"/pause 500/emote farmer 36/pause 500/globalFade/viewport -1000 -1000/mail KentSummit/pause 700/end dialogue Kent \"Thanks for listening to me at the summit, @.$2#$b#Dealing with these issues can be impossible when you're alone. I'm glad I have close friends to count on.$1\""
+   },
+   "When": { "MatureEvents": true }
+},
+
+{  //MARLON 1 HEART EVENT
+	"Action": "EditData",
+    "Target": "data/events/adventureguild",
+	"Entries": {
+    "1050034/e 1000034/j 30/k 1090501/f MarlonFay 250": "MarlonsTheme/-500 -500/farmer -200 -200 0 MarlonFay 4 11 2/pause 1000/viewport 6 14 true/skippable/pause 3000/warp farmer 6 19/playSound doorClose/pause 500/textAboveHead MarlonFay \"Ah. You're back.\"/pause 330/move farmer 0 -5 3/move farmer -2 0 0/move farmer 0 -1 0/pause 1000/speak MarlonFay \"@. I've been meaning to have a conversation with you.#$b#I'm sure you have several questions as to who we are, what we do, and the history of this guild.#$b#If you would please join me in my quarters, I'll explain all of this to you.\"/pause 500/question fork0 \"#I'd like to hear the history of the guild.#Sounds like a long talk. No thanks.\"/fork 1050034_GuildHistory/pause 800/speak MarlonFay \"Hmm. I see. If that's your choice, so be it.$2\"/pause 1200/speak MarlonFay \"Do you need a new weapon? Take a look at what we have in stock.\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/end position 4 13",
+	
+	"1050034_GuildHistory": "pause 1000/speak MarlonFay \"Follow me.\"/pause 100/globalFade/viewport -1000 -1000/pause 500/warp farmer 4 5/warp MarlonFay 6 5/faceDirection farmer 1/showFrame MarlonFay 18/pause 250/viewport 7 6 true/pause 1500/speak MarlonFay \"Hmm... where to begin...\"/pause 600/emote MarlonFay 40/pause 200/speak MarlonFay \"I'll start with the history of the guild.#$b#I founded the Adventurer's Guild over 25 years ago, after being recognized by the Order of the Knights of Pythagoras.#$b#Our Order is made up of over fifty guilds and clans around the world, spanning every continent.#$b#Our mission is to protect humanity from monsters corrupted by ancient dark magic. No one knows when this corruption started, or how it began.#$b#Some ancient legends speak of a past time when monsters and humans lived in peace. If those times were ever real, they now only exist in stories.#$b#So we, the Order of the Knights of Pythagoras, have sworn an oath to protect humans from those monsters. We are, in a way, monster hunters.\"/pause 1050/speak MarlonFay \"This guild in particular works closely with M. Rasmodius. You may know him as the 'Wizard'.#$b#Every guild has a wizard or witch that supports them. It's paramount our weapons are imbued with magic to pierce the life force of monsters.#$b#You may wonder why we use swords instead of conventional weapons.#$b#To destroy the life force of a monster, you must pierce their life force fibers in a slashing movement.#$b#This is the only way to ensure the monster is defeated, or else it will regenerate.#$b#Projectile weapons unfortunately don't do the trick. They are able to stun monsters, but they still require a good horizontal slash to finish them off.#$b#If you ever use a projectile weapon, you may understand what I mean, unless you use explosives or iridium ammunition.\"/pause 1000/speak MarlonFay \"Alesia was a gifted sniper who used magic-imbued arrows. She used to be a member of this guild before she moved to Castle Village in the desert.#$b#She used her arrows to stun monsters before finishing them with her dagger.\"/pause 1000/showFrame MarlonFay 0/pause 800/showFrame MarlonFay 18/pause 1000/speak MarlonFay \"You may have noticed you're the 23rd adventurer, but there are only a few of us here. We used to have many more members.#$b#Over time, people have left to join other guilds and... and we...\"/pause 500/showFrame MarlonFay 19/pause 650/speak MarlonFay \"We have lost a lot of good people over the years. What we do is dangerous, and it's a thankless job.#$b#Thanks for joining our cause. Your help in protecting the valley is greatly appreciated. I feel as if we're a fully functioning guild again.\"/pause 800/speak MarlonFay \"$q -1 null#(What should I say)#$r -1 0 marlon_event2#I'll do everything I can to protect people.#$r -1 0 marlon_event5#It's dangerous and risky. Someone needs to do it.\"/pause 1000/showFrame MarlonFay 0/pause 1000/showFrame MarlonFay 18/pause 500/speak MarlonFay \"I'm proud to hear that from you. You have the potential to be an excellent swordsman.\"/pause 1250/speak MarlonFay \"You may be wondering why the mine entrance isn't sealed off.#$b#Unfortunately, Joja owns the rights to the mines and won't allow us to seal it.#$b#It's strange. They don't utilize the mines in any way, despite bountiful amounts of ore.#$b#Because of this, we must venture into the mines and slay monsters before they accumulate in mass.\"/pause 600/speak MarlonFay \"$q -1 null#(What should I say)#$r -1 0 marlon_event4#There must be strong monsters deep in the mines...#$r -1 0 marlon_event3#I'll prove I have what it takes!\"/pause 1000/speak MarlonFay \"I must disclose to you that not every monster is corrupted and hostile.#$b#There is a Shadow Person living in the sewer. His name is 'Krobus'. Rasmodius and I have been harboring him.#$b#This is to remain a secret. You'll meet Krobus soon enough. I need to see you prove your worth before I introduce you to him.$2\"/pause 1200/speak MarlonFay \"I believe that's enough conversation for you today. I'll speak with you again soon on other matters.#$b#I need to check on a new stock of weapons we just received from the new blacksmith in Castle Village.\"/pause 100/globalFade/viewport -1000 -1000/pause 700/end dialogue MarlonFay \"Remember what I said. Krobus is to remain a secret. There would be dire consequences if anyone got wind of him.\"",
+    },
+},
+
+{   //MARLON 8 HEART EVENT
+    "Action": "EditData",
+    "Target": "Data/Events/summit",
+    "Entries": {
+    "0002577/y 2/b 1/f MarlonFay 2000": "winter_day_ambient/15 20/MarlonFay 20 25 0/skippable/pause 3000/speak MarlonFay \"...$2#$b#I'm sorry I have not visited lately. My bad leg is... proving troublesome.$2#$b#The hikes to the summit are becoming more difficult. My age is starting to show.$2\"/pause 2200/speak MarlonFay \"I was reminiscing of the old group with Gil...$2#$b#Jonathan, Boris, Alesia, Barin, Ketra, Gerta...$2#$b#My guilty pleasure of recalling the past - back when you were still...\"/pause 800/shake MarlonFay 1000/pause 1000/speak MarlonFay \"I had the nightmare again, Isabelle...$2#$b#...$2#$b#The moment I lost you...$2\"/pause 2000/speak MarlonFay \"...Soon, I'll be with you again. But there is work to do before that time comes.$2#$b#Until next time, my flower.$2\"/pause 1500/faceDirection MarlonFay 3 true/pause 800/speed MarlonFay 2/move MarlonFay -7 0 3 true/pause 1000/globalFade/viewport -1000 -1000/pause 600/end dialogue MarlonFay \"...$2#$e#...$0#$e#Hmm?$0#$b#I was... recalling past events.$2#$e#%Marlon turns away from you.\"",
+    },
+},
+
+
+{   //MORRIS YEAR 1 SPRING EVENT
+    "Action": "EditData",
+    "Target": "Data/Events/town",
+    "When": { "HasSeenEvent |contains=191393": false },
+    "Entries": {
+    "6663401/k 191393/f MorrisTod 50/w sunny/y 1/z summer/z fall/z winter/u 21 22 23 24 25 26 27 28/t 900 1700": "springtown/-500 -500/farmer 30 58 1 Morris -200 -200 2 Penny 32 55 1 Andy 37 67 3 Alex 53 69 0 Jodi 25 63 1 Olivia 27 63 3/showFrame Penny 18/animate Andy true true 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 34 33 32/viewport 35 57 true/viewport move 1 0 5200 true/skippable/move farmer 10 0 1/playSound doorClose/warp Morris 43 57/pause 400/speak Morris \"Hahaha! Another Joja customer gained!$5\"/pause 200/move Morris 0 1 2/pause 300/emote Morris 40/pause 150/faceDirection Morris 3/pause 150/emote Morris 16 true/pause 200/speak Morris \"*Ahem*...$4#$b#Shop at Joja!$1#$b#Cheaper seeds than Pierre's!$5#$b#Special limited-time discounts and rewards!$1\"/pause 400/move Morris 6 0 1 true/pause 200/textAboveHead Morris \"Hahaha!\"/pause 600/globalFade/viewport -1000 -1000/halt/end dialogue Pierre \"*sigh*...Morris keeps driving away my customers.$2#$e#What will I do?...$2\"",
+    },
+},
+
+{       //MARNIE EVENT 2
+	 "Action": "EditData",	 
+     "Target": "data/events/forest",
+	 "Entries": { 
+     "1000510/w sunny/f Marnie 1000/z spring/z fall/z winter/y 2/t 600 1800/u 10 11 12 13": "summer_day_ambient/-500 -500/farmer 69 25 3 Marnie 54 21 0 Wizard 4 23 3 Andy 64 70 0 Shane 89 24 0 Leah 112 39 0 Lewis 86 54 3/pause 1000/skippable/viewport 65 29 true/viewport move -1 -1 7300 true/move farmer -7 0 3/move farmer 0 -4 3/move farmer -5 0 3/pause 1200/move Marnie 0 0 1/pause 400/emote Marnie 16/pause 150/speak Marnie \"Oh, @! Hello!$1#$b#I'm checking on my melons. Some of them are almost ripe!$0\"/pause 800/move Marnie 0 0 2/pause 1300/move Marnie 0 0 1/pause 500/speak Marnie \"I set up this little crop field a couple years ago before you moved to Stardew Valley.$0#$b#I always wanted a little garden of my own. It's really grown in size!$1#$b#Pierre's fertilizer does wonders for the quality of crops.$1\"/pause 600/move Marnie 1 0 1/pause 600/speak Marnie \"How's your summer, @? Are your crops doing well?\"/pause 500/question fork0 \"#I've been having a productive season.#It could be better...\"/fork 1000510_GreatSeason/pause 1000/emote Marnie 60/speak Marnie \"I'm sorry this summer isn't going well, @.$2#$b#Hopefully things will get better for you next season.$2\"/pause 500/switchEvent 1000510_MarnieMelon",
+
+     "1000510_GreatSeason": "pause 500/speak Marnie \"I'm happy to hear that! This summer has been mild so far.$0#$b#I haven't had a single crop dry out.$1\"/pause 500/switchEvent 1000510_MarnieMelon",
+
+     "1000510_MarnieMelon": "pause 200/speak Marnie \"Shane has been taking more responsibility with the livestock lately, giving me more time to take care of the crops.$0#$b#I appreciate his help.$1\"/pause 500/move Marnie 0 0 0/pause 800/move Marnie 0 0 1/pause 300/speak Marnie \"I'm about done here, @. I enjoyed our conversation!$1\"/pause 200/globalFade/viewport -1000 -1000/pause 1200/friendship Marnie 50/end dialogue Marnie \"Hi, @. I appreciated our chat in my garden earlier.$1\""
+	 },
+},
+
+{       //CLAUS EVENT          
+	 "Action": "EditData",
+	 "Target": "data/events/custom_forestwest",
+	 "Entries": {
+     "1002413/e 1111200/z winter/w sunny/y 2/r .2/t 600 1700": "spring_day_ambient/-500 -500/farmer 115 34 3/pause 100/skippable/viewport 111 33 true/viewport move -1 0 6000 true/move farmer -11 0 2 true/pause 5500/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/emote farmer 8 true/pause 100/playSound junimoMeep1/pause 125/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 150/move farmer 0 0 2/pause 700/message \"CLAUS: I've been watching you walk around the forest. What are you up to?\"/pause 750/move farmer 0 0 0/pause 500/emote farmer 40/pause 750/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 450/playSound junimoMeep1/pause 500/message \"CLAUS: Oh! I see. It's a nice day to do that too!\"/pause 600/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 170/playSound junimoMeep1/pause 325/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 500/message \"CLAUS: Do you like foraging in the forest? The humans who live around here seem to really enjoy what I make!\"/pause 750/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 280/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 500/message \"CLAUS: The animals in the forest enjoy foraging too. Help yourself to as much as you like!\"/pause 650/emote farmer 32/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 470/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 450/playSound junimoMeep1/pause 325/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 600/message \"CLAUS: I'm going to find Angelica. I want to play!\"/pause 800/globalFade/viewport -1000 -1000/pause 1000/playSound junimoMeep1/pause 400/playSound junimoMeep1/end",
+   }
+},
+
+{       //ANGELICA EVENT       
+     "Action": "EditData",
+     "Target": "data/events/custom_forestwest",
+     "Entries": {
+     "1002414/e 1111200/y 2/r .2/z spring/z summer/z fall/t 600 2000": "winter_day_ambient/-500 -500/farmer 114 87 3/skippable/viewport 107 87 true/viewport move -1 0 5000 true/move farmer -12 0 3 true/pause 4500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 325/move farmer 0 0 0/pause 150/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/message \"ANGELICA: I see you! But you can't see me!!!\"/pause 500/move farmer 0 0 3/pause 800/move farmer 0 0 2/pause 1000/move farmer 0 0 1/pause 600/move farmer 0 0 0/pause 500/emote farmer 8/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 450/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 280/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 325/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 650/message \"ANGELICA: We haven't talked in a while. I'm happy to see you! What are you up to!?\"/pause 700/emote farmer 40/pause 400/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 450/playSound junimoMeep1/pause 500/message \"ANGELICA: Ohh! Ohhhh! OH! I see. That's interesting. I wish I could do those things too!\"/pause 600/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 150/pause 200/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/message \"ANGELICA: When it isn't too cold, I like to fly over the valley and spread growing magic on the farms. Is yours the one above that ranch with the cows?\"/pause 600/jump farmer/pause 1100/message \"ANGELICA: I've been there before! I sped your crops up to grow nice and quick!\"/pause 500/emote farmer 32/pause 500/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 500/message \"ANGELICA: I get sooooo bored in winter. Hey... Claus must be up to something important! Bothering him will be fun!\"/pause 700/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/message \"ANGELICA: Bye! Talk to you soon!\"/pause 300/globalFade/viewport -1000 -1000/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 850/playSound junimoMeep1/end",
+   }
+},
+
+{      //CAMILLA CUTSCENE
+	 "Action": "EditData",
+     "Target": "data/events/Custom_ForestWest",
+	 "Entries": {
+     "6904242/w sunny/z winter": "spring_day_ambient/-500 -500/farmer 105 49 3 Wizard -100 -100 2/addTemporaryActor Camilla 16 32 -99 -99 1 true/skippable/pause 1000/viewport 105 49 true/viewport move -2 0 4500 true/move farmer -9 0 3/screenFlash 2/playSound wand/playSound wand/warp Camilla 94 49/playMusic EnchantedWaltz/pause 200/jump farmer/showFrame farmer 94/pause 1100/move farmer 0 0 2/pause 100/move farmer 0 0 3/speak Camilla \"OoOoooOo. You're much cuter than I thought.\"/pause 400/screenFlash 2/playSound wand/warp Camilla 98 49/move Camilla 0 0 3/pause 700/move farmer 0 0 2/pause 100/move farmer 0 0 1/pause 100/emote farmer 16 true/pause 200/speak Camilla \"I see why Magnus and Marlon put their faith in you.$1\"/pause 300/screenFlash 2/playSound wand/warp Camilla 96 47/move Camilla 0 0 2/pause 400/move farmer 0 0 0/pause 250/speak Camilla \"I suppose I'll ponder over whether I will grant you permission to enter Castle Village.$0\"/pause 400/showFrame Camilla 16/pause 300/speak Camilla \"Adieu.$5\"/pause 400/showFrame Camilla 17/pause 150/showFrame Camilla 18/pause 150/showFrame Camilla 19/pause 350/screenFlash 2/playSound wand/playSound wand/warp Camilla -200 -200/pause 700/globalFade/viewport -1000 -1000/pause 500/end dialogue Wizard \"I sensed you had an encounter with the witch of Castle Village.#$b#Camilla is the curious playful type.#$e#Permission to Castle Village you say? That's the highest honor given to an adventurer.\"",
+  }
+},
+*/
+        //CUT CONTENT
+        /*
+{       //SECRET NOTE 25 FIX 1	
+    "Action": "EditData",
+    "Target": "Data/ObjectInformation",
+	"Fields": {
+	"191": { 5: "A fancy necklace given to me by a Junimo. A girl dropped it?" },
+    }
+},
+
+{       //SECRET NOTE 25 FIX 2
+    "Action": "EditData",
+    "Target": "Data/SecretNotes",
+	"Fields": {
+	"25": { 0: "^^ I find necklace! Come to home in forest! I think necklace belong to her!" },
+    }
+},
+
+{       //SECRET NOTE 25 EVENT 1
+	 "Action": "EditData",
+	 "Target": "data/events/Custom_ForestWest",
+	 "Entries": {
+	 "7771773/S 25/c 1": "spring_day_ambient/-500 -500/farmer 58 30 0/addTemporaryActor Apples 16 32 54 21 2/pause 1000/showFrame Apples 16/viewport 58 24 true/viewport move 0 -1 5000 true/move farmer 0 -10 0/pause 600/faceDirection farmer 3 true/pause 900/faceDirection farmer 2 true/pause 200/showFrame Apples 17/pause 800/showFrame Apples 18/faceDirection farmer 1/pause 500/playSound junimoMeep1/pause 300/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 150/emote farmer 16 true/playMusic junimoStarSong/pause 300/showFrame Apples 19/jump Apples/pause 1200/playSound junimoMeep1/pause 200/move Apples 1 0 0/move Apples 0 -1 1/pause 300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 350/playSound junimoMeep1/jump Apples/pause 800/playSound junimoMeep1/pause 250/move Apples 2 0 1 true/pause 1000/playSound junimoMeep1/speak Apples \"Necklace! Girl drop! Apples pick up! [191]\"/pause 700/move Apples 0 -2 1 true/pause 400/faceDirection farmer 0 true/pause 300/move Apples 1 0 2/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 100/jump Apples/pause 700/playSound junimoMeep1/pause 800/animate Apples false true 200 28 29 30 31/pause 1000/stopAnimation Apples/pause 500/playSound junimoMeep1/pause 250/faceDirection Apples 1 true/pause 250/faceDirection Apples 0/pause 500/warp Apples -200 -200/playSound doorClose/pause 500/globalFade/viewport -1000 -1000/pause 1000/message \"The Junimo gave me this beautiful necklace. A girl dropped this here?\"/pause 1000/end",
+	 },
+},
+
+{       //SECRET NOTE 25 EVENT 2
+	 "Action": "EditData",
+	 "Target": "data/events/forest",
+	 "Entries": {
+	 "7771774/e 7771773/i 191": "spring_day_ambient/-500 -500/farmer -100 -100 1 Abigail 16 89 0 Andy 45 105 1 Wizard 10 24 0/pause 800/removeItem 191/skippable/viewport 19 89 true/pause 800/doAction 16 18/shake Abigail 200/pause 1100/doAction 16 18/shake Abigail 230/pause 600/speak Abigail \"Ugh! Where is it?...$2\"/pause 450/warp farmer 0 85/move farmer 14 0 2 true/pause 1300/doAction 16 88/shake Abigail 200/pause 900/doAction 16 88/shake Abigail 150/pause 800/doAction 16 88/shake Abigail 150/pause 1000/doAction 16 88/shake Abigail 150/pause 800/shake Abigail 250/doAction 16 88/pause 2250/move Abigail -2 0 0/pause 500/speak Abigail \"Hi, @...$2#$b#I lost something really important to me. I think it's around here somewhere...$2\"/pause 500/emote farmer 40/pause 400/speak Abigail \"Huh? You found a necklace?$0\"/speed Abigail 3/move Abigail 0 -3 0/pause 1100/jump Abigail/pause 1000/speak Abigail \"Hey! You really found it!$1\"/pause 700/speak Abigail \"Where was it?$0\"/pause 800/faceDirection farmer 3 true/pause 900/faceDirection Abigail 3 true/pause 800/speak Abigail \"Strange. I didn't go that far into the forest.$0\"/pause 500/faceDirection Abigail 0 true/pause 600/faceDirection farmer 2 true/pause 500/speak Abigail \"Anyway, thanks again! Hopefully my mom never finds out!$1#$b#You're a real lifesaver!$0\"/friendship Abigail 250/pause 300/globalFade/viewport -1000 -1000/pause 1000/end dialogue Abigail \"Oh. How did I lose my mom's necklace in the forest?$0#$e#Um. You wouldn't understand.$9\""
+	 },
+},*/
+        /*{	  //LOWER PROFIT MARGINS
+    "Action": "EditData",
+    "Target": "Data/objectinformation",
+	"Fields": {
+	"16": { 1: "40" },
+	"18": { 1: "20" },
+	"20": { 1: "48" },
+	"22": { 1: "32" },
+	"24": { 1: "28" },
+	"176": { 1: "40" },
+	"174": { 1: "75" },
+	"180": { 1: "40" },
+	"182": { 1: "76" },
+	"184": { 1: "100" },
+	"186": { 1: "150" },
+	"188": { 1: "32" },
+	"190": { 1: "140" },
+	"192": { 1: "64" },
+	"248": { 1: "50" },
+	"250": { 1: "88" },
+	"252": { 1: "176" },
+	"254": { 1: "200" },
+	"256": { 1: "50" },
+	"257": { 1: "120" },
+	"258": { 1: "40" },
+	"259": { 1: "70" },
+	"260": { 1: "30" },
+	"264": { 1: "70" },
+	"266": { 1: "210" },
+	"268": { 1: "600" },
+	"270": { 1: "40" },
+	"272": { 1: "50" },
+	"274": { 1: "130" },
+	"276": { 1: "250" },
+	"278": { 1: "64" },
+	"280": { 1: "125" },
+	"281": { 1: "130" },
+	"282": { 1: "60" },
+	"283": { 1: "65" },
+	"284": { 1: "80" },
+	"300": { 1: "120" },
+	"303": { 1: "240" },
+	"304": { 1: "20" },
+	"306": { 1: "150" },
+	"307": { 1: "300" },
+	"344": { 1: "128" },
+	"346": { 1: "160" },
+	"348": { 1: "320" },
+	"372": { 1: "40" },
+	"393": { 1: "64" },
+	"396": { 1: "64" },
+	"397": { 1: "130" },
+	"398": { 1: "65" },
+	"400": { 1: "100" },
+	"402": { 1: "40" },
+	"404": { 1: "30" },
+	"406": { 1: "65" },
+	"408": { 1: "70" },
+	"414": { 1: "120" },
+	"418": { 1: "50" },
+	"420": { 1: "60" },
+	"421": { 1: "64" },
+	"422": { 1: "200" },
+	"423": { 1: "80" },
+	"424": { 1: "160" },
+	"426": { 1: "300" },
+	"428": { 1: "375" },
+	"430": { 1: "500" },
+	"432": { 1: "850" },
+	"436": { 1: "180" },
+	"438": { 1: "275" },
+	"440": { 1: "280" },
+	"442": { 1: "75" },
+	"454": { 1: "440" },
+	"459": { 1: "160" },
+	"832": { 1: "250" },
+	"91": { 1: "125" },
+	"834": { 1: "110" },
+	},
+	"When": { "LowerProfitMargins": true }
+},*/
+        /*{	  //HARDER COMMUNITY CENTER BUNDLES
+    "Action": "EditData",
+    "Target": "Data/Bundles",
+	"Entries": {
+
+	 //Crops
+	 "Pantry/0": "Spring Crops/O 465 20/24 5 0 188 5 0 190 5 0 192 5 0/0",
+     "Pantry/1": "Summer Crops/O 621 1/256 5 0 260 5 0 258 5 0 254 5 0/3",
+     "Pantry/2": "Fall Crops/BO 10 1/270 5 0 272 5 0 276 5 0 280 5 0/2",
+     "Pantry/3": "Quality Crops/BO 15 1/24 10 2 254 10 2 276 10 2 270 10 2/6/3",
+     "Pantry/4": "Animal/BO 16 1/186 5 0 182 5 0 174 5 0 438 5 0 440 5 0 442 5 0 639 5 0 640 5 0 641 5 0 642 5 0 643 5 0/4/5",
+     "Pantry/5": "Artisan/BO 12 1/432 3 0 428 3 0 426 3 0 424 3 0 340 3 0 344 3 0 613 3 0 634 3 0 635 3 0 636 3 0 637 3 0 638 3 0/1/6",
+	 
+	 //Fishing
+     "Fish Tank/6": "River Fish/O 685 30/145 1 0 143 1 0 706 1 0 699 1 0 {{spacechase0.JsonAssets/ObjectId:Minnow}} 1 0/6",
+     "Fish Tank/7": "Lake Fish/O 687 1/136 3 0 142 3 0 700 1 0 698 1 0/0",
+     "Fish Tank/8": "Ocean Fish/O 690 5/131 1 0 130 1 0 150 1 0 701 1 0 {{spacechase0.JsonAssets/ObjectId:Clownfish}} 1 0/5",
+     "Fish Tank/9": "Night Fishing/R 516 1/140 1 0 132 1 0 148 1 0/1",
+     "Fish Tank/10": "Specialty Fish/O 242 5/128 1 0 156 1 0 164 1 0 734 1 0 {{spacechase0.JsonAssets/ObjectId:Butterfish}} 1 0/4",
+     "Fish Tank/11": "Crab Pot/O 710 3/715 1 0 716 1 0 717 1 0 718 3 0 719 5 0 720 1 0 721 1 0 722 1 0 723 5 0 372 5 0/1/5",
+
+	 //Foraging
+     "Crafts Room/13": "Spring Foraging/O 495 30/16 3 0 18 3 0 20 3 0 22 3 0/0",
+     "Crafts Room/14": "Summer Foraging/O 496 30/396 5 0 398 5 0 402 5 0/3",
+     "Crafts Room/15": "Fall Foraging/O 497 30/404 5 0 406 5 0 408 5 0 410 99 0/2",
+     "Crafts Room/16": "Winter Foraging/O 498 30/412 3 0 414 5 0 416 3 0 418 5 0/6",
+     "Crafts Room/17": "Construction/BO 114 1/388 200 0 388 400 0 390 300 0 709 80 0/4",
+     "Crafts Room/19": "Exotic Foraging/O 235 5/88 3 0 90 3 0 78 3 0 420 5 0 422 3 0 724 3 0 725 3 0 726 3 0 257 2 0/1/5",
+
+	 //Mining + Adventuring
+     "Boiler Room/20": "Blacksmith's/BO 13 3/334 3 0 335 5 0 336 10 0/2",
+     "Boiler Room/21": "Geologist's/O 749 10/80 5 0 86 3 0 84 3 0 82 5 0/1",
+     "Boiler Room/22": "Adventurer's/O {{spacechase0.JsonAssets/ObjectId:Hero Elixir}} 5/766 50 0 684 20 0 767 15 0 768 30 0 769 30 0/1",
+
+	 //Money
+     "Vault/23": "7,500g/O 220 5/-1 7500 7500/4",
+     "Vault/24": "15,000g/O 369 50/-1 15000 15000/2",
+     "Vault/25": "35,000g/BO 9 5/-1 35000 35000/3",
+     "Vault/26": "70,000g/BO 21 1/-1 70000 70000/1",
+
+	 //Miscellaneous
+     "Bulletin Board/31": "Chef's/O 221 5/724 3 0 259 5 0 430 3 0 376 5 0 228 1 0 194 1 0 {{spacechase0.JsonAssets/ObjectId:Glazed Butterfish}} 1 0/4",
+     "Bulletin Board/32": "Field Research/BO 20 1/422 3 0 392 1 0 702 1 0 536 5 0/5",
+     "Bulletin Board/33": "Enchanter's/O 337 3/{{spacechase0.JsonAssets/ObjectId:Frog}} 1 0 305 1 0 446 1 0 {{spacechase0.JsonAssets/ObjectId:Aged Blue Moon Wine}} 1 0/1",
+     "Bulletin Board/34": "Dye/BO 25 1/420 5 0 397 5 0 421 5 0 444 1 0 62 1 0 266 1 0/6",
+     "Bulletin Board/35": "Fodder/BO 104 1/262 30 0 178 99 0 613 3 0/3",
+
+	 //Movie Theater Unlock
+     "Abandoned Joja Mart/36": "The Missing//348 1 3 807 1 0 74 1 0 454 10 2 {{spacechase0.JsonAssets/ObjectId:Void Eel}} 1 0 445 1 0/1/5"
+	},
+	"When": { "HarderBundles": true, "HasMod |contains=alja.CPCCCB": false, "HasMod |contains=minervamaga.CP.HarderCCBundles": false, "HasMod |contains=Chaos234.CommunityCenterBundleOverhaul": false, "HasMod |contains=MoreFish": false, "HasMod |contains=Chaos234.CommunityCenterBundleOverhaul": false }
+},*/
+        /*	 
+{  
+	 //Guest 1
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest1.tbin",
+     "ToArea": { "X": 11, "Y": 13,"Width": 1, "Height": 2 },
+	 "When": { "Day": "1" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 2
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest2.tbin",
+     "ToArea": { "X": 9, "Y": 11,"Width": 1, "Height": 2 },
+	 "When": { "Day": "3" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 3
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest3.tbin",
+     "ToArea": { "X": 11, "Y": 13,"Width": 1, "Height": 2 },
+	 "When": { "Day": "18, 25" },
+	 "Patchmode": "Overlay"
+},
+{
+	 //Guest 4
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest4.tbin",
+     "ToArea": { "X": 3, "Y": 12,"Width": 1, "Height": 2 },
+	 "When": { "Day": "14, 22" },
+	 "Patchmode": "Overlay"
+},
+{
+	 //Guest 5
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest5.tbin",
+     "ToArea": { "X": 3, "Y": 12,"Width": 1, "Height": 2 },
+	 "When": { "Day": "8" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 6
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest6.tbin",
+     "ToArea": { "X": 3, "Y": 12,"Width": 1, "Height": 2 },
+	 "When": { "Day": "6, 20" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 7
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest7.tbin",
+     "ToArea": { "X": 9, "Y": 11,"Width": 1, "Height": 2 },
+	 "When": { "Day": "10, 24" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 8
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest8.tbin",
+     "ToArea": { "X": 9, "Y": 11,"Width": 1, "Height": 2 },
+	 "When": { "Day": "7, 19" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 9
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest9.tbin",
+     "ToArea": { "X": 9, "Y": 11,"Width": 1, "Height": 2 },
+	 "When": { "Day": "12" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 10
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest10.tbin",
+     "ToArea": { "X": 3, "Y": 12,"Width": 1, "Height": 2 },
+	 "When": { "Day": "15" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Guest 11
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuest11.tbin",
+     "ToArea": { "X": 3, "Y": 12,"Width": 1, "Height": 2 },
+	 "When": { "Day": "28" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Isaac visit 1
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestIsaac1.tbin",
+     "ToArea": { "X": 10, "Y": 13,"Width": 1, "Height": 2 },
+	 "When": { "Day": "26, 27", "HasSeenEvent |contains=908079": true },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Isaac visit 2
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestIsaac2.tbin",
+     "ToArea": { "X": 11, "Y": 15,"Width": 1, "Height": 2 },
+	 "When": { "Day": "4, 5, 11", "HasSeenEvent |contains=908079": true },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Alesia visit 1
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestAlesia2.tbin",
+     "ToArea": { "X": 7, "Y": 11,"Width": 1, "Height": 2 },
+	 "When": { "Day": "1, 2, 16, 17, 23, 27, 28", "HasSeenEvent |contains=908079": true },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Lance visit 1
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestLance.tbin",
+     "ToArea": { "X": 7, "Y": 11,"Width": 1, "Height": 3 },
+	 "When": { "HasSeenEvent": "6951319", "Day": "21" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Lance visit 2
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestLance1.tbin",
+     "ToArea": { "X": 7, "Y": 11,"Width": 1, "Height": 3 },
+	 "When": { "HasSeenEvent": "6951319", "Day": "13" },
+	 "Patchmode": "Overlay"
+},
+{  
+	 //Lance visit 3
+     "Action": "EditMap",
+     "Target": "Maps/AdventureGuild",
+     "FromFile": "Assets/Maps/MapPatches/AdventureGuildGuestLance2.tbin",
+     "ToArea": { "X": 7, "Y": 11,"Width": 1, "Height": 3 },
+	 "When": { "HasSeenEvent": "6951319", "Day": "9" },
+	 "Patchmode": "Overlay"
+},
+*/

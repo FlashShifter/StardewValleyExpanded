@@ -1,0 +1,1450 @@
+{
+	"Changes": [
+		//NPC MAP LOCATIONS TRACKING
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"Entries": {
+				"Claire": {
+					"MarkerCropOffset": 4
+				},
+				"Martin": {
+					"MarkerCropOffset": 1
+				},
+				"Morgan": {
+					"MarkerCropOffset": 7
+				},
+				"Sophia": {
+					"MarkerCropOffset": 4
+				},
+				"Scarlett": {
+					"MarkerCropOffset": 5
+				},
+				"Apples": {
+					"MarkerCropOffset": 17
+				},
+				"GuntherSilvian": {
+					"MarkerCropOffset": 4
+				},
+				"ScarlettFake": {
+					"MarkerCropOffset": 5
+				},
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"MorrisTod": {
+					"Exclude": true
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"Entries": {
+				"Camilla": {
+					"Exclude": true
+				},
+				"Alesia": {
+					"Exclude": true
+				},
+				"Isaac": {
+					"Exclude": true
+				},
+				"Jadu": {
+					"Exclude": true
+				},
+				"Brianna": {
+					"Exclude": true
+				},
+				"Brock": {
+					"Exclude": true
+				},
+				"Cassandra": {
+					"Exclude": true
+				},
+				"Cordelia": {
+					"Exclude": true
+				},
+				"Drake": {
+					"Exclude": true
+				},
+				"Edmund": {
+					"Exclude": true
+				},
+				"Jolyne": {
+					"Exclude": true
+				},
+				"Emin": {
+					"Exclude": true
+				},
+				"Freya": {
+					"Exclude": true
+				},
+				"Gertrude": {
+					"Exclude": true
+				},
+				"Sawyer": {
+					"Exclude": true
+				},
+				"Gale": {
+					"Exclude": true
+				},
+				"HankSVE": {
+					"Exclude": true
+				},
+				"Treyvon": {
+					"Exclude": true
+				},
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"When": {
+				"HasSeenEvent |contains=3691371": true
+			},
+			"Entries": {
+				"ScarlettFake": {
+					"Exclude": true
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"When": {
+				"HasSeenEvent": "7776012"
+			},
+			"Entries": {
+				"Peaches": {
+					"Exclude": true
+				},
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+			"When": {
+				"HasSeenEvent|contains=7776012": true,
+				"Roommate|contains=Apples": false
+			},
+			"Entries": {
+				"Apples": {
+					"Exclude": true
+				},
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"Entries": {
+				"SandyHouse": {
+					"Exclude": true
+				},
+				"Custom_Claire_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Martin_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Scarlett_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Apples_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Peaches_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Charlie_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Isaac_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Camilla_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Jadu_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Lance_WarpRoom": {
+					"Exclude": true
+				},
+				//"Custom_Morgan_WarpRoom": { "Exclude": true }, <- this causes problems. I have no idea why. I sorta gave up. Don't re-enable this. Thanks.
+				"Custom_CastleVillage_DayEnd_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Sawyer_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Brianna_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Drake_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Jolyne_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Edmund_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Gale_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Gertrude_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Brock_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Cordelia_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Freya_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Cassandra_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Emin_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_HighlandsDwarf_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_Krobus_WarpRoom": {
+					"Exclude": true
+				},
+				"Custom_GrampletonSuburbs": {
+					"Exclude": true
+				},
+				"Custom_GrampletonSuburbsTrainStation": {
+					"Exclude": true
+				},
+				"Custom_ScarlettHouse": {
+					"Exclude": true
+				},
+				"Custom_Highlands": {
+					"Exclude": true
+				},
+				"Custom_HighlandsOutpost": {
+					"Exclude": true
+				},
+				"Custom_CastleVillageOutpost": {
+					"Exclude": true
+				},
+				//Fake tracking (prevents SMAPI console text reporting unknown locations)
+				"Custom_CrimsonBadlands": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_CrimsonBadlandsMap": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_SpriteSpring2": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_SpriteSpringCave": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_JunimoWoods": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_DesertRailway": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_TreasureCave": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_IridiumQuarry": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_Countryside_BusStop_Bus": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_Countryside_BusStop_NoBus": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_Countryside_ClaireHouse": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_ClaireHouse": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_GrampletonFields_Small": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_BusStop_NoBus": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_GrandpasGrove": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_FakeEnchantedGrove": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Caldera": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"SophiasRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"OliviasRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"VictorsRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"ClairesRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"WizardsRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"ApplesRoommate": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"LancesRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_HighlandsCavern": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_HighlandsCavernPrison": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_HighlandsCavernPrisonEvent": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_AuroraVineyardCellarRefurbished": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_AuroraVineyardRefurbished": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_ForestWestOld": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_MorrisProperty": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_FableReef": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_FirstSlashGuild": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_FirstSlashHallway": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_FirstSlashGuestRoom": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_LanceSecretWarp": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_VoidDen": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				"Custom_HanksGarage": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+				//Map tracking Blue Moon Vineyard
+				"Custom_BlueMoonVineyard": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 560,
+							"MapY": 444
+						},
+						{
+							"TileX": 57,
+							"TileY": 80,
+							"MapX": 671,
+							"MapY": 635
+						}
+					],
+					"MapTooltip": {
+						"X": 560,
+						"Y": 492,
+						"Width": 112,
+						"Height": 100,
+						"PrimaryText": "{{i18n:NPCMapLocation.BlueMoonVineyard}}"
+					}
+				},
+				//Map tracking Forest West
+				"Custom_ForestWest": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 85,
+							"MapY": 625
+						},
+						{
+							"TileX": 156,
+							"TileY": 156,
+							"MapX": 85,
+							"MapY": 625
+						}
+					],
+					"MapTooltip": {
+						"X": 0,
+						"Y": 520,
+						"Width": 280,
+						"Height": 200,
+						"PrimaryText": "{{i18n:NPCMapLocation.CindersapForest}}"
+					}
+				},
+				//Map tracking Town East
+				"Custom_TownEast": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 985,
+							"MapY": 438
+						},
+						{
+							"TileX": 40,
+							"TileY": 30,
+							"MapX": 985,
+							"MapY": 438
+						}
+					],
+					"MapTooltip": {
+						"X": 948,
+						"Y": 406,
+						"Width": 76,
+						"Height": 66,
+						"PrimaryText": "{{i18n:NPCMapLocation.OldCommunityGarden}}"
+					}
+				},
+				//Map tracking Desert
+				"Desert": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 170,
+							"TileY": 90,
+							"MapX": 306,
+							"MapY": 157
+						}
+					],
+					"MapTooltip": {
+						"X": 0,
+						"Y": 0,
+						"Width": 307,
+						"Height": 158,
+						"PrimaryText": "{{i18n:NPCMapLocation.CalicoDesert}}"
+					}
+				},
+				//Map tracking Shearwater Bridge
+				"Custom_ShearwaterBridge": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 1086,
+							"MapY": 390
+						},
+						{
+							"TileX": 60,
+							"TileY": 40,
+							"MapX": 1086,
+							"MapY": 390
+						}
+					],
+					"MapTooltip": {
+						"X": 1035,
+						"Y": 359,
+						"Width": 104,
+						"Height": 66,
+						"PrimaryText": "{{i18n:NPCMapLocation.ShearwaterBridge}}"
+					}
+				},
+				//Map tracking at Beach
+				"Beach": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 732,
+							"MapY": 556
+						},
+						{
+							"TileX": 104,
+							"TileY": 50,
+							"MapX": 971,
+							"MapY": 659
+						}
+					],
+					"MapTooltip": {
+						"X": 732,
+						"Y": 556,
+						"Width": 240,
+						"Height": 104,
+						"PrimaryText": "{{i18n:NPCMapLocation.Beach}}"
+					}
+				},
+				//Map tracking at Adventurer Guild
+				"Custom_AdventurerSummit": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 934,
+							"MapY": 86
+						},
+						{
+							"TileX": 65,
+							"TileY": 43,
+							"MapX": 934,
+							"MapY": 86
+						}
+					],
+					"MapTooltip": {
+						"X": 908,
+						"Y": 60,
+						"Width": 56,
+						"Height": 46,
+						"PrimaryText": "{{i18n:NPCMapLocation.AdventurerGuild}}"
+					}
+				},
+				//Static Location - Susan's farmland
+				"Railroad1": {
+					"MapTooltip": {
+						"X": 692,
+						"Y": 32,
+						"Width": 96,
+						"Height": 52,
+						"PrimaryText": "{{i18n:NPCMapLocation.EmeraldFarm}}"
+					}
+				},
+				//Static Location - Susan's House
+				"Railroad2": {
+					"MapTooltip": {
+						"X": 692,
+						"Y": 32,
+						"Width": 32,
+						"Height": 20,
+						"PrimaryText": "{{i18n:NPCMapLocation.SusanHouse}}"
+					}
+				},
+				//Static Location - Elliott House
+				"Beach1": {
+					"MapTooltip": {
+						"X": 836,
+						"Y": 552,
+						"Width": 32,
+						"Height": 36,
+						"PrimaryText": "{{i18n:NPCMapLocation.ElliottHouse}}"
+					}
+				},
+				//Static Location - Willy House
+				"Beach2": {
+					"MapTooltip": {
+						"X": 792,
+						"Y": 616,
+						"Width": 32,
+						"Height": 36,
+						"PrimaryText": "{{i18n:NPCMapLocation.WillyHouse}}"
+					}
+				},
+				//Static Location - Sophia's House	
+				"Custom_SophiaHouse": {
+					"MapTooltip": {
+						"X": 598,
+						"Y": 488,
+						"Width": 39,
+						"Height": 36,
+						"PrimaryText": "{{i18n:NPCMapLocation.SophiaHouse}}"
+					}
+				},
+				//Static Location - Community Garden
+				"PelicanTown1": {
+					"MapTooltip": {
+						"X": 876,
+						"Y": 468,
+						"Width": 60,
+						"Height": 32,
+						"PrimaryText": "{{i18n:NPCMapLocation.CommunityGarden}}"
+					}
+				},
+				//Static Location - Town Sewer
+				"PelicanTown2": {
+					"MapTooltip": {
+						"X": 693,
+						"Y": 457,
+						"Width": 20,
+						"Height": 24,
+						"PrimaryText": "{{i18n:NPCMapLocation.Sewer}}"
+					}
+				},
+				//Static Location - Park
+				"PelicanTown3": {
+					"MapTooltip": {
+						"X": 869,
+						"Y": 341,
+						"Width": 60,
+						"Height": 48,
+						"PrimaryText": "{{i18n:NPCMapLocation.Park}}"
+					}
+				},
+				//Static Location - Memorial
+				"PelicanTown4": {
+					"MapTooltip": {
+						"X": 892,
+						"Y": 220,
+						"Width": 48,
+						"Height": 48,
+						"PrimaryText": "{{i18n:NPCMapLocation.Memorial}}"
+					}
+				},
+				//Static Location - Olivia House	
+				"PelicanTown5": {
+					"MapTooltip": {
+						"X": 752,
+						"Y": 288,
+						"Width": 48,
+						"Height": 32,
+						"PrimaryText": "{{i18n:NPCMapLocation.JenkinsResidence}}"
+					}
+				},
+				//Static Location - Dusty	
+				"PelicanTown6": {
+					"MapTooltip": {
+						"X": 748,
+						"Y": 360,
+						"Width": 20,
+						"Height": 24,
+						"PrimaryText": "{{i18n:NPCMapLocation.Dusty}}"
+					}
+				},
+				//Static Location - Andy's House
+				"Custom_AndyHouse": {
+					"MapTooltip": {
+						"X": 377,
+						"Y": 544,
+						"Width": 39,
+						"Height": 32,
+						"PrimaryText": "{{i18n:NPCMapLocation.AndysHouse}}"
+					}
+				},
+				//Static Location - Andy's Farmland
+				"Forest2": {
+					"MapTooltip": {
+						"X": 416,
+						"Y": 540,
+						"Width": 48,
+						"Height": 48,
+						"PrimaryText": "{{i18n:NPCMapLocation.FairhavenFarm}}"
+					}
+				},
+				//Static Location - Marnie's farmland
+				"Forest": {
+					"MapTooltip": {
+						"X": 376,
+						"Y": 436,
+						"Width": 48,
+						"Height": 36,
+						"PrimaryText": "{{i18n:NPCMapLocation.MarnieFarm}}"
+					}
+				},
+			},
+		},
+		//Start NPC Map Location data with conditions
+		{ //Enchanted Grove
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasSeenEvent": "908072"
+			},
+			"Update": "OnLocationChange",
+			"Entries": {
+				"Custom_EnchantedGrove": {
+					"MapTooltip": {
+						"X": 414,
+						"Y": 48,
+						"Width": 60,
+						"Height": 60,
+						"PrimaryText": "{{i18n:NPCMapLocation.EnchantedGrove}}"
+					}
+				},
+			},
+		},
+		{ //Joja Patches
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasSeenEvent": "6665297"
+			},
+			"Entries": {
+				//Static Location - Park
+				"PelicanTown3": {
+					"MapTooltip": {
+						"X": 869,
+						"Y": 341,
+						"Width": 60,
+						"Height": 48,
+						"PrimaryText": "{{i18n:NPCMapLocation.ParkingLot}}"
+					}
+				},
+				//Static Location - Memorial
+				"PelicanTown4": {
+					"MapTooltip": {
+						"X": 892,
+						"Y": 220,
+						"Width": 48,
+						"Height": 48,
+						"PrimaryText": "{{i18n:NPCMapLocation.JojaEmporium}}"
+					}
+				},
+			},
+		},
+		{ //Grandpa Shed outside tracking
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod |contains=flashshifter.GrandpasFarm": false,
+				"HasMod |contains=flashshifter.immersivefarm2remastered": false,
+				"FarmType |contains=Standard": false
+			},
+			"Entries": {
+				"Custom_GrandpasShedOutside": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 516,
+							"MapY": 288
+						},
+						{
+							"TileX": 40,
+							"TileY": 30,
+							"MapX": 595,
+							"MapY": 343
+						}
+					],
+					"MapTooltip": {
+						"X": 516,
+						"Y": 288,
+						"Width": 80,
+						"Height": 56,
+						"PrimaryText": "{{i18n:NPCMapLocation.GrandpaShed}}"
+					}
+				},
+			},
+		},
+		{ //Grandpa's Farm and Immersive Farm 2 Remastered
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod": "flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered",
+				"FarmType": "Standard"
+			},
+			"Entries": {
+				//"Farm": { "Exclude": true },
+				//"FarmHouse": { "Exclude": true },
+				"Farm1": {
+					"MapTooltip": {
+						"X": 274,
+						"Y": 218,
+						"Width": 282,
+						"Height": 172,
+						"PrimaryText": "{{i18n:NPCMapLocation.Farm}}"
+					}
+				},
+				//Static Location - Bus Stop Override
+				"BusStop1": {
+					"MapTooltip": {
+						"X": 512,
+						"Y": 200,
+						"Width": 84,
+						"Height": 72,
+						"PrimaryText": "{{i18n:NPCMapLocation.BusStop}}"
+					}
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod": "flashshifter.immersivefarm2remastered",
+				"FarmType": "Standard"
+			},
+			"Entries": {
+				"GrandpaShedLocation": {
+					"MapTooltip": {
+						"X": 548,
+						"Y": 276,
+						"Width": 48,
+						"Height": 32,
+						"PrimaryText": "{{i18n:NPCMapLocation.GrandpaShed}}"
+					}
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod": "flashshifter.GrandpasFarm",
+				"FarmType": "Standard"
+			},
+			"Entries": {
+				"GrandpaShedLocation": {
+					"MapTooltip": {
+						"X": 274,
+						"Y": 218,
+						"Width": 69,
+						"Height": 42,
+						"PrimaryText": "{{i18n:NPCMapLocation.GrandpaShed}}"
+					}
+				},
+			},
+		},
+		{ //New town east map
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			//"When": { "HasSeenEvent |contains=1000024": false },
+			"Entries": {
+				//Map tracking Garden
+				"Custom_Garden": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 985,
+							"MapY": 438
+						},
+						{
+							"TileX": 40,
+							"TileY": 30,
+							"MapX": 985,
+							"MapY": 438
+						}
+					],
+					"MapTooltip": {
+						"X": 948,
+						"Y": 406,
+						"Width": 76,
+						"Height": 66,
+						"PrimaryText": "{{i18n:NPCMapLocation.OldCommunityGarden}}"
+					}
+				},
+			},
+		},
+		{ //Fake tracking grampleton fields
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod": "flashshifter.GrampletonFields"
+			},
+			"Entries": {
+				"Custom_GrampletonFields": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+			},
+		},
+		{ //Fake grandpa shed outside tracking
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasMod": "flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered",
+				"FarmType": "Standard"
+			},
+			"Entries": {
+				"Custom_GrandpasShedOutside": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						},
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 0,
+							"MapY": 0
+						}
+					],
+				},
+			},
+		},
+		{ //Morris Property tracking
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasSeenEvent |contains=6663408": true
+			},
+			"Update": "OnLocationChange",
+			"Entries": {
+				"Custom_MorrisProperty": {
+					"MapVectors": [
+						{
+							"TileX": 0,
+							"TileY": 0,
+							"MapX": 987,
+							"MapY": 305
+						},
+						{
+							"TileX": 55,
+							"TileY": 40,
+							"MapX": 987,
+							"MapY": 305
+						}
+					],
+					"MapTooltip": {
+						"X": 956,
+						"Y": 252,
+						"Width": 64,
+						"Height": 60,
+						"PrimaryText": "{{i18n:NPCMapLocation.Townhouse}}"
+					}
+				},
+			},
+		},
+		{ //Morris Townhouse
+			"Action": "EditData",
+			"Target": "Mods/Bouhm.NPCMapLocations/Locations",
+			"When": {
+				"HasSeenEvent |contains=6663408": true
+			},
+			"Update": "OnLocationChange",
+			"Entries": {
+				"Custom_MorrisHouse": {
+					"MapTooltip": {
+						"X": 984,
+						"Y": 256,
+						"Width": 24,
+						"Height": 36,
+						"PrimaryText": "{{i18n:NPCMapLocation.Townhouse}}"
+					}
+				},
+			},
+		},
+	]
+}

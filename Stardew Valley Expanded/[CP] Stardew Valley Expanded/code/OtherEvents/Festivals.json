@@ -1,0 +1,2937 @@
+{
+  "Changes": [
+    { //Gives an advance move to Andy during set-up phase, adds Sophia to the egg hunt, fixes pathing for several NPCs
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Year": "{{Range: 2, 999}}"
+      },
+      "Entries": {
+        "set-up": "fallFest/27 60/farmer 12 54 1/changeToTemporaryMap Town-EggFestival/loadActors Set-Up/advancedMove Andy true 1 9000 -6 0 0 -8 4 7000 0 8 6 0 1 8000/advancedMove Vincent true -2 0 0 -2 2 0 0 2/advancedMove Jas true 2 0 0 2 -2 0 0 -2/advancedMove Leo true 0 -2 2 0 0 2 -2 0/advancedMove Pam true 0 -1 3 5000 0 2 3 5000 0 -1 3 4000/advancedMove Clint true 1 7000 0 1 3 7000 0 -1/advancedMove Demetrius true 2 15000 -3 0 0 8 3 20000 0 -8 3 0/advancedMove Willy true 2 25000 -4 0 0 -12 4 0 0 -1 4 30000 0 1 -4 0 0 12 4 0/advancedMove Shane true 4 40000 2 0 0 2 1 35000 0 -2 -2 0/advancedMove Harvey true 0 6 -6 0 0 9 -3 0 3 15000 3 0 0 3 20 0 0 -19 -14 0 0 1 2 30000/playerControl eggFestival",
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/jump Abigail/faceDirection Vincent 3/pause 800/move Abigail 0 -1 0/faceDirection Vincent 0/speak Lewis \"{{i18n:EggFestival.05}}\"/pause 500/move Abigail 0 -1 0/playSound coin/pause 400/move Abigail 0 2 0/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "mainEvent": "pause 400/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/pause 100/jump Vincent/pause 250/pause 1200/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -4 15 0 0 1 3 0 0 1 5 0 0 2 12 0 0 11/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -2 26 0 0 5 25 0/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -21 -5 0 0 7 -18 0/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 18 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 22 15 0 0 -21 -25 0 4 7000/advancedMove Leo false -1 0 0 7 -5 0 0 3 13 0 0 2 20 0 0 -9 -3 0 0 -19 19 0 0 -1/playSound whistle/playMusic tickTock/playerControl eggHunt",
+      }
+    },
+    { //Victor egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 24 76 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 22 67 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Olivia egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 31 62 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 22 68 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Andy egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 32 70 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 19 64 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sophia egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 29 62 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 25 67 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Marlon egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 41 57 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 41 57 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "HasMod |contains=CPBoardingHouse": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 44 60 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 30 66 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris egg festival data - boarding house
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "HasMod": "CPBoardingHouse"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 47 58 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 30 66 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "1000077"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 31 68 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 19 66 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 34 57 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 25 73 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 29 54 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 36 65 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3691371"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 30 63 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 22 66 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 32 55 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 32 74 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy egg festival data
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Main_Town-EggFestival.tbin",
+      "ToArea": {
+        "X": 72,
+        "Y": 54,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Setup_Town-EggFestival.tbin",
+      "ToArea": {
+        "X": 27,
+        "Y": 62,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Jas and Vincent win - only year 1
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Year": "1"
+      },
+      "Entries": {
+        "set-up": "fallFest/27 60/farmer 12 54 1/changeToTemporaryMap Town-EggFestival/loadActors Set-Up/advancedMove Andy true 1 9000 -6 0 0 -8 4 7000 0 8 6 0 1 8000/advancedMove Vincent true -2 0 0 -2 2 0 0 2/advancedMove Jas true 2 0 0 2 -2 0 0 -2/advancedMove Pam true 0 -1 3 5000 0 2 3 5000 0 -1 3 4000/advancedMove Clint true 1 7000 0 1 3 7000 0 -1/advancedMove Demetrius true 2 15000 -3 0 0 8 3 20000 0 -8 3 0/advancedMove Willy true 2 25000 -4 0 0 -12 4 0 0 -1 4 30000 0 1 -4 0 0 12 4 0/advancedMove Shane true 4 40000 2 0 0 2 1 35000 0 -2 -2 0/advancedMove Harvey true 0 6 -6 0 0 9 -3 0 3 15000 3 0 0 3 20 0 0 -19 -14 0 0 1 2 30000/playerControl eggFestival",
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/jump Jas/pause 200/jump Vincent/pause 800/emote Penny 32 true/pause 200/move Lewis 1 0 2/move Lewis 0 1 2/pause 100/speak Lewis \"{{i18n:EggFestival.Alt.05}}\"/move Jas 0 -1 0 true/pause 150/move Vincent 0 -1 0 true/pause 800/playSound coin/pause 700/faceDirection Jas 1 true/pause 600/faceDirection Vincent 3 true/pause 400/jump Vincent/pause 500/faceDirection Lewis 1 true/pause 200/faceDirection Lewis 0/pause 300/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/pause 100/jump Vincent/pause 1200/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -4 15 0 0 1 3 0 0 1 5 0 0 2 12 0 0 11/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -2 26 0 0 5 25 0/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -21 -5 0 0 7 -18 0/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 18 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 22 15 0 0 -21 -25 0 4 7000/playSound whistle/playMusic tickTock/playerControl eggHunt",
+      }
+    },
+    { //Edits Lewis' CS string to Jas and Vincent
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "When": {
+        "Year": "1"
+      },
+      "Entries": {
+        "Event.cs.1862": "{{i18n:EggFestival.Winner.Kids}}"
+      }
+    },
+    { //Sophia wins the egg hunt if players have seen Sophia's introduction event - only year 1
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "8185290",
+        "Year": "1"
+      },
+      "Entries": {
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/showFrame Sophia 39/jump Sophia/faceDirection Vincent 3/pause 800/speak Sophia \"!!!$9\"/pause 200/faceDirection Vincent 0/pause 200/speak Lewis \"{{i18n:EggFestival.AltA.05}}\"/pause 200/showFrame Sophia 0/pause 200/faceDirection Sophia 1 true/move Sophia 3 0 0/pause 500/playSound coin/pause 600/move Sophia -3 0 3/pause 120/faceDirection Sophia 2 true/pause 150/faceDirection Sophia 1 true/pause 400/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/pause 100/jump Vincent/pause 250/pause 1200/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -4 15 0 0 1 3 0 0 1 5 0 0 2 12 0 0 11/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -2 26 0 0 5 25 0/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -7 0 0 6 -14 0/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 22 15 0 0 -21 -25 0 4 7000/playSound whistle/playMusic tickTock/playerControl eggHunt",
+      }
+    },
+    { //Edits Lewis' CS string to Sophia
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "When": {
+        "HasSeenEvent": "8185290",
+        "Year": "1"
+      },
+      "Entries": {
+        "Event.cs.1862": "{{i18n:EggFestival.Winner.Sophia}}"
+      }
+    },
+    { //Adds an advance move for Sophia, fixes Willy clipping into flower decorations. Adds additional fields (pause 1)
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "Entries": {
+        "set-up": "event1/22 22/farmer 76 17 1/changeToTemporaryMap Forest-FlowerFestival/loadActors Set-Up/advancedMove Sophia true 4 8000 -2 0 4 5000 2 0/advancedMove Vincent true -6 0 0 -1 6 0 0 1/advancedMove Jas true 1 0 0 1 -6 0 0 -1 5 0/advancedMove Pam true 2 25000 0 -3 2 0 4 25000 -2 0 0 3/advancedMove Haley true 0 1 2 3000 2 0 0 -1 -2 0 3 500 4 500 1 500 2 500 2 0 1 500 2 500 3 500 4 500 0 2 0 -2 -2 0/advancedMove Caroline true 7 0 0 1 1 18000 0 -1 -7 0 3 18000/advancedMove Willy true 2 7000 4 0 2 8000 -4 0/playerControl flowerFestival",
+        "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 14 31/warp farmer2 11 21/warp farmer3 23 21/warp farmer4 12 21/faceDirection farmer1 0/faceDirection farmer3 2/faceDirection farmer4 2/faceDirection farmer 0/warp Girl1 13 24/warp Girl2 15 24/warp Girl3 11 24/warp Girl4 9 24/warp Girl5 17 24/warp Girl6 19 24/warp Guy1 13 27/warp Guy2 15 27/warp Guy3 11 27/warp Guy4 9 27/warp Guy5 17 27/warp Guy6 19 27/showFrame Girl1 40/showFrame Girl3 40/showFrame Girl5 40/showFrame Girl4 40/showFrame Girl2 40/showFrame Girl6 40/showFrame Guy6 44/showFrame Guy5 44/showFrame Guy4 44/showFrame Guy3 44/showFrame Guy2 44/showFrame Guy1 44/viewport 14 25 clamp true/pause 2000/playMusic FlowerDance/pause 600/animate Girl1 false true 600 43 41 43 42/animate Girl6 false true 600 43 41 43 42/animate Girl3 false true 600 43 41 43 42/animate Girl5 false true 600 43 41 43 42/animate Girl4 false true 600 43 41 43 42/animate Girl2 false true 600 43 41 43 42/animate Guy5 false true 600 44 45/animate Guy6 false true 600 44 45/animate Guy3 false true 600 44 45/animate Guy2 false true 600 44 45/animate Guy4 false true 600 44 45/animate Guy1 false true 600 44 45/pause 9600/animate Girl1 false true 600 46 47/animate Girl6 false true 600 46 47/animate Girl3 false true 600 46 47/animate Girl5 false true 600 46 47/animate Girl4 false true 600 46 47/animate Girl2 false true 600 46 47/animate Guy5 false true 300 46 47/animate Guy6 false true 300 46 47/animate Guy3 false true 300 46 47/animate Guy2 false true 300 46 47/animate Guy4 false true 300 46 47/animate Guy1 false true 300 46 47/positionOffset Guy1 0 -2/positionOffset Guy6 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/animate Girl1 false true 600 43 41 43 42/animate Girl6 false true 600 43 41 43 42/animate Girl3 false true 600 43 41 43 42/animate Girl5 false true 600 43 41 43 42/animate Girl4 false true 600 43 41 43 42/animate Girl2 false true 600 43 41 43 42/animate Guy5 false true 600 44 45/animate Guy6 false true 600 44 45/animate Guy3 false true 600 44 45/animate Guy2 false true 600 44 45/animate Guy4 false true 600 44 45/animate Guy1 false true 600 44 45/pause 7600/stopAnimation Girl3/stopAnimation Girl6/stopAnimation Girl5/stopAnimation Girl2/stopAnimation Girl1/stopAnimation Girl4/stopAnimation Guy3/stopAnimation Guy2/stopAnimation Guy6/stopAnimation Guy1/stopAnimation Guy5/stopAnimation Guy4/pause 3000/globalFade/viewport -1000 -1000/message \"{{i18n:FlowerDance.String1}}\"/waitForOtherPlayers festivalEnd/end",
+      }
+    },
+    { //Victor's flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 10 36 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 23 22 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Olivia's flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 15 34 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 23 23 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Andy's flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 5 26 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 5 26 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sophia's flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 9 38 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 21 20 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Marlon's flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 22 21 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 22 41 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 4 25 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 4 25 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "1000077"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 8 21 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 5 27 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 18 20 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 5 29 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Martin flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 18 22 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Martin 6 30 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 5 23 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 5 22 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 77 11 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 32 25 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "5978924",
+        "Spouse |contains=Wizard": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 16 11 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Morgan 16 11 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "HasSeenEvent": "5978924",
+        "Spouse |contains=Wizard": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 25 27 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Morgan 25 27 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance flower festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 21 21 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 17 11 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy - flower festival
+      "Action": "EditMap",
+      "Target": "Maps/Forest-FlowerFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Main_Forest-FlowerFestival.tbin",
+      "ToArea": {
+        "X": 8,
+        "Y": 21,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Forest-FlowerFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Setup_Forest-FlowerFestival.tbin",
+      "ToArea": {
+        "X": 24,
+        "Y": 35,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Luau data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "Entries": {
+        "set-up": "event2/-1000 -1000/farmer 38 3 2/changeToTemporaryMap Beach-Luau/loadActors Set-Up/addTemporaryActor Governor 16 32 32 4 2/advancedMove Vincent true 3 0 3 3000 -3 0 3 3000/advancedMove Jas true 3 0 1 3000 -3 0 1 3000/advancedMove Pam true 4 25000 -5 0 4 20000 5 0/advancedMove Gus True 0 -1 3 4000 0 1 3 4000/advancedMove Shane true 1 10000 0 1 1 10000 0 -1/advancedMove Clint true 4 15000 -3 0 4 15000 6 0 4 10000 -3 0/animate Emily false true 250 16 17 16 17 20 21 20 21 18 19 18 19 22 23 22 23/animate Robin false true 500 20 21 20 22/animate Demetrius false true 500 24 25 24 26/animate Marnie false true 200 17 18 17 19/positionOffset Marnie 0 16/animate Claire false true 200 20 20 20 20 20 20 20 20 20 20 21 21 21 21 21 21 22 22 22 22 22 22 22 22 22 22 22 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 22 22 22 22 21 21 21 21 21 21 21 21 20/viewport 38 2 clamp true/pause 1000/playerControl luau",
+        "mainEvent": "pause 500/playMusic ocean/globalFade/viewport -1000 -1000/loadActors MainEvent/addTemporaryActor Governor 16 32 35 10 2/warp farmer1 33 19/warp farmer2 32 19/warp farmer3 40 19/warp farmer4 28 9/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 1/viewport 35 12 true/pause 2000/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 100/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/speak Lewis \"{{i18n:Luau.01}}\"/pause 1000/faceDirection Lewis 3/pause 500/speak Lewis \"{{i18n:Luau.02}}\"/pause 500/speak Governor \"{{i18n:Luau.03}}\"/playMusic none/pause 500/move Governor 0 1 2/pause 1000/playSound dwop/showFrame Governor 8 true/pause 1000/animate Governor false false 200 8 8 9 10 11 11/pause 1100/playSound sipTea/pause 1000/playSound gulp/pause 500/showFrame Governor 8 true/animate Governor false false 200 11 10 9 8/pause 900/speak Governor \"...$h\"/pause 300/cutscene governorTaste/null",
+        "Robin": "{{i18n:Luau.Robin}}",
+        "Demetrius": "{{i18n:Luau.Demetrius}}",
+      }
+    },
+    { //Victor luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 49 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 46 12 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Olivia luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 41 13 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 46 11 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Andy luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 32 10 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 40 6 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 33 16 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 39 6 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sophia luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 50 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 27 10 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Marlon luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 54 7 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 54 7 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 31 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 34 10 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 23 12 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 40 10 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 49 17 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 30 11 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3691371"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 48 22 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 27 11 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 14 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 14 4 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 12 39 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Morgan 12 39 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 47 25 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 34 19 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy - luau
+      "Action": "EditMap",
+      "Target": "Maps/Beach-Luau",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Main_Beach-Luau.tbin",
+      "ToArea": {
+        "X": 30,
+        "Y": 12,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Beach-Luau",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Setup_Beach-Luau.tbin",
+      "ToArea": {
+        "X": 11,
+        "Y": 9,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //moonlight jellies festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "Entries": {
+        "set-up": "ocean/-1000 -1000/farmer 38 3 2/changeToTemporaryMap Beach-Jellies/loadActors Set-Up/advancedMove Vincent true 0 12 3 3000 2 0 1 3000 0 -12 -2 0 3 3000/advancedMove Jas true 0 2 3 5000 0 -2 3 5000/advancedMove Harvey True 0 -12 -10 0 0 6 2 25000 0 -6 10 0 0 12 2 25000/positionOffset Olivia 17 0/positionOffset Victor 17 0/viewport 38 2 clamp true/pause 1000/playerControl jellies"
+      }
+    },
+    { //Victor moonlight jellies festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 41 36 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Olivia moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 40 36 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Andy moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 16 24 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Susan moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 52 24 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sophia moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 50 24 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Morris moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 29 34 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Gunther moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 80 25 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Lance moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 81 6 left",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Apples moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 70 25 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire moonlight jellies data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 24 28 left",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sandy - moonlight Jellies
+      "Action": "EditMap",
+      "Target": "Maps/Beach-Jellies",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Beach-Jellies.tbin",
+      "ToArea": {
+        "X": 39,
+        "Y": 36,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Adds advance moves to Sophia, Andy, Susan, Victor, and Olivia.
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "Entries": {
+        "set-up": "fallFest/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Fair/viewport -1000 -1000/loadActors Set-Up/advancedMove Sophia true 2 12000 3 3000 2 10000 1 2000 2 1000/advancedMove Andy true 2 15000 3 250 4 3500 3 250 2 1000/advancedMove Susan true 2 14000 3 2000 2 1000/advancedMove Victor true 1 12750 2 3500/advancedMove Olivia true 1 13000 4 3750/advancedMove Vincent true -3 0 2 5000 3 0 2 5000/advancedMove Jas true 2 0 4 5000 -2 0 4 5000/advancedMove Marnie true -2 0 4 5000 2 0 2 5000/advancedMove Abigail true 4 6000 5 0 0 3 2 6000 0 -3 -5 0/advancedMove Robin true 0 1 1 5000 0 -2 3 5000 0 1 1 5000/animate Sebastian false true 200 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 20 22 22 23/addTemporaryActor BabyPig 32 32 65 68 2 false Animal/addTemporaryActor Pig 32 32 65 70 3 false Animal/addTemporaryActor White_Chicken 16 16 59 67 2 false Animal/addTemporaryActor Brown_Chicken 16 16 61 67 2 false Animal/addTemporaryActor White_Cow 32 32 59 72 0 false Animal/addTemporaryActor BabyWhite_Cow 32 32 61 72 1 false Animal/advancedMove BabyPig true 0 1 3 5000 0 -1 0 7000/advancedMove Pig true 3 5000 0 1 1 5000 0 -1 3 5000/advancedMove White_Chicken true 1 0 2 7000 -1 0 2 10000/animate Brown_Chicken false true 500 16 17/viewport 22 22 true unfreeze/globalFadeToClear/pause 2000/playerControl fair",
+      }
+    },
+    { //Adds judge strings to Sophia, Andy, and Susan
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "Entries": {
+        "SVE_GrangeJudging_Sophia": "{{i18n:Fair.Sophia1}}",
+        "SVE_GrangeJudging_Andy": "{{i18n:Fair.Andy1}}",
+        "SVE_GrangeJudging_Susan": "{{i18n:Fair.Susan1}}",
+        "SVE_AfterJudging_Sophia": "{{i18n:Fair.Sophia2}}",
+        "SVE_AfterJudging_Andy": "{{i18n:Fair.Andy2}}",
+        "SVE_AfterJudging_Susan": "{{i18n:Fair.Susan2}}",
+      }
+    },
+    { //Sophia marriage judge strings
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "When": {
+        "Spouse |contains=Sophia": true
+      },
+      "Entries": {
+        "SVE_GrangeJudging_Sophia": "{{i18n:Fair.Sophia3}}",
+        "SVE_AfterJudging_Sophia": "{{i18n:Fair.Sophia4}}",
+      }
+    },
+    { //Kicks out creepy man and cleans trash in year 2+
+      "Action": "EditMap",
+      "Target": "Maps/Town-Fair",
+      "FromFile": "assets/Maps/MapPatches/TownFairClean.tbin",
+      "ToArea": {
+        "X": 41,
+        "Y": 76,
+        "Width": 6,
+        "Height": 6
+      },
+      "When": {
+        "Year |contains=1": false
+      }
+    },
+    { //Victor fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 19 77 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Olivia fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 19 78 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Andy fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 49 70 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Susan fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 49 65 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sophia fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 47 60 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Marlon fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 30 76 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Morris fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 48 88 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Martin fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 64 65 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Claire fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 62 65 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Gunther fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 45 63 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Scarlett fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "3691371"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 47 62 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Apples fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 47 33 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 43 87 left",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Alesia fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "7502582"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Alesia 30 79 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Isaac fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "HasSeenEvent": "908079"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Isaac 32 81 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Lance fair festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 20 27 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sandy - SDV fair
+      "Action": "EditMap",
+      "Target": "Maps/Town-Fair",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Town-Fair.tbin",
+      "ToArea": {
+        "X": 25,
+        "Y": 78,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Adds new dialogue for several characters, advance moves additions and edits, moves Pierre's "shop" into the maze, adds patrolling monsters. Adds additional fields (pause 1)
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "Entries": {
+        //"shop": "BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+        "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/advancedMove Linus true 4 13000 1 0 4 6000 -1 0/advancedMove Sophia true 4 10000 1 3000 4 2000/advancedMove Maru true 1 5000 2 7000 3 3000 4 3500 1 2000 2 3000 3 1000 4 2000/advancedMove Alex true -3 0 4 4000 3 0 4 5000/advancedMove Jas true 1 1500 4 1000/advancedMove Abigail true 3 3500 2 3000 1 5000 3 5000 2 6000/advancedMove Harvey true 1 3500 4 5000 3 3000 2 5000 4 3000/advancedMove Pam true 0 1 3 7500 0 -1 3 5500/advancedMove Shane true -7 0 0 2 2 9000 0 -2 7 0 4 9000/advancedMove Demetrius true 3 18000 4 3000/addTemporaryActor Skeleton 16 32 30 59 2 false Monster/advancedMove Skeleton true 0 1 3 4000 2 0 0 -1 4 2000 -1 0 3 1000 2 2000 0 -1 4 4000 -1 0 0 1 2 5000/addTemporaryActor Skeleton 16 32 35 58 2 false Monster/addTemporaryActor Shadow_Brute 16 32 46 59 2 false Monster/addTemporaryActor Shadow_Brute 16 32 43 58 2 false Monster/advancedMove Shadow_Brute true -4 0 3 5000 4 0 2 5000 1 3000 2 1000/addTemporaryActor Skeleton_Mage 16 32 51 32 2 false Monster/advancedMove Skeleton_Mage true -2 0 0 2 1 6000 0 -2 2 0 2 5000/addTemporaryActor Wilderness_Golem 16 24 63 25 3 false Monster/advancedMove Wilderness_Golem true -9 0 0 2 2 1000 0 -2 9 0 2 1500/addTemporaryActor Stone_Golem 16 24 54 32 1 false Monster/advancedMove Stone_Golem true 9 0 4 1000 -9 0 4 400/addTemporaryActor Shadow_Shaman 16 24 68 23 2 false Monster/advancedMove Shadow_Shaman true 1 1500 2 2000 3 3000 2 5000 4 1000/addTemporaryActor Metal_Head 16 16 74 27 2 false Monster/advancedMove Metal_Head true -4 0 2 200 4 0 4 100/addTemporaryActor Mummy 16 32 74 24 2 false Monster/advancedMove Mummy true -2 0 3 200 2 0 2 6000/positionOffset Claire 5 -25/playerControl halloween",
+        "Wizard": "{{i18n:SpiritsEve.Wizard}}",
+        "Linus": "{{i18n:SpiritsEve.Linus}}",
+        "Krobus": "{{i18n:SpiritsEve.Krobus}}",
+        "Pierre": "{{i18n:SpiritsEve.Pierre}}",
+        "Dwarf": "{{i18n:SpiritsEve.Dwarf}}",
+        "Evelyn": "{{i18n:SpiritsEve.Evelyn}}",
+        "George": "{{i18n:SpiritsEve.George}}",
+        "Leo": "{{i18n:SpiritsEve.Leo}}",
+      }
+    },
+    { //Victor halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 52 35 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Olivia halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 30 68 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Andy halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 33 69 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Susan halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 40 60 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sophia halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 25 68 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Marlon halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 28 57 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Morris halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 23 62 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Claire halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 27 64 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Martin halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 14 26 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Gunther halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 34 73 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Scarlett halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "3691371"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 26 68 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Apples halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 47 88 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 38 58 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Alesia halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "7502582"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Alesia 26 53 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Isaac halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "HasSeenEvent": "908079"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Isaac 48 62 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Lance halloween festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": true,
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 23 57 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sandy - spirits eve
+      "Action": "EditMap",
+      "Target": "Maps/Town-Halloween",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Town-Halloween.tbin",
+      "ToArea": {
+        "X": 33,
+        "Y": 73,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}",
+        "IsOddYear": true
+      },
+    },
+    { //Year 2 variant of halloween festival. Adds additional fields (pause 1)
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "Entries": {
+        //"shop": "O 373 0 3 O 608 0 3 BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+        "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/advancedMove Harvey true 2 5000 1 200 2 200 0 5 4 0 0 2 -6 0 0 -9 4 2000 -1 0 0 1 2 2000 3 2000 2 200 1 4000 2 4000 2 200 1 0 0 8 6 0 0 -2 -4 0 0 -5 4 2000 1 200 2 5000 3 1000/advancedMove Sophia true 2 8000 3 2000 2 4000 1 2500 2 500/advancedMove Sebastian true 2 7000 1 500 2 0 1 250 2 6000 -2 0 2 500/advancedMove Olivia true 3 12000 4 1250 3 5000 2 2000 3 1000/advancedMove Demetrius true 1 18000 2 300 3 200 -1 0 0 4 2 7000 1 200 4 200 0 -4 1 0 1 1000/advancedMove Alex true 4 5000 3 0 1 300 4 4000 3 500 -3 0 3 300 4 500/advancedMove Emily true 1 14000 2 200 3 3500 2 200 1 2000/advancedMove Andy true 3 32000 2 0 0 8 1 5000 0 -8 -2 0 3 1000/advancedMove Susan true 3 15000 0 1 3 7000 0 -1 3 1000/advancedMove Shane true 3 3000 1 0 0 7 2 6500 3 200 4 500 0 -7 -1 0 3 15000/advancedMove Victor true 2 8000 2 0 2 6000 -2 0 2 9000/advancedMove Robin true 1 16000 2 4000/advancedMove Linus true 3 24000 4 2500/advancedMove Haley true 2 7000 1 500 2 4000 1 3000 2 3000/advancedMove Maru true 2 7000 -7 0 2 2000 7 0 1 4000 2 1000/advancedMove Abigail true 2 13000 3 2000/advancedMove Elliott true 2 8000 3 2000 2 2500 3 1000 -1 0 0 -2 -8 0 0 -4 4 500 1 200 2 4000 0 4 8 0 0 2 1 0 1 200 2 1000/advancedMove Penny true 2 9000 -2 0 2 7000 2 0/advancedMove Sam true 2 12000 1 4000 2 1500/addTemporaryActor Mummy 16 32 28 71 2 false Monster/advancedMove Mummy true 4 12000 -2 0 4 5000 2 0 1 2000 2 4000 1 300 4 1000/addTemporaryActor Skeleton 16 32 23 70 0 false Monster/advancedMove Skeleton true 4 9000 1 0 0 -1 4 12000 1 500 2 1000 0 1 2 600 -1 0 3 500 4 500/addTemporaryActor Wilderness_Golem 16 24 25 73 2 false Monster/advancedMove Wilderness_Golem true 4 5000 8 0 4 7000 1 2000 4 400 3 500 -8 0 3 500 4 500/addTemporaryActor Shadow_Shaman 16 24 30 69 2 false Monster/advancedMove Shadow_Shamn true 4 8000 1 4000 4 3000 2 6000 -1 0 2 4000 4 3000 2 500 3 0 1 6000 4 6000 3 2000 -2 0 3 500 4 2000/addTemporaryActor Stone_Golem 16 24 31 72 2 false Monster/advancedMove Stone_Golem true 4 4000 1 4000 4 3000 1 3500 4 2000 0 -1 4 4000 1 3000 -1 0 3 3000 4 5000 1 500 1 0 1 4000 0 1 2 1000 3 500 4 1000/addTemporaryActor Shadow_Brute 16 32 33 71 1 false Monster/advancedMove Shadow_Brute true 1 3000 4 600 0 -2 4 500 1 10000 4 5000 1 2000 2 700 0 2 2 600 1 4000/playerControl halloween",
+        "Pierre": "{{i18n:SpiritsEve2.Pierre}}",
+        "Marnie": "{{i18n:SpiritsEve2.Marnie}}",
+        "Jas": "{{i18n:SpiritsEve2.Jas}}",
+        "Alex": "{{i18n:SpiritsEve2.Alex}}",
+        "Sam": "{{i18n:SpiritsEve2.Sam}}",
+        "Penny": "{{i18n:SpiritsEve2.Penny}}",
+        "Shane": "{{i18n:SpiritsEve2.Shane}}",
+        "Linus": "{{i18n:SpiritsEve2.Linus}}",
+        "Sebastian": "{{i18n:SpiritsEve2.Sebastian}}",
+        "Harvey": "{{i18n:SpiritsEve2.Harvey}}",
+        "Abigail": "{{i18n:SpiritsEve2.Abigail}}",
+        "Wizard": "{{i18n:SpiritsEve2.Wizard}}",
+        "Linus": "{{i18n:SpiritsEve2.Linus2}}",
+        "Krobus": "{{i18n:SpiritsEve2.Krobus}}",
+        "Dwarf": "{{i18n:SpiritsEve2.Dwarf}}",
+        "Evelyn": "{{i18n:SpiritsEve2.Evelyn}}",
+        "George": "{{i18n:SpiritsEve2.George}}",
+        "Leo": "{{i18n:SpiritsEve2.Leo}}",
+      }
+    },
+    { //Victor halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 29 67 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Olivia halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 29 62 left",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Andy halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 47 60 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Susan halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 35 69 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sophia halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 27 20 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Marlon halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 23 63 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Morris halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 29 57 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Claire halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 40 57 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Martin halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 33 67 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Gunther halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 27 58 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Scarlett halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "3691371"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 30 18 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Morgan halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 15 35 up",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Alesia halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "7502582"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Alesia 24 63 down",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Isaac halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "HasSeenEvent": "908079"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Isaac 22 65 right",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Lance halloween festival data year 2
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": {
+        "IsOddYear": false,
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 36 69 left",
+          "Delimiter": "/"
+        }
+      ]
+    },
+    { //Sandy - spirits eve 2
+      "Action": "EditMap",
+      "Target": "Maps/Town-Halloween",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Town-Halloween2.tbin",
+      "ToArea": {
+        "X": 40,
+        "Y": 60,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "IsOddYear": false,
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Adds advanced moves for Magnus, Susan, Andy, Sophia, and Linus.
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "Entries": {
+        "set-up": "christmasTheme/-1000 -1000/farmer 68 0 1/changeToTemporaryMap Forest-IceFestival/loadActors Set-Up/animate Robin false true 100 24 25 26 24 25 26 24 25 26 24 25 26 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27/advancedMove Linus false 3 38000 9 0 0 -3 10 0 0 -7 3 0 0 -12 2 0 0 -9 3 0 2 10000 3 1000 2 200000/advancedMove Andy true 2 28000 -2 0 0 1 -2 0 0 -4 -9 0 0 -2 -8 0 0 -5 4 12000 0 5 8 0 0 2 9 0 0 4 2 0 0 -1 2 0 2 4000/advancedMove Olivia true 4 13500 3 3000/advancedMove Susan true 4 10000 -2 0 0 2 -4 0 4 8000 -1 0 0 -5 3 0 4 7000 2 0 0 3 2 0 4 1000/advancedMove Pierre true -1 0 0 -1 1 5000 0 1 1 0 4 5000/advancedMove Wizard true 1 10000 2 5000/advancedMove Vincent true 0 3 3 0 2 5000 0 -5 2 0 1 5000 -5 0 0 2 3 5000/advancedMove Pam true -5 0 0 1 2 5000 0 -1 5 0 2 7000/playerControl iceFestival",
+        "mainEvent": "globalFade/viewport -1000 -1000/playMusic none/warp farmer1 71 35/warp farmer2 72 35/warp farmer3 70 35/warp farmer4 69 35/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/loadActors Main-Event/faceDirection Pam 1/faceDirection Elliott 0/faceDirection Willy 0/viewport 71 35 true/pause 2000/speak Lewis \"{{i18n:IceFishing.01}}\"/pause 200/faceDirection Lewis 3/pause 300/faceDirection Lewis 2/faceDirection Lewis 1/pause 300/faceDirection Lewis 2/pause 400/speak Lewis \"{{i18n:IceFishing.02}}\"/pause 600/speak Lewis \"{{i18n:IceFishing.03}}\"/pause 500/waitForOtherPlayers startContest/jump Lewis/faceDirection Pam 2 true/faceDirection Elliott 1 true/faceDirection Willy 2 true/speak Lewis \"{{i18n:IceFishing.04}}\"/advancedMove Lewis false 0 -4 2 1000/advancedMove Marnie true 4 6000 -2 0 4 5000 2 0/advancedMove Maru true 3 4000 0 2 3 7000 0 -2/advancedMove Jas true 2 0 0 -9 -4 0 2 20000 4 0 0 9 -2 0 3 15000/advancedMove Jodi true 1 6000 2 4000 1 8000 2 3500 1 1000/advancedMove Sophia true 1 10000 0 2 1 8000 0 -2/jump Willy/shake Pam 700/showFrame Pam 16/extendSourceRect Pam 0 32/showFrame Elliott 40/extendSourceRect Elliott 16 0/shake Elliott 400/pause 300/showFrame Willy 16/extendSourceRect Willy 0 32/playMusic fallFest/playerControl iceFishing",
+      }
+    },
+    { //Victor ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 58 37 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Victor 73 42 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Olivia ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 86 25 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Olivia 72 42 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Andy ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 56 31 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Andy 64 40 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 72 19 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Susan 64 39 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sophia ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 58 39 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Sophia 63 36 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Marlon ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 100 40 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "MarlonFay 53 42 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "HasSeenEvent": "6665293"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 74 29 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "MorrisTod 70 24 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 62 52 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Claire 79 33 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 65 26 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 69 43 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 106 22 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Apples 70 56 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 31 12 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Morgan 31 12 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 101 41 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Lance 83 32 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy - ice festival
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Main_Forest-IceFestival.tbin",
+      "ToArea": {
+        "X": 65,
+        "Y": 41,
+        "Width": 2,
+        "Height": 2
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Setup_Forest-IceFestival.tbin",
+      "ToArea": {
+        "X": 68,
+        "Y": 47,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+    { //Adds advanced moves to Alex, Linus, Susan, and Andy
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "Entries": {
+        "set-up": "christmasTheme/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Christmas/loadActors Set-Up/playerControl christmas",
+      }
+    },
+    { //Victor christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 36 60 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Olivia christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 34 60 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Andy christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 31 62 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 30 62 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sophia christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 53 69 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Marlon christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 27 53 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "HasSeenEvent |contains=191393": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 38 59 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "GuntherUnlocked": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 38 61 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 33 65 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 8 63 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "HasSeenEvent": "3219873"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 35 57 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance christmas festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 23 61 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy christmas festival data
+      "Action": "EditMap",
+      "Target": "Maps/Town-Christmas",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Town-Christmas.tbin",
+      "ToArea": {
+        "X": 27,
+        "Y": 72,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}"
+      },
+    },
+  ]
+}

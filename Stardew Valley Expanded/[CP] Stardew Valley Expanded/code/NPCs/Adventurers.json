@@ -1,0 +1,601 @@
+{
+  "Changes": [
+    // JADU
+    {
+      //Jadu's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Jadu": "adult/polite/neutral/neutral/male/non-datable/null/Other/null//Custom_Jadu_WarpRoom 3 3/{{i18n:Name.Jadu}}",
+      }
+    },
+    {
+      //Jadu's portraits
+      "Action": "Load",
+      "Target": "Portraits/Jadu",
+      "FromFile": "Assets/CharacterFiles/Portraits/Jadu/Jadu.png"
+    },
+    {
+      //Jadu's sprites
+      "Action": "Load",
+      "Target": "Characters/Jadu",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Jadu/Jadu.png"
+    },
+    {
+      //Jadu's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Jadu",
+      "FromFile": "assets/CharacterFiles/Schedules/Jadu/Jadu.json"
+    },
+    {
+      //Jadu's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Jadu": true
+      }
+    },
+    {
+      //Sawyer's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Sawyer": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Sawyer_WarpRoom 3 3/{{i18n:Name.Sawyer}}",
+      }
+    },
+    {
+      //Sawyer's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Sawyer_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Sawyer's sprites
+      "Action": "Load",
+      "Target": "Characters/Sawyer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Sawyer.png"
+    },
+    {
+      //Sawyer's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Sawyer",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Sawyer.png"
+    },
+    {
+      //Sawyer's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Sawyer",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Sawyer/Schedule.json"
+    },
+    {
+      //Sawyer's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Sawyer": true
+      }
+    },
+    {
+      //Gale's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Gale": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Gale_WarpRoom 3 3/{{i18n:Name.Gale}}",
+      }
+    },
+    {
+      //Gale's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Gale_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Gale's sprites
+      "Action": "Load",
+      "Target": "Characters/Gale",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Gale.png"
+    },
+    {
+      //Gale's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Gale",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Gale.png"
+    },
+    {
+      //Gale's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Gale",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Gale/Schedule.json"
+    },
+    {
+      //Gale's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Gale": true
+      }
+    },
+    {
+      //Brianna's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Brianna": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Brianna_WarpRoom 3 3/{{i18n:Name.Brianna}}",
+      }
+    },
+    {
+      //Brianna's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Brianna_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Brianna's sprites
+      "Action": "Load",
+      "Target": "Characters/Brianna",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Brianna.png"
+    },
+    {
+      //Brianna's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Brianna",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Brianna.png"
+    },
+    {
+      //Brianna's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Brianna",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Brianna/Schedule.json"
+    },
+    {
+      //Brianna's dialogue patch
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Brianna",
+      "When": {
+        "Day": "3"
+      },
+      "Entries": {
+        "Wed": "{{i18n:Brianna.Patch.01}}",
+      },
+    },
+    {
+      //Brianna's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Brianna": true
+      }
+    },
+    {
+      //Drake's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Drake": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Drake_WarpRoom 3 3/{{i18n:Name.Drake}}",
+      }
+    },
+    {
+      //Drake's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Drake_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Drake's sprites
+      "Action": "Load",
+      "Target": "Characters/Drake",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Drake.png"
+    },
+    {
+      //Drake's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Drake",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Drake.png"
+    },
+    {
+      //Drake's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Drake",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Drake/Schedule.json"
+    },
+    {
+      //Drake's schedule patch
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Drake",
+      "When": {
+        "Spouse": "Lance"
+      },
+      "Entries": {
+        "Wed": "0 Custom_FirstSlashGuild 7 9 0/610 Custom_FirstSlashGuild 9 23 3/650 Custom_FirstSlashGuild 20 17 1/720 Custom_FirstSlashGuild 9 17 3/750 Custom_FirstSlashGuild 20 23 1/820 Custom_FirstSlashGuild 5 13 1/850 Custom_FirstSlashGuild 7 26 0/900 Custom_FirstSlashGuild 20 17 1/930 Custom_FirstSlashGuild 19 12 2/1030 Custom_FirstSlashGuild 20 17 1/1100 Custom_FirstSlashGuild 9 17 3/1130 Custom_FirstSlashGuild 9 23 3/1200 Custom_FirstSlashGuild 5 17 1/1230 Custom_FirstSlashGuild 5 23 1/1300 Custom_FirstSlashGuild 9 17 3/1330 Custom_FirstSlashGuild 9 23 3/1400 Custom_FirstSlashGuild 20 23 1/1420 Custom_FirstSlashGuild 20 17 1/1440 Custom_FirstSlashGuild 20 23 1/1500 Custom_FirstSlashGuild 9 23 3/1520 Custom_FirstSlashGuild 9 17 3/1540 Custom_FirstSlashGuild 5 23 1/1610 Custom_FirstSlashGuild 20 23 1/1640 Custom_FirstSlashGuild 20 17 1/1700 Custom_FirstSlashGuild 20 23 1/1720 Custom_FirstSlashGuild 9 23 3/1740 Custom_FirstSlashGuild 9 17 3/1800 Custom_FirstSlashGuild 10 12 2/1900 Custom_FirstSlashGuild 19 12 2/2000 Custom_FirstSlashGuild 10 12 2/2100 Custom_FirstSlashGuild 9 23 3/2200 Custom_FableReef 43 54 2",
+      }
+    },
+    {
+      //Drake's dialogue patch
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Drake",
+      "When": {
+        "Day": "25"
+      },
+      "Entries": {
+        "Thu": "{{i18n:Drake.Patch.01}}",
+      },
+    },
+    {
+      //Drake's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Drake": true
+      }
+    },
+    {
+      //Edmund's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Edmund": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Edmund_WarpRoom 3 3/{{i18n:Name.Edmund}}",
+      }
+    },
+    {
+      //Edmund's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Edmund_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Edmund's sprites
+      "Action": "Load",
+      "Target": "Characters/Edmund",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Edmund.png"
+    },
+    {
+      //Edmund's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Edmund",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Edmund.png"
+    },
+    {
+      //Edmund's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Edmund",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Edmund/Schedule.json"
+    },
+    {
+      //Edmund's dialogue patch
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Edmund",
+      "When": {
+        "Day": "8"
+      },
+      "Entries": {
+        "Wed": "{{i18n:Edmund.Patch.01}}",
+      },
+    },
+    {
+      //Edmund's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Edmund": true
+      }
+    },
+    {
+      //Gertrude's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Gertrude": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Gertrude_WarpRoom 3 3/{{i18n:Name.Gertrude}}",
+      }
+    },
+    {
+      //Gertrude's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Gertrude_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Gertrude's sprites
+      "Action": "Load",
+      "Target": "Characters/Gertrude",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Gertrude.png"
+    },
+    {
+      //Gertrude's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Gertrude",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Gertrude.png"
+    },
+    {
+      //Gertrude's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Gertrude",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Gertrude/Schedule.json"
+    },
+    {
+      //Gertrude's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Gertrude": true
+      }
+    },
+    {
+      //Brock's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Brock": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Brock_WarpRoom 3 3/{{i18n:Name.Brock}}",
+      }
+    },
+    {
+      //Brock's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Brock_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Brock's sprites
+      "Action": "Load",
+      "Target": "Characters/Brock",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Brock.png"
+    },
+    {
+      //Brock's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Brock",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Brock.png"
+    },
+    {
+      //Brock's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Brock",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Brock/Schedule.json"
+    },
+    {
+      //Brock's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Brock": true
+      }
+    },
+    {
+      //Cordelia's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Cordelia": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Cordelia_WarpRoom 3 3/{{i18n:Name.Cordelia}}",
+      }
+    },
+    {
+      //Cordelia's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Cordelia_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Cordelia's sprites
+      "Action": "Load",
+      "Target": "Characters/Cordelia",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Cordelia.png"
+    },
+    {
+      //Cordelia's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Cordelia",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Cordelia.png"
+    },
+    {
+      //Cordelia's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Cordelia",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Cordelia/Schedule.json"
+    },
+    {
+      //Cordelia's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Cordelia": true
+      }
+    },
+    {
+      //Freya's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Freya": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Freya_WarpRoom 3 3/{{i18n:Name.Freya}}",
+      }
+    },
+    {
+      //Freya's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Freya_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Freya's sprites
+      "Action": "Load",
+      "Target": "Characters/Freya",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Freya.png"
+    },
+    {
+      //Freya's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Freya",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Freya.png"
+    },
+    {
+      //Freya's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Freya",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Freya/Schedule.json"
+    },
+    {
+      //Freya's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Freya": true
+      }
+    },
+    {
+      //Cassandra's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Cassandra": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Cassandra_WarpRoom 3 3/{{i18n:Name.Cassandra}}",
+      }
+    },
+    {
+      //Cassandra's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Cassandra_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Cassandra's sprites
+      "Action": "Load",
+      "Target": "Characters/Cassandra",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Cassandra.png"
+    },
+    {
+      //Cassandra's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Cassandra",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Cassandra.png"
+    },
+    {
+      //Cassandra's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Cassandra",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Cassandra/Schedule.json"
+    },
+    {
+      //Cassandra's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Cassandra": true
+      }
+    },
+    {
+      //Emin's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Emin": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Emin_WarpRoom 3 3/{{i18n:Name.Emin}}",
+      }
+    },
+    {
+      //Emin's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Emin_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Emin's sprites
+      "Action": "Load",
+      "Target": "Characters/Emin",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Emin.png"
+    },
+    {
+      //Emin's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Emin",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Emin.png"
+    },
+    {
+      //Emin's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Emin",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Emin/Schedule.json"
+    },
+    {
+      //Emin's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Emin": true
+      }
+    },
+    /*    TEMPLATE
+	{
+      //ADVENTURERNPC's NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "ADVENTURERNPC": "Adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_ADVENTURERNPC_WarpRoom 3 3/ADVENTURERNPC",
+        }
+    },
+	
+	{
+      //ADVENTURERNPC's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+		"ADVENTURERNPC_AnimationName": "16/16/16",
+	   }
+    },
+	
+    { 
+	  //ADVENTURERNPC's sprites
+      "Action": "Load",
+	  "Target": "Characters/ADVENTURERNPC",
+	  "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/ADVENTURERNPC.png"
+    },
+
+    {
+	 //ADVENTURERNPC's portraits (fake)
+     "Action": "Load",
+	 "Target": "Portraits/ADVENTURERNPC",
+	 "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/ADVENTURERNPC.png"
+    },
+	
+	{
+      //ADVENTURERNPC's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/ADVENTURERNPC",
+      "FromFile": "assets/CharacterFiles/Schedules/Adventurers/ADVENTURERNPC/Schedule.json"
+    },
+	
+    {
+      //ADVENTURERNPC's dialogue
+      "Action": "Load",
+      "Target": "Characters/Dialogue/ADVENTURERNPC",
+      "FromFile": "assets/CharacterFiles/Dialogue/Adventurers/ADVENTURERNPC/Dialogue.json"
+    },
+
+    {
+      //ADVENTURERNPC's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "ADVENTURERNPC": true
+      }
+    },
+	*/
+  ]
+}

@@ -77,7 +77,10 @@ namespace StardewValleyExpanded
             "MorrisTod2",
             "MorrisTod3",
             "Lance",
-            "Krobus"
+            "Krobus",
+            "GilMinecarts",
+            "DwarfCaveShortcut",
+            "CamillaBridge"
         };
 
 

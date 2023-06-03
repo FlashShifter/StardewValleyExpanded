@@ -50,6 +50,13 @@ namespace StardewValleyExpanded
                 else
                     __result = 1;
             }
+
+            else if (__instance?.Name == "Custom_FerngillRepublicFrontier")
+            {
+                __result = tile.Y < 140
+                    ? 1
+                    : 0;
+            }
         }
     }
 }

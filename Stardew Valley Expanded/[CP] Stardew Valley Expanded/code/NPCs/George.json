@@ -1,0 +1,46 @@
+{
+	"Changes": [
+		{ //GEORGE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent |contains=5553210": false
+			},
+			"Entries": {
+				"Sat": "700 JoshHouse 5 21 3/1000 Town 111 28 0/1600 JoshHouse 15 22 0/1900 JoshHouse 5 20 3/2100 JoshHouse 4 6 0",
+				"summer_Fri": "630 JoshHouse 16 22 0/1200 Town 59 64 2/1500 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+			},
+		},
+		{ //GEORGE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent": "5553210"
+			},
+			"Entries": {
+				"Sat": "630 JoshHouse 16 22 0/1200 Town 59 64 2/1500 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+				"summer_Fri": "630 JoshHouse 16 22 0/1200 Town 59 64 2/1500 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+			},
+		},
+		{ //GEORGE DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/George",
+			"When": {
+				"Season": "Spring"
+			},
+			"Entries": {
+				"Mon2": "{{i18n:George.Dialogue.01}}",
+				"Mon6": "{{i18n:George.Dialogue.02}}",
+			},
+		},
+		{ //GEORGE EVENT
+			"Action": "EditData",
+			"Target": "data/events/seedshop",
+			"Entries": {
+				"1000017/f George 2000/y 2/t 1200 1400/d Mon Tue Wed Thu Fri Sat": "none/-500 -500/farmer 31 21 1 George 37 18 0/pause 500/viewport 42 18 true/pause 250/skippable/textAboveHead George \"{{i18n:George.Event.01}}\"/move farmer 4 0 0/pause 700/emote farmer 8/pause 500/move farmer 0 -3 1/pause 1600/speak George \"{{i18n:George.Event.02}}\"/pause 500/question fork0 \"{{i18n:George.Event.03}}\"/fork 1000017_EverythingOkay/pause 500/speak George \"...$0\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue George \"{{i18n:George.Event.04}}\"",
+				"1000017_EverythingOkay": "pause 1000/emote George 28/pause 1400/speak George \"{{i18n:George.Event.EverythingOkay.01}}\"/pause 800/move George 0 0 2/pause 500/playMusic echos/pause 500/animate George false true 999999 16/pause 1500/speak George \"{{i18n:George.Event.EverythingOkay.02}}\"/pause 300/emote farmer 60/pause 1200/move farmer 1 0 1/pause 650/speak George \"{{i18n:George.Event.EverythingOkay.03}}\"/pause 1500/speak George \"{{i18n:George.Event.EverythingOkay.04}}\"/pause 1000/stopAnimation George/pause 650/move George 0 0 0/pause 1300/speak George \"{{i18n:George.Event.EverythingOkay.05}}\"/pause 200/question fork1 \"{{i18n:George.Event.EverythingOkay.06}}\"/fork 1000017_GetThroughThis/pause 500/stopMusic/pause 600/shake George 1000/emote George 28/pause 500/move George 0 0 3/pause 500/speak George \"{{i18n:George.Event.EverythingOkay.07}}\"/globalFade/viewport -1000 -1000/pause 700/friendship George -1000/end dialogue George \"{{i18n:George.Event.EverythingOkay.08}}\"",
+				"1000017_GetThroughThis": "pause 500/speak George \"{{i18n:George.Event.GetThroughThis.01}}\"/pause 1000/emote George 28/pause 1000/speak George \"{{i18n:George.Event.GetThroughThis.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue George \"{{i18n:George.Event.GetThroughThis.03}}\""
+			},
+		},
+	]
+}

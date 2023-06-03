@@ -1,0 +1,83 @@
+{
+  "Changes": [
+    // JOLYNE NPC
+    {
+      //Jolyne NPC disposition
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Jolyne": "Adult/neutral/neutral/neutral/female/non-datable/null/Other/null//Custom_Jolyne_WarpRoom 3 3/{{i18n:Name.Jolyne}}",
+      }
+    },
+    {
+      //Jolyne's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Jolyne_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Jolyne's sprites
+      "Action": "Load",
+      "Target": "Characters/Jolyne",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Jolyne/Jolyne.png"
+    },
+    {
+      //Jolyne's portraits
+      "Action": "Load",
+      "Target": "Portraits/Jolyne",
+      "FromFile": "Assets/CharacterFiles/Portraits/Jolyne/Jolyne.png"
+    },
+    {
+      //Jolyne's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Jolyne",
+      "FromFile": "assets/CharacterFiles/Schedules/Jolyne/Schedule.json"
+    },
+    {
+      //Jolyne visits adventure guild
+      "Action": "EditData",
+      "Target": "Characters/schedules/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193"
+      },
+      "Entries": {
+        "14": "0 AdventureGuild 3 13 0/610 AdventureGuild 3 13 2",
+        "22": "0 AdventureGuild 3 13 0/610 AdventureGuild 3 13 2"
+      }
+    },
+    {
+      //Jolyne adventure guild dialogue 1
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193",
+        "Day": "14"
+      },
+      "Entries": {
+        "Sun": "{{i18n:Jolyne.GuildDialogue.01}}",
+      }
+    },
+    {
+      //Jolyne adventure guild dialogue 2
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193",
+        "Day": "22"
+      },
+      "Entries": {
+        "Mon": "{{i18n:Jolyne.GuildDialogue.02}}",
+      }
+    },
+    {
+      //Jolyne's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Jolyne": true
+      }
+    },
+  ]
+}

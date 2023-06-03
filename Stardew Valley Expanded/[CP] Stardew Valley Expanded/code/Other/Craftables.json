@@ -1,0 +1,510 @@
+{
+	"Changes": [
+		{ //BALANCED CRAFTING		
+			"Action": "EditData",
+			"Target": "Data/CraftingRecipes",
+			"Fields": {
+				"Wood Fence": {
+					0: "388 2"
+				},
+				"Stone Fence": {
+					0: "390 2"
+				},
+				"Hardwood Fence": {
+					0: "709 2"
+				},
+				"Gate": {
+					0: "388 40"
+				},
+				"Chest": {
+					0: "388 100"
+				},
+				"Torch": {
+					0: "388 1 92 3"
+				},
+				"Scarecrow": {
+					0: "388 20 382 2 771 40"
+				},
+				"Bee House": {
+					0: "388 30 709 10 335 2 724 2"
+				},
+				"Keg": {
+					0: "388 65 334 2 335 2 725 2"
+				},
+				"Cask": {
+					0: "388 50 725 1"
+				},
+				"Furnace": {
+					0: "378 50 390 80"
+				},
+				"Garden Pot": {
+					0: "330 5 390 15 338 2"
+				},
+				"Wood Sign": {
+					0: "388 30"
+				},
+				"Stone Sign": {
+					0: "390 30"
+				},
+				"Cheese Press": {
+					0: "388 40 709 20 334 5 335 5"
+				},
+				"Mayonnaise Machine": {
+					0: "388 40 390 40 86 2 334 5"
+				},
+				"Seed Maker": {
+					0: "388 40 709 30 336 8"
+				},
+				"Loom": {
+					0: "388 30 771 50 726 3"
+				},
+				"Oil Maker": {
+					0: "766 100 709 50 336 5"
+				},
+				"Recycling Machine": {
+					0: "388 60 390 30 335 5"
+				},
+				"Worm Bin": {
+					0: "709 10 334 2 335 2 771 20"
+				},
+				"Preserves Jar": {
+					0: "388 10 390 10 709 10 725 1"
+				},
+				"Charcoal Kiln": {
+					0: "388 50 390 70"
+				},
+				"Tapper": {
+					0: "709 5 334 3"
+				},
+				"Lightning Rod": {
+					0: "335 3 338 3 767 20"
+				},
+				"Slime Incubator": {
+					0: "337 5 766 200"
+				},
+				"Slime Egg-Press": {
+					0: "382 50 82 3 787 3"
+				},
+				"Crystalarium": {
+					0: "390 50 336 10 337 5 787 5"
+				},
+				"Sprinkler": {
+					0: "334 1"
+				},
+				"Quality Sprinkler": {
+					0: "335 2 336 2 338 2"
+				},
+				"Iridium Sprinkler": {
+					0: "336 2 337 2 338 2 787 1"
+				},
+				"Basic Fertilizer": {
+					0: "92 3"
+				},
+				"Quality Fertilizer": {
+					0: "92 6"
+				},
+				"Basic Retaining Soil": {
+					0: "390 4"
+				},
+				"Quality Retaining Soil": {
+					0: "390 5 330 2"
+				},
+				"Speed-Gro": {
+					0: "709 3 684 1"
+				},
+				"Deluxe Speed-Gro": {
+					0: "709 5 684 2"
+				},
+				"Bomb": {
+					0: "380 3 382 1 769 1"
+				},
+				"Mega Bomb": {
+					0: "384 4 382 1 768 1 769 1"
+				},
+				"Wild Bait": {
+					0: "771 3 684 1 766 1"
+				},
+				"Iridium Band": {
+					0: "337 20 768 200 769 200"
+				},
+				"Stone Chest": {
+					0: "390 100"
+				},
+				"Mini-Obelisk": {
+					0: "709 50 768 100 336 8"
+				},
+				"Geode Crusher": {
+					0: "335 10 390 100 72 3"
+				},
+			},
+			"When": {
+				"BalancedCrafting": true
+			}
+		},
+		//Alternative Craftables Configuration
+		{ //Furnace - off
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 384,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 80,
+				"Y": 32,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Furnace - on
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 384,
+				"Y": 320,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 96,
+				"Y": 32,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Kiln - off
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 368,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 32,
+				"Y": 448,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Kiln - on
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 368,
+				"Y": 320,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 48,
+				"Y": 448,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Seed Maker
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 224,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 16,
+				"Y": 96,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Mayonnaise Machine
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 192,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 96,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Cheese Machine
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 176,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 64,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Bee Hives
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 336,
+				"Y": 288,
+				"Width": 32,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 32,
+				"Y": 32,
+				"Width": 32,
+				"Height": 32
+			},
+		},
+		{ //Keg
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 96,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 64,
+				"Y": 32,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		//Snowy Craftables
+		{ //Furnace - off
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 384,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 80,
+				"Y": 32,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Kiln - off
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 368,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 32,
+				"Y": 448,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Seed Maker
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 224,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 16,
+				"Y": 96,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Mayonnaise Machine
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 192,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 96,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Cheese Machine
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 176,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 64,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+		{ //Bee Hives
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 336,
+				"Y": 288,
+				"Width": 32,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 32,
+				"Y": 32,
+				"Width": 32,
+				"Height": 32
+			},
+		},
+		{ //Keg
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "Assets/Tilesheets/winter_z_extras.png",
+			"When": {
+				"AlternativeCraftables": true,
+				"IsOutdoors": true,
+				"Season |contains=Winter": true,
+				"LocationName |contains=IslandWest, IslandNorth, IslandSouth": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Replace",
+			"FromArea": {
+				"X": 96,
+				"Y": 288,
+				"Width": 16,
+				"Height": 32
+			},
+			"ToArea": {
+				"X": 64,
+				"Y": 32,
+				"Width": 16,
+				"Height": 32
+			},
+		},
+	]
+}

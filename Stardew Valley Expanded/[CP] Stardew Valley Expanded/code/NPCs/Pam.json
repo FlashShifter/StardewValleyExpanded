@@ -1,0 +1,13 @@
+{
+    "Changes": [
+        { //PAM EVENT
+            "Action": "EditData",
+            "Target": "data/events/busstop",
+            "Entries": {
+                "1000027/f Pam 2000/t 1000 1600/z spring/z summer/z fall": "winter_day_ambient/-500 -500/farmer 14 23 0 Pam 14 11 0/skippable/pause 500/viewport 16 14 true/textAboveHead Pam \"{{i18n:Pam.Event.01}}\"/move farmer 0 -10 0/emote farmer 8/pause 200/move Pam 0 0 2/emote Pam 16/speak Pam \"{{i18n:Pam.Event.01A}}\"/pause 100/emote farmer 28/pause 600/move Pam 0 0 1/pause 850/emote Pam 12/pause 600/move Pam 0 0 2/pause 500/speak Pam \"{{i18n:Pam.Event.02}}\"/pause 1000/speak Pam \"{{i18n:Pam.Event.03}}\"/pause 200/question fork0 \"{{i18n:Pam.Event.04}}\"/fork 1000027_WhatsBotheringYou/pause 500/speak Pam \"...$2\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Pam \"{{i18n:Pam.Event.05}}\"",
+                "1000027_WhatsBotheringYou": "pause 800/speak Pam \"...$2\"/pause 700/move Pam 0 0 0/pause 650/playMusic echos/pause 1000/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.01}}\"/pause 1500/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.02}}\"/pause 500/emote Pam 28/pause 450/move Pam 0 0 2/pause 650/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.03}}\"/pause 600/shake Pam 1000/pause 600/move Pam 0 0 0/pause 800/shake Pam 500/pause 1250/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.04}}\"/pause 1000/stopAnimation Pam/pause 1250/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.05}} \"/pause 500/question fork1 \"{{i18n:Pam.Event.WhatsBotheringYou.06}}\"/fork 1000027_DidntKnow/pause 500/move Pam 0 0 2/stopMusic/pause 1000/emote Pam 12/pause 500/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.07}}\"/globalFade/viewport -1000 -1000/pause 700/friendship Pam -1000/end dialogue Pam \"{{i18n:Pam.Event.WhatsBotheringYou.08}}\"",
+                "1000027_DidntKnow": "pause 750/stopMusic/pause 1000/move Pam 0 0 2/pause 800/speak Pam \"{{i18n:Pam.Event.DidntKnow.01}}\"/pause 1000/speak Pam \"{{i18n:Pam.Event.DidntKnow.02}}\"/pause 400/globalFade/viewport -1000 -1000/pause 700/end dialogue Pam \"{{i18n:Pam.Event.DidntKnow.03}}\""
+            },
+        },
+    ]
+}

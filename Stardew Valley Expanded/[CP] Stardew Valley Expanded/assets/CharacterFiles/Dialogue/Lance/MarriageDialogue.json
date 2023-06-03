@@ -1,96 +1,1132 @@
 {
-  //SPECIAL DIALOGUE
-  "patio_Lance": "The monster crops are in good health.$0",
-  "spouseRoom_Lance": "I was awarded these monster statues for my achievements in the field.$0#$e#*chuckle* Some colleagues of mine believe they're monsters in stasis...$5",
-  "funReturn_Lance": "How was your day, my love?$1#$e#My day was well. I managed to find time to continue my research.$0",
-  "funLeave_Lance": "I have guild business today. I'll be back tonight.$0",
-  "OneKid_0": "We both need to be strong for %kid1.$0",
-  "OneKid_1": "I've taken on many roles in life, but I've never been a parent until now.$1",
-  "OneKid_2": "I hope %kid1 likes books when they get older.#$b#Reading books when I was young was what sparked my interest in research. I never stopped reading.$5",
-  "OneKid_3": "When our child is old enough, we should travel the world together.$0",
-  "OneKid_4": "%kid1 has a lot of fight in them. Maybe they'll become an adventurer someday.$1",
-  "TwoKids_0": "I have faith our children will adopt the best parts of both of us.$5#$e#*chuckle* %kid1 has your eyes.$1",
-  "TwoKids_1": "I'll always wholeheartedly and unconditionally love our beautiful children.$0#$e#They will grow and change over the years and we will be with them at every step of the way.$1",
-  "TwoKids_2": "When I was outside, I found %kid2 covered in dirt. I drew them a bath.$0#$e#*chuckle* I know someone like that...$5",
-  "TwoKids_3": "We're both out of the house pretty often.$6#$b#What do you think about hiring a babysitter?$0#$e#I know a good lad in town who's looking for a part-time job.$1",
-  "TwoKids_4": "I'm thankful %kid1 and %kid2 get along well.$1",
-  
-  //SEASONAL DIALOGUE
-  "spring_Lance": "The smell of fresh air and feeling of sunshine on your face during this time of the year is soothing to the soul.$0",
-  "spring_1": "I can feel the valley teeming with life. Spring has arrived...$0#$e#Without winter, spring wouldn't be as appreciated.$5",
-  "spring_13": "I believe the Egg Festival is today.$5#$e#This will be a good opportunity for me to strike up a conversation with the valley residents.$1", 
-  "spring_24": "I've prepared for the flower dance ceremony and will gladly take your hand in dance, my darling.$1",
-  "summer_Lance": "Ah... I do enjoy hot weather.$5",
-  "summer_1": "The beginning of summer takes a heavy toll on a farmer.$0#$b#Take this, my dear. It'll help keep your stamina up [349].$1#$e#Good luck today, my love.$4",
-  "summer_11": "I've prepared a special dish using an old family recipe for the potluck.$0",
-  "summer_28": "Don't forget about the gathering on the beach tonight, my love.$0",
-  "fall_Lance": "The valley is alive with color... it sings to the soul.$0",
-  "fall_1": "Do you feel it too? The trees have all entered a great slumber.$0#$e#The smallest breeze showers us with leaves.$5",
-  "fall_6": "I'm craving a bowl of roasted butternut squash...$1#$e#*chuckle* Perhaps it's Autumn taking its effect on me.$5",
-  "fall_16": "You've worked hard this year, my love.$1#$b#I'm looking forward to your grange display showcasing your accomplishments.$0",
-  "fall_27": "Summoning a maze requires an immense amount of mana.$0#$e#I'd need to drink a special potion to achieve that power, but only for a brief moment.$5",
-  "winter_Lance": "Winter is a season where one can recover and prepare for the next year.$0",
-  "winter_1": "The valley was blanketed in snow last night.$0",
-  "winter_8": "Magic is the most effective way to fish. That's how I do it.$0",
-  "winter_12": "I wonder what merchandise the Night Market vendors will have this year?$0",
-  "winter_24": "I have something special planned for you tomorrow...$1",
-  "winter_25": "I traded for this in Castle Village just for you. It's a 'Galaxy Soul' [896].$0#$e#It'll make you stronger.$1#$e#Ah, what did I trade? That's... a secret.$1",
-  
-  //DAY DIALOGUE
-  "Indoor_Day_Lance": "I appreciate being able to kick back and relax.$1",
-  "Indoor_Day_0": "This house is certainly cozier than the outpost in the highlands.$0",
-  "Indoor_Day_1": "The refrigerator is always well-stocked with products of the farm.$0#$e#I used to eat nothing but field rations. Now I feel like a king!$1#$e#The field rations aren't that bad...$5",
-  "Indoor_Day_2": "What's on the agenda today?$0",
-  "Indoor_Day_3": "It's not common for me to find free time.$0#$e#I wonder what I'll spend my day doing...$5#$e#%Lance is pondering to himself.",
-  "Indoor_Day_4": "I took the liberty of cleaning the house this morning.$1#$e#It was very quick. I used a rather simple spell.$0",
-  "Outdoor_Lance": "Don't overwork yourself. Take this elixir. It'll rejuvenate you.[773]$1",
-  "Outdoor_0": "I cast a protective spell on the farmland to shield it from aphids.$0#$e#In large numbers, these insects can weaken plant growth.$6",
-  "Outdoor_1": "Maybe I'll do some exploring today? There's so much of the valley I haven't seen.$0",
-  "Outdoor_2": "I've come to truly appreciate how tranquil the valley is.$0",
-  "Outdoor_3": "There isn't anyone else I know who works as hard as you do.$5#$e#I hope you have an eventful day, my love.$1",
-  "Outdoor_4": "I don't know much about cultivating crops.$0#$e#I just enjoy seeing you work...$5",
-  "Rainy_Day_0": "The farmland will get a nice welcomed drink from this drizzle.$0",
-  "Rainy_Day_1": "Wipe your feet before coming back inside. I don't want you tracking in mud.$1",
-  "Rainy_Day_2": "When it rains, I just want to bury my nose in a book with a hot beverage.",
-  "Rainy_Day_3": "Without rain, there is no life...$5",
-  
-  //NIGHT DIALOGUE
-  "indoor_Night_Lance": "Welcome home, my love.$0",
-  "Indoor_Night_0": "I've heard tales of the perilous 'Skull Cavern' dungeons. Are they as dangerous as they say?$0",
-  "Indoor_Night_1": "I'm happy to see the end of this day. My body is ready for a long slumber.$0",
-  "Indoor_Night_2": "I tried my hand at cooking. Luckily we had all the ingredients I needed. [244 242 907 905 240]$0",
-  "Indoor_Night_3": "*chuckle* I heard cackling outside. She must be flying tonight...$5#$e#Every mage in our circle is aware of Magnus' breakup. It was very dramatic. Quite the event.$0",
-  "Indoor_Night_4": "We should light a nice fire and curl up in front of it after dinner.$4",
-  "Rainy_Night_Lance": "I enjoy falling asleep to the sound of gentle rain hitting the roof.$5",
-  "Rainy_Night_0": "Our house is well insulated from the weather outside.$0",
-  "Rainy_Night_1": "How was your day? Did you have a run-in with any monsters?$1",
-  "Rainy_Night_2": "I wonder if it's raining in the highlands too...$6#$e#The outpost can take care of itself. My magical barriers will keep the monsters at bay.$0",
-  "Rainy_Night_3": "Only mages with a high ranking are allowed to make a 'Nexus'.$5#$e#The Highlands, Stardew Valley, and Ginger Island are roughly in the same region. So I don't require one.$0",
-  "Rainy_Night_4": "*yawn* Shall we head to bed, my darling?$0",  
-  
-  //AFFECTION DIALOGUE
-  "Good_0": "You are my most precious treasure.$4",
-  "Good_1": "Sharing my life with you has made me realize how much happier I am now.$0#$b#I thought of myself as a nomad, but you make this house feel like a home.$1#$e#I cherish every moment with you.$4",
-  "Good_2": "Living on this farmland with you is quite the adventure.$1#$b#I hope it is for you too, my love.$1",
-  "Good_3": "There's a famous monster researcher in Galdora who owns the monster museum.$0#$e#Some of my research and findings are showcased there.$1",
-  "Good_4": "My master was a Dragon Knight. I became his pupil at a very young age when my arcane potential was discovered.$0",
-  "Good_5": "I crafted this totem for you. It'll bring rain clouds that'll water the farmland. [681]$0",
-  "Good_6": "I'm always interested to hear about your day.$1",
-  "Good_7": "Did you do something with your hair? You look charming today.$1",
-  "Neutral_0": "I'm not fond of watching TV or distracting myself with modern contraptions.$0#$e#I do however enjoy watching movies at the cinema.$1#$b#There's something magical about moving pictures... It captivates the mind.$5",
-  "Neutral_1": "Your Grandpa's shrine smells like magic.$0#$e#This farmland has a mysterious history...$5",
-  "Neutral_2": "Magnus studies ancient fruit and I study monster crops...$5#$e#In a strange way, our work is somewhat similar.$1",
-  "Neutral_3": "The saloon owner is so warm and welcoming. It makes one feel at home while enjoying good food and drink.$0#$b#I can see why his business is as successful as it is.$1#$e#I've been trying to go into town more lately.$5",
-  "Neutral_4": "I need to visit my guild soon. I'm running low on mana elixirs.$0",
-  "Neutral_5": "Do you ever wonder where we'll move to in the future?$0#$e#Maybe we'll purchase our own private island and live out our days there...$5",
-  "Neutral_6": "Where do you think monsters come from, @?$0#$e#Legends say they come from dark ancient magic.$5#$e#I believe there's more than meets the eye.$0",
-  "Neutral_7": "The saloon has a fine seasonal selection of draft beer. Better than most taverns I've been to.$5",
-  "Bad_0": "Sometimes I feel like I'm a ghost to you...$2",
-  "Bad_1": "*sigh* I destroyed expensive rare metals during a magical experiment.$2#$e#Such a terrible waste...$2",
-  "Bad_2": "We're both out of the house so often, I rarely see you...$6#$e#I know we both live busy lives, but we still need to find time with each other.",
-  "Bad_3": "Could I be better? Can I do better? Ugh...$2",
-  "Bad_4": "Not now, @.$3",
-  "Bad_5": "Do you ever get the feeling we rushed into this too quickly?...$2",
-  "Bad_6": "...$6#$e#%Lance is ignoring you.",
-  "Bad_7": "I thought we promised each other we would talk things out if it got bad...$2"
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "Entries": {
+        //SPECIAL DIALOGUE
+        "patio_Lance": "{{i18n:Lance.MarriageDialogue.001}}",
+        "spouseRoom_Lance": "{{i18n:Lance.MarriageDialogue.002}}",
+        "funReturn_Lance": "{{i18n:Lance.MarriageDialogue.003}}",
+        "funLeave_Lance": "{{i18n:Lance.MarriageDialogue.004}}",
+        "OneKid_0": "{{i18n:Lance.MarriageDialogue.005}}",
+        "OneKid_1": "{{i18n:Lance.MarriageDialogue.006}}",
+        "OneKid_2": "{{i18n:Lance.MarriageDialogue.007}}",
+        "OneKid_3": "{{i18n:Lance.MarriageDialogue.008}}",
+        "OneKid_4": "{{i18n:Lance.MarriageDialogue.009}}",
+        "TwoKids_0": "{{i18n:Lance.MarriageDialogue.010}}",
+        "TwoKids_1": "{{i18n:Lance.MarriageDialogue.011}}",
+        "TwoKids_2": "{{i18n:Lance.MarriageDialogue.012}}",
+        "TwoKids_3": "{{i18n:Lance.MarriageDialogue.013}}",
+        "TwoKids_4": "{{i18n:Lance.MarriageDialogue.014}}",
+        //SEASONAL DIALOGUE
+        "spring_Lance": "{{i18n:Lance.MarriageDialogue.015}}",
+        "spring_1": "{{i18n:Lance.MarriageDialogue.016}}",
+        "spring_13": "{{i18n:Lance.MarriageDialogue.017}}",
+        "spring_24": "{{i18n:Lance.MarriageDialogue.018}}",
+        "summer_Lance": "{{i18n:Lance.MarriageDialogue.019}}",
+        "summer_1": "{{i18n:Lance.MarriageDialogue.020}}",
+        "summer_11": "{{i18n:Lance.MarriageDialogue.021}}",
+        "summer_28": "{{i18n:Lance.MarriageDialogue.022}}",
+        "fall_Lance": "{{i18n:Lance.MarriageDialogue.023}}",
+        "fall_1": "{{i18n:Lance.MarriageDialogue.024}}",
+        "fall_6": "{{i18n:Lance.MarriageDialogue.025}}",
+        "fall_16": "{{i18n:Lance.MarriageDialogue.026}}",
+        "fall_27": "{{i18n:Lance.MarriageDialogue.027}}",
+        "winter_Lance": "{{i18n:Lance.MarriageDialogue.028}}",
+        "winter_1": "{{i18n:Lance.MarriageDialogue.029}}",
+        "winter_8": "{{i18n:Lance.MarriageDialogue.030}}",
+        "winter_12": "{{i18n:Lance.MarriageDialogue.031}}",
+        "winter_24": "{{i18n:Lance.MarriageDialogue.032}}",
+        "winter_25": "{{i18n:Lance.MarriageDialogue.033}}",
+        //DAY DIALOGUE
+        "Indoor_Day_Lance": "{{i18n:Lance.MarriageDialogue.034}}",
+        "Indoor_Day_0": "{{i18n:Lance.MarriageDialogue.035}}",
+        "Indoor_Day_1": "{{i18n:Lance.MarriageDialogue.036}}",
+        "Indoor_Day_2": "{{i18n:Lance.MarriageDialogue.037}}",
+        "Indoor_Day_3": "{{i18n:Lance.MarriageDialogue.038}}",
+        "Indoor_Day_4": "{{i18n:Lance.MarriageDialogue.039}}",
+        "Outdoor_Lance": "{{i18n:Lance.MarriageDialogue.040}}",
+        "Outdoor_0": "{{i18n:Lance.MarriageDialogue.041}}",
+        "Outdoor_1": "{{i18n:Lance.MarriageDialogue.042}}",
+        "Outdoor_2": "{{i18n:Lance.MarriageDialogue.043}}",
+        "Outdoor_3": "{{i18n:Lance.MarriageDialogue.044}}",
+        "Outdoor_4": "{{i18n:Lance.MarriageDialogue.045}}",
+        "Rainy_Day_0": "{{i18n:Lance.MarriageDialogue.046}}",
+        "Rainy_Day_1": "{{i18n:Lance.MarriageDialogue.047}}",
+        "Rainy_Day_2": "{{i18n:Lance.MarriageDialogue.048}}",
+        "Rainy_Day_3": "{{i18n:Lance.MarriageDialogue.049}}",
+        //NIGHT DIALOGUE
+        "indoor_Night_Lance": "{{i18n:Lance.MarriageDialogue.050}}",
+        "Indoor_Night_0": "{{i18n:Lance.MarriageDialogue.051}}",
+        "Indoor_Night_1": "{{i18n:Lance.MarriageDialogue.052}}",
+        "Indoor_Night_2": "{{i18n:Lance.MarriageDialogue.053}}",
+        "Indoor_Night_3": "{{i18n:Lance.MarriageDialogue.054}}",
+        "Indoor_Night_4": "{{i18n:Lance.MarriageDialogue.055}}",
+        "Rainy_Night_Lance": "{{i18n:Lance.MarriageDialogue.056}}",
+        "Rainy_Night_0": "{{i18n:Lance.MarriageDialogue.057}}",
+        "Rainy_Night_1": "{{i18n:Lance.MarriageDialogue.058}}",
+        "Rainy_Night_2": "{{i18n:Lance.MarriageDialogue.059}}",
+        "Rainy_Night_3": "{{i18n:Lance.MarriageDialogue.060}}",
+        "Rainy_Night_4": "{{i18n:Lance.MarriageDialogue.061}}",
+        //AFFECTION DIALOGUE
+        "Good_0": "{{i18n:Lance.MarriageDialogue.062}}",
+        "Good_1": "{{i18n:Lance.MarriageDialogue.063}}",
+        "Good_2": "{{i18n:Lance.MarriageDialogue.064}}",
+        "Good_3": "{{i18n:Lance.MarriageDialogue.065}}",
+        "Good_4": "{{i18n:Lance.MarriageDialogue.066}}",
+        "Good_5": "{{i18n:Lance.MarriageDialogue.067}}",
+        "Good_6": "{{i18n:Lance.MarriageDialogue.068}}",
+        "Good_7": "{{i18n:Lance.MarriageDialogue.069}}",
+        "Neutral_0": "{{i18n:Lance.MarriageDialogue.070}}",
+        "Neutral_1": "{{i18n:Lance.MarriageDialogue.071}}",
+        "Neutral_2": "{{i18n:Lance.MarriageDialogue.072}}",
+        "Neutral_3": "{{i18n:Lance.MarriageDialogue.073}}",
+        "Neutral_4": "{{i18n:Lance.MarriageDialogue.074}}",
+        "Neutral_5": "{{i18n:Lance.MarriageDialogue.075}}",
+        "Neutral_6": "{{i18n:Lance.MarriageDialogue.076}}",
+        "Neutral_7": "{{i18n:Lance.MarriageDialogue.077}}",
+        "Bad_0": "{{i18n:Lance.MarriageDialogue.078}}",
+        "Bad_1": "{{i18n:Lance.MarriageDialogue.079}}",
+        "Bad_2": "{{i18n:Lance.MarriageDialogue.080}}",
+        "Bad_3": "{{i18n:Lance.MarriageDialogue.081}}",
+        "Bad_4": "{{i18n:Lance.MarriageDialogue.082}}",
+        "Bad_5": "{{i18n:Lance.MarriageDialogue.083}}",
+        "Bad_6": "{{i18n:Lance.MarriageDialogue.084}}",
+        "Bad_7": "{{i18n:Lance.MarriageDialogue.085}}",
+      },
+    },
+
+    //Adds spouse room dialogue variety for Lance
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 1"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 4"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 6"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary3}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 8"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 11"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary5}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 12"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 13"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 15"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary7}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 19"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary8}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 22"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 23"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 27"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 1"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary1}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 4"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 6"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary3}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 8"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 11"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary5}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 12"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 13"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 15"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary7}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 19"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary8}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 22"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 23"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 27"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 1"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 4"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 6"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary3}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 8"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 11"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary5}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 12"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 13"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 15"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary7}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 19"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary8}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 22"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 23"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 27"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 1"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 4"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 6"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary3}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 8"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 11"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary5}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 12"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 13"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 15"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary7}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 19"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary8}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 22"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary4}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 23"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 27"
+      },
+      "Entries": {
+        "spouseRoom_Lance": "{{i18n:Lance.SpouseVary6}}",
+      }
+    },
+    //LANCE DYNAMIC MARRIAGE DIALOGUES
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 2"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse1}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse2}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 3"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse3}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 7"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse4}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse5}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 9"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse6}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse7}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 10"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse8}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse9}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 14"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse10}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse11}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 16"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse12}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse13}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 17"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse14}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 21"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse15}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse16}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 23"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse17}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse18}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 24"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse19}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 28"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse20}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse21}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 2"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse22}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse23}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 3"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse24}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 7"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse25}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse26}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 9"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse27}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse28}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 10"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse29}}[253]{{i18n:Lance.DynamicSpouse29B}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 14"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse30}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse31}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 16"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse32}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse33}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 17"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse34}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 21"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse35}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse36}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 23"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse37}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse38}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 24"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse39}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 28"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse40}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse41}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 2"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse42}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse43}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 3"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse44}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 9"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse45}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse46}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 10"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse47}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 14"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse48}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse49}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 16"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse50}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse51}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 17"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse52}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 21"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse53}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse54}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 23"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse55}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse56}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 24"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse57}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 28"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse58}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse59}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 2"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse60}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse61}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 3"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse62}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 7"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse63}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse64}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 9"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse65}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse66}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 10"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse67}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 14"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse68}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse69}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 16"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse70}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse71}}",
+      }
+    },
+    {
+      //Wednesday - Fable Reef
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 17"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse72}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 21"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse73}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse74}}",
+      }
+    },
+    {
+      //Tuesday - Adventure Guild
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 23"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse75}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse76}}",
+      }
+    },
+    {
+      //Wednesday - Pelican Town
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 24"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse77}}",
+      }
+    },
+    {
+      //Sunday - Highlands Outpost
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 28"
+      },
+      "Entries": {
+        "funReturn_Lance": "{{i18n:Lance.DynamicSpouse78}}",
+        "funLeave_Lance": "{{i18n:Lance.DynamicSpouse79}}",
+      }
+    },
+  ]
 }
