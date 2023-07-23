@@ -43,8 +43,11 @@ namespace StardewValleyExpanded
                 Monitor = monitor; //store monitor
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_TMXLLoadMapFacingDirection)}\": prefixing SDV method \"Game1.warpFarmer(LocationRequest, int, int, int)\".", LogLevel.Trace);
+                MethodInfo original = Constants.TargetPlatform == GamePlatform.Android
+                    ? AccessTools.Method(typeof(Game1), nameof(Game1.warpFarmer), new[] { typeof(LocationRequest), typeof(int), typeof(int), typeof(int), typeof(bool) })
+                    : AccessTools.Method(typeof(Game1), nameof(Game1.warpFarmer), new[] { typeof(LocationRequest), typeof(int), typeof(int), typeof(int) });
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Game1), nameof(Game1.warpFarmer), new[] { typeof(LocationRequest), typeof(int), typeof(int), typeof(int) }),
+                    original: original,
                     prefix: new HarmonyMethod(typeof(HarmonyPatch_TMXLLoadMapFacingDirection), nameof(Game1_warpFarmer))
                 );
 

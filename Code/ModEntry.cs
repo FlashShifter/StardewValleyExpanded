@@ -32,7 +32,7 @@ namespace StardewValleyExpanded
 
             CustomBuffs.Enable(helper, Monitor);
 
-            ClintVolumeControl.Enable(helper, Monitor);
+            //ClintVolumeControl.Enable(helper, Monitor);
 
             FireflySpawner.Enable(helper, Monitor);
 
