@@ -15,16 +15,56 @@
       },
     },
     // CHARLIE - SHANE'S CHICKEN
+
     {
-      //Charlie's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "When": {
         "HasSeenEvent |contains=3900074": true
       }, //Player must have seen Shane's 8 heart event for Charlie to spawn into the game.
       "Entries": {
-        "CharlieChicken": "child/polite/shy/neutral/male/non-datable/null/Other/null//Custom_Charlie_WarpRoom 3 3/{{i18n:Name.Charlie}}",
-      }
+        "CharlieChicken": {
+          "DisplayName": "{{i18n:Name.Charlie}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Child",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Charlie_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Charlie_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Charlie's Animations
@@ -73,16 +113,8 @@
         "HasSeenEvent |contains=3900074": true
       },
       "Entries": {
-        "22": "0 Custom_Charlie_WarpRoom 2 3 3/800 AnimalShop 23 15 1/1030 AnimalShop 16 14 2/1100 CommunityCenter 16 22 2 Charlie_Sleep/1800 CommunityCenter 9 26 3/1850 AnimalShop 26 6 2 Charlie_Sleep",
+        "FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Charlie_WarpRoom 2 3 3/800 AnimalShop 23 15 1/1030 AnimalShop 16 14 2/1100 CommunityCenter 16 22 2 Charlie_Sleep/1800 CommunityCenter 9 26 3/1850 AnimalShop 26 6 2 Charlie_Sleep",
       },
-    },
-    {
-      //Charlie's AntiSocial Flag
-      "Action": "EditData",
-      "Target": "Data/AntiSocialNPCs",
-      "Entries": {
-        "CharlieChicken": true
-      }
     },
   ]
 }

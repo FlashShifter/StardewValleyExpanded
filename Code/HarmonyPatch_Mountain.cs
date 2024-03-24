@@ -10,6 +10,8 @@ using StardewValley.Locations;
 
 using HarmonyLib;
 using StardewModdingAPI;
+using StardewValley;
+using System.Reflection;
 
 namespace StardewValleyExpanded
 {
@@ -67,11 +69,18 @@ namespace StardewValleyExpanded
 
             harmony.Patch(original, null, postfix);
 
-            var method = AccessTools.Method(typeof(WorldChangeEvent), "setUp");
+            var method = AccessTools.Method(typeof(WorldChangeEvent), "resetForPlayerEntry");
+            var prefix = new HarmonyMethod(typeof(HarmonyPatch_Mountain), nameof(Prefix));
             var transpile = new HarmonyMethod(typeof(HarmonyPatch_Mountain), nameof(Transpile));
-            harmony.Patch(method, null, null, transpile);
+            harmony.Patch(method, prefix, null, transpile);
 
             HarmonyPatch_Mountain.Applied = true;
+        }
+
+        private static void Prefix(WorldChangeEvent __instance, ref Point targetTile)
+        {
+            if (__instance.whichEvent == 8 || __instance.whichEvent == 9)
+                targetTile = new Point(48, 11);
         }
 
         /// <summary>
@@ -144,95 +153,100 @@ namespace StardewValleyExpanded
             landslide.SetValue(__instance, landslidePosition);
         }
 
+        private static Label ccLabel;
         private static void PatternMatchCommunityCenterEvent(List<CodeInstruction> instructions, int i)
         {
-            if (!HarmonyPatch_Mountain.CheckOpCodeAndStrValue(instructions, i, 0, "Mountain"))
+            if (instructions[i].opcode == OpCodes.Switch)
             {
+                ccLabel = (instructions[i].operand as Label[])[9];
                 return;
             }
-
-            if (!HarmonyPatch_Mountain.CheckOpCodeAndStrValue(instructions, i, 8, "cc_Boulder"))
-            {
+            if (ccLabel == default(Label))
                 return;
-            }
-
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 11, out var xValue) || xValue.opcode != OpCodes.Ldc_I4_S)
-            {
+            if (!instructions[i].labels.Contains(ccLabel))
                 return;
-            }
 
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 13, out var yValue) || yValue.opcode != OpCodes.Ldc_I4_5)
+            for (int j = i; j < instructions.Count; ++j)
             {
-                return;
+                if (instructions[j].opcode == OpCodes.Br)
+                    break;
+                if (instructions[j].opcode == OpCodes.Ldc_R4)
+                {
+                    if ((float)instructions[j].operand == 368f)
+                        instructions[j].operand = 560f;
+                }
             }
-
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 54, out var junimoOneY) || junimoOneY.opcode != OpCodes.Ldc_R4)
-            {
-                return;
-            }
-
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 97, out var junimoTwoY) || junimoTwoY.opcode != OpCodes.Ldc_R4)
-            {
-                return;
-            }
-
-            xValue.operand = 48;
-
-            yValue.opcode = OpCodes.Ldc_I4_S;
-            yValue.operand = 11;
-
-            junimoOneY.operand = 560f;
-            junimoTwoY.operand = 560f;
 
             HarmonyPatch_Mountain.patchedCommunityRoute = true;
         }
 
+        private static Label jojaLabel;
         private static void PatternMatchJojaEvent(List<CodeInstruction> instructions, int i)
         {
-            if (!HarmonyPatch_Mountain.CheckOpCodeAndStrValue(instructions, i, 0, "Mountain"))
+            if (instructions[i].opcode == OpCodes.Switch)
             {
+                jojaLabel = (instructions[i].operand as Label[])[8];
                 return;
             }
-
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 6, out var xValue) || xValue.opcode != OpCodes.Ldc_I4_S)
-            {
+            if (jojaLabel == default(Label))
                 return;
-            }
-
-            if (!HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 8, out var yValue) || yValue.opcode != OpCodes.Ldc_I4_5)
-            {
+            if (!instructions[i].labels.Contains(jojaLabel))
                 return;
-            }
 
             // Remove Orange guy
-            instructions.RemoveRange(i + 10, 25);
+            instructions.RemoveRange(i, 25);
+            instructions[i].labels.Add(jojaLabel);
 
-            // Drill Guy relocated to: 3488, 224
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 22, out var drillGuyX);
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 23, out var drillGuyY);
+            // Drill Guy relocated
+            for (int j = i; j < instructions.Count; ++j)
+            {
+                if (instructions[j].opcode == OpCodes.Br)
+                    break;
+                if (instructions[j].opcode == OpCodes.Ldc_R4)
+                {
+                    if ((float)instructions[j].operand == 3040f)
+                        instructions[j].operand = 3104f;
+                    else if ((float)instructions[j].operand == 160f)
+                    {
+                        instructions[j].operand = 640f;
+                        break;
+                    }
+                }
+            }
 
-            drillGuyX.operand = 3104f;
-            drillGuyY.operand = 640f;
+            // Tools relocated
+            for (int j = i; j < instructions.Count; ++j)
+            {
+                if (instructions[j].opcode == OpCodes.Br)
+                    break;
+                if (instructions[j].opcode == OpCodes.Ldc_R4)
+                {
+                    if ((float)instructions[j].operand == 2816f)
+                        instructions[j].operand = 3008f;
+                    else if ((float)instructions[j].operand == 368f)
+                    {
+                        instructions[j].operand = 496f;
+                        break;
+                    }
+                }
+            }
 
-            // Tools relocated to: 3072, 496
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 56, out var toolsX);
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 57, out var toolsY);
-
-            toolsX.operand = 3008f;
-            toolsY.operand = 496f;
-
-            // Morris relocated to: 3200, 496
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 81, out var morrisX);
-            HarmonyPatch_Mountain.TryGetInstruction(instructions, i, 82, out var morrisY);
-
-            morrisX.operand = 3092f;
-            morrisY.operand = 496f;
-
-            // Move Viewport and Light source.
-            xValue.operand = 48;
-
-            yValue.opcode = OpCodes.Ldc_I4_S;
-            yValue.operand = 11;
+            // Morris relocated
+            for (int j = i; j < instructions.Count; ++j)
+            {
+                if (instructions[j].opcode == OpCodes.Br)
+                    break;
+                if (instructions[j].opcode == OpCodes.Ldc_R4)
+                {
+                    if ((float)instructions[j].operand == 3200f)
+                        instructions[j].operand = 3092f;
+                    else if ((float)instructions[j].operand == 368f)
+                    {
+                        instructions[j].operand = 496f;
+                        break;
+                    }
+                }
+            }
 
             HarmonyPatch_Mountain.patchedJojaRoute = true;
         }

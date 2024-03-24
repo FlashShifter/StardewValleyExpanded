@@ -84,31 +84,31 @@ namespace StardewValleyExpanded
             switch (seededRandom.Next(5)) //based on a random number
             {
                 case 0:
-                    buff = new Buff(0); //farming buff
-                    buff.buffAttributes[0] = 3; //+3 farming
+                    buff = new Buff("0"); //farming buff
+                    buff.effects.FarmingLevel.Value = 3;
                     break;
                 case 1:
-                    buff = new Buff(1); //fishing buff
-                    buff.buffAttributes[1] = 3; //+3 fishing
+                    buff = new Buff("1"); //fishing buff
+                    buff.effects.FishingLevel.Value = 3;
                     break;
                 case 2:
-                    buff = new Buff(2); //mining buff
-                    buff.buffAttributes[2] = 3; //+3 mining
+                    buff = new Buff("2"); //mining buff
+                    buff.effects.MiningLevel.Value = 3;
                     break;
                 case 3:
-                    buff = new Buff(5); //foraging buff
-                    buff.buffAttributes[5] = 3; //+3 foraging
+                    buff = new Buff("5"); //foraging buff
+                    buff.effects.ForagingLevel.Value = 3;
                     break;
                 case 4:
-                    buff = new Buff(11); //attack buff
-                    buff.buffAttributes[11] = 3; //+3 attack
+                    buff = new Buff("11"); //attack buff
+                    buff.effects.Attack.Value = 3;
                     break;
             }
 
             if (buff != null) //if a buff was selected
             {
                 buff.millisecondsDuration = buff.totalMillisecondsDuration = millisecondsBuffDuration; //set the buff's current and total durations
-                Game1.buffsDisplay.addOtherBuff(buff); //apply it to the local player
+                Game1.player.buffs.Apply(buff); //apply it to the local player
             } 
         }
     }

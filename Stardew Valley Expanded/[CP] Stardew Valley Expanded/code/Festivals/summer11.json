@@ -1,0 +1,928 @@
+{
+  "Changes": [
+    { //Luau data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "Entries": {
+        "set-up": "event2/-1000 -1000/farmer 38 3 2/changeToTemporaryMap Beach-Luau/loadActors Set-Up/addTemporaryActor Governor 16 32 32 4 2/advancedMove Vincent true 3 0 3 3000 -3 0 3 3000/advancedMove Jas true 3 0 1 3000 -3 0 1 3000/advancedMove Pam true 4 25000 -5 0 4 20000 5 0/advancedMove Gus True 0 -1 3 4000 0 1 3 4000/advancedMove Shane true 1 10000 0 1 1 10000 0 -1/advancedMove Clint true 4 15000 -3 0 4 15000 6 0 4 10000 -3 0/animate Emily false true 250 16 17 16 17 20 21 20 21 18 19 18 19 22 23 22 23/animate Robin false true 500 20 21 20 22/animate Demetrius false true 500 24 25 24 26/animate Marnie false true 200 17 18 17 19/positionOffset Marnie 0 16/animate Claire false true 200 20 20 20 20 20 20 20 20 20 20 21 21 21 21 21 21 22 22 22 22 22 22 22 22 22 22 22 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 23 24 25 22 22 22 22 22 21 21 21 21 21 21 21 21 20/viewport 38 2 clamp true/pause 1000/playerControl luau",
+        "set-up_y2": "event2/-1000 -1000/farmer 38 3 2/changeToTemporaryMap Beach-Luau2/viewport -1000 -1000/loadActors Set-Up/addTemporaryActor Governor 16 32 27 4 2/animate Wizard false true 100 20/positionOffset Governor -8 0/advancedMove Harvey true 2 380 1 500 2 380 3 500/advancedMove Gus true 1 5300 4 300 0 -2 4 300 1 7500 2 300 0 2 2 300 1 1000/animate Emily false true 250 16 17 16 17 20 21 20 21 18 19 18 19 22 23 22 23/advancedMove Abigail true 4 6250 1 300 3 0 1 250 4 4500 3 300 -3 0 3 250 4 1250/advancedMove Caroline true 4 2500 1 350 2 0 1 300 4 8500 3 300 -2 0 3 250 4 1500/advancedMove Clint true 1 7000 2 300 0 2 3 0 0 -3 4 300 3 6500 2 300 0 3 -3 0 0 -2 4 300 1 1000/advancedMove Pam true 3 7500 2 300 0 4 -5 0 3 300 2 5250 1 300 5 0 0 -4 4 300 3 800/advancedMove Leo true 2 4000 2 0 2 5000 4 0 2 4500 -4 0 2 5000 -2 0 2 1000/advancedMove Linus true 4 4000 2 0 0 -1 3 5000 0 -2 -1 0 2 3000 -2 0 0 1 1 4000 0 2 1 0 4 1000/advancedMove Elliott true 2 7300 3 2300/animate Willy true true 250 28 29 30 31/animate Robin false true 500 20 21 20 22/animate Demetrius false true 500 24 25 24 26/animate Marnie false true 200 17 18 17 19/positionOffset Marnie 0 16/positionOffset Leah 0 -12/positionOffset Elliott -8 -12/positionOffset Evelyn -8 8/positionOffset George 12 8/positionOffset Kent -30 -8/positionOffset Jodi -10 -12/positionOffset MarlonFay -20 -12/animate Maru false true 100 31/positionOffset Maru 12 24/positionOffset Emily 16 -16/positionOffset Penny -8 16/viewport player clamp true unfreeze/globalFadeToClear/playerControl luau",
+        "mainEvent": "pause 500/playMusic ocean/globalFade/viewport -1000 -1000/loadActors MainEvent/addTemporaryActor Governor 16 32 35 10 2/warp farmer1 33 19/warp farmer2 32 19/warp farmer3 40 19/warp farmer4 28 9/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 1/viewport 35 12 true/pause 2000/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 100/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/speak Lewis \"{{i18n:Luau.01}}\"/pause 1000/faceDirection Lewis 3/pause 500/speak Lewis \"{{i18n:Luau.02}}\"/pause 500/speak Governor \"{{i18n:Luau.03}}\"/playMusic none/pause 500/move Governor 0 1 2/pause 1000/playSound dwop/showFrame Governor 8 true/pause 1000/animate Governor false false 200 8 8 9 10 11 11/pause 1100/playSound sipTea/pause 1000/playSound gulp/pause 500/showFrame Governor 8 true/animate Governor false false 200 11 10 9 8/pause 900/speak Governor \"...$h\"/pause 300/cutscene governorTaste/null",
+        "Robin": "{{i18n:Luau.Robin}}",
+        "Demetrius": "{{i18n:Luau.Demetrius}}",
+        "Andy": "{{i18n:Andy.Luau}}",
+        "Claire": "{{i18n:luau.claire.1}}",
+        "GuntherSilvian": "{{i18n:Gunther.Luau}}",
+        "Lance": "{{i18n:luau.lance.1}}",
+        "MarlonFay": "{{i18n:Marlon.Luau}}",
+        "Morgan": "{{i18n:Morgan.Luau}}",
+        "MorrisTod": "{{i18n:Morris.Luau}}",
+        "Olivia": "{{i18n:luau.Olivia.1}}",
+        "Sandy": "{{i18n:Sandy.Luau}}",
+        "Scarlett": "{{i18n:Scarlett.Luau}}",
+        "Sophia": "{{i18n:luau.Sophia.1}}",
+        "Victor": "{{i18n:luau.victor.1}}",
+        "Victor_y2": "{{i18n:victor.Luau2}}",
+        "Morgan_y2": "{{i18n:Morgan.Luau2}}",
+        "Lance_y2": "{{i18n:Lance.Luau2}}",
+        "Claire_y2": "{{i18n:Claire.Luau2}}",
+        "Susan_y2": "{{i18n:Susan.Luau2}}",
+        "Andy_y2": "{{i18n:Andy.Luau2}}",
+        "Scarlett_y2": "{{i18n:Scarlett.Luau2}}",
+        "Olivia_y2": "{{i18n:Olivia.Luau2}}",
+        "MarlonFay_y2": "{{i18n:Marlon.Luau2}}",
+        "GuntherSilvian_y2": "{{i18n:Gunther.Luau2}}",
+        "Martin_y2": "{{i18n:Martin.Luau2}}",
+        "Sophia_y2": "{{i18n:Sophia.Luau2}}",
+        "Sandy_y2": "{{i18n:Sandy.Luau2}}",
+        "MorrisTod_y2": "{{i18n:Morris.Luau2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "Entries": {
+        "Apples": "{{i18n:Apples.Luau}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Claire": "{{i18n:luau.claire.2}}",
+      },
+      "When": {
+        "Spouse": "Claire"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Olivia": "{{i18n:luau.Olivia.2}}",
+      },
+      "When": {
+        "Spouse": "Olivia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Sophia": "{{i18n:luau.Sophia.2}}",
+      },
+      "When": {
+        "Spouse": "Sophia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "HasSeenEvent |contains=6665293": false
+      },
+      "Entries": {
+        "Susan": "{{i18n:Susan.Luau.1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "HasSeenEvent |contains=6665293": true
+      },
+      "Entries": {
+        "Susan": "{{i18n:Susan.Luau.2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Victor": "{{i18n:luau.victor.2}}"
+      },
+      "When": {
+        "Spouse": "Victor"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Wizard": "{{i18n:luau.wizard.1}}"
+      },
+      "When": {
+        "Spouse": "Wizard"
+      }
+    },
+    //y2
+    
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "Entries": {
+        "Apples_y2": "{{i18n:Apples.Luau}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Claire_y2": "{{i18n:luau.claire.2}}",
+      },
+      "When": {
+        "Spouse": "Claire"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Olivia_y2": "{{i18n:luau.Olivia.2}}",
+      },
+      "When": {
+        "Spouse": "Olivia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Sophia_y2": "{{i18n:luau.Sophia.2}}",
+      },
+      "When": {
+        "Spouse": "Sophia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "HasSeenEvent |contains=6665293": false
+      },
+      "Entries": {
+        "Susan_y2": "{{i18n:Susan.Luau.1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "When": {
+        "HasSeenEvent |contains=6665293": true
+      },
+      "Entries": {
+        "Susan_y2": "{{i18n:Susan.Luau.2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Victor_y2": "{{i18n:luau.victor.2}}"
+      },
+      "When": {
+        "Spouse": "Victor"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/summer11",
+      "Entries": {
+        "Wizard_y2": "{{i18n:luau.wizard.1}}"
+      },
+      "When": {
+        "Spouse": "Wizard",
+        "HasMod |contains=Parrot.RomRas": false,
+        "HasMod |contains=Jellonip.RRRR": false,
+      }
+    },
+    { // YEAR ONE luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 49 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 46 12 left",
+          "Delimiter": "/"
+        },
+        { //Olivia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 41 13 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 46 11 left",
+          "Delimiter": "/"
+        },
+        { //Andy
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 32 10 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 40 6 down",
+          "Delimiter": "/"
+        },
+        { //Susan
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 33 16 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 39 6 down",
+          "Delimiter": "/"
+        },
+        { //Sophia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 50 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 27 10 right",
+          "Delimiter": "/"
+        },
+        { //Marlon
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 54 7 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 54 7 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 31 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 34 10 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 23 12 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 40 10 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "GuntherUnlocked": "true",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 49 17 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 30 11 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3691371",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 52 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 27 11 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 14 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 14 4 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "5978924",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 12 39 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Morgan 12 39 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Spouse": "Lance",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 31 19 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 34 19 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sandy 22 5 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sandy 27 61 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { // YEAR TWO luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 15 14 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 30 18 up",
+          "Delimiter": "/"
+        },
+        { //Olivia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 20 9 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 31 17 left",
+          "Delimiter": "/"
+        },
+        { //Andy
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 27 15 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 23 19 up",
+          "Delimiter": "/"
+        },
+        { //Susan
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 23 6 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 24 19 up",
+          "Delimiter": "/"
+        },
+        { //Sophia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 13 14 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 29 18 up",
+          "Delimiter": "/"
+        },
+        { //Marlon
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 53 7 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 20 5 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 26 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 22 9 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 34 7 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 24 5 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+	{ //Martin luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 36 7 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Martin 25 5 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "GuntherUnlocked": "true",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 15 7 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 28 4 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "3691371",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 16 10 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 28 19 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 15 4 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 15 4 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morgan luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "HasSeenEvent": "5978924",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Morgan 11 27 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Morgan 12 39 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance luau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Spouse": "Lance",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 19 24 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 19 5 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandyluau festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sandy 45 14 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sandy 33 11 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    //Map Load
+    {
+      "Action": "Load",
+      "Target": "Maps/Beach-Luau",
+      "FromFile": "Assets/Maps/FestivalMaps/Beach-SVE-Luau.tmx",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Beach-Luau2",
+      "FromFile": "Assets/Maps/FestivalMaps/Beach-SVE-Luau2.tmx",
+    },
+  ]
+}

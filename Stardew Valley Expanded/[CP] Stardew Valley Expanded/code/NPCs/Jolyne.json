@@ -1,13 +1,53 @@
 {
   "Changes": [
     // JOLYNE NPC
+
     {
-      //Jolyne NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Jolyne": "Adult/neutral/neutral/neutral/female/non-datable/null/Other/null//Custom_Jolyne_WarpRoom 3 3/{{i18n:Name.Jolyne}}",
-      }
+        "Jolyne": {
+          "DisplayName": "{{i18n:Name.Jolyne}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Jolyne_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Jolyne_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Jolyne's Animations
@@ -71,13 +111,13 @@
         "Mon": "{{i18n:Jolyne.GuildDialogue.02}}",
       }
     },
-    {
+   /* {
       //Jolyne's AntiSocial Flag
       "Action": "EditData",
       "Target": "Data/AntiSocialNPCs",
       "Entries": {
         "Jolyne": true
       }
-    },
+    },*/
   ]
 }

@@ -3,20 +3,15 @@
     <AssemblyName>StardewValleyExpanded</AssemblyName>
     <RootNamespace>StardewValleyExpanded</RootNamespace>
     <Version>1.15.0</Version>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Platforms>AnyCPU</Platforms>
     <PlatformTarget>AnyCPU</PlatformTarget>
 
     <EnableHarmony>true</EnableHarmony>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="3.4.0-beta.20210813" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="AntiSocial">
-      <HintPath>StardewValleyExpanded\AntiSocial.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,4 +22,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  
+  <!-- mac workaround, remove later -->
+  <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+    <StartAction>Program</StartAction>
+    <StartProgram>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS\StardewModdingAPI</StartProgram>
+    <StartWorkingDirectory>/Users/spacechase0/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS</StartWorkingDirectory>
+  </PropertyGroup>
 </Project>

@@ -1,21 +1,63 @@
   {
     "Changes": [
+
+
       {
         "Action": "EditData",
-        "When": {
-          "HasSeenEvent": "5978924"
-        },
-        "Target": "Data/NPCDispositions",
+        "Target": "Data/Characters",
         "Entries": {
-          "Morgan": "child/polite/shy/neutral/null/non-datable/null/Other/fall 7//Custom_Morgan_WarpRoom 3 3/{{i18n:Name.Morgan}}",
-        }
+          "Morgan": {
+            "DisplayName": "{{i18n:Name.Morgan}}",
+            "BirthSeason": "Fall",
+            "BirthDay": 7,
+            "HomeRegion": "Other",
+            "Language": "Default",
+            "Gender": "Undefined",
+            "Age": "Child",
+            "Manner": "Polite",
+            "SocialAnxiety": "Shy",
+            "Optimism": "Neutral",
+            "IsDarkSkinned": false,
+            "CanBeRomanced": false,
+            "LoveInterest": "",
+            "Calendar": "HiddenUntilMet",
+            "SocialTab": "HiddenUntilMet",
+            "CanSocialize": true,
+            "CanVisitIslandCondition": "FALSE",
+            "ExcludeFromIntroductionsQuest": true,
+            "ExcludeFromPerfectionScore": false,
+            "EndSlideShow": "MainGroup",
+            "FriendsAndFamily": {},
+            "WinterStarParticipant": false,
+            "UnlockConditions": "PLAYER_HAS_SEEN_EVENT Any 5978924",
+            "SpawnIfMissing": true,
+            "Home": [
+              {
+                "Id": "FlashShifter.StardewValleyExpandedCP_Morgan_WarpRoom",
+                "Condition": null,
+                "Location": "Custom_Morgan_WarpRoom",
+                "Tile": {
+                  "X": 3,
+                  "Y": 3
+                },
+                "Direction": "left"
+              }
+            ],
+            "TextureName": null,
+            "Size": {
+              "X": 16,
+              "Y": 32
+            },
+            "CustomFields": {}
+          },
+        },
       },
       {
         //Morgan's Gift Tastes
         "Action": "EditData",
         "Target": "Data/NPCGiftTastes",
         "Entries": {
-          "Morgan": "{{i18n:Morgan.Gift.Loved}}/337 305 308/{{i18n:Morgan.Gift.Liked}}/268 155 768 769 773 772 392 394/{{i18n:Morgan.Gift.Disliked}}/395 399 402 406 410 248 256 190 188 -75/{{i18n:Morgan.Gift.Hated}}/348 346 283 459 303/{{i18n:Morgan.Gift.Neutral}}/446 -18 -4 -80/"
+          "Morgan": "{{i18n:Morgan.Gift.Loved}}/337 305 308 FlashShifter.StardewValleyExpandedCP_Void_Soul/{{i18n:Morgan.Gift.Liked}}/268 155 768 769 773 772 392 394 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir/{{i18n:Morgan.Gift.Disliked}}/395 399 402 406 410 248 256 190 188 -75 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Morgan.Gift.Hated}}/348 346 283 459 303 FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog_Legs/{{i18n:Morgan.Gift.Neutral}}/446 -18 -4 -80 FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Poison_Mushroom/"
         }
       },
       {
@@ -51,37 +93,6 @@
           "HasSeenEvent": "5978924"
         },
         "FromFile": "assets/CharacterFiles/Schedules/Morgan/Schedule.json"
-      },
-      {
-        //Morgan's Dialogue - edited out Magnus and replaced with Razolyn
-        "Action": "EditData",
-        "Target": "Characters/Dialogue/Morgan",
-        "When": {
-          "HasMod": "misscoriel.razolyn"
-        },
-        "Entries": {
-          "Introduction": "{{i18n:Morgan.Razolyn.01}}",
-          "spring_12": "{{i18n:Morgan.Razolyn.02}}",
-          "Mon4": "{{i18n:Morgan.Razolyn.03}}",
-          "Tue2": "{{i18n:Morgan.Razolyn.04}}",
-          "Thu": "{{i18n:Morgan.Razolyn.05}}",
-          "Thu2": "{{i18n:Morgan.Razolyn.06}}",
-          "Sat10": "{{i18n:Morgan.Razolyn.07}}",
-          "Sun4": "{{i18n:Morgan.Razolyn.08}}",
-          "summer_Mon": "{{i18n:Morgan.Razolyn.09}}",
-          "summer_Tue": "{{i18n:Morgan.Razolyn.10}}",
-          "summer_Wed8": "{{i18n:Morgan.Razolyn.11}}",
-          "summer_Thu": "{{i18n:Morgan.Razolyn.12}}",
-          "fall_15": "{{i18n:Morgan.Razolyn.13}}",
-          "fall_Mon": "{{i18n:Morgan.Razolyn.14}}",
-          "fall_Fri": "{{i18n:Morgan.Razolyn.15}}",
-          "fall_Sat6": "{{i18n:Morgan.Razolyn.16}}",
-          "fall_Sun": "{{i18n:Morgan.Razolyn.17}}",
-          "fall_Sun8": "{{i18n:Morgan.Razolyn.18}}",
-          "winter_7": "{{i18n:Morgan.Razolyn.19}}",
-          "winter_Tue": "{{i18n:Morgan.Razolyn.20}}",
-          "winter_Thu": "{{i18n:Morgan.Razolyn.21}}",
-        }
       },
       {
         "Action": "EditData",
@@ -311,16 +322,6 @@
           "5978924/y 3/d Mon Tue/e 1724095/t 600 2600": "none/-500 -500/farmer -20 -20 0 Wizard -21 -21 0/skippable/pause 1000/speak Wizard \"{{i18n:Morgan.Apprentice.Married.01}}\"/pause 500/end dialogue Wizard \"{{i18n:Morgan.Apprentice.Married.02}}\""
         },
       },
-      { //MORGAN SPAWNS NEXT DAY - Razolyn the Magnificent Compatibility patch
-        "Action": "EditData",
-        "Target": "data/events/farm",
-        "When": {
-          "HasMod": "misscoriel.razolyn"
-        },
-        "Entries": {
-          "5978924/y 3/d Mon Tue/e 1724095": "none/-500 -500/farmer 64 14 2 Wizard 64 16 0/skippable/pause 1000/speak Wizard \"{{i18n:Morgan.Apprentice.Razolyn.01}}\"/pause 700/faceDirection Wizard 1 true/pause 250/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Morgan.Apprentice.Razolyn.02}}\"/pause 800/showFrame Wizard 0/pause 500/showFrame Wizard 16/pause 600/screenFlash 2/warp Wizard -100 -100/playSound wand/pause 700/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Morgan.Apprentice.Razolyn.03}}\"/pause 1000/end"
-        },
-      },
       { //MORGAN INTRODUCTION - 'The Little Wizard'
         "Action": "EditData",
         "Target": "data/events/wizardhouse",
@@ -329,7 +330,7 @@
           "Spouse |contains=Wizard": false
         },
         "Entries": {
-          "5978927": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5 2/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
+          "5978927/": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
         },
       },
       { //MORGAN INTRODUCTION - 'The Little Wizard'
@@ -340,18 +341,7 @@
           "Spouse |contains=Wizard": true
         },
         "Entries": {
-          "5978927": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.Married.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.Married.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5 2/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
-        },
-      },
-      { //MORGAN INTRODUCTION - Razolyn the Magnificent Compatibility patch
-        "Action": "EditData",
-        "Target": "data/events/wizardhouse",
-        "When": {
-          "HasSeenEvent": "5978924",
-          "HasMod": "misscoriel.razolyn"
-        },
-        "Entries": {
-          "5978927": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.Razolyn.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.Razolyn.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.Razolyn.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5 2/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.Razolyn.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
+          "5978927/": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.Married.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.Married.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5 2/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
         },
       },
       { //MORGAN - 2 HEART - 'Having Fun'
@@ -361,18 +351,6 @@
           "5978929/e 5978927/f Morgan 500": "none/-500 -500/farmer 9 28 0 Morgan 10 15 2 Wizard -100 -100 2/pause 750/showFrame Morgan 24/playMusic WizardSong/pause 800/viewport 7 18 true/skippable/move farmer 0 -7 0 true/pause 1850/speak Morgan \"{{i18n:Morgan.2hearts.01}}\"/pause 800/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 0/pause 650/speak Morgan \"{{i18n:Morgan.2hearts.02}}\"/pause 300/shake Morgan 500/pause 400/playSound healSound/glow 0 0 180/pause 400/emote farmer 16/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.03}}\"/pause 900/emote farmer 8/pause 800/shake Morgan 500/pause 850/showFrame Morgan 18/pause 200/showFrame Morgan 0/pause 450/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.04}}\"/pause 1000/question fork0 \"{{i18n:Morgan.2hearts.05}}\"/fork 5978929_FooledMe/pause 300/friendship Morgan -50/speak Morgan \"{{i18n:Morgan.2hearts.06}}\"/switchEvent 5978929_Continue",
           "5978929_FooledMe": "pause 800/friendship Morgan 50/speak Morgan \"{{i18n:Morgan.2hearts.FooledMe.01}}\"/switchEvent 5978929_Continue",
           "5978929_Continue": "pause 800/move Morgan 0 2 2/pause 500/speak Morgan \"{{i18n:Morgan.2hearts.Continue.01}}\"/pause 600/emote Morgan 40/pause 250/speak Morgan \"{{i18n:Morgan.2hearts.Continue.02}}\"/pause 100/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Morgan.2hearts.Continue.03}}\"",
-        },
-      },
-      { //MORGAN - 2 HEART - Razolyn the Magnificent Compatibility patch
-        "Action": "EditData",
-        "Target": "data/events/wizardhouse",
-        "When": {
-          "HasMod": "misscoriel.razolyn"
-        },
-        "Entries": {
-          "5978929/e 5978927/f Morgan 500": "none/-500 -500/farmer 9 28 0 Morgan 10 15 2 Wizard -100 -100 2/pause 750/showFrame Morgan 24/playMusic WizardSong/pause 800/viewport 7 18 true/skippable/move farmer 0 -7 0 true/pause 1850/speak Morgan \"{{i18n:Morgan.2hearts.Razolyn.01}}\"/pause 800/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 0/pause 650/speak Morgan \"{{i18n:Morgan.2hearts.02}}\"/pause 300/shake Morgan 500/pause 400/playSound healSound/glow 0 0 180/pause 400/emote farmer 16/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.03}}\"/pause 900/emote farmer 8/pause 800/shake Morgan 500/pause 850/showFrame Morgan 18/pause 200/showFrame Morgan 0/pause 450/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.Razolyn.04}}\"/pause 1000/question fork0 \"{{i18n:Morgan.2hearts.05}}\"/fork 5978929_FooledMe/pause 300/friendship Morgan -50/speak Morgan \"{{i18n:Morgan.2hearts.06}}\"/switchEvent 5978929_Continue",
-          "5978929_FooledMe": "pause 800/friendship Morgan 50/speak Morgan \"{{i18n:Morgan.2hearts.FooledMe.01}}\"/switchEvent 5978929_Continue",
-          "5978929_Continue": "pause 800/move Morgan 0 2 2/pause 500/speak Morgan \"{{i18n:Morgan.2hearts.Razolyn.Continue.01}}\"/pause 600/emote Morgan 40/pause 250/speak Morgan \"{{i18n:Morgan.2hearts.Continue.02}}\"/pause 100/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Morgan.2hearts.Razolyn.Continue.03}}\"",
         },
       },
       { //MORGAN - 4 HEART - 'Them'
@@ -389,14 +367,14 @@
         "Action": "EditData",
         "Target": "data/events/wizardhouse",
         "Entries": {
-          "5978936/e 5978935/f Morgan 1500": "none/-500 -500/farmer 11 13 1 Morgan 15 5 2/pause 100/changeLocation Custom_WizardBasement/showFrame Morgan 23/playMusic WizardSong/pause 100/viewport 15 5 true/skippable/move farmer 4 0 0/pause 200/faceDirection farmer 0 true/pause 600/move farmer 0 -5 0/pause 1000/showFrame Morgan 21/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.01}}\"/pause 600/move farmer 0 -1 0/pause 300/speak Morgan \"{{i18n:Morgan.6hearts.02}}\"/pause 650/showFrame Morgan 23/pause 1300/speak Morgan \"{{i18n:Morgan.6hearts.03}}\"/pause 1000/stopMusic/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.04}}\"/pause 500/showFrame Morgan 23/pause 250/playMusic WizardSong/pause 1250/speak Morgan \"{{i18n:Morgan.6hearts.05}}\"/pause 1200/speak Morgan \"{{i18n:Morgan.6hearts.06}}\"/pause 700/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.07}}\"/pause 1000/speak Morgan \"{{i18n:Morgan.6hearts.08}}\"/pause 600/showFrame Morgan 23/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.09}}\"/pause 1000/showFrame Morgan 21/pause 700/speak Morgan \"{{i18n:Morgan.6hearts.10}}\"/pause 1000/speak Morgan \"$q -1 null \"{{i18n:Morgan.6hearts.11}}\"/pause 1000/showFrame Morgan 21 true/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.12}}\"/pause 500/showFrame Morgan 23/pause 1300/textAboveHead Morgan \"{{i18n:Morgan.6hearts.13}}\"/pause 800/showFrame Morgan 22/playSound newRecipe/pause 600/showFrame Morgan 23/pause 800/showFrame Morgan 22/playSound newRecipe/pause 500/showFrame Morgan 23/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.14}}\"/pause 300/emote farmer 32 true/pause 150/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end dialogue Morgan \"{{i18n:Morgan.6hearts.15}}\"",
+          "5978936/e 5978935/f Morgan 1500": "none/-500 -500/farmer 11 13 1 Morgan 15 5 2/pause 100/changeLocation Custom_WizardBasement/showFrame Morgan 23/playMusic WizardSong/pause 100/viewport 15 5 true/skippable/move farmer 4 0 0/pause 200/faceDirection farmer 0 true/pause 600/move farmer 0 -5 0/pause 1000/showFrame Morgan 21/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.01}}\"/pause 600/move farmer 0 -1 0/pause 300/speak Morgan \"{{i18n:Morgan.6hearts.02}}\"/pause 650/showFrame Morgan 23/pause 1300/speak Morgan \"{{i18n:Morgan.6hearts.03}}\"/pause 1000/stopMusic/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.04}}\"/pause 500/showFrame Morgan 23/pause 250/playMusic WizardSong/pause 1250/speak Morgan \"{{i18n:Morgan.6hearts.05}}\"/pause 1200/speak Morgan \"{{i18n:Morgan.6hearts.06}}\"/pause 700/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.07}}\"/pause 1000/speak Morgan \"{{i18n:Morgan.6hearts.08}}\"/pause 600/showFrame Morgan 23/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.09}}\"/pause 1000/showFrame Morgan 21/pause 700/speak Morgan \"{{i18n:Morgan.6hearts.10}}\"/pause 1000/speak Morgan \"$q -1 null {{i18n:Morgan.6hearts.11}}\"/pause 1000/showFrame Morgan 21 true/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.12}}\"/pause 500/showFrame Morgan 23/pause 1300/textAboveHead Morgan \"{{i18n:Morgan.6hearts.13}}\"/pause 800/showFrame Morgan 22/playSound newRecipe/pause 600/showFrame Morgan 23/pause 800/showFrame Morgan 22/playSound newRecipe/pause 500/showFrame Morgan 23/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.14}}\"/pause 300/emote farmer 32 true/pause 150/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end dialogue Morgan \"{{i18n:Morgan.6hearts.15}}\"",
         },
       },
       { //MORGAN - 8 HEART - 'Transmutation'
         "Action": "EditData",
         "Target": "data/events/wizardhouse",
         "When": {
-          "SkillLevel:Mining": "7, 8, 9, 10"
+          "Query: {{SkillLevel:Mining}} >= 7": true
         },
         "Entries": {
           "5978937/e 5978936/f Morgan 2000": "WizardSong/-500 -500/farmer -100 -100 0 Morgan 10 15 2 Wizard 7 17 1/showFrame Morgan 24/addObject 10 17 335/pause 800/viewport 7 17 true/skippable/pause 2000/speak Morgan \"{{i18n:Morgan.8hearts.01}}\"/pause 1100/speak Wizard \"{{i18n:Morgan.8hearts.02}}\"/pause 800/shake Morgan 1000/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 168/pause 1400/showFrame Morgan 0/pause 800/emote Morgan 12/pause 500/showFrame Morgan 25/pause 950/speak Morgan \"{{i18n:Morgan.8hearts.03}}\"/pause 750/showFrame Wizard 19/pause 400/speak Wizard \"{{i18n:Morgan.8hearts.04}}\"/warp farmer 9 34/playSound doorClose/move farmer 0 -14 0 true/pause 700/showFrame Morgan 0 true/pause 350/showFrame Wizard 4 true/pause 500/showFrame Wizard 0 true/pause 1100/speak Wizard \"{{i18n:Morgan.8hearts.05}}\"/pause 800/speak Morgan \"{{i18n:Morgan.8hearts.06}}\"/pause 1200/move Wizard 1 0 2/pause 700/speak Wizard \"{{i18n:Morgan.8hearts.07}}\"/pause 600/emote farmer 40/pause 300/speak Wizard \"{{i18n:Morgan.8hearts.08}}\"/pause 400/move Morgan -1 0 2/move Morgan 0 1 2/pause 300/speak Morgan \"{{i18n:Morgan.8hearts.09}}\"/pause 600/speak Wizard \"{{i18n:Morgan.8hearts.10}}\"/pause 200/globalFade/viewport -1000 -1000 true/pause 300/removeSprite 10 17/warp farmer 10 15/faceDirection farmer 2 true/warp Morgan 7 17/faceDirection Morgan 1 true/warp Wizard 10 20/faceDirection Wizard 0 true/pause 100/viewport 7 17 true/pause 1100/move Wizard 0 -2 0/pause 500/showFrame Wizard 17/pause 200/addObject 10 17 335/playSound stoneStep/playSound stoneStep/pause 400/showFrame Wizard 8/pause 500/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 500/move Wizard 0 2 2/pause 300/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 1750/showFrame farmer 96/stopMusic/pause 1200/startJittering/pause 750/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 336/pause 500/stopJittering/pause 400/emote Morgan 16 true/pause 400/showFrame farmer 0 true/pause 400/playMusic WizardSong/pause 600/speak Morgan \"{{i18n:Morgan.8hearts.11}}\"/pause 500/speak Wizard \"{{i18n:Morgan.8hearts.12}}\"/pause 600/move Wizard 0 -2 0/pause 500/speak Wizard \"{{i18n:Morgan.8hearts.13}}\"/pause 750/speak Wizard \"{{i18n:Morgan.8hearts.14}}\"/pause 500/emote farmer 40/pause 300/speak Wizard \"{{i18n:Morgan.8hearts.15}}\"/pause 650/jump Morgan/pause 500/faceDirection Wizard 3 true/pause 400/speak Morgan \"{{i18n:Morgan.8hearts.16}}\"/pause 500/globalFade/viewport -1000 -1000 true/removeSprite 10 17/warp Morgan 10 15/faceDirection Morgan 2 true/warp Wizard 10 20/faceDirection Wizard 0 true/warp farmer 7 17/faceDirection farmer 1 true/pause 200/viewport 7 17 true/pause 1150/move Wizard 0 -2 0/pause 500/showFrame Wizard 17/pause 200/addObject 10 17 335/playSound stoneStep/playSound stoneStep/pause 400/showFrame Wizard 8/pause 500/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 500/move Wizard 0 2 2/pause 300/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 1500/stopMusic/showFrame Morgan 18/pause 900/speak Morgan \"{{i18n:Morgan.8hearts.17}}\"/pause 1000/showFrame Morgan 17/pause 700/showFrame Morgan 16/pause 100/shake Morgan 600/pause 500/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 336/pause 500/emote farmer 16 true/pause 300/showFrame Morgan 18/pause 300/playMusic junimoStarSong/pause 200/showFrame Morgan 0/pause 700/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.8hearts.18}}\"/speak Wizard \"{{i18n:Morgan.8hearts.19}}\"/pause 300/jump Morgan/pause 1000/jump Morgan/textAboveHead Morgan \"{{i18n:Morgan.8hearts.20}}\"/globalFade/viewport -1000 -1000/pause 1500/friendship Morgan 50/end dialogue Morgan \"{{i18n:Morgan.8hearts.21}}\""
@@ -587,84 +565,6 @@
         "Target": "Characters/Crow1",
         "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Crow1.png"
       },
-      //FLOWER DANCE
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/spring24",
-        "When": {
-          "Spouse |contains=Wizard": false
-        },
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Flower.01}}",
-        }
-      },
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/spring24",
-        "When": {
-          "Spouse |contains=Wizard": true
-        },
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Flower.02}}",
-        }
-      },
-      //LUAU
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/summer11",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Luau}}",
-        }
-      },
-      //DANCE OF THE MOONLIGHT JELLIES
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/summer28",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Moonlight}}",
-        }
-      },
-      //STARDEW VALLEY FAIR
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/fall16",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Fair}}",
-        }
-      },
-      //SPIRITS EVE FESTIVAL
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/fall27",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Spirit.01}}",
-        }
-      },
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/fall27",
-        "When": {
-          "IsOddYear": false
-        },
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Spirit.02}}",
-        }
-      },
-      //ICE FISHING FESTIVAL
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/winter8",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.Ice}}",
-        }
-      },
-      //WINTER STAR FESTIVAL
-      {
-        "Action": "EditData",
-        "Target": "data/festivals/winter25",
-        "Entries": {
-          "Morgan": "{{i18n:Morgan.WinterStar}}",
-        }
-      },
+      
     ]
   }

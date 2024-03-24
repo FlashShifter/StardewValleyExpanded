@@ -1,0 +1,839 @@
+{
+    "Changes": [
+        { //moonlight jellies festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "set-up": "ocean/-1000 -1000/farmer 38 3 2/changeToTemporaryMap Beach-Jellies/loadActors Set-Up/advancedMove Vincent true 0 12 3 3000 2 0 1 3000 0 -12 -2 0 3 3000/advancedMove Jas true 0 2 3 5000 0 -2 3 5000/advancedMove Harvey True 0 -12 -10 0 0 6 2 25000 0 -6 10 0 0 12 2 25000/positionOffset Olivia 17 0/positionOffset Victor 17 0/viewport 38 2 clamp true/pause 1000/playerControl jellies",
+				"mainEvent": "pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/changeLocation Beach/warpFarmers 28 36 2 29 35 2 34 36 2 37 35 2 25 36 2 10 39 3 30 35 2 33 35 2 36 35 2 up 25 33 3/positionOffset farmer 0 16/warp spouse 29 36/faceDirection spouse 2/specificTemporarySprite candleBoat/showFrame Pam 24/positionOffset Pam 0 12/showFrame Haley 30/viewport 26 36 true/pause 2000/move Lewis 0 1 2/move Lewis -2 0 3/pause 400/showFrame Lewis 16 true/animate Lewis false false 200 25 16 17 17/pause 800/playSound parry/specificTemporarySprite candleBoatMove/pause 500/showFrame Lewis 0 true/animate Lewis false false 200 25 12/pause 400/move Lewis 1 0 2/pause 6000/specificTemporarySprite moonlightJellies/pause 10000/playMusic moonlightJellies/pause 18000/emote Jodi 16 true/pause 800/emote Emily 16 true/pause 700/emote Abigail 56 true/pause 8500/move Jas 0 1 2/pause 300/faceDirection Jas 3 true/pause 300/jump Jas 8 true/pause 500/emote Jas 20/pause 500/viewport move -1 0 8000/pause 4000/move Caroline -2 0 3 true/pause 4000/faceDirection Sebastian 2/move Abigail 1 0 2/showFrame Abigail 24/pause 500/viewport move 1 0 21000/pause 5000/move Lewis 0 1 2/showFrame Lewis 18/pause 3000/showFrame Haley 31/pause 100/showFrame Haley 24/pause 1000/showFrame Haley 31/pause 100/showFrame Haley 30/pause 1800/showFrame Jodi 25/pause 1000/showFrame Emily 27/showFrame Haley 31/pause 100/showFrame Haley 24/pause 1000/showFrame Haley 31/pause 100/showFrame Haley 30/pause 1000/move Clint -1 0 2/pause 2000/globalFade/viewport -1000 -1000/pause 2000/showFrame Sophia 26/pause 1000/message \"The glow of summer has faded, now... and the moonlight jellies carry on toward the great unknown.\"/playMusic none/pause 2000/waitForOtherPlayers festivalEnd/end",
+                "mainEvent_y2": "pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/changeLocation Beach/warpFarmers 28 36 2 26 36 2 32 35 2 40 35 2 27 35 2 30 35 2 37 34 2 39 34 2 up 42 35 3/positionOffset farmer 0 16/warp spouse 29 36/faceDirection spouse 2/warp Caroline 36 35/faceDirection Caroline 2 true/warp Pierre 37 35/faceDirection Pierre 2 true/specificTemporarySprite candleBoat/viewport 26 36 true/pause 2000/move Lewis 0 1 2/move Lewis -2 0 3/pause 400/showFrame Lewis 16 true/animate Lewis false false 200 25 16 17 17/pause 800/playSound parry/specificTemporarySprite candleBoatMove/pause 500/showFrame Lewis 0 true/animate Lewis false false 200 25 12/pause 400/faceDirection Lewis 2/pause 6000/specificTemporarySprite moonlightJellies/pause 10000/playMusic moonlightJellies/pause 18000/emote Robin 16/pause 250/emote Victor 16/pause 250/emote Jodi 56/pause 500/jump Maru/pause 500/emote Penny 20/pause 1250/emote Caroline 16/pause 1250/faceDirection Robin 1 true/pause 750/faceDirection Demetrius 3 true/pause 2000/faceDirection Robin 2 true/pause 750/faceDirection Demetrius 2 true/pause 2500/showFrame Willy 24/pause 500/showFrame Willy 25/pause 1500/viewport move -1 0 8000/pause 2650/showFrame Kent 16/pause 1500/move Jodi 0 1 2/pause 1500/showFrame Jodi 25/pause 4500/faceDirection Vincent 2 true/pause 300/faceDirection Vincent 1 true/pause 150/move Vincent 1 0 2/move Vincent 0 2 2/pause 600/jump Vincent/pause 400/viewport move 1 0 20000/pause 2000/faceDirection Vincent 1 true/pause 1000/faceDirection Vincent 2 true/pause 1000/move Lewis 1 0 2/move Lewis 0 1 2/showFrame Lewis 18/pause 4300/showFrame Demetrius 19/pause 3000/faceDirection Caroline 1 true/pause 1000/faceDirection Pierre 3 true/pause 2000/globalFade/viewport -1000 -1000/pause 2000/pause 1000/message \"The glow of summer has faded, now... and the moonlight jellies carry on toward the great unknown.\"/playMusic none/pause 2000/waitForOtherPlayers festivalEnd/end",
+				"Andy": "{{i18n:Andy.Moonlight}}",
+                "Claire": "{{i18n:moonlight.claire.1}}",
+                "GuntherSilvian": "{{i18n:Gunther.Moonlight}}",
+                "Lance": "{{i18n:moonlight.lance.1}}",
+                "Morgan": "{{i18n:Morgan.Moonlight}}",
+                "MorrisTod": "{{i18n:Morris.Midnight}}",
+                "Olivia": "{{i18n:moonlight.olivia.1}}",
+                "Sandy": "{{i18n:Sandy.Moonlight}}",
+                "Sophia": "{{i18n:moonlight.Sophia.1}}",
+                "Susan": "{{i18n:Susan.Moonlight}}",
+                "Victor": "{{i18n:moonlight.victor.1}}",
+                "MarlonFay": "{{i18n:moonlight.marlon.1}}",
+                "Victor_y2": "{{i18n:victor.Jellyfish2}}",
+                "Morgan_y2": "{{i18n:Morgan.Jellyfish2}}",
+                "Lance_y2": "{{i18n:Lance.Jellyfish2}}",
+                "Claire_y2": "{{i18n:Claire.Jellyfish2}}",
+                "Susan_y2": "{{i18n:Susan.Jellyfish2}}",
+                "Andy_y2": "{{i18n:Andy.Jellyfish2}}",
+                "Scarlett_y2": "{{i18n:Scarlett.Jellyfish2}}",
+                "Olivia_y2": "{{i18n:Olivia.Jellyfish2}}",
+                "MarlonFay_y2": "{{i18n:Marlon.Jellyfish2}}",
+                "GuntherSilvian_y2": "{{i18n:Gunther.Jellyfish2}}",
+                "Martin_y2": "{{i18n:Martin.Jellyfish2}}",
+                "Sophia_y2": "{{i18n:Sophia.Jellyfish2}}",
+                "Sandy_y2": "{{i18n:Sandy.Jellyfish2}}",
+                "MorrisTod_y2": "{{i18n:Morris.Jellyfish2}}",
+                
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples": "{{i18n:Apples.Moonlight}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Claire": "{{i18n:moonlight.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Olivia": "{{i18n:moonlight.olivia.2}}",
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Sophia": "{{i18n:moonlight.Sophia.2}}",
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Victor": "{{i18n:moonlight.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Wizard": "{{i18n:moonlight.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        //y2
+        
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples_y2": "{{i18n:Apples.Moonlight}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Claire_y2": "{{i18n:moonlight.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Olivia_y2": "{{i18n:moonlight.olivia.2}}",
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Sophia_y2": "{{i18n:moonlight.Sophia.2}}",
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Victor_y2": "{{i18n:moonlight.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/summer28",
+            "Entries": {
+                "Wizard_y2": "{{i18n:moonlight.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        { //YEAR ONE moonlight jellies festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 41 36 down",
+                    "Delimiter": "/"
+                },
+				{ //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Victor 34 36 down",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 40 36 down",
+                    "Delimiter": "/"
+                },
+				{ //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Olivia 35 36 down",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 16 24 down",
+                    "Delimiter": "/"
+                },
+				{ //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Andy 22 24 down",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 52 24 down",
+                    "Delimiter": "/"
+                },
+				{ //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Susan 20 20 down",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 50 24 down",
+                    "Delimiter": "/"
+                },
+				{ //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sophia 43 36 down",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 70 5 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "6665293",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 29 34 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 29 34 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Gunther moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 80 25 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 40 34 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Lance moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 72 6 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Lance 53 24 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Apples moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "ApplesHere": "true",
+                "Roommate": "Apples",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 80 5 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Claire moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 24 28 left",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Claire 33 35 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Sandy moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 35 36 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Mainevent_additionalCharacters"
+                    ],
+                    "Value": "Sandy 39 35 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+		{ //Morgan moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 87 5 left",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Mainevent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 87 5 left",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //YEAR TWO moonlight jellies festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 31 36 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Victor 33 35 down",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 32 36 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Olivia 34 35 down",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 46 24 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Andy 52 24 down",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 47 24 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Susan 53 24 down",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 17 24 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sophia 20 24 down",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 70 5 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 70 5 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "6665293",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 27 34 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 27 34 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Gunther moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 40 36 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 39 35 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+		{ //Scarlett moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "3691371",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 16 24 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 19 24 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Lance moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 68 5 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Lance 68 5 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Apples moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "ApplesHere": "true",
+                "Roommate": "Apples",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 76 17 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Apples 76 17 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Claire moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 40 34 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Claire 39 32 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+		{ //Martin moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 39 34 down",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Martin 39 33 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Sandy moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 24 27 left",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sandy 24 27 left",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+		{ //Morgan moonlight jellies data
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 87 5 left",
+                    "Delimiter": "/"
+                },
+				{
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 87 5 left",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        //Map Load
+        {
+            "Action": "Load",
+            "Target": "Maps/Beach-Jellies",
+            "FromFile": "Assets/Maps/FestivalMaps/Beach-SVE-Jellies.tmx",
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Beach-Jellies2",
+            "FromFile": "Assets/Maps/FestivalMaps/Beach-SVE-Jellies2.tmx",
+        },
+    ]
+}

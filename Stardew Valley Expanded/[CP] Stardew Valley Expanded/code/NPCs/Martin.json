@@ -1,19 +1,75 @@
 {
   "Changes": [
     {
-      //Martin's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Martin": "teen/neutral/neutral/neutral/male/non-datable/null/Other/summer 6//Custom_Martin_WarpRoom 3 3/{{i18n:Name.Martin}}",
-      }
+        "Martin": {
+          "DisplayName": "{{i18n:Name.Martin}}",
+          "BirthSeason": "Summer",
+          "BirthDay": 6,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Teen",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": false,
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Martin_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Martin_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!LOCATION_NAME Target JojaMart, !LOCATION_NAME Target MovieTheater, !{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Martin_Winter",
+              "Sprite": "Characters/Martin_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Martin's Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Martin": "{{i18n:Martin.Gifts.Loved}}/350 233/{{i18n:Martin.Gifts.Liked}}/184 186/{{i18n:Martin.Gifts.Disliked}}/-75 196 197 199 200 205 219 218 231 242/{{i18n:Martin.Gifts.Hated}}/348 346 459 303 304 283 -4 80 648/{{i18n:Martin.Gifts.Neutral}}/270/"
+        "Martin": "{{i18n:Martin.Gifts.Loved}}/350 233 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger/{{i18n:Martin.Gifts.Liked}}/184 186 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Martin.Gifts.Disliked}}/-75 196 197 199 200 205 219 218 231 242 FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Martin.Gifts.Hated}}/348 346 459 303 304 283 -4 80 648 FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Martin.Gifts.Neutral}}/270 FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Ancient_Fiber/"
       }
     },
     {
@@ -129,6 +185,18 @@
       "Update": "OnLocationChange"
     },
     {
+      //Martin's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Martin_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Martin/Martin_Winter.png"
+    },
+    {
+      //Andy's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Martin_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Martin/Martin_Winter.png"
+    },
+    {
       //Martin's animations
       "Action": "EditData",
       "Target": "Data/animationdescriptions",
@@ -168,7 +236,7 @@
       },
       "FromFile": "assets/CharacterFiles/Schedules/Martin/MovieTheater.json"
     },
-    {
+    /*{
       //Martin's Schedule - Movie Theater - no schedule on festival days
       "Action": "EditData",
       "Target": "Characters/schedules/Martin",
@@ -185,7 +253,7 @@
         "Fri": "0 Custom_Martin_WarpRoom 1 3 3",
         "Sun": "0 Custom_Martin_WarpRoom 1 3 3",
       }
-    },
+    },*/
     {
       //Martin's Schedule - Player married Claire - Joja Mart
       "Action": "EditData",
@@ -195,8 +263,8 @@
         "Spouse": "Claire"
       },
       "Entries": {
-        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 12 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0",
-        "rain": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 12 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
+        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0",
+        "rain": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -209,7 +277,7 @@
         "HasSeenEvent |contains=4269703": true
       },
       "Entries": {
-        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 12 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
+        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -222,8 +290,8 @@
         "Spouse": "Claire"
       },
       "Entries": {
-        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 12 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
-        "rain": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 12 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
+        "rain": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -237,9 +305,39 @@
         "HasSeenEvent |contains=4269703": true
       },
       "Entries": {
-        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 12 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
+    //This puts Martin in town on days he attends a festival. He is sometimes trapped in the warp room otherwise. 
+    //This may be a product of CJB - but now he get's extra book time so win-win - JJ. 
+    {
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Martin",
+      "When": {
+        "HasSeenEvent": "3219873",
+      },
+      "Entries": {
+        "Spring_13": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Spring_24": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Fall_16": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Fall_27": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Martin",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": false
+      },
+      "Entries": {
+        "Summer_11": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Summer_28": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Winter_8": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Winter_25": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+      }
+    },
+    /*
     {
       //Martin Joja Shop Patches
       "Action": "EditMap",
@@ -320,7 +418,7 @@
         "HasSeenEvent |contains=4269703": true,
         "DisableSVEJojaMartShop": "false"
       }
-    },
+    },*/
     {
       //Martin's movie theater dialogue patches
       "Action": "EditData",
@@ -630,41 +728,6 @@
         }
       }
     },
-    //Martin Festival Dialogue
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "Martin": "{{i18n:Martin.Flower}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Martin": "{{i18n:Martin.Fair}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "When": {
-        "IsOddYear": true
-      },
-      "Entries": {
-        "Martin": "{{i18n:Martin.Spirit.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "When": {
-        "IsOddYear": false
-      },
-      "Entries": {
-        "Martin": "{{i18n:Martin.Spirit.2}}",
-      }
-    },
     /*
     {
       "Action": "EditData",
@@ -701,7 +764,7 @@
         "HasSeenEvent": "191393"
       },
       "Entries": {
-        "3219970/f Martin 500": "none/-500 -500/farmer 10 10 1 Robin 12 10 3 Demetrius 12 11 3 **Martin** 8 5 2 **Claire** 5 5 0 Pam 8 7 0/skippable/pause 800/playMusic movieTheater/pause 700/positionOffset farmer 0 25/viewport 10 7 true/pause 1500/speak Pam \"{{i18n:Martin.2hearts.01}}\"/pause 750/speak **Martin** \"{{i18n:Martin.2hearts.02}}\"/pause 500/shake **Martin** 500/pause 1000/showFrame **Martin** 16 true/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.03}}\"/pause 1200/speak Pam \"{{i18n:Martin.2hearts.Theater.04}}\"/pause 700/faceDirection **Martin** 3 true/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.05}}\"/pause 750/faceDirection **Claire** 1 true/pause 500/speak **Claire** \"{{i18n:Martin.2hearts.06}}\"/pause 600/faceDirection **Martin** 1 true/pause 300/move **Martin** 1 0 1/pause 300/move **Claire** 3 0 2 true/pause 300/faceDirection **Martin** 2 true/pause 300/faceDirection **Martin** 3 true/pause 1200/speak **Claire** \"{{i18n:Martin.2hearts.08}}\"/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.09}}\"/pause 600/faceDirection **Martin** 2 true/pause 600/playSound money/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.10}}\"/speak Pam \"{{i18n:Martin.2hearts.11}}\"/globalFade/viewport -1000 -1000/warp Pam -50 -50/viewport 10 8 true/pause 800/faceDirection **Martin** 3 true/pause 600/faceDirection **Claire** 1 true/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.12}}\"/pause 600/speak **Claire** \"{{i18n:Martin.2hearts.13}}\"/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.14}}\"/pause 500/speak **Claire** \"{{i18n:Martin.2hearts.15}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue **Martin**\"{{i18n:Martin.2hearts.16}}\""
+        "3219970/f Martin 500": "none/-500 -500/farmer 10 10 1 Robin 12 10 3 Demetrius 12 11 3 **Martin** 8 5 2 **Claire** 5 5 0 Pam 8 7 0/skippable/pause 800/playMusic movieTheater/pause 700/positionOffset farmer 0 25/viewport 10 7 true/pause 1500/speak Pam \"{{i18n:Martin.2hearts.01}}\"/pause 750/speak **Martin** \"{{i18n:Martin.2hearts.02}}\"/pause 500/shake **Martin** 500/pause 1000/showFrame **Martin** 16 true/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.03}}\"/pause 1200/speak Pam \"{{i18n:Martin.2hearts.Theater.04}}\"/pause 700/faceDirection **Martin** 3 true/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.05}}\"/pause 750/faceDirection **Claire** 1 true/pause 500/speak **Claire** \"{{i18n:Martin.2hearts.06}}\"/pause 600/faceDirection **Martin** 1 true/pause 300/move **Martin** 1 0 1/pause 300/move **Claire** 3 0 2 true/pause 300/faceDirection **Martin** 2 true/pause 300/faceDirection **Martin** 3 true/pause 1200/speak **Claire** \"{{i18n:Martin.2hearts.08}}\"/pause 500/speak **Martin** \"{{i18n:Martin.2hearts.09}}\"/pause 600/faceDirection **Martin** 2 true/pause 600/playSound money/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.10}}\"/speak Pam \"{{i18n:Martin.2hearts.11}}\"/globalFade/viewport -1000 -1000/warp Pam -50 -50/viewport 10 8 true/pause 800/faceDirection **Martin** 3 true/pause 600/faceDirection **Claire** 1 true/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.12}}\"/pause 600/speak **Claire** \"{{i18n:Martin.2hearts.13}}\"/pause 600/speak **Martin** \"{{i18n:Martin.2hearts.14}}\"/pause 500/speak **Claire** \"{{i18n:Martin.2hearts.15}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Martin \"{{i18n:Martin.2hearts.16}}\""
       },
     },
     { //theater temp actor loads

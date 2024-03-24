@@ -82,7 +82,7 @@ namespace StardewValleyExpanded
         public static bool ShouldDisableShadowsHere(GameLocation location)
         {
             if (location == null //if the location doesn't exist
-                || Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID)) == false //or if NO players have seen the event that disables shadow attacks
+                || Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID.ToString())) == false //or if NO players have seen the event that disables shadow attacks
                 || LocationBlacklist.Contains(location.Name, StringComparer.OrdinalIgnoreCase)) //or if this location's name is in the blacklist
             {
                 return false; //allow shadow attacks
@@ -103,14 +103,14 @@ namespace StardewValleyExpanded
         /*****               *****/
 
         /// <summary>Blanks any lines that refer to the "void spirits" (shadow) slayer quest, effectively hiding it from the Adventurer's Guild billboard.</summary>
-        /// <param name="monsterType">The internal name for the monster type targeted by a slayer quest.</param>
+        /// <param name="monsterNamePlural">The internal name for the monster type targeted by a slayer quest.</param>
         /// <param name="__result">The result of the original method: localized text describing the player's progress on a slayer quest.</param>
-        private static void AdventureGuild_killListLine(string monsterType, ref string __result)
+        private static void AdventureGuild_killListLine(string monsterNamePlural, ref string __result)
         {
             try
             {
-                if (monsterType == "VoidSpirits" //if this method is currently describing the shadow slayer quest (see "AdventureGuild.showMonsterKillList()")
-                    && Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID))) //and ANY player has seen the "disable shadows" event
+                if (monsterNamePlural == "VoidSpirits" //if this method is currently describing the shadow slayer quest (see "AdventureGuild.showMonsterKillList()")
+                    && Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID.ToString()))) //and ANY player has seen the "disable shadows" event
                 {
                     __result = String.Empty; //return a blank string instead
                 }
@@ -250,7 +250,7 @@ namespace StardewValleyExpanded
             if (Game1.player.mailReceived.Contains("Gil_Savage Ring") || Game1.player.hasCompletedAllMonsterSlayerQuests.Value) //if the player has already retrieved the "void spirits" slayer reward OR has already completed all slayer quests
                 return; //do nothing
 
-            if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID)) == false) //if NO players have seen the "disable shadows" event
+            if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(DisableShadowsEventID.ToString())) == false) //if NO players have seen the "disable shadows" event
                 return; //do nothing
 
             bool increasedShadowGuyKills = true;

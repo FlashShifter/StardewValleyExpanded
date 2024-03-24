@@ -87,7 +87,7 @@ namespace StardewValleyExpanded
                 if (who.secretNotesSeen.Contains(18) && xLocation == NewSecretNoteTile.X && yLocation == NewSecretNoteTile.Y && !who.mailReceived.Contains("SecretNote18_done"))
                 {
                     who.mailReceived.Add("SecretNote18_done");
-                    Game1.createObjectDebris(127, xLocation, yLocation, who.UniqueMultiplayerID, __instance);
+                    Game1.createObjectDebris("127", xLocation, yLocation, who.UniqueMultiplayerID, __instance);
                     __result = "";
                     return false; //skip the original method
                 }

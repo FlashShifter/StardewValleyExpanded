@@ -1,0 +1,1163 @@
+{
+    "Changes": [
+        { //Adds an advance move for Sophia, fixes Willy clipping into flower decorations. Adds additional fields (pause 1)
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries": {
+                "set-up": "event1/22 22/farmer 76 17 1/changeToTemporaryMap Forest-FlowerFestival/loadActors Set-Up/advancedMove Sophia true 4 8000 -2 0 4 5000 2 0/advancedMove Vincent true -6 0 0 -1 6 0 0 1/advancedMove Jas true 1 0 0 1 -6 0 0 -1 5 0/advancedMove Pam true 2 25000 0 -3 2 0 4 25000 -2 0 0 3/advancedMove Haley true 0 1 2 3000 2 0 0 -1 -2 0 3 500 4 500 1 500 2 500 2 0 1 500 2 500 3 500 4 500 0 2 0 -2 -2 0/advancedMove Caroline true 7 0 0 1 1 18000 0 -1 -7 0 3 18000/advancedMove Willy true 2 7000 4 0 2 8000 -4 0/playerControl flowerFestival",
+                "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 14 31/warp farmer2 9 32/warp farmer3 23 21/warp farmer4 12 21/faceDirection farmer1 0/faceDirection farmer3 2/faceDirection farmer4 2/faceDirection farmer 0/warp Girl1 13 24/warp Girl2 15 24/warp Girl3 11 24/warp Girl4 9 24/warp Girl5 17 24/warp Girl6 19 24/warp Guy1 13 27/warp Guy2 15 27/warp Guy3 11 27/warp Guy4 9 27/warp Guy5 17 27/warp Guy6 19 27/showFrame Girl1 40/showFrame Girl3 40/showFrame Girl5 40/showFrame Girl4 40/showFrame Girl2 40/showFrame Girl6 40/showFrame Guy6 44/showFrame Guy5 44/showFrame Guy4 44/showFrame Guy3 44/showFrame Guy2 44/showFrame Guy1 44/viewport 14 25 clamp true/pause 2000/playMusic FlowerDance/pause 600/animate Girl1 false true 600 43 41 43 42/animate Girl6 false true 600 43 41 43 42/animate Girl3 false true 600 43 41 43 42/animate Girl5 false true 600 43 41 43 42/animate Girl4 false true 600 43 41 43 42/animate Girl2 false true 600 43 41 43 42/animate Guy5 false true 600 44 45/animate Guy6 false true 600 44 45/animate Guy3 false true 600 44 45/animate Guy2 false true 600 44 45/animate Guy4 false true 600 44 45/animate Guy1 false true 600 44 45/pause 9600/animate Girl1 false true 600 46 47/animate Girl6 false true 600 46 47/animate Girl3 false true 600 46 47/animate Girl5 false true 600 46 47/animate Girl4 false true 600 46 47/animate Girl2 false true 600 46 47/animate Guy5 false true 300 46 47/animate Guy6 false true 300 46 47/animate Guy3 false true 300 46 47/animate Guy2 false true 300 46 47/animate Guy4 false true 300 46 47/animate Guy1 false true 300 46 47/positionOffset Guy1 0 -2/positionOffset Guy6 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/pause 300/positionOffset Guy6 0 -2/positionOffset Guy1 0 -2/positionOffset Guy4 0 -2/positionOffset Guy3 0 -2/positionOffset Guy2 0 -2/positionOffset Guy5 0 -2/animate Girl1 false true 600 43 41 43 42/animate Girl6 false true 600 43 41 43 42/animate Girl3 false true 600 43 41 43 42/animate Girl5 false true 600 43 41 43 42/animate Girl4 false true 600 43 41 43 42/animate Girl2 false true 600 43 41 43 42/animate Guy5 false true 600 44 45/animate Guy6 false true 600 44 45/animate Guy3 false true 600 44 45/animate Guy2 false true 600 44 45/animate Guy4 false true 600 44 45/animate Guy1 false true 600 44 45/pause 7600/stopAnimation Girl3/stopAnimation Girl6/stopAnimation Girl5/stopAnimation Girl2/stopAnimation Girl1/stopAnimation Girl4/stopAnimation Guy3/stopAnimation Guy2/stopAnimation Guy6/stopAnimation Guy1/stopAnimation Guy5/stopAnimation Guy4/pause 3000/globalFade/viewport -1000 -1000/message \"{{i18n:FlowerDance.String1}}\"/waitForOtherPlayers festivalEnd/end",
+                "set-up_y2": "event1/22 22/farmer 76 17 1/changeToTemporaryMap Forest-FlowerFestival2/viewport -1000 -1000/loadActors Set-Up/advancedMove Jas true 3 620 4 620 1 620 2 620/advancedMove Vincent true 0 4 2 0 0 -4 -2 0/advancedMove Haley true 0 1 2 3000 2 0 0 -1 -2 0 3 500 4 500 1 500 2 500 2 0 1 500 2 500 3 500 4 500 0 2 0 -2 -2 0/advancedMove Alex true 4 12500 1 2000/advancedMove Gus true 4 8000 -2 0 3 400 4 6000 2 0 4 1000/advancedMove Elliott true 4 14500 1 2350/advancedMove Emily true 2 2000 1 1200 1 0 3 1750 4 650 3 600 2 500 1 675 4 1000 0 -1 4 1250 3 600 2 600 1 600 4 600 3 1000 -1 0 3 1000 2 800 1 800 4 800 3 800 2 2000 0 1 2 2000 1 500 2 500 3 500 4 500 1 500 2 500/positionOffset Sebastian -6 -20/positionOffset Leah -24 10/positionOffset Clint -12 24/positionOffset Caroline -12 12/positionOffset Jodi 16 6/positionOffset Robin -6 12/positionOffset Kent? -12 24/positionOffset MarlonFay -16 0/positionOffset Penny -20 -9/positionOffset Sam 6 12/positionOffset Shane 12 -12/playerControl flowerFestival/viewport player clamp true unfreeze/globalFadeToClear",
+                "Andy": "{{i18n:Andy.Flower}}",
+                "Claire": "{{i18n:flowerdance.claire.1}}",
+                "GuntherSilvian": "{{i18n:Gunther.Flower}}",
+                "Lance": "{{i18n:flowerdance.lance.1}}",
+                "MarlonFay": "{{i18n:Marlon.Flower}}",
+                "MorrisTod": "{{i18n:Morris.Flower.1}}",
+                "Olivia": "{{i18n:flowerdance.Olivia.1}}",
+                "Sandy": "{{i18n:Sandy.Flower}}",
+                "Sophia": "{{i18n:flowerdance.Sophia.1}}",
+                "Susan": "{{i18n:Susan.Flower}}",
+                "Victor": "{{i18n:flowerdance.victor.1}}",
+                "Martin": "{{i18n:Martin.Flower}}",
+                "Victor_y2": "{{i18n:victor.Flower2}}",
+                "Morgan_y2": "{{i18n:Morgan.Flower2}}",
+                "Lance_y2": "{{i18n:Lance.Flower2}}",
+                "Claire_y2": "{{i18n:Claire.Flower2}}",
+                "Susan_y2": "{{i18n:Susan.Flower2}}",
+                "Andy_y2": "{{i18n:Andy.Flower2}}",
+                "Scarlett_y2": "{{i18n:Scarlett.Flower2}}",
+                "Olivia_y2": "{{i18n:Olivia.Flower2}}",
+                "MarlonFay_y2": "{{i18n:Marlon.Flower2}}",
+                "GuntherSilvian_y2": "{{i18n:Gunther.Flower2}}",
+                "Martin_y2": "{{i18n:Martin.Flower2}}",
+                "Sophia_y2": "{{i18n:Sophia.Flower2}}",
+                "Sandy_y2": "{{i18n:Sandy.Flower2}}",
+                "MorrisTod_y2": "{{i18n:Morris.Flower2}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples": "{{i18n:Apples.Flower}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Claire": "{{i18n:flowerdance.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        { //- EMILY SHUT CLINT DOWN
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "HasSeenEvent": "1005014"
+            },
+            "Entries": {
+                "Clint": "{{i18n:Clint.Dialogue.04}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse |contains=Wizard": false
+            },
+            "Entries": {
+                "Morgan": "{{i18n:Morgan.Flower.01}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse |contains=Wizard": true
+            },
+            "Entries": {
+                "Morgan": "{{i18n:Morgan.Flower.02}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse": "Olivia"
+            },
+            "Entries": {
+                "MorrisTod": "{{i18n:Morris.Flower.2}}",
+                "Olivia": "{{i18n:flowerdance.Olivia.2}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Sophia": "{{i18n:flowerdance.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Victor": "{{i18n:flowerdance.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Wizard": "{{i18n:flowerdance.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        //y2
+        
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples_y2": "{{i18n:Apples.Flower}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Claire_y2": "{{i18n:flowerdance.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        { //- EMILY SHUT CLINT DOWN
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "HasSeenEvent": "1005014"
+            },
+            "Entries": {
+                "Clint_y2": "{{i18n:Clint.Dialogue.04}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse |contains=Wizard": false
+            },
+            "Entries": {
+                "Morgan_y2": "{{i18n:Morgan.Flower.01}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse |contains=Wizard": true
+            },
+            "Entries": {
+                "Morgan_y2": "{{i18n:Morgan.Flower.02}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "When": {
+                "Spouse": "Olivia"
+            },
+            "Entries": {
+                "MorrisTod_y2": "{{i18n:Morris.Flower.2}}",
+                "Olivia_y2": "{{i18n:flowerdance.Olivia.2}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Sophia_y2": "{{i18n:flowerdance.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Victor_y2": "{{i18n:flowerdance.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/spring24",
+            "Entries": {
+                "Wizard_y2": "{{i18n:flowerdance.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        { //YEAR ONE flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 9 38 up",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Victor 23 22 left",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 15 34 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Olivia 23 23 left",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 5 26 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Andy 5 26 right",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 8 38 up",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sophia 11 21 down",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 22 21 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 21 21 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "6665293",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 4 25 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 4 25 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Susan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "1000077",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 9 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Susan 5 27 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Claire flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 18 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Claire 5 29 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Martin flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 18 22 up",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Martin 6 30 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Gunther flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 5 23 up",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 5 22 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Apples flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "ApplesHere": "true",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 67 15 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Apples 31 26 left",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "Spouse |contains=Wizard": false,
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 16 11 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 16 11 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "Spouse |contains=Wizard": true,
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 25 27 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 25 27 left",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Lance flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 21 21 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Lance 17 11 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Sandy flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 26 37 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sandy 24 35 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Wizard flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasMod |contains=Parrot.RomRas": false,
+                "HasMod |contains=Jellonip.RRRR": false,
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Wizard 25 26 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Wizard 25 26 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_RemoveFestivalPosition.tbin",
+            "ToArea": {
+                "X": 15,
+                "Y": 11,
+                "Width": 1,
+                "Height": 1
+            },
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "IsOddYear": true
+            },
+        },
+        { //Scarlett flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3691371",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 10 21 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 20 21 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //YEAR TWO flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 5 29 right",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Victor 14 32 up",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 3 36 right",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Olivia 13 32 up",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 23 32 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Andy 7 30 up",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 5 30 right",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sophia 11 32 up",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 2 41 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 22 40 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "6665293",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 7 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 16 21 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Susan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "1000077",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 23 33 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Susan 6 28 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Claire flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 15 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Claire 18 32 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Martin flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 14 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Martin 17 32 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Gunther flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 34 38 right",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 15 20 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Apples flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "ApplesHere": "true",
+                "IsOddYear": false,
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 67 15 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Apples 31 26 left",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "Spouse |contains=Wizard": false,
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 9 11 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 17 11 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "Spouse |contains=Wizard": true,
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 9 11 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Morgan 17 11 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Lance flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 3 20 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Lance 3 29 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Sandy flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 12 24 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Sandy 11 21 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Positions/Sandy_Setup_Forest-FlowerFestival.tbin",
+            "ToArea": {
+                "X": 24,
+                "Y": 35,
+                "Width": 1,
+                "Height": 1
+            },
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": false
+            },
+        },
+        { //Wizard flower dance festival
+            "Action": "EditMap",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_Forest-FlowerFestival.tbin",
+            "ToArea": {
+                "X": 25,
+                "Y": 26,
+                "Width": 1,
+                "Height": 1
+            },
+            "PatchMode": "Overlay",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasMod |contains=Parrot.RomRas": false,
+                "HasMod |contains=Jellonip.RRRR": false,
+                "IsOddYear": false
+            },
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_Forest-FlowerFestival.tbin",
+            "ToArea": {
+                "X": 25,
+                "Y": 26,
+                "Width": 1,
+                "Height": 1
+            },
+            "PatchMode": "Overlay",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasMod |contains=Parrot.RomRas": false,
+                "HasMod |contains=Jellonip.RRRR": false,
+                "IsOddYear": false
+            },
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_RemoveFestivalPosition.tbin",
+            "ToArea": {
+                "X": 15,
+                "Y": 11,
+                "Width": 1,
+                "Height": 1
+            },
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "IsOddYear": false
+            },
+        },
+        { //Scarlett flower festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "When": {
+                "HasSeenEvent": "3691371",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 6 31 up",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "MainEvent_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 10 32 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        //Map Loads
+        {
+            "Action": "Load",
+            "Target": "Maps/Forest-FlowerFestival",
+            "FromFile": "Assets/Maps/FestivalMaps/Forest-SVE-FlowerFestival.tmx",
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Forest-FlowerFestival2",
+            "FromFile": "Assets/Maps/FestivalMaps/Forest-SVE-FlowerFestival2.tmx",
+        },
+    ]
+}

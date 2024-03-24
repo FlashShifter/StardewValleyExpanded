@@ -1,11 +1,62 @@
 {
     "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Pierre",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish",
+                "Delimiter": " "
+              }
+            ]
+          },
         { //PIERRE SCHEDULE EDITS
             "Action": "EditData",
             "Target": "characters/schedules/Pierre",
             "Entries": {
                 "Mon": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 Town 46 48 0/2000 SeedShop 34 5 0/2100 SeedShop 24 4 1 pierre_sleep",
-                "Tue": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 SeedShop 11 20 0/1800 Town 95 13 2/2030 SeedShop 24 4 1 pierre_sleep",
+                "Tue": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 SeedShop 11 20 0/1800 Town 92 9 1/2030 SeedShop 24 4 1 pierre_sleep",
                 "Wed": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 Town 46 48 0/2000 SeedShop 34 5 0/2100 SeedShop 24 4 1 pierre_sleep",
                 "Rain": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 SeedShop 11 20 0/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 SeedShop 24 4 1 pierre_sleep",
             },

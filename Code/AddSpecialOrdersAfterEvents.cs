@@ -17,6 +17,7 @@ using StardewValley.Events;
 using StardewValley.Characters;
 using xTile.Dimensions;
 using Netcode;
+using StardewValley.SpecialOrders;
 
 namespace StardewValleyExpanded
 {
@@ -165,30 +166,20 @@ namespace StardewValleyExpanded
         /// <summary>Converts a string of event IDs (e.g. "111 222 333") into a list of integers.</summary>
         /// <param name="eventsString">The string of event IDs to convert. Events may be separated by any of number of spaces and/or commas.</param>
         /// <returns>A list of integer event IDs.</returns>
-        public static List<int> ParseEventsString(string eventsString)
+        public static List<string> ParseEventsString(string eventsString)
         {
-            List<int> events = new List<int>(); //create a list of event IDs
-
-            if (eventsString != null) //if a string of events was provided
-            {
-                foreach (string entry in eventsString.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)) //for each individual event ID within the string (separated by spaces/commas)
-                {
-                    events.Add(Convert.ToInt32(entry)); //convert the ID to an integer and add it to the list
-                }
-            }
-
-            return events; //return the completed list
+            return eventsString.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
         }
 
         /// <summary>The active event ID during the previous tick.</summary>
-        private static int? lastEventID = null;
+        private static string lastEventID = null;
 
         /// <summary>Updates players' special orders whenever an in-game event ends.</summary>
         private static void CurrentEventEnded_UpdateSpecialOrders(object sender, UpdateTickedEventArgs e)
         {
-            int? currentEventID = Game1.CurrentEvent?.id; //get the current quest ID (if any)
+            string currentEventID = Game1.CurrentEvent?.id; //get the current quest ID (if any)
             
-            if (currentEventID == null && lastEventID.HasValue) //if an event just ended
+            if (currentEventID == null && lastEventID != null) //if an event just ended
             {
                 UpdateSpecialOrders();
             }
@@ -207,8 +198,8 @@ namespace StardewValleyExpanded
         {
             foreach (var entry in SpecialOrders) //for each entry in the special orders list
             {
-                List<int> seenEvents;
-                List<int> notSeenEvents;
+                List<string> seenEvents;
+                List<string> notSeenEvents;
 
                 try
                 {
@@ -228,7 +219,7 @@ namespace StardewValleyExpanded
                 string unmetSeenEvents = "";
                 string unmetNotSeenEvents = "";
 
-                foreach (int seenEvent in seenEvents) //for each event the players must have seen
+                foreach (string seenEvent in seenEvents) //for each event the players must have seen
                 {
                     if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(seenEvent)) == false) //if NO players have seen this event
                     {
@@ -237,7 +228,7 @@ namespace StardewValleyExpanded
                     }
                 }
 
-                foreach (int notSeenEvent in notSeenEvents) //for each event the players must NOT have seen
+                foreach (string notSeenEvent in notSeenEvents) //for each event the players must NOT have seen
                 {
                     if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(notSeenEvent)) == true) //if any player has seen this event
                     {
@@ -246,7 +237,7 @@ namespace StardewValleyExpanded
                     }
                 }
 
-                if (allConditionsMet && Game1.player.team.completedSpecialOrders.ContainsKey(entry.OrderKey) == false) //if conditions are met AND the players have NOT completed this order
+                if (allConditionsMet && Game1.player.team.completedSpecialOrders.Contains(entry.OrderKey) == false) //if conditions are met AND the players have NOT completed this order
                 {
                     if (Game1.player.team.SpecialOrderActive(entry.OrderKey) == false) //if the players do not already have this order
                     {
@@ -261,7 +252,7 @@ namespace StardewValleyExpanded
                     {
                         SpecialOrder order = Game1.player.team.specialOrders[x]; //get the current order
                         if (order.questKey.Value.Equals(entry.OrderKey) //if this is the same order
-                         && order.questState.Value == SpecialOrder.QuestState.InProgress) //AND this order is currently active
+                         && order.questState.Value == SpecialOrderStatus.InProgress) //AND this order is currently active
                         {
                             Monitor.Log($"Removing special order \"{entry.OrderKey}\" from quest logs. Reason(s):", LogLevel.Trace);
                             if (unmetSeenEvents?.Length > 0 || unmetNotSeenEvents.Length > 0) //if any conditions were unmet

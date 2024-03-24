@@ -16,10 +16,22 @@
                     "HasSeenEvent": "191393, 502261"
                }
           },
+          { //Andy House Clean - Fireplace sound effect map property patch
+               "Action": "EditMap",
+               "Target": "Maps/Custom_AndyHouse",
+               "When": {
+                    "HasSeenEvent": "191393, 502261"
+               },
+               "MapProperties": {
+                    "BrookSounds": "18 13 1",
+                    "TreatAsOutdoors": "T"
+               },
+               "Update": "OnLocationChange"
+          },
           {
                "Action": "EditMap",
                "Target": "Maps/Forest",
-               "FromFile": "assets/Maps/MapPatches/AndyFarmHealthy.tbin",
+               "FromFile": "assets/Maps/MapPatches/AndyFarmHealthy.tmx",
                "ToArea": {
                     "X": 58,
                     "Y": 60,
@@ -49,7 +61,7 @@
           {
                "Action": "EditMap",
                "Target": "Maps/Custom_BlueMoonVineyard",
-               "FromFile": "assets/Maps/MapPatches/BlueMoonVineyard_FairyGarden.tbin",
+               "FromFile": "assets/Maps/MapPatches/BlueMoonVineyard_FairyGarden.tmx",
                "ToArea": {
                     "X": 11,
                     "Y": 17,
@@ -297,12 +309,42 @@
                },
                "Update": "OnLocationChange"
           },
-          { //Skull Cavern - warps
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_TreasureCave",
+               "MapTiles": [
+                {
+                   "Position": {
+                     "X": 10,
+                     "Y": 7
+                },
+                   "Layer": "Buildings",
+                   "SetProperties": {
+                     "Success": "T Slingshot 34",
+                     "Action": "SVE_Lock 1 74 money",
+                     "Default": "{{i18n:TreasureCave.String.01}}",
+                     "Failure": "{{i18n:TreasureCave.String.02}}",
+                }
+              }
+            ]
+          },
+          { //Skull Cavern - warps - When Not Festival
                "Action": "EditMap",
                "Target": "Maps/SkullCave",
                "MapProperties": {
                     "Warp": "7 9 Desert 44 58"
                },
+          },
+          { //Skull Cavern - warps - When  Festival ---- KEEP THIS SECOND OR YOU'LL END UP IN A CLIFF
+               "Action": "EditMap",
+               "Target": "Maps/SkullCave",
+               "MapProperties": {
+                    "Warp": "7 9 Desert 8 7"
+               },
+               "When": {
+                    "Season": "Spring",
+                    "Day": "15, 16, 17"
+               }
           },
           { //Coral Reef 1
                "Action": "EditMap",
@@ -352,7 +394,7 @@
           {
                "Action": "Load",
                "Target": "Maps/Town",
-               "FromFile": "Assets/maps/locations/Town.tbin",
+               "FromFile": "Assets/Maps/Locations/Town.tmx",
                "When": {
                     "HasSeenEvent |contains=5553210": false
                }
@@ -360,46 +402,11 @@
           {
                "Action": "Load",
                "Target": "Maps/Town",
-               "FromFile": "Assets/maps/locations/Town_Joja.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Town_Joja.tmx",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent |contains=5553210": true
                }
           },
-          /*{
-        "Action": "EditMap",
-        "Target": "Maps/Town",
-        "FromFile": "Assets/maps/locations/Town_Joja.tbin",
-        "ToArea": { "X": 0, "Y": 0,"Width": 128, "Height": 116 },
-        "When": { "HasSeenEvent": "5553210" }
-   },*/
-          //CUT CODE - causes extra layers in Pelican Town to disappear
-          /*{    //Dynamic town lights
-        "Action": "EditMap",
-        "Target": "Maps/town",
-        "FromFile": "Assets/Maps/MapPatSches/DynamicTownLights.tbin",
-        "ToArea": { "X": 0, "Y": 0,"Width": 120, "Height": 116 },
-        "When": { "Time": "{{Range: 1700, 2600}}", "HasSeenEvent |contains=5553210": false },
-        "PatchMode": "Overlay",
-        "Update": "OnLocationChange"
-   },
-   {    //Dynamic town lights - joja
-        "Action": "EditMap",
-        "Target": "Maps/town",
-        "FromFile": "Assets/Maps/MapPatches/DynamicTownLights_Joja.tbin",
-        "ToArea": { "X": 0, "Y": 0,"Width": 128, "Height": 116 },
-        "When": { "Time": "{{Range: 1700, 2600}}", "HasSeenEvent": "5553210" },
-        "PatchMode": "Overlay",
-        "Update": "OnLocationChange"
-   },
-   {    //Pam's trailer lamp
-        "Action": "EditMap",
-        "Target": "Maps/town",
-        "FromFile": "Assets/Maps/MapPatches/PamTrailerLight.tbin",
-        "ToArea": { "X": 71, "Y": 67,"Width": 1, "Height": 1 },
-        "When": { "Time": "{{Range: 1700, 2600}}", "HasFlag |contains=pamHouseUpgrade": false },
-        "PatchMode": "Overlay",
-        "Update": "OnLocationChange"
-   },*/
           { //Town Winter Night Lights
                "Action": "EditMap",
                "Target": "Maps/Town",
@@ -436,6 +443,16 @@
                     }
                ]
           },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Railroad",
+               "When": {
+                    "HasFlag |contains=Farm_Eternal": false
+               },
+               "AddWarps": [
+                    "48 0 Custom_SVESummit 11 28" 
+               ]
+          },
           { //Mountain Winter Night Lights
                "Action": "EditMap",
                "Target": "Maps/Railroad",
@@ -454,17 +471,55 @@
                     }
                ]
           },
-          {
+          { //Joja Emporium lamp posts
                "Action": "EditMap",
                "Target": "Maps/Town",
                "When": {
                     "HasSeenEvent": "5553210"
                },
                "MapProperties": {
-                    "DayTiles": "AlwaysFront 33 53 907 AlwaysFront 11 7 907 AlwaysFront 27 7 907 AlwaysFront 21 20 907 AlwaysFront 31 20 907 AlwaysFront 21 27 907 AlwaysFront 31 27 907 AlwaysFront 24 50 907 AlwaysFront 17 50 907 AlwaysFront 4 50 907 AlwaysFront 24 58 907 AlwaysFront 20 64 907 AlwaysFront 27 72 907 AlwaysFront 30 72 907 AlwaysFront 38 64 907 AlwaysFront 27 86 907 AlwaysFront 14 86 907 AlwaysFront 1 86 907 AlwaysFront 25 111 369 AlwaysFront 52 98 907 AlwaysFront 56 98 907 AlwaysFront 50 77 907 AlwaysFront 37 77 907 AlwaysFront 52 49 907 AlwaysFront 86 56 907 Buildings 41 69 560 Buildings 92 79 186 AlwaysFront 92 68 907 AlwaysFront 112 68 907 AlwaysFront 127 68 907 AlwaysFront 108 41 907 AlwaysFront 113 41 907 AlwaysFront 79 8 907 AlwaysFront 69 22 907 AlwaysFront 56 22 907 AlwaysFront 49 22 907 AlwaysFront 41 33 907 AlwaysFront 54 33 907 AlwaysFront 71 90 907 AlwaysFront 95 90 907",
-                    "NightTiles": "AlwaysFront 33 53 908 AlwaysFront 11 7 908 AlwaysFront 27 7 908 AlwaysFront 21 20 908 AlwaysFront 31 20 908 AlwaysFront 21 27 908 AlwaysFront 31 27 908 AlwaysFront 24 50 908 AlwaysFront 17 50 908 AlwaysFront 4 50 908 AlwaysFront 24 58 908 AlwaysFront 20 64 908 AlwaysFront 27 72 908 AlwaysFront 30 72 908 AlwaysFront 38 64 908 AlwaysFront 27 86 908 AlwaysFront 14 86 908 AlwaysFront 1 86 908 AlwaysFront 25 111 368 AlwaysFront 52 98 908 AlwaysFront 56 98 908 AlwaysFront 50 77 908 AlwaysFront 37 77 908 AlwaysFront 52 49 908 AlwaysFront 86 56 908 Buildings 41 69 653 Buildings 92 79 190 AlwaysFront 92 68 908 AlwaysFront 112 68 908 AlwaysFront 127 68 908 AlwaysFront 108 41 908 AlwaysFront 113 41 908 AlwaysFront 79 8 908 AlwaysFront 69 22 908 AlwaysFront 56 22 908 AlwaysFront 49 22 908 AlwaysFront 41 33 908 AlwaysFront 54 33 908 AlwaysFront 71 90 908 AlwaysFront 95 90 908",
-                    "Light": "24 52 4 24 60 4 33 55 4 20 66 4 38 66 4 27 74 4 30 74 4 27 88 4 37 79 4 50 79 4 52 100 4 56 100 4 118 16 4 71 67 4 92 79 4 94 52 4 97 52 4 11 9 4 27 9 4 1 88 4 14 88 4 86 58 4 87 45 4 88 45 4 17 52 4 4 52 4 52 51 4 36 49 4 41 51 4 41 69 4 12 84 4 24 87 4 59 48 4 57 60 4 63 83 4 92 79 4 101 87 4 108 6 1 112 7 1 111 10 1 97 49 4 94 49 4 31 22 4 31 29 4 21 29 4 21 22 4 41 35 4 54 35 4 49 24 4 56 24 4 69 24 4 79 10 4 92 70 4 112 70 4 108 43 4 113 43 4 107 28 4 114 28 4 108 23 4 111 23 4 106 21 4 109 21 4 112 21 4 115 22 4 110 28 4 111 28 4 71 92 4 95 92 4 127 70 4 25 113 4",
+                    "DayTiles": "AlwaysFront 33 53 907 AlwaysFront 11 7 907 AlwaysFront 27 7 907 AlwaysFront 21 20 907 AlwaysFront 31 20 907 AlwaysFront 21 27 907 AlwaysFront 31 27 907 AlwaysFront 24 50 907 AlwaysFront 17 50 907 AlwaysFront 4 50 907 AlwaysFront 24 58 907 AlwaysFront 20 64 907 AlwaysFront 27 72 907 AlwaysFront 30 72 907 AlwaysFront 38 64 907 AlwaysFront 27 86 907 AlwaysFront 14 86 907 AlwaysFront 1 86 907 AlwaysFront 25 111 369 AlwaysFront 52 98 907 AlwaysFront 56 98 907 AlwaysFront 50 77 907 AlwaysFront 37 77 907 AlwaysFront 52 49 907 AlwaysFront 86 56 907 Buildings 41 69 560 Buildings 92 79 186 AlwaysFront 79 8 907 AlwaysFront 69 22 907 AlwaysFront 56 22 907 AlwaysFront 49 22 907 AlwaysFront 41 33 907 AlwaysFront 54 33 907 AlwaysFront 119 46 907 AlwaysFront 123 68 907 AlwaysFront 95 68 907 AlwaysFront 104 68 907 AlwaysFront 72 90 907 AlwaysFront 96 90 907",
+                    "NightTiles": "AlwaysFront 33 53 908 AlwaysFront 11 7 908 AlwaysFront 27 7 908 AlwaysFront 21 20 908 AlwaysFront 31 20 908 AlwaysFront 21 27 908 AlwaysFront 31 27 908 AlwaysFront 24 50 908 AlwaysFront 17 50 908 AlwaysFront 4 50 908 AlwaysFront 24 58 908 AlwaysFront 20 64 908 AlwaysFront 27 72 908 AlwaysFront 30 72 908 AlwaysFront 38 64 908 AlwaysFront 27 86 908 AlwaysFront 14 86 908 AlwaysFront 1 86 908 AlwaysFront 25 111 368 AlwaysFront 52 98 908 AlwaysFront 56 98 908 AlwaysFront 50 77 908 AlwaysFront 37 77 908 AlwaysFront 52 49 908 AlwaysFront 86 56 908 Buildings 41 69 653 Buildings 92 79 190 AlwaysFront 79 8 908 AlwaysFront 69 22 908 AlwaysFront 56 22 908 AlwaysFront 49 22 908 AlwaysFront 41 33 908 AlwaysFront 54 33 908 AlwaysFront 119 46 908 AlwaysFront 123 68 908 AlwaysFront 95 68 908 AlwaysFront 104 68 908 AlwaysFront 72 90 908 AlwaysFront 96 90 908",
+                    "Light": "24 52 4 24 60 4 33 55 4 20 66 4 38 66 4 27 74 4 30 74 4 27 88 4 37 79 4 50 79 4 52 100 4 56 100 4 118 16 4 71 67 4 92 79 4 94 52 4 97 52 4 11 9 4 27 9 4 1 88 4 14 88 4 86 58 4 87 45 4 88 45 4 17 52 4 4 52 4 52 51 4 36 49 4 41 51 4 41 69 4 12 84 4 24 87 4 59 48 4 57 60 4 63 83 4 92 79 4 101 87 4 108 6 1 112 7 1 111 10 1 97 49 4 94 49 4 31 22 4 31 29 4 21 29 4 21 22 4 41 35 4 54 35 4 49 24 4 56 24 4 69 24 4 79 10 4 72 92 4 96 92 4 25 113 4 119 48 4 123 70 4 104 70 4 95 70 4 99 64 4 100 64 4 95 55 4 99 56 4 101 56 4 97 58 4 102 58 4 97 61 4 102 61 4 104 58 4 95 63 4 104 63 4",
                }
+          },
+          { //Town CC Theater DayTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Town",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "DayTiles"
+                         ],
+                         "Value": "AlwaysFront 49 22 907 AlwaysFront 56 22 907",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          { //Town CC Theater NightTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Town",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "NightTiles"
+                         ],
+                         "Value": "AlwaysFront 49 22 908 AlwaysFront 56 22 908",
+                         "Delimiter": " "
+                    },
+               ]
           },
           {
                "Action": "Load",
@@ -474,12 +529,27 @@
           {
                "Action": "Load",
                "Target": "Maps/Forest",
-               "FromFile": "Assets/maps/locations/Forest.tbin",
+               "FromFile": "Assets/maps/locations/Forest.tmx",
+          },
+		  {
+               "Action": "Load",
+               "Target": "Maps/Forest-SewerClean",
+               "FromFile": "Assets/maps/MapPatches/Forest-SewerClean.tbin",
+          },
+		  {
+               "Action": "Load",
+               "Target": "Maps/MasteryCave",
+               "FromFile": "Assets/maps/locations/MasteryCave.tmx",
+          },
+          {
+               "Action": "Load",
+               "Target": "Maps/BusStop",
+               "FromFile": "Assets/maps/locations/BusStop.tmx",
           },
           {
                "Action": "EditMap",
                "Target": "Maps/Forest",
-               "FromFile": "Assets/maps/locations/Forest_Joja.tbin",
+               "FromFile": "Assets/maps/MapPatches/Forest_Joja.tmx",
                "When": {
                     "HasSeenEvent": "5553210"
                },
@@ -490,7 +560,7 @@
                     "Height": 29
                }
           },
-          {
+          /*{
                "Action": "EditMap",
                "Target": "Maps/Forest",
                "FromFile": "assets/maps/MapPatches/GrandpasFarm_ForestMarnieYard.tbin",
@@ -505,7 +575,7 @@
                     "FarmType": "Standard",
                     "HasMod": "flashshifter.GrandpasFarm"
                }
-          },
+          },*/
           {
                "Action": "EditMap",
                "Target": "Maps/Forest",
@@ -513,7 +583,7 @@
                     "HasSeenEvent": "5553210"
                },
                "MapProperties": {
-                    "Light": "90 14 4 87 6 4 56 68 4 115 23 4 101 23 4 87 23 4 73 23 4 67 9 4",
+                    "Light": "9 19 4 90 14 4 87 6 4 56 68 4 115 23 4 101 23 4 87 23 4 73 23 4 67 9 4",
                     "DayTiles": "AlwaysFront 73 21 907 AlwaysFront 87 21 907 AlwaysFront 101 21 907 AlwaysFront 115 21 907 AlwaysFront 67 7 907",
                     "NightTiles": "AlwaysFront 73 21 908 AlwaysFront 87 21 908 AlwaysFront 101 21 908 AlwaysFront 115 21 908 AlwaysFront 67 7 908"
                }
@@ -554,17 +624,18 @@
           {
                "Action": "Load",
                "Target": "Maps/Railroad",
-               "FromFile": "Assets/maps/locations/Railroad.tbin",
+               "FromFile": "Assets/maps/locations/Railroad.tmx",
           },
+          /* Removed because of the new 1.6 "Cursed Event"
           {
                "Action": "Load",
                "Target": "Maps/Summit",
                "FromFile": "Assets/maps/locations/Summit.tmx",
-          },
+          },*/
           {
                "Action": "EditMap",
                "Target": "Maps/Railroad",
-               "FromFile": "Assets/maps/locations/Railroad_Joja.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Railroad_Joja.tmx",
                "When": {
                     "HasSeenEvent": "5553210"
                },
@@ -616,7 +687,7 @@
                "Target": "Maps/Mountain",
                "FromFile": "Assets/Maps/Locations/Mountain.tmx",
           },
-		  {    //Patches Boulders in front of construction crew
+          { //Patches Boulders in front of construction crew
                "Action": "EditMap",
                "Target": "Maps/Mountain",
                "FromFile": "Assets/Maps/MapPatches/MountainExtraDebris.tmx",
@@ -628,15 +699,15 @@
                },
                "When": {
                     "Day": "{{Range: 1, 4}}",
-					"Year": "1",
-					"Season": "Spring"
+                    "Year": "1",
+                    "Season": "Spring"
                },
-			   "Update": "OnLocationChange"
+               "Update": "OnLocationChange"
           },
           {
                "Action": "EditMap",
                "Target": "Maps/Mountain",
-               "FromFile": "Assets/Maps/MapPatches/Mountain_Joja.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Mountain_Joja.tmx",
                "When": {
                     "HasSeenEvent": "5553210"
                },
@@ -684,6 +755,44 @@
                     },
                ]
           },
+          { //Mountain DayTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Mountain",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "DayTiles"
+                         ],
+                         "Value": "AlwaysFront 6 8 907 AlwaysFront 22 26 907 AlwaysFront 34 26 907",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          { //Mountain NightTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Mountain",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "NightTiles"
+                         ],
+                         "Value": "AlwaysFront 6 8 908 AlwaysFront 22 26 908 AlwaysFront 34 26 908",
+                         "Delimiter": " "
+                    },
+               ]
+          },
           {
                "Action": "Load",
                "Target": "Maps/Backwoods",
@@ -703,15 +812,44 @@
                     "Height": 7
                }
           },
-          /*{
-        "Action": "EditMap",
-        "Target": "Maps/Backwoods",
-        "FromFile": "Assets/Maps/MapPatches/Backwoods_Joja_Light.tbin",
-        "ToArea": { "X": 46, "Y": 10,"Width": 1, "Height": 1 },
-        "When": { "Time": "{{Range: 1700, 2600}}", "HasSeenEvent": "5553210" },
-        "PatchMode": "Overlay",
-        "Update": "OnLocationChange"
-   },*/
+          { //Backwoods DayTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Backwoods",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "DayTiles"
+                         ],
+                         "Value": "AlwaysFront 46 10 907",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          { //Backwoods NightTiles - Joja
+               "Action": "EditMap",
+               "Target": "Maps/Backwoods",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "NightTiles"
+                         ],
+                         "Value": "AlwaysFront 46 10 908",
+                         "Delimiter": " "
+                    },
+               ]
+          },
           {
                "Action": "EditMap",
                "Target": "Maps/Backwoods",
@@ -869,6 +1007,11 @@
                "Target": "Maps/WizardHouse",
                "FromFile": "Assets/maps/locations/WizardHouse.tbin"
           },
+		  {
+               "Action": "Load",
+               "Target": "Maps/WizardHouseBasement",
+               "FromFile": "Assets/maps/locations/WizardHouseBasement.tmx"
+          },
           { //adds lights to wizard interior after junimo event
                "Action": "EditMap",
                "Target": "Maps/WizardHouse",
@@ -894,130 +1037,6 @@
                     "Height": 48
                }
           },
-          //FESTIVAL MAP LOADS
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-EggFestival",
-               "When": {
-                    "HasSeenEvent |contains=5553210": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-EggFestival.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-EggFestival",
-               "When": {
-                    "HasSeenEvent": "5553210"
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town_Joja_EggFestival.tbin"
-          },
-          {
-               "Action": "EditMap", //changes egg locations
-               "Target": "Maps/Town-EggFestival",
-               "When": {
-                    "IsOddYear": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-EggFestival2.tbin",
-               "ToArea": {
-                    "X": 0,
-                    "Y": 0,
-                    "Width": 120,
-                    "Height": 116
-               },
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Fair",
-               "When": {
-                    "HasSeenEvent |contains=5553210": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-Fair.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Fair",
-               "When": {
-                    "HasSeenEvent": "5553210"
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town_Joja_Fair.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Halloween",
-               "When": {
-                    "IsOddYear": true,
-                    "HasSeenEvent |contains=5553210": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-Halloween.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Halloween",
-               "When": {
-                    "IsOddYear": false,
-                    "HasSeenEvent |contains=5553210": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-Halloween2.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Halloween",
-               "When": {
-                    "IsOddYear": true,
-                    "HasSeenEvent": "5553210"
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town_Joja_Halloween.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Halloween",
-               "When": {
-                    "IsOddYear": false,
-                    "HasSeenEvent": "5553210"
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town_Joja_Halloween2.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Christmas",
-               "When": {
-                    "HasSeenEvent |contains=5553210": false
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town-Christmas.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Town-Christmas",
-               "When": {
-                    "HasSeenEvent": "5553210"
-               },
-               "FromFile": "Assets/Maps/FestivalMaps/Town_Joja_Christmas.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Forest-FlowerFestival",
-               "FromFile": "Assets/Maps/FestivalMaps/Forest-FlowerFestival.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Forest-IceFestival",
-               "FromFile": "Assets/Maps/FestivalMaps/Forest-IceFestival.tbin"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Beach-NightMarket",
-               "FromFile": "Assets/Maps/FestivalMaps/Beach-NightMarket.tmx"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Beach-Luau",
-               "FromFile": "Assets/Maps/FestivalMaps/Beach-Luau.tmx"
-          },
-          {
-               "Action": "Load",
-               "Target": "Maps/Beach-Jellies",
-               "FromFile": "Assets/Maps/FestivalMaps/Beach-Jellies.tmx"
-          },
           //PATCHING LOADS
           {
                "Action": "Load",
@@ -1035,7 +1054,7 @@
           {
                "Action": "Load",
                "Target": "Maps/Town-TheaterCC",
-               "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC.tmx",
                "When": {
                     "HasSeenEvent |contains=5553210": false
                }
@@ -1048,7 +1067,7 @@
                     "HasSeenEvent": "5553210"
                }
           },
-          {
+          /*{
                "Action": "EditMap",
                "Target": "Maps/Town",
                "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC_Fix.tbin",
@@ -1063,7 +1082,7 @@
                     "Width": 4,
                     "Height": 4
                }
-          },
+          },*/
           {
                "Action": "EditMap",
                "Target": "Maps/Town-TheaterCC",
@@ -1114,12 +1133,34 @@
           {
                "Action": "Load",
                "Target": "Maps/Town-TrashGone",
-               "FromFile": "Assets/Maps/MapPatches/Town-TrashGone.tbin"
+               "FromFile": "Assets/Maps/MapPatches/Town-TrashGone.tbin",
+               "When": {
+                    "HasSeenEvent |contains=5553210": false
+               }
+          },
+          {
+               "Action": "Load",
+               "Target": "Maps/Town-TrashGone",
+               "FromFile": "Assets/Maps/MapPatches/Town-TrashGone_Joja.tbin",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
           },
           {
                "Action": "Load",
                "Target": "Maps/Town-DogHouse",
-               "FromFile": "Assets/Maps/MapPatches/Town-DogHouse.tbin"
+               "FromFile": "Assets/Maps/MapPatches/Town-DogHouse.tbin",
+               "When": {
+                    "HasSeenEvent |contains=5553210": false
+               }
+          },
+          {
+               "Action": "Load",
+               "Target": "Maps/Town-DogHouse",
+               "FromFile": "Assets/Maps/MapPatches/Town-DogHouse_Joja.tbin",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
           },
           {
                "Action": "Load",
@@ -1130,15 +1171,15 @@
                "Action": "Load",
                "Target": "Maps/Mountain_Shortcuts",
                "FromFile": "Assets/Maps/MapPatches/Mountain_Shortcuts.tbin",
-			   "When": {
+               "When": {
                     "HasMod|contains=Rafseazz.RSVCP": false
                },
           },
-		  {
+          {
                "Action": "Load",
                "Target": "Maps/Mountain_Shortcuts",
                "FromFile": "Assets/Maps/MapPatches/Mountain_Shortcuts_Ridgeside.tbin",
-			   "When": {
+               "When": {
                     "HasMod|contains=Rafseazz.RSVCP": true
                },
           },
@@ -1157,20 +1198,6 @@
                "When": {
                     "HasSeenEvent": "5553210"
                },
-          },
-          { //Patches Krobus at halloween festival after players meet them for the first time
-               "Action": "EditMap",
-               "Target": "Maps/Town-Halloween",
-               "FromFile": "Assets/Maps/MapPatches/KrobusPatched.tbin",
-               "When": {
-                    "HasSeenEvent": "1090501"
-               },
-               "ToArea": {
-                    "X": 36,
-                    "Y": 101,
-                    "Width": 1,
-                    "Height": 1
-               }
           },
           { //Leaf patches
                "Action": "EditMap",
@@ -1279,7 +1306,7 @@
           },
           {
                "Action": "EditMap",
-               "Target": "Maps/Summit",
+               "Target": "Maps/Custom_SVESummit",
                "FromFile": "Assets/Maps/MapPatches/Summit_Leaves.tmx",
                "When": {
                     "Season": "Fall",
@@ -1346,7 +1373,7 @@
                     "SeasonalEdits": true
                },
                "ToArea": {
-                    "X": 0,
+                    "X": 10,
                     "Y": 0,
                     "Width": 35,
                     "Height": 24
@@ -1452,7 +1479,7 @@
                     "Width": 3,
                     "Height": 5
                }
-          },
+          }, /*
           {
                "Action": "EditMap",
                "Target": "Maps/BusStop",
@@ -1463,7 +1490,7 @@
                     "Width": 35,
                     "Height": 24
                },
-          },
+          },*/
           { //Changed NPC warp at bus stop to desert 
                "Action": "EditMap",
                "Target": "Maps/BusStop",
@@ -1471,7 +1498,7 @@
                     "AllowGrassSurviveInWinter": "T"
                }
           },
-          {
+          /* {
                "Action": "EditMap",
                "Target": "Maps/BusStop",
                "FromFile": "assets/Maps/MapPatches/BusStop_IF2R_Warps.tbin",
@@ -1485,7 +1512,7 @@
                     "FarmType": "Standard",
                     "HasMod": "flashshifter.immersivefarm2remastered"
                }
-          },
+          },*/
           { //Fixes Emily bedsheet colors - 2 heart event
                "Action": "EditImage",
                "Target": "LooseSprites/Cursors",
@@ -1497,7 +1524,7 @@
                     "Height": 11
                }
           },
-          { //Fixes farmhouse1 tile glitch
+          /*  { //Fixes farmhouse1 tile glitch
                "Action": "EditMap",
                "Target": "Maps/Farmhouse1_Marriage",
                "FromFile": "Assets/Maps/MapPatches/FarmhouseTileFix.tbin",
@@ -1507,8 +1534,8 @@
                     "Width": 1,
                     "Height": 1
                }
-          },
-          { //Fixes farmhouse2 tile glitch
+          },*/
+          /*   { //Fixes farmhouse2 tile glitch
                "Action": "EditMap",
                "Target": "Maps/Farmhouse2_Marriage",
                "FromFile": "Assets/Maps/MapPatches/FarmhouseTileFix.tbin",
@@ -1518,8 +1545,8 @@
                     "Width": 1,
                     "Height": 1
                }
-          },
-          { //Fixes farmhouse corner room tile glitch
+          },*/
+          /* { //Fixes farmhouse corner room tile glitch
                "Action": "EditMap",
                "Target": "Maps/Farmhouse_CornerRoom_Add",
                "FromFile": "Assets/Maps/MapPatches/FarmhouseTileFix2.tbin",
@@ -1532,7 +1559,7 @@
                     "Width": 1,
                     "Height": 1
                }
-          },
+          },*/
           { //Animates Robin's air conditioning unit during summere
                "Action": "EditMap",
                "Target": "Maps/Mountain",
@@ -1654,7 +1681,7 @@
                "Action": "EditMap",
                "Target": "Maps/BusStop",
                "MapProperties": {
-                    "NPCWarp": "12 8 Custom_DayEnd_WarpRoom 3 3"
+                    "NPCWarp": "22 8 Custom_DayEnd_WarpRoom 3 3"
                }
           },
           { //Patches Grampleton Fields warps at shearwater bridge
@@ -1749,13 +1776,28 @@
                "FromFile": "Assets/Maps/MapPatches/GrampletonFields_NoWarp.tbin",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
-                    "HasSeenevent |contains=1000035": false
+                    "HasSeenEvent |contains=1000035": false
                },
                "ToArea": {
                     "X": 154,
                     "Y": 30,
                     "Width": 1,
                     "Height": 1
+               },
+               "Update": "OnLocationChange"
+          },
+          { //Patches a ladder and a tiny bridge at adventurer summit once railroad has opened up
+               "Action": "EditMap",
+               "Target": "Maps/Custom_AdventurerSummit",
+               "FromFile": "Assets/Maps/MapPatches/AdventurerSummit_Railroad_Shortcut.tmx",
+               "When": {
+                    "HasSeenEvent |contains=1000077": true
+               },
+               "ToArea": {
+                    "X": 11,
+                    "Y": 11,
+                    "Width": 4,
+                    "Height": 6
                },
                "Update": "OnLocationChange"
           },
@@ -1862,36 +1904,6 @@
           },
           {
                "Action": "EditMap",
-               "Target": "Maps/Town_Joja_EggFestival",
-               "FromFile": "Assets/Maps/MapPatches/Town_JojaTheater_ShadowFix.tbin",
-               "ToArea": {
-                    "X": 52,
-                    "Y": 20,
-                    "Width": 2,
-                    "Height": 1
-               },
-               "When": {
-                    "HasFlag": "ccMovieTheaterJoja",
-                    "HasSeenEvent": "5553210"
-               }
-          },
-          {
-               "Action": "EditMap",
-               "Target": "Maps/Town_Joja_EggFestival2",
-               "FromFile": "Assets/Maps/MapPatches/Town_JojaTheater_ShadowFix.tbin",
-               "ToArea": {
-                    "X": 52,
-                    "Y": 20,
-                    "Width": 2,
-                    "Height": 1
-               },
-               "When": {
-                    "HasFlag": "ccMovieTheaterJoja",
-                    "HasSeenEvent": "5553210"
-               }
-          },
-          {
-               "Action": "EditMap",
                "Target": "Maps/Town_Joja_Fair",
                "FromFile": "Assets/Maps/MapPatches/Town_JojaTheater_ShadowFix.tbin",
                "ToArea": {
@@ -1941,7 +1953,7 @@
                "FromFile": "Assets/Maps/MapPatches/OriginalMineLocation_1.tbin",
                "When": {
                     "OriginalMinesEntrance": true,
-					"HasMod |contains=Himetarts.ARV.CP": false
+                    "HasMod |contains=Himetarts.ARV.CP": false
                },
                "ToArea": {
                     "X": 53,
@@ -1950,13 +1962,13 @@
                     "Height": 6
                }
           },
-		  {
+          {
                "Action": "EditMap",
                "Target": "Maps/Mountain",
                "FromFile": "Assets/Maps/MapPatches/SterlingCompat2.tbin",
                "When": {
                     "OriginalMinesEntrance": true,
-					"HasMod |contains=Himetarts.ARV.CP": true
+                    "HasMod |contains=Himetarts.ARV.CP": true
                },
                "ToArea": {
                     "X": 53,
@@ -2109,7 +2121,7 @@
           { //Cindersap Forest
                "Action": "EditMap",
                "Target": "Maps/Forest",
-               "FromFile": "Assets/Maps/MapPatches/Forest_ShorterPath.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Forest_ShorterPath.tmx",
                "When": {
                     "ShorterPathToBlueMoonVineyard": true
                },
@@ -2165,14 +2177,101 @@
                ]
           },
           //ADD WORLD MAP
+          //Default
           {
                "Action": "EditImage",
                "Target": "LooseSprites/Map",
-               "FromFile": "Assets/Maps/WorldMaps/{{Season}}_map.png",
+               "FromFile": "assets/Maps/WorldMaps/StardewValley/Spring_SVE_WorldMap.png",
                "Update": "OnLocationChange",
-               "PatchMode": "Replace"
+               "PatchMode": "Replace",
           },
           {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Summer",
+               "FromFile": "assets/Maps/WorldMaps/StardewValley/Summer_SVE_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Fall",
+               "FromFile": "assets/Maps/WorldMaps/StardewValley/Fall_SVE_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Winter",
+               "FromFile": "assets/Maps/WorldMaps/StardewValley/Winter_SVE_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+          },
+          //After Joja Map Changes
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map",
+               "FromFile": "assets/Maps/WorldMaps/Joja/Spring_Joja_WorldMap.png",
+               "ToArea": {
+                    "X": 84,
+                    "Y": 14,
+                    "Width": 189,
+                    "Height": 117
+               },
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Summer",
+               "FromFile": "assets/Maps/WorldMaps/Joja/Summer_Joja_WorldMap.png",
+               "ToArea": {
+                    "X": 84,
+                    "Y": 14,
+                    "Width": 189,
+                    "Height": 117
+               },
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Fall",
+               "FromFile": "assets/Maps/WorldMaps/Joja/Fall_Joja_WorldMap.png",
+               "ToArea": {
+                    "X": 84,
+                    "Y": 14,
+                    "Width": 189,
+                    "Height": 117
+               },
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Map_Winter",
+               "FromFile": "assets/Maps/WorldMaps/Joja/Winter_Joja_WorldMap.png",
+               "ToArea": {
+                    "X": 84,
+                    "Y": 14,
+                    "Width": 189,
+                    "Height": 117
+               },
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "HasSeenEvent |contains=5553210": true
+               }
+          },
+          /*{
                "Action": "EditImage",
                "Target": "LooseSprites/Map",
                "FromFile": "Assets/Maps/WorldMaps/Patches/{{Season}}_Joja.png",
@@ -2180,15 +2279,48 @@
                "When": {
                     "HasSeenEvent": "5553210"
                }
+          },*/
+          //Edits Meadowlands Farm world map patch
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Farm_ranching_map",
+               "FromFile": "Assets/Maps/WorldMaps/MeadowlandsFarm/spring_Meadowlands_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "Season": "Spring"
+               }
           },
-          /*{                                   <<<Does not work :[
-        "Action": "EditImage",
-        "Target": "LooseSprites/Map",
-        "FromFile": "Assets/Maps/WorldMaps/Galdora_CrimsonBadlands.png",
-        "When": { "LocationName": "Custom_CrimsonBadlands" },
-        "Update": "OnLocationChange",
-        "PatchMode": "Overlay"
-     },*/
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Farm_ranching_map_summer",
+               "FromFile": "Assets/Maps/WorldMaps/MeadowlandsFarm/summer_Meadowlands_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "Season": "Summer"
+               }
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Farm_ranching_map_fall",
+               "FromFile": "Assets/Maps/WorldMaps/MeadowlandsFarm/fall_Meadowlands_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "Season": "Fall"
+               }
+          },
+          {
+               "Action": "EditImage",
+               "Target": "LooseSprites/Farm_ranching_map_winter",
+               "FromFile": "Assets/Maps/WorldMaps/MeadowlandsFarm/winter_Meadowlands_WorldMap.png",
+               "Update": "OnLocationChange",
+               "PatchMode": "Replace",
+               "When": {
+                    "Season": "Winter"
+               }
+          },
           {
                "Action": "EditImage",
                "Target": "LooseSprites/Map",
@@ -2210,7 +2342,7 @@
           {
                "Action": "EditImage",
                "Target": "Minigames/boatJourneyMap",
-               "FromFile": "Assets/Maps/WorldMaps/boatJourneyMap.png",
+               "FromFile": "Assets/Maps/WorldMaps/boatJourney/{{season}}_SVE_boatJourneyMap.png",
                "PatchMode": "Replace",
           },
           { //IF2R warp fix - normal
@@ -2503,7 +2635,7 @@
           { //Community garden - phase 1
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase1.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase1.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,
@@ -2517,7 +2649,7 @@
           { //Community garden - phase 1
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase1.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase1.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,
@@ -2531,7 +2663,7 @@
           { //Community garden - phase 2
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase2.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase2.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,
@@ -2545,7 +2677,7 @@
           { //Community garden - phase 2
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase2.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase2.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,
@@ -2559,7 +2691,7 @@
           { //Community garden - phase 3
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase3.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase3.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,
@@ -2573,7 +2705,7 @@
           { //Community garden - phase 3
                "Action": "EditMap",
                "Target": "Maps/Town",
-               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase3.tbin",
+               "FromFile": "Assets/Maps/CropPhases/CommunityGardenPhase3.tmx",
                "ToArea": {
                     "X": 96,
                     "Y": 99,

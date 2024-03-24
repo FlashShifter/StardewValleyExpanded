@@ -1,5 +1,35 @@
 {
      "Changes": [
+          
+    {
+     "Action": "EditData",
+     "Target": "Data/NPCGiftTastes",
+     "LogName": "Gift tastes: Caroline",
+     "TextOperations": [
+       /*Dislike*/
+       {
+         "Operation": "Append",
+         "Target": [
+           "Fields",
+           "Caroline",
+           5
+         ],
+         "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+         "Delimiter": " "
+       }
+       /*Neutral*/,
+       {
+         "Operation": "Append",
+         "Target": [
+           "Fields",
+           "Caroline",
+           9
+         ],
+         "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+         "Delimiter": " "
+       }
+     ]
+   },
           { //CAROLINE SCHEDULE EDITS
                "Action": "EditData",
                "Target": "characters/schedules/Caroline",

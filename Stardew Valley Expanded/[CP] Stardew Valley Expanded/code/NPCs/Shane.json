@@ -1,5 +1,51 @@
 {
 	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Shane",
+			"TextOperations": [
+			  /*Dislike*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		  {
+			//Fake portrait for 8 hearts
+			"Action": "Load",
+			"Target": "Portraits/Shane_JojaMart",
+			"FromFile": "assets/CharacterFiles/Portraits/NoPortraits/Shane_JojaMart.png"
+		  },
 		{ //SHANE SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Shane",
@@ -9,7 +55,7 @@
 				"Day |contains=22": true
 			},
 			"Entries": {
-				"marriage_Mon": "830 AnimalShop 22 6 0 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 BusStop -1 23 3",
+				"marriage_Mon": "830 AnimalShop 22 6 0 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 Bed",
 			},
 		},
 		{ //SHANE SCHEDULE EDITS
@@ -18,7 +64,8 @@
 			"Entries": {
 				"Sun_normal": "700 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1450 AnimalShop 3 15 0/1800 Saloon 21 17 2 shane_drink/2400 AnimalShop 27 4 1 shane_sleep",
 				"summer_Sun": "700 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1450 AnimalShop 3 15 0/1800 Saloon 21 17 2 shane_drink/2400 AnimalShop 27 4 1 shane_sleep",
-				"default": "900 AnimalShop 24 17 1/1000 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1200 AnimalShop 3 16 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/2300 AnimalShop 27 4 1 shane_sleep"
+				"default": "900 AnimalShop 24 17 1/1000 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1200 AnimalShop 3 16 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/2300 AnimalShop 27 4 1 shane_sleep", 
+				"GreenRain": "610 AnimalShop 24 16 3",
 			},
 		},
 		{ //SHANE SCHEDULE - Jas
@@ -171,7 +218,7 @@
 			"Action": "EditData",
 			"Target": "data/events/town",
 			"Entries": {
-				"3917586/e 3917585/O Shane/A shaneSaloon2": "spring_day_ambient/45 71/farmer 47 71 1 Shane 37 72 1 Marnie 48 70 2/addWorldState shanePK/skippable/emote Shane 56 true/move Shane 8 0 0/pause 500/speak Shane \"{{i18n:Shane.Event2.01}}\"/pause 500/move Shane 0 -1 0/playSound doorClose/warp Shane -100 -100/pause 1000/faceDirection farmer 2 true/showFrame 0/emote farmer 12 true/emote Marnie 12/speak Marnie \"{{i18n:Shane.Event2.02}}\"/move farmer 0 1 3/move farmer -2 0 0/move farmer 0 -1 0/playSound doorClose/warp farmer -100 -100/move Marnie 0 2 3/move Marnie -3 0 0/move Marnie 0 -1 0/playSound doorClose/warp Marnie -100 -100/fade/viewport -1000 -1000/changeLocation Saloon/warp Shane 33 18/warp Marnie 18 21/warp farmer 19 21/faceDirection Marnie 1 true/faceDirection farmer 1 true/positionOffset farmer 0 16/advancedMove farmer false 6 0 0 -2 8 0 4 10/advancedMove Marnie false 6 0 0 -2 8 0 4 10/specificTemporarySprite shaneSaloonCola/playMusic none/pause 3000/viewport 33 18 true/pause 800/playSound Cowboy_gunshot/pause 200/emote Shane 52 true/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/shake Shane 500/playSound cowboy_monsterhit/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_gunload/pause 700/playSound Cowboy_gunshot/shake Shane 500/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/playSound cowboy_monsterhit/jump Shane/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_dead/jump Shane/pause 500/textAboveHead Shane \"{{i18n:Shane.Event2.03}}\"/pause 2000/playMusic distantBanjo/textAboveHead Shane \"{{i18n:Shane.Event2.04}}\"/pause 3000/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/animate Shane false true 100 18/jump Shane/pause 500/stopAnimation Shane/showFrame Shane 0/emote Shane 16/speak Shane \"{{i18n:Shane.Event2.05}}\"/faceDirection Marnie 1 true/faceDirection farmer 3/faceDirection Marnie 0 true/faceDirection farmer 0/speak Marnie \"{{i18n:Shane.Event2.06}}\"/pause 500/speak Shane \"{{i18n:Shane.Event2.07}}\"/faceDirection Shane 1 true/pause 100/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.08}}\"/pause 500/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/pause 500/animate Shane false true 100 34/pause 500/speak Shane \"{{i18n:Shane.Event2.09}}\"/pause 500/stopAnimation Shane/pause 100/move Marnie 0 -1 1/speak Marnie \"{{i18n:Shane.Event2.10}}\"/pause 500/faceDirection Shane 3/pause 200/emote Shane 8/speak Shane \"{{i18n:Shane.Event2.11}}\"/pause 1000/faceDirection Shane 2/pause 200/faceDirection Shane 3/faceDirection Shane 2/faceDirection Shane 3/speak Shane \"{{i18n:Shane.Event2.12}}\"/faceDirection Marnie 2/emote Marnie 28/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.13}}\"/question fork0 \"{{i18n:Shane.Event2.13}}\"/fork wewereworried/emote farmer 40/faceDirection Marnie 1/pause 1000/faceDirection Shane 2/emote Shane 40/speak Shane \"{{i18n:Shane.Event2.14}}\"/pause 500/emote Marnie 20 true/emote farmer 20 true/pause 1300/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.15}}\"/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.16}}\"/pause 1000/emote farmer 32/pause 1000/end dialogue Shane \"{{i18n:Shane.Event2.17}}\""
+				"3917586/e 3917585/O Shane/A shaneSaloon2": "spring_day_ambient/45 71/farmer 47 71 1 Shane 37 72 1 Marnie 48 70 2/addWorldState shanePK/emote Shane 56 true/move Shane 8 0 0/pause 500/speak Shane \"{{i18n:Shane.Event2.01}}\"/pause 500/move Shane 0 -1 0/playSound doorClose/warp Shane -100 -100/pause 1000/faceDirection farmer 2 true/showFrame 0/emote farmer 12 true/emote Marnie 12/speak Marnie \"{{i18n:Shane.Event2.02}}\"/move farmer 0 1 3/move farmer -2 0 0/move farmer 0 -1 0/playSound doorClose/warp farmer -100 -100/move Marnie 0 2 3/move Marnie -3 0 0/move Marnie 0 -1 0/playSound doorClose/warp Marnie -100 -100/fade/viewport -1000 -1000/changeLocation Saloon/warp Shane 33 18/warp Marnie 18 21/warp farmer 19 21/faceDirection Marnie 1 true/faceDirection farmer 1 true/positionOffset farmer 0 16/advancedMove farmer false 6 0 0 -2 8 0 4 10/advancedMove Marnie false 6 0 0 -2 8 0 4 10/specificTemporarySprite shaneSaloonCola/playMusic none/pause 3000/viewport 33 18 true/pause 800/playSound Cowboy_gunshot/pause 200/emote Shane 52 true/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/shake Shane 500/playSound cowboy_monsterhit/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_gunload/pause 700/playSound Cowboy_gunshot/shake Shane 500/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/playSound cowboy_monsterhit/jump Shane/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_dead/jump Shane/pause 500/textAboveHead Shane \"{{i18n:Shane.Event2.03}}\"/pause 2000/playMusic distantBanjo/textAboveHead Shane \"{{i18n:Shane.Event2.04}}\"/pause 3000/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/animate Shane false true 100 18/jump Shane/pause 500/stopAnimation Shane/showFrame Shane 0/emote Shane 16/speak Shane \"{{i18n:Shane.Event2.05}}\"/faceDirection Marnie 1 true/faceDirection farmer 3/faceDirection Marnie 0 true/faceDirection farmer 0/speak Marnie \"{{i18n:Shane.Event2.06}}\"/pause 500/speak Shane \"{{i18n:Shane.Event2.07}}\"/faceDirection Shane 1 true/pause 100/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.08}}\"/pause 500/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/pause 500/animate Shane false true 100 34/pause 500/speak Shane \"{{i18n:Shane.Event2.09}}\"/pause 500/stopAnimation Shane/pause 100/move Marnie 0 -1 1/speak Marnie \"{{i18n:Shane.Event2.10}}\"/pause 500/faceDirection Shane 3/pause 200/emote Shane 8/speak Shane \"{{i18n:Shane.Event2.11}}\"/pause 1000/faceDirection Shane 2/pause 200/faceDirection Shane 3/faceDirection Shane 2/faceDirection Shane 3/speak Shane \"{{i18n:Shane.Event2.12}}\"/faceDirection Marnie 2/emote Marnie 28/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.13}}\"/question fork0 \"{{i18n:Shane.Event2.13A}}\"/fork wewereworried/emote farmer 40/faceDirection Marnie 1/pause 1000/faceDirection Shane 2/emote Shane 40/speak Shane \"{{i18n:Shane.Event2.14}}\"/pause 500/emote Marnie 20 true/emote farmer 20 true/pause 1300/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.15}}\"/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.16}}\"/pause 1000/emote farmer 32/pause 1000/end dialogue Shane \"{{i18n:Shane.Event2.17}}\""
 			},
 		},
 	]

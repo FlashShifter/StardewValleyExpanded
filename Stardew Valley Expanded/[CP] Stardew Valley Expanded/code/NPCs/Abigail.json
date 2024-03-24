@@ -1,23 +1,80 @@
 {
     "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Abigail",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose FlashShifter.StardewValleyExpandedCP_Bearberrys",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+            ]
+          },
         { //ABIGAIL SCHEDULE EDITS
             "Action": "EditData",
             "Target": "characters/schedules/Abigail",
             "Entries": {
                 "20": "800 SeedShop 35 5 2/1000 SeedShop 9 5 0/1230 SebastianRoom 3 10 0/2100 SeedShop 1 9 3 abigail_sleep",
-                "marriage_Fri": "800 SeedShop 36 9 0 \"Strings\\schedules\\Abigail:marriage_Fri.000\"/1100 Mountain 49 31 2 abigail_flute/1500 Saloon 42 17 2 abigail_sit_down \"Strings\\schedules\\Abigail:marriage_Fri.001\"/2030 BusStop -1 23 3",
                 "6": "900 SeedShop 39 5 0/1030 SeedShop 2 20 3/1200 Mountain 49 31 2 abigail_flute/2000 SeedShop 1 9 3 abigail_sleep",
             },
         },
         { //Abigail chronicles of solaria schedule
             "Action": "EditData",
             "Target": "characters/schedules/Abigail",
-            "When": {
-                "Day": "20",
-                "Spouse": "Abigail"
-            },
             "Entries": {
-                "Sat": "1100 SebastianRoom 3 10 0/2100 BusStop -1 23 3",
+                "marriage_{{Season}}_20": "1100 SebastianRoom 3 10 0/2100 Bed",
             },
         },
         { //ABIGAIL DIALOGUE
@@ -55,7 +112,7 @@
                 "FarmhouseUpgrade": 3
             },
             "Entries": {
-                "1140962/f Abigail 3000/O Abigail/t 700 2300": "50s/-500 -500/farmer 34 15 1 Abigail 38 14 0 Pierre -20 -20 0 Caroline -20 -20 0/skippable/makeInvisible 34 13 5 3/viewport 38 14 true/pause 2500/textAboveHead Abigail \"{{i18n:Abigail.12hearts.01}}\"/pause 1000/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1250/faceDirection Abigail 3 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.02}}\"/pause 1000/faceDirection Abigail 0 true/pause 1000/speak Abigail \"{{i18n:Abigail.12hearts.03}}\"/pause 500/emote Abigail 40/pause 250/speak Abigail \"{{i18n:Abigail.12hearts.04}}\"/pause 550/faceDirection farmer 0 true/pause 650/globalFade/viewport -1000 -1000/changeLocation Custom_JojaPetStore/addTemporaryActor HamishCameo 16 32 2 13 2/showFrame HamishCameo 1/positionOffset HamishCameo 0 -15 true/addTemporaryActor JojaPetStoreEmployee 16 32 16 11 3/positionOffset JojaPetStoreEmployee -15 10 true/showFrame JojaPetStoreEmployee 1 true/warp farmer -20 -20/warp Abigail -20 -20/playMusic Hospital_Ambient/message \"{{i18n:Abigail.12hearts.05}}\"/pause 1000/viewport 9 11 clamp true/pause 1800/showFrame JojaPetStoreEmployee 2 true/pause 500/showFrame JojaPetStoreEmployee 1 true/pause 800/warp Abigail 13 16/playSound doorClose/pause 650/showFrame JojaPetStoreEmployee 0 true/pause 500/textAboveHead JojaPetStoreEmployee \"{{i18n:Abigail.12hearts.06}}\"/pause 650/move Abigail 0 -5 1 true/pause 2500/showFrame JojaPetStoreEmployee 1 true/pause 750/warp Pierre 13 16/playSound doorClose/pause 300/move Pierre 0 -3 0 true/pause 400/warp Caroline 12 16/playSound doorClose/pause 200/move Caroline 0 -3 0 true/pause 1300/faceDirection Abigail 2 true/pause 400/speak Caroline \"{{i18n:Abigail.12hearts.07}}\"/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.08}}\"/pause 850/faceDirection Abigail 3 true/pause 500/move Abigail -2 0 0/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.09}}\"/pause 500/emote Abigail 40 true/pause 600/faceDirection Caroline 1 true/pause 500/faceDirection Pierre 3 true/pause 300/faceDirection Abigail 1 true/pause 300/move Abigail 2 0 0/move Abigail 0 -2 1/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.10}}\"/pause 1000/emote Abigail 40/pause 500/move Abigail 0 -2 3/move Abigail -1 0 3/pause 1200/emote Abigail 40/pause 1000/faceDirection Abigail 0 true/pause 600/emote Abigail 16 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.11}}\"/pause 350/speed Abigail 5/move Abigail 0 -1 1/speed Abigail 5/move Abigail 1 0 0/pause 1000/emote Abigail 32/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.12}}\"/pause 1000/shake Abigail 1500/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.13}}\"/pause 1000/emote Abigail 40 true/pause 900/speak Abigail \"{{i18n:Abigail.12hearts.14}}\"/pause 650/showFrame JojaPetStoreEmployee 3 true/pause 500/message \"{{i18n:Abigail.12hearts.15}}\"/pause 650/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/message \"{{i18n:Abigail.12hearts.16}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.17}}\"/pause 600/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 0 true/pause 750/jump Abigail/pause 500/playMusic musicboxsong/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.18}}\"/pause 850/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 550/speak Abigail \"{{i18n:Abigail.12hearts.19}}\"/pause 650/showFrame JojaPetStoreEmployee 3/pause 500/message \"{{i18n:Abigail.12hearts.20}}\"/pause 500/faceDirection Pierre 0 true/pause 500/faceDirection Caroline 0 true/pause 450/globalFade/viewport -1000 -1000/warp JojaPetStoreEmployee 14 6/faceDirection Abigail 0 true/warp Pierre 13 8/warp Caroline 12 8/faceDirection Caroline 0 true/faceDirection Pierre 0 true/positionOffset Pierre 12 -16 true/positionOffset Caroline 10 -12 true/positionOffset Abigail 0 -20 true/positionOffset JojaPetStoreEmployee 0 -24 true/warp HamishCameo -19 -19/viewport 13 7 clamp true/pause 1000/speak Pierre \"{{i18n:Abigail.12hearts.21}}\"/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/speak Pierre \"{{i18n:Abigail.12hearts.22}}\"/speak Caroline \"{{i18n:Abigail.12hearts.23}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.24}}\"/pause 500/shake JojaPetStoreEmployee 1000/pause 500/playSound dwop/pause 1500/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 750/message \"{{i18n:Abigail.12hearts.25}}\"/pause 1000/playSound pickUpItem/pause 500/showFrame Abigail 31 true/pause 200/textAboveHead Abigail \"{{i18n:Abigail.12hearts.26}}\"/pause 500/playSound rabbit/pause 750/playSound rabbit/pause 250/showFrame Abigail 30 true/pause 750/globalFade/viewport -1000 -1000/stopMusic/changeLocation farmhouse/warp JojaPetStoreEmployee -20 -20/warp Pierre -21 -21/warp Caroline -22 -22/warp farmer 37 14/faceDirection farmer 0 true/warp Abigail 38 14/faceDirection Abigail 0 true/positionOffset farmer 0 10 true/positionOffset Abigail 0 -5 true/viewport 38 14 true/pause 1250/speak Abigail \"{{i18n:Abigail.12hearts.27}}\"/pause 1000/faceDirection farmer 1 true/pause 750/faceDirection Abigail 3 true/pause 600/emote farmer 20 true/pause 350/emote Abigail 20 true/pause 1000/globalFade/viewport -1000 -1000/pause 500/end dialogue Abigail \"{{i18n:Abigail.12hearts.28}}\"",
+                "1140962/f Abigail 3000/O Abigail/t 700 2300": "50s/-500 -500/farmer 49 25 1 Abigail 53 24 0 Pierre -20 -20 0 Caroline -20 -20 0/skippable/makeInvisible 34 13 5 3/viewport 53 24 true/pause 2500/textAboveHead Abigail \"{{i18n:Abigail.12hearts.01}}\"/pause 1000/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1250/faceDirection Abigail 3 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.02}}\"/pause 1000/faceDirection Abigail 0 true/pause 1000/speak Abigail \"{{i18n:Abigail.12hearts.03}}\"/pause 500/emote Abigail 40/pause 250/speak Abigail \"{{i18n:Abigail.12hearts.04}}\"/pause 550/faceDirection farmer 0 true/pause 650/globalFade/viewport -1000 -1000/changeLocation Custom_JojaPetStore/addTemporaryActor HamishCameo 16 32 2 13 2/showFrame HamishCameo 1/positionOffset HamishCameo 0 -15 true/addTemporaryActor JojaPetStoreEmployee 16 32 16 11 3/positionOffset JojaPetStoreEmployee -15 10 true/showFrame JojaPetStoreEmployee 1 true/warp farmer -20 -20/warp Abigail -20 -20/playMusic Hospital_Ambient/message \"{{i18n:Abigail.12hearts.05}}\"/pause 1000/viewport 9 11 clamp true/pause 1800/showFrame JojaPetStoreEmployee 2 true/pause 500/showFrame JojaPetStoreEmployee 1 true/pause 800/warp Abigail 13 16/playSound doorClose/pause 650/showFrame JojaPetStoreEmployee 0 true/pause 500/textAboveHead JojaPetStoreEmployee \"{{i18n:Abigail.12hearts.06}}\"/pause 650/move Abigail 0 -5 1 true/pause 2500/showFrame JojaPetStoreEmployee 1 true/pause 750/warp Pierre 13 16/playSound doorClose/pause 300/move Pierre 0 -3 0 true/pause 400/warp Caroline 12 16/playSound doorClose/pause 200/move Caroline 0 -3 0 true/pause 1300/faceDirection Abigail 2 true/pause 400/speak Caroline \"{{i18n:Abigail.12hearts.07}}\"/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.08}}\"/pause 850/faceDirection Abigail 3 true/pause 500/move Abigail -2 0 0/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.09}}\"/pause 500/emote Abigail 40 true/pause 600/faceDirection Caroline 1 true/pause 500/faceDirection Pierre 3 true/pause 300/faceDirection Abigail 1 true/pause 300/move Abigail 2 0 0/move Abigail 0 -2 1/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.10}}\"/pause 1000/emote Abigail 40/pause 500/move Abigail 0 -2 3/move Abigail -1 0 3/pause 1200/emote Abigail 40/pause 1000/faceDirection Abigail 0 true/pause 600/emote Abigail 16 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.11}}\"/pause 350/speed Abigail 5/move Abigail 0 -1 1/speed Abigail 5/move Abigail 1 0 0/pause 1000/emote Abigail 32/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.12}}\"/pause 1000/shake Abigail 1500/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.13}}\"/pause 1000/emote Abigail 40 true/pause 900/speak Abigail \"{{i18n:Abigail.12hearts.14}}\"/pause 650/showFrame JojaPetStoreEmployee 3 true/pause 500/message \"{{i18n:Abigail.12hearts.15}}\"/pause 650/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/message \"{{i18n:Abigail.12hearts.16}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.17}}\"/pause 600/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 0 true/pause 750/jump Abigail/pause 500/playMusic musicboxsong/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.18}}\"/pause 850/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 550/speak Abigail \"{{i18n:Abigail.12hearts.19}}\"/pause 650/showFrame JojaPetStoreEmployee 3/pause 500/message \"{{i18n:Abigail.12hearts.20}}\"/pause 500/faceDirection Pierre 0 true/pause 500/faceDirection Caroline 0 true/pause 450/globalFade/viewport -1000 -1000/warp JojaPetStoreEmployee 14 6/faceDirection Abigail 0 true/warp Pierre 13 8/warp Caroline 12 8/faceDirection Caroline 0 true/faceDirection Pierre 0 true/positionOffset Pierre 12 -16 true/positionOffset Caroline 10 -12 true/positionOffset Abigail 0 -20 true/positionOffset JojaPetStoreEmployee 0 -24 true/warp HamishCameo -19 -19/viewport 13 7 clamp true/pause 1000/speak Pierre \"{{i18n:Abigail.12hearts.21}}\"/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/speak Pierre \"{{i18n:Abigail.12hearts.22}}\"/speak Caroline \"{{i18n:Abigail.12hearts.23}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.24}}\"/pause 500/shake JojaPetStoreEmployee 1000/pause 500/playSound dwop/pause 1500/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 750/message \"{{i18n:Abigail.12hearts.25}}\"/pause 1000/playSound pickUpItem/pause 500/showFrame Abigail 31 true/pause 200/textAboveHead Abigail \"{{i18n:Abigail.12hearts.26}}\"/pause 500/playSound rabbit/pause 750/playSound rabbit/pause 250/showFrame Abigail 30 true/pause 750/globalFade/viewport -1000 -1000/stopMusic/changeLocation farmhouse/warp JojaPetStoreEmployee -20 -20/warp Pierre -21 -21/warp Caroline -22 -22/warp farmer 52 24/faceDirection farmer 0 true/warp Abigail 53 24/faceDirection Abigail 0 true/positionOffset farmer 0 10 true/positionOffset Abigail 0 -5 true/viewport 53 24 true/pause 1250/speak Abigail \"{{i18n:Abigail.12hearts.27}}\"/pause 1000/faceDirection farmer 1 true/pause 750/faceDirection Abigail 3 true/pause 600/emote farmer 20 true/pause 350/emote Abigail 20 true/pause 1000/globalFade/viewport -1000 -1000/pause 500/end dialogue Abigail \"{{i18n:Abigail.12hearts.28}}\"",
             },
         },
         {

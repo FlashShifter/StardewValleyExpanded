@@ -1,5 +1,56 @@
 {
     "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Haley",
+            "TextOperations": [
+              /*Like*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Big_Conch",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed FlashShifter.StardewValleyExpandedCP_Bearberrys",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+                "Delimiter": " "
+              }
+            ]
+          },
         { //HALEY SCHEDULE EDITS
             "Action": "EditData",
             "Target": "characters/schedules/Haley",

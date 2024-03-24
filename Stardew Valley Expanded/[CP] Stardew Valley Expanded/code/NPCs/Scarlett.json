@@ -1,15 +1,68 @@
 {
   "Changes": [
+
+
     {
-      //Fake Scarlett's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
-      "When": {
-        "HasSeenEvent |contains=3691371": false
-      },
+      "Target": "Data/Characters",
       "Entries": {
-        "ScarlettFake": "teen/polite/outgoing/positive/female/non-datable/null/Other/null//Custom_Scarlett_WarpRoom 3 3/{{i18n:name.Scarlett}}",
-      }
+        "ScarlettFake": {
+          "DisplayName": "{{i18n:Name.Scarlett}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Teen",
+          "Manner": "Polite",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": false,
+          "UnlockConditions": "!PLAYER_HAS_SEEN_EVENT Any 3691371",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Scarlett_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Scarlett_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Scarlett_Winter",
+              "Sprite": "Characters/Scarlett_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Fake Scarlett's sprites
@@ -22,6 +75,18 @@
       "Action": "Load",
       "Target": "Portraits/ScarlettFake",
       "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett.png"
+    },
+    {
+      //Fake Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/ScarlettFake_Winter",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Fake Scarlett's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/ScarlettFake_Winter",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett_Winter.png"
     },
     {
       //Fake Scarlett's schedule
@@ -205,32 +270,77 @@
         "fall_Thu": "610 Custom_ScarlettHouse 8 6 2/910 Custom_ScarlettHouse 2 6 0/930 Custom_ScarlettHouse 7 4 0/1000 Custom_ScarlettHouse 9 21 0/1050 Custom_ScarlettHouse 7 21 2/1130 Custom_GrampletonSuburbs 21 15 0/1210 Custom_GrampletonSuburbs 10 26 2/1430 Custom_GrampletonSuburbs 37 25 0/1520 Custom_GrampletonSuburbs 44 14 2 scarlett_idle/1620 Custom_ScarlettHouse 10 6 0/1710 Custom_ScarlettHouse 14 20 2/1810 Custom_ScarlettHouse 6 21 2/1830 Custom_ScarlettHouse 8 21 0/1850 Custom_ScarlettHouse 8 6 2/1930 Custom_ScarlettHouse 7 9 2/1950 Custom_ScarlettHouse 6 9 0/2010 Custom_ScarlettHouse 7 9 2/2030 Custom_ScarlettHouse 20 20 0/2110 Custom_ScarlettHouse 10 6 2/2140 Custom_ScarlettHouse 3 5 3 scarlett_sleep"
       }
     },
+
+
     {
-      //Scarlett's AntiSocial Flag
       "Action": "EditData",
-      "Target": "Data/AntiSocialNPCs",
+      "Target": "Data/Characters",
       "Entries": {
-        "ScarlettFake": true
-      }
-    },
-    // SCARLETT NPC
-    {
-      //Scarlett's NPC disposition
-      "Action": "EditData",
-      "Target": "Data/NPCDispositions",
-      "When": {
-        "HasSeenEvent": "3691371"
+        "Scarlett": {
+          "DisplayName": "{{i18n:Name.Scarlett}}",
+          "BirthSeason": "Summer",
+          "BirthDay": 7,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Teen",
+          "Manner": "polite",
+          "SocialAnxiety": "outgoing",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 3691371",
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ScarlettHouse",
+              "Condition": null,
+              "Location": "Custom_ScarlettHouse",
+              "Tile": {
+                "X": 8,
+                "Y": 6
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Scarlett_Winter",
+              "Sprite": "Characters/Scarlett_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
       },
-      "Entries": {
-        "Scarlett": "teen/polite/outgoing/positive/female/non-datable/null/Other/summer 7//Custom_ScarlettHouse 3 5/{{i18n:name.Scarlett}}",
-      }
     },
     {
       //Scarlett's Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Scarlett": "{{i18n:Scarlett.Gifts.Loved}}/438 426  444 446 638 724 340 220 221 70 208/{{i18n:Scarlett.Gifts.Liked}}/-79 -5 -6 -7 432 430/{{i18n:Scarlett.Gifts.Disliked}}/350 346 459 206 227 303 342 397 418/{{i18n:Scarlett.Gifts.Hated}}/-4 -28 -20 283 167/{{i18n:Scarlett.Gifts.Neutral}}/-12 -2 -80 -81 -74/"
+        "Scarlett": "{{i18n:Scarlett.Gifts.Loved}}/438 426  444 446 638 724 340 220 221 70 208 FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Scarlett.Gifts.Liked}}/-79 -5 -6 -7 432 430/{{i18n:Scarlett.Gifts.Disliked}}/350 346 459 206 227 303 342 397 418 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Scarlett.Gifts.Hated}}/-4 -28 -20 283 167 FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Frog/{{i18n:Scarlett.Gifts.Neutral}}/-12 -2 -80 -81 -74/"
       }
     },
     {
@@ -274,6 +384,18 @@
       "Action": "Load",
       "Target": "Portraits/Scarlett",
       "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett.png"
+    },
+    {
+      //Fake Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/Scarlett_Winter",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Fake Scarlett's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Scarlett_Winter",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett_Winter.png"
     },
     {
       //Scarlett's beach portraits
@@ -330,34 +452,7 @@
         "winter_Sat": "0 Custom_SophiaHouse 24 6 0/610 Custom_SophiaHouse 24 6 3/800 Custom_SophiaHouse 23 23 2/1000 Custom_SophiaHouse 23 23 1/1030 Custom_BlueMoonVineyard 24 55 2 scarlett_idle/1300 Custom_SophiaHouse 19 7 1/1500 Custom_SophiaHouse 4 22 0/1600 Custom_SophiaHouse 17 21 0/1630 Custom_SophiaHouse 3 22 0/1700 Custom_SophiaHouse 17 21 0/1810 Custom_SophiaHouse 20 9 0/1840 Custom_SophiaHouse 23 23 1/1930 Custom_SophiaHouse 20 7 0/2040 Custom_SophiaHouse 21 7 3/2100 Custom_SophiaHouse 23 6 3 scarlett_sleep"
       }
     },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "Scarlett": "{{i18n:Scarlett.Egg}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "Entries": {
-        "Scarlett": "{{i18n:Scarlett.Luau}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Scarlett": "{{i18n:Scarlett.Fair}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Scarlett": "{{i18n:Scarlett.Spirit}}"
-      }
-    },
+  
     //MOVIE THEATER DATA
     {
       "Action": "EditData",
@@ -747,7 +842,7 @@
         "HasSeenEvent |contains=191393, 502261": true
       },
       "Entries": {
-        "3691371": "continue/-200 -200 0/Scarlett -10 -10 0/pause 50/end"
+        "3691371/": "continue/-200 -200 0/Scarlett -10 -10 0/pause 50/end"
       }
     },
     {
@@ -996,7 +1091,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Custom_BlueMoonVineyard",
       "Entries": {
-        "3691378/e 3691377/z winter/z fall/w sunny/t 600 1700": "none/-500 -500/farmer 28 52 0 Sophia 27 40 1 Scarlett 29 40 3/addTemporaryActor TreyvonsTruck1 103 61 -20 -20 2 false/addTemporaryActor TreyvonsTruck2 61 103 -30 -30 2 false/addTemporaryActor ZoomingRedCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar4 30 200 -50 -50 2 false/warp TreyvonsTruck2 27 37/positionOffset TreyvonsTruck2 -22 10 true/pause 750/viewport 28 35 true/viewport move 0 1 5000 true/playMusic breezy/Skippable/move farmer 0 -10 0 true/pause 5650/faceDirection Sophia 2 true/pause 750/faceDirection Scarlett 2 true/pause 500/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.01}}\"/pause 500/emote farmer 32/pause 150/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.02}}\"/pause 400/faceDirection Sophia 1 true/pause 400/emote Sophia 16 true/pause 400/faceDirection Scarlett 3 true/pause 750/faceDirection Sophia 2 true/pause 500/showFrame Sophia 39/jump Sophia/pause 600/speak Sophia \"{{i18n:Scarlett.8hearts2.03}}\"/pause 500/showFrame Sophia 0 true/pause 750/faceDirection Scarlett 2 true/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.04}}\"/pause 600/faceDirection Sophia 1 true/pause 600/faceDirection Scarlett 3 true/pause 300/speak Sophia \"{{i18n:Scarlett.8hearts2.05}}\"/pause 500/emote Scarlett 32/globalFade/viewport -1000 -1000/stopMusic/warp Scarlett -50 -50/warp Sophia -51 -51/warp farmer -52 -52/pause 1000/playSound doorClose/pause 850/playSound doorClose/pause 500/viewport 28 38 true/pause 900/speak Scarlett \"{{i18n:Scarlett.8hearts2.06}}\"/playMusic TruckStartUp/pause 2000/shake TreyvonsTruck2 750/pause 3000/speed TreyvonsTruck2 2/move TreyvonsTruck2 0 10 2 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/pause 1000/changeLocation Custom_Highway/ambientLight 255 255 255/warp TreyvonsTruck2 -50 -50/warp TreyvonsTruck1 28 25/positionOffset TreyvonsTruck1 0 20 true/playMusic TruckOnHighway/pause 2000/warp ZoomingRedCarA1 118 22/warp ZoomingRedCarA2 120 22/warp ZoomingRedCarA3 122 22/warp ZoomingRedCarA4 124 22/positionOffset ZoomingRedCarA1 0 405 true/positionOffset ZoomingRedCarA2 -28 405 true/positionOffset ZoomingRedCarA3 -56 405 true/positionOffset ZoomingRedCarA4 -84 405 true/speed ZoomingRedCarA1 9/advancedMove ZoomingRedCarA1 false -120 0/speed ZoomingRedCarA2 9/advancedMove ZoomingRedCarA2 false -120 0/speed ZoomingRedCarA3 9/advancedMove ZoomingRedCarA3 false -120 0/speed ZoomingRedCarA4 9/advancedMove ZoomingRedCarA4 false -120 0/warp ZoomingOrangeCar1 150 22/warp ZoomingOrangeCar2 152 22/warp ZoomingOrangeCar3 154 22/warp ZoomingOrangeCar4 156 22/positionOffset ZoomingOrangeCar1 0 405 true/positionOffset ZoomingOrangeCar2 -28 405 true/positionOffset ZoomingOrangeCar3 -56 405 true/positionOffset ZoomingOrangeCar4 -84 405 true/speed ZoomingOrangeCar1 8/advancedMove ZoomingOrangeCar1 false -120 0/speed ZoomingOrangeCar2 8/advancedMove ZoomingOrangeCar2 false -120 0/speed ZoomingOrangeCar3 8/advancedMove ZoomingOrangeCar3 false -120 0/speed ZoomingOrangeCar4 8/advancedMove ZoomingOrangeCar4 false -120 0/speed TreyvonsTruck1 10 true/move TreyvonsTruck1 100 0 1 true/viewport 30 24 clamp true/viewport move 10 0 10000 true/pause 7000/globalFade/viewport -1000 -1000/pause 1000/changeLocation Custom_GrampletonCoast/pause 1000/stopMusic/speak Scarlett \"{{i18n:Scarlett.8hearts2.07}}\"/pause 750/warp ZoomingOrangeCar1 -100 -100/warp ZoomingOrangeCar2 -102 -102/warp ZoomingOrangeCar3 -104 -104/warp ZoomingOrangeCar4 -106 -106/warp ZoomingRedCarA1 -110 -110/warp ZoomingRedCarA2 -112 -112/warp ZoomingRedCarA3 -114 -114/warp ZoomingRedCarA4 -116 -116/warp TreyvonsTruck2 -80 -80/playMusic GrampletonCoastline/pause 150/warp Scarlett 15 16/warp farmer 14 15/warp Sophia 14 17/faceDirection Scarlett 1 true/faceDirection farmer 1 true/faceDirection Sophia 1 true/move Scarlett 11 0 1 true/pause 850/move farmer 10 0 1 true/move Sophia 10 0 1 true/viewport 25 26 clamp true/viewport move 0 -2 5000 true/pause 6500/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 3 true/pause 750/jump Scarlett/pause 600/speak Scarlett \"{{i18n:Scarlett.8hearts2.08}}\"/pause 650/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 1 true/pause 500/advancedMove Scarlett false 3 0 0 1 3 0 0 1 2 0/pause 600/advancedMove Sophia false 9 0/pause 300/advancedMove farmer false 3 0 0 1 2 0 0 1 2 0/pause 2000/globalFade/viewport -1000 -1000/pause 500/halt/warp Sophia 52 11/faceDirection Sophia 1 true/warp Scarlett 52 12/faceDirection Scarlett 1 true/warp farmer 51 13/faceDirection farmer 1 true/positionOffset farmer 14 12 true/positionOffset Scarlett 5 20 true/positionOffset Sophia 0 10 true/viewport 50 20 clamp true/viewport move 0 -1 6000 true/pause 6500/shake Scarlett 600/pause 500/speak Scarlett \"{{i18n:Scarlett.8hearts2.09}}\"/pause 650/speak Sophia \"{{i18n:Scarlett.8hearts2.10}}\"/pause 1000/stopMusic/pause 1000/playMusic moonlightJellies/pause 750/viewport move 1 0 3000 true/pause 3000/viewport move 2 0 2500 true/pause 2500/viewport move 3 0 2000 true/pause 2000/viewport move 4 0 2000 true/pause 2000/viewport move 5 0 2000 true/pause 2000/viewport move 6 0 1000 true/pause 1000/viewport move 7 0 2000 true/pause 2000/viewport move 8 0 2000 true/pause 2000/viewport move 9 0 2000 true/pause 2000/viewport move 10 0 6000 true/pause 1250/globalFade/viewport -1000 -1000/pause 1500/speak Scarlett \"{{i18n:Scarlett.8hearts2.11}}\"/pause 800/stopMusic/pause 1000/end"
+        "3691378/e 3691377/z winter/z fall/w sunny/t 600 1700": "none/-500 -500/farmer 28 52 0 Sophia 27 40 1 Scarlett 29 40 3/addTemporaryActor TreyvonsTruck1 103 61 -20 -20 2 false/addTemporaryActor TreyvonsTruck2 61 103 -30 -30 2 false/addTemporaryActor ZoomingRedCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar4 30 200 -50 -50 2 false/warp TreyvonsTruck2 27 37/positionOffset TreyvonsTruck2 -22 10 true/pause 750/viewport 28 35 true/viewport move 0 1 5000 true/playMusic breezy/Skippable/move farmer 0 -10 0 true/pause 5650/faceDirection Sophia 2 true/pause 750/faceDirection Scarlett 2 true/pause 500/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.01}}\"/pause 500/emote farmer 32/pause 150/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.02}}\"/pause 400/faceDirection Sophia 1 true/pause 400/emote Sophia 16 true/pause 400/faceDirection Scarlett 3 true/pause 750/faceDirection Sophia 2 true/pause 500/showFrame Sophia 39/jump Sophia/pause 600/speak Sophia \"{{i18n:Scarlett.8hearts2.03}}\"/pause 500/showFrame Sophia 0 true/pause 750/faceDirection Scarlett 2 true/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.04}}\"/pause 600/faceDirection Sophia 1 true/pause 600/faceDirection Scarlett 3 true/pause 300/speak Sophia \"{{i18n:Scarlett.8hearts2.05}}\"/pause 500/emote Scarlett 32/globalFade/viewport -1000 -1000/stopMusic/warp Scarlett -50 -50/warp Sophia -51 -51/warp farmer -52 -52/pause 1000/playSound doorClose/pause 850/playSound doorClose/pause 500/viewport 28 38 true/pause 900/speak Scarlett \"{{i18n:Scarlett.8hearts2.06}}\"/playSound FlashShifter.StardewValleyExpandedCP_TruckStartUp/pause 2000/shake TreyvonsTruck2 750/pause 3000/speed TreyvonsTruck2 2/move TreyvonsTruck2 0 10 2 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/pause 1000/changeLocation Custom_Highway/ambientLight 255 255 255/warp TreyvonsTruck2 -50 -50/warp TreyvonsTruck1 28 25/positionOffset TreyvonsTruck1 0 20 true/playMusic FlashShifter.StardewValleyExpandedCP_TruckOnHighway/pause 2000/warp ZoomingRedCarA1 118 22/warp ZoomingRedCarA2 120 22/warp ZoomingRedCarA3 122 22/warp ZoomingRedCarA4 124 22/positionOffset ZoomingRedCarA1 0 405 true/positionOffset ZoomingRedCarA2 -28 405 true/positionOffset ZoomingRedCarA3 -56 405 true/positionOffset ZoomingRedCarA4 -84 405 true/speed ZoomingRedCarA1 9/advancedMove ZoomingRedCarA1 false -120 0/speed ZoomingRedCarA2 9/advancedMove ZoomingRedCarA2 false -120 0/speed ZoomingRedCarA3 9/advancedMove ZoomingRedCarA3 false -120 0/speed ZoomingRedCarA4 9/advancedMove ZoomingRedCarA4 false -120 0/warp ZoomingOrangeCar1 150 22/warp ZoomingOrangeCar2 152 22/warp ZoomingOrangeCar3 154 22/warp ZoomingOrangeCar4 156 22/positionOffset ZoomingOrangeCar1 0 405 true/positionOffset ZoomingOrangeCar2 -28 405 true/positionOffset ZoomingOrangeCar3 -56 405 true/positionOffset ZoomingOrangeCar4 -84 405 true/speed ZoomingOrangeCar1 8/advancedMove ZoomingOrangeCar1 false -120 0/speed ZoomingOrangeCar2 8/advancedMove ZoomingOrangeCar2 false -120 0/speed ZoomingOrangeCar3 8/advancedMove ZoomingOrangeCar3 false -120 0/speed ZoomingOrangeCar4 8/advancedMove ZoomingOrangeCar4 false -120 0/speed TreyvonsTruck1 10 true/move TreyvonsTruck1 100 0 1 true/viewport 30 24 clamp true/viewport move 10 0 10000 true/pause 7000/globalFade/viewport -1000 -1000/pause 1000/changeLocation Custom_GrampletonCoast/pause 1000/stopMusic/speak Scarlett \"{{i18n:Scarlett.8hearts2.07}}\"/pause 750/warp ZoomingOrangeCar1 -100 -100/warp ZoomingOrangeCar2 -102 -102/warp ZoomingOrangeCar3 -104 -104/warp ZoomingOrangeCar4 -106 -106/warp ZoomingRedCarA1 -110 -110/warp ZoomingRedCarA2 -112 -112/warp ZoomingRedCarA3 -114 -114/warp ZoomingRedCarA4 -116 -116/warp TreyvonsTruck2 -80 -80/playMusic FlashShifter.StardewValleyExpandedCP_GrampletonCoastline/pause 150/warp Scarlett 15 16/warp farmer 14 15/warp Sophia 14 17/faceDirection Scarlett 1 true/faceDirection farmer 1 true/faceDirection Sophia 1 true/move Scarlett 11 0 1 true/pause 850/move farmer 10 0 1 true/move Sophia 10 0 1 true/viewport 25 26 clamp true/viewport move 0 -2 5000 true/pause 6500/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 3 true/pause 750/jump Scarlett/pause 600/speak Scarlett \"{{i18n:Scarlett.8hearts2.08}}\"/pause 650/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 1 true/pause 500/advancedMove Scarlett false 3 0 0 1 3 0 0 1 2 0/pause 600/advancedMove Sophia false 9 0/pause 300/advancedMove farmer false 3 0 0 1 2 0 0 1 2 0/pause 2000/globalFade/viewport -1000 -1000/pause 500/halt/warp Sophia 52 11/faceDirection Sophia 1 true/warp Scarlett 52 12/faceDirection Scarlett 1 true/warp farmer 51 13/faceDirection farmer 1 true/positionOffset farmer 14 12 true/positionOffset Scarlett 5 20 true/positionOffset Sophia 0 10 true/viewport 50 20 clamp true/viewport move 0 -1 6000 true/pause 6500/shake Scarlett 600/pause 500/speak Scarlett \"{{i18n:Scarlett.8hearts2.09}}\"/pause 650/speak Sophia \"{{i18n:Scarlett.8hearts2.10}}\"/pause 1000/stopMusic/pause 1000/playMusic moonlightJellies/pause 750/viewport move 1 0 3000 true/pause 3000/viewport move 2 0 2500 true/pause 2500/viewport move 3 0 2000 true/pause 2000/viewport move 4 0 2000 true/pause 2000/viewport move 5 0 2000 true/pause 2000/viewport move 6 0 1000 true/pause 1000/viewport move 7 0 2000 true/pause 2000/viewport move 8 0 2000 true/pause 2000/viewport move 9 0 2000 true/pause 2000/viewport move 10 0 6000 true/pause 1250/globalFade/viewport -1000 -1000/pause 1500/speak Scarlett \"{{i18n:Scarlett.8hearts2.11}}\"/pause 800/stopMusic/pause 1000/end"
       }
     },
     { //Treyvon's Truck side profile temp actor (103x61)

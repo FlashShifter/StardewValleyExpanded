@@ -1,0 +1,688 @@
+{
+    "Changes": [
+        { //Adds advanced moves to Alex, Linus, Susan, and Andy
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "set-up": "christmasTheme/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Christmas/loadActors Set-Up/playerControl christmas",
+                "Andy": "{{i18n:Andy.WinterStar}}",
+                "Victor": "{{i18n:WinterStar.Victor.1}}",
+                "Olivia": "{{i18n:WinterStar.Olivia.1}}",
+                "Claire": "{{i18n:Claire.WinterStar}}",
+                "GuntherSilvian": "{{i18n:Gunther.WinterStar}}",
+                "Lance": "{{i18n:winterstar.lance.1}}",
+                "MarlonFay": "{{i18n:Marlon.WinterStar}}",
+                "Morgan": "{{i18n:Morgan.WinterStar}}",
+                "MorrisTod": "{{i18n:Morris.WinterStar}}",
+                "Sandy": "{{i18n:Sandy.WinterStar}}",
+                "Sophia": "{{i18n:winterstar.Sophia.1}}",
+                "Susan": "{{i18n:Susan.WinterStar}}",
+                "Victor_y2": "{{i18n:victor.Christmas2}}",
+                "Morgan_y2": "{{i18n:Morgan.Christmas2}}",
+                "Lance_y2": "{{i18n:Lance.Christmas2}}",
+                "Claire_y2": "{{i18n:Claire.Christmas2}}",
+                "Susan_y2": "{{i18n:Susan.Christmas2}}",
+                "Andy_y2": "{{i18n:Andy.Christmas2}}",
+                "Scarlett_y2": "{{i18n:Scarlett.Christmas2}}",
+                "Olivia_y2": "{{i18n:Olivia.Christmas2}}",
+                "MarlonFay_y2": "{{i18n:Marlon.Christmas2}}",
+                "GuntherSilvian_y2": "{{i18n:Gunther.Christmas2}}",
+                "Martin_y2": "{{i18n:Martin.Christmas2}}",
+                "Sophia_y2": "{{i18n:Sophia.Christmas2}}",
+                "Sandy_y2": "{{i18n:Sandy.Christmas2}}",
+                "MorrisTod_y2": "{{i18n:Morris.Christmas2}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples": "{{i18n:Apples.Winterstar}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Claire": "{{i18n:winterstar.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        
+        { //- EMILY SHUT CLINT DOWN
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "When": {
+                "HasSeenEvent": "1005014"
+            },
+            "Entries": {
+                "Clint": "{{i18n:Clint.Dialogue.06}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Sophia": "{{i18n:winterstar.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Wizard": "{{i18n:winterstar.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Wizard": "{{i18n:winterstar.olivia.2}}"
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Wizard": "{{i18n:winterstar.Victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        //y2
+        
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples_y2": "{{i18n:Apples.Winterstar}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Claire_y2": "{{i18n:winterstar.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        { //- EMILY SHUT CLINT DOWN
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "When": {
+                "HasSeenEvent": "1005014"
+            },
+            "Entries": {
+                "Clint_y2": "{{i18n:Clint.Dialogue.06}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Sophia_y2": "{{i18n:winterstar.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Wizard_y2": "{{i18n:winterstar.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Wizard_y2": "{{i18n:winterstar.olivia.2}}"
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/winter25",
+            "Entries": {
+                "Victor_y2": "{{i18n:winterstar.Victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        { //christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 36 60 left",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 34 60 right",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 31 62 down",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 30 62 down",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 53 69 up",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 27 53 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent |contains=191393": false,
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 38 59 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Gunther christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 38 61 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 33 65 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Apples christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "ApplesHere": "true",
+                "Roommate": "Apples",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 8 63 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Claire christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 35 57 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Lance christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 23 61 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Sandy christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 27 72 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Wizard christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasMod |contains=Parrot.RomRas": false,
+                "HasMod |contains=Jellonip.RRRR": false,
+                "IsOddYear": true
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Wizard 11 63 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        ,
+        { //YEAR TWO christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 22 67 up",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 24 67 up",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 36 72 left",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 32 73 up",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 21 66 right",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 34 56 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent |contains=191393": false,
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 27 54 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Gunther christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "GuntherUnlocked": "true",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 36 69 left",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morgan christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "5978924",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 32 65 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Apples christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "ApplesHere": "true",
+                "Roommate": "Apples",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 8 63 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Claire christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 38 60 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+		{ //Martin christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "3219873",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 39 59 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+		{ //Scarlett christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "3691371",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 24 49 right",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Lance christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Spouse": "Lance",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 32 57 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Sandy christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 6 52 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Wizard christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasMod |contains=Parrot.RomRas": false,
+                "HasMod |contains=Jellonip.RRRR": false,
+                "IsOddYear": false
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Wizard 11 63 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        //Festival Loads
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Christmas",
+            "When": {
+                "HasSeenEvent |contains=5553210": false,
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Christmas.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Christmas2",
+            "When": {
+                "HasSeenEvent |contains=5553210": false,
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Christmas2.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Christmas",
+            "When": {
+                "HasSeenEvent": "5553210"
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Christmas_Joja.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Christmas2",
+            "When": {
+                "HasSeenEvent": "5553210"
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Christmas_Joja.tmx"
+        },
+    ]
+}

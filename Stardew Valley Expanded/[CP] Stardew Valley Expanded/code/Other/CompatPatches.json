@@ -51,28 +51,13 @@
                     "9_6": "GOTO spring",
                     "23_6": "GOTO spring",
                     "summer_Sun": "800 Town 96 18 3/1200 ScienceHouse 8 5 2 penny_sit_down/1800 PennysHouse 3 5 0 penny_dishes/2100 PennysHouse 10 5 1 penny_sleep",
-                    "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 BusStop -1 23 3",
+                    "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Bed",
                     "Tue": "830 PennysHouse 9 7 0 penny_sit \"Strings\\schedules\\Penny:Upgrade.0014\"/900 ArchaeologyHouse 17 9 2 penny_read/1400 Town 87 100 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 PennysHouse 10 5 1 penny_sleep",
                     "Wed": "GOTO Tue",
                     "Fri": "GOTO Tue",
                     "Sat": "1000 Town 32 89 2/1200 Town 12 13 1/1700 Town 29 91 3/2000 PennysHouse 10 5 1 penny_sleep",
-                    "marriage_Mon": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+                    "marriage_Mon": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 Bed",
                     "spring": "800 Town 35 89 2 penny_read/1230 PennysHouse 3 5 0 penny_dishes \"Strings\\schedules\\Penny:Upgrade.0015\"/1600 Town 44 77 2 penny_sit_down/1840 PennysHouse 10 5 1 penny_sleep",
-               }
-          },
-          //Sundrop compatibility patch
-          {
-               "Action": "EditMap",
-               "Target": "Maps/Railroad",
-               "FromFile": "Assets/Maps/MapPatches/SundropKiosk.tbin",
-               "When": {
-                    "HasMod |contains=SundropTeam.SundropCity": true
-               },
-               "ToArea": {
-                    "X": 32,
-                    "Y": 39,
-                    "Width": 1,
-                    "Height": 2
                }
           },
           //Way Back Pelican Town compatibility patch

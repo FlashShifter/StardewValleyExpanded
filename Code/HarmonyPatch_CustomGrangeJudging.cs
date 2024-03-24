@@ -95,7 +95,7 @@ namespace StardewValleyExpanded
             try
             {
                 Helper.Reflection.GetMethod(__instance, "judgeGrange", true).Invoke();              //imitate private code from original method:    judgeGrange();
-                Helper.Reflection.GetField<string>(__instance, "hostMessage", true).SetValue(null); //imitate private code from original method:    hostMessage = null;
+                Helper.Reflection.GetField<string>(__instance, "hostMessageKey", true).SetValue(null); //imitate private code from original method:    hostMessage = null;
                 
                 NPCController.endBehavior lewisDoneJudgingGrange = Helper.Reflection.GetMethod(__instance, "lewisDoneJudgingGrange", true).MethodInfo.CreateDelegate(typeof(NPCController.endBehavior), __instance) as NPCController.endBehavior; //get the private method "lewisDoneJudgingGrange()" as a delegate for the code below
                 
@@ -103,15 +103,18 @@ namespace StardewValleyExpanded
                 __instance.getActorByName("Lewis").CurrentDialogue.Clear();
                 __instance.setUpAdvancedMove(AdvancedMove2.Split(' ')); //perform AdvancedMove2
 
-                foreach (var entry in DialogueWhileJudging) //for each entry in the judging dialogue
+                foreach (var actor in __instance.actors) //for each entry in the judging dialogue
                 {
-                    if (__instance.getActorByName(entry.Key) is NPC npc) //if the NPC exists
-                        if (Game1.content.LoadStringReturnNullIfNotFound(entry.Value) is string dialogue) //if the dialogue loaded successfully
-                            npc.setNewDialogue(dialogue);
+                    foreach (var entry in DialogueWhileJudging) //for each entry in the post-judging dialogue
+                    {
+                        if (__instance.getActorByName(entry.Key) is NPC npc) //if the NPC exists
+                            if (Game1.content.LoadStringReturnNullIfNotFound(entry.Value) is string dialogue) //if the dialogue loaded successfully
+                                npc.setNewDialogue(new Dialogue(npc, "WhileJudging", dialogue));
+                            else
+                                Monitor.Log($"Couldn't load grange judging dialogue. Target asset: \"{entry.Value}\"", LogLevel.Debug);
                         else
-                            Monitor.Log($"Couldn't load grange judging dialogue. Target asset: \"{entry.Value}\"", LogLevel.Debug);
-                    else
-                        Monitor.Log($"Couldn't find NPC to load grange judging dialogue. NPC name: \"{entry.Key}\"", LogLevel.Debug);
+                            Monitor.Log($"Couldn't find NPC to load grange judging dialogue. NPC name: \"{entry.Key}\"", LogLevel.Debug);
+                    }
                 }
 
                 return false; //skip the original method
@@ -133,7 +136,7 @@ namespace StardewValleyExpanded
                 {
                     if (__instance.getActorByName(entry.Key) is NPC npc) //if the NPC exists
                         if (Game1.content.LoadStringReturnNullIfNotFound(entry.Value) is string dialogue) //if the dialogue loaded successfully
-                            npc.setNewDialogue(dialogue);
+                            npc.setNewDialogue(new Dialogue(npc, "AfterJudgding", dialogue));
                         else
                             Monitor.Log($"Couldn't load grange judging dialogue. Target asset: \"{entry.Value}\"", LogLevel.Debug);
                     else

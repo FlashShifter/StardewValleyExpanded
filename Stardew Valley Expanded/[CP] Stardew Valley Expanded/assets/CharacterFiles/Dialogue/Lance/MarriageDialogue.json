@@ -19,6 +19,7 @@
         "TwoKids_2": "{{i18n:Lance.MarriageDialogue.012}}",
         "TwoKids_3": "{{i18n:Lance.MarriageDialogue.013}}",
         "TwoKids_4": "{{i18n:Lance.MarriageDialogue.014}}",
+        "DesertFestival_Lance_marriage": "{{i18n:DesertFestival_Lance_marriage}}",
         //SEASONAL DIALOGUE
         "spring_Lance": "{{i18n:Lance.MarriageDialogue.015}}",
         "spring_1": "{{i18n:Lance.MarriageDialogue.016}}",
@@ -1126,6 +1127,90 @@
       "Entries": {
         "funReturn_Lance": "{{i18n:Lance.DynamicSpouse78}}",
         "funLeave_Lance": "{{i18n:Lance.DynamicSpouse79}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 1
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.1}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 2
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.2}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 3
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18N:LanceKrobus.3}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 4
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18N:LanceKrobus.4}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 5
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18N:LanceKrobus.5}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 6
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.6}}",
+      }
+    },
+        {
+      //Lance meets with Krobus dialogue 7
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.7}}",
       }
     },
   ]

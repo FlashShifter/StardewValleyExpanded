@@ -1,0 +1,171 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "AdventureShop",
+                "Items"
+            ],
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_Frog_Legs": {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Frog_Legs",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Frog_Legs",
+                    "Price": "2000",
+                    "IsRecipe": "true",
+                },
+                "FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice": {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice",
+                    "Price": "1500",
+                    "IsRecipe": "true",
+                },
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "AdventureShop",
+                "Owners"
+            ],
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Evening": {
+                    "Condition": "TIME 2200 2600",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Gil Evening",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": "{{i18n:Gil.ShopDialogue}}"
+                        },
+                    ],
+                },
+                "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Morning": {
+                    "Condition": "TIME 600 1200",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Gil Morning",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": "{{i18n:Gil.ShopDialogue}}"
+                        },
+                    ],
+                },
+                "FlashShifter.StardewValleyExpandedCP_AdventureShopMarlon_Winter": {
+                    "Condition": "SEASON Winter, TIME 1200 2200",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Adventurers/Marlon_WinterVendor.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Marlon Winter",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": null,
+                            "RandomDialogue": [
+                                "[LocalizedText Strings\\StringsFromCSFiles:ShopMenu.cs.11517]",
+                                "[LocalizedText Strings\\StringsFromCSFiles:ShopMenu.cs.11518]",
+                                "[LocalizedText Strings\\StringsFromCSFiles:ShopMenu.cs.11519]",
+                                "[LocalizedText Strings\\StringsFromCSFiles:ShopMenu.cs.11520]"
+                              ]
+                        },
+                    ],
+                },
+            },
+            "MoveEntries": [
+                {
+                    "Id": "Marlon Winter",
+                    "ToPosition": "Top"
+                },
+                {
+                    "Id": "Gil Evening",
+                    "ToPosition": "Top"
+                },
+                {
+                    "Id": "Gil Morning",
+                    "ToPosition": "Top"
+                },
+
+            ]
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "AdventureGuildRecovery",
+                "Owners"
+            ],
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Evening": {
+                    "Condition": "TIME 2200 2600",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Gil Evening",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": "{{i18n:Gil.ShopDialogue}}"
+                        },
+                    ],
+                },
+                "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Morning": {
+                    "Condition": "TIME 600 1200",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Gil Morning",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": "{{i18n:Gil.ShopDialogue}}"
+                        },
+                    ],
+                },
+                "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryMarlon_Winter": {
+                    "Condition": "SEASON Winter, TIME 1200 2200",
+                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Adventurers/Marlon_WinterVendor.png}}",
+                    "RandomizeDialogueOnOpen": false,
+                    "ClosedMessage": null,
+                    "ID": "Marlon Winter",
+                    "Name": "Marlon",
+                    "Type": "NamedNpc",
+                    "Dialogues": [
+                        {
+                            "Id": "Default",
+                            "Dialogue": "[LocalizedText Strings\\StringsFromCSFiles:ItemRecovery_Description]",
+                        },
+                    ],
+                },
+            },
+            "MoveEntries": [
+                {
+                    "Id": "Marlon Winter",
+                    "ToPosition": "Top"
+                },
+                {
+                    "Id": "Gil Evening",
+                    "ToPosition": "Top"
+                },
+                {
+                    "Id": "Gil Morning",
+                    "ToPosition": "Top"
+                },
+            ]
+        },
+    ]
+}

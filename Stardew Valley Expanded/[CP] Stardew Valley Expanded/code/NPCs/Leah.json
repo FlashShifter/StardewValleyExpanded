@@ -1,5 +1,58 @@
 {
       "Changes": [
+
+            
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Leah",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+        /*Like*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+          "Delimiter": " "
+        }
+        /*Dislike*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Hate*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            7
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+          "Delimiter": " "
+        }
+      ]
+    },
             { //LEAH SCHEDULE EDITS
                   "Action": "EditData",
                   "Target": "characters/schedules/Leah",
@@ -9,6 +62,13 @@
                   "Entries": {
                         "Tue": "700 LeahHouse 12 14 0/930 Forest 112 31 3 leah_sculpt/1240 Forest 113 31 2 leah_draw/1510 Forest 111 36 2/1540 Forest 111 39 0/1610 LeahHouse 6 5 0/1730 LeahHouse 12 14 0/1930 LeahHouse 3 4 2 leah_sleep",
                   },
+            },
+            {
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "Entries": {
+                        "GreenRain": "610 Forest 103 33 3/1300 LeahHouse 5 4 2/2200 bed",
+                  }
             },
             { //LEAH SCHEDULE EDITS - Elliott
                   "Action": "EditData",

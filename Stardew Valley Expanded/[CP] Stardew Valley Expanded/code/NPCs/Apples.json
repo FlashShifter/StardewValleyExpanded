@@ -1,15 +1,68 @@
 {
   "Changes": [
+
     {
-      //Apples' NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "When": {
         "ApplesHere": "true"
       },
       "Entries": {
-        "Apples": "child/polite/shy/neutral/null/non-datable/null/Other/null//Custom_Apples_WarpRoom 3 3/{{i18n:Name.Apples}}",
-      }
+        "Apples": {
+          "DisplayName": "{{i18n:Name.Apples}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Undefined",
+          "Age": "Child",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenUntilMet",
+          "SpouseAdopts": false,
+          "SpouseWantsChildren": false,
+          "SopuseGetsJealous": false,
+          "CanSocialize": true,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "SpouseRoom": {
+            "MapAsset": "Custom_ApplesRoommate",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": false,
+          "UnlockConditions": "",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Apples_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Apples_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Apples' Gift Tastes
@@ -19,7 +72,7 @@
         "ApplesHere": "true"
       },
       "Entries": {
-        "Apples": "{{i18n:Apples.Gifts.Loved}}/268 434/{{i18n:Apples.Gifts.Liked}}/394 392 578 486 74 373 797 446 444 279 417 454/{{i18n:Apples.Gifts.Disliked}}/-18 -15 -16 -5 -6 -7 -4 -28/{{i18n:Apples.Gifts.Hated}}/286 287 288 441 167 168 169 170 171 172 178/{{i18n:Apples.Gifts.Neutral}}/283 114 273 299 301 302 310 311 309 347 433 472 473 474 475 476 477 478 479 480 481 482 483 484 485 487 488 489 490 491 492 493 494 495 496 497 498 499 427 429 453 455 431 425 770 802 745 -74 -81/"
+        "Apples": "{{i18n:Apples.Gifts.Loved}}/(O)Raisins 268 434/{{i18n:Apples.Gifts.Liked}}/394 392 578 486 74 373 797 446 444 279 417 454 FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower/{{i18n:Apples.Gifts.Disliked}}/-18 -15 -16 -5 -6 -7 -4 -28 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Apples.Gifts.Hated}}/286 287 288 441 167 168 169 170 171 172 178 FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger/{{i18n:Apples.Gifts.Neutral}}/283 114 273 299 301 302 310 311 309 347 433 472 473 474 475 476 477 478 479 480 481 482 483 484 485 487 488 489 490 491 492 493 494 495 496 497 498 499 427 429 453 455 431 425 770 802 745 -74 -81/"
       }
     },
     {
@@ -33,6 +86,12 @@
         "Apples_Sleep": "19 19 18 18/32/18 18 19 19"
       }
     },
+    //Roommate Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ApplesRoommate",
+      "FromFile": "Assets/Maps/SpouseRooms/ApplesRoommate.tbin",
+  },
     {
       //Apples' Portraits
       "Action": "Load",
@@ -97,7 +156,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/MorrisTod, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
       "Entries": {
-        "reject_{{spacechase0.JsonAssets/ObjectId:Super Starfruit}}": "{{i18n:Enchanted.Starfruit.Rejection}}",
+        "reject_(O)Super Starfruit": "{{i18n:Enchanted.Starfruit.Rejection}}",
       }
     },
     {
@@ -480,7 +539,7 @@
         "HasSeenEvent |contains=7776010": true
       },
       "Entries": {
-        "7776011_RepairAuroraVineyard": "pause 500/addMailReceived PlayerWantsAuroraVineyard/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/jump Apples/pause 500/playSound junimoMeep1/pause 300/speak Apples \"{{i18n:Apples.AuroraRestore.RepairAuroraVineyard.01}}\"/pause 500/end",
+        "7776011_RepairAuroraVineyard/": "pause 500/addMailReceived PlayerWantsAuroraVineyard/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/jump Apples/pause 500/playSound junimoMeep1/pause 300/speak Apples \"{{i18n:Apples.AuroraRestore.RepairAuroraVineyard.01}}\"/pause 500/end",
       }
     },
     {
@@ -492,7 +551,7 @@
       },
       "Update": "OnLocationChange",
       "Entries": {
-        "7776012": "junimoStarSong/-500 -500/farmer 58 35 0 Apples 58 19 2 Peaches 57 19 2 Andy 76 20 3/animate Apples false true 150 20 21 22 23/animate Peaches false true 200 24 25 26 27/pause 1000/move farmer 0 -13 0 true/viewport 58 19 true/skippable/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 250/playSound junimoMeep1/glow 34 139 34/pause 500/playSound healSound/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/glow 34 139 34/pause 500/playSound healSound/pause 550/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/glow 34 139 34/pause 500/playSound healSound/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/glow 34 139 34/pause 500/playSound healSound/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/stopAnimation Apples/pause 200/playSound junimoMeep1/pause 200/playSound junimoMeep1/jump Apples/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/stopAnimation Peaches/pause 200/playSound junimoMeep1/jump Peaches/pause 350/jump Apples/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.01}}\"/pause 500/emote farmer 16/pause 250/playSound junimoMeep1/viewport move 0 -1 4000 true/pause 500/playSound junimoMeep1/jump Apples/pause 350/playSound junimoMeep1/pause 250/faceDirection Peaches 1 true/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/faceDirection Apples 3 true/pause 300/playSound junimoMeep1/pause 300/jump Peaches/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection Apples 2 true/pause 500/playSound junimoMeep1/faceDirection Peaches 2 true/pause 300/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.02}}\"/pause 350/viewport move 0 1 4000 true/pause 300/playSound junimoMeep1/pause 350/jump Apples/pause 100/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/jump Peaches/pause 100/playSound junimoMeep1/pause 300/jump Apples/pause 100/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/jump Apples/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 400/jump Peaches/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.03}}\"/pause 300/playSound junimoMeep1/speak Peaches \"{{i18n:Apples.GudBai.04}}\"/pause 500/viewport move 0 1 4000 true/move Peaches 0 5 1 true/pause 500/playSound junimoMeep1/pause 250/faceDirection farmer 3 true/pause 250/faceDirection Apples 3 true/pause 250/move Apples -1 0 2 true/pause 250/playSound junimoMeep1/pause 250/faceDirection Apples 2 true/pause 250/move Apples 0 3 1 true/pause 250/playSound junimoMeep1/pause 250/move Peaches 1 0 0 true/pause 500/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 250/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.05}}\"/pause 500/faceDirection Apples 2 true/pause 250/move Apples 0 2 2 true/pause 300/playSound junimoMeep1/pause 100/faceDirection farmer 2 true/pause 100/playSound junimoMeep1/jump Peaches/pause 300/playSound junimoMeep1/pause 450/faceDirection Apples 1 true/pause 250/playSound junimoMeep1/faceDirection Apples 0 true/pause 400/playSound junimoMeep1/pause 350/jump Apples/pause 250/playSound junimoMeep1/pause 300/jump Peaches/pause 150/playSound junimoMeep1/pause 350/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.06}}\"/pause 300/faceDirection Apples 1 true/pause 200/faceDirection Peaches 1 true/pause 100/faceDirection Apples 2 true/pause 200/playSound junimoMeep1/faceDirection Peaches 2 true/pause 400/playSound junimoMeep1/move Peaches 0 15 2 true/pause 350/move Apples 0 15 2 true/pause 250/jump Peaches/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 150/jump Apples/pause 150/playSound junimoMeep1/pause 400/playSound junimoMeep1/jump Peaches/globalFade/viewport -1000 -1000/pause 1000/addConversationTopic applesLeaving 1/end position 58 22"
+        "7776012/": "junimoStarSong/-500 -500/farmer 58 35 0 Apples 58 19 2 Peaches 57 19 2 Andy 76 20 3/animate Apples false true 150 20 21 22 23/animate Peaches false true 200 24 25 26 27/pause 1000/move farmer 0 -13 0 true/viewport 58 19 true/skippable/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 250/playSound junimoMeep1/glow 34 139 34/pause 500/playSound healSound/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/glow 34 139 34/pause 500/playSound healSound/pause 550/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/glow 34 139 34/pause 500/playSound healSound/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 250/glow 34 139 34/pause 500/playSound healSound/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/stopAnimation Apples/pause 200/playSound junimoMeep1/pause 200/playSound junimoMeep1/jump Apples/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/stopAnimation Peaches/pause 200/playSound junimoMeep1/jump Peaches/pause 350/jump Apples/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.01}}\"/pause 500/emote farmer 16/pause 250/playSound junimoMeep1/viewport move 0 -1 4000 true/pause 500/playSound junimoMeep1/jump Apples/pause 350/playSound junimoMeep1/pause 250/faceDirection Peaches 1 true/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/faceDirection Apples 3 true/pause 300/playSound junimoMeep1/pause 300/jump Peaches/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection Apples 2 true/pause 500/playSound junimoMeep1/faceDirection Peaches 2 true/pause 300/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.02}}\"/pause 350/viewport move 0 1 4000 true/pause 300/playSound junimoMeep1/pause 350/jump Apples/pause 100/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/jump Peaches/pause 100/playSound junimoMeep1/pause 300/jump Apples/pause 100/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/jump Apples/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 400/jump Peaches/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.03}}\"/pause 300/playSound junimoMeep1/speak Peaches \"{{i18n:Apples.GudBai.04}}\"/pause 500/viewport move 0 1 4000 true/move Peaches 0 5 1 true/pause 500/playSound junimoMeep1/pause 250/faceDirection farmer 3 true/pause 250/faceDirection Apples 3 true/pause 250/move Apples -1 0 2 true/pause 250/playSound junimoMeep1/pause 250/faceDirection Apples 2 true/pause 250/move Apples 0 3 1 true/pause 250/playSound junimoMeep1/pause 250/move Peaches 1 0 0 true/pause 500/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 250/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.05}}\"/pause 500/faceDirection Apples 2 true/pause 250/move Apples 0 2 2 true/pause 300/playSound junimoMeep1/pause 100/faceDirection farmer 2 true/pause 100/playSound junimoMeep1/jump Peaches/pause 300/playSound junimoMeep1/pause 450/faceDirection Apples 1 true/pause 250/playSound junimoMeep1/faceDirection Apples 0 true/pause 400/playSound junimoMeep1/pause 350/jump Apples/pause 250/playSound junimoMeep1/pause 300/jump Peaches/pause 150/playSound junimoMeep1/pause 350/playSound junimoMeep1/speak Apples \"{{i18n:Apples.GudBai.06}}\"/pause 300/faceDirection Apples 1 true/pause 200/faceDirection Peaches 1 true/pause 100/faceDirection Apples 2 true/pause 200/playSound junimoMeep1/faceDirection Peaches 2 true/pause 400/playSound junimoMeep1/move Peaches 0 15 2 true/pause 350/move Apples 0 15 2 true/pause 250/jump Peaches/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 150/jump Apples/pause 150/playSound junimoMeep1/pause 400/playSound junimoMeep1/jump Peaches/globalFade/viewport -1000 -1000/pause 1000/addConversationTopic applesLeaving 1/end position 58 22"
       }
     },
     { //dialogue edits if apples moves back to junimo woods
@@ -584,90 +643,6 @@
       },
       "Update": "OnLocationChange"
     },
-    //EGG FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Egg}}",
-      }
-    },
-    //FLOWER DANCE
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Flower}}",
-      }
-    },
-    //LUAU
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Luau}}",
-      }
-    },
-    //Dance of the Moonlight Jellies
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Moonlight}}",
-      }
-    },
-    //Stardew Valley Fair
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Fair}}",
-      }
-    },
-    //Spirit's Eve
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Spirit}}",
-      }
-    },
-    //ICE FISHING FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "Apples": "{{i18n:Apples.Ice}}",
-      }
-    },
-    //Winter Star
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "When": {
-        "ApplesHere": "true"
-      },
-      "Entries": {
-        "Apples": "{{i18n:Apples.Winterstar}}",
-      }
-    },
+
   ]
 }

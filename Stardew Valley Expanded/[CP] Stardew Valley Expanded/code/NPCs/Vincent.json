@@ -1,5 +1,68 @@
 {
 	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Vincent",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Big_Conch",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Bearberrys FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //VINCENT SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Vincent",

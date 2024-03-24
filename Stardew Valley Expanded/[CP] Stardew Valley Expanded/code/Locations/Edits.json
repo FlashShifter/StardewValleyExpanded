@@ -1,15 +1,29 @@
 {
     "Changes": [
         {
-            //Adds SVE NPCs to wedding events
             "Action": "EditData",
-            "Target": "Data/CustomWeddingGuestPositions",
+            "Target": "Data/Weddings",
             "Entries": {
-                "Sophia": "29 68 0",
-                "Victor": "30 68 0",
-                "Olivia": "31 68 0",
-                "Andy": "29 70 0",
-                "Susan": "30 70 0",
+                "Sophia": {
+                    "ID": "Sophia",
+                    "Setup": "Sophia 29 68 0"
+                },
+                "Victor": {
+                    "ID": "Victor",
+                    "Setup": "Victor 30 68 0",
+                },
+                "Olivia": {
+                    "ID": "Olivia",
+                    "Setup": "Olivia 31 68 0"
+                },
+                "Andy": {
+                    "ID": "Andy",
+                    "Setup": "29 70 0"
+                },
+                "Susan": {
+                    "ID": "Susan",
+                    "Setup": "30 70 0"
+                }
             }
         },
         { //Lightens building shadows outside during winter
@@ -714,7 +728,7 @@
             },
         },*/
         //Garden and Town East patches
-        { //Pelican Town
+        /*{ //Pelican Town
             "Action": "EditMap",
             "Target": "Maps/Town",
             "FromFile": "assets/Maps/MapPatches/Garden_Town.tbin",
@@ -727,8 +741,8 @@
             "When": {
                 "HasSeenEvent |contains=1000024": false
             }
-        },
-        { //Joja Pelican Town
+        },*/
+        /*{ //Joja Pelican Town
             "Action": "EditMap",
             "Target": "Maps/Town",
             "FromFile": "assets/Maps/MapPatches/Garden_Town_Joja.tbin",
@@ -756,8 +770,8 @@
             "When": {
                 "HasSeenEvent": "5553210"
             }
-        },
-        { //Shearwater Bridge
+        },*/
+        /*{ //Shearwater Bridge
             "Action": "EditMap",
             "Target": "Maps/Custom_ShearwaterBridge",
             "FromFile": "assets/Maps/MapPatches/Garden_ShearwaterBridge.tbin",
@@ -770,6 +784,6 @@
             "When": {
                 "HasSeenEvent |contains=1000024": false
             }
-        },
+        },*/
     ]
 }

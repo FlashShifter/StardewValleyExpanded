@@ -1,5 +1,47 @@
 {
 	"Changes": [
+
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Linus",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //LINUS SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Linus",

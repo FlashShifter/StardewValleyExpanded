@@ -70,7 +70,7 @@
                                    "Data": {
                                         "MailReceived": "ShedRepaired",
                                         "Host": "true",
-                                        "NoLetter": "false"
+                                        "NoLetter": "true"
                                    }
                               },
                               {
@@ -121,33 +121,49 @@
                     "RemoveObjectsFromGrandpasShed": "true"
                }
           },
-          { //Bus Stop shed path (No Grandpa's Farm or IF2R)
+		  { //Bus Stop shed path (GF, IF2R, Frontier can't be installed)
                "Action": "EditMap",
                "Target": "Maps/BusStop",
-               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tbin",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
                "When": {
-                    "HasMod |contains=alistairweekend.TSCCharacters": false,
-					"FarmType |contains=FrontierFarm": false
+					"HasMod |contains=flashshifter.GrandpasFarm": false,
+					"HasMod |contains=flashshifter.immersivefarm2remastered": false,
                },
                "ToArea": {
-                    "X": 0,
-                    "Y": 24,
+                    "X": 13,
+                    "Y": 23,
                     "Width": 10,
-                    "Height": 6
+                    "Height": 7
                }
           },
-          { //Bus Stop shed path - stray cafe compatibility (No Grandpa's Farm or IF2R)
+		  { //Bus Stop shed path (GF installed, not playing standard)
                "Action": "EditMap",
                "Target": "Maps/BusStop",
-               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPathStrayCafe.tbin",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
                "When": {
-                    "HasMod": "alistairweekend.TSCCharacters"
+					"HasMod |contains=flashshifter.GrandpasFarm": true,
+					"FarmType |contains=Standard": false
                },
                "ToArea": {
-                    "X": 0,
-                    "Y": 24,
+                    "X": 13,
+                    "Y": 23,
                     "Width": 10,
-                    "Height": 6
+                    "Height": 7
+               }
+          },
+		  { //Bus Stop shed path (IF2R installed, not playing standard)
+               "Action": "EditMap",
+               "Target": "Maps/BusStop",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
+               "When": {
+					"HasMod |contains=flashshifter.immersivefarm2remastered": true,
+					"FarmType |contains=Standard": false
+               },
+               "ToArea": {
+                    "X": 13,
+                    "Y": 23,
+                    "Width": 10,
+                    "Height": 7
                }
           },
           { //Immersive Farm 2 Remastered Shed warp tiles
@@ -253,11 +269,24 @@
                "When": {
                     "HasSeenEvent": "2554901",
 					"FarmType |contains=FrontierFarm": false,
+                         "FarmType |contains=MeadowlandsFarm": false,
                },
                "Entries": {
-                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 64 15 2 Robin 64 17 0/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 64 16 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 64 15 2 Robin 64 17 0/ignoreEventTileOffset/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 64 16 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
                },
           },
+          { //Event #2 - Robin's Inspection (Meadowlands Farm)
+          "Action": "EditData",
+          "Target": "data/events/Farmhouse",
+          "When": {
+               "HasSeenEvent": "2554901",
+               "FarmType": "MeadowlandsFarm"
+
+          },
+          "Entries": {
+               "2554902/H/t 600 2000": "continue/-500 -500/farmer 81 19 2 Robin 81 21 0/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 64 16 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+          },
+     },
           { //Event #2 - Robin's Inspection (Grandpa's Farm viewport)
                "Action": "EditData",
                "Target": "data/events/Farmhouse",
@@ -267,7 +296,7 @@
                     "FarmType": "Standard",
                },
                "Entries": {
-                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 95 49 2 Robin 95 51 0/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 95 49 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 3 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 95 49 2 Robin 95 51 0/ignoreEventTileOffset/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 95 49 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 3 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
                },
           },
 		  { //Event #2 - Robin's Inspection (Frontier Farm's viewport)
@@ -295,7 +324,7 @@
                     "HasFlag": "ShedRepaired"
                },
                "Entries": {
-                    "2554906": "continue/-500 -500/farmer 6 24 0 Robin 7 18 2/skippable/pause 1000/speak Robin \"{{i18n:GrandpasShed4.01}}\"/pause 500/emote farmer 32/pause 300/end dialogue Robin \"{{i18n:GrandpasShed4.02}}\""
+                    "2554906/": "continue/-500 -500/farmer 6 24 0 Robin 7 18 2/skippable/pause 1000/speak Robin \"{{i18n:GrandpasShed4.01}}\"/pause 500/emote farmer 32/pause 300/end dialogue Robin \"{{i18n:GrandpasShed4.02}}\""
                },
           },
           { //Event #5 - Refurbished interior
@@ -305,7 +334,7 @@
                     "HasSeenEvent": "2554906"
                },
                "Entries": {
-                    "2554907": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/viewport 16 9 true/playMusic jaunty/pause 2500/playSound doorClose/warp farmer 16 16/pause 300/move farmer 0 -2 0 true/pause 300/faceDirection Robin 1 true/pause 600/emote farmer 16/pause 200/speak Robin \"{{i18n:GrandpasShed5.01}}\"/pause 200/faceDirection farmer 3 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.02}}\"/pause 500/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed5.03}}\"/pause 1000/faceDirection Robin 0/pause 750/speak Robin \"{{i18n:GrandpasShed5.04}}\"/pause 750/faceDirection Robin 1 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.05}}\"/pause 500/end dialogue Robin \"{{i18n:GrandpasShed5.06}}\""
+                    "2554907/": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/viewport 16 9 true/playMusic jaunty/pause 2500/playSound doorClose/warp farmer 16 16/pause 300/move farmer 0 -2 0 true/pause 300/faceDirection Robin 1 true/pause 600/emote farmer 16/pause 200/speak Robin \"{{i18n:GrandpasShed5.01}}\"/pause 200/faceDirection farmer 3 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.02}}\"/pause 500/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed5.03}}\"/pause 1000/faceDirection Robin 0/pause 750/speak Robin \"{{i18n:GrandpasShed5.04}}\"/pause 750/faceDirection Robin 1 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.05}}\"/pause 500/end dialogue Robin \"{{i18n:GrandpasShed5.06}}\""
                },
           },
           { //Refurbished Shed (No IF2R or Grandpa's Farm)

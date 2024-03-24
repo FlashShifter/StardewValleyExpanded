@@ -1,20 +1,356 @@
 {
   "Changes": [
     {
-      //Claire's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Claire": "adult/polite/shy/neutral/female/datable/null/Other/fall 8//Custom_Claire_WarpRoom 3 3/{{i18n:Name.Claire}}",
-      }
+        "Claire": {
+          "DisplayName": "{{i18n:Name.Claire}}",
+          "BirthSeason": "Fall",
+          "BirthDay": 8,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": "PLAYER_NPC_RELATIONSHIP ANY Claire MARRIED, ANY \"WEATHER TOWN Rain, DAY_OF_WEEK Tue Fri Sat\" \"WEATHER TOWN Rain, DAY_OF_WEEK Wed, PLAYER_HAS_SEEN_EVENT ANY 3691371\"",
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "SpouseRoom": {
+            "MapAsset": "Custom_ClairesRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": "Claire_Spouse_Area",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                0,
+                5000
+              ],
+              [
+                20,
+                2000
+              ],
+              [
+                21,
+                2000
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                20,
+                2000
+              ],
+              [
+                0,
+                3800
+              ],
+              [
+                20,
+                2000
+              ],
+              [
+                21,
+                2000
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                22,
+                200
+              ],
+              [
+                23,
+                200
+              ],
+              [
+                24,
+                200
+              ],
+              [
+                25,
+                200
+              ],
+              [
+                20,
+                2000
+              ],
+              [
+                0,
+                4000
+              ],
+              [
+                12,
+                200
+              ],
+              [
+                8,
+                3900
+              ],
+              [
+                12,
+                200
+              ],
+              [
+                0,
+                1600
+              ],
+              [
+                34,
+                200
+              ],
+              [
+                35,
+                32300
+              ],
+              [
+                34,
+                200
+              ],
+              [
+                0,
+                600
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": "PLAYER_HAS_SEEN_EVENT ANY 3219873",
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Claire_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Claire_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!LOCATION_NAME Target JojaMart, !LOCATION_NAME Target MovieTheater, !{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Claire_Winter",
+              "Sprite": "Characters/Claire_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Claire's Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Claire": "{{i18n:gifts.claire.love}}/614 349 421 618 634 560/{{i18n:gifts.claire.like}}/613 635 636 637 638 88 90 607 815 408 395/{{i18n:gifts.claire.dislike}}/396 16 152 153 218 219 226 296 309 310 311 283 346 459 303 304/{{i18n:gifts.claire.hate}}/167 342 412 416 330 372 723 722 721 720 718 717 716 715 233/{{i18n:gifts.claire.neutral}}/394 393 392 406 410 414/"
+        "Claire": "{{i18n:gifts.claire.love}}/614 349 421 618 634 560 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish/{{i18n:gifts.claire.like}}/613 635 636 637 638 88 90 607 815 408 395 FlashShifter.StardewValleyExpandedCP_Butterfish/{{i18n:gifts.claire.dislike}}/396 16 152 153 218 219 226 296 309 310 311 283 346 459 303 304 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:gifts.claire.hate}}/167 342 412 416 330 372 723 722 721 720 718 717 716 715 233 FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Clownfish/{{i18n:gifts.claire.neutral}}/394 393 392 406 410 414/"
       }
+    },
+    //Spouse Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ClairesRoom",
+      "FromFile": "Assets/Maps/SpouseRooms/ClairesRoom.tbin",
+    },
+    //Spouse Patio
+    {
+      "Action": "Load",
+      "Target": "Maps/Claire_Spouse_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Claire_Spouse_Area.tbin"
     },
     {
       //Claire's Portraits
@@ -37,6 +373,18 @@
         "LocationName": "JojaMart"
       },
       "Update": "OnLocationChange"
+    },
+    {
+      //Claire's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Claire_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Claire/Claire_Winter.png"
+    },
+    {
+      //Claire's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Claire_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Claire/Claire_Winter.png"
     },
     {
       //Claire's beach portraits
@@ -194,6 +542,14 @@
       "FromFile": "assets/CharacterFiles/Schedules/Claire/MovieTheater.json"
     },
     {
+      //Claire's Schedule - Desert Festival - Will only apply if married
+      "Action": "EditData",
+      "Target": "Characters/schedules/Claire",
+      "Entries": {
+        "marriage_DesertFestival_1": "800 Desert 18 42 2 \"Strings\\schedules\\Claire:DesertFestival_Claire_marriage\"/2320 bed",
+      },
+    },
+   /* {
       //Claire's Schedule - Movie Theater - no schedule on festival days
       "Action": "EditData",
       "Target": "Characters/schedules/Claire",
@@ -225,7 +581,7 @@
         "Thu": "0 Custom_Claire_WarpRoom 1 3 3",
         "Sat": "0 Custom_Claire_WarpRoom 1 3 3",
       }
-    },
+    },*/
     {
       //Claire's Marriage Schedule - Joja Mart Cashier
       "Action": "EditData",
@@ -235,11 +591,11 @@
         "DayEvent |contains=flower dance, dance of the moonlight jellies, egg festival, feast of the winter star, festival of ice, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "marriage_Mon": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.000\"/1900 BusStop -1 23 3",
-        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 BusStop -1 23 3",
-        "marriage_Wed": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.001\"/1900 BusStop -1 23 3",
-        "marriage_Thu": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.002\"/1900 BusStop -1 23 3",
-        "marriage_Sun": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.003\"/1900 BusStop -1 23 3"
+        "marriage_Mon": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.000\"/1900 Bed",
+        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 Bed",
+        "marriage_Wed": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.001\"/1900 Bed",
+        "marriage_Thu": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.002\"/1900 Bed",
+        "marriage_Sun": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaMart.003\"/1900 Bed"
       }
     },
     {
@@ -252,11 +608,11 @@
         "DayEvent |contains=flower dance, dance of the moonlight jellies, egg festival, feast of the winter star, festival of ice, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "marriage_Mon": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.000\"/2100 BusStop 12 8 0/2310 BusStop -1 23 3",
-        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 BusStop -1 23 3",
-        "marriage_Wed": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.001\"/2100 BusStop 12 8 0/2310 BusStop -1 23 3",
-        "marriage_Thu": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.002\"/2100 BusStop 12 8 0/2310 BusStop -1 23 3",
-        "marriage_Sun": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.003\"/2100 BusStop 12 8 0/2310 BusStop -1 23 3",
+        "marriage_Mon": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.000\"/2100 BusStop 22 8 0/2310 Bed",
+        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 Bed",
+        "marriage_Wed": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.001\"/2100 BusStop 22 8 0/2310 Bed",
+        "marriage_Thu": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.002\"/2100 BusStop 22 8 0/2310 Bed",
+        "marriage_Sun": "640 Town 92 44 2/850 MovieTheater 7 5 2 Claire_Blink \"Strings\\schedules\\Claire:MovieTheater.003\"/2100 BusStop 22 8 0/2310 Bed",
       }
     },
     {
@@ -269,7 +625,7 @@
         "HasSeenEvent |contains=4269703": true
       },
       "Entries": {
-        "marriage_Wed": "800 BusStop 12 8 0/850 Custom_DayEnd_WarpRoom 2 2 0/2030 BusStop 12 8 2/2050 BusStop -1 23 3",
+        "marriage_Wed": "800 BusStop 22 8 0/850 Custom_DayEnd_WarpRoom 2 2 0/2030 BusStop 22 8 2/2050 Bed",
       }
     },
     {
@@ -279,7 +635,7 @@
       "When": {
         "HasSeenEvent": "191393",
         "HasFlag": "ccMovieTheater",
-		"Spouse |contains=Claire": true,
+        "Spouse |contains=Claire": true,
         "Day |contains=22": false,
         "DayOfWeek |contains=Tuesday, Friday, Saturday": false,
         "Weather |contains=Rain": false,
@@ -305,7 +661,7 @@
       "MapProperties": {
         "NPCWarp": "13 15 BusStop -1 23 14 15 BusStop -1 23"
       }
-    },
+    }, /*
     {
       //Claire Joja Mart Shop Patches
       "Action": "EditMap",
@@ -400,13 +756,13 @@
         "DisableSVEJojaMartShop": "false"
       },
       "Update": "OnLocationChange"
-    },
+    },*/
     {
       "Action": "EditData",
       "Target": "strings/StringsFromCSFiles",
       "Entries": {
         "Utility.cs.5367": "{{i18n:Utility.cs.5367.Claire.Husband}}{0}{{i18n:Utility.cs.5367.Claire.B}}{1}{{i18n:Utility.cs.5367.Claire.C}}",
-        "Utility.cs.5369": "{{i18n:Utility.cs.5367.Claire.Wife}}{0}{{i18n:Utility.cs.5367.Claire.B}}{1}{{i18n:Utility.cs.5367.Claire.C}}",
+        "Utility.cs.5369": "{{i18n:Utility.cs.5369.Claire.Wife}}{0}{{i18n:Utility.cs.5367.Claire.B}}{1}{{i18n:Utility.cs.5367.Claire.C}}",
         "Utility.cs.5371": "{{i18n:Utility.cs.5371}}",
         "Utility.cs.5377": "{{i18n:Utility.cs.5377}}",
       },
@@ -455,7 +811,6 @@
         "Claire1": "{{i18n:Claire.Engagement}}",
       }
     },
-    
     /*
     //Allows players to converse with Claire in the theater
     {
@@ -660,6 +1015,20 @@
         }
       }
     },
+    //Dialogue to reject movie
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Claire",
+      "When": {
+        "HasSeenEvent |contains=502261": false,
+        "Spouse |contains=Claire": false,
+        "DayofWeek": "Monday, Wednesday, Thursday, Friday, Sunday"
+      },
+      "Entries": {
+        "Reject_809": "{{i18n:Claire.RejectMovie}}"
+      }
+    },
+
     {
       //Claire will reject movie invitations on days she's working (not married)
       "Action": "EditData",
@@ -708,140 +1077,6 @@
         }
       }
     },
-    //EGG FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "Claire": "{{i18n:eggfestival.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "Claire": "{{i18n:eggfestival.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //FLOWER DANCE
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "Claire": "{{i18n:flowerdance.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "Claire": "{{i18n:flowerdance.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //LUAU
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "Entries": {
-        "Claire": "{{i18n:luau.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "Entries": {
-        "Claire": "{{i18n:luau.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //DANCE OF THE MOONLIGHT JELLIES
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "Entries": {
-        "Claire": "{{i18n:moonlight.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "Entries": {
-        "Claire": "{{i18n:moonlight.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //STARDEW VALLEY FAIR
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Claire": "{{i18n:fair.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Claire": "{{i18n:fair.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //SPIRITS EVE FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Claire": "{{i18n:spirit.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Claire": "{{i18n:spirit.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //ICE FISHING FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "Claire": "{{i18n:ice.claire.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "Claire": "{{i18n:ice.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
-    //WINTER STAR FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "Entries": {
-        "Claire": "{{i18n:winterstar.claire.1}}",
-      }
-    },
     /*
 	{
       "Action": "EditData",
@@ -861,16 +1096,6 @@
       }
     },
 	*/
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "Entries": {
-        "Claire": "{{i18n:winterstar.claire.2}}",
-      },
-      "When": {
-        "Spouse": "Claire"
-      }
-    },
     //Claire events
     {
       //Claire 1/5 heart event
@@ -908,6 +1133,11 @@
       },
     },
     {
+      "Action": "Load",
+      "Target": "Portraits/ClaireJoja",
+      "FromFile": "assets/CharacterFiles/Portraits/NoPortraits/ClaireJoja.png"
+    },
+    {
       //Claire 4 heart event - joja uniform, pelican town park
       "Action": "EditData",
       "Target": "data/events/town",
@@ -927,7 +1157,7 @@
         "HasSeenevent": "5553210"
       },
       "Entries": {
-        "3219872/e 3219871/f Claire 1000/w sunny/t 1100 1500": "spring_day_ambient/-500 -500/farmer 87 8 2 Claire -200 -200 2 Abigail 74 54 2 Olivia 86 53 1 MorrisTod 88 53 3 Clint 97 77 0/addTemporaryActor ClaireJoja 16 32 95 12 2/skippable/showFrame ClaireJoja 35 true/positionOffset ClaireJoja -27 -10/viewport 94 13 true/move farmer 0 4 2/pause 500/faceDirection farmer 1 true/pause 1000/move farmer 5 0 1/pause 1000/showFrame ClaireJoja 31 true/pause 750/showFrame ClaireJoja 30 true/pause 500/speak Claire \"{{i18n:Claire.4hearts.JojaB.01}}\"/pause 500/emote farmer 32/speak Claire \"{{i18n:Claire.4hearts.JojaB.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.4hearts.JojaB.03}}\"/pause 500/emote farmer 8/speak Claire \"{{i18n:Claire.4hearts.JojaB.04}}\"/pause 750/showFrame ClaireJoja 31 true/pause 400/showFrame ClaireJoja 35 true/pause 750/speak Claire \"{{i18n:Claire.4hearts.JojaB.05}}\"/pause 1350/showFrame ClaireJoja 31/pause 500/showFrame ClaireJoja 30/pause 500/speak Claire \"{{i18n:Claire.4hearts.JojaB.06}}\"/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Claire 50/end dialogue Claire \"{{i18n:Claire.4hearts.JojaB.07}}\""
+        "3219872/e 3219871/f Claire 1000/w sunny/t 1100 1500": "spring_day_ambient/-500 -500/farmer 56 32 0 Claire -200 -200 2 Abigail 74 54 2 Olivia 86 53 1 MorrisTod 88 53 3 Clint 97 77 0/addTemporaryActor ClaireJoja 16 32 62 26 2/skippable/showFrame ClaireJoja 35 true/positionOffset ClaireJoja -27 -10/viewport 61 26 true/move farmer 0 -6 0/pause 500/faceDirection farmer 1 true/pause 1000/move farmer 3 0 1/pause 1000/showFrame ClaireJoja 31 true/pause 750/showFrame ClaireJoja 30 true/pause 500/speak Claire \"{{i18n:Claire.4hearts.JojaB.01}}\"/pause 500/emote farmer 32/speak Claire \"{{i18n:Claire.4hearts.JojaB.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.4hearts.JojaB.03}}\"/pause 500/emote farmer 8/speak Claire \"{{i18n:Claire.4hearts.JojaB.04}}\"/pause 750/showFrame ClaireJoja 31 true/pause 400/showFrame ClaireJoja 35 true/pause 750/speak Claire \"{{i18n:Claire.4hearts.JojaB.05}}\"/pause 1350/showFrame ClaireJoja 31/pause 500/showFrame ClaireJoja 30/pause 500/speak Claire \"{{i18n:Claire.4hearts.JojaB.06}}\"/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Claire 50/end dialogue Claire \"{{i18n:Claire.4hearts.JojaB.07}}\""
       },
     },
     {
@@ -954,6 +1184,13 @@
       "Target": "Characters/ClaireTheater",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ClaireTheater.png"
     },
+    //fake portrait
+    {
+      //load claire theater uniform temp actor
+      "Action": "Load",
+      "Target": "Portraits/ClaireTheater",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/ClaireTheater.png"
+    },
     {
       //Claire out of work heart event
       "Action": "EditData",
@@ -967,13 +1204,23 @@
       },
     },
     {
-      //Claire 6 heart event - joja uniform
+      //Claire 6 heart event - joja uniform - before joja/cc completion
       "Action": "EditData",
       "Target": "data/events/town",
       "When": {
         "HasSeenEvent |contains=3219872": true,
         "HasSeenEvent |contains=191393": false,
-        "HasFlag |contains=ccMovieTheater": false
+      },
+      "Entries": {
+        "3219873/e 3219871/f Claire 1500/w sunny/t 1100 1500": "springtown/-500 -500/farmer -100 -100 1 Claire -200 -200 2 Caroline -101 -101 2 Lewis 30 56 2 Sam 32 64 3 Sebastian 30 64 1 Pierre 46 48 0 Abigail 31 65 0 Alex 53 69 0 Haley 54 69 0 Evelyn 62 57 0 Olivia 43 60 1 Emily 44 59 2 Robin 47 57 2 Marnie 47 59 0 Jodi 45 60 3/addTemporaryActor ClaireJoja 16 32 38 58 2/showFrame ClaireJoja 35/positionOffset Emily -20 15/positionOffset Olivia -20 15/positionOffset Jodi -20 15/positionOffset Marnie -15 0/positionOffset Robin -11 -5/pause 800/skippable/viewport 43 59 true/pause 1750/shake Olivia 500/pause 300/speak Olivia \"{{i18n:Claire.6hearts.01}}\"/pause 800/shake Jodi 500/pause 300/speak Jodi \"{{i18n:Claire.6hearts.02}}\"/pause 1000/playSound doorClose/warp Caroline 44 57/pause 225/faceDirection Robin 3 true/pause 220/faceDirection Marnie 3 true/pause 100/faceDirection Emily 1 true/pause 130/faceDirection Olivia 0 true/pause 200/faceDirection Emily 0 true/pause 120/faceDirection Jodi 0 true/pause 200/showFrame ClaireJoja 31/pause 300/showFrame ClaireJoja 27/shake Caroline 500/pause 300/speak Caroline \"{{i18n:Claire.6hearts.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp Emily -200 -200/warp Jodi -200 -200/warp Robin -200 -200/warp Marnie -200 -200/warp Olivia -200 -200/warp Caroline -200 -200/playSound doorClose/pause 600/playSound doorClose/pause 500/playSound doorClose/pause 1500/warp ClaireJoja 44 59/warp farmer 32 59/showFrame ClaireJoja 8 true/positionOffset ClaireJoja 10 -15/viewport 43 59 true/move farmer 10 0 1 true/pause 2200/speak Claire \"{{i18n:Claire.6hearts.Joja.04}}\"/pause 1250/showFrame ClaireJoja 12 true/pause 500/speak Claire \"{{i18n:Claire.6hearts.Joja.05}}\"/pause 800/showFrame ClaireJoja 8/pause 800/speak Claire \"{{i18n:Claire.6hearts.Joja.06}}\"/pause 650/speak Claire \"{{i18n:Claire.6hearts.Joja.07}}\"/pause 1000/showFrame ClaireJoja 12/pause 800/speak Claire \"{{i18n:Claire.6hearts.Joja.08}}\"/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.09}}\"/pause 650/showFrame ClaireJoja 0/pause 500/showFrame ClaireJoja 34/pause 700/speak Claire \"{{i18n:Claire.6hearts.Joja.10}}\"/pause 900/emote farmer 40/pause 300/speak Claire \"{{i18n:Claire.6hearts.Joja.11}}\"/pause 1350/showFrame ClaireJoja 0 true/pause 1000/showFrame ClaireJoja 12 true/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.13}}\"/pause 500/emote farmer 32/pause 250/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 250/move farmer -7 0 3 true/pause 750/globalFade/viewport -1000 -1000 true/halt/warp ClaireJoja 44 59/warp farmer -50 -50/viewport 43 59 true/pause 1750/showFrame ClaireJoja 8 true/pause 1250/shake ClaireJoja 375/pause 1000/move ClaireJoja 0 -2 0/pause 750/warp ClaireJoja -51 -51/playSound doorClose/addConversationTopic claireAerobics/pause 1500/globalFade/viewport -1000 -1000/friendship Claire 50/pause 1000/end dialogue Claire \"{{i18n:Claire.6hearts.Joja.14}}\""
+      },
+    },
+    {
+      //Claire 6 heart event - joja uniform - after Joja ceremony
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "When": {
+        "HasSeenEvent |contains=502261": true,
       },
       "Entries": {
         "3219873/e 3219871/f Claire 1500/w sunny/t 1100 1500": "springtown/-500 -500/farmer -100 -100 1 Claire -200 -200 2 Caroline -101 -101 2 Lewis 30 56 2 Sam 32 64 3 Sebastian 30 64 1 Pierre 46 48 0 Abigail 31 65 0 Alex 53 69 0 Haley 54 69 0 Evelyn 62 57 0 Olivia 43 60 1 Emily 44 59 2 Robin 47 57 2 Marnie 47 59 0 Jodi 45 60 3/addTemporaryActor ClaireJoja 16 32 38 58 2/showFrame ClaireJoja 35/positionOffset Emily -20 15/positionOffset Olivia -20 15/positionOffset Jodi -20 15/positionOffset Marnie -15 0/positionOffset Robin -11 -5/pause 800/skippable/viewport 43 59 true/pause 1750/shake Olivia 500/pause 300/speak Olivia \"{{i18n:Claire.6hearts.01}}\"/pause 800/shake Jodi 500/pause 300/speak Jodi \"{{i18n:Claire.6hearts.02}}\"/pause 1000/playSound doorClose/warp Caroline 44 57/pause 225/faceDirection Robin 3 true/pause 220/faceDirection Marnie 3 true/pause 100/faceDirection Emily 1 true/pause 130/faceDirection Olivia 0 true/pause 200/faceDirection Emily 0 true/pause 120/faceDirection Jodi 0 true/pause 200/showFrame ClaireJoja 31/pause 300/showFrame ClaireJoja 27/shake Caroline 500/pause 300/speak Caroline \"{{i18n:Claire.6hearts.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp Emily -200 -200/warp Jodi -200 -200/warp Robin -200 -200/warp Marnie -200 -200/warp Olivia -200 -200/warp Caroline -200 -200/playSound doorClose/pause 600/playSound doorClose/pause 500/playSound doorClose/pause 1500/warp ClaireJoja 44 59/warp farmer 32 59/showFrame ClaireJoja 8 true/positionOffset ClaireJoja 10 -15/viewport 43 59 true/move farmer 10 0 1 true/pause 2200/speak Claire \"{{i18n:Claire.6hearts.Joja.04}}\"/pause 1250/showFrame ClaireJoja 12 true/pause 500/speak Claire \"{{i18n:Claire.6hearts.Joja.05}}\"/pause 800/showFrame ClaireJoja 8/pause 800/speak Claire \"{{i18n:Claire.6hearts.Joja.06}}\"/pause 650/speak Claire \"{{i18n:Claire.6hearts.Joja.07}}\"/pause 1000/showFrame ClaireJoja 12/pause 800/speak Claire \"{{i18n:Claire.6hearts.Joja.08}}\"/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.09}}\"/pause 650/showFrame ClaireJoja 0/pause 500/showFrame ClaireJoja 34/pause 700/speak Claire \"{{i18n:Claire.6hearts.Joja.10}}\"/pause 900/emote farmer 40/pause 300/speak Claire \"{{i18n:Claire.6hearts.Joja.11}}\"/pause 1350/showFrame ClaireJoja 0 true/pause 1000/showFrame ClaireJoja 12 true/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.6hearts.Joja.13}}\"/pause 500/emote farmer 32/pause 250/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 250/move farmer -7 0 3 true/pause 750/globalFade/viewport -1000 -1000 true/halt/warp ClaireJoja 44 59/warp farmer -50 -50/viewport 43 59 true/pause 1750/showFrame ClaireJoja 8 true/pause 1250/shake ClaireJoja 375/pause 1000/move ClaireJoja 0 -2 0/pause 750/warp ClaireJoja -51 -51/playSound doorClose/addConversationTopic claireAerobics/pause 1500/globalFade/viewport -1000 -1000/friendship Claire 50/pause 1000/end dialogue Claire \"{{i18n:Claire.6hearts.Joja.14}}\""
@@ -999,8 +1246,8 @@
         "HasSeenEvent": "3219873"
       },
       "Entries": {
-        "Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.002\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 BusStop 12 8 0/1740 Custom_DayEnd_WarpRoom 2 2 0",
-        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 BusStop -1 23 3",
+        "Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.002\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 BusStop 22 8 0/1740 Custom_DayEnd_WarpRoom 2 2 0",
+        "marriage_Tue": "1030 SeedShop 26 17 1 \"Strings\\schedules\\Claire:AerobicsClass.000\"/1300 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.001\"/1600 Bed",
       }
     },
     {
@@ -1012,7 +1259,7 @@
         "Weather": "Rain"
       },
       "Entries": {
-        "Tue": "1200 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.003\"/1600 BusStop 12 8 0/1740 Custom_DayEnd_WarpRoom 2 2 0"
+        "Tue": "1200 SeedShop 23 18 2 Claire_Dance \"Strings\\schedules\\Claire:AerobicsClass.003\"/1600 BusStop 22 8 0/1740 Custom_DayEnd_WarpRoom 2 2 0"
       }
     },
     //CLOSE MOVIE THEATER ON THE 22ND
@@ -1130,7 +1377,7 @@
         "HasSeenEvent": "3219875"
       },
       "Entries": {
-        "3219876/t 1400 1800": "continue/-500 -500/Claire -100 -100 2 farmer 12 17 0/pause 1250/viewport 16 13 true/skippable/move farmer 0 -8 0/pause 500/playSound doorClose/warp farmer -100 -100/pause 1000/globalFade/viewport -1000 -1000/playSound busDriveOff/pause 4000/message \"{{i18n:Claire.10hearts2.01}}\"/changeLocation Custom_Countryside_BusStop_Bus/playSound busDoorOpen/pause 4000/viewport 19 17 true/pause 1000/warp farmer 17 20/pause 800/move farmer 0 -3 0/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 800/globalFade/viewport -1000 -1000/playSound busDriveOff/changeLocation Custom_Countryside_BusStop_NoBus/pause 1500/faceDirection farmer 3 true/viewport 19 17 true/pause 2250/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 500/move farmer 6 0 1/pause 200/faceDirection farmer 0/pause 500/message \"{{i18n:Claire.10hearts2.02}}\"/pause 1000/faceDirection farmer 1 true/pause 750/move farmer 8 0 1 true/pause 650/globalFade/viewport -1000 -1000/halt/changeLocation Custom_Countryside_ClaireHouse/warp farmer 23 26/faceDirection farmer 1 true/viewport 31 28 true/viewport move 0 -1 11000 true/move farmer 8 0 1/pause 500/faceDirection farmer 0 true/pause 650/move farmer 0 -9 0/pause 1350/showFrame farmer 15 true/pause 600/playSound stoneStep/pause 400/playSound stoneStep/pause 500/playSound stoneStep/pause 500/showFrame farmer 12 true/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_ClaireHouse/playMusic 50s/warp Claire 10 14/warp farmer -100 -100/faceDirection Claire 0 true/positionOffset Claire -10 20/viewport 8 11 true/pause 2300/playSound stoneStep/pause 500/playSound stoneStep/pause 400/playSound stoneStep/pause 300/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Claire.10hearts2.03}}\"/pause 750/warp farmer 7 17/playSound doorClose/pause 650/move farmer 0 -2 0/pause 300/faceDirection farmer 1 true/pause 400/speak Claire \"{{i18n:Claire.10hearts2.04}}\"/pause 1150/faceDirection farmer 0 true/pause 300/faceDirection farmer 3 true/pause 1300/faceDirection farmer 0 true/pause 300/faceDirection farmer 1 true/pause 600/emote farmer 32/speak Claire \"{{i18n:Claire.10hearts2.05}}\"/pause 500/globalFade/viewport -1000 -1000/warp Claire 4 6/faceDirection Claire 0 true/warp farmer 7 6/faceDirection farmer 0 true/addTemporaryActor ClaireProp1 16 16 4 4 2 false/positionOffset ClaireProp1 2 32/addTemporaryActor ClaireProp2 16 16 5 4 2 false/positionOffset ClaireProp2 2 32/animate ClaireProp2 false true 1000 0 1/positionOffset Claire -22 -25/viewport 8 7 true/pause 2500/move farmer -1 0 0/pause 200/move farmer 0 0 0/pause 1500/move farmer 0 0 3/pause 200/move farmer -1 0 3/pause 100/move farmer 0 0 0/pause 1500/speak Claire \"{{i18n:Claire.10hearts2.06}}\"/pause 750/faceDirection farmer 3/pause 850/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.10hearts2.07}}\"/pause 650/shake Claire 450/pause 550/speak Claire \"{{i18n:Claire.10hearts2.08}}\"/pause 600/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/showFrame Claire 32 true/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/animate farmer true true 100 101/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/playSound dwop/specificTemporarySprite heart 5 4/pause 2500/globalFade/viewport -1000 -1000/pause 1000/speak Claire \"{{i18n:Claire.10hearts2.09}}\"/pause 1250/end dialogue Claire \"{{i18n:Claire.10hearts2.10}}\"",
+        "3219876/t 1400 1800": "continue/-500 -500/Claire -100 -100 2 farmer 22 17 0/pause 1250/viewport 26 13 true/skippable/move farmer 0 -8 0/pause 500/playSound doorClose/warp farmer -100 -100/pause 1000/globalFade/viewport -1000 -1000/playSound busDriveOff/pause 4000/message \"{{i18n:Claire.10hearts2.01}}\"/changeLocation Custom_Countryside_BusStop_Bus/playSound busDoorOpen/pause 4000/viewport 19 17 true/pause 1000/warp farmer 17 20/pause 800/move farmer 0 -3 0/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 800/globalFade/viewport -1000 -1000/playSound busDriveOff/changeLocation Custom_Countryside_BusStop_NoBus/pause 1500/faceDirection farmer 3 true/viewport 19 17 true/pause 2250/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 500/move farmer 6 0 1/pause 200/faceDirection farmer 0/pause 500/message \"{{i18n:Claire.10hearts2.02}}\"/pause 1000/faceDirection farmer 1 true/pause 750/move farmer 8 0 1 true/pause 650/globalFade/viewport -1000 -1000/halt/changeLocation Custom_Countryside_ClaireHouse/warp farmer 23 26/faceDirection farmer 1 true/viewport 31 28 true/viewport move 0 -1 11000 true/move farmer 8 0 1/pause 500/faceDirection farmer 0 true/pause 650/move farmer 0 -9 0/pause 1350/showFrame farmer 15 true/pause 600/playSound stoneStep/pause 400/playSound stoneStep/pause 500/playSound stoneStep/pause 500/showFrame farmer 12 true/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_ClaireHouse/playMusic 50s/warp Claire 10 14/warp farmer -100 -100/faceDirection Claire 0 true/positionOffset Claire -10 20/viewport 8 11 true/pause 2300/playSound stoneStep/pause 500/playSound stoneStep/pause 400/playSound stoneStep/pause 300/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Claire.10hearts2.03}}\"/pause 750/warp farmer 7 17/playSound doorClose/pause 650/move farmer 0 -2 0/pause 300/faceDirection farmer 1 true/pause 400/speak Claire \"{{i18n:Claire.10hearts2.04}}\"/pause 1150/faceDirection farmer 0 true/pause 300/faceDirection farmer 3 true/pause 1300/faceDirection farmer 0 true/pause 300/faceDirection farmer 1 true/pause 600/emote farmer 32/speak Claire \"{{i18n:Claire.10hearts2.05}}\"/pause 500/globalFade/viewport -1000 -1000/warp Claire 4 6/faceDirection Claire 0 true/warp farmer 7 6/faceDirection farmer 0 true/addTemporaryActor ClaireProp1 16 16 4 4 2 false/positionOffset ClaireProp1 2 32/addTemporaryActor ClaireProp2 16 16 5 4 2 false/positionOffset ClaireProp2 2 32/animate ClaireProp2 false true 1000 0 1/positionOffset Claire -22 -25/viewport 8 7 true/pause 2500/move farmer -1 0 0/pause 200/move farmer 0 0 0/pause 1500/move farmer 0 0 3/pause 200/move farmer -1 0 3/pause 100/move farmer 0 0 0/pause 1500/speak Claire \"{{i18n:Claire.10hearts2.06}}\"/pause 750/faceDirection farmer 3/pause 850/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.10hearts2.07}}\"/pause 650/shake Claire 450/pause 550/speak Claire \"{{i18n:Claire.10hearts2.08}}\"/pause 600/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/showFrame Claire 32 true/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/animate farmer true true 100 101/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 50/positionOffset Claire 1 0/positionOffset farmer -1 0/playSound dwop/specificTemporarySprite heart 5 4/pause 2500/globalFade/viewport -1000 -1000/pause 1000/speak Claire \"{{i18n:Claire.10hearts2.09}}\"/pause 1250/end dialogue Claire \"{{i18n:Claire.10hearts2.10}}\"",
       },
     },
     {
@@ -1152,7 +1399,7 @@
         "FarmhouseUpgrade": 1
       },
       "Entries": {
-        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 11 5 3 Claire 4 5 0/makeInvisible 4 5 8 1/pause 750/playMusic 50s/pause 500/positionOffset Claire 0 -13/skippable/viewport 5 5 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
+        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 11 5 3 Claire 4 5 0/makeInvisible 4 5 8 1/pause 750/playMusic 50s/pause 500/positionOffset Claire 0 -13/skippable/ignoreCollisions farmer/ignoreCollisions Claire/viewport 5 5 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
       },
     },
     {
@@ -1164,7 +1411,7 @@
         "FarmhouseUpgrade": 2
       },
       "Entries": {
-        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 14 14 3 Claire 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
+        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 14 14 3 Claire 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
       },
     },
     {
@@ -1176,7 +1423,7 @@
         "FarmhouseUpgrade": 3
       },
       "Entries": {
-        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 14 14 3 Claire 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
+        "3219877/O Claire/f Claire 3000/t 600 800/u 2 3 4 8 9 10 11/z winter": "none/-500 -500/farmer 29 24 3 Claire 23 24 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 23 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Claire 1 true/pause 500/speak Claire \"{{i18n:Claire.12hearts1.01}}\"/pause 700/emote farmer 32/pause 400/move farmer -1 0 3/pause 675/showFrame Claire 5 true/shake Claire 225/pause 375/showFrame Claire 4 true/pause 300/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 20/pause 400/speak Claire \"{{i18n:Claire.12hearts1.02}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Claire \"{{i18n:Claire.12hearts1.04}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Claire \"{{i18n:Claire.12hearts1.05}}\""
       },
     },
     {
@@ -1190,7 +1437,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Theater.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Theater.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Theater.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Theater.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {
@@ -1203,7 +1450,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {
@@ -1219,7 +1466,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Theater.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Theater.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Theater.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Theater.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {
@@ -1234,7 +1481,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {
@@ -1249,7 +1496,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 66 15/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 64 15 clamp true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 64 15/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 20 30/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {
@@ -1265,7 +1512,7 @@
         "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
       },
       "Entries": {
-        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
+        "3219878/O Claire/f Claire 3000/t 600 1150/w sunny/d Mon Tue Wed Thu/z winter": "none/-500 -500/farmer -100 -100 2 Claire -100 -100 2 Apples -100 -100 3 Linus -100 -100 0 Marnie -100 -100 0 Sam -100 -100 2 Leah -100 -100 1 Elliott -100 -100 2 Sebastian -100 -100 2 Demetrius -100 -100 2 Robin -100 -100 2 Willy -100 -100 2 Penny -100 -100 2 Maru -100 -100 2 Susan -100 -100 1 Andy -100 -100 3 Sophia -100 -100 0/changeLocation Farm/pause 1250/playMusic spring_day_ambient/warp Claire 97 49/faceDirection Claire 2 true/showFrame Claire 35 true/faceDirection farmer 2 true/warp farmer -100 -100/changeLocation Farm/pause 500/ignoreCollisions farmer/ignoreCollisions Claire/viewport 95 49 true/skippable/pause 1000/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 500/playSound doorClose/warp farmer 95 49/pause 700/faceDirection farmer 1 true/pause 500/showFrame Claire 34 true/playSound dwop/pause 600/showFrame Claire 0 true/pause 200/playSound SpringBirds/pause 300/faceDirection Claire 3 true/pause 400/speak Claire \"{{i18n:Claire.12hearts2.01}}\"/pause 500/emote farmer 32/pause 200/playSound SpringBirds/pause 200/speak Claire \"{{i18n:Claire.12hearts2.02}}\"/pause 750/playSound SpringBirds/pause 250/faceDirection farmer 0 true/pause 650/playSound doorClose/warp farmer -100 -1000/pause 400/playSound SpringBirds/pause 250/move Claire -2 0 3/pause 300/faceDirection Claire 0 true/pause 600/warp Claire -101 -101/playSound doorClose/pause 1000/playSound SpringBirds/pause 500/globalFade/viewport -1000 -1000/changeLocation Backwoods/playMusic MainTheme/pause 1000/warp farmer 22 13/faceDirection farmer 1 true/warp Claire 22 14/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 22 14 true/viewport move 1 0 5700 true/pause 3700/globalFade/viewport -1000 -1000/halt/changeLocation Mountain/warp Linus 67 10/positionOffset Linus 30 -10/warp Demetrius 29 36/warp Robin 30 36/positionOffset Robin 20 -15/positionOffset Demetrius 15 -15/warp farmer 19 29/warp Claire 19 30/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 1 true/viewport 21 30 clamp true/viewport move 1 0 6000 true/pause 4000/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 57 25/faceDirection farmer 2 true/warp Claire 57 31/faceDirection Claire 0 true/viewport 57 29 true/pause 1800/jump farmer/pause 900/shake Claire 800/textAboveHead Claire \"{{i18n:Claire.12hearts2.03}}\"/pause 1400/speed Claire 1/move Claire 0 -5 0 true/viewport move 0 -1 4300 true/pause 2250/globalFade/viewport -1000 -1000/halt/changeLocation Railroad/warp Robin -100 -100/warp Demetrius -100 -100/warp Linus -100 -100/warp Susan 40 54/animate Susan false true 500 16 17/warp farmer 29 52/warp Claire 30 52/faceDirection farmer 0 true/faceDirection Claire 0 true/move Claire 0 -6 0 true/move farmer 0 -6 0 true/viewport 30 51 true/viewport move 0 -1 6000 true/pause 2650/faceDirection Claire 3 true/pause 1400/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.04}}\"/pause 950/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Susan -100 -100/changeLocation Town/warp farmer 79 10/warp Claire 78 10/faceDirection Claire 2 true/faceDirection farmer 2 true/move Claire 0 13 2 true/move farmer 0 13 2 true/warp Maru 63 15/showFrame Maru 31/positionOffset Maru 0 20/warp Willy 88 20/faceDirection Willy 1 true/viewport 78 14 true/viewport move 0 1 6000 true/pause 3600/globalFade/viewport -1000 -1000/halt/changeLocation Custom_ShearwaterBridge/warp Maru -100 -100/warp Willy -100 -100/warp farmer 19 21/warp Claire 19 20/faceDirection Claire 1 true/faceDirection farmer 1 true/move Claire 9 0 0 true/move farmer 10 0 1 true/viewport 29 28 true/viewport move 0 -1 9500 true/pause 5100/faceDirection farmer 0 true/pause 100/move farmer 0 -1 0/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Town/warp Linus -100 -100/warp Penny 35 89/showFrame Penny 18/warp Sebastian 16 95/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/warp Sam 18 95/showFrame Sam 19/warp farmer 28 90/warp Claire 28 91/faceDirection farmer 3 true/faceDirection Claire 3 true/move Claire -15 0 3 true/move farmer -15 0 3 true/viewport 28 91 true/viewport move -1 0 6500 true/pause 4400/globalFade/viewport -1000 -1000/warp Sebastian -100 -100/warp Penny -100 -100/warp Sam -100 -100/halt/changeLocation Forest/warp farmer 101 23/warp Claire 100 23/faceDirection Claire 0 true/faceDirection farmer 0 true/warp Andy 95 25/faceDirection Andy 1 true/warp Marnie 100 17/move Andy 15 0 1 true/viewport 100 21 true/pause 1000/shake Claire 650/textAboveHead Claire \"{{i18n:Claire.12hearts2.05}}\"/pause 1200/faceDirection Marnie 1 true/pause 225/faceDirection Marnie 2 true/pause 600/shake Marnie 400/textAboveHead Marnie \"{{i18n:Claire.12hearts2.06}}\"/pause 1500/globalFade/viewport -1000 -1000/halt/warp Andy -100 -100/warp Marnie -100 -100/warp Leah 21 80/faceDirection Leah 1 true/pause 500/warp Claire 13 80/faceDirection Claire 2 true/warp farmer 14 80/faceDirection farmer 2 true/move Claire 0 5 3 true/move farmer 0 8 2 true/viewport 17 82 true/viewport move 0 1 4000 true/pause 3400/textAboveHead Claire \"{{i18n:Claire.12hearts2.07}}\"/pause 1000/faceDirection farmer 3 true/pause 200/faceDirection farmer 0 true/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_ForestWest/warp Leah -100 -100/warp Apples 66 21/warp farmer 57 29/warp Claire 58 29/move farmer 0 -7 0 true/move Claire 0 -7 0 true/viewport 58 28 true/viewport move 0 -1 11000 true/pause 4500/shake Claire 500/textAboveHead Claire \"{{i18n:Claire.12hearts2.08}}\"/pause 1200/faceDirection farmer 1 true/pause 700/faceDirection Claire 3 true/pause 1000/globalFade/viewport -1000 -1000/warp Apples -100 -100/changeLocation Custom_BlueMoonVineyard/warp Claire 20 50/warp farmer 20 49/faceDirection farmer 1 true/faceDirection Claire 1 true/move Claire 15 0 1 true/move farmer 15 0 2 true/warp Sophia 32 43/animate Sophia false true 500 24 25/viewport 25 49 clamp true/viewport move 1 0 6500 true/pause 4500/globalFade/viewport -1000 -1000/warp Sophia -100 -100/stopMusic/changeLocation Beach/playMusic ocean/pause 2000/warp Elliott 12 39/positionOffset Elliott 15 10/warp farmer 42 36/warp Claire 41 36/faceDirection farmer 2 true/faceDirection Claire 2 true/positionOffset Claire -4 0/positionOffset farmer 22 25/viewport 42 36 true/pause 3000/faceDirection Claire 1 true/pause 1000/faceDirection farmer 3 true/pause 500/speak Claire \"{{i18n:Claire.12hearts2.09}}\"/pause 750/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 1000/faceDirection Claire 2 true/pause 1000/faceDirection farmer 2 true/pause 2500/speak Claire \"{{i18n:Claire.12hearts2.10}}\"/pause 2000/shake Claire 400/pause 1200/shake Claire 300/pause 400/showFrame Claire 34/pause 1000/faceDirection farmer 3 true/pause 2000/speak Claire \"{{i18n:Claire.12hearts2.Joja.11}}\"/pause 500/emote farmer 16/pause 750/emote farmer 40/emote farmer 40/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.12}}\"/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.Joja.13}}\"/pause 1750/shake Claire 600/pause 1500/showFrame Claire 0 true/pause 1000/speak Claire \"{{i18n:Claire.12hearts2.14}}\"/pause 1100/faceDirection Claire 1 true/pause 700/speak Claire \"{{i18n:Claire.12hearts2.15}}\"/pause 2250/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/positionOffset farmer -1 0/pause 75/positionOffset Claire 1 0/pause 1500/speak Claire \"{{i18n:Claire.12hearts2.16}}\"/pause 2000/animate farmer true true 100 101/playSound dwop/specificTemporarySprite heart 42 35/pause 800/showFrame Claire 33/pause 4000/globalFade/viewport -1000 -1000/pause 2250/speak Claire \"{{i18n:Claire.12hearts2.17}}\"/pause 1500/stopMusic/pause 1000/changeLocation farmhouse/playSound rooster/pause 2500/end dialogue Claire \"{{i18n:Claire.12hearts2.18}}\""
       },
     },
     {

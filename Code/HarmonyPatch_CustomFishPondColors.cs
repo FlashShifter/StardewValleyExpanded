@@ -4,7 +4,7 @@ using HarmonyLib;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using StardewValley.Buildings;
-using StardewValley.GameData.FishPond;
+using StardewValley.GameData.FishPonds;
 
 namespace StardewValleyExpanded
 {

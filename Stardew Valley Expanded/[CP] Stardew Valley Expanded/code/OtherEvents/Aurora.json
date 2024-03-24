@@ -49,7 +49,7 @@
                     "MorrisTod_Objective_1_Text3": "{{i18n:Morris.AuroraString.03}}",
                }
           },
-          { //Buying Aurora Vineyard - part 1 (Grandpa's Farm isn't installed)
+          { //Buying Aurora Vineyard - part 1 
                "Action": "EditData",
                "Target": "data/events/farm",
                "When": {
@@ -59,39 +59,6 @@
                }, //Player has visited Joja Emporium at least once, player has built Morris' townhouse, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
                "Entries": {
                     "746153081/e 6663408/k 8033858/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
-                    "746153081_PurchasedAuroraVineyard": "pause 400/addMailReceived PlayerWillBuyAuroraVineyard/pause 100/message \"{{i18n:Joja.Aurora1.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.Purchased.02}}\""
-               },
-          },
-          { //Buying Aurora Vineyard - part 1 (Grandpa's Farm is installed - Bought more farm land) 
-               "Action": "EditData",
-               "Target": "data/events/farm",
-               "When": {
-                    "HasSeenEvent |contains=5553214": true,
-                    "HasMod |contains=flashshifter.GrandpasFarm": true,
-                    "HasFlag": "DeedOfLand",
-                    "FarmType": "Standard",
-                    "HasSeenEvent |contains=8050109": true,
-                    "HasFlag |contains=Island_Resort": true
-               }, //Player has visited Joja Emporium at least once, player has visited Morris' townhouse at least once, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
-               "Entries": {
-                    "746153081/e 6663408/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
-                    "746153081_PurchasedAuroraVineyard": "pause 400/addMailReceived PlayerWillBuyAuroraVineyard/pause 100/message \"{{i18n:Joja.Aurora1.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.Purchased.02}}\""
-               },
-          },
-          { //Buying Aurora Vineyard - part 1 (Grandpa's Farm is installed - Did not buy more farm land) 
-               "Action": "EditData",
-               "Target": "data/events/farm",
-               "When": {
-                    "HasSeenEvent |contains=5553214": true,
-                    "HasMod |contains=flashshifter.GrandpasFarm": true,
-                    "HasSeenEvent |contains=8033858": true,
-                    "HasFlag |contains=PAurora1layerWillExpandFarm": false,
-                    "FarmType": "Standard",
-                    "HasSeenEvent |contains=8050109": true,
-                    "HasFlag |contains=Island_Resort": true
-               }, //Player has visited Joja Emporium at least once, player has visited Morris' townhouse at least once, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
-               "Entries": {
-                    "746153081/e 6663408/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
                     "746153081_PurchasedAuroraVineyard": "pause 400/addMailReceived PlayerWillBuyAuroraVineyard/pause 100/message \"{{i18n:Joja.Aurora1.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.Purchased.02}}\""
                },
           },
@@ -714,7 +681,7 @@
                "Action": "EditData",
                "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
                "Entries": {
-                    "reject_{{spacechase0.JsonAssets/ObjectId:Aurora Vineyard Property Deed}}": "{{i18n:Reject.PropertyDeed}}",
+                    "reject_(O)Aurora Vineyard Property Deed": "{{i18n:Reject.PropertyDeed}}",
                }
           },
      ]

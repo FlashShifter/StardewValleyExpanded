@@ -53,7 +53,56 @@
             "Patchmode": "Overlay"
         },
         //*** UI changes when player is in Galdora ***
-        { //Galdoran menu tiles 1
+		
+		{ //Galdoran Theme 1.6 Update 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 824,
+                "Width": 99,
+                "Height": 115
+            },
+            "ToArea": {
+                "X": 394,
+                "Y": 97,
+                "Width": 99,
+                "Height": 115
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 103,
+                "Y": 824,
+                "Width": 201,
+                "Height": 96
+            },
+            "ToArea": {
+                "X": 311,
+                "Y": 234,
+                "Width": 201,
+                "Height": 96
+            },
+        },
+		
+		{ //Galdoran menu tiles 1
             "Action": "EditImage",
             "Target": "Maps/MenuTiles",
             "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
@@ -97,6 +146,54 @@
                 "Y": 256,
                 "Width": 124,
                 "Height": 124
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Baby Chicken Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 384,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 257,
+                "Y": 246,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Purple Star Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 401,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 216,
+                "Y": 494,
+                "Width": 16,
+                "Height": 16
             },
         },
         {
@@ -1228,6 +1325,52 @@
                 "Height": 124
             },
         },
+		{
+            //Galdoran SDV 1.6 Baby Chicken Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": true,
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 384,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 257,
+                "Y": 246,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Purple Star Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": true,
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 401,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 216,
+                "Y": 494,
+                "Width": 16,
+                "Height": 16
+            },
+        },
         {
             //Galdoran portrait background
             "Action": "EditImage",
@@ -2145,6 +2288,52 @@
                 "Y": 495,
                 "Width": 11,
                 "Height": 11
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 824,
+                "Width": 99,
+                "Height": 115
+            },
+            "ToArea": {
+                "X": 394,
+                "Y": 97,
+                "Width": 99,
+                "Height": 115
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 103,
+                "Y": 824,
+                "Width": 201,
+                "Height": 96
+            },
+            "ToArea": {
+                "X": 311,
+                "Y": 234,
+                "Width": 201,
+                "Height": 96
             },
         },
     ]

@@ -1,5 +1,57 @@
 {
 	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Gus",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog_Legs",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Goldenfish",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //GUS SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Gus",

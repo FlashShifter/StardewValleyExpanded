@@ -2,12 +2,52 @@
   "Changes": [
     //ISAAC NPC
     {
-      //Isaac's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Isaac": "adult/rude/neutral/negative/male/non-datable/null/Other/null//Custom_Isaac_WarpRoom 3 3/{{i18n:Name.Isaac}}",
-      }
+        "Isaac": {
+          "DisplayName": "{{i18n:Name.Isaac}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Negative",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Isaac_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Isaac_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Isaac's sprites
@@ -27,20 +67,6 @@
       "Target": "Characters/schedules/Isaac",
       "FromFile": "assets/CharacterFiles/Schedules/Isaac/Isaac.json"
     },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Isaac": "{{i18n:Isaac.Fair}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Isaac": "{{i18n:Isaac.Spirit}}",
-      }
-    },
     { //Isaac visits the adventurer guild
       "Action": "EditData",
       "Target": "characters/schedules/Isaac",
@@ -53,6 +79,16 @@
         "11": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 16 3/1300 Custom_AdventurerSummit 42 27 1/1710 AdventureGuild 3 13 2",
         "26": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 6 13 2",
         "27": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 14 3/1150 Custom_AdventurerSummit 34 25 1/1800 AdventureGuild 11 14 3",
+        "DesertFestival_1": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+        "DesertFestival_2": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+        "DesertFestival_3": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Isaac",
+      "Entries": {
+        "DesertFestival_Isaac": "{{i18n:DesertFestival_Isaac}}"
       }
     },
     {
@@ -99,13 +135,13 @@
         "Sat": "...$0",
       }
     },
-    {
+    /*{
       //Isaac's AntiSocial Flag
       "Action": "EditData",
       "Target": "Data/AntiSocialNPCs",
       "Entries": {
         "Isaac": true
       }
-    },
+    },*/
   ]
 }

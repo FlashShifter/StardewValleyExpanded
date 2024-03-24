@@ -40,7 +40,7 @@ namespace StardewValleyExpanded
 
                 Helper.Events.GameLoop.ReturnedToTitle += GameLoop_ReturnedToTitle_ClearBackgrounds;
 
-                Helper.Events.Display.RenderingWorld += Display_RenderingWorld_DrawBackgrounds;
+                Helper.Events.Display.RenderingStep += Display_RenderingWorld_DrawBackgrounds;
                 Helper.Events.Display.RenderedWorld += Display_RenderedWorld_DrawForegrounds;
 
                 Enabled = true;
@@ -76,6 +76,13 @@ namespace StardewValleyExpanded
                     RepeatX = true,
                     Parallax = new Vector2(0.2f, 0.2f),
                 };
+                /*
+                ActiveBackgrounds["Custom summit Background"] = new CustomBackground("Custom_SVESummit", "Maps/HighlandsBackground")
+                {
+                    RepeatX = true,
+                    Parallax = new Vector2(0.2f, 0.2f),
+                };
+                */
 
                 //
                 //commented out below: small cloud sprite creation
@@ -152,8 +159,11 @@ namespace StardewValleyExpanded
         }
 
         /// <summary>Draws each active background for the current player's location.</summary>
-        private static void Display_RenderingWorld_DrawBackgrounds(object sender, RenderingWorldEventArgs e)
+        private static void Display_RenderingWorld_DrawBackgrounds(object sender, RenderingStepEventArgs e)
         {
+            if (e.Step != StardewValley.Mods.RenderSteps.World_Background)
+                return;
+
             foreach (var entry in ActiveBackgrounds)
             {
                 //if this is NOT a foreground and its location matches the player's (or its location is null)

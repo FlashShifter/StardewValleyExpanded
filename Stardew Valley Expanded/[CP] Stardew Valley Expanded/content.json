@@ -1,7 +1,23 @@
 {
-  "Format": "1.24",
+  "Format": "2.0",
   //Hey. You. Yes, you. The person who opened the Content Json. There are spoilers in here!
   "ConfigSchema": {
+    "WarpLocation": {
+      "Default": "default",
+      "AllowValues": "default, custom, Grandpa's Shed",
+      "Description": "'default' places the warp one tile below the bunny statue on SVE and vanilla maps. 'Custom' allows the warp point to be moved around on the farm. 'Grandpa's Shed' moves the warp point off the farm. Using a farm mod that adds a new farm type will place the warp by Grandpa's Shed regardless of choice. Selecting 'Grandpa's Shed' when playing on an SVE map will be the same as selecting 'default'."
+    },
+    "EnchantedGroveWarpX": {
+      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100",
+      "Default": "48",
+      "Description": "Select the X coordinate for the warp point. Only matters when picking 'custom' for WarpLocation."
+    },
+    "EnchantedGroveWarpY": {
+      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100",
+      "Default": "7",
+      "Description": "Select the Y coordinate for the warp point. Only matters when picking 'custom' for WarpLocation."
+    },
+    //**************************
     "SeasonalEdits": {
       "Default": "true",
       "AllowValues": "true, false",
@@ -88,6 +104,322 @@
     },
   },
   "DynamicTokens": [
+    ////////////
+    //// Map where Ench Grove warp is placed
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Custom_GrandpasShedOutside",
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Mining",
+      "When": {
+        "FarmType": "Hilltop",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Foraging",
+      "When": {
+        "FarmType": "Forest",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Fishing",
+      "When": {
+        "FarmType": "Riverland",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Combat",
+      "When": {
+        "FarmType": "Wilderness",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_FourCorners",
+      "When": {
+        "FarmType": "FourCorners",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Island",
+      "When": {
+        "FarmType": "Beach",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_Ranching",
+      "When": {
+        "FarmType": "MeadowlandsFarm",
+        "WarpLocation": "default, custom"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm",
+      "When": {
+        "FarmType": "Standard",
+        "HasMod": "flashshifter.immersivefarm2remastered, flashshifter.GrandpasFarm"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "Farm_FrontierFarm",
+      "When": {
+        "FarmType": "FrontierFarm"
+      },
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "zanderb14_IF2Fix",
+      "When": {
+        "FarmType": "zanderb14_IF2Fix",
+        "WarpLocation": "default, custom"
+      },
+    },
+    ////////////
+    //// Enchanted Grove Warp Coordinates
+    // Base; remains if Custom selected
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "{{Query: {{EnchantedGroveWarpX}} }}",
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "{{Query: {{EnchantedGroveWarpY}} }}",
+    },
+    //Grandpa's Shed
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "20",
+      "When": {
+        // Grandpa's Shed OR added farm type
+        "Query: {{WarpLocation |contains=Grandpa's Shed}} OR NOT {{FarmType |contains=Standard, Hilltop, Forest, Riverland, Wilderness, FourCorners, Beach, MeadowlandsFarm}}": true,
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "17",
+      "When": {
+        // Grandpa's Shed OR added farm type
+        "Query: {{WarpLocation |contains=Grandpa's Shed}} OR NOT {{FarmType |contains=Standard, Hilltop, Forest, Riverland, Wilderness, FourCorners, Beach, MeadowlandsFarm}}": true,
+      }
+    },
+    //Standard, Forest, Hilltop, Riverland, Wilderness
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "48",
+      "When": {
+        "FarmType |contains=Standard, Forest, Hilltop, Riverland, Wilderness": true,
+        "WarpLocation": "default",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "7",
+      "When": {
+        "FarmType |contains=Standard, Forest, Hilltop, Riverland, Wilderness": true,
+        "WarpLocation": "default",
+      }
+    },
+    //Four Corners
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "48",
+      "When": {
+        "FarmType": "FourCorners",
+        "WarpLocation": "default",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "39",
+      "When": {
+        "FarmType": "FourCorners",
+        "WarpLocation": "default",
+      }
+    },
+    //Beach
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "82",
+      "When": {
+        "FarmType": "Beach",
+        "WarpLocation": "default",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "29",
+      "When": {
+        "FarmType": "Beach",
+        "WarpLocation": "default",
+      }
+    },
+    //Ranching
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "71",
+      "When": {
+        "FarmType": "MeadowlandsFarm",
+        "WarpLocation": "default",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "6",
+      "When": {
+        "FarmType": "MeadowlandsFarm",
+        "WarpLocation": "default",
+      }
+    },
+    //IF2R
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "48",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "HasMod": "flashshifter.immersivefarm2remastered",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "7",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "HasMod": "flashshifter.immersivefarm2remastered",
+      }
+    },
+    //Grandpa's Farm
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "79",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "HasMod": "flashshifter.GrandpasFarm"
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "16",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "HasMod": "flashshifter.GrandpasFarm"
+      }
+    },
+    //Frontier
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "112",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "4",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "WarpLocation |contains=default, Grandpa's Shed": true,
+      }
+    },
+    //IF2F
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "48",
+      "When": {
+        "FarmType": "zanderb14_IF2Fix",
+        "WarpLocation": "default"
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "7",
+      "When": {
+        "FarmType": "zanderb14_IF2Fix",
+        "WarpLocation": "default"
+      }
+    },
+    //Harvz Tiny Farm
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "18",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation": "default",
+        "HasMod": "harvz.TinyFarm",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "9",
+      "When": {
+        "FarmType": "Standard",
+        "WarpLocation": "default",
+        "HasMod": "harvz.TinyFarm",
+      }
+    },
+    ////////////
+    //// Quality Parsnip Movement
+    {
+      "Name": "QualParsMove",
+      "Value": "farmer -50 -50 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation farm/warp farmer {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}} + 4}}/faceDirection farmer 0 true/makeInvisible {{Ench_Grove_X}} {{Ench_Grove_Y}} 1 4/ignoreCollisions farmer/viewport {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}}+2}} true/move farmer 0 -2 0 true/pause 2000",
+    },
+    //Grandpa's Farm default location
+    {
+      "Name": "QualParsMove",
+      "Value": "farmer -50 -50 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation farm/warp farmer 79 27/faceDirection farmer 0 true/makeInvisible 79 16 1 16/viewport 79 22 true/move farmer 0 -9 0 true/viewport move 0 -1 5500 true/pause 6250",
+      "When": {
+        "FarmType": "Standard",
+        "HasMod": "flashshifter.GrandpasFarm",
+        "Ench_Grove_X": "79",
+        "Ench_Grove_Y": "16",
+      }
+    },
+    // Frontier default location
+    {
+      "Name": "QualParsMove",
+      "Value": "farmer -50 -50 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation farm/warp farmer 110 11/faceDirection farmer 0 true/makeInvisible 110 4 3 1/viewport 112 6 clamp true/move farmer 0 -2 1/move farmer 1 0 0/move farmer 0 -2 1/move farmer 1 0 0/move farmer 0 -1 0/pause 2000",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Ench_Grove_X": "112",
+        "Ench_Grove_Y": "4",
+      }
+    },
+    //Grandpa's Shed
+    {
+      "Name": "QualParsMove",
+      "Value": "farmer {{Query: {{Ench_Grove_X}} - 2}} {{Query: {{Ench_Grove_Y}} + 2}} 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation Custom_GrandpasShedOutside/faceDirection farmer 1 true/makeInvisible {{Query: {{Ench_Grove_X}}-2}} {{Ench_Grove_Y}} 3 3/ignoreCollisions farmer/viewport {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}}+2}} true/move farmer 2 0 0 true/pause 2000",
+      "When": {
+        "SelectedWarpMap": "Custom_GrandpasShedOutside"
+      }
+    },
+    ////////////
     {
       "Name": "Date",
       "Value": "{{Season}} {{Day}}"
@@ -137,11 +469,12 @@
   //NEW LOCATIONS
   "CustomLocations": [
     {
-      "Name": "Custom_GrandpasShed",
-      "FromMapFile": "Assets/Maps/GrandpasShed/GrandpasShed.tbin",
-      "MigrateLegacyNames": [
-        "GrandpasShed"
-      ]
+      "Name": "Custom_AuroraVineyardRefurbished",
+      "FromMapFile": "assets/Maps/NewLocations/AuroraVineyardRefurbished.tbin",
+    },
+    {
+      "Name": "Custom_AuroraVineyardCellarRefurbished",
+      "FromMapFile": "assets/Maps/NewLocations/AuroraVineyardCellarRefurbished.tbin",
     },
     {
       "Name": "Custom_GrandpasShedRuins",
@@ -151,17 +484,10 @@
       ]
     },
     {
-      "Name": "Custom_GrandpasShedOutside",
-      "FromMapFile": "Assets/Maps/GrandpasShed/GrandpasShedOutside.tbin",
+      "Name": "Custom_GrandpasShed",
+      "FromMapFile": "Assets/Maps/GrandpasShed/GrandpasShed.tbin",
       "MigrateLegacyNames": [
-        "GrandpasShedOutside"
-      ]
-    },
-    {
-      "Name": "Custom_GrandpasShedGreenhouse",
-      "FromMapFile": "Assets/Maps/GrandpasShed/GrandpasShedGreenhouse.tbin",
-      "MigrateLegacyNames": [
-        "GrandpasShedGreenhouse"
+        "GrandpasShed"
       ]
     },
     {
@@ -172,21 +498,6 @@
       ]
     },
     {
-      "Name": "Custom_Garden",
-      "FromMapFile": "Assets/Maps/NewLocations/Garden.tbin",
-      "When": {
-        "HasSeenEvent |contains=1000024": false
-      },
-    },
-    {
-      "Name": "Custom_BlueMoonVineyard",
-      "FromMapFile": "Assets/Maps/NewLocations/BlueMoonVineyard.tbin"
-    },
-    {
-      "Name": "Custom_EnchantedGrove",
-      "FromMapFile": "Assets/Maps/NewLocations/EnchantedGrove.tbin"
-    },
-    {
       "Name": "Custom_FakeEnchantedGrove",
       "FromMapFile": "Assets/Maps/NewLocations/FakeEnchantedGrove.tbin"
     },
@@ -195,44 +506,8 @@
       "FromMapFile": "Assets/Maps/NewLocations/FakeEnchantedGrove2.tbin"
     },
     {
-      "Name": "Custom_ForestWest",
-      "FromMapFile": "Assets/Maps/NewLocations/ForestWest.tbin",
-      "MigrateLegacyNames": [
-        "ForestWest"
-      ]
-    },
-    {
-      "Name": "Custom_ShearwaterBridge",
-      "FromMapFile": "Assets/Maps/NewLocations/ShearwaterBridge.tbin",
-      "MigrateLegacyNames": [
-        "ShearwaterBridge"
-      ]
-    },
-    {
-      "Name": "Custom_AuroraVineyard",
-      "FromMapFile": "Assets/Maps/NewLocations/AuroraVineyard.tbin",
-      "MigrateLegacyNames": [
-        "AuroraVineyard"
-      ]
-    },
-    {
-      "Name": "Custom_SpriteSpring2",
-      "FromMapFile": "Assets/Maps/NewLocations/SpriteSpring2.tbin",
-    },
-    {
-      "Name": "Custom_SpriteSpringCave",
-      "FromMapFile": "Assets/Maps/NewLocations/SpriteSpringCave.tbin",
-    },
-    {
       "Name": "Custom_WillyRoom",
       "FromMapFile": "Assets/Maps/NewLocations/WillyRoom.tbin",
-    },
-    {
-      "Name": "Custom_JunimoWoods",
-      "FromMapFile": "Assets/Maps/NewLocations/JunimoWoods.tbin",
-      "MigrateLegacyNames": [
-        "LostWoods"
-      ]
     },
     {
       "Name": "Custom_MarnieShed",
@@ -291,27 +566,8 @@
       ]
     },
     {
-      "Name": "Custom_CrimsonBadlands",
-      "FromMapFile": "Assets/Maps/NewLocations/CrimsonBadlands.tbin",
-      "MigrateLegacyNames": [
-        "CrimsonBadlands"
-      ]
-    },
-    {
-      "Name": "Custom_CastleVillageOutpost",
-      "FromMapFile": "Assets/Maps/NewLocations/CastleVillageOutpost.tbin",
-    },
-    {
       "Name": "Custom_CrimsonBadlandsMap",
       "FromMapFile": "Assets/Maps/NewLocations/CrimsonBadlandsMap.tbin",
-    },
-    {
-      "Name": "Custom_GrenvilleFalls",
-      "FromMapFile": "Assets/Maps/NewLocations/GrenvilleFalls.tbin",
-    },
-    {
-      "Name": "Custom_Atlantis",
-      "FromMapFile": "Assets/Maps/NewLocations/Atlantis.tbin",
     },
     {
       "Name": "Custom_MovieTheaterScreen_ClaireEvent",
@@ -320,34 +576,6 @@
     {
       "Name": "Custom_CastleVillage_DayEnd_WarpRoom",
       "FromMapFile": "Assets/Maps/NewLocations/CastleVillage_DayEnd_WarpRoom.tbin",
-    },
-    {
-      "Name": "Custom_DesertRailway",
-      "FromMapFile": "Assets/Maps/NewLocations/DesertRailway.tbin",
-      "MigrateLegacyNames": [
-        "DesertRailway"
-      ]
-    },
-    {
-      "Name": "Custom_IridiumQuarry",
-      "FromMapFile": "Assets/Maps/NewLocations/IridiumQuarry.tbin",
-      "MigrateLegacyNames": [
-        "IridiumQuarry"
-      ]
-    },
-    {
-      "Name": "Custom_TreasureCave",
-      "FromMapFile": "Assets/Maps/NewLocations/TreasureCave.tbin",
-      "MigrateLegacyNames": [
-        "TreasureCave"
-      ]
-    },
-    {
-      "Name": "Custom_WizardBasement",
-      "FromMapFile": "Assets/Maps/NewLocations/WizardBasement.tbin",
-      "MigrateLegacyNames": [
-        "WizardBasement"
-      ]
     },
     {
       "Name": "Custom_AuroraVineyardPictureMap",
@@ -361,13 +589,6 @@
       "FromMapFile": "Assets/Maps/NewLocations/StardustFarmPictureMap.tbin",
       "MigrateLegacyNames": [
         "StardustFarmPictureMap"
-      ]
-    },
-    {
-      "Name": "Custom_Void",
-      "FromMapFile": "Assets/Maps/NewLocations/Void.tbin",
-      "MigrateLegacyNames": [
-        "Void"
       ]
     },
     {
@@ -531,13 +752,6 @@
       ],
     },
     {
-      "Name": "Custom_AdventurerSummit",
-      "FromMapFile": "assets/Maps/NewLocations/AdventurerSummit.tbin",
-      "MigrateLegacyNames": [
-        "AdventurerSummit"
-      ],
-    },
-    {
       "Name": "Custom_BusStop_NoBus",
       "FromMapFile": "assets/Maps/NewLocations/BusStop_NoBus.tbin",
       "MigrateLegacyNames": [
@@ -545,64 +759,12 @@
       ],
     },
     {
-      "Name": "Custom_JojaPetStore",
-      "FromMapFile": "assets/Maps/NewLocations/JojaPetStore.tbin",
-    },
-    {
-      "Name": "Custom_GrampletonTrainStation",
-      "FromMapFile": "Assets/Maps/NewLocations/GrampletonTrainStation.tbin",
-    },
-    {
-      "Name": "Custom_SakuraVineyard",
-      "FromMapFile": "Assets/Maps/NewLocations/SakuraVineyard.tbin",
-    },
-    {
-      "Name": "Custom_SakuraVineyardCellar",
-      "FromMapFile": "Assets/Maps/NewLocations/SakuraVineyardCellar.tbin",
-    },
-    {
-      "Name": "Custom_SakuraVineyardCottage",
-      "FromMapFile": "Assets/Maps/NewLocations/SakuraVineyardCottage.tbin",
-    },
-    {
       "Name": "Custom_SakuraVineyardCottageInterior",
       "FromMapFile": "Assets/Maps/NewLocations/SakuraVineyardCottageInterior.tbin",
     },
     {
-      "Name": "Custom_SakuraVineyardDiningRoom",
-      "FromMapFile": "Assets/Maps/NewLocations/SakuraVineyardDiningRoom.tbin",
-    },
-    {
       "Name": "Custom_Highway",
       "FromMapFile": "Assets/Maps/NewLocations/Highway.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_Courtyard",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_Courtyard.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_Entrance",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_Entrance.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_FoodCourt",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_FoodCourt.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_MainHall",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_MainHall.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_Stage",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_Stage.tbin",
-    },
-    {
-      "Name": "Custom_ZCCC_VendorFloor",
-      "FromMapFile": "Assets/Maps/NewLocations/ZCCC_VendorFloor.tbin",
-    },
-    {
-      "Name": "Custom_ZuzuCityStreet",
-      "FromMapFile": "Assets/Maps/NewLocations/ZuzuCityStreet.tbin",
     },
     {
       "Name": "Custom_Sawyer_WarpRoom",
@@ -653,64 +815,16 @@
       "FromMapFile": "assets/Maps/NewLocations/Drake_WarpRoom.tbin",
     },
     {
-      "Name": "Custom_Highlands",
-      "FromMapFile": "assets/Maps/NewLocations/Highlands.tbin",
-    },
-    {
-      "Name": "Custom_HighlandsOutpost",
-      "FromMapFile": "assets/Maps/NewLocations/HighlandsOutpost.tbin",
-    },
-    {
-      "Name": "Custom_HighlandsCavern",
-      "FromMapFile": "assets/Maps/NewLocations/HighlandsCavern.tbin",
-    },
-    {
-      "Name": "Custom_HighlandsCavernPrison",
-      "FromMapFile": "assets/Maps/NewLocations/HighlandsCavernPrison.tbin",
-    },
-    {
-      "Name": "Custom_HighlandsCavernPrisonEvent",
-      "FromMapFile": "assets/Maps/NewLocations/HighlandsCavernPrisonEvent.tbin",
-    },
-    {
       "Name": "Custom_HighlandsDwarf_WarpRoom",
       "FromMapFile": "assets/Maps/NewLocations/HighlandsDwarf_WarpRoom.tbin",
-    },
-    {
-      "Name": "Custom_MorrisProperty",
-      "FromMapFile": "assets/Maps/NewLocations/MorrisProperty.tbin",
     },
     {
       "Name": "Custom_MorrisHouse",
       "FromMapFile": "assets/Maps/NewLocations/MorrisHouse.tbin",
     },
     {
-      "Name": "Custom_AuroraVineyardRefurbished",
-      "FromMapFile": "assets/Maps/NewLocations/AuroraVineyardRefurbished.tbin",
-    },
-    {
-      "Name": "Custom_AuroraVineyardCellarRefurbished",
-      "FromMapFile": "assets/Maps/NewLocations/AuroraVineyardCellarRefurbished.tbin",
-    },
-    {
       "Name": "Custom_ForestWestOld",
       "FromMapFile": "assets/Maps/NewLocations/ForestWestOld.tbin",
-    },
-    {
-      "Name": "Custom_FableReef",
-      "FromMapFile": "assets/Maps/NewLocations/FableReef.tmx",
-    },
-    {
-      "Name": "Custom_FirstSlashGuild",
-      "FromMapFile": "assets/Maps/NewLocations/FirstSlashGuild.tbin",
-    },
-    {
-      "Name": "Custom_FirstSlashGuestRoom",
-      "FromMapFile": "assets/Maps/NewLocations/FirstSlashGuestRoom.tbin",
-    },
-    {
-      "Name": "Custom_FirstSlashHallway",
-      "FromMapFile": "assets/Maps/NewLocations/FirstSlashHallway.tbin",
     },
     {
       "Name": "Custom_LanceSecretWarp",
@@ -725,24 +839,12 @@
       "FromMapFile": "assets/Maps/NewLocations/VoidDen.tmx",
     },
     {
-      "Name": "Custom_GrampletonSuburbsTrainStation",
-      "FromMapFile": "assets/Maps/NewLocations/GrampletonSuburbsTrainStation.tbin",
-    },
-    {
-      "Name": "Custom_GrampletonSuburbs",
-      "FromMapFile": "assets/Maps/NewLocations/GrampletonSuburbs.tbin",
-    },
-    {
       "Name": "Custom_ScarlettHouse",
       "FromMapFile": "assets/Maps/NewLocations/ScarlettHouse.tmx",
     },
     {
       "Name": "Custom_HanksGarage",
       "FromMapFile": "assets/Maps/NewLocations/HanksGarage.tmx",
-    },
-    {
-      "Name": "Custom_GrampletonCoast",
-      "FromMapFile": "assets/Maps/NewLocations/GrampletonCoast.tmx",
     },
     {
       "Name": "Custom_WoodsCompat",
@@ -752,8 +854,311 @@
       "Name": "Custom_VictorSummit",
       "FromMapFile": "Assets/Maps/NewLocations/VictorSummit.tmx"
     },
+    {
+      "Name": "Custom_AuroraVineyard",
+      "FromMapFile": "Assets/Maps/NewLocations/AuroraVineyard.tbin",
+      "MigrateLegacyNames": [
+        "AuroraVineyard"
+      ]
+    },
   ],
   "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/LocationContexts",
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_FableReefCustomContext": {
+          "SeasonOverride": "Summer",
+          "CopyWeatherFromLocation": "Island",
+        }
+      }
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_FableReef",
+      "FromFile": "Assets/Maps/NewLocations/FableReef.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_CrimsonBadlands",
+      "FromFile": "Assets/Maps/NewLocations/CrimsonBadlands.tbin"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_Atlantis",
+      "FromFile": "Assets/Maps/NewLocations/Atlantis.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_CastleVillageOutpost",
+      "FromFile": "Assets/Maps/NewLocations/CastleVillageOutpost.tbin",
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_DesertRailway",
+      "FromFile": "Assets/Maps/NewLocations/DesertRailway.tbin",
+      "MigrateLegacyNames": [
+        "DesertRailway"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_EnchantedGrove",
+      "FromFile": "Assets/Maps/NewLocations/EnchantedGrove.tbin"
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_FirstSlashGuestRoom",
+      "FromFile": "assets/Maps/NewLocations/FirstSlashGuestRoom.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_FirstSlashGuild",
+      "FromFile": "assets/Maps/NewLocations/FirstSlashGuild.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_FirstSlashHallway",
+      "FromFile": "assets/Maps/NewLocations/FirstSlashHallway.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrampletonCoast",
+      "FromFile": "assets/Maps/NewLocations/GrampletonCoast.tmx",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrampletonTrainStation",
+      "FromFile": "Assets/Maps/NewLocations/GrampletonTrainStation.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrenvilleFalls",
+      "FromFile": "Assets/Maps/NewLocations/GrenvilleFalls.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_HighlandsCavernPrison",
+      "FromFile": "assets/Maps/NewLocations/HighlandsCavernPrison.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_HighlandsCavernPrisonEvent",
+      "FromFile": "assets/Maps/NewLocations/HighlandsCavernPrisonEvent.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_HighlandsOutpost",
+      "FromFile": "assets/Maps/NewLocations/HighlandsOutpost.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_IridiumQuarry",
+      "FromFile": "Assets/Maps/NewLocations/IridiumQuarry.tbin",
+      "MigrateLegacyNames": [
+        "IridiumQuarry"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_JojaPetStore",
+      "FromFile": "assets/Maps/NewLocations/JojaPetStore.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SakuraVineyard",
+      "FromFile": "Assets/Maps/NewLocations/SakuraVineyard.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SakuraVineyardCellar",
+      "FromFile": "Assets/Maps/NewLocations/SakuraVineyardCellar.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SakuraVineyardCottage",
+      "FromFile": "Assets/Maps/NewLocations/SakuraVineyardCottage.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SakuraVineyardDiningRoom",
+      "FromFile": "Assets/Maps/NewLocations/SakuraVineyardDiningRoom.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SpriteSpringCave",
+      "FromFile": "Assets/Maps/NewLocations/SpriteSpringCave.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_TreasureCave",
+      "FromFile": "Assets/Maps/NewLocations/TreasureCave.tbin",
+      "MigrateLegacyNames": [
+        "TreasureCave"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_Void",
+      "FromFile": "Assets/Maps/NewLocations/Void.tbin",
+      "MigrateLegacyNames": [
+        "Void"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_WizardBasement",
+      "FromFile": "Assets/Maps/NewLocations/WizardBasement.tbin",
+      "MigrateLegacyNames": [
+        "WizardBasement"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrandpasShedGreenhouse",
+      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedGreenhouse.tbin",
+      "MigrateLegacyNames": [
+        "GrandpasShedGreenhouse"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_Courtyard",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_Courtyard.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_Entrance",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_Entrance.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_FoodCourt",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_FoodCourt.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_MainHall",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_MainHall.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_Stage",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_Stage.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZCCC_VendorFloor",
+      "FromFile": "Assets/Maps/NewLocations/ZCCC_VendorFloor.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ZuzuCityStreet",
+      "FromFile": "Assets/Maps/NewLocations/ZuzuCityStreet.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Summit",
+      "FromFile": "assets/Maps/Locations/Summit.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SVESummit",
+      "FromFile": "assets/Maps/Locations/SVESummit.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_AuroraVineyardRefurbished",
+      "FromFile": "assets/Maps/NewLocations/AuroraVineyardRefurbished.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
+      "FromFile": "assets/Maps/NewLocations/AuroraVineyardCellarRefurbished.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_AdventurerSummit",
+      "FromFile": "assets/Maps/NewLocations/AdventurerSummit.tmx",
+      "MigrateLegacyNames": [
+        "AdventurerSummit"
+      ],
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_BlueMoonVineyard",
+      "FromFile": "Assets/Maps/NewLocations/BlueMoonVineyard.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ForestWest",
+      "FromFile": "Assets/Maps/NewLocations/ForestWest.tbin",
+      "MigrateLegacyNames": [
+        "ForestWest"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_Garden",
+      "FromFile": "Assets/Maps/NewLocations/Garden.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrampletonSuburbsTrainStation",
+      "FromFile": "assets/Maps/NewLocations/GrampletonSuburbsTrainStation.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "assets/Maps/NewLocations/GrampletonSuburbs.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrandpasShedOutside",
+      "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedOutside.tbin",
+      "MigrateLegacyNames": [
+        "GrandpasShedOutside"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_Highlands",
+      "FromFile": "assets/Maps/NewLocations/Highlands.tmx",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_HighlandsCavern",
+      "FromFile": "assets/Maps/NewLocations/HighlandsCavern.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_JunimoWoods",
+      "FromFile": "Assets/Maps/NewLocations/JunimoWoods.tbin",
+      "MigrateLegacyNames": [
+        "LostWoods"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_MorrisProperty",
+      "FromFile": "assets/Maps/NewLocations/MorrisProperty.tbin",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_ShearwaterBridge",
+      "FromFile": "Assets/Maps/NewLocations/ShearwaterBridge.tbin",
+      "MigrateLegacyNames": [
+        "ShearwaterBridge"
+      ]
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SpriteSpring2",
+      "FromFile": "Assets/Maps/NewLocations/SpriteSpring2.tmx",
+    },
     //Map Blank Load for Secret Woods Compat
     {
       "Action": "Load",
@@ -831,19 +1236,31 @@
     // INCLUDES
     {
       "Action": "Include",
-      "FromFile": "code/other/mail.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/GiftTaste.json, code/Other/Construction.json, code/other/Weapons.json, code/Locations/Galdora.json, code/other/SeasonalEdits.json, code/Other/Craftables.json, code/Locations/MapPatches.json, code/other/Strings.json, code/Locations/SpouseRooms.json, code/Other/Monsters.json, code/other/Fish.json, code/Other/Contextags.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Other/CustomNPCExclusion.json, code/Locations/NPCMapLocationTracking.json, "
+      "FromFile": "code/Items/BigCraftables.json, code/Items/Objects.json, code/Items/Weapons.json, code/Items/Crops.json, code/Items/CookingRecipes.json, code/Items/UniversalGiftTaste.json"
     },
     {
       "Action": "Include",
-      "FromFile": "code/npcs/victor.json, code/npcs/olivia.json, code/npcs/andy.json, code/npcs/susan.json, code/npcs/sophia.json, code/npcs/marlonfay.json, code/npcs/morgan.json, code/npcs/magnus.json, code/npcs/apples.json, code/npcs/asNPCs.json, code/npcs/Claire.json, code/npcs/Camilla.json, code/npcs/Lance.json, code/npcs/Adventurers.json, code/npcs/Scarlett.json, code/npcs/Gunther.json, code/npcs/Martin.json, code/npcs/Morris.json, code/npcs/MatureEvents.json, code/npcs/isaac.json, code/npcs/alesia.json, code/npcs/jolyne.json, code/npcs/gil.json,"
+      "FromFile": "code/Festivals/spring13.json, code/Festivals/spring24.json, code/Festivals/Summer11.json, code/Festivals/Summer28.json, code/Festivals/Fall16.json, code/Festivals/Fall27.json, code/Festivals/Winter8.json, code/Festivals/Winter25.json, code/Festivals/JojaDay.json, code/Festivals/CommunityDay.json, code/Festivals/Nightmarket.json, code/Festivals/Desertfestival.json ",
     },
     {
       "Action": "Include",
-      "FromFile": "code/OtherEvents/Aurora.json, code/OtherEvents/other.json, code/OtherEvents/CommunityDay.json, code/OtherEvents/EnchantedGrove.json, code/OtherEvents/Festivals.json, code/OtherEvents/JojaDay.json, code/OtherEvents/SpecialOrder.json, code/OtherEvents/GrandpasShed.json"
+      "FromFile": "code/Shops/Vanilla/Joja.json, code/Shops/Vanilla/Willy.json, code/Shops/vanilla/Gus.json, code/Shops/vanilla/Krobus.json, code/Shops/vanilla/Marlon.json, code/Shops/vanilla/hospital.json, code/Shops/vanilla/casino.json, code/Shops/SVE/AuroraLedger.json, code/Shops/SVE/SophiaLedger.json, code/Shops/SVE/AlesiaVendor.json, code/Shops/SVE/IsaacVendor.json, code/Shops/SVE/CamillaVendor.json, code/Shops/SVE/HighlandsDwarfShop.json, code/Shops/SVE/AdventurerLedger.json, code/Shops/SVE/BearVendor.json, code/Shops/SVE/BlueJunimoVendor.json, code/Shops/SVE/GreyJunimoVendor.json, code/Shops/SVE/RedJunimoVendor.json, code/Shops/SVE/YellowJunimoVendor.json, code/Shops/SVE/OrangeJunimoVendor.json, code/Shops/SVE/PurpleJunimoVendor.json, code/Shops/SVE/BrooklynVendor.json, code/Shops/SVE/ZoeyVendor.json, code/Shops/SVE/ChloeVendor1.json, code/Shops/SVE/ChloeVendor2.json, code/Shops/SVE/ChloeVendor3.json, code/Shops/SVE/ChloeVendor4.json, code/Shops/SVE/JaceVendor.json, code/Shops/SVE/AxelVendor1.json, code/Shops/SVE/AxelVendor2.json, code/Shops/SVE/LewisLedger.json, code/Shops/SVE/MorrisLedger.json ",
     },
     {
       "Action": "Include",
-      "FromFile": "code/npcs/sandy.json,  code/npcs/emily.json, code/npcs/lewis.json,  code/npcs/marnie.json, code/npcs/gus.json, code/npcs/evelyn.json, code/npcs/george.json, code/npcs/jodi.json, code/npcs/harvey.json, code/npcs/penny.json, code/npcs/penny.json, code/npcs/sam.json, code/npcs/clint.json, code/npcs/leah.json, code/npcs/elliott.json, code/npcs/alex.json, code/npcs/haley.json, code/npcs/sebastian.json, code/npcs/willy.json, code/npcs/abigail.json, code/npcs/pierre.json, code/npcs/caroline.json, code/npcs/kent.json, code/npcs/vincent.json, code/npcs/shane.json, code/npcs/jas.json, code/npcs/demetrius.json, code/npcs/linus.json, code/npcs/leo.json, code/npcs/maru.json, code/npcs/krobus.json, code/npcs/qi.json, code/npcs/robin.json, code/npcs/dusty.json, code/npcs/bear.json, code/npcs/charlie.json,  code/npcs/dwarf.json"
+      "FromFile": "code/other/jukebox.json, code/other/music.json, code/other/mail.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/Locations/MapPatches.json, code/other/Strings.json, code/Other/Monsters.json, code/other/Fish.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json "
+    },
+    {
+      "Action": "Include",
+      "FromFile": "code/npcs/victor.json, code/npcs/olivia.json, code/npcs/andy.json, code/npcs/susan.json, code/npcs/sophia.json, code/npcs/marlonfay.json, code/npcs/morgan.json, code/npcs/magnus.json, code/npcs/apples.json, code/npcs/asNPCs.json, code/npcs/Claire.json, code/npcs/Camilla.json, code/npcs/Lance.json, code/npcs/Adventurers.json, code/npcs/Scarlett.json, code/npcs/Gunther.json, code/npcs/Martin.json, code/npcs/Morris.json, code/npcs/MatureEvents.json, code/npcs/isaac.json, code/npcs/alesia.json, code/npcs/jolyne.json, code/npcs/gil.json, code/npcs/jadu.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "code/OtherEvents/Aurora.json, code/OtherEvents/other.json, code/OtherEvents/EnchantedGrove.json, code/OtherEvents/SpecialOrder.json, code/OtherEvents/GrandpasShed.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "code/npcs/sandy.json,  code/npcs/emily.json, code/npcs/lewis.json,  code/npcs/marnie.json, code/npcs/gus.json, code/npcs/evelyn.json, code/npcs/george.json, code/npcs/jodi.json, code/npcs/harvey.json, code/npcs/penny.json, code/npcs/penny.json, code/npcs/sam.json, code/npcs/clint.json, code/npcs/leah.json, code/npcs/elliott.json, code/npcs/alex.json, code/npcs/haley.json, code/npcs/sebastian.json, code/npcs/willy.json, code/npcs/abigail.json, code/npcs/pierre.json, code/npcs/caroline.json, code/npcs/kent.json, code/npcs/vincent.json, code/npcs/shane.json, code/npcs/jas.json, code/npcs/demetrius.json, code/npcs/linus.json, code/npcs/leo.json, code/npcs/maru.json, code/npcs/krobus.json, code/npcs/qi.json, code/npcs/robin.json, code/npcs/dusty.json, code/npcs/bear.json, code/npcs/charlie.json,  code/npcs/dwarf.json, code/npcs/pam.json"
     },
     {
       "Action": "Include",
@@ -855,7 +1272,7 @@
     },
     { //Adds custom tilesheets and allows other modders to target SVE assets
       "Action": "Load",
-      "Target": "Maps/spring_z_extras,Maps/summer_z_extras,Maps/fall_z_extras,Maps/winter_z_extras,Maps/spring_ValleyBackdrop,Maps/summer_ValleyBackdrop,Maps/fall_ValleyBackdrop,Maps/winter_ValleyBackdrop,Maps/spring_GrampletonSuburbsTilesheet,Maps/summer_GrampletonSuburbsTilesheet,Maps/fall_GrampletonSuburbsTilesheet,Maps/winter_GrampletonSuburbsTilesheet,Maps/spring_MorrisModernHouse,Maps/summer_MorrisModernHouse,Maps/fall_MorrisModernHouse,Maps/winter_MorrisModernHouse,Maps/HanksGarage_Tilesheet,Maps/Lighthouse,Maps/EmilyBedEvent,Maps/VanillaCraftables,Maps/VanillaCursors,Maps/VanillaFloors,Maps/VanillaFlooring,Maps/VanillaFurniture,Maps/VanillaSpringObjects,Maps/VanillaWallsAndFloors,Maps/z_SVEbuildingShadow,Maps/z_FireLight,Maps/AuroraVineyardPicture,Maps/StardustFarmPicture,Maps/z_SVE_Halloween2Shadow,Maps/z_RailwayTilesheet,Maps/z_CastleVillage,Maps/z_Leaves_Roofs,Maps/z_Leaves,Maps/z_mine,Maps/z_RedEyes,Maps/GuntherExpedition2_Shadows,Maps/JunimoWoods_Shadow,Maps/ForestWest_Shadow,Maps/MovieTheater_Blank,Maps/SpriteSpring_Effects,Maps/SpriteSpring_Shadows,Maps/z_WizardTowerLights,Maps/z_WizardBasementLights,Maps/z_CalderaLights,Maps/IridiumQuarry,Maps/IridiumQuarry_Shadow,Maps/zGrandpasFarm_UnderCanopyShadow,Maps/zGrandpasFarm_CanopyShadow,Maps/EnchantedGrove_CrimsonLight,Maps/EnchantedGrove_Shadows,Maps/EnchantedGrove_Colors,Maps/EnchantedGrove_WarpLights,Maps/CastleVillage_Tilesheet,Maps/Outpost_CrimsonLight,Maps/CrimsonBadlandsMap,Maps/Galdora_Interface,Maps/z_Island_S_CoralReefs,Maps/z_Island_W_CoralReefs,Maps/z_Island_SE_CoralReefs,Maps/AtlantisTilesheet,Maps/AtlantisTilesheet_MaskEffect,Maps/AtlantisTilesheetRuins,Maps/Sundrop_Kiosk,Maps/BathroomTilesheet,Maps/spring_z_waterfalls,Maps/summer_z_waterfalls,Maps/fall_z_waterfalls,Maps/winter_z_waterfalls,Maps/SpriteSpringCave_Effects,Maps/SandstormEffect,Maps/RemoveBenchChairTiles,Maps/Arcade_Couch,Maps/JojaPetStore,Maps/spring_ShearwaterBridgeRenovated,Maps/summer_ShearwaterBridgeRenovated,Maps/fall_ShearwaterBridgeRenovated,Maps/winter_ShearwaterBridgeRenovated,Maps/ShearwaterBridgeConeBarricade,Maps/Highlands_CanopyTreeShadows,Maps/HighlandsBackground,Maps/HighlandsCavern_OreTilesheet,Maps/HighlandsCavern_ShadowTilesheet,Maps/HighlandsCavern_LightingTilesheet,Maps/spring_RedBaneberry_Tilesheet,Maps/summer_RedBaneberry_Tilesheet,Maps/fall_RedBaneberry_Tilesheet,Maps/winter_RedBaneberry_Tilesheet,Maps/FirstSlashGuildBuilding,Maps/VoidDen_Tilesheet,Maps/JojaEmporiumWarpCircle,Maps/SakuraVineyardDiningRoomTilesheet,Maps/GrampletonTrainStationTilesheet,Maps/SakuraVineyardTilesheet,Maps/CherryBlossomPetals,Maps/ZCCC_Entrance_Tilesheet,Maps/ZCCC_FoodCourt_Tilesheet,Maps/ZCCC_Courtyard_NPCs,Maps/ZCCC_MainHall_Tilesheet,Maps/ZCCC_Stage_Tilesheet,Maps/ZCCC_VendorFloor_Tilesheet,Maps/ZuzuCityStreet_Tilesheet,Maps/ZuzuCity",
+      "Target": "Maps/spring_z_extras,Maps/summer_z_extras,Maps/fall_z_extras,Maps/winter_z_extras,Maps/spring_z_Waterfalls,Maps/summer_z_Waterfalls,Maps/fall_z_Waterfalls,Maps/winter_z_Waterfalls,Maps/spring_ValleyBackdrop,Maps/summer_ValleyBackdrop,Maps/fall_ValleyBackdrop,Maps/winter_ValleyBackdrop,Maps/spring_GrampletonSuburbsTilesheet,Maps/summer_GrampletonSuburbsTilesheet,Maps/fall_GrampletonSuburbsTilesheet,Maps/winter_GrampletonSuburbsTilesheet,Maps/spring_MorrisModernHouse,Maps/summer_MorrisModernHouse,Maps/fall_MorrisModernHouse,Maps/winter_MorrisModernHouse,Maps/HanksGarage_Tilesheet,Maps/Lighthouse,Maps/EmilyBedEvent,Maps/VanillaCraftables,Maps/VanillaCursors,Maps/VanillaFloors,Maps/VanillaFlooring,Maps/VanillaFurniture,Maps/VanillaSpringObjects,Maps/VanillaWallsAndFloors,Maps/z_SVEbuildingShadow,Maps/z_FireLight,Maps/AuroraVineyardPicture,Maps/StardustFarmPicture,Maps/z_SVE_Halloween2Shadow,Maps/z_RailwayTilesheet,Maps/z_CastleVillage,Maps/z_Leaves_Roofs,Maps/z_Leaves,Maps/z_mine,Maps/z_RedEyes,Maps/GuntherExpedition2_Shadows,Maps/JunimoWoods_Shadow,Maps/ForestWest_Shadow,Maps/MovieTheater_Blank,Maps/SpriteSpring_Effects,Maps/SpriteSpring_Shadows,Maps/z_WizardTowerLights,Maps/z_WizardBasementLights,Maps/z_CalderaLights,Maps/IridiumQuarry,Maps/IridiumQuarry_Shadow,Maps/zGrandpasFarm_UnderCanopyShadow,Maps/zGrandpasFarm_CanopyShadow,Maps/EnchantedGrove_CrimsonLight,Maps/EnchantedGrove_Shadows,Maps/EnchantedGrove_Colors,Maps/EnchantedGrove_WarpLights,Maps/CastleVillage_Tilesheet,Maps/Outpost_CrimsonLight,Maps/CrimsonBadlandsMap,Maps/Galdora_Interface,Maps/z_Island_S_CoralReefs,Maps/z_Island_W_CoralReefs,Maps/z_Island_SE_CoralReefs,Maps/AtlantisTilesheet,Maps/AtlantisTilesheet_MaskEffect,Maps/AtlantisTilesheetRuins,Maps/BathroomTilesheet,Maps/SpriteSpringCave_Effects,Maps/SandstormEffect,Maps/RemoveBenchChairTiles,Maps/Arcade_Couch,Maps/JojaPetStore,Maps/spring_ShearwaterBridgeRenovated,Maps/summer_ShearwaterBridgeRenovated,Maps/fall_ShearwaterBridgeRenovated,Maps/winter_ShearwaterBridgeRenovated,Maps/ShearwaterBridgeConeBarricade,Maps/Highlands_CanopyTreeShadows,Maps/HighlandsBackground,Maps/HighlandsCavern_OreTilesheet,Maps/HighlandsCavern_ShadowTilesheet,Maps/HighlandsCavern_LightingTilesheet,Maps/spring_RedBaneberry_Tilesheet,Maps/summer_RedBaneberry_Tilesheet,Maps/fall_RedBaneberry_Tilesheet,Maps/winter_RedBaneberry_Tilesheet,Maps/FirstSlashGuildBuilding,Maps/VoidDen_Tilesheet,Maps/JojaEmporiumWarpCircle,Maps/SakuraVineyardDiningRoomTilesheet,Maps/GrampletonTrainStationTilesheet,Maps/SakuraVineyardTilesheet,Maps/CherryBlossomPetals,Maps/ZCCC_Entrance_Tilesheet,Maps/ZCCC_FoodCourt_Tilesheet,Maps/ZCCC_Courtyard_NPCs,Maps/ZCCC_MainHall_Tilesheet,Maps/ZCCC_Stage_Tilesheet,Maps/ZCCC_VendorFloor_Tilesheet,Maps/ZuzuCityStreet_Tilesheet,Maps/ZuzuCity",
       "FromFile": "Assets/Tilesheets/{{TargetWithoutPath}}.png",
     },
     { //Mist effect tilesheets

@@ -1,11 +1,52 @@
 {
 	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Marnie",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //MARNIE SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Marnie",
 			"Entries": {
 				"Mon": "700 Forest 55 27 0/900 Forest 51 24 1/1000 Forest 55 21 2/1020 Forest 56 21 0/1100 Forest 59 21 2/1130 Forest 61 23 3/1200 Forest 80 15 0/1330 Custom_MarnieShed 7 5 0/1600 Custom_MarnieShed 14 7 0/1700 Custom_MarnieShed 12 5 0/1800 Custom_MarnieShed 11 6 0/2100 AnimalShop 12 5 3 marnie_sleep",
 				"winter_Mon": "630 Custom_MarnieShed 7 5 0/900 Custom_MarnieShed 13 5 1/1000 Custom_MarnieShed 15 7 1/1100 Custom_MarnieShed 4 6 0/1200 SeedShop 11 20 0/1700 AnimalShop 24 15 0/2100 AnimalShop 12 5 3 marnie_sleep",
+				"GreenRain": "610 AnimalShop 22 15 1",
 			},
 		},
 		{ //MARNIE SCHEDULE - Lewis

@@ -27,7 +27,7 @@ namespace StardewValleyExpanded
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_DesertFishingItems)}\": postfixing SDV method \"Desert.getFish\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Desert), nameof(Desert.getFish)),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_DesertFishingItems), nameof(Desert_getFish))
                 );
 
@@ -47,7 +47,7 @@ namespace StardewValleyExpanded
             if (tile.X >= 26 && tile.X <= 33 && tile.Y >= 4 && tile.Y <= 9) //if this tile is between 26,4 and 33,9
             {
                 if (Game1.random.NextDouble() < 0.1) //10% chance
-                    return new Furniture(2334, Vector2.Zero); //Pyramid Decal
+                    return new Furniture("2334", Vector2.Zero); //Pyramid Decal
             }
 
             return null; //if nothing else was chosen, use the normal result
@@ -64,8 +64,11 @@ namespace StardewValleyExpanded
         /// </remarks>
         /// <param name="bobberTile">The tile being fished at.</param>
         /// <param name="__result">The result of the original method.</param>
-        private static void Desert_getFish(Vector2 bobberTile, ref StardewValley.Object __result)
+        private static void Desert_getFish(GameLocation __instance, Vector2 bobberTile, ref StardewValley.Item __result)
         {
+            if (__instance is not Desert)
+                return;
+
             try
             {                
                 if (OverrideDesertFishingResults(bobberTile) is StardewValley.Object newResult) //if the result should be replaced with a new object

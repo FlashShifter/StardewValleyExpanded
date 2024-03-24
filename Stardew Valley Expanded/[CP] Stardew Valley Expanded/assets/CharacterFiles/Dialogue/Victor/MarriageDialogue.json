@@ -19,6 +19,7 @@
         "TwoKids_2": "{{i18n:Victor.MarriageDialogue.012}}",
         "TwoKids_3": "{{i18n:Victor.MarriageDialogue.013}}",
         "TwoKids_4": "{{i18n:Victor.MarriageDialogue.014}}",
+        "DesertFestival_Victor_marriage": "{{i18n:DesertFestival_Victor_marriage}}",
         //SEASONAL DIALOGUE
         "spring_Victor": "{{i18n:Victor.MarriageDialogue.015}}",
         "spring_1": "{{i18n:Victor.MarriageDialogue.016}}",
@@ -739,6 +740,99 @@
       },
       "Entries": {
         "spouseRoom_Victor": "{{i18n:Victor.SpouseVary4}}"
+      }
+    },
+    {
+      //Victor Shearwater Bridge renovation dialogue for 2-3 weeks
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Monday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno1}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno2}}"
+      }
+    },
+    
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Tuesday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno3}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno4}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Wednesday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno5}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno6}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Thursday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno7}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno8}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Friday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno9}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno10}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Saturday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno11}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno12}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueVictor",
+      "When": {
+        "DayOfWeek": "Sunday",
+        "HasSeenEvent |contains=2000008": true,
+        "HasSeenEvent |contains=2000009": false
+      },
+      "Entries": {
+        "funReturn_Victor": "{{i18n:ShearwaterReno13}}",
+        "funLeave_Victor": "{{i18n:ShearwaterReno14}}"
       }
     },
   ]

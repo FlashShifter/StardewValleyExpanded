@@ -1,5 +1,57 @@
 {
 	"Changes": [
+
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Leo",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Flower_Cookie FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //LEO SCHEDULE EDITS AND FIXES V1
 			"Action": "EditData",
 			"Target": "characters/schedules/LeoMainland",

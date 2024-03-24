@@ -1,5 +1,68 @@
 {
     "Changes": [
+        
+    {
+        "Action": "EditData",
+        "Target": "Data/NPCGiftTastes",
+        "LogName": "Gift tastes: Willy",
+        "TextOperations": [
+          /*Love*/
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Willy",
+              1
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Flower_Cookie FlashShifter.StardewValleyExpandedCP_Butterfish",
+            "Delimiter": " "
+          }
+          /*Like*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Willy",
+              3
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Shiny_Lunaloo FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Lunaloo FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Bull_Trout FlashShifter.StardewValleyExpandedCP_Big_Conch FlashShifter.StardewValleyExpandedCP_Baby_Lunaloo",
+            "Delimiter": " "
+          }
+          /*Dislike*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Willy",
+              5
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony",
+            "Delimiter": " "
+          }
+          /*Hate*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Willy",
+              7
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Razor_Trout FlashShifter.StardewValleyExpandedCP_Goldenfish",
+            "Delimiter": " "
+          }
+          /*Neutral*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Willy",
+              9
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+            "Delimiter": " "
+          }
+        ]
+      },
         { //WILLY SCHEDULE EDITS 1 (stops walking to shearwater bridge if it's being renovated in Victor's 14 heart event)
             "Action": "EditData",
             "Target": "characters/schedules/Willy",
@@ -21,6 +84,13 @@
                 "Mon": "850 FishShop 5 4 2/1500 Custom_BlueMoonVineyard 24 55 2/1800 FishShop 5 4 2",
                 "Thu": "850 FishShop 5 4 2/1700 Custom_ShearwaterBridge 26 22 2/2100 FishShop 5 4 2"
             },
+        },
+        {//WILLY SCHEDULE EDITS 3 (moves Willy away from the fishing sister)
+            "Action": "EditData", 
+            "Target": "characters/schedules/Willy",
+            "Entries":{
+                "TroutDerby": "610 Beach 38 36 2 dick_fish/850 FishShop 5 4 2/1000 Forest 63 51 2 dick_fish/2320 FishShop 5 4 2",
+            }
         },
         { //WILLY SCHEDULE DIALOGUE
             "Action": "EditData",
@@ -51,14 +121,14 @@
             "Action": "EditData",
             "Target": "data/events/beach",
             "Entries": {
-                "1056733/e 1056732/i {{spacechase0.JsonAssets/ObjectId:Razor Trout}}": "ocean/-500 -500/farmer 27 35 1 Willy 44 35 1 Leah 87 40 2 Elliott 44 11 0/pause 1000/animate Willy false true 250 28 29 30 31/viewport 36 35 true/viewport move 1 0 7000 true/move farmer 14 0 1 true/pause 1000/playSound seagulls/pause 2300/playSound seagulls/pause 2750/playSound seagulls/pause 2000/stopAnimation Willy/pause 850/faceDirection Willy 2 true/pause 200/faceDirection Willy 3 true/pause 700/speak Willy \"{{i18n:Willy.Event3.01}}\"/pause 400/playSound seagulls/pause 400/emote farmer 40/pause 300/speak Willy \"{{i18n:Willy.Event3.02}}\"/pause 900/startJittering/pause 200/addObject 42 35 {{spacechase0.JsonAssets/ObjectId:Razor Trout}}/playSound fishSlap/pause 300/stopJittering/pause 500/playSound seagulls/pause 500/jump Willy/pause 850/speak Willy \"{{i18n:Willy.Event3.03}}\"/pause 800/speak Willy \"{{i18n:Willy.Event3.04}}\"/pause 400/playSound seagulls/pause 400/emote Willy 16/speak Willy \"{{i18n:Willy.Event3.05}}\"/pause 500/globalFade/viewport -1000 -1000/playSound seagulls/pause 1000/end dialogue Willy \"{{i18n:Willy.Event3.06}}\"",
+                "1056733/e 1056732/i FlashShifter.StardewValleyExpandedCP_Razor_Trout": "ocean/-500 -500/farmer 27 35 1 Willy 44 35 1 Leah 87 40 2 Elliott 44 11 0/pause 1000/animate Willy false true 250 28 29 30 31/viewport 36 35 true/viewport move 1 0 7000 true/move farmer 14 0 1 true/pause 1000/playSound seagulls/pause 2300/playSound seagulls/pause 2750/playSound seagulls/pause 2000/stopAnimation Willy/pause 850/faceDirection Willy 2 true/pause 200/faceDirection Willy 3 true/pause 700/speak Willy \"{{i18n:Willy.Event3.01}}\"/pause 400/playSound seagulls/pause 400/emote farmer 40/pause 300/speak Willy \"{{i18n:Willy.Event3.02}}\"/pause 900/startJittering/pause 200/addObject 42 35 FlashShifter.StardewValleyExpandedCP_Razor_Trout/playSound fishSlap/pause 300/stopJittering/pause 500/playSound seagulls/pause 500/jump Willy/pause 850/speak Willy \"{{i18n:Willy.Event3.03}}\"/pause 800/speak Willy \"{{i18n:Willy.Event3.04}}\"/pause 400/playSound seagulls/pause 400/emote Willy 16/speak Willy \"{{i18n:Willy.Event3.05}}\"/pause 500/globalFade/viewport -1000 -1000/playSound seagulls/pause 1000/end dialogue Willy \"{{i18n:Willy.Event3.06}}\"",
             },
         },
         { //WILLY EVENT 4
             "Action": "EditData",
             "Target": "data/events/farm",
             "When": {
-                "SkillLevel:Fishing": "5, 6, 7, 8, 9, 10"
+                "Query: {{SkillLevel:Fishing}} >= 5": true,
             },
             "Entries": {
                 "1054932/z winter/t 1000 1800": "continue/-500 -500/farmer -20 -20 2 Willy -21 -21 0/pause 1100/speak Willy \"{{i18n:Willy.Event4.01}}\"/pause 1000/end dialogue Willy \"{{i18n:Willy.Event4.02}}\"",
@@ -68,10 +138,10 @@
             "Action": "EditData",
             "Target": "data/events/forest",
             "When": {
-                "SkillLevel:Fishing": "8, 9, 10"
+                "Query: {{SkillLevel:Fishing}} >= 8": true,
             },
             "Entries": {
-                "1054933/z winter/z fall/w sunny/t 600 1600": "continue/-500 -500/farmer 19 61 2 Willy 19 80 0 Andy 46 70 0 Marnie 55 21 2 Wizard 10 24 0/viewport 19 61 clamp true/viewport move 0 2 4000 true/skippable/move farmer 0 8 2 true/move Willy 0 -8 0 true/pause 3000/speak Willy \"{{i18n:Willy.Event5.01}}\"/pause 400/emote farmer 32/speak Willy \"{{i18n:Willy.Event5.02}}\"/pause 500/faceDirection Willy 3 true/pause 400/showFrame Willy 13 true/shake Willy 400/pause 100/addObject 18 71 {{spacechase0.JsonAssets/ObjectId:King Salmon}}/playSound fishSlap/pause 300/showFrame Willy 12 true/pause 200/emote farmer 16 true/pause 250/faceDirection Willy 0 true/pause 500/move farmer 0 1 3/move farmer -1 0 2/pause 500/speak Willy \"{{i18n:Willy.Event5.03}}\"/pause 500/faceDirection Willy 3 true/pause 300/showFrame Willy 13 true/shake Willy 400/pause 100/removeSprite 18 71/playSound fishSlap/pause 300/showFrame Willy 12 true/pause 400/faceDirection Willy 0 true/pause 350/speak Willy \"{{i18n:Willy.Event5.04}}\"/pause 400/end dialogue Willy \"{{i18n:Willy.Event5.05}}\""
+                "1054933/z winter/z fall/w sunny/t 600 1600": "continue/-500 -500/farmer 19 61 2 Willy 19 80 0 Andy 46 70 0 Marnie 55 21 2 Wizard 10 24 0/viewport 19 61 clamp true/viewport move 0 2 4000 true/skippable/move farmer 0 8 2 true/move Willy 0 -8 0 true/pause 3000/speak Willy \"{{i18n:Willy.Event5.01}}\"/pause 400/emote farmer 32/speak Willy \"{{i18n:Willy.Event5.02}}\"/pause 500/faceDirection Willy 3 true/pause 400/showFrame Willy 13 true/shake Willy 400/pause 100/addObject 18 71 FlashShifter.StardewValleyExpandedCP_King_Salmon/playSound fishSlap/pause 300/showFrame Willy 12 true/pause 200/emote farmer 16 true/pause 250/faceDirection Willy 0 true/pause 500/move farmer 0 1 3/move farmer -1 0 2/pause 500/speak Willy \"{{i18n:Willy.Event5.03}}\"/pause 500/faceDirection Willy 3 true/pause 300/showFrame Willy 13 true/shake Willy 400/pause 100/removeSprite 18 71/playSound fishSlap/pause 300/showFrame Willy 12 true/pause 400/faceDirection Willy 0 true/pause 350/speak Willy \"{{i18n:Willy.Event5.04}}\"/pause 400/end dialogue Willy \"{{i18n:Willy.Event5.05}}\""
             },
         },
         { //WILLY EVENT DIALOGUE ADDITIONS

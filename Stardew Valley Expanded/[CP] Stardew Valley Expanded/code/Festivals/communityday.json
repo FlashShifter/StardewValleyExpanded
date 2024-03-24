@@ -1,0 +1,3239 @@
+{
+	"Changes": [
+
+		{
+
+			"Action": "EditData", 
+			"Target": "Data/PassiveFestivals",
+			"Entries": {
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": {
+					"DisplayName": "{{i18n:CommunityDay_Name}}",
+					"Condition": "PLAYER_HAS_SEEN_EVENT ANY 191393",
+					"ShowOnCalendar": true,
+					"Season": "{{Season}}",
+					"StartDay": 22,
+					"EndDay": 22,
+					"StartTime": 1100,
+					"StartMessage": "{{i18n:CommunityDay_StartMessage}}", 
+					"OnlyShowMessageOnFirstDay": true,
+					"MapReplacements": {},
+					"DailySetupMethod": null,
+					"CleanupMethod": null,
+					"CustomFields": {}
+				  }
+			}
+		},
+		{ //Changes weather icon to festival
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "Assets/Tilesheets/Festival_Icons.png",
+			"When": {
+				"Day": "22",
+				"HasSeenEvent": "191393"
+			},
+			"ToArea": {
+				"X": 341,
+				"Y": 421,
+				"Width": 84,
+				"Height": 8
+			},
+		},
+		{ //Changes community center theme
+			"Action": "EditMap",
+			"Target": "Maps/CommunityCenter_Refurbished",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Day": "22"
+			},
+			"MapProperties": {
+				"Music": "junimoStarSong"
+			}
+		},
+		{ //Community Day introduction event
+			"Action": "EditData",
+			"Target": "Data/Events/farm",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Day": "21"
+			},
+			"Entries": {
+				"221961715/": "continue/-1000 -1000/farmer 64 15 2 Lewis 64 13 0/skippable/pause 1000/speak Lewis \"{{i18n:CommunityDay.Intro.01}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:CommunityDay.Intro.02}}\"/pause 1000/end dialogue Lewis \"{{i18n:CommunityDay.Intro.03}}\""
+			},
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/CommunityCenter_Ruins",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"FromFile": "Assets/Maps/MapPatches/CommunityCenter_Refurbished.tbin"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/CommunityCenter_Refurbished",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"FromFile": "Assets/Maps/MapPatches/CommunityCenter_Refurbished.tbin"
+		},
+		{ //COMMUNITY CENTER COMPLETION - REASONABLE FORK
+			"Action": "EditData",
+			"Target": "Data/Events/town",
+			"Entries": {
+				"191393/Hn ccFishTank/Hn ccBulletin/Hn ccPantry/Hn ccVault/Hn ccBoilerRoom/Hn ccCraftsRoom/Hl jojaFishTank/Hl jojaPantry/Hl jojaVault/Hl jojaBoilerRoom/Hl jojaCraftsRoom/Hl JojaMember/w sunny/H": "junimoStarSong/-1000 -1000/farmer -100 -100 0 Olivia -2000 -2000 1 Andy -2000 -2000 1 Susan -2000 -2000 3 Evelyn 56 21 0 Lewis 52 33 0 Morris -2000 -2000 0 Jas 62 16 2 Vincent 46 23 1 Emily -2000 -2000 0 Gus -2000 -2000 0 Caroline -2000 -2000 3 Robin -2000 -2000 2 Demetrius -2000 -2000 0 Clint -2000 -2000 0 Pierre -2000 -2000 0 Jodi -2000 -2000 2 Gunther -2000 -2000 0 Willy -2000 -2000 0 Pam -2000 -2000 3 George -2000 -2000 0 Evelyn -2000 -2000 0/broadcastEvent/addConversationTopic cc_Complete/specificTemporarySprite ccCelebration/animate Jas false true 90 16 17 18 19/animate Evelyn true false 500 17 18 17 19 19 19 19/viewport 53 25 true/viewport move 0 -1 8000/skippable/move Vincent 1 0 2/move Vincent 0 1 1/move Lewis 0 -9 0 true/move Vincent 8 0 0 false/pause 1000/jump Vincent/pause 1000/speed Vincent 4/move Vincent 0 15 0/pause 3000/globalFade/viewport -1000 -1000/warp Lewis 32 22/warp Jas -2000 -2000/warp Evelyn -2000 -2000/warp Vincent -2000 -2000/warp Gunther 24 17/warp Gus 5 5/advancedMove Gus true -2 0 4 2000 4 0 4 3000 -2 0 4 2000/warp Pam 8 9/advancedMove Pam true 3 5000 1 0 0 -4 -1 0 4 1000 1 0 0 4 -1 0/warp Emily 16 19/advancedMove Emily true 2 0 2 8000 -2 0 4 3000/warp Pierre 25 11/warp Caroline 26 10/warp Olivia 24 10/warp Andy 37 16/Warp Susan 39 16/warp Jodi 25 9/warp Willy 40 10/advancedMove Willy true 2 0 4 3000 -3 0 4 3000 1 0 4 3000/warp George 33 10/warp Evelyn 32 10/warp Robin 11 24/advancedMove Robin false 1 0 2 2000 0 -12 16 0 0 -3/warp Clint 46 13/advancedMove Clint false -1 0 4 14000 10 0 0 6 7 0 0 -5/warp Demetrius 47 5/changeLocation CommunityCenter/viewport 7 10 true/viewport move 2 0 21500/pause 6000/move Lewis 0 -10 2/pause 10000/globalFade/viewport -1000 -1000/warp farmer 32 20/move farmer 0 -7 0 true/viewport 32 10 true/pause 5000/speak Lewis \"{{i18n:CC.Complete.01}}\"/pause 800/emote Lewis 32/pause 1000/speak Lewis \"{{i18n:CC.Complete.02}}\"/pause 1000/awardFestivalPrize hero/null/itemAboveHead hero/null/pause 1000/faceDirection farmer 0/playMusic none/message \"{{i18n:CC.Complete.03}}\"/pause 500/textAboveHead Lewis \"{{i18n:CC.Complete.04}}\"/faceDirection farmer 2 true/move Lewis 1 0 2/move Lewis 0 1 2/pause 500/speak Morris \"{{i18n:CC.Complete.05}}\"/playSound doorClose/warp Morris 32 23/textAboveHead Lewis \"{{i18n:CC.Complete.06}}\"/move Morris 0 -8 0/pause 900/faceDirection Morris 1/pause 900/faceDirection Morris 0 true/pause 500/faceDirection Morris 3/pause 250/faceDirection Pierre 2/pause 450/playSound dwop/showFrame Morris 19/shake Morris 1000/textAboveHead Morris \"{{i18n:CC.Complete.07}}\"/pause 500/speak Morris \"{{i18n:CC.Complete.08}}\"/move Pierre 0 3 1/textAboveHead Pierre \"{{i18n:CC.Complete.09}}\"/move Pierre 3 0 1/move Pierre 2 0 2/move Pierre 0 1 1/move Pierre 1 0 1/question fork1 \"{{i18n:CC.Complete.Question}}\"/fork Punch/showFrame Morris 12/textAboveHead Morris \"{{i18n:CC.Complete.10}}\"/pause 1000/speak Morris \"{{i18n:CC.Complete.11}}\"/pause 1000/speak Pierre \"{{i18n:CC.Complete.12}}\"/faceDirection Pierre 3/textAboveHead Pierre \"{{i18n:CC.Complete.13}}\"/pause 1500/globalFade/viewport -1000 -1000/stopAdvancedMoves/warp Demetrius 37 15/faceDirection Clint 3/faceDirection Demetrius 3 true/warp Evelyn 29 17/warp Olivia 29 12/faceDirection Olivia 2 true/warp Andy 36 14/faceDirection Andy 3 true/warp Susan 36 13/warp Pam 28 14/faceDirection Pam 1 true/warp Gus 28 15/faceDirection Gus 1 true/warp Robin 36 16/faceDirection Robin 3/warp Emily 30 12/faceDirection Emily 2 true/warp Willy 34 17/faceDirection Willy 0 true/warp Jodi 35 12/faceDirection Jodi 2 true/warp Caroline 34 12/faceDirection Caroline 2 true/warp Clint 38 13/faceDirection Clint 3 true/warp Gunther 30 17/warp George 28 16/faceDirection George 1 true/viewport 32 10 true/faceDirection Pierre 2/faceDirection Pierre 3/faceDirection Pierre 0/faceDirection Pierre 3/pause 1000/speak Pierre \"{{i18n:CC.Complete.14}}\"/pause 1000/playMusic musicboxsong/move Pierre 0 1 3/speak Pierre \"{{i18n:CC.Complete.15}}\"/pause 500/faceDirection George 2/pause 500/showFrame George 16/textAboveHead George \"{{i18n:CC.Complete.16}}\"/move Pierre 0 -2 0/speak Pierre \"{{i18n:CC.Complete.17}}\"/pause 1000/speak Emily \"{{i18n:CC.Complete.18}}\"/move Pierre 0 1 1/textAboveHead Pierre \"{{i18n:CC.Complete.19}}\"/pause 400/faceDirection Willy 3 true/pause 400/textAboveHead Willy \"{{i18n:CC.Complete.20}}\"/pause 1000/speak Pierre \"{{i18n:CC.Complete.21}}\"/pause 500/speak Willy \"{{i18n:CC.Complete.22}}\"/faceDirection Pierre 3/speak Pierre \"{{i18n:CC.Complete.23}}\"/speak Gus \"{{i18n:CC.Complete.24}}\"/pause 100/textAboveHead Robin \"{{i18n:CC.Complete.25}}\"/faceDirection Pierre 0/playMusic none/speak Pierre \"{{i18n:CC.Complete.26}}\"/jump Morris/showFrame Morris 19/pause 1000/textAboveHead Pierre \"{{i18n:CC.Complete.27}}\"/pause 3000/showFrame George 0/playMusic springtown/pause 4000/move George 1 0 1/speak George \"{{i18n:CC.Complete.28}}\"/pause 500/shake Morris 5000/textAboveHead Demetrius \"{{i18n:CC.Complete.29}}\"/pause 250/textAboveHead Jodi \"{{i18n:CC.Complete.30}}\"/shake Morris 5000/faceDirection Morris 0 true/jump Morris/pause 500/textAboveHead Gus \"{{i18n:CC.Complete.31}}\"/pause 500/textAboveHead Gunther \"{{i18n:CC.Complete.32}}\"/textAboveHead Robin \"{{i18n:CC.Complete.33}}\"/pause 2000/speak Morris \"{{i18n:CC.Complete.34}}\"/pause 2000/faceDirection Pierre 2/speed Morris 4/shake Morris 5000/move Morris 0 9 2/warp Morris -2000 -2000/playSound doorClose/faceDirection Robin 2 true/faceDirection Demetrius 2 true/pause 20/faceDirection Gunther 2 true/pause 30/faceDirection George 2 true/globalFade/viewport -9999 -9999/pause 2000/message \"{{i18n:CC.Complete.35}}\"/pause 2000/end position 52 20",
+			},
+		},
+		{ //COMMUNITY CENTER COMPLETION - PUNCH FORK
+			"Action": "EditData",
+			"Target": "Data/Events/communitycenter",
+			"Entries": {
+				"Punch": "pause 100/skippable/showFrame Morris 12/textAboveHead Morris \"{{i18n:CC.Complete.Punch.01}}\"/pause 500/speak Morris \"{{i18n:CC.Complete.Punch.02}}\"/shake Pierre 500/pause 1000/speak Pierre \"{{i18n:CC.Complete.Punch.03}}\"/pause 500/speak Morris \"{{i18n:CC.Complete.Punch.04}}\"/playMusic event1/pause 2000/animate Pierre false true 200 20 21/positionOffset Pierre 8 8/pause 1500/speak Morris \"{{i18n:CC.Complete.Punch.05}}\"/move Morris 0 1 2/speak Pierre \"{{i18n:CC.Complete.Punch.06}}\"/faceDirection Morris 1 true/pause 50/faceDirection Morris 0/shake Morris 1000/pause 1500/speak Morris \"{{i18n:CC.Complete.Punch.07}}\"/speed Morris 4/move Morris 0 -1 3/showFrame Morris 20/positionOffset Morris -4 -4/animate Morris false true 200 20 21/pause 2000/stopAnimation Morris/showFrame Morris 22/playSound clubhit/stopAnimation Pierre/showFrame Pierre 22/pause 500/jump Caroline/textAboveHead Caroline \"{{i18n:CC.Complete.Punch.08}}\"/speed Caroline 4/move Caroline 0 4 1 true/animate Morris false true 200 20 21/animate Pierre false true 200 20 21/pause 500/faceDirection Andy 3/pause 500/speed Susan 4/move Susan 0 -1 3/speed Susan 4/move Susan -1 0 3 true/pause 200/jump Robin/showFrame Robin 19/pause 400/textAboveHead Andy \"{{i18n:CC.Complete.Punch.09}}\"/pause 1000/jump Lewis/stopAnimation Morris/showFrame Morris 22/playSound clubhit/shake Pierre 200/stopAnimation Pierre/showFrame Pierre 22/pause 500/animate Morris false true 200 20 21/animate Pierre false true 200 20 21/pause 2000/stopAnimation Morris/showFrame Morris 22/playSound clubhit/shake Pierre 200/stopAnimation Pierre/showFrame Pierre 22/pause 500/jump Caroline/speak Morris \"{{i18n:CC.Complete.Punch.10}}\"/animate Morris false true 200 20 21/animate Pierre false true 200 20 21/pause 2000/speak Pierre \"{{i18n:CC.Complete.Punch.11}}\"/pause 1000/stopAnimation Morris/showFrame Morris 22/playSound clubhit/shake Pierre 200/stopAnimation Pierre/showFrame Pierre 22/pause 500/animate Morris false true 200 20 21/animate Pierre false true 200 20 21/pause 1000/pause 500/textAboveHead Susan \"{{i18n:CC.Complete.Punch.12}}\"/pause 2000/stopAnimation Pierre/stopAnimation Morris/showFrame Pierre 17/showFrame Morris 20/pause 100/showFrame Pierre 18/showFrame Morris 23/playSound clubhit/shake Morris 250/pause 50/showFrame Pierre 17/showFrame Morris 20/pause 1000/showFrame Morris 20/pause 100/showFrame Pierre 18/showFrame Morris 23/playSound clubhit/shake Morris 250/pause 50/showFrame Morris 20/showFrame Pierre 17/pause 1000/showFrame Morris 20/pause 100/showFrame Pierre 18/showFrame Morris 23/playSound clubhit/shake Morris 250/pause 50/showFrame Morris 20/showFrame Pierre 17/pause 1000/shake Pierre 1000/showFrame Morris 19/pause 1000/showFrame Pierre 17/positionOffset Pierre 4 0/pause 100/positionOffset Pierre 4 0/showFrame Pierre 18/pause 100/positionOffset Pierre 4 0/showFrame Pierre 19/playSound clubSmash/warp Morris -2000 -2000/specificTemporarySprite morrisFlying/pause 2000/playSound barrelBreak/showFrame Pierre 4/pause 2000/move Pierre 1 0 0/pause 1000/playSound dwop/faceDirection Pierre 1 true/pause 50/faceDirection Pierre 2/pause 100/showFrame Pierre 23/playSound stoneStep/pause 500/globalFade/viewport -9999 -9999/pause 4000/message \"{{i18n:CC.Complete.Punch.13}}\"/pause 500/end position 52 20",
+			},
+		},
+		{ //Adds lights to the community center exterior
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"MapProperties",
+						"Light"
+					],
+					"Value": "51 19 4 54 19 4 50 18 4 52 18 4 53 18 4 55 18 4",
+					"Delimiter": " "
+				},
+			]
+		},
+		{ //Adds day tiles to community center interior
+			"Action": "EditMap",
+			"Target": "Maps/CommunityCenter_Refurbished",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Update": "OnLocationChange",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"MapProperties",
+						"DayTiles"
+					],
+					"Value": "Front 5 1 405 Front 6 1 406 Buildings 24 5 256 Buildings 28 5 256 Buildings 37 5 256 Buildings 41 5 256 Buildings 50 1 225 Buildings 50 2 257 Front 24 6 288 Front 28 6 288 Front 37 6 288 Front 41 6 288",
+					"Delimiter": " "
+				},
+			]
+		},
+		{ //Adds night tiles to community center interior
+			"Action": "EditMap",
+			"Target": "Maps/CommunityCenter_Refurbished",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Update": "OnLocationChange",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"MapProperties",
+						"NightTiles"
+					],
+					"Value": "Front 5 1 1220 Front 6 1 1221 Buildings 24 5 1253 Buildings 28 5 1253 Buildings 37 5 1253 Buildings 41 5 1253 Buildings 50 1 1222 Buildings 50 2 1254 Front 24 6 1285 Front 28 6 1285 Front 37 6 1285 Front 41 6 1285",
+					"Delimiter": " "
+				},
+			]
+		},
+		//*** START COMMUNITY DAY SCHEDULES + DIALOGUE ***//
+		{ //LEWIS Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Lewis",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "630 ManorHouse 7 5 0/730 CommunityCenter 55 6 0/1000 CommunityCenter 47 5 0/1030 CommunityCenter 53 5 0/1100 CommunityCenter 31 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1320 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1450 CommunityCenter 47 13 0 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1540 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1810 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1900 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1950 ManorHouse 22 4 1 lewis_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Lewis",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Lewis": "{{i18n:CommunityDay.Dialogue.01}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Lewis",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Lewis": "{{i18n:CommunityDay.Dialogue.02}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Lewis",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Lewis": "{{i18n:CommunityDay.Dialogue.03}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Lewis",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Lewis": "{{i18n:CommunityDay.Dialogue.04}}"
+			}
+		},
+		{ //MARNIE Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Marnie",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 AnimalShop 24 15 0/810 AnimalShop 12 14 2/1030 AnimalShop 15 15 2/1100 CommunityCenter 30 14 1 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1800 CommunityCenter 19 22 0 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1850 AnimalShop 13 5 3 marnie_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marnie",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Marnie": "{{i18n:CommunityDay.Dialogue.05}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marnie",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Marnie": "{{i18n:CommunityDay.Dialogue.06}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marnie",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Marnie": "{{i18n:CommunityDay.Dialogue.07}}",
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marnie",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Marnie": "{{i18n:CommunityDay.Dialogue.08}}",
+			}
+		},
+		{ //JAS Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Jas",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "810 AnimalShop 24 15 2/920 AnimalShop 7 5 2 jas_read/1030 AnimalShop 16 17 3/1100 CommunityCenter 19 20 3 jas_read \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1820 CommunityCenter 19 20 2 \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1850 AnimalShop 2 7 3 jas_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jas",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jas": "{{i18n:CommunityDay.Dialogue.09}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jas",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jas": "{{i18n:CommunityDay.Dialogue.10}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jas",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jas": "{{i18n:CommunityDay.Dialogue.11}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jas",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Jas": "{{i18n:CommunityDay.Dialogue.12}}"
+			}
+		},
+		{ //SHANE Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "820 AnimalShop 28 15 0/940 AnimalShop 4 15 0/1030 AnimalShop 14 17 1/1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1900 AnimalShop 27 4 1 shane_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane": "{{i18n:CommunityDay.Dialogue.13}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane": "{{i18n:CommunityDay.Dialogue.14}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane": "{{i18n:CommunityDay.Dialogue.15}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Shane": "{{i18n:CommunityDay.Dialogue.16}}"
+			}
+		},
+		{ //SHANE Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Shane",
+				"Day": "22"
+			},
+			"Entries": {
+				"Marriage_Mon": "1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1900 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane_Married": "{{i18n:CommunityDay.Dialogue.17}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane_Married": "{{i18n:CommunityDay.Dialogue.18}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Shane_Married": "{{i18n:CommunityDay.Dialogue.19}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Shane",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Shane_Married": "{{i18n:CommunityDay.Dialogue.20}}"
+			}
+		},
+		{ //GUS Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Gus",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "730 Saloon 29 6 0/900 Town 40 14 0/1120 CommunityCenter 6 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1240 CommunityCenter 4 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1430 CommunityCenter 7 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1520 CommunityCenter 5 5 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1610 CommunityCenter 7 7 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1630 CommunityCenter 13 6 3 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1730 CommunityCenter 8 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1830 Saloon 23 4 2 gus_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Gus",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Gus": "{{i18n:CommunityDay.Dialogue.21}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Gus",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Gus": "{{i18n:CommunityDay.Dialogue.22}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Gus",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Gus": "{{i18n:CommunityDay.Dialogue.23}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Gus",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Gus": "{{i18n:CommunityDay.Dialogue.24}}"
+			}
+		},
+		{ //LINUS Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1850 Tent 4 3 1 linus_sleep",
+			},
+		},
+		{ //LINUS Community Day Schedule - Leo
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"When": {
+				"HasSeenEvent |contains=191393": true,
+				"HasSeenEvent |contains=6497428": true
+			},
+			"Entries": {
+				"22": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1700 CommunityCenter 16 22 1 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1750 Tent 4 3 1 linus_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Linus",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Linus": "{{i18n:CommunityDay.Dialogue.25}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Linus",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Linus": "{{i18n:CommunityDay.Dialogue.26}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Linus",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Linus": "{{i18n:CommunityDay.Dialogue.27}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Linus",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Linus": "{{i18n:CommunityDay.Dialogue.28}}"
+			}
+		},
+		{
+			//LEO Community Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Leo",
+			"When": {
+				"HasSeenEvent |contains=191393": true,
+				"HasSeenEvent |contains=6497428": true
+			},
+			"Entries": {
+				"22": "0 LeoTreeHouse 4 3 2/830 Mountain 30 9 3/1110 CommunityCenter 18 22 0 leo_sit_up \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1720 CommunityCenter 17 22 3 \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1750 LeoTreeHouse 4 3 2",
+			}
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leo",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leo": "{{i18n:CommunityDay.Dialogue.29}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leo",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leo": "{{i18n:CommunityDay.Dialogue.30}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leo",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leo": "{{i18n:CommunityDay.Dialogue.31}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leo",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Leo": "{{i18n:CommunityDay.Dialogue.32}}"
+			}
+		},
+		{ //HARVEY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Harvey",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "710 HarveyRoom 19 7 0/830 Hospital 6 15 2/1230 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey\"/1600 HarveyRoom 13 4 2 harvey_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey": "{{i18n:CommunityDay.Dialogue.33}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey": "{{i18n:CommunityDay.Dialogue.34}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey": "{{i18n:CommunityDay.Dialogue.35}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey": "{{i18n:CommunityDay.Dialogue.36}}"
+			}
+		},
+		{ //HARVEY Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Harvey",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Harvey",
+				"Day": "22"
+			},
+			"Entries": {
+				"Marriage_Mon": "1030 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey_Married\"/1820 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey_Married": "{{i18n:CommunityDay.Dialogue.37}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey_Married": "{{i18n:CommunityDay.Dialogue.38}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey_Married": "{{i18n:CommunityDay.Dialogue.39}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Harvey_Married": "{{i18n:CommunityDay.Dialogue.40}}",
+			}
+		},
+		{ //PAM Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Pam",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "900 Town 73 69 2/1000 Town 79 68 1/1040 CommunityCenter 7 10 0 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1650 CommunityCenter 5 12 2 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1900 Town 79 68 1",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pam",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pam": "{{i18n:CommunityDay.Dialogue.41}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pam",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pam": "{{i18n:CommunityDay.Dialogue.42}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pam",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pam": "{{i18n:CommunityDay.Dialogue.43}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pam",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Pam": "{{i18n:CommunityDay.Dialogue.44}}"
+			}
+		},
+		{ //PENNY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Penny",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "840 CommunityCenter 13 19 0/1130 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny\"/1840 Trailer 4 9 1 penny_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny": "{{i18n:CommunityDay.Dialogue.45}}",
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny": "{{i18n:CommunityDay.Dialogue.46}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny": "{{i18n:CommunityDay.Dialogue.47}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Penny": "{{i18n:CommunityDay.Dialogue.48}}"
+			}
+		},
+		{ //PENNY Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Penny",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Penny",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny_Married\"/1840 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny_Married": "{{i18n:CommunityDay.Dialogue.49}}",
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny_Married": "{{i18n:CommunityDay.Dialogue.50}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Penny_Married": "{{i18n:CommunityDay.Dialogue.51}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Penny_Married": "{{i18n:CommunityDay.Dialogue.52}}",
+			}
+		},
+		{ //SCARLETT Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Scarlett",
+			"When": {
+				"HasSeenEvent": "191393",
+				"HasSeenEvent": "3691371"
+			},
+			"Entries": {
+				"22": "0 Custom_SophiaHouse 23 6 0/610 Custom_SophiaHouse 23 6 1/800 Custom_SophiaHouse 26 23 0/1000 CommunityCenter 11 23 0 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1300 CommunityCenter 11 20 2 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1800 CommunityCenter 11 19 3 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1820 Custom_SophiaHouse 23 6 1 scarlett_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett": "{{i18n:CommunityDay.Dialogue.53}}",
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett": "{{i18n:CommunityDay.Dialogue.54}}",
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett": "{{i18n:CommunityDay.Dialogue.55}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett": "{{i18n:CommunityDay.Dialogue.56}}"
+			}
+		},
+		{ //SOPHIA Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sophia",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "0 Custom_SophiaHouse 24 6 0/610 Custom_SophiaHouse 24 6 1 Sophia_Sleep/800 Custom_SophiaHouse 24 23 2/1000 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1620 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1820 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia": "{{i18n:CommunityDay.Dialogue.57}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia": "{{i18n:CommunityDay.Dialogue.58}}",
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia": "{{i18n:CommunityDay.Dialogue.59}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia": "{{i18n:CommunityDay.Dialogue.60}}"
+			}
+		},
+		{
+			//SOPHIA Community Day - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Sophia",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Sophia",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1410 CommunityCenter 9 20 3 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1430 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1620 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1820 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia_Married": "{{i18n:CommunityDay.Dialogue.61}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia_Married": "{{i18n:CommunityDay.Dialogue.62}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia_Married": "{{i18n:CommunityDay.Dialogue.63}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sophia_Married": "{{i18n:CommunityDay.Dialogue.64}}",
+			}
+		},
+		{ //MARU Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Maru",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "750 ScienceHouse 27 9 0/850 ScienceHouse 9 5 0/1100 ScienceHouse 4 22 1/1150 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru\"/1640 ScienceHouse 2 4 0 maru_sleep",
+				"winter": "800 ScienceHouse 5 6 1 maru_tinker/900 ScienceHouse 19 18 0/1100 CommunityCenter 31 10 0/1700 ScienceHouse 5 6 1 maru_tinker/2200 ScienceHouse 2 4 3 maru_sleep"
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru": "{{i18n:CommunityDay.Dialogue.65}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru": "{{i18n:CommunityDay.Dialogue.66}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru": "{{i18n:CommunityDay.Dialogue.67}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Maru": "{{i18n:CommunityDay.Dialogue.68}}"
+			}
+		},
+		{ //MARU Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Maru",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Maru",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru_Married\"/1820 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru_Married": "{{i18n:CommunityDay.Dialogue.69}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru_Married": "{{i18n:CommunityDay.Dialogue.70}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Maru_Married": "{{i18n:CommunityDay.Dialogue.71}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Maru_Married": "{{i18n:CommunityDay.Dialogue.72}}"
+			}
+		},
+		{ //DEMETRIUS Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Demetrius",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "750 ScienceHouse 29 9 0/1100 ScienceHouse 6 22 3/1150 CommunityCenter 3 7 2 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1650 CommunityCenter 15 26 1 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1730 ScienceHouse 19 4 1 demetrius_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Demetrius",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Demetrius": "{{i18n:CommunityDay.Dialogue.73}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Demetrius",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Demetrius": "{{i18n:CommunityDay.Dialogue.74}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Demetrius",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Demetrius": "{{i18n:CommunityDay.Dialogue.75}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Demetrius",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Demetrius": "{{i18n:CommunityDay.Dialogue.76}}"
+			}
+		},
+		{ //ROBIN Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Robin",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "640 ScienceHouse 28 9 0/740 ScienceHouse 8 18 2/1120 ScienceHouse 7 20 1/1150 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1430 CommunityCenter 18 27 2 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1500 CommunityCenter 18 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1520 CommunityCenter 16 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1540 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1710 CommunityCenter 17 26 3 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1730 ScienceHouse 21 4 2 robin_sleep",
+				"Mon": "800 ScienceHouse 8 18 2/1700 CommunityCenter 17 26 0/1940 ScienceHouse 16 5 0/2200 ScienceHouse 21 4 1 robin_sleep"
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Robin",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Robin": "{{i18n:CommunityDay.Dialogue.77}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Robin",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Robin": "{{i18n:CommunityDay.Dialogue.78}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Robin",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Robin": "{{i18n:CommunityDay.Dialogue.79}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Robin",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Robin": "{{i18n:CommunityDay.Dialogue.80}}"
+			}
+		},
+		{ //SEBASTIAN Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sebastian",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "840 SebastianRoom 3 5 0/910 ScienceHouse 27 9 0/1110 ScienceHouse 9 20 3/1150 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian\"/1550 SebastianRoom 11 18 1 sebastian_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian": "{{i18n:CommunityDay.Dialogue.81}}",
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian": "{{i18n:CommunityDay.Dialogue.82}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian": "{{i18n:CommunityDay.Dialogue.83}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian": "{{i18n:CommunityDay.Dialogue.84}}"
+			}
+		},
+		{ //SEBASTIAN Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Sebastian",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Sebastian",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian_Married\"/1550 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian_Married": "{{i18n:CommunityDay.Dialogue.85}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian_Married": "{{i18n:CommunityDay.Dialogue.86}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian_Married": "{{i18n:CommunityDay.Dialogue.87}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sebastian_Married": "{{i18n:CommunityDay.Dialogue.88}}"
+			}
+		},
+		{ //CLINT Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Clint",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "740 Blacksmith 4 5 0/920 Town 100 81 0/1030 Town 97 77 0/1100 Town 102 77 0/1130 Town 96 65 1/1230 CommunityCenter 5 10 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1510 CommunityCenter 62 14 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1630 CommunityCenter 65 14 1 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1710 CommunityCenter 60 16 3 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1750 Blacksmith 10 4 2 clint_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Clint",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Clint": "{{i18n:CommunityDay.Dialogue.89}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Clint",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Clint": "{{i18n:CommunityDay.Dialogue.90}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Clint",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Clint": "{{i18n:CommunityDay.Dialogue.91}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Clint",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Clint": "{{i18n:CommunityDay.Dialogue.92}}"
+			}
+		},
+		{ //HALEY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Haley",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "710 HaleyHouse 8 7 1/810 HaleyHouse 21 16 2/920 HaleyHouse 18 16 2/1010 HaleyHouse 6 16 0/1050 HaleyHouse 3 20 1/1120 CommunityCenter 9 21 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1820 HaleyHouse 2 5 2 haley_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley": "{{i18n:CommunityDay.Dialogue.93}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley": "{{i18n:CommunityDay.Dialogue.94}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley": "{{i18n:CommunityDay.Dialogue.95}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Haley": "{{i18n:CommunityDay.Dialogue.96}}"
+			}
+		},
+		{ //HALEY Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Haley",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Haley",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 9 20 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1820 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley_Married": "{{i18n:CommunityDay.Dialogue.97}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley_Married": "{{i18n:CommunityDay.Dialogue.98}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Haley_Married": "{{i18n:CommunityDay.Dialogue.99}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Haley_Married": "{{i18n:CommunityDay.Dialogue.100}}"
+			}
+		},
+		{ //EMILY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "730 HaleyHouse 19 16 0/820 HaleyHouse 14 16 0/930 HaleyHouse 16 8 0/1050 HaleyHouse 5 20 3/1120 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1820 HaleyHouse 19 4 2 emily_sleep",
+				"Fri": "900 HaleyHouse 16 5 2/1000 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:Fri.000\"/1530 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily": "{{i18n:CommunityDay.Dialogue.101}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily": "{{i18n:CommunityDay.Dialogue.102}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily": "{{i18n:CommunityDay.Dialogue.103}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Emily": "{{i18n:CommunityDay.Dialogue.104}}"
+			}
+		},
+		{ //EMILY Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Emily",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1820 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily_Married": "{{i18n:CommunityDay.Dialogue.105}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily_Married": "{{i18n:CommunityDay.Dialogue.106}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Emily_Married": "{{i18n:CommunityDay.Dialogue.107}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Emily_Married": "{{i18n:CommunityDay.Dialogue.108}}"
+			}
+		},
+		{ //SANDY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sandy",
+			"When": {
+				"Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Sandy_WarpRoom 3 3 2/800 HaleyHouse 4 22 0/1120 CommunityCenter 11 23 0 \"Strings\\schedules\\Sandy:CommunityDay_Sandy\"/1810 HaleyHouse 21 4 3",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sandy",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sandy": "{{i18n:CommunityDay.Dialogue.109}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sandy",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sandy": "{{i18n:CommunityDay.Dialogue.110}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sandy",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sandy": "{{i18n:CommunityDay.Dialogue.111}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sandy",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sandy": "{{i18n:CommunityDay.Dialogue.112}}"
+			}
+		},
+		{ //ALEX Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "800 JoshHouse 5 17 0/900 JoshHouse 14 5 2 alex_lift_weights/1020 JoshHouse 10 18 2/1100 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex\"/1730 CommunityCenter 34 10 0/1920 JoshHouse 8 19 2/2030 JoshHouse 20 4 2 alex_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex": "{{i18n:CommunityDay.Dialogue.113}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex": "{{i18n:CommunityDay.Dialogue.114}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex": "{{i18n:CommunityDay.Dialogue.115}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Alex": "{{i18n:CommunityDay.Dialogue.116}}"
+			}
+		},
+		{ //ALEX Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Alex",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex_Married\"/1810 CommunityCenter 34 10 0/1910 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex_Married": "{{i18n:CommunityDay.Dialogue.117}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex_Married": "{{i18n:CommunityDay.Dialogue.118}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Alex_Married": "{{i18n:CommunityDay.Dialogue.119}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Alex_Married": "{{i18n:CommunityDay.Dialogue.120}}"
+			}
+		},
+		{ //GEORGE Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 JoshHouse 5 20 3/830 JoshHouse 15 22 0/1030 JoshHouse 11 20 3/1100 CommunityCenter 32 10 0 \"Strings\\schedules\\George:CommunityDay_George\"/1920 JoshHouse 16 22 0",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/George",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_George": "{{i18n:CommunityDay.Dialogue.121}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/George",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_George": "{{i18n:CommunityDay.Dialogue.122}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/George",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_George": "{{i18n:CommunityDay.Dialogue.123}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/George",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_George": "{{i18n:CommunityDay.Dialogue.124}}"
+			}
+		},
+		{ //EVELYN Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Evelyn",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 JoshHouse 3 17 0/810 JoshHouse 3 19 2/910 JoshHouse 18 17 0/1000 JoshHouse 4 17 0/1030 JoshHouse 8 20 1/1100 CommunityCenter 33 10 0 \"Strings\\schedules\\Evelyn:CommunityDay_Evelyn\"/1920 JoshHouse 3 5 0",
+				"Thu": "800 JoshHouse 3 17 0 square_3_1_0/1040 JoshHouse 17 22 3/1210 CommunityCenter 33 10 0 \"Strings\\schedules\\Evelyn:Thu.000\"/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1"
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Evelyn",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Evelyn": "{{i18n:CommunityDay.Dialogue.125}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Evelyn",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Evelyn": "{{i18n:CommunityDay.Dialogue.126}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Evelyn",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Evelyn": "{{i18n:CommunityDay.Dialogue.127}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Evelyn",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Evelyn": "{{i18n:CommunityDay.Dialogue.128}}"
+			}
+		},
+		{ //VICTOR Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Victor",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 Custom_JenkinsHouse 30 37 0/850 Custom_JenkinsHouse 24 25 2 Victor_Book2/1050 Custom_JenkinsHouse 20 39 1/1120 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor\"/1710 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor": "{{i18n:CommunityDay.Dialogue.129}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor": "{{i18n:CommunityDay.Dialogue.130}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor": "{{i18n:CommunityDay.Dialogue.131}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Victor": "{{i18n:CommunityDay.Dialogue.132}}"
+			}
+		},
+		{
+			//Victor Community Day - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Victor",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Victor",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor_Married\"/1710 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor_Married": "{{i18n:CommunityDay.Dialogue.133}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor_Married": "{{i18n:CommunityDay.Dialogue.134}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Victor_Married": "{{i18n:CommunityDay.Dialogue.135}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Victor_Married": "{{i18n:CommunityDay.Dialogue.136}}"
+			}
+		},
+		{ //OLIVIA Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Olivia",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "630 Custom_JenkinsHouse 19 8 2 Olivia_Yoga/910 Custom_JenkinsHouse 33 37 2/1050 Custom_JenkinsHouse 22 39 3/1120 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia\"/1730 Custom_JenkinsHouse 20 5 3 Olivia_Sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia": "{{i18n:CommunityDay.Dialogue.137}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia": "{{i18n:CommunityDay.Dialogue.138}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia": "{{i18n:CommunityDay.Dialogue.139}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia": "{{i18n:CommunityDay.Dialogue.140}}"
+			}
+		},
+		{
+			//OLIVIA Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Olivia",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Olivia",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1000 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia_Married\"/1730 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia_Married": "{{i18n:CommunityDay.Dialogue.141}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia_Married": "{{i18n:CommunityDay.Dialogue.142}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia_Married": "{{i18n:CommunityDay.Dialogue.143}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Olivia_Married": "{{i18n:CommunityDay.Dialogue.144}}"
+			}
+		},
+		{ //JODI Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Jodi",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "710 SamHouse 5 5 0/900 SamHouse 17 5 1/1030 SamHouse 4 13 1/1130 CommunityCenter 25 8 2 jodi_sit_down \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1810 CommunityCenter 25 9 2 \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1820 SamHouse 19 5 1 jodi_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jodi",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jodi": "{{i18n:CommunityDay.Dialogue.145}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jodi",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jodi": "{{i18n:CommunityDay.Dialogue.146}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jodi",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Jodi": "{{i18n:CommunityDay.Dialogue.147}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Jodi",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Jodi": "{{i18n:CommunityDay.Dialogue.148}}"
+			}
+		},
+		{ //VINCENT Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Vincent",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "830 SamHouse 1 6 1/940 SamHouse 10 22 0/1040 SamHouse 5 13 3/1130 CommunityCenter 15 20 1 vincent_read_right/1610 CommunityCenter 14 19 0/1650 CommunityCenter 15 20 1 vincent_read_right/1750 CommunityCenter 25 10 0/1820 SamHouse 9 22 3 vincent_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityCenter_25_10": "{{i18n:CommunityDay.Dialogue.149}}",
+				"CommunityCenter_15_20": "{{i18n:CommunityDay.Dialogue.149}}",
+				"CommunityCenter_14_19": "{{i18n:CommunityDay.Dialogue.149}}",
+			},
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityCenter_25_10": "{{i18n:CommunityDay.Dialogue.150}}",
+				"CommunityCenter_15_20": "{{i18n:CommunityDay.Dialogue.150}}",
+				"CommunityCenter_14_19": "{{i18n:CommunityDay.Dialogue.150}}"
+			},
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityCenter_25_10": "{{i18n:CommunityDay.Dialogue.151}}",
+				"CommunityCenter_15_20": "{{i18n:CommunityDay.Dialogue.151}}",
+				"CommunityCenter_14_19": "{{i18n:CommunityDay.Dialogue.151}}",
+			},
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityCenter_25_10": "{{i18n:CommunityDay.Dialogue.152}}",
+				"CommunityCenter_15_20": "{{i18n:CommunityDay.Dialogue.152}}",
+				"CommunityCenter_14_19": "{{i18n:CommunityDay.Dialogue.152}}"
+			},
+		},
+		{ //KENT Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Kent",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "710 SamHouse 6 5 0/900 SamHouse 18 5 3/1030 SamHouse 4 16 3/1130 CommunityCenter 53 13 2 \"Strings\\schedules\\Kent:CommunityDay_Kent\"/1800 SamHouse 20 5 1 kent_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false,
+				"HasSeenEvent |contains=46361083": false
+			},
+			"Entries": {
+				"CommunityDay_Kent": "{{i18n:CommunityDay.Dialogue.153}}"
+			}
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false,
+				"HasSeenEvent |contains=46361083": true
+			},
+			"Entries": {
+				"CommunityDay_Kent": "{{i18n:CommunityDay.Dialogue.154}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Kent": "{{i18n:CommunityDay.Dialogue.155}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Kent": "{{i18n:CommunityDay.Dialogue.156}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Kent": "{{i18n:CommunityDay.Dialogue.157}}"
+			}
+		},
+		{ //SAM Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "850 SamHouse 7 5 0/1000 SamHouse 14 13 0/1030 SamHouse 2 16 1/1130 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam\"/1730 SamHouse 21 13 1 sam_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam": "{{i18n:CommunityDay.Dialogue.158}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam": "{{i18n:CommunityDay.Dialogue.159}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam": "{{i18n:CommunityDay.Dialogue.160}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sam": "{{i18n:CommunityDay.Dialogue.161}}"
+			}
+		},
+		{ //SAM Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Sam",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam_Married\"/1730 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam_Married": "{{i18n:CommunityDay.Dialogue.163}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam_Married": "{{i18n:CommunityDay.Dialogue.164}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Sam_Married": "{{i18n:CommunityDay.Dialogue.165}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Sam_Married": "{{i18n:CommunityDay.Dialogue.166}}"
+			}
+		},
+		{ //ABIGAIL Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Abigail",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "800 SeedShop 9 5 0/900 SeedShop 35 9 0/1000 SeedShop 3 6 0 abigail_videogames/1130 SeedShop 6 22 2/1230 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail\"/1730 SeedShop 2 9 2 abigail_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail": "{{i18n:CommunityDay.Dialogue.167}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail": "{{i18n:CommunityDay.Dialogue.168}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail": "{{i18n:CommunityDay.Dialogue.169}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail": "{{i18n:CommunityDay.Dialogue.170}}"
+			}
+		},
+		{ //ABIGAIL Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Abigail",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Abigail",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail_Married\"/1730 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail_Married": "{{i18n:CommunityDay.Dialogue.171}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail_Married": "{{i18n:CommunityDay.Dialogue.172}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail_Married": "{{i18n:CommunityDay.Dialogue.173}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Abigail_Married": "{{i18n:CommunityDay.Dialogue.174}}"
+			}
+		},
+		{ //CAROLINE Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Caroline",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 SeedShop 37 5 0/900 SeedShop 33 6 1/1000 SeedShop 22 5 3/1130 SeedShop 7 24 0/1230 CommunityCenter 24 9 1 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1810 CommunityCenter 24 11 2 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1900 SeedShop 25 4 1 caroline_sleep",
+				"Sat": "800 SeedShop 37 6 3/1100 CommunityCenter 26 9 2 caroline_read/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Caroline",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Caroline": "{{i18n:CommunityDay.Dialogue.175}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Caroline",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Caroline": "{{i18n:CommunityDay.Dialogue.176}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Caroline",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Caroline": "{{i18n:CommunityDay.Dialogue.177}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Caroline",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Caroline": "{{i18n:CommunityDay.Dialogue.178}}"
+			}
+		},
+		{ //PIERRE Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Pierre",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "700 SeedShop 39 5 0/900 SeedShop 37 6 3/1000 SeedShop 20 5 1/1130 SeedShop 6 24 0/1230 CommunityCenter 31 15 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1810 CommunityCenter 24 12 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1900 SeedShop 23 4 1 pierre_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pierre",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pierre": "{{i18n:CommunityDay.Dialogue.179}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pierre",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pierre": "{{i18n:CommunityDay.Dialogue.180}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pierre",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Pierre": "{{i18n:CommunityDay.Dialogue.181}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Pierre",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Pierre": "{{i18n:CommunityDay.Dialogue.182}}"
+			}
+		},
+		{ //ELLIOTT Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "720 ElliottHouse 1 5 0/840 Beach 49 19 2/1010 Beach 36 15 3/1050 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1900 ElliottHouse 1 5 0",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott": "{{i18n:CommunityDay.Dialogue.183}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott": "{{i18n:CommunityDay.Dialogue.184}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott": "{{i18n:CommunityDay.Dialogue.185}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott": "{{i18n:CommunityDay.Dialogue.186}}"
+			}
+		},
+		{ //ELLIOTT Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Elliott",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1900 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott_Married": "{{i18n:CommunityDay.Dialogue.187}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott_Married": "{{i18n:CommunityDay.Dialogue.188}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott_Married": "{{i18n:CommunityDay.Dialogue.189}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Elliott_Married": "{{i18n:CommunityDay.Dialogue.190}}"
+			}
+		},
+		{ //WILLY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Willy",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "830 Beach 41 36 2/1000 Beach 34 15 1/1020 Beach 34 15 1/1050 CommunityCenter 46 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1250 CommunityCenter 42 10 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1420 CommunityCenter 38 11 2 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1550 CommunityCenter 45 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1620 FishShop 8 5 0",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Willy",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Willy": "{{i18n:CommunityDay.Dialogue.191}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Willy",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Willy": "{{i18n:CommunityDay.Dialogue.192}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Willy",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Willy": "{{i18n:CommunityDay.Dialogue.193}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Willy",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Willy": "{{i18n:CommunityDay.Dialogue.194}}"
+			}
+		},
+		{ //LEAH Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Leah",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "830 LeahHouse 12 14 0/1110 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1740 LeahHouse 2 4 3 leah_sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah": "{{i18n:CommunityDay.Dialogue.195}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah": "{{i18n:CommunityDay.Dialogue.196}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah": "{{i18n:CommunityDay.Dialogue.197}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Leah": "{{i18n:CommunityDay.Dialogue.198}}"
+			}
+		},
+		{ //LEAH Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Leah",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Spouse": "Leah",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1740 Bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah_Married": "{{i18n:CommunityDay.Dialogue.199}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah_Married": "{{i18n:CommunityDay.Dialogue.200}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Leah_Married": "{{i18n:CommunityDay.Dialogue.201}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Leah_Married": "{{i18n:CommunityDay.Dialogue.202}}"
+			}
+		},
+		{ //ANDY Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Andy",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "630 Custom_AndyHouse 18 6 0/820 CommunityCenter 39 16 2 Andy_Farm2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1230 CommunityCenter 43 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1310 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1330 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1410 CommunityCenter 8 5 0 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1520 CommunityCenter 43 11 2 Andy_Drink2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1750 Custom_AndyHouse 9 6 1 Andy_Sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Andy",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Andy": "{{i18n:CommunityDay.Dialogue.203}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Andy",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Andy": "{{i18n:CommunityDay.Dialogue.204}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Andy",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Andy": "{{i18n:CommunityDay.Dialogue.205}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Andy",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Andy": "{{i18n:CommunityDay.Dialogue.206}}"
+			}
+		},
+		{ //SUSAN Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Susan",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "650 Custom_SusanHouse 24 15 0/740 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 3 19 0 Susan_Craft/1010 CommunityCenter 36 18 1 Susan_Farm1 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1240 CommunityCenter 37 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1410 CommunityCenter 42 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1530 CommunityCenter 46 13 0 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1740 Custom_SusanHouse 24 6 1 Susan_Sleep",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Susan",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Susan": "{{i18n:CommunityDay.Dialogue.207}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Susan",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Susan": "{{i18n:CommunityDay.Dialogue.208}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Susan",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Susan": "{{i18n:CommunityDay.Dialogue.209}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Susan",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Susan": "{{i18n:CommunityDay.Dialogue.210}}"
+			}
+		},
+		{ //MARLON Community Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/MarlonFay",
+			"When": {
+				"HasSeenEvent": "191393"
+			},
+			"Entries": {
+				"22": "730 AdventureGuild 6 16 2/800 CommunityCenter 54 13 2 Marlon_Sneaky \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1320 CommunityCenter 54 13 2 Marlon_Look \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1830 CommunityCenter 50 12 2 \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1930 Custom_AdventurerSummit 33 22 2 Marlon_Sneaky",
+			},
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marlon",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false,
+				"HasSeenEvent |contains=46361083": false
+			},
+			"Entries": {
+				"CommunityDay_MarlonFay": "{{i18n:CommunityDay.Dialogue.211}}"
+			}
+		},
+		{ //Spring Dialogue (Kent became an adventurer)
+			"Action": "EditData",
+			"Target": "strings/schedules/Marlon",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false,
+				"HasSeenEvent |contains=46361083": true
+			},
+			"Entries": {
+				"CommunityDay_MarlonFay": "{{i18n:CommunityDay.Dialogue.212}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marlon",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_MarlonFay": "{{i18n:CommunityDay.Dialogue.213}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marlon",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_MarlonFay": "{{i18n:CommunityDay.Dialogue.214}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Marlon",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_MarlonFay": "{{i18n:CommunityDay.Dialogue.215}}"
+			}
+		},
+		{ //Marlon's shop closed on community day
+			"Action": "EditMap",
+			"Target": "Maps/AdventureGuild",
+			"FromFile": "Assets/Maps/MapPatches/GuildShopClosed.tbin",
+			"When": {
+				"HasSeenEvent": "191393",
+				"Day": "22"
+			},
+			"ToArea": {
+				"X": 3,
+				"Y": 12,
+				"Width": 4,
+				"Height": 1
+			}
+		},
+		{ //CLAIRE Community Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Claire",
+			"When": {
+				"HasSeenEvent |contains=191393": true,
+				"HasSeenEvent |contains=3219873": true,
+				"Day": "22"
+			},
+			"Entries": {
+				"22": "0 Custom_Claire_WarpRoom 3 3 2/1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire\"/1710 BusStop 22 8 0/1900 Custom_DayEnd_WarpRoom 2 2 0",
+			}
+		},
+		{ //Spring Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire": "{{i18n:CommunityDay.Dialogue.216}}"
+			}
+		},
+		{ //Summer Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire": "{{i18n:CommunityDay.Dialogue.217}}"
+			}
+		},
+		{ //Fall Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire": "{{i18n:CommunityDay.Dialogue.218}}"
+			}
+		},
+		{ //Winter Dialogue
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Claire": "{{i18n:CommunityDay.Dialogue.219}}"
+			}
+		},
+		{ //CLAIRE Community Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Claire",
+			"When": {
+				"HasSeenEvent |contains=191393": true,
+				"HasSeenEvent |contains=3219873": true,
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire\"/1710 BusStop -2 23 3"
+			}
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire_Married": "{{i18n:CommunityDay.Dialogue.220}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire_Married": "{{i18n:CommunityDay.Dialogue.221}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Claire_Married": "{{i18n:CommunityDay.Dialogue.222}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Claire_Married": "{{i18n:CommunityDay.Dialogue.223}}"
+			}
+		},
+		{ //Martin takes over Claire's theater shift on community day
+			"Action": "EditData",
+			"Target": "Characters/schedules/Martin",
+			"When": {
+				"HasSeenEvent |contains=191393": true,
+				"HasSeenEvent |contains=3219873": true,
+				"HasFlag": "ccMovieTheater"
+			},
+			"Entries": {
+				"22": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+			}
+		},
+	]
+}

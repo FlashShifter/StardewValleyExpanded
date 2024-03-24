@@ -1,0 +1,1223 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+			"TargetField": [
+				"JojaMart"
+			],
+			"Entries": {
+					"MusicDefault": "movieTheater"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/PassiveFestivals",
+			"Entries": {
+				"FlashShifter.StardewValleyExpandedCP_JojaDay": {
+					"DisplayName": "{{i18n:JojaDay_Name}}",
+					"Condition": "PLAYER_HAS_SEEN_EVENT ANY 502261",
+					"ShowOnCalendar": true,
+					"Season": "{{Season}}",
+					"StartDay": 22,
+					"EndDay": 22,
+					"StartTime": 1000,
+					"StartMessage": "{{i18n:JojaDay_StartMessage}}",
+					"OnlyShowMessageOnFirstDay": true,
+					"MapReplacements": {
+						"JojaMart": "JojaMart"
+					},
+					"DailySetupMethod": null,
+					"CleanupMethod": null,
+					"CustomFields": {}
+				}
+			}
+		},
+		{ //Changes weather icon to festival
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "Assets/Tilesheets/Festival_Icons.png",
+			"When": {
+				"Day": "22",
+				"HasSeenEvent": "502261"
+			},
+			"ToArea": {
+				"X": 341,
+				"Y": 421,
+				"Width": 84,
+				"Height": 8
+			},
+		},
+		{
+			//Alters Joja Mart open time to 10am~8pm from 10am~10pm
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"FromFile": "Assets/Maps/MapPatches/JojaDayReducedHours.tbin",
+			"ToArea": {
+				"X": 95,
+				"Y": 50,
+				"Width": 2,
+				"Height": 1
+			},
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+		},
+		{ //Joja Day introduction event
+			"Action": "EditData",
+			"Target": "Data/Events/farm",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "21"
+			},
+			"Entries": {
+				"221971519/": "continue/-1000 -1000/farmer 64 15 2 MorrisTod 64 13 0/skippable/pause 1000/speak MorrisTod \"{{i18n:JojaDay.Intro.01}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:JojaDay.Intro.02}}\"/pause 1000/end dialogue MorrisTod \"{{i18n:JojaDay.Intro.03}}\""
+			},
+		},
+		//START JOJA DAY SCHEDULES + DIALOGUE 
+		{ //LEWIS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Lewis",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "630 ManorHouse 7 5 0/1000 ManorHouse 3 6 0 \"Strings\\schedules\\Lewis:JojaDay1_Lewis\"/1200 ManorHouse 6 5 2 \"Strings\\schedules\\Lewis:JojaDay1_Lewis\"/1230 JojaMart 13 27 0 \"Strings\\schedules\\Lewis:JojaDay2_Lewis\"/1400 ManorHouse 22 8 2 \"Strings\\schedules\\Lewis:JojaDay3_Lewis\"/2100 ManorHouse 22 4 1 lewis_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Lewis",
+			"Entries": {
+				"JojaDay1_Lewis": "{{i18n:JojaDay.Dialogue.01}}",
+				"JojaDay2_Lewis": "{{i18n:JojaDay.Dialogue.02}}",
+				"JojaDay3_Lewis": "{{i18n:JojaDay.Dialogue.03}}",
+			}
+		},
+		{ //MARNIE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Marnie",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 AnimalShop 24 15 0/810 AnimalShop 12 14 2/1030 AnimalShop 15 15 2 \"Strings\\schedules\\Marnie:JojaDay1_Marnie\"/1100 JojaMart 9 13 3 \"Strings\\schedules\\Marnie:JojaDay2_Marnie\"/1410 JojaMart 9 17 3 \"Strings\\schedules\\Marnie:JojaDay2_Marnie\"/1440 JojaMart 9 16 3 \"Strings\\schedules\\Marnie:JojaDay2_Marnie\"/1510 JojaMart 10 16 1 \"Strings\\schedules\\Marnie:JojaDay2_Marnie\"/1530 JojaMart 9 20 3 \"Strings\\schedules\\Marnie:JojaDay2_Marnie\"/1600 JojaMart 7 26 3 \"Strings\\schedules\\Marnie:JojaDay3_Marnie\"/1630 AnimalShop 13 5 3 marnie_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Marnie",
+			"Entries": {
+				"JojaDay1_Marnie": "{{i18n:JojaDay.Dialogue.04}}",
+				"JojaDay2_Marnie": "{{i18n:JojaDay.Dialogue.05}}",
+				"JojaDay3_Marnie": "{{i18n:JojaDay.Dialogue.06}}",
+			}
+		},
+		{ //JAS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Jas",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "810 AnimalShop 24 15 2/920 AnimalShop 7 5 2 jas_read/1030 AnimalShop 16 17 3 \"Strings\\schedules\\Jas:JojaDay1_Jas\"/1100 JojaMart 10 11 1 \"Strings\\schedules\\Jas:JojaDay2_Jas\"/1400 JojaMart 19 7 1 \"Strings\\schedules\\Jas:JojaDay3_Jas\"/1550 JojaMart 7 24 3 \"Strings\\schedules\\Jas:JojaDay4_Jas\"/1630 AnimalShop 2 7 3 jas_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Jas",
+			"Entries": {
+				"JojaDay1_Jas": "{{i18n:JojaDay.Dialogue.07}}",
+				"JojaDay2_Jas": "{{i18n:JojaDay.Dialogue.08}}",
+				"JojaDay3_Jas": "{{i18n:JojaDay.Dialogue.09}}",
+				"JojaDay4_Jas": "{{i18n:JojaDay.Dialogue.10}}",
+			}
+		},
+		{ //SHANE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "630 AnimalShop 28 15 0/730 JojaMart 2 27 2/1100 JojaMart 1 9 0/1140 JojaMart 28 9 0/1210 JojaMart 27 7 1/1240 JojaMart 28 9 0/1250 JojaMart 1 9 0/1320 JojaMart 2 27 2/1350 JojaMart 3 26 1/1410 JojaMart 1 9 0/1440 JojaMart 28 9 0/1510 JojaMart 26 7 1/1520 JojaMart 27 8 1/1540 JojaMart 27 13 1/1550 JojaMart 27 14 1/1600 JojaMart 27 15 1/1610 JojaMart 27 16 1/1620 JojaMart 27 17 1/1630 JojaMart 27 18 1/1640 JojaMart 27 19 1/1650 JojaMart 27 7 1/1710 JojaMart 2 8 3/1750 JojaMart 3 26 1/1820 JojaMart 2 27 2/1840 JojaMart 16 26 1/1900 JojaMart 12 20 2/2000 JojaMart 12 22 1/2110 AnimalShop 27 4 1 shane_sleep",
+			},
+		},
+		{ //SHANE Joja Day Marriage Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Shane",
+				"Day": 22
+			},
+			"Entries": {
+				"marriage_Mon": "730 JojaMart 11 20 2/1100 JojaMart 1 9 0/1140 JojaMart 28 9 0/1210 JojaMart 27 7 1/1240 JojaMart 28 9 0/1250 JojaMart 1 9 0/1320 JojaMart 2 27 2/1350 JojaMart 3 26 1/1410 JojaMart 1 9 0/1440 JojaMart 28 9 0/1510 JojaMart 26 7 1/1520 JojaMart 27 8 1/1540 JojaMart 27 13 1/1550 JojaMart 27 14 1/1600 JojaMart 27 15 1/1610 JojaMart 27 16 1/1620 JojaMart 27 17 1/1630 JojaMart 27 18 1/1640 JojaMart 27 19 1/1650 JojaMart 27 7 1/1710 JojaMart 2 8 3/1750 JojaMart 3 26 1/1820 JojaMart 2 27 2/1840 JojaMart 16 26 1/1900 JojaMart 12 20 2/2000 JojaMart 12 22 1/2110 Bed",
+			},
+		},
+		{ //SHANE Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueShane",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Shane",
+				"Day": 22
+			},
+			"Entries": {
+				"funLeave_Shane": "{{i18n:JojaDay.Dialogue.11}}",
+				"funReturn_Shane": "{{i18n:JojaDay.Dialogue.12}}",
+			},
+		},
+		{ //SHANE Joja Day Marriage Dialogue - mart string replaced
+			"Action": "EditData",
+			"Target": "characters/Dialogue/Shane",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Shane",
+				"Day": 22
+			},
+			"Entries": {
+				"JojaMart": "{{i18n:JojaDay.Dialogue.13}}",
+			},
+		},
+		{ //GUS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Gus",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "730 Saloon 29 6 0/1000 Saloon 11 18 2/1230 JojaMart 22 12 1 \"Strings\\schedules\\Gus:JojaDay_Gus\"/1420 JojaMart 22 15 1 \"Strings\\schedules\\Gus:JojaDay_Gus\"/1440 JojaMart 22 14 1 \"Strings\\schedules\\Gus:JojaDay_Gus\"/1510 JojaMart 7 26 3 \"Strings\\schedules\\Gus:JojaDay1_Gus\"/1600 Saloon 11 18 2/2300 Saloon 23 4 2 gus_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Gus",
+			"Entries": {
+				"JojaDay_Gus": "{{i18n:JojaDay.Dialogue.14}}",
+				"JojaDay1_Gus": "{{i18n:JojaDay.Dialogue.15}}",
+			}
+		},
+		{ //LINUS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "640 Tent 2 2 2/1850 Tent 4 3 1 linus_sleep",
+			},
+		},
+		{ //LINUS Joja Day Schedule - Leo
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"When": {
+				"HasSeenEvent |contains=502261": true,
+				"HasSeenEvent |contains=6497428": true
+			},
+			"Entries": {
+				"22": "640 Tent 3 3 3/1850 Tent 4 3 1 linus_sleep",
+			},
+		},
+		{
+			//LEO Joja Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Leo",
+			"When": {
+				"HasSeenEvent |contains=502261": true,
+				"HasSeenEvent |contains=6497428": true
+			},
+			"Entries": {
+				"22": "0 LeoTreeHouse 4 3 2/650 Tent 2 3 1/1750 LeoTreeHouse 4 3 2",
+			}
+		},
+		{ //HARVEY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Harvey",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "710 HarveyRoom 19 7 0/830 Hospital 6 15 2 \"Strings\\schedules\\Harvey:JojaDay1_Harvey\"/1500 JojaMart 16 24 3/1620 JojaMart 14 12 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1730 JojaMart 13 18 3 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1750 JojaMart 18 12 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1810 JojaMart 19 5 0 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1840 JojaMart 10 16 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1900 JojaMart 7 25 3 \"Strings\\schedules\\Harvey:JojaDay3_Harvey\"/1950 HarveyRoom 13 4 2 harvey_sleep",
+			},
+		},
+		{ //HARVEY Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Harvey",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Harvey",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "800 Hospital 6 15 2 \"Strings\\schedules\\Harvey:JojaDay1_Harvey\"/1500 JojaMart 16 24 3/1620 JojaMart 14 12 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1730 JojaMart 13 18 3 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1750 JojaMart 18 12 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1810 JojaMart 19 5 0 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1840 JojaMart 10 16 1 \"Strings\\schedules\\Harvey:JojaDay2_Harvey\"/1900 JojaMart 7 25 3 \"Strings\\schedules\\Harvey:JojaDay3_Harvey\"/1950 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Harvey",
+			"Entries": {
+				"JojaDay1_Harvey": "{{i18n:JojaDay.Dialogue.16}}",
+				"JojaDay2_Harvey": "{{i18n:JojaDay.Dialogue.17}}",
+				"JojaDay3_Harvey": "{{i18n:JojaDay.Dialogue.18}}",
+			}
+		},
+		{ //HARVEY Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueHarvey",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Harvey",
+				"Day": 22
+			},
+			"Entries": {
+				"funLeave_Harvey": "{{i18n:JojaDay.Dialogue.19}}",
+				"funReturn_Harvey": "{{i18n:JojaDay.Dialogue.20}}",
+			},
+		},
+		{ //PAM Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Pam",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "910 Town 71 69 1/940 JojaMart 21 17 3 \"Strings\\schedules\\Pam:JojaDay_Pam\"/1050 JojaMart 22 12 3 \"Strings\\schedules\\Pam:JojaDay_Pam\"/1110 JojaMart 22 13 1 \"Strings\\schedules\\Pam:JojaDay_Pam\"/1210 JojaMart 22 16 1 \"Strings\\schedules\\Pam:JojaDay_Pam\"/1300 JojaMart 21 13 3 \"Strings\\schedules\\Pam:JojaDay_Pam\"/1400 JojaMart 7 25 3 \"Strings\\schedules\\Pam:JojaDay1_Pam\"/1500 Town 73 69 2/1830 Town 72 66 2",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Pam",
+			"Entries": {
+				"JojaDay_Pam": "{{i18n:JojaDay.Dialogue.21}}",
+				"JojaDay1_Pam": "{{i18n:JojaDay.Dialogue.22}}",
+			}
+		},
+		{ //PENNY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Penny",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "910 Town 73 69 3/940 JojaMart 21 18 3 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1120 JojaMart 22 15 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1150 JojaMart 22 17 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1220 JojaMart 22 18 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1300 JojaMart 21 15 3 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1400 JojaMart 7 26 3 \"Strings\\schedules\\Penny:JojaDay1_Penny\"/1500 ArchaeologyHouse 17 9 0/1900 Trailer 4 9 1 penny_sleep",
+			},
+		},
+		{ //PENNY Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Penny",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Penny",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "740 Town 73 69 3/940 JojaMart 21 18 3 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1120 JojaMart 22 15 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1150 JojaMart 22 17 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1220 JojaMart 22 18 1 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1300 JojaMart 21 15 3 \"Strings\\schedules\\Penny:JojaDay_Penny\"/1400 JojaMart 7 26 3 \"Strings\\schedules\\Penny:JojaDay1_Penny\"/1500 ArchaeologyHouse 17 9 0/1900 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Penny",
+			"Entries": {
+				"JojaDay_Penny": "{{i18n:JojaDay.Dialogue.23}}",
+				"JojaDay1_Penny": "{{i18n:JojaDay.Dialogue.24}}",
+			}
+		},
+		{ //Penny Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialoguePenny",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Penny",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Penny": "{{i18n:JojaDay.Dialogue.25}}",
+				"funReturn_Penny": "{{i18n:JojaDay.Dialogue.26}}",
+			},
+		},
+		{ //MARU Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Maru",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "750 ScienceHouse 27 9 0/800 ScienceHouse 9 5 0/1020 ScienceHouse 4 22 1/1050 JojaMart 18 15 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1300 JojaMart 17 18 3 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1400 JojaMart 18 16 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1430 JojaMart 18 17 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1500 JojaMart 27 19 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1600 JojaMart 17 12 3 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1630 JojaMart 18 12 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1700 JojaMart 11 24 2 \"Strings\\schedules\\Maru:JojaDay1_Maru\"/1800 ScienceHouse 6 4 0/2130 ScienceHouse 2 4 0 maru_sleep",
+			},
+		},
+		{ //MARU Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Maru",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Maru",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "700 ScienceHouse 4 22 1/1050 JojaMart 18 15 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1300 JojaMart 17 18 3 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1400 JojaMart 18 16 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1430 JojaMart 18 17 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1500 JojaMart 27 19 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1600 JojaMart 17 12 3 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1630 JojaMart 18 12 1 \"Strings\\schedules\\Maru:JojaDay_Maru\"/1700 JojaMart 11 24 2 \"Strings\\schedules\\Maru:JojaDay1_Maru\"/1800 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Maru",
+			"Entries": {
+				"JojaDay_Maru": "{{i18n:JojaDay.Dialogue.27}}",
+				"JojaDay1_Maru": "{{i18n:JojaDay.Dialogue.28}}",
+			}
+		},
+		{ //Maru Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueMaru",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Maru",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Maru": "{{i18n:JojaDay.Dialogue.29}}",
+				"funReturn_Maru": "{{i18n:JojaDay.Dialogue.30}}",
+			},
+		},
+		{ //DEMETRIUS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Demetrius",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "750 ScienceHouse 29 9 0/1000 ScienceHouse 6 22 3/1050 JojaMart 17 11 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1310 JojaMart 17 14 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1400 JojaMart 17 13 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1450 JojaMart 17 12 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1530 JojaMart 18 12 1 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1600 JojaMart 17 11 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1630 JojaMart 17 18 3 \"Strings\\schedules\\Demetrius:JojaDay_Demetrius\"/1700 JojaMart 11 26 3 \"Strings\\schedules\\Demetrius:JojaDay1_Demetrius\"/1800 ScienceHouse 19 18 0/2110 ScienceHouse 19 4 1 demetrius_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Demetrius",
+			"Entries": {
+				"JojaDay_Demetrius": "{{i18n:JojaDay.Dialogue.31}}",
+				"JojaDay1_Demetrius": "{{i18n:JojaDay.Dialogue.32}}",
+			}
+		},
+		{ //ROBIN Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Robin",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "640 ScienceHouse 28 9 0/740 ScienceHouse 8 18 2/1020 ScienceHouse 7 20 1/1050 JojaMart 17 12 3 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1310 JojaMart 17 16 3 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1330 JojaMart 18 13 1 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1400 JojaMart 18 14 1 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1420 JojaMart 18 13 1 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1500 JojaMart 17 17 3 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1610 JojaMart 18 13 1 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1640 JojaMart 18 14 1 \"Strings\\schedules\\Robin:JojaDay_Robin\"/1700 JojaMart 11 25 3 \"Strings\\schedules\\Robin:JojaDay1_Robin\"/1800 ScienceHouse 2 21 0/2110 ScienceHouse 21 4 2 robin_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Robin",
+			"Entries": {
+				"JojaDay_Robin": "{{i18n:JojaDay.Dialogue.33}}",
+				"JojaDay1_Robin": "{{i18n:JojaDay.Dialogue.34}}",
+			}
+		},
+		{ //SEBASTIAN Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sebastian",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "830 SebastianRoom 3 5 0/900 ScienceHouse 27 9 0/1000 ScienceHouse 9 20 3/1200 JojaMart 2 6 1 \"Strings\\schedules\\Sebastian:JojaDay_Sebastian\"/1600 SebastianRoom 11 18 1 sebastian_sleep",
+			},
+		},
+		{ //SEBASTIAN Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Sebastian",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Sebastian",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1120 JojaMart 2 6 1 \"Strings\\schedules\\Sebastian:JojaDay_Sebastian\"/1600 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Sebastian",
+			"Entries": {
+				"JojaDay_Sebastian": "{{i18n:JojaDay.Dialogue.35}}",
+			}
+		},
+		{ //Sebastian Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueSebastian",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Sebastian",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Sebastian": "{{i18n:JojaDay.Dialogue.36}}",
+			},
+		},
+		{ //CLINT Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Clint",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "740 Blacksmith 4 5 0/920 Town 100 81 0/1030 Town 97 77 0/1100 Town 96 65 1/1220 JojaMart 2 16 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1420 JojaMart 2 16 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1510 JojaMart 2 14 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1550 JojaMart 2 14 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1630 JojaMart 2 21 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1730 JojaMart 2 19 1 \"Strings\\schedules\\Clint:JojaDay_Clint\"/1750 JojaMart 7 26 3 \"Strings\\schedules\\Clint:JojaDay1_Clint\"/1850 Blacksmith 10 4 2 clint_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Clint",
+			"Entries": {
+				"JojaDay_Clint": "{{i18n:JojaDay.Dialogue.37}}",
+				"JojaDay1_Clint": "{{i18n:JojaDay.Dialogue.38}}",
+			}
+		},
+		{ //HALEY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Haley",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "710 HaleyHouse 8 7 1/810 HaleyHouse 21 16 2/920 HaleyHouse 18 16 2/1010 HaleyHouse 6 16 0/1040 HaleyHouse 3 20 1/1100 JojaMart 6 14 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1350 JojaMart 5 11 3 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1450 JojaMart 6 13 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1530 JojaMart 2 12 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1630 JojaMart 6 14 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1710 JojaMart 6 12 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1740 JojaMart 5 15 3 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1830 JojaMart 11 25 3 \"Strings\\schedules\\Haley:JojaDay1_Haley\"/1930 HaleyHouse 2 5 2 haley_sleep",
+			},
+		},
+		{ //HALEY Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Haley",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Haley",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "830 HaleyHouse 3 20 1/1100 JojaMart 6 14 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1350 JojaMart 5 11 3 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1450 JojaMart 6 13 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1530 JojaMart 2 12 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1630 JojaMart 6 14 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1710 JojaMart 6 12 1 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1740 JojaMart 5 15 3 \"Strings\\schedules\\Haley:JojaDay_Haley\"/1830 JojaMart 11 25 3 \"Strings\\schedules\\Haley:JojaDay1_Haley\"/1930 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Haley",
+			"Entries": {
+				"JojaDay_Haley": "{{i18n:JojaDay.Dialogue.39}}",
+				"JojaDay1_Haley": "{{i18n:JojaDay.Dialogue.40}}",
+			}
+		},
+		{ //Haley Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueHaley",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Haley",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Haley": "{{i18n:JojaDay.Dialogue.41}}",
+				"funReturn_Haley": "{{i18n:JojaDay.Dialogue.42}}",
+			},
+		},
+		{ //EMILY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "730 HaleyHouse 19 16 0/820 HaleyHouse 14 16 0/930 HaleyHouse 16 8 0/1040 HaleyHouse 5 20 3/1100 JojaMart 6 16 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1400 JojaMart 6 17 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1500 JojaMart 6 15 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1700 JojaMart 15 22 0 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1820 JojaMart 11 26 3 \"Strings\\schedules\\Emily:JojaDay1_Emily\"/1930 HaleyHouse 19 4 2 emily_sleep",
+			},
+		},
+		{ //EMILY Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Emily",
+				"Day": 22
+			},
+			"Entries": {
+				"marriage_Mon": "830 HaleyHouse 5 20 3/1100 JojaMart 6 16 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1400 JojaMart 6 17 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1500 JojaMart 6 15 1 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1700 JojaMart 15 22 0 \"Strings\\schedules\\Emily:JojaDay_Emily\"/1820 JojaMart 11 26 3 \"Strings\\schedules\\Emily:JojaDay1_Emily\"/1930 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"HasSeenEvent |contains=3219873": false
+			},
+			"Entries": {
+				"JojaDay_Emily": "{{i18n:JojaDay.Dialogue.43}}",
+				"JojaDay1_Emily": "{{i18n:JojaDay.Dialogue.44}}",
+			}
+		},
+		{ //Schedule Strings - player has seen Claire's 6 heart event
+			"Action": "EditData",
+			"Target": "strings/schedules/Emily",
+			"When": {
+				"HasSeenEvent |contains=3219873": true
+			},
+			"Entries": {
+				"JojaDay_Emily": "{{i18n:JojaDay.Dialogue.45}}",
+				"JojaDay1_Emily": "{{i18n:JojaDay.Dialogue.46}}",
+			}
+		},
+		{ //Emily Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueEmily",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Emily",
+				"Day": "22",
+				"HasSeenEvent |contains=3219873": false
+			},
+			"Entries": {
+				"funLeave_Emily": "{{i18n:JojaDay.Dialogue.47}}",
+				"funReturn_Emily": "{{i18n:JojaDay.Dialogue.48}}",
+			},
+		},
+		{ //Emily Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueEmily",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Emily",
+				"Day": "22",
+				"HasSeenEvent |contains=3219873": true
+			},
+			"Entries": {
+				"funLeave_Emily": "{{i18n:JojaDay.Dialogue.49}}",
+			},
+		},
+		{ //ALEX Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "800 JoshHouse 5 17 0/900 JoshHouse 14 5 2 alex_lift_weights/940 JoshHouse 10 17 2/1010 JojaMart 9 8 0 \"Strings\\schedules\\Alex:JojaDay_Alex\"/1200 JojaMart 25 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1300 JojaMart 27 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1400 JojaMart 26 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1420 JojaMart 15 7 3 \"Strings\\schedules\\Alex:JojaDay_Alex\"/1500 JojaMart 11 24 2 \"Strings\\schedules\\Alex:JojaDay2_Alex\"/1610 JoshHouse 8 19 2/2030 JoshHouse 20 4 2 alex_sleep",
+			},
+		},
+		{ //ALEX Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Alex",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "750 JoshHouse 10 17 2/1010 JojaMart 9 8 0 \"Strings\\schedules\\Alex:JojaDay_Alex\"/1200 JojaMart 25 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1300 JojaMart 27 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1400 JojaMart 26 5 0 \"Strings\\schedules\\Alex:JojaDay1_Alex\"/1420 JojaMart 15 7 3 \"Strings\\schedules\\Alex:JojaDay_Alex\"/1500 JojaMart 11 24 2 \"Strings\\schedules\\Alex:JojaDay2_Alex\"/1610 JoshHouse 8 19 2/2030 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Alex",
+			"Entries": {
+				"JojaDay_Alex": "{{i18n:JojaDay.Dialogue.50}}",
+				"JojaDay1_Alex": "{{i18n:JojaDay.Dialogue.51}}",
+				"JojaDay2_Alex": "{{i18n:JojaDay.Dialogue.52}}",
+			}
+		},
+		{ //Alex Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueAlex",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Alex",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Alex": "{{i18n:JojaDay.Dialogue.53}}",
+				"funReturn_Alex": "{{i18n:JojaDay.Dialogue.54}}",
+			},
+		},
+		{ //GEORGE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 JoshHouse 5 20 3/830 JoshHouse 15 22 0/940 JoshHouse 11 20 3/1010 JojaMart 11 6 2 \"Strings\\schedules\\George:JojaDay_George\"/1430 JojaMart 11 6 2 \"Strings\\schedules\\George:JojaDay_George\"/1500 JojaMart 11 25 3 \"Strings\\schedules\\George:JojaDay1_George\"/1610 JoshHouse 16 22 0",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/George",
+			"Entries": {
+				"JojaDay_George": "{{i18n:JojaDay.Dialogue.55}}",
+				"JojaDay1_George": "{{i18n:JojaDay.Dialogue.56}}",
+			}
+		},
+		{ //EVELYN Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Evelyn",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 JoshHouse 3 17 0/810 JoshHouse 3 19 2/910 JoshHouse 18 17 0/940 JoshHouse 8 20 1/1010 JojaMart 7 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1150 JojaMart 6 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1230 JojaMart 8 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1240 JojaMart 10 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1310 JojaMart 7 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1350 JojaMart 10 8 0 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1430 JojaMart 12 8 1 \"Strings\\schedules\\Evelyn:JojaDay_Evelyn\"/1500 JojaMart 11 26 3 \"Strings\\schedules\\Evelyn:JojaDay1_Evelyn\"/1610 JoshHouse 3 5 0",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Evelyn",
+			"Entries": {
+				"JojaDay_Evelyn": "{{i18n:JojaDay.Dialogue.57}}",
+				"JojaDay1_Evelyn": "{{i18n:JojaDay.Dialogue.58}}",
+			}
+		},
+		{ //VICTOR Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Victor",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 Custom_JenkinsHouse 30 37 0/850 Custom_JenkinsHouse 24 25 2 Victor_Book2/1030 Custom_JenkinsHouse 20 39 1/1100 JojaMart 14 16 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1210 JojaMart 13 15 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1250 JojaMart 14 14 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1320 JojaMart 13 16 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1350 JojaMart 17 18 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1410 JojaMart 18 18 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1430 JojaMart 14 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1500 JojaMart 25 17 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1540 JojaMart 14 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1600 JojaMart 22 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1620 JojaMart 21 12 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1640 JojaMart 7 25 3 \"Strings\\schedules\\Victor:JojaDay1_Victor\"/1710 Custom_JenkinsHouse 32 25 0/2130 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
+			},
+		},
+		{
+			//Victor Joja Day - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Victor",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Victor",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "830 Custom_JenkinsHouse 20 39 1/1100 JojaMart 14 16 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1210 JojaMart 13 15 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1250 JojaMart 14 14 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1320 JojaMart 13 16 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1350 JojaMart 17 18 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1410 JojaMart 18 18 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1430 JojaMart 14 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1500 JojaMart 25 17 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1540 JojaMart 14 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1600 JojaMart 22 15 1 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1620 JojaMart 21 12 3 \"Strings\\schedules\\Victor:JojaDay_Victor\"/1640 JojaMart 7 25 3 \"Strings\\schedules\\Victor:JojaDay1_Victor\"/1710 Custom_JenkinsHouse 32 25 0/2130 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Victor",
+			"Entries": {
+				"JojaDay_Victor": "{{i18n:JojaDay.Dialogue.115}}",
+				"JojaDay1_Victor": "{{i18n:JojaDay.Dialogue.116}}",
+			}
+		},
+		{ //Victor Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueVictor",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Victor",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Victor": "{{i18n:JojaDay.Dialogue.59}}",
+				"funReturn_Victor": "{{i18n:JojaDay.Dialogue.60}}",
+			},
+		},
+		{ //OLIVIA Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Olivia",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "630 Custom_JenkinsHouse 19 8 2 Olivia_Yoga/910 Custom_JenkinsHouse 33 37 2/1030 Custom_JenkinsHouse 22 39 3/1100 JojaMart 15 25 0 \"Strings\\schedules\\Olivia:JojaDay1_Olivia\"/1250 JojaMart 14 18 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1330 JojaMart 14 12 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1400 JojaMart 13 17 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1440 JojaMart 17 18 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1510 JojaMart 10 18 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1540 JojaMart 9 16 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1600 JojaMart 21 17 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1620 JojaMart 21 18 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1640 JojaMart 7 26 3 \"Strings\\schedules\\Olivia:JojaDay2_Olivia\"/1710 Custom_JenkinsHouse 33 37 0/2110 Custom_JenkinsHouse 20 5 3 Olivia_Sleep",
+			},
+		},
+		{
+			//OLIVIA Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Olivia",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Olivia",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "820 Custom_JenkinsHouse 22 39 3/1100 JojaMart 15 25 0 \"Strings\\schedules\\Olivia:JojaDay1_Olivia\"/1250 JojaMart 14 18 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1330 JojaMart 14 12 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1400 JojaMart 13 17 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1440 JojaMart 17 18 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1510 JojaMart 10 18 1 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1540 JojaMart 9 16 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1600 JojaMart 21 17 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1620 JojaMart 21 18 3 \"Strings\\schedules\\Olivia:JojaDay_Olivia\"/1640 JojaMart 7 26 3 \"Strings\\schedules\\Olivia:JojaDay2_Olivia\"/1710 Custom_JenkinsHouse 33 37 0/2110 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Olivia",
+			"Entries": {
+				"JojaDay_Olivia": "{{i18n:JojaDay.Dialogue.61}}",
+				"JojaDay1_Olivia": "{{i18n:JojaDay.Dialogue.62}}",
+				"JojaDay2_Olivia": "{{i18n:JojaDay.Dialogue.63}}",
+			}
+		},
+		{ //Olivia Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueOlivia",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Olivia",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Olivia": "{{i18n:JojaDay.Dialogue.64}}",
+				"funReturn_Olivia": "{{i18n:JojaDay.Dialogue.65}}",
+			},
+		},
+		{ //JODI Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Jodi",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "710 SamHouse 5 5 0/900 SamHouse 17 5 1/1030 SamHouse 4 13 1/1120 JojaMart 23 5 0 \"Strings\\schedules\\Jodi:JojaDay_Jodi\"/1420 JojaMart 22 6 0 \"Strings\\schedules\\Jodi:JojaDay_Jodi\"/1440 JojaMart 25 5 0 \"Strings\\schedules\\Jodi:JojaDay_Jodi\"/1530 JojaMart 26 5 0 \"Strings\\schedules\\Jodi:JojaDay_Jodi\"/1550 JojaMart 19 5 0 \"Strings\\schedules\\Jodi:JojaDay_Jodi\"/1620 JojaMart 11 26 3 \"Strings\\schedules\\Jodi:JojaDay1_Jodi\"/1700 SamHouse 5 5 0/2100 SamHouse 19 5 1 jodi_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Jodi",
+			"Entries": {
+				"JojaDay_Jodi": "{{i18n:JojaDay.Dialogue.66}}",
+				"JojaDay1_Jodi": "{{i18n:JojaDay.Dialogue.67}}",
+			}
+		},
+		{ //VINCENT Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Vincent",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "830 SamHouse 1 6 1/940 SamHouse 10 22 0/1040 SamHouse 5 13 3/1120 JojaMart 22 5 0/1400 JojaMart 20 7 3/1600 JojaMart 23 5 0/1620 JojaMart 11 24 0/1700 SamHouse 11 23 2/2200 SamHouse 9 22 3 vincent_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"Entries": {
+				"JojaMart_23_5": "{{i18n:JojaDay.Dialogue.68}}",
+				"JojaMart_20_7": "{{i18n:JojaDay.Dialogue.69}}",
+				"JojaMart_11_24": "{{i18n:JojaDay.Dialogue.70}}",
+				"SamHouse_11_23": "{{i18n:JojaDay.Dialogue.71}}",
+			},
+		},
+		{ //KENT Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Kent",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "710 SamHouse 6 5 0/900 SamHouse 18 5 3/1030 SamHouse 4 16 3/1120 JojaMart 25 7 3 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1340 JojaMart 21 7 0 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1400 JojaMart 18 5 0 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1420 JojaMart 16 4 2 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1450 JojaMart 18 5 0 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1530 JojaMart 17 5 2 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1550 JojaMart 21 5 0 \"Strings\\schedules\\Kent:JojaDay_Kent\"/1620 JojaMart 11 25 3 \"Strings\\schedules\\Kent:JojaDay1_Kent\"/1700 SamHouse 4 13 2/2100 SamHouse 20 5 1 kent_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Kent",
+			"Entries": {
+				"JojaDay_Kent": "{{i18n:JojaDay.Dialogue.72}}",
+				"JojaDay1_Kent": "{{i18n:JojaDay.Dialogue.73}}",
+			}
+		},
+		{ //SAM Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "850 SamHouse 7 5 0/1000 SamHouse 14 13 0/1030 SamHouse 2 16 1/1120 JojaMart 19 5 1 \"Strings\\schedules\\Sam:JojaDay_Sam\"/1340 JojaMart 3 7 0 \"Strings\\schedules\\Sam:JojaDay1_Sam\"/1540 JojaMart 25 12 3 \"Strings\\schedules\\Sam:JojaDay_Sam\"/1600 JojaMart 27 7 1 \"Strings\\schedules\\Sam:JojaDay_Sam\"/1620 JojaMart 11 23 2 \"Strings\\schedules\\Sam:JojaDay2_Sam\"/1700 SamHouse 22 16 1/2200 SamHouse 21 13 1 sam_sleep",
+			},
+		},
+		{ //SAM Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Sam",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1030 JojaMart 16 5 2 \"Strings\\schedules\\Sam:JojaDay_Sam\"/1710 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Sam",
+			"Entries": {
+				"JojaDay_Sam": "{{i18n:JojaDay.Dialogue.74}}",
+				"JojaDay1_Sam": "{{i18n:JojaDay.Dialogue.75}}",
+				"JojaDay2_Sam": "{{i18n:JojaDay.Dialogue.76}}",
+			}
+		},
+		{ //Sam Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueSam",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Sam",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Sam": "{{i18n:JojaDay.Dialogue.77}}",
+				"funReturn_Sam": "{{i18n:JojaDay.Dialogue.78}}",
+			},
+		},
+		{ //ABIGAIL Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Abigail",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "800 SeedShop 9 5 0/900 SeedShop 35 9 0/1000 SeedShop 3 6 0 abigail_videogames/1130 SeedShop 6 22 2/1230 JojaMart 4 6 3 \"Strings\\schedules\\Abigail:JojaDay_Abigail\"/1600 SeedShop 3 6 0 abigail_videogames/1950 SeedShop 2 9 2 abigail_sleep",
+			},
+		},
+		{ //ABIGAIL Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Abigail",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Abigail",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "800 SeedShop 9 5 0/900 SeedShop 35 9 0/1000 SeedShop 3 6 0 abigail_videogames/1130 SeedShop 6 22 2/1230 JojaMart 4 6 3 \"Strings\\schedules\\Abigail:JojaDay_Abigail\"/16000 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Abigail",
+			"Entries": {
+				"JojaDay_Abigail": "{{i18n:JojaDay.Dialogue.79}}",
+			}
+		},
+		{ //Abigail Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueAbigail",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Abigail",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Abigail": "{{i18n:JojaDay.Dialogue.80}}",
+				"funReturn_Abigail": "{{i18n:JojaDay.Dialogue.81}}",
+			},
+		},
+		{ //ELLIOTT Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "720 ElliottHouse 1 5 0/840 Beach 49 19 2/1010 Beach 36 15 3/1050 JojaMart 27 14 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1310 JojaMart 27 16 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1330 JojaMart 27 14 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1430 JojaMart 16 24 3 \"Strings\\schedules\\Elliott:JojaDay1_Elliott\"/1520 ElliottHouse 1 5 0",
+			},
+		},
+		{ //ELLIOTT Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Elliott",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "1050 JojaMart 27 14 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1310 JojaMart 27 16 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1330 JojaMart 27 14 1 \"Strings\\schedules\\Elliott:JojaDay_Elliott\"/1430 JojaMart 16 24 3 \"Strings\\schedules\\Elliott:JojaDay1_Elliott\"/1520 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Elliott",
+			"Entries": {
+				"JojaDay_Elliott": "{{i18n:JojaDay.Dialogue.82}}",
+				"JojaDay1_Elliott": "{{i18n:JojaDay.Dialogue.83}}",
+			}
+		},
+		{ //Elliott Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueElliott",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Elliott",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Elliott": "{{i18n:JojaDay.Dialogue.84}}",
+				"funReturn_Elliott": "{{i18n:JojaDay.Dialogue.85}}",
+			},
+		},
+		{ //LEAH Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Leah",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "830 LeahHouse 12 14 0/1010 JojaMart 27 16 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1320 JojaMart 27 18 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1340 JojaMart 27 16 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1410 JojaMart 25 16 3 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1430 JojaMart 14 24 1 \"Strings\\schedules\\Leah:JojaDay1_Leah\"/1520 LeahHouse 13 4 0/2100 LeahHouse 2 4 3 leah_sleep",
+			},
+		},
+		{ //LEAH Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Leah",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Leah",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "940 JojaMart 27 16 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1320 JojaMart 27 18 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1340 JojaMart 27 16 1 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1410 JojaMart 25 16 3 \"Strings\\schedules\\Leah:JojaDay_Leah\"/1430 JojaMart 14 24 1 \"Strings\\schedules\\Leah:JojaDay1_Leah\"/1520 Bed",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Leah",
+			"Entries": {
+				"JojaDay_Leah": "{{i18n:JojaDay.Dialogue.86}}",
+				"JojaDay1_Leah": "{{i18n:JojaDay.Dialogue.87}}",
+			}
+		},
+		{ //Leah Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueLeah",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Leah",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Leah": "{{i18n:JojaDay.Dialogue.88}}",
+			},
+		},
+		{ //ANDY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Andy",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "0 Custom_AndyHouse 18 6 0/640 JojaMart 25 17 3 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1100 JojaMart 27 18 1 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1130 JojaMart 25 13 3 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1220 JojaMart 27 13 1 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1240 JojaMart 25 13 3 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1330 JojaMart 25 18 3 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1400 JojaMart 25 11 3 \"Strings\\schedules\\Andy:JojaDay_Andy\"/1440 JojaMart 11 26 3 \"Strings\\schedules\\Andy:JojaDay1_Andy\"/1510 Custom_AndyHouse 18 15 0/2130 Custom_AndyHouse 9 6 1 Andy_Sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Andy",
+			"Entries": {
+				"JojaDay_Andy": "{{i18n:JojaDay.Dialogue.89}}",
+				"JojaDay1_Andy": "{{i18n:JojaDay.Dialogue.90}}",
+			}
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "characters/dialogue/Andy",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+			"Entries": {
+				"JojaMart": "{{i18n:JojaDay.Dialogue.91}}",
+			}
+		},
+		{ //WILLY Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Willy",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "630 Beach 41 36 2/900 FishShop 5 4 2 \"Strings\\schedules\\Willy:JojaDay_Willy\"",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Willy",
+			"Entries": {
+				"JojaDay_Willy": "{{i18n:JojaDay.Dialogue.92}}",
+			}
+		},
+		{ //CLAIRE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Claire",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+			"Entries": {
+				"22": "0 Custom_Claire_WarpRoom 3 3 2/800 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaDay_Claire\"/2000 JojaMart 12 24 1 \"Strings\\schedules\\Claire:JojaDay1_Claire\"/2110 BusStop 12 8 0/2300 Custom_DayEnd_WarpRoom 2 2 0"
+			}
+		},
+		{ //CLAIRE Joja Day Schedule - MARRIED
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Claire",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+			"Entries": {
+				"marriage_Mon": "740 JojaMart 9 25 1 \"Strings\\schedules\\Claire:JojaDay_Claire\"/2000 JojaMart 12 24 1 \"Strings\\schedules\\Claire:JojaDay1_Claire\"/2110 BusStop -2 23 3"
+			}
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Claire",
+			"Entries": {
+				"JojaDay_Claire": "{{i18n:JojaDay.Dialogue.93}}",
+				"JojaDay1_Claire": "{{i18n:JojaDay.Dialogue.94}}",
+			}
+		},
+		{ //Claire Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueClaire",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Claire",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Claire": "{{i18n:JojaDay.Dialogue.95}}",
+				"funReturn_Claire": "{{i18n:JojaDay.Dialogue.96}}",
+			},
+		},
+		{ //MARTIN Joja Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Martin",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22"
+			},
+			"Entries": {
+				"22": "0 Custom_Martin_WarpRoom 3 3 2/800 JojaMart 5 25 1 Martin_Idle \"Strings\\schedules\\Martin:JojaDay_Martin\"/2000 JojaMart 12 25 1 \"Strings\\schedules\\Martin:JojaDay1_Martin\"/2110 BusStop 12 8 0/2300 Custom_DayEnd_WarpRoom 2 2 0",
+			}
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Martin",
+			"Entries": {
+				"JojaDay_Martin": "{{i18n:JojaDay.Dialogue.97}}",
+				"JojaDay1_Martin": "{{i18n:JojaDay.Dialogue.98}}",
+			}
+		},
+		{ //MORRIS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/MorrisTod",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22",
+				"Spouse |contains=Olivia": true
+			},
+			"Entries": {
+				"22": "0 JojaMart 15 23 0 \"Strings\\schedules\\MorrisTod:JojaDay_MorrisTod\"/620 JojaMart 15 23 2 \"Strings\\schedules\\MorrisTod:JojaDay_MorrisTod\"/1140 JojaMart 15 24 2 \"Strings\\schedules\\MorrisTod:JojaDay1_MorrisTod\"/1250 JojaMart 15 23 2 \"Strings\\schedules\\MorrisTod:JojaDay_MorrisTod\"/1410 JojaMart 24 26 3 \"Strings\\schedules\\MorrisTod:JojaDay2_MorrisTod\"/1950 JojaMart 15 24 3 \"Strings\\schedules\\MorrisTod:JojaDay3_MorrisTod\"/2110 JojaMart 27 26 0 \"Strings\\schedules\\MorrisTod:JojaDay4_MorrisTod\"",
+			}
+		},
+		{ //MORRIS Joja Day Schedule
+			"Action": "EditData",
+			"Target": "Characters/Schedules/MorrisTod",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Day": "22",
+				"Spouse |contains=Olivia": false
+			},
+			"Entries": {
+				"22": "0 JojaMart 15 23 0 \"Strings\\schedules\\MorrisTod:JojaDay_MorrisTod\"/620 JojaMart 15 23 2 \"Strings\\schedules\\MorrisTod:JojaDay_MorrisTod\"/1410 JojaMart 24 26 3 \"Strings\\schedules\\MorrisTod:JojaDay2_MorrisTod\"/1950 JojaMart 15 24 3 \"Strings\\schedules\\MorrisTod:JojaDay3_MorrisTod\"/2110 JojaMart 27 26 0 \"Strings\\schedules\\MorrisTod:JojaDay4_MorrisTod\"",
+			}
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/MorrisTod",
+			"Entries": {
+				"JojaDay_MorrisTod": "{{i18n:JojaDay.Dialogue.99}}",
+				"JojaDay1_MorrisTod": "{{i18n:JojaDay.Dialogue.100}}",
+				"JojaDay2_MorrisTod": "{{i18n:JojaDay.Dialogue.100A}}",
+				"JojaDay3_MorrisTod": "{{i18n:JojaDay.Dialogue.101}}",
+				"JojaDay4_MorrisTod": "{{i18n:JojaDay.Dialogue.102}}",
+			}
+		},
+		{ //CAROLINE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Caroline",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 SeedShop 4 19 0/850 Town 42 57 2 \"Strings\\schedules\\Caroline:JojaDay1_Caroline\"/1300 SeedShop 4 19 3 \"Strings\\schedules\\Caroline:JojaDay2_Caroline\"/1500 SeedShop 6 19 2 \"Strings\\schedules\\Caroline:JojaDay3_Caroline\"/1700 SeedShop 7 22 3 \"Strings\\schedules\\Caroline:JojaDay4_Caroline\"/2100 SeedShop 25 4 1 caroline_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Caroline",
+			"Entries": {
+				"JojaDay1_Caroline": "{{i18n:JojaDay.Dialogue.103}}",
+				"JojaDay2_Caroline": "{{i18n:JojaDay.Dialogue.104}}",
+				"JojaDay3_Caroline": "{{i18n:JojaDay.Dialogue.105}}",
+				"JojaDay4_Caroline": "{{i18n:JojaDay.Dialogue.106}}",
+			}
+		},
+		{ //PIERRE Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Pierre",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "700 SeedShop 4 17 2 \"Strings\\schedules\\Pierre:JojaDay1_Pierre\"/1310 SeedShop 2 19 1 \"Strings\\schedules\\Pierre:JojaDay2_Pierre\"/1500 SeedShop 4 17 2 \"Strings\\schedules\\Pierre:JojaDay1_Pierre\"/1700 SeedShop 5 22 1 \"Strings\\schedules\\Pierre:JojaDay3_Pierre\"/2100 SeedShop 23 4 1 pierre_sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Pierre",
+			"Entries": {
+				"JojaDay1_Pierre": "{{i18n:JojaDay.Dialogue.107}}",
+				"JojaDay2_Pierre": "{{i18n:JojaDay.Dialogue.108}}",
+				"JojaDay3_Pierre": "{{i18n:JojaDay.Dialogue.109}}",
+			}
+		},
+		{ //SUSAN Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Susan",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "650 Custom_SusanHouse 24 15 0/740 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 3 19 0 Susan_Craft/1010 SeedShop 12 23 0 \"Strings\\schedules\\Susan:JojaDay1_Susan\"/1330 SeedShop 14 20 0 \"Strings\\schedules\\Susan:JojaDay1_Susan\"/1430 SeedShop 11 20 0 \"Strings\\schedules\\Susan:JojaDay1_Susan\"/1540 SeedShop 4 19 0 \"Strings\\schedules\\Susan:JojaDay2_Susan\"/1640 Custom_SusanHouse 24 6 1 Susan_Sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Susan",
+			"Entries": {
+				"JojaDay1_Susan": "{{i18n:JojaDay.Dialogue.110}}",
+				"JojaDay2_Susan": "{{i18n:JojaDay.Dialogue.111}}",
+			}
+		},
+		{ //SOPHIA Joja Day Schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sophia",
+			"When": {
+				"HasSeenEvent": "502261"
+			},
+			"Entries": {
+				"22": "0 Custom_SophiaHouse 24 6 0/900 Custom_SophiaHouse 25 23 0 \"Strings\\schedules\\Sophia:JojaDay_Sophia\"/1200 Custom_SophiaHouse 4 22 0 \"Strings\\schedules\\Sophia:JojaDay_Sophia\"/1600 Custom_SophiaHouse 20 8 2 Sophia_Read \"Strings\\schedules\\Sophia:JojaDay_Sophia\"/1920 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+			},
+		},
+		{ //Schedule Strings
+			"Action": "EditData",
+			"Target": "strings/schedules/Sophia",
+			"Entries": {
+				"JojaDay_Sophia": "{{i18n:JojaDay.Dialogue.112}}",
+			}
+		},
+		{ //Sophia Joja Day Marriage Dialogue
+			"Action": "EditData",
+			"Target": "characters/Dialogue/MarriageDialogueSophia",
+			"When": {
+				"HasSeenEvent": "502261",
+				"Spouse": "Sophia",
+				"Day": "22"
+			},
+			"Entries": {
+				"funLeave_Sophia": "{{i18n:JojaDay.Dialogue.113}}",
+				"funReturn_Sophia": "{{i18n:JojaDay.Dialogue.114}}",
+			},
+		},
+	]
+}

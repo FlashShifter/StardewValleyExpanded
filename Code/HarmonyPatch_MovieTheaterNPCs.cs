@@ -118,7 +118,7 @@ namespace StardewValleyExpanded
                         && patched[x-1].opcode == OpCodes.Isinst && patched[x-1].operand.Equals(typeof(MovieTheater)) //AND the previous instruction checks for a theater instance
                         && patched[x-2].opcode == OpCodes.Call) //AND the previous code is a call (i.e. getting a gamelocation instance)
                     {
-                        patched[x-1] = new CodeInstruction(OpCodes.Ldc_I4_0); //replace the "Isinst" with a code that outputs 0 (false)
+                        patched[x-1] = new CodeInstruction(OpCodes.Ldc_I4_0) { labels = patched[x - 1].labels.Concat( patched[x-2].labels ).ToList() }; //replace the "Isinst" with a code that outputs 0 (false)
                         patched.RemoveAt(x-2); //remove the call
                     }
                 }

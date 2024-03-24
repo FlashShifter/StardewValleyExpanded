@@ -1,5 +1,46 @@
 {
 	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Clint",
+			"TextOperations": [
+			  /*Like*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //CLINT SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Clint",
@@ -13,6 +54,7 @@
 				"winter_Sat": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
 				"winter_Sun": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
 				"winter_15": "850 Blacksmith 3 13 2/1700 Beach 10 37 3 \"Strings\\schedules\\Clint:winter_15.000\"/2400 Blacksmith 10 4 1",
+				"DesertFestival_2": "650 Blacksmith 3 13 2/910 Desert 11 53 2 \"Strings\\1_6_Strings:DesertFestival_Clint\"/2430 bed"
 			},
 		},
 		{ //CLINT DIALOGUE ADDITIONS
@@ -25,41 +67,11 @@
 				"Town_98_77": "{{i18n:Clint.Dialogue.01}}",
 				"Town_100_81": "{{i18n:Clint.Dialogue.02}}",
 				"Town_103_98": "{{i18n:Clint.Dialogue.03}}",
+
 			}
 		},
-		//FLOWER DANCE FESTIVAL DIALOGUE - EMILY SHUT CLINT DOWN
-		{
-			"Action": "EditData",
-			"Target": "data/festivals/spring24",
-			"When": {
-				"HasSeenEvent": "1005014"
-			},
-			"Entries": {
-				"Clint": "{{i18n:Clint.Dialogue.04}}",
-			}
-		},
-		//ICE FISHING FESTIVAL DIALOGUE - EMILY SHUT CLINT DOWN
-		{
-			"Action": "EditData",
-			"Target": "data/festivals/winter8",
-			"When": {
-				"HasSeenEvent": "1005014"
-			},
-			"Entries": {
-				"Clint": "{{i18n:Clint.Dialogue.05}}",
-			}
-		},
-		//CHRISTMAS FESTIVAL DIALOGUE - EMILY SHUT CLINT DOWN
-		{
-			"Action": "EditData",
-			"Target": "data/festivals/winter25",
-			"When": {
-				"HasSeenEvent": "1005014"
-			},
-			"Entries": {
-				"Clint": "{{i18n:Clint.Dialogue.06}}",
-			}
-		},
+		
+
 		{ //CLINT INTRODUCTION DIALOGUE - IF2R
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Clint",

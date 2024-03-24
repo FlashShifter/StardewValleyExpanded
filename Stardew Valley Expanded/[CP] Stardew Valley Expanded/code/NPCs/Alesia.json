@@ -1,14 +1,51 @@
 {
   "Changes": [
-    // ALESIA NPC
-    // ALESIA NPC
     {
-      //Alesia's NPC disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Alesia": "adult/polite/neutral/neutral/female/non-datable/null/Other/null//Custom_Alesia_WarpRoom 3 3/{{i18n:Name.Alesia}}",
-      }
+        "Alesia": {
+          "DisplayName": "{{i18n:Name.Alesia}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": "",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_WarpRoom_Alesia",
+              "Condition": null,
+              "Location": "Custom_Alesia_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Alesia's sprites
@@ -28,20 +65,6 @@
       "Target": "Characters/schedules/Alesia",
       "FromFile": "assets/CharacterFiles/Schedules/Alesia/Alesia.json"
     },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Alesia": "{{i18n:Alesia.Fair}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Alesia": "{{i18n:Alesia.Spirit}}",
-      }
-    },
     { //Alesia visits the adventurer guild
       "Action": "EditData",
       "Target": "characters/schedules/Alesia",
@@ -54,7 +77,17 @@
         "16": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2",
         "17": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1400 Custom_AdventurerSummit 42 26 1/1800 AdventureGuild 9 12 2",
         "27": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1150 Custom_AdventurerSummit 36 25 3/1800 AdventureGuild 7 12 2",
-        "28": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2"
+        "28": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2",
+        "DesertFestival_1": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+        "DesertFestival_2": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+        "DesertFestival_3": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Alesia",
+      "Entries": {
+        "DesertFestival_Alesia": "{{i18n:DesertFestival_Alesia}}"
       }
     },
     {

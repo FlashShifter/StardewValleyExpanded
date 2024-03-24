@@ -1,19 +1,74 @@
 {
   "Changes": [
     {
-      //Andy's NPC Disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Andy": "adult/rude/neutral/negative/male/non-datable/null/Other/spring 23//Custom_AndyHouse 9 6/{{i18n:Name.Andy}}"
-      }
+        "Andy": {
+          "DisplayName": "{{i18n:Name.Andy}}",
+          "BirthSeason": "Spring",
+          "BirthDay": 23,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Negative",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_AndyHouse",
+              "Condition": null,
+              "Location": "Custom_AndyHouse",
+              "Tile": {
+                "X": 9,
+                "Y": 6
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Andy_Winter",
+              "Sprite": "Characters/Andy_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
     },
     {
       //Andy's gift tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Andy": "{{i18n:Andy.Gifts.Loved}}/346 459 303 240 611/{{i18n:Andy.Gifts.Liked}}/167 296 20 18 16 396 410 420 422 416 414/{{i18n:Andy.Gifts.Disliked}}/60 62 64 66 68 70 72 80 82 84 86 418 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578/{{i18n:Andy.Gifts.Hated}}/350 348 74/{{i18n:Andy.Gifts.Neutral}}/398 404 446 395 373 -74/"
+        "Andy": "{{i18n:Andy.Gifts.Loved}}/346 459 303 240 611 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme/{{i18n:Andy.Gifts.Liked}}/167 296 20 18 16 396 410 420 422 416 414 FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Bearberrys/{{i18n:Andy.Gifts.Disliked}}/60 62 64 66 68 70 72 80 82 84 86 418 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Galdoran_Gem FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Andy.Gifts.Hated}}/350 348 74 FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Andy.Gifts.Neutral}}/398 404 446 395 373 -74 FlashShifter.StardewValleyExpandedCP_Ancient_Fiber/"
       }
     },
     {
@@ -41,6 +96,18 @@
       "Action": "Load",
       "Target": "Characters/Andy",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Andy/Andy.png"
+    },
+    {
+      //Andy's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Andy_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Andy/Andy_Winter.png"
+    },
+    {
+      //Andy's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Andy_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Andy/Andy_Winter.png"
     },
     {
       //Andy's beach portraits
@@ -181,80 +248,10 @@
         },
       }
     },
-    //EGG FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Egg}}",
-      }
-    },
-    //FLOWER DANCE
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Flower}}",
-      }
-    },
-    //LUAU
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Luau}}",
-      }
-    },
-    //DANCE OF THE MOONLIGHT JELLIES
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Moonlight}}",
-      }
-    },
-    //STARDEW VALLEY FAIR
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Fair}}",
-      }
-    },
-    //SPIRITS EVE FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Spirit.01}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "When": {
-        "IsOddYear": false
-      },
-      "Entries": {
-        "Andy": "{{i18n:Andy.Spirit.02}}",
-      }
-    },
-    //ICE FISHING FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "Andy": "{{i18n:Andy.Ice}}",
-      }
-    },
-    //WINTER STAR FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "Entries": {
-        "Andy": "{{i18n:Andy.WinterStar}}",
-      }
-    },
+ 
+
+    
+
     //ANDY 1/2 Heart event - 'Strawberries'
     {
       "Action": "EditData",
@@ -276,7 +273,7 @@
       "Action": "EditData",
       "Target": "data/events/town",
       "Entries": {
-        "5000001/f Andy 500/z winter/t 1000 1600/w sunny": "springtown/-500 -500/farmer 28 89 0 Andy 33 60 1 Lewis 35 60 3 Harvey -100 -100 2 Pierre -125 -125 2 Olivia 34 65 3 Caroline 33 64 2 Jodi 32 65 1 Alex 50 68 1 George 51 64 0 MarlonFay 33 106 2 Krobus 32 106 2 Victor 71 54 0 Pam 79 68 1 Leah 97 104 2 Clint 97 77 0 Maru 43 77 2 Penny 29 55 2/pause 500/skippable/showFrame Penny 18/showFrame Maru 31/viewport 34 61 true/move farmer 0 -29 1 true/pause 1500/speak Lewis \"{{i18n:Andy.2hearts.01}}\"/speak Andy \"{{i18n:Andy.2hearts.02}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.03}}\"/pause 500/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.04}}\"/shake Andy 350/showFrame Andy 4/showFrame Penny 23/move Olivia 0 0 0/pause 100/move Caroline 0 0 0/pause 200/move Jodi 0 0 0/pause 150/showFrame Penny 0/emote Penny 16 true/pause 100/emote Olivia 16 true/pause 200/emote Jodi 16 true/pause 100/emote Caroline 16 true/pause 200/emote farmer 16 true/pause 250/move Lewis 0 0 2/pause 900/move Lewis 0 0 3/pause 300/speak Andy \"{{i18n:Andy.2hearts.05}}\"/pause 250/playSound doorClose/warp Harvey 36 56/pause 200/emote Harvey 8 true/pause 100/speak Lewis \"{{i18n:Andy.2hearts.06}}\"pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.07}}\"/pause 100/emote Olivia 16 true/pause 150/showFrame 4 Andy/shake Andy 1000/emote Jodi 16 true/pause 150/playSound doorClose/emote Penny 16 true/warp Pierre 43 57/pause 125/emote Caroline 16 true/pause 125/move Pierre 0 0 3/pause 250/emote Pierre 8 true/pause 200/showFrame Andy 4/pause 500/speak Lewis \"{{i18n:Andy.2hearts.08}}\"/pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.09}}\"/shake Andy 1000/showFrame Andy 4/emote Olivia 16 true/pause 250/emote Penny 16 true/pause 150/emote Caroline 16 true/pause 250/speak Lewis \"{{i18n:Andy.2hearts.10}}\"/speak Andy \"{{i18n:Andy.2hearts.11}}\"/pause 100/move Andy -4 0 2/pause 500/showFrame Andy 22/pause 1000/speak Andy \"{{i18n:Andy.2hearts.12}}\"/move Andy 0 7 2 true/pause 300/move farmer 0 0 2 true/pause 250/move Caroline 0 0 3 true/pause 400/move Jodi 0 0 3 true/pause 300/move Olivia 0 0 3 true/pause 300/globalFade/viewport -1000 -1000/pause 500/warp Andy -400 -400/pause 300/move Jodi 0 0 2/pause 200/viewport 34 61 true/move Olivia 0 0 3/showFrame Penny 16/pause 100/move Caroline 0 0 2/pause 150/showFrame Penny 17/pause 100/move Olivia 0 0 3/pause 50/showFrame Penny 19/pause 200/showFrame Penny 18/pause 200/move Pierre 0 0 1/pause 300/move Caroline 0 0 2/pause 250/playSound doorClose/warp Pierre -200 -200/pause 400/move Harvey 0 0 0/pause 300/warp Harvey -200 -205/playSound doorClose/pause 400/move Jodi 0 0 1/pause 200/move Lewis -5 0 3/pause 500/move farmer 0 0 1/pause 500/speak Lewis \"{{i18n:Andy.2hearts.13}}\"/pause 300/emote farmer 40/pause 300/speak Lewis \"{{i18n:Andy.2hearts.14}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.15}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.16}}\"/pause 300/emote farmer 60/pause 500/speak Lewis \"{{i18n:Andy.2hearts.17}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.18}}\"/pause 500/question fork0 \"{{i18n:Andy.2hearts.19}}\"/fork 5000001_TalkAndy/pause 500/speak Lewis \"{{i18n:Andy.2hearts.20}}\"/pause 600/move Lewis 0 0 2/pause 700/move Lewis 0 0 3/pause 800/speak Lewis \"{{i18n:Andy.2hearts.21}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Lewis \"{{i18n:Andy.2hearts.22}}\"",
+        "5000001/f Andy 500/z winter/t 1000 1600/w sunny": "springtown/-500 -500/farmer 28 89 0 Andy 33 60 1 Lewis 35 60 3 Harvey -100 -100 2 Pierre -125 -125 2 Olivia 34 65 3 Caroline 33 64 2 Jodi 32 65 1 Alex 50 68 1 George 51 64 0 MarlonFay 33 106 2 Krobus 32 106 2 Victor 71 54 0 Pam 79 68 1 Leah 97 104 2 Clint 97 77 0 Maru 43 77 2 Penny 29 55 2/pause 500/skippable/showFrame Penny 18/showFrame Maru 31/viewport 34 61 true/move farmer 0 -29 1 true/pause 1500/speak Lewis \"{{i18n:Andy.2hearts.01}}\"/speak Andy \"{{i18n:Andy.2hearts.02}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.03}}\"/pause 500/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.04}}\"/shake Andy 350/showFrame Andy 4/showFrame Penny 23/move Olivia 0 0 0/pause 100/move Caroline 0 0 0/pause 200/move Jodi 0 0 0/pause 150/showFrame Penny 0/emote Penny 16 true/pause 100/emote Olivia 16 true/pause 200/emote Jodi 16 true/pause 100/emote Caroline 16 true/pause 200/emote farmer 16 true/pause 250/move Lewis 0 0 2/pause 900/move Lewis 0 0 3/pause 300/speak Andy \"{{i18n:Andy.2hearts.05}}\"/pause 250/playSound doorClose/warp Harvey 36 56/pause 200/emote Harvey 8 true/pause 100/speak Lewis \"{{i18n:Andy.2hearts.06}}\"pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.07}}\"/pause 100/emote Olivia 16 true/pause 150/showFrame Andy 4/shake Andy 1000/emote Jodi 16 true/pause 150/playSound doorClose/emote Penny 16 true/warp Pierre 43 57/pause 125/emote Caroline 16 true/pause 125/move Pierre 0 0 3/pause 250/emote Pierre 8 true/pause 200/showFrame Andy 4/pause 500/speak Lewis \"{{i18n:Andy.2hearts.08}}\"/pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.09}}\"/shake Andy 1000/showFrame Andy 4/emote Olivia 16 true/pause 250/emote Penny 16 true/pause 150/emote Caroline 16 true/pause 250/speak Lewis \"{{i18n:Andy.2hearts.10}}\"/speak Andy \"{{i18n:Andy.2hearts.11}}\"/pause 100/move Andy -4 0 2/pause 500/showFrame Andy 22/pause 1000/speak Andy \"{{i18n:Andy.2hearts.12}}\"/move Andy 0 7 2 true/pause 300/move farmer 0 0 2 true/pause 250/move Caroline 0 0 3 true/pause 400/move Jodi 0 0 3 true/pause 300/move Olivia 0 0 3 true/pause 300/globalFade/viewport -1000 -1000/pause 500/warp Andy -400 -400/pause 300/move Jodi 0 0 2/pause 200/viewport 34 61 true/move Olivia 0 0 3/showFrame Penny 16/pause 100/move Caroline 0 0 2/pause 150/showFrame Penny 17/pause 100/move Olivia 0 0 3/pause 50/showFrame Penny 19/pause 200/showFrame Penny 18/pause 200/move Pierre 0 0 1/pause 300/move Caroline 0 0 2/pause 250/playSound doorClose/warp Pierre -200 -200/pause 400/move Harvey 0 0 0/pause 300/warp Harvey -200 -205/playSound doorClose/pause 400/move Jodi 0 0 1/pause 200/move Lewis -5 0 3/pause 500/move farmer 0 0 1/pause 500/speak Lewis \"{{i18n:Andy.2hearts.13}}\"/pause 300/emote farmer 40/pause 300/speak Lewis \"{{i18n:Andy.2hearts.14}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.15}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.16}}\"/pause 300/emote farmer 60/pause 500/speak Lewis \"{{i18n:Andy.2hearts.17}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.18}}\"/pause 500/question fork0 \"{{i18n:Andy.2hearts.19}}\"/fork 5000001_TalkAndy/pause 500/speak Lewis \"{{i18n:Andy.2hearts.20}}\"/pause 600/move Lewis 0 0 2/pause 700/move Lewis 0 0 3/pause 800/speak Lewis \"{{i18n:Andy.2hearts.21}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Lewis \"{{i18n:Andy.2hearts.22}}\"",
         "5000001_TalkAndy": "pause 500/speak Lewis \"{{i18n:Andy.2hearts.TalkAndy.01}}\"/pause 600/move Lewis 0 0 2/pause 800/move Lewis 0 0 3/pause 800/speak Lewis \"{{i18n:Andy.2hearts.TalkAndy.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"{{i18n:Andy.2hearts.TalkAndy.03}}\"",
       },
     },
@@ -355,7 +352,7 @@
       "Action": "EditData",
       "Target": "data/events/forest",
       "Entries": {
-        "5000002/t 600 1700/z winter/w rainy/f Andy 1500": "rain/-500 -500/farmer -100 -100 3 Andy -101 -101 2 MarlonFay -200 -200 2 Wizard -202 -202 2 Krobus -203 -203 0/pause 500/skippable/viewport 62 69 true/pause 2500/warp Andy 62 67/playSound doorClose/pause 1000/shake Andy 600/pause 1200/faceDirection Andy 1 true/pause 500/move Andy 6 0 2/move Andy 0 7 3 true/pause 1000/globalFade/viewport -1000 -1000 true/halt/warp Andy -99 -99/warp farmer 74 74/viewport 62 69 true/move farmer -6 0 3/pause 1000/emote farmer 8 true/pause 1400/move farmer -7 0 3 true/pause 1000/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation Custom_ForestWest/pause 400/playMusic rain/warp Marlon 53 114/warp Wizard 55 114/warp Krobus 54 117/warp Andy 58 20/warp farmer 58 31/pause 400/viewport 58 22 true/pause 100/move Andy 0 0 0/move farmer 0 -8 0/pause 2000/speak Andy \"{{i18n:Andy.6hearts.01}}\"/pause 3000/speak Andy \"{{i18n:Andy.6hearts.02}}\"/pause 2000/speak Andy \"{{i18n:Andy.6hearts.03}}\"/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 1100/speak Andy \"{{i18n:Andy.6hearts.04}}\"/pause 1000/showFrame Andy 22/pause 1200/speak Andy \"{{i18n:Andy.6hearts.05}}\"/pause 1250/faceDirection Andy 1 true/pause 250/faceDirection Andy 0/pause 1200/shake Andy 1000/pause 1200/speak Andy \"{{i18n:Andy.6hearts.06}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.07}}\"/pause 750/shake Andy 1000/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 600/speak Andy \"{{i18n:Andy.6hearts.08}}\"/pause 1250/speak Andy \"{{i18n:Andy.6hearts.09}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.10}}\"/pause 2000/showFrame Andy 22/pause 600/speak Andy \"{{i18n:Andy.6hearts.11}}\"/pause 1500/speak Andy \"{{i18n:Andy.6hearts.12}}\"/pause 1200/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2/pause 700/showFrame farmer 96/pause 1000/showFrame farmer 2/faceDirection farmer 2 true/move farmer 0 6 2 true/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"{{i18n:Andy.6hearts.13}}\"",
+        "5000002/t 600 1700/z winter/w rainy/f Andy 1500": "rain/-500 -500/farmer -100 -100 3 Andy -101 -101 2 MarlonFay -200 -200 2 Wizard -202 -202 2 Krobus -203 -203 0/pause 500/skippable/viewport 62 69 true/pause 2500/warp Andy 62 67/playSound doorClose/pause 1000/shake Andy 600/pause 1200/faceDirection Andy 1 true/pause 500/move Andy 6 0 2/move Andy 0 7 3 true/pause 1000/globalFade/viewport -1000 -1000 true/halt/warp Andy -99 -99/warp farmer 74 74/viewport 62 69 true/move farmer -6 0 3/pause 1000/emote farmer 8 true/pause 1400/move farmer -7 0 3 true/pause 1000/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation Custom_ForestWest/pause 400/playMusic rain/warp MarlonFay 53 114/warp Wizard 55 114/warp Krobus 54 117/warp Andy 58 20/warp farmer 58 31/pause 400/viewport 58 22 true/pause 100/move Andy 0 0 0/move farmer 0 -8 0/pause 2000/speak Andy \"{{i18n:Andy.6hearts.01}}\"/pause 3000/speak Andy \"{{i18n:Andy.6hearts.02}}\"/pause 2000/speak Andy \"{{i18n:Andy.6hearts.03}}\"/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 1100/speak Andy \"{{i18n:Andy.6hearts.04}}\"/pause 1000/showFrame Andy 22/pause 1200/speak Andy \"{{i18n:Andy.6hearts.05}}\"/pause 1250/faceDirection Andy 1 true/pause 250/faceDirection Andy 0/pause 1200/shake Andy 1000/pause 1200/speak Andy \"{{i18n:Andy.6hearts.06}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.07}}\"/pause 750/shake Andy 1000/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 600/speak Andy \"{{i18n:Andy.6hearts.08}}\"/pause 1250/speak Andy \"{{i18n:Andy.6hearts.09}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.10}}\"/pause 2000/showFrame Andy 22/pause 600/speak Andy \"{{i18n:Andy.6hearts.11}}\"/pause 1500/speak Andy \"{{i18n:Andy.6hearts.12}}\"/pause 1200/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2/pause 700/showFrame farmer 96/pause 1000/showFrame farmer 2/faceDirection farmer 2 true/move farmer 0 6 2 true/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"{{i18n:Andy.6hearts.13}}\"",
       },
     },
     //ANDY 8 Heart event 'Thank You'

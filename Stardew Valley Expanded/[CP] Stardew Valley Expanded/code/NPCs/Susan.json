@@ -1,30 +1,76 @@
 {
   "Changes": [
+
+
     {
-      //Susan NPC Disposition
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
+      "Target": "Data/Characters",
       "Entries": {
-        "Susan": "adult/polite/neutral/positive/female/not-datable/null/Other/fall 28//Custom_SusanHouse 4 15/{{i18n:name.Susan}}"
-      }
-    },
-    {
-      //Susan's AntiSocial Flag
-      "Action": "EditData",
-      "Target": "Data/AntiSocialNPCs",
-      "When": {
-        "HasSeenEvent |contains=1000077": false
+        "Susan": {
+          "DisplayName": "{{i18n:Name.Susan}}",
+          "BirthSeason": "Fall",
+          "BirthDay": 28,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 1000077",
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_SusanHouse",
+              "Condition": null,
+              "Location": "Custom_SusanHouse",
+              "Tile": {
+                "X": 4,
+                "Y": 15
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Susan_Winter",
+              "Sprite": "Characters/Susan_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
       },
-      "Entries": {
-        "Susan": true
-      }
     },
     {
       //Susan's Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Susan": "{{i18n:Susan.Gifts.Loved}}/611 230 211 220 221 223 222 608 233 234 612/{{i18n:Susan.Gifts.Liked}}/60 709 336 335 334 373 74 446/{{i18n:Susan.Gifts.Disliked}}/346 459 303/{{i18n:Susan.Gifts.Hated}}/167 226 283/{{i18n:Susan.Gifts.Neutral}}/348 350 395 -74/"
+        "Susan": "{{i18n:Susan.Gifts.Loved}}/611 230 211 220 221 223 222 608 233 234 612 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie/{{i18n:Susan.Gifts.Liked}}/60 709 336 335 334 373 74 446/{{i18n:Susan.Gifts.Disliked}}/346 459 303 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Susan.Gifts.Hated}}/167 226 283 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Susan.Gifts.Neutral}}/348 350 395 -74/"
       }
     },
     {
@@ -52,6 +98,18 @@
       "Action": "Load",
       "Target": "Characters/Susan",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan.png"
+    },
+    {
+      //Susan's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Susan_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan_Winter.png"
+    },
+    {
+      //Susan's Sprites
+      "Action": "Load",
+      "Target": "Characters/Susan_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan_Winter.png"
     },
     {
       //Susan's beach portraits
@@ -237,82 +295,7 @@
         }
       }
     },
-    { //EGG FESTIVAL
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Egg}}",
-      }
-    },
-    //FLOWER DANCE
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Flower}}",
-      }
-    },
-    //LUAU
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "When": {
-        "HasSeenEvent |contains=6665293": false
-      },
-      "Entries": {
-        "Susan": "{{i18n:Susan.Luau.1}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "When": {
-        "HasSeenEvent |contains=6665293": true
-      },
-      "Entries": {
-        "Susan": "{{i18n:Susan.Luau.2}}",
-      }
-    },
-    //DANCE OF THE MOONLIGHT JELLIES
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Moonlight}}",
-      }
-    },
-    //STARDEW VALLEY FAIR
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Fair}}",
-      }
-    },
-    //SPIRITS EVE FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Spirit}}",
-      }
-    },
-    //ICE FISHING FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "Susan": "{{i18n:Susan.Ice}}",
-      }
-    },
-    //WINTER STAR FESTIVAL
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "Entries": {
-        "Susan": "{{i18n:Susan.WinterStar}}",
-      }
-    },
+   
     //INTRO EVENT
     {
       "Action": "EditData",

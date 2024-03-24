@@ -1,5 +1,67 @@
 {
     "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Sebastian",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Frog",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Clownfish",
+                "Delimiter": " "
+              }
+            ]
+          },
         { //SEBASTIAN SCHEDULE EDITS
             "Action": "EditData",
             "Target": "characters/schedules/Sebastian",
@@ -9,7 +71,7 @@
                 "Day |contains=22": true
             },
             "Entries": {
-                "marriage_Mon": "830 Mountain 48 26 1 \"Strings\\schedules\\Sebastian:marriage_Mon.000\"/1300 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:marriage_Mon.001\"/1700 BusStop -1 23 3",
+                "marriage_Mon": "830 Mountain 48 26 1 \"Strings\\schedules\\Sebastian:marriage_Mon.000\"/1300 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:marriage_Mon.001\"/1700 Bed",
             },
         },
         { //SEBASTIAN SCHEDULE EDITS
@@ -30,7 +92,7 @@
                 "Spouse": "Sebastian"
             },
             "Entries": {
-                "Sat": "730 ScienceHouse 27 9 0/1200 SebastianRoom 6 12 0/1400 SebastianRoom 3 7 2/2100 BusStop -1 23 3",
+                "Sat": "730 ScienceHouse 27 9 0/1200 SebastianRoom 6 12 0/1400 SebastianRoom 3 7 2/2100 Bed",
             },
         },
         { //SEBASTIAN SCHEDULE DIALOGUE

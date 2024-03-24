@@ -87,12 +87,135 @@
 				"Spouse |contains=Wizard": true
 			},
 		},
-		//Summit schedule additions
+		//Summit schedule additions - Before Perfection
 		{ //Kent summit
 			"Action": "EditData",
 			"Target": "characters/schedules/Kent",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Wed": "700 SamHouse 4 13 2/800 Town 33 106 2/1200 Custom_SVESummit 11 13 0/2030 SamHouse 21 5 3 kent_sleep"
+			},
+		},
+		{ //Kent summit 2
+			"Action": "EditData",
+			"Target": "characters/schedules/Kent",
+			"When": {
+				"HasSeenEvent |contains=8050109": true,
+				"HasSeenEvent |contains=46361083": false,
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Thu": "700 SamHouse 4 13 2/1000 Custom_SVESummit 11 13 0/2000 SamHouse 21 5 3 kent_sleep"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Kent",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Custom_SVESummit_11_13": "{{i18n:Kent.Summit}}",
+			},
+		},
+		{ //Leah summit
+			"Action": "EditData",
+			"Target": "characters/schedules/Leah",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Sun": "610 LeahHouse 11 13 0/700 Custom_SVESummit 11 13 0/2000 LeahHouse 3 4 2 leah_sleep",
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Custom_SVESummit_11_13": "{{i18n:Leah.Summit.01}}"
+			},
+		},
+		{ //Susan summit
+			"Action": "EditData",
+			"Target": "characters/schedules/Susan",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"spring": "830 Custom_SusanHouse 27 15 0/930 Custom_SVESummit 11 13 0/1400 Custom_SusanHouse 3 19 0 Susan_Craft/2100 Custom_SusanHouse 24 15 0/2210 Custom_SusanHouse 24 6 1 Susan_Sleep",
+				"spring_Sat": "830 Custom_SusanHouse 27 15 0/930 Custom_SVESummit 11 13 0/1400 Custom_SusanHouse 3 19 0 Susan_Craft/2100 Custom_SusanHouse 24 15 0/2210 Custom_SusanHouse 24 6 1 Susan_Sleep",
+				"summer_Sat": "830 Custom_SusanHouse 25 15 0/930 Custom_SVESummit 11 13 0/1400 Custom_SusanHouse 3 19 0 Susan_Craft/2100 Custom_SusanHouse 24 15 0/2210 Custom_SusanHouse 24 6 1 Susan_Sleep",
+				"fall_Sat": "830 Custom_SusanHouse 26 15 0/930 Custom_SVESummit 11 13 0/1400 Custom_SusanHouse 3 19 0 Susan_Craft/2100 Custom_SusanHouse 24 15 0/2210 Custom_SusanHouse 24 6 1 Susan_Sleep",
+				"winter_Tue": "620 Custom_SusanHouse 27 15 0/730 Custom_SusanHouse 3 19 0 Susan_Craft/1300 Custom_SVESummit 11 13 0 Susan_Gaze/1800 Custom_SusanHouse 25 15 0/2130 Custom_SusanHouse 24 6 1 Susan_Sleep"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Susan",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Custom_SVESummit_11_13": "{{i18n:Summit.Dialogue.03}}",
+				"Custom_SVESummit_21_25": "{{i18n:Summit.Dialogue.04}}",
+			},
+		},
+		{ //Linus summit
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"fall_Mon": "700 Mountain 28 9 1/1000 Custom_SVESummit 17 20 0/1800 Tent 2 2 2 linus_sleep",
+				"fall_Tue": "700 Mountain 30 9 3/1030 Custom_SVESummit 17 20 0/1900 Tent 2 2 2 linus_sleep",
+				"winter_Mon": "700 Mountain 28 9 1/1000 Custom_SVESummit 17 20 0/1800 Tent 2 2 2 linus_sleep"
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Linus",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"Custom_SVESummit_17_20": "{{i18n:Summit.Dialogue.05}}",
+			},
+		},
+		{ //Lewis summit
+			"Action": "EditData",
+			"Target": "characters/schedules/Lewis",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": false
+			},
+			"Entries": {
+				"summer_18": "700 ManorHouse 7 5 0/920 ManorHouse 2 6 0/1000 Custom_SVESummit 13 18 0/1800 ManorHouse 21 4 lewis_sleep",
+				"fall_4": "700 ManorHouse 7 5 0/920 ManorHouse 2 6 0/1000 Custom_SVESummit 13 18 0/1800 ManorHouse 21 4 lewis_sleep",
+				"winter_11": "650 ManorHouse 8 5 0/910 ManorHouse 2 6 0/1000 Custom_SVESummit 13 18 0/1800 ManorHouse 21 4 lewis_sleep",
+				"winter_25": "700 ManorHouse 7 5 0/920 ManorHouse 2 6 0/1000 Custom_SVESummit 13 18 0/1800 ManorHouse 21 4 lewis_sleep",
+			},
+		},
+		//Summit schedule additions - After Perfection
+		{ //Kent summit
+			"Action": "EditData",
+			"Target": "characters/schedules/Kent",
+			"When": {
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Wed": "700 SamHouse 4 13 2/800 Town 33 106 2/1200 Summit 11 13 0/2030 SamHouse 21 5 3 kent_sleep"
@@ -103,7 +226,8 @@
 			"Target": "characters/schedules/Kent",
 			"When": {
 				"HasSeenEvent |contains=8050109": true,
-				"HasSeenEvent |contains=46361083": false
+				"HasSeenEvent |contains=46361083": false,
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Thu": "700 SamHouse 4 13 2/1000 Summit 11 13 0/2000 SamHouse 21 5 3 kent_sleep"
@@ -113,7 +237,8 @@
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Kent",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Summit_11_13": "{{i18n:Kent.Summit}}",
@@ -123,7 +248,8 @@
 			"Action": "EditData",
 			"Target": "characters/schedules/Leah",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Sun": "610 LeahHouse 11 13 0/700 Summit 11 13 0/2000 LeahHouse 3 4 2 leah_sleep",
@@ -133,7 +259,8 @@
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Leah",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Summit_11_13": "{{i18n:Leah.Summit.01}}"
@@ -143,7 +270,8 @@
 			"Action": "EditData",
 			"Target": "characters/schedules/Susan",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"spring": "830 Custom_SusanHouse 27 15 0/930 Summit 11 13 0/1400 Custom_SusanHouse 3 19 0 Susan_Craft/2100 Custom_SusanHouse 24 15 0/2210 Custom_SusanHouse 24 6 1 Susan_Sleep",
@@ -157,7 +285,8 @@
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Susan",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Summit_11_13": "{{i18n:Summit.Dialogue.03}}",
@@ -168,7 +297,8 @@
 			"Action": "EditData",
 			"Target": "characters/schedules/Linus",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"fall_Mon": "700 Mountain 28 9 1/1000 Summit 17 20 0/1800 Tent 2 2 2 linus_sleep",
@@ -180,7 +310,8 @@
 			"Action": "EditData",
 			"Target": "Characters/Dialogue/Linus",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"Summit_17_20": "{{i18n:Summit.Dialogue.05}}",
@@ -190,7 +321,8 @@
 			"Action": "EditData",
 			"Target": "characters/schedules/Lewis",
 			"When": {
-				"HasSeenEvent": "8050109"
+				"HasSeenEvent": "8050109",
+				"HasFlag |contains=Farm_Eternal": true
 			},
 			"Entries": {
 				"summer_18": "700 ManorHouse 7 5 0/920 ManorHouse 2 6 0/1000 Summit 13 18 0/1800 ManorHouse 21 4 lewis_sleep",

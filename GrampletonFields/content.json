@@ -1,11 +1,189 @@
 ﻿{
-  "Format": "1.22",
+  "Format": "2.0",
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_GrampletonFields",
+      "FromFile": "GrampletonFields.tbin",
+      "MigrateLegacyNames": [
+        "GrampletonFields"
+      ]
+    },
+    
   
-   "CustomLocations": [
-  {
-    "Name": "Custom_GrampletonFields",
-    "FromMapFile": "GrampletonFields.tbin",
-    "MigrateLegacyNames": [ "GrampletonFields" ]
-  },
- ]
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "Custom_GrampletonFields": {
+          "DisplayName": "{{i18n:Grampleton_Fields}}",
+          "DefaultArrivalTile": {
+            "X": 2,
+            "Y": 111,
+          },
+          "CreateOnLoad": {
+            "Type": "StardewValley.Locations.DecoratableLocation",
+            "AlwaysActive": true,
+            "MapPath": "Maps\\Custom_GrampletonFields"
+          },
+          "FormerLocationNames": [
+            "GrampletonFields"
+          ],
+          "CanPlantHere": true,
+          "ArtifactSpots": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)109",
+              "ItemID": "(O)109",
+              "Chance": 0.21
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)114",
+              "ItemID": "(O)114",
+              "Chance": 0.25
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)115",
+              "ItemID": "(O)115",
+              "Chance": 0.32
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)119",
+              "ItemID": "(O)119",
+              "Chance": 1
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)120",
+              "ItemID": "(O)120",
+              "Chance": 0.4
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)121",
+              "ItemID": "(O)121",
+              "Chance": 0.31
+            },
+          ]
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "Entries": {
+        "Custom_GrampletonFields": {
+          "BaseTexture": [
+            {
+              "Id": "Custom_GrampletonFields",
+              "Texture": "{{InternalAssetKey: assets/spring_GrampletonFields.png}}",
+              "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "Condition": "SEASON Spring"
+            },
+            {
+              "Id": "Custom_GrampletonFields",
+              "Texture": "{{InternalAssetKey: assets/summer_GrampletonFields.png}}",
+              "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "Condition": "SEASON Summer"
+            },
+            {
+              "Id": "Custom_GrampletonFields",
+              "Texture": "{{InternalAssetKey: assets/fall_GrampletonFields.png}}",
+              "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "Condition": "SEASON Fall"
+            },
+            {
+              "Id": "Custom_GrampletonFields",
+              "Texture": "{{InternalAssetKey: assets/winter_GrampletonFields.png}}",
+              "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "Condition": "SEASON Winter"
+            },
+          ],
+          "MapAreas": [
+            {
+              "Id": "Custom_GrampletonFields",
+              "PixelArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "ScrollText": "Grampleton Fields",
+              "Tooltips": [
+                {
+                  "Id": "Custom_GrampletonFieldsTrain",
+                  "Text": "Train Station",
+                  "PixelArea": {
+                    "X": 160,
+                    "Y": 15,
+                    "Width": 20,
+                    "Height": 7
+                  }
+                },
+                {
+                  "Id": "Custom_GrampletonFieldsAtlantes",
+                  "Text": "Atlantes' Tower",
+                  "PixelArea": {
+                    "X": 225,
+                    "Y": 30,
+                    "Width": 25,
+                    "Height": 25
+                  }
+                },
+                {
+                  "Id": "Custom_ShearwaterBridge",
+                  "Text": "Shearwater Bridge",
+                  "PixelArea": {
+                    "X": 10,
+                    "Y": 95,
+                    "Width": 20,
+                    "Height": 4
+                  }
+                },
+                {
+                  "Id": "Custom_Grampleton Dock",
+                  "Text": "Dock",
+                  "PixelArea": {
+                    "X": 233,
+                    "Y": 150,
+                    "Width": 7,
+                    "Height": 13
+                  }
+                },
+              ],
+              "WorldPositions": [
+                {
+                  "Id": "Custom_GrampletonFields",
+                  "LocationName": "Custom_GrampletonFields",
+                  "MapPixelArea": {
+                    "X": 70,
+                    "Y": 10,
+                    "Width": 200,
+                    "Height": 155
+                  },
+                }
+              ]
+            },
+          ],
+        },
+      },
+    },
+  ]
 }

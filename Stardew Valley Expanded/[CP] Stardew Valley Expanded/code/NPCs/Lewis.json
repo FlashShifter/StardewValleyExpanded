@@ -1,5 +1,24 @@
 {
   "Changes": [
+    
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Lewis",
+      "TextOperations": [
+        /*Dislike*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+      ]
+    },
     { //LEWIS SCHEDULE EDITS
       "Action": "EditData",
       "Target": "characters/schedules/Lewis",

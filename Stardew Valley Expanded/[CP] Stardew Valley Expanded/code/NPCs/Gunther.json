@@ -1,44 +1,62 @@
 {
   "Changes": [
-    {
-      //Gunther's NPC disposition
+
+   {
       "Action": "EditData",
-      "Target": "Data/NPCDispositions",
-      "When": {
-        "GuntherUnlocked": "true"
-      },
+      "Target": "Data/Characters",
       "Entries": {
-        "GuntherSilvian": "adult/polite/neutral/positive/male/not-datable/null/Other/winter 12//ArchaeologyHouse 5 8/{{i18n:Name.Gunther}}"
-      }
-    },
-    {
-      //Gunther's NPC disposition - no birthday on calendar
-      "Action": "EditData",
-      "Target": "Data/NPCDispositions",
-      "When": {
-        "GuntherUnlocked": "false"
+        "GuntherSilvian": {
+          "DisplayName": "{{i18n:Name.Gunther}}",
+          "BirthSeason": "Winter",
+          "BirthDay": 12,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 103042015",
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ArchaeologyHouse",
+              "Condition": null,
+              "Location": "ArchaeologyHouse",
+              "Tile": {
+                "X": 5,
+                "Y": 8
+              },
+              "Direction": "down"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
       },
-      "Entries": {
-        "GuntherSilvian": "adult/polite/neutral/positive/male/not-datable/null/Other/null//ArchaeologyHouse 5 8/{{i18n:Name.Gunther}}"
-      }
     },
-    {
-      //Gunther's AntiSocial Flag
-      "Action": "EditData",
-      "Target": "Data/AntiSocialNPCs",
-      "When": {
-        "GuntherUnlocked": "false"
-      },
-      "Entries": {
-        "GuntherSilvian": true
-      }
-    },
+
     {
       //Gunther's Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Gifts.Loved}}/207 557 212 104 106 107 108 109 121 122 124 125 578/{{i18n:Gunther.Gifts.Liked}}/72 96 97 98 99 100 101 103 105 110 111 112 113 114 115 116 117 118 119 120 123 126 127 579 580 581 582 583 584 585 586 587 588 589 -2 -7 -12 -75 -79 -80/{{i18n:Gunther.Gifts.Disliked}}/346 -4/{{i18n:Gunther.Gifts.Hated}}/167 78/{{i18n:Gunther.Gifts.Neutral}}/-15 -28 -81/"
+        "GuntherSilvian": "{{i18n:Gunther.Gifts.Loved}}/207 557 212 104 106 107 108 109 121 122 124 125 578/{{i18n:Gunther.Gifts.Liked}}/72 96 97 98 99 100 101 103 105 110 111 112 113 114 115 116 117 118 119 120 123 126 127 579 580 581 582 583 584 585 586 587 588 589 -2 -7 -12 -75 -79 -80 FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Big_Conch/{{i18n:Gunther.Gifts.Disliked}}/346 -4 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Galdoran_Gem FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Gunther.Gifts.Hated}}/167 78 FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Gunther.Gifts.Neutral}}/-15 -28 -81/"
       }
     },
     {
@@ -52,17 +70,14 @@
         "Gunther_AssessArtifact": "0 0 0 16 16 16/17 17 17 17 17 18 18 18 18 18/16 16 16 0 0 0",
       }
     },
+
     {
       //Gunther's Portraits
       "Action": "Load",
       "Target": "Portraits/GuntherSilvian",
       "FromFile": "assets/CharacterFiles/Portraits/Gunther/Gunther.png"
     },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Gunther",
-      "FromFile": "assets/CharacterFiles/Portraits/Gunther/Gunther.png"
-    },
+ 
     {
       //Gunther's Sprites
       "Action": "Load",
@@ -71,7 +86,7 @@
     },
     {
       "Action": "EditImage",
-      "Target": "Characters/Gunther",
+      "Target": "Characters/GuntherSilvian",
       "PatchMode": "Replace",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Gunther/Gunther.png"
     },
@@ -93,63 +108,7 @@
       },
       "FromFile": "assets/CharacterFiles/Schedules/Gunther/FakeSchedule.json"
     },
-    //FESTIVAL Dialogue
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring13",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Egg}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/spring24",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Flower}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer11",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Luau}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/summer28",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Moonlight}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall16",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Fair}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/fall27",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Spirit}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter8",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Ice}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "data/festivals/winter25",
-      "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.WinterStar}}",
-      }
-    },
+   
     //MOVIE THEATER
     {
       "Action": "EditData",
@@ -375,6 +334,7 @@
         "2468001/f GuntherSilvian 1000": "none/-500 -500/farmer 27 13 0 GuntherSilvian 34 8 2 Gunther -100 -100 0 Abigail 11 9 0 Elliott 20 5 2 Penny 19 10 2 Vincent 16 11 2 Jas 16 10 1/animate Jas true true 100 22/showFrame Vincent 24 true/showFrame Penny 18 true/showFrame Elliott 33 true/animate GuntherSilvian false true 500 17 18/pause 500/playMusic libraryTheme/pause 500/skippable/viewport 32 8 true/move farmer 0 -5 0/move farmer 4 0 1 true/speak Gunther \"{{i18n:event-2468001.01}}\"/pause 1500/stopAnimation GuntherSilvian/pause 600/showFrame GuntherSilvian 20 true/pause 750/speak Gunther \"{{i18n:event-2468001.02}}\"/pause 800/showFrame GuntherSilvian 0 true/pause 600/faceDirection farmer 2 true/pause 500/speak Gunther \"{{i18n:event-2468001.03}}\"/pause 500/speak Gunther \"{{i18n:event-2468001.04}}\"/pause 1000/showFrame GuntherSilvian 20 true/pause 650/speak Gunther \"{{i18n:event-2468001.05}}\"/pause 800/faceDirection farmer 1 true/pause 875/speak Gunther \"{{i18n:event-2468001.06}}\"/pause 500/end dialogue GuntherSilvian \"{{i18n:event-2468001.07}}\""
       },
     },
+    //This is going to Gunther and NOT GuntherSilvian on puprose. PLEASE DON'T CHANGE.
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/Gunther",
@@ -403,7 +363,7 @@
       "Target": "Data/Events/adventureguild",
       "Entries": {
         "2468003/f GuntherSilvian 1500/b 1": "none/-500 -500/farmer -50 -50 0 GuntherSilvian 5 13 1 Marlon -51 -51 0 MarlonFay 7 13 3 Gunther -30 -30 1/pause 1000/playMusic MarlonsTheme/pause 650/viewport 6 14 true/skippable/pause 1300/speak Marlon \"{{i18n:Gunther.6hearts2.01}}\"/pause 500/speak Gunther \"{{i18n:Gunther.6hearts2.02}}\"/pause 850/warp farmer 6 19/playSound doorClose/pause 450/faceDirection MarlonFay 2 true/pause 200/move farmer 0 -4 0 true/pause 600/faceDirection GuntherSilvian 2 true/pause 1000/speak Gunther \"{{i18n:Gunther.6hearts2.03}}\"/pause 600/emote farmer 8/pause 300/speak Gunther \"{{i18n:Gunther.6hearts2.04}}\"/pause 400/showFrame MarlonFay 18 true/pause 550/speak Marlon \"{{i18n:Gunther.6hearts2.05}}\"/pause 700/showFrame GuntherSilvian 21/pause 1200/showFrame GuntherSilvian 0/pause 600/speak Gunther \"{{i18n:Gunther.6hearts2.06}}\"/pause 500/showFrame MarlonFay 0 true/question fork0 \"{{i18n:Gunther.6hearts2.07}}\"/fork GuntherEscort_2468003/addConversationTopic guntherEscortDenied/pause 300/showFrame MarlonFay 18 true/pause 700/friendship GuntherSilvian -100/speak Gunther \"{{i18n:Gunther.6hearts2.08}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end",
-        "GuntherEscort_2468003": "friendship GuntherSilvian 100/pause 300/showFrame MarlonFay 0 true/pause 300/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.01}}\"/pause 600/showFrame MarlonFay 18 truepause 500/speak Marlon \"{{i18n:Gunther.6hearts2.GuntherEscort.02}}\"/pause 800/showFrame GuntherSilvian 21/pause 800/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.03}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1250/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.04}}\"/pause 1500/end",
+        "GuntherEscort_2468003": "friendship GuntherSilvian 100/pause 300/showFrame MarlonFay 0 true/pause 300/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.01}}\"/pause 600/showFrame MarlonFay 18 true/pause 500/speak Marlon \"{{i18n:Gunther.6hearts2.GuntherEscort.02}}\"/pause 800/showFrame GuntherSilvian 21/pause 800/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.03}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1250/speak Gunther \"{{i18n:Gunther.6hearts2.GuntherEscort.04}}\"/pause 1500/end",
       },
     },
     { //add conversation topics for marlon and gunther
@@ -429,7 +389,7 @@
         "HasSeenEvent": "2468003"
       },
       "Entries": {
-        "2468004": "continue/-500 -500/farmer 32 37 0 GuntherSilvian 32 23 2 Gunther -100 -100 0/addTemporaryActor EvilSlime 16 32 -100 -100 3/addTemporaryActor UnearthedArtifacts 94 51 -100 -100 2 false/positionOffset GuntherSilvian -15 -20/showFrame GuntherSilvian 16 true/pause 1000/viewport 31 24 true/skippable/move farmer 0 -12 0 true/pause 1500/shake GuntherSilvian 750/pause 650/speak Gunther \"{{i18n:Gunther.6hearts3.01}}\"/pause 1750/showFrame GuntherSilvian 0/pause 750/speak Gunther \"{{i18n:Gunther.6hearts3.02}}\"/pause 350/speak Gunther \"{{i18n:Gunther.6hearts3.03}}\"/pause 1000/speak Gunther \"{{i18n:Gunther.6hearts3.04}}\"/pause 750/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_GuntherExpedition1/warp GuntherSilvian -50 -50/warp farmer -51 -51/faceDirection GuntherSilvian 2 true/faceDirection farmer 2 true/playMusic Upper_Ambient/pause 1000/viewport 13 12 true/pause 2250/warp farmer 7 11/playSound stairsdown/pause 350/move farmer 0 2 2/pause 800/faceDirection farmer 1 true/pause 400/warp GuntherSilvian 7 11/playSound stairsdown/pause 550/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 500/showFrame GuntherSilvian 21 true/pause 400/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 500/move farmer 8 0 1 true/pause 1200/showFrame GuntherSilvian 4 true/pause 800/move GuntherSilvian 8 0 2 true/pause 3000/faceDirection farmer 2 true/pause 1400/faceDirection farmer 1 true/pause 1350/faceDirection farmer 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.05}}\"/pause 800/showFrame GuntherSilvian 21 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.06}}\"/pause 950/showFrame GuntherSilvian 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.07}}\"/pause 500/emote farmer 40/pause 300/move farmer -2 0 0/move farmer 0 -3 0 true/pause 500/showFrame GuntherSilvian 20 true/pause 800/showFrame GuntherSilvian 12 true/pause 400/warp farmer -40 -40/playSound stairsdown/pause 250/move GuntherSilvian -2 0 0/move GuntherSilvian 0 -1 0/pause 650/warp GuntherSilvian -41 -41/playSound stairsdown/pause 1000/globalFade/viewport -1000 -1000/faceDirection farmer 2 true/faceDirection GuntherSilvian 2 true/pause 500/changeLocation Custom_GuntherExpedition2/warp UnearthedArtifacts 20 10/warp EvilSlime 30 13/showFrame EvilSlime 0 true/viewport 7 10 true/pause 2250/warp farmer 7 8/playSound stairsdown/pause 600/move farmer 0 5 2 true/pause 1000/warp GuntherSilvian 7 8/playSound stairsdown/pause 800/move GuntherSilvian 0 2 2 true/pause 800/faceDirection farmer 1 true/pause 800/showFrame GuntherSilvian 20 true/pause 500/faceDirection farmer 3 true/pause 1000/faceDirection farmer 2 true/pause 500/viewport move 0 1 3500 true/move farmer 0 3 2 true/pause 800/showFrame GuntherSilvian 0 true/pause 700/move GuntherSilvian 0 3 2 true/pause 800/faceDirection farmer 1 true/pause 1000/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 300/showFrame GuntherSilvian 21 true/pause 900/speak Gunther \"{{i18n:Gunther.6hearts3.08}}\"/pause 500/faceDirection farmer 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.09}}\"/pause 1000/move farmer 0 -2 1/viewport move 1 0 2500 true/move farmer 1 0 0/move farmer 0 -1 1/move farmer 2 0 1 true/pause 400/showFrame GuntherSilvian 4 true/pause 2250/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 600/speak Gunther \"{{i18n:Gunther.6hearts3.10}}\"/pause 1000/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 1000/move farmer 14 0 1 true/viewport move 2 0 7000 true/pause 750/move GuntherSilvian 10 0 1 true/pause 8000/faceDirection farmer 0 true/pause 1300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 1200/faceDirection farmer 3 true/pause 500/jump farmer/pause 1000/move GuntherSilvian 5 0 1/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.11}}\"/pause 700/faceDirection GuntherSilvian 0 true/pause 800/shake GuntherSilvian 600/playSound openBox/addLantern 735 22 12 1/pause 700/faceDirection farmer 0 true/pause 300/speak Gunther \"{{i18n:Gunther.6hearts3.12}}\"/pause 500/move EvilSlime -5 0 3 true/playSound slime/pause 500/faceDirection farmer 1 true/pause 500/faceDirection GuntherSilvian 1 true/pause 300/playSound slime/emote GuntherSilvian 16 true/pause 900/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound hitEnemy/pause 250/jump EvilSlime/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound hitEnemy/pause 250/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound slimedead/showFrame EvilSlime 16 true/pause 100/showFrame EvilSlime 17/pause 100/showFrame EvilSlime 18/pause 100/showFrame EvilSlime 19/pause 100/showFrame EvilSlime 20/pause 100/showFrame EvilSlime 21/pause 100/showFrame EvilSlime 22/pause 100/showFrame EvilSlime 23/pause 100/showFrame EvilSlime 24 true/pause 100/warp EvilSlime -50 -50/pause 1100/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 600/emote farmer 32/pause 300/speak Gunther \"{{i18n:Gunther.6hearts3.13}}\"/pause 1000/faceDirection GuntherSilvian 0 true/pause 600/faceDirection farmer 0 true/pause 700/speak Gunther \"{{i18n:Gunther.6hearts3.14}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/playSound hoeHit/pause 800/playSound hoeHit/pause 950/playSound hoeHit/pause 600/speak Gunther \"{{i18n:Gunther.6hearts3.15}}\"/mail escortedGunther/stopMusic/pause 1500/end dialogue GuntherSilvian \"{{i18n:Gunther.6hearts3.16}}\"",
+        "2468004/": "continue/-500 -500/farmer 32 37 0 GuntherSilvian 32 23 2 Gunther -100 -100 0/addTemporaryActor EvilSlime 16 32 -100 -100 3/addTemporaryActor UnearthedArtifacts 94 51 -100 -100 2 false/positionOffset GuntherSilvian -15 -20/showFrame GuntherSilvian 16 true/pause 1000/viewport 31 24 true/skippable/move farmer 0 -12 0 true/pause 1500/shake GuntherSilvian 750/pause 650/speak Gunther \"{{i18n:Gunther.6hearts3.01}}\"/pause 1750/showFrame GuntherSilvian 0/pause 750/speak Gunther \"{{i18n:Gunther.6hearts3.02}}\"/pause 350/speak Gunther \"{{i18n:Gunther.6hearts3.03}}\"/pause 1000/speak Gunther \"{{i18n:Gunther.6hearts3.04}}\"/pause 750/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_GuntherExpedition1/warp GuntherSilvian -50 -50/warp farmer -51 -51/faceDirection GuntherSilvian 2 true/faceDirection farmer 2 true/playMusic Upper_Ambient/pause 1000/viewport 13 12 true/pause 2250/warp farmer 7 11/playSound stairsdown/pause 350/move farmer 0 2 2/pause 800/faceDirection farmer 1 true/pause 400/warp GuntherSilvian 7 11/playSound stairsdown/pause 550/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 500/showFrame GuntherSilvian 21 true/pause 400/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 500/move farmer 8 0 1 true/pause 1200/showFrame GuntherSilvian 4 true/pause 800/move GuntherSilvian 8 0 2 true/pause 3000/faceDirection farmer 2 true/pause 1400/faceDirection farmer 1 true/pause 1350/faceDirection farmer 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.05}}\"/pause 800/showFrame GuntherSilvian 21 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.06}}\"/pause 950/showFrame GuntherSilvian 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.07}}\"/pause 500/emote farmer 40/pause 300/move farmer -2 0 0/move farmer 0 -3 0 true/pause 500/showFrame GuntherSilvian 20 true/pause 800/showFrame GuntherSilvian 12 true/pause 400/warp farmer -40 -40/playSound stairsdown/pause 250/move GuntherSilvian -2 0 0/move GuntherSilvian 0 -1 0/pause 650/warp GuntherSilvian -41 -41/playSound stairsdown/pause 1000/globalFade/viewport -1000 -1000/faceDirection farmer 2 true/faceDirection GuntherSilvian 2 true/pause 500/changeLocation Custom_GuntherExpedition2/warp UnearthedArtifacts 20 10/warp EvilSlime 30 13/showFrame EvilSlime 0 true/viewport 7 10 true/pause 2250/warp farmer 7 8/playSound stairsdown/pause 600/move farmer 0 5 2 true/pause 1000/warp GuntherSilvian 7 8/playSound stairsdown/pause 800/move GuntherSilvian 0 2 2 true/pause 800/faceDirection farmer 1 true/pause 800/showFrame GuntherSilvian 20 true/pause 500/faceDirection farmer 3 true/pause 1000/faceDirection farmer 2 true/pause 500/viewport move 0 1 3500 true/move farmer 0 3 2 true/pause 800/showFrame GuntherSilvian 0 true/pause 700/move GuntherSilvian 0 3 2 true/pause 800/faceDirection farmer 1 true/pause 1000/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 300/showFrame GuntherSilvian 21 true/pause 900/speak Gunther \"{{i18n:Gunther.6hearts3.08}}\"/pause 500/faceDirection farmer 0 true/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.09}}\"/pause 1000/move farmer 0 -2 1/viewport move 1 0 2500 true/move farmer 1 0 0/move farmer 0 -1 1/move farmer 2 0 1 true/pause 400/showFrame GuntherSilvian 4 true/pause 2250/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 600/speak Gunther \"{{i18n:Gunther.6hearts3.10}}\"/pause 1000/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 1000/move farmer 14 0 1 true/viewport move 2 0 7000 true/pause 750/move GuntherSilvian 10 0 1 true/pause 8000/faceDirection farmer 0 true/pause 1300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 1200/faceDirection farmer 3 true/pause 500/jump farmer/pause 1000/move GuntherSilvian 5 0 1/pause 800/speak Gunther \"{{i18n:Gunther.6hearts3.11}}\"/pause 700/faceDirection GuntherSilvian 0 true/pause 800/shake GuntherSilvian 600/playSound openBox/addLantern 735 22 12 1/pause 700/faceDirection farmer 0 true/pause 300/speak Gunther \"{{i18n:Gunther.6hearts3.12}}\"/pause 500/move EvilSlime -5 0 3 true/playSound slime/pause 500/faceDirection farmer 1 true/pause 500/faceDirection GuntherSilvian 1 true/pause 300/playSound slime/emote GuntherSilvian 16 true/pause 900/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound hitEnemy/pause 250/jump EvilSlime/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound hitEnemy/pause 250/animate farmer false false 100 32 33 34 35/specificTemporarySprite swordswipe 24 13/playSound swordswipe/pause 250/playSound slimedead/showFrame EvilSlime 16 true/pause 100/showFrame EvilSlime 17/pause 100/showFrame EvilSlime 18/pause 100/showFrame EvilSlime 19/pause 100/showFrame EvilSlime 20/pause 100/showFrame EvilSlime 21/pause 100/showFrame EvilSlime 22/pause 100/showFrame EvilSlime 23/pause 100/showFrame EvilSlime 24 true/pause 100/warp EvilSlime -50 -50/pause 1100/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 600/emote farmer 32/pause 300/speak Gunther \"{{i18n:Gunther.6hearts3.13}}\"/pause 1000/faceDirection GuntherSilvian 0 true/pause 600/faceDirection farmer 0 true/pause 700/speak Gunther \"{{i18n:Gunther.6hearts3.14}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/playSound hoeHit/pause 800/playSound hoeHit/pause 950/playSound hoeHit/pause 600/speak Gunther \"{{i18n:Gunther.6hearts3.15}}\"/mail escortedGunther/stopMusic/pause 1500/end dialogue GuntherSilvian \"{{i18n:Gunther.6hearts3.16}}\"",
       },
     },
     { //add artifacts
@@ -465,8 +425,8 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/MorrisTod, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
       "Entries": {
-        "reject_{{spacechase0.JsonAssets/ObjectId:Mermaid's Bracelet}}": "{{i18n:Gift.Rejection}}",
-        "reject_{{spacechase0.JsonAssets/ObjectId:Galdoran Gem}}": "{{i18n:Gift.Rejection}}",
+        "reject_(O))Mermaid's Bracelet": "{{i18n:Gift.Rejection}}",
+        "reject_(O)Galdoran Gem": "{{i18n:Gift.Rejection}}",
       }
     },
     {
@@ -757,7 +717,7 @@
         "HasSeenEvent |contains=1090501": false
       },
       "Entries": {
-        "103046015": "continue/-200 -200/farmer -100 -100 0/pause 50/addConversationTopic sewer/pause 50/end"
+        "103046015/": "continue/-200 -200/farmer -100 -100 0/pause 50/addConversationTopic sewer/pause 50/end"
       }
     },
     {

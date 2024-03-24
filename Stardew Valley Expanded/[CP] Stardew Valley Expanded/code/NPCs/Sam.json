@@ -1,5 +1,47 @@
 {
 	"Changes": [
+
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Sam",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
 		{ //SAM SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Sam",
@@ -18,7 +60,7 @@
 				"Spouse": "Sam"
 			},
 			"Entries": {
-				"Sat": "1000 SebastianRoom 1 8 1/2100 BusStop -1 23 3",
+				"Sat": "1000 SebastianRoom 1 8 1/2100 Bed",
 			},
 		},
 		{ //SAM SCHEDULE - Penny
@@ -80,7 +122,7 @@
 			"Action": "EditData",
 			"Target": "data/events/busstop",
 			"Entries": {
-				"4081148/e 47/t 1600 1900": "none/-1000 -1000/farmer 13 22 0 Sam 14 10 2 Sebastian 15 11 3 Emily 10 11 3 Maru 9 10 2 Shane 12 15 0 Elliott 17 14 1 Leah 18 14 3 Abigail 13 11 1 Victor 17 10 1 Penny 18 10 3 Harvey 8 11 1 Linus 21 5 2 Jodi 8 15 2 Vincent 8 16 0/positionOffset Victor -20 4/viewport 12 11 clamp true/skippable/move farmer 0 -10 0 true/move Shane 0 -6 0 true/proceedPosition Shane/warp Shane -100 -100/proceedPosition farmer/move farmer 1 0 0 false/speak Sam \"{{i18n:Sam.8hearts.01}}\"/faceDirection Sam 3/faceDirection Sam 1/faceDirection Sam 2/speak Sam \"{{i18n:Sam.8hearts.02}}\"/jump Sam/pause 800/speak Sam \"{{i18n:Sam.8hearts.03}}\"/pause 600/move Abigail -1 0 0 true/move Emily 1 0 1 true/faceDirection Maru 1/pause 100/faceDirection Victor 2 true/pause 200/faceDirection Victor 3 true/proceedPosition Abigail/move Abigail 0 -2 2 true/move Sebastian -3 0 0 true/move Elliott -5 0 0 true/move Leah -5 0 0 true/globalFade/viewport -1000 -1000/pause 3000/speak Sam \"{{i18n:Sam.8hearts.04}}\"/pause 1000/playSound busDoorOpen/pause 4000/speak Sam \"{{i18n:Sam.8hearts.05}}\"/pause 800/changeToTemporaryMap SamShow/warp Sam 18 14/faceDirection Sam 0 true/warp Sebastian 21 14/positionOffset Sebastian 20 -20/warp Abigail 15 13/positionOffset Abigail 40 -24/warp farmer 18 20/warp Elliott 20 19/faceDirection Elliott 0/warp Leah 21 19/faceDirection Leah 0 true/warp Maru 13 16/faceDirection Maru 1 true/warp Harvey 14 17/faceDirection Harvey 0 true/warp Emily 21 16/faceDirection Emily 0 true/warp Shane 16 20/warp Victor 20 16/faceDirection Victor 0 true/positionOffset Victor -25 0/warp Linus 31 14/faceDirection Linus 0 true/warp Penny 17 16/faceDirection Penny 0 true/faceDirection Sebastian 2 true/warp Jodi 11 19/warp Vincent 12 19/faceDirection Jodi 0/viewport 18 15 true/move farmer 0 -4 0/pause 3000/faceDirection Sam 2/pause 800/jump Sam/pause 1000/cutscene bandFork/mail afterSamShow/end dialogue Sam \"{{i18n:Sam.8hearts.06}}\"",
+				"4081148/e 47/t 1600 1900": "none/-1000 -1000/farmer 23 22 0 Sam 24 10 2 Sebastian 25 11 3 Emily 20 11 3 Maru 19 10 2 Shane 22 15 0 Elliott 27 14 1 Leah 28 14 3 Abigail 23 11 1 Victor 27 10 1 Penny 28 10 3 Harvey 18 11 1 Linus 31 5 2 Jodi 18 15 2 Vincent 18 16 0/positionOffset Victor -20 4/viewport 22 11 clamp true/skippable/move farmer 0 -10 0 true/move Shane 0 -6 0 true/proceedPosition Shane/warp Shane -100 -100/proceedPosition farmer/move farmer 1 0 0 false/speak Sam \"{{i18n:Sam.8hearts.01}}\"/faceDirection Sam 3/faceDirection Sam 1/faceDirection Sam 2/speak Sam \"{{i18n:Sam.8hearts.02}}\"/jump Sam/pause 800/speak Sam \"{{i18n:Sam.8hearts.03}}\"/pause 600/move Abigail -1 0 0 true/move Emily 1 0 1 true/faceDirection Maru 1/pause 100/faceDirection Victor 2 true/pause 200/faceDirection Victor 3 true/proceedPosition Abigail/move Abigail 0 -2 2 true/move Sebastian -3 0 0 true/move Elliott -5 0 0 true/move Leah -5 0 0 true/globalFade/viewport -1000 -1000/pause 3000/speak Sam \"{{i18n:Sam.8hearts.04}}\"/pause 1000/playSound busDoorOpen/pause 4000/speak Sam \"{{i18n:Sam.8hearts.05}}\"/pause 800/changeToTemporaryMap SamShow/warp Sam 18 14/faceDirection Sam 0 true/warp Sebastian 21 14/positionOffset Sebastian 20 -20/warp Abigail 15 13/positionOffset Abigail 40 -24/warp farmer 18 20/warp Elliott 20 19/faceDirection Elliott 0/warp Leah 21 19/faceDirection Leah 0 true/warp Maru 13 16/faceDirection Maru 1 true/warp Harvey 14 17/faceDirection Harvey 0 true/warp Emily 21 16/faceDirection Emily 0 true/warp Shane 16 20/warp Victor 20 16/faceDirection Victor 0 true/positionOffset Victor -25 0/warp Linus 31 14/faceDirection Linus 0 true/warp Penny 17 16/faceDirection Penny 0 true/faceDirection Sebastian 2 true/warp Jodi 11 19/warp Vincent 12 19/faceDirection Jodi 0/viewport 18 15 true/move farmer 0 -4 0/pause 3000/faceDirection Sam 2/pause 800/jump Sam/pause 1000/cutscene bandFork/mail afterSamShow/end dialogue Sam \"{{i18n:Sam.8hearts.06}}\"",
 			}
 		},
 		{ //SAM 10 HEART EVENT PATHING FIX
