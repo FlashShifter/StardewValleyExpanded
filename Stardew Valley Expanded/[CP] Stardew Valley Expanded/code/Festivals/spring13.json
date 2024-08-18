@@ -1,0 +1,1035 @@
+{
+  "Changes": [
+    { //Gives an advance move to Andy during set-up phase, adds Sophia to the egg hunt, fixes pathing for several NPCs
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "Entries": {
+        "set-up": "fallFest/27 60/farmer 12 54 1/changeToTemporaryMap Town-EggFestival/loadActors Set-Up/advancedMove Andy true 1 9000 -6 0 0 -8 4 7000 0 8 6 0 1 8000/advancedMove Vincent true -2 0 0 -2 2 0 0 2/advancedMove Jas true 2 0 0 2 -2 0 0 -2/advancedMove Leo true 0 -2 2 0 0 2 -2 0/advancedMove Pam true 0 -1 3 5000 0 2 3 5000 0 -1 3 4000/advancedMove Clint true 1 7000 0 1 3 7000 0 -1/advancedMove Demetrius true 2 15000 -3 0 0 8 3 20000 0 -8 3 0/advancedMove Willy true 2 25000 -4 0 0 -12 4 0 0 -1 4 30000 0 1 -4 0 0 12 4 0/advancedMove Shane true 4 40000 2 0 0 2 1 35000 0 -2 -2 0/advancedMove Harvey true 0 6 -6 0 0 9 -3 0 3 15000 3 0 0 3 20 0 0 -19 -14 0 0 1 2 30000/playerControl eggFestival",
+        "set-up_y2": "fallFest/27 60/farmer 12 54 1/changeToTemporaryMap Town-EggFestival2/viewport -1000 -1000/loadActors Set-Up/advancedMove Vincent true -2 0 0 -2 2 0 0 2/advancedMove Jas true 2 0 0 2 -2 0 0 -2/advancedMove Leo true 0 -2 2 0 0 2 -2 0/advancedMove Demetrius true 1 5000 2 6750 1 400 3 0 0 -1 3 0 0 -5 7 0 2 7000 3 400 -7 0 0 5 -3 0 0 1 -3 0 3 350 2 4000/advancedMove Gus true 1 5500 0 -2 4 400 1 7000 2 400 0 2 2 400 1 1000/advancedMove Shane true 2 8250 3 2250 2 5000 3 3000 2 500/advancedMove Abigail true 2 5000 3 400 4 300 0 -4 4 5500 1 400 2 400 0 2 7 0 1 3000 2 400 3 350 -2 0 0 -11 4 3500 1 400 2 350 0 3 -3 0 3 3250 2 400 1 350 3 0 0 8 -5 0 0 2 2 2500/advancedMove Haley true 4 12500 1 2750 4 6500 3 3000 4 500/advancedMove Jodi true 1 3000 4 12500/advancedMove Elliott true 2 8500 3 3750 2 100/advancedMove Penny true 2 13500 1 2500 2 500/positionOffset Sam 12 -8/positionOffset Sebastian -6 4/positionOffset Leah -12 -24/positionOffset Maru -4 -16/positionOffset Marnie -12 4/positionOffset Jodi 8 16/positionOffset Kent 12 -20/positionOffset Linus 10 0/playerControl eggFestival/viewport player clamp true unfreeze/globalFadeToClear",
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/jump Abigail/faceDirection Vincent 3/pause 800/move Abigail 0 -1 0/faceDirection Vincent 0/speak Lewis \"{{i18n:EggFestival.05}}\"/pause 500/move Abigail 0 -1 0/playSound coin/pause 400/move Abigail 0 2 0/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "mainEvent": "pause 400/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 27 69 0 25 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/pause 100/jump Vincent/pause 250/pause 1200/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -4 15 0 0 1 3 0 0 1 5 0 0 2 12 0 0 11/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -2 26 0 0 5 25 0/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -21 -5 0 0 7 -18 0/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 18 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 22 15 0 0 -21 -25 0 4 7000/advancedMove Leo false -1 0 0 10 4 0 0 13 11 0 0 4 27 0 0 4 -12 0 0 -28 4 0 0 -7 10 0 0 -13/playSound whistle/playMusic tickTock/playerControl eggHunt",
+        "mainEvent_y2": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 29 70 0 26 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/pause 1000/positionOffset Demetrius 5 -10/positionOffset Jodi 5 -8/positionOffset Marnie -12 10/positionOffset Shane -6 -6/viewport 29 69 true unfreeze/pause 2000/speak Lewis \"It's time for the highlight of today's festivities... The Annual Spring Egg Hunt!$h\"/pause 100/jump Jas/jump Vincent/pause 1000/speak Lewis \"Calm down now, kiddos. You're going to need all your energy if you hope to find the most eggs and take home the exclusive prize.\"/pause 100/faceDirection Vincent 1 true/faceDirection Jas 3 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0/pause 800/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 125/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/pause 800/speak Lewis \"Now... Is everyone ready?\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"Let the egg hunt begin!$h\"/advancedMove Sophia false -1 0 0 -13 -11 0 0 6 -6 0 0 15 12 0 0 -1 19 0 0 -5 16 0 0 26/advancedMove Abigail false 0 5 -12 0 0 13 -6 0 0 4 31 0 0 10 -12 0 0 19 21 0 0 31/advancedMove Sam false 0 11 26 0 0 -9 -5 0 0 -19 17 0 0 20/advancedMove Jas false 3 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -13 0/advancedMove Vincent false 4 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -12 0/advancedMove Maru false 5 0 0 -7 11 0 0 2 19 0 0 8 -13 0 0 24 -15 0 0 -5 -2 0 0 10 6 0 0 -3/advancedMove Leo false 0 9 2 0 0 13 11 0 0 4 27 0 0 -3 4 0 0 -23/advancedMove Haley true 3 7000 2 5000/advancedMove Gus true 1 5500 0 -2 4 400 1 7000 2 400 0 2 2 400 1 1000/playSound whistle/playMusic tickTock/playerControl eggHunt",
+      }
+    },
+    { //Abigail win egg hunt movement change for even years
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "IsOddYear": false
+      },
+      "Entries": {
+        "AbbyWin": "pause 100/jump Abigail/faceDirection Vincent 3/pause 800/faceDirection Vincent 0/pause 300/move Abigail 0 -1 0/move Abigail 2 0 0/pause 300/speak Lewis \"{{i18n:EggFestival.05}}\"/pause 300/playSound coin/pause 300/move Abigail -2 0 3/move Abigail 0 1 2/pause 250/faceDirection Abigail 1/pause 500/faceDirection Lewis 1/pause 400/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "Entries": {
+        "Andy": "{{i18n:Andy.Egg}}",
+        "Claire": "{{i18n:eggfestival.claire.1}}",
+        "GuntherSilvian": "{{i18n:Gunther.Egg}}",
+        "Lance": "{{i18n:eggfestival.lance.1}}",
+        "MarlonFay": "{{i18n:Marlon.Egg}}",
+        "Martin": "{{i18n:Martin.Flower}}",
+        "MorrisTod": "{{i18n:Morris.Egg}}",
+        "Olivia": "{{i18n:eggfestival.Olivia.1}}",
+        "Sandy": "{{i18n:Sandy.Egg}}",
+        "Scarlett": "{{i18n:Scarlett.Egg}}",
+        "Sophia": "{{i18n:eggfestival.Sophia.1}}",
+        "Susan": "{{i18n:Susan.Egg}}",
+        "Victor": "{{i18n:eggfestival.victor.1}}",
+        "Victor_y2": "{{i18n:victor.Egg2}}",
+        "Morgan_y2": "{{i18n:Morgan.Egg2}}",
+        "Lance_y2": "{{i18n:Lance.Egg2}}",
+        "Claire_y2": "{{i18n:Claire.Egg2}}",
+        "Susan_y2": "{{i18n:Susan.Egg2}}",
+        "Andy_y2": "{{i18n:Andy.Egg2}}",
+        "Scarlett_y2": "{{i18n:Scarlett.Egg2}}",
+        "Olivia_y2": "{{i18n:Olivia.Egg2}}",
+        "MarlonFay_y2": "{{i18n:Marlon.Egg2}}",
+        "GuntherSilvian_y2": "{{i18n:Gunther.Egg2}}",
+        "Martin_y2": "{{i18n:Martin.Egg2}}",
+        "Sophia_y2": "{{i18n:Sophia.Egg2}}",
+        "Sandy_y2": "{{i18n:Sandy.Egg2}}",
+        "MorrisTod_y2": "{{i18n:Morris.Egg2}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "Entries": {
+        "Apples": "{{i18n:Apples.Egg}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Claire": "{{i18n:eggfestival.claire.2}}",
+      },
+      "When": {
+        "Spouse": "Claire"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Olivia": "{{i18n:eggfestival.Olivia.2}}",
+      },
+      "When": {
+        "Spouse": "Olivia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Sophia": "{{i18n:eggfestival.Sophia.2}}"
+      },
+      "When": {
+        "Spouse": "Sophia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Victor": "{{i18n:eggfestival.victor.2}}"
+      },
+      "When": {
+        "Spouse": "Victor"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Wizard": "{{i18n:eggfestival.wizard.1}}"
+      },
+      "When": {
+        "Spouse": "Wizard"
+      }
+    },
+    //y2
+    
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "When": {
+        "ApplesHere": "true"
+      },
+      "Entries": {
+        "Apples_y2": "{{i18n:Apples.Egg}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Claire_y2": "{{i18n:eggfestival.claire.2}}",
+      },
+      "When": {
+        "Spouse": "Claire"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Olivia_y2": "{{i18n:eggfestival.Olivia.2}}",
+      },
+      "When": {
+        "Spouse": "Olivia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Sophia_y2": "{{i18n:eggfestival.Sophia.2}}"
+      },
+      "When": {
+        "Spouse": "Sophia"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Victor_y2": "{{i18n:eggfestival.victor.2}}"
+      },
+      "When": {
+        "Spouse": "Victor"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "data/festivals/spring13",
+      "Entries": {
+        "Wizard_y2": "{{i18n:eggfestival.wizard.1}}"
+      },
+      "When": {
+        "Spouse": "Wizard"
+      }
+    },
+    //YEAR ONE SVE NPC egg festival data
+    {
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        { //Victor
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 24 76 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 22 67 right",
+          "Delimiter": "/"
+        },
+        { //Olivia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 31 62 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 22 68 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 32 70 right",
+          "Delimiter": "/"
+        },
+        { //Andy
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 19 64 right",
+          "Delimiter": "/"
+        },
+        { //Sophia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 29 62 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 25 67 right",
+          "Delimiter": "/"
+        },
+        { //Marlon
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 41 57 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 41 57 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "HasMod |contains=CPBoardingHouse": false,
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 44 60 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 30 66 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris egg festival data - boarding house
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "HasMod": "CPBoardingHouse"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 47 58 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 30 66 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "1000077",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 31 68 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 19 66 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 34 57 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 25 73 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "GuntherUnlocked": "true",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 29 54 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 36 65 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3691371",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 30 63 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 22 66 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Spouse": "Lance",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 32 55 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 32 74 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}",
+        "IsOddYear": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sandy 23 71 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sandy 28 62 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    //YEAR TWO SVE NPC egg festival data
+    {
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "IsOddYear": false,
+      },
+      "TextOperations": [
+        { //Victor
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Victor 34 81 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Victor 21 68 right",
+          "Delimiter": "/"
+        },
+        { //Olivia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Olivia 32 62 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Olivia 21 69 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Andy 26 59 right",
+          "Delimiter": "/"
+        },
+        { //Andy
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Andy 34 73 up",
+          "Delimiter": "/"
+        },
+        { //Sophia
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sophia 32 81 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sophia 26 67 right",
+          "Delimiter": "/"
+        },
+        { //Marlon
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MarlonFay 17 73 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MarlonFay 23 61 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Morris egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "6665293",
+        "HasMod |contains=CPBoardingHouse": false,
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "MorrisTod 27 54 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "MorrisTod 30 67 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Susan egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "1000077",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Susan 28 59 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Susan 35 73 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Claire egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Claire 24 71 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Claire 21 71 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Martin egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3219873",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Martin 24 69 right",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Martin 21 73 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Gunther egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "GuntherUnlocked": "true",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 35 70 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "GuntherSilvian 29 56 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Scarlett egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "3691371",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 33 82 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Scarlett 23 66 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Apples egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "ApplesHere": "true",
+        "Roommate": "Apples",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Apples 11 51 down",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Lance egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Spouse": "Lance",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Lance 22 61 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Lance 19 70 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Sandy egg festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Hearts:Sandy": "{{Range: 5, 14}}",
+        "IsOddYear": false
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sandy 24 65 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "MainEvent_additionalCharacters"
+          ],
+          "Value": "Sandy 35 70 left",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    { //Jas and Vincent win - only year 1
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Year": "1"
+      },
+      "Entries": {
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/jump Jas/pause 200/jump Vincent/pause 800/emote Penny 32 true/pause 200/move Lewis 1 0 2/move Lewis 0 1 2/pause 100/speak Lewis \"{{i18n:EggFestival.Alt.05}}\"/move Jas 0 -1 0 true/pause 150/move Vincent 0 -1 0 true/pause 800/playSound coin/pause 700/faceDirection Jas 1 true/pause 600/faceDirection Vincent 3 true/pause 400/jump Vincent/pause 500/faceDirection Lewis 1 true/pause 200/faceDirection Lewis 0/pause 300/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+      }
+    },
+    { //Edits Lewis' CS string to Jas and Vincent
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "When": {
+        "Year": "1"
+      },
+      "Entries": {
+        "Event.cs.1862": "{{i18n:EggFestival.Winner.Kids}}"
+      }
+    },
+    { //Sophia wins the egg hunt if players have seen Sophia's introduction event - only year 1
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "HasSeenEvent": "8185290",
+        "Year": "1"
+      },
+      "Entries": {
+        "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+        "AbbyWin": "pause 100/showFrame Sophia 39/jump Sophia/faceDirection Vincent 3/pause 800/speak Sophia \"!!!$9\"/pause 200/faceDirection Vincent 0/pause 200/speak Lewis \"{{i18n:EggFestival.AltA.05}}\"/pause 200/showFrame Sophia 0/pause 200/faceDirection Sophia 1 true/move Sophia 3 0 0/pause 500/playSound coin/pause 600/move Sophia -3 0 3/pause 120/faceDirection Sophia 2 true/pause 150/faceDirection Sophia 1 true/pause 400/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+      }
+    },
+    { //Edits Lewis' CS string to Sophia
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "When": {
+        "HasSeenEvent": "8185290",
+        "Year": "1"
+      },
+      "Entries": {
+        "Event.cs.1862": "{{i18n:EggFestival.Winner.Sophia}}"
+      }
+    },
+    //*** Wizard Festival Coordinates (when married)***
+    { //Wizard town egg festival
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_Main_Town-EggFestival.tbin",
+      "ToArea": {
+        "X": 26,
+        "Y": 53,
+        "Width": 1,
+        "Height": 1
+      },
+      "PatchMode": "Overlay",
+      "When": {
+        "Spouse |contains=Wizard": true,
+        "HasMod |contains=Parrot.RomRas": false,
+        "HasMod |contains=Jellonip.RRRR": false,
+        "IsOddYear": true
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "FromFile": "Assets/Maps/FestivalMaps/Positions/Wizard_Setup_Town-EggFestival.tbin",
+      "ToArea": {
+        "X": 38,
+        "Y": 68,
+        "Width": 1,
+        "Height": 1
+      },
+      "PatchMode": "Overlay",
+      "When": {
+        "Spouse |contains=Wizard": true,
+        "HasMod |contains=Parrot.RomRas": false,
+        "HasMod |contains=Jellonip.RRRR": false,
+        "IsOddYear": true
+      },
+    },
+    //map loads
+    {
+      "Action": "Load",
+      "Target": "Maps/Town-EggFestival",
+      "When": {
+        "HasSeenEvent |contains=5553210": false
+      },
+      "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Town-EggFestival2",
+      "When": {
+        "HasSeenEvent |contains=5553210": false
+      },
+      "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival2.tmx"
+    },
+    //Joja Variants
+    {
+      "Action": "Load",
+      "Target": "Maps/Town-EggFestival",
+      "When": {
+        "HasSeenEvent": "5553210",
+      },
+      "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival_Joja.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Town-EggFestival2",
+      "When": {
+        "HasSeenEvent": "5553210",
+      },
+      "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival2_Joja.tmx"
+    },
+    //Fixes
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town_Joja_EggFestival",
+      "FromFile": "Assets/Maps/MapPatches/Town_JojaTheater_ShadowFix.tbin",
+      "ToArea": {
+        "X": 52,
+        "Y": 20,
+        "Width": 2,
+        "Height": 1
+      },
+      "When": {
+        "HasFlag": "ccMovieTheaterJoja",
+        "HasSeenEvent": "5553210"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town_Joja_EggFestival2",
+      "FromFile": "Assets/Maps/MapPatches/Town_JojaTheater_ShadowFix.tbin",
+      "ToArea": {
+        "X": 52,
+        "Y": 20,
+        "Width": 2,
+        "Height": 1
+      },
+      "When": {
+        "HasFlag": "ccMovieTheaterJoja",
+        "HasSeenEvent": "5553210"
+      }
+    },
+  ]
+}

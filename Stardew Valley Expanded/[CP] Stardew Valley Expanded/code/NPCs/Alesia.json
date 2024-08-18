@@ -1,0 +1,175 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Alesia": {
+          "DisplayName": "{{i18n:Name.Alesia}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": "",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_WarpRoom_Alesia",
+              "Condition": null,
+              "Location": "Custom_Alesia_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Alesia's sprites
+      "Action": "Load",
+      "Target": "Characters/Alesia",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Alesia/Alesia.png"
+    },
+    {
+      //Alesia's portraits
+      "Action": "Load",
+      "Target": "Portraits/Alesia",
+      "FromFile": "Assets/CharacterFiles/Portraits/Alesia/Alesia.png"
+    },
+    {
+      //Alesia's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Alesia",
+      "FromFile": "assets/CharacterFiles/Schedules/Alesia/Alesia.json"
+    },
+    { //Alesia visits the adventurer guild
+      "Action": "EditData",
+      "Target": "characters/schedules/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582"
+      },
+      "Entries": {
+        "1": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1400 Custom_AdventurerSummit 42 26 1/1800 AdventureGuild 7 12 2",
+        "2": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1100 Custom_AdventurerSummit 51 30 2/1730 AdventureGuild 5 13 0",
+        "16": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2",
+        "17": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1400 Custom_AdventurerSummit 42 26 1/1800 AdventureGuild 9 12 2",
+        "27": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2/1150 Custom_AdventurerSummit 36 25 3/1800 AdventureGuild 7 12 2",
+        "28": "0 Custom_Alesia_WarpRoom 3 3 2/610 AdventureGuild 7 12 2",
+        "DesertFestival_1": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+        "DesertFestival_2": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+        "DesertFestival_3": "0 Desert 12 7 1 \"Strings\\schedules\\Aleisa:DesertFestival_Alesia\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Alesia",
+      "Entries": {
+        "DesertFestival_Alesia": "{{i18n:DesertFestival_Alesia}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "1"
+      },
+      "Entries": {
+        "Mon": "{{i18n:Alesia.Guild.01}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "2"
+      },
+      "Entries": {
+        "Tue": "{{i18n:Alesia.Guild.02}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "16, 23"
+      },
+      "Entries": {
+        "Tue": "{{i18n:Alesia.Guild.03}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "17"
+      },
+      "Entries": {
+        "Wed": "{{i18n:Alesia.Guild.04}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "27"
+      },
+      "Entries": {
+        "Sat": "{{i18n:Alesia.Guild.05}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Alesia",
+      "When": {
+        "HasSeenEvent": "7502582",
+        "Day": "28"
+      },
+      "Entries": {
+        "Sun": "{{i18n:Alesia.Guild.06}}",
+      }
+    },
+    { //ALESIA INTRODUCTION
+      "Action": "EditData",
+      "Target": "data/events/adventureguild",
+      "Entries": {
+        "7502582/j 90/e 1000034": "MarlonsTheme/-500 -500/farmer -300 -300 0 MarlonFay 6 13 2/addTemporaryActor Alesia 16 32 6 14 0 true/skippable/pause 500/viewport 6 15 true/pause 1300/warp farmer 6 19/playSound doorClose/pause 700/move Alesia 0 0 1/pause 110/move Alesia 0 0 2/pause 350/move farmer 0 -2 0 true/pause 100/jump Alesia/pause 1000/move Alesia 0 1 2/speak Alesia \"{{i18n:Alesia.Intro.01}}\"/pause 400/move MarlonFay 0 1 1/move MarlonFay 1 0 2/move MarlonFay 0 1 2/pause 300/speak MarlonFay \"{{i18n:Alesia.Intro.02}}\"/pause 700/move Alesia 0 0 1/pause 600/showFrame MarlonFay 18/pause 500/speak Alesia \"{{i18n:Alesia.Intro.03}}\"/pause 400/showFrame MarlonFay 0/pause 300/move Alesia 0 0 2/pause 300/speak Alesia \"{{i18n:Alesia.Intro.04}}\"/pause 300/showFrame MarlonFay 18/pause 250/move Alesia 0 0 1/pause 300/speak Alesia \"{{i18n:Alesia.Intro.05}}\"/speak MarlonFay \"{{i18n:Alesia.Intro.06}}\"/pause 500/move Alesia 0 -2 0 true/pause 300/showFrame MarlonFay 12/move farmer 0 -2 0 true/pause 100/showFrame MarlonFay 10/pause 200/stopMusic/pause 250/showFrame Alesia 4/pause 150/showFrame Alesia 0/pause 800/showFrame Alesia 16/pause 300/showFrame Alesia 18/pause 400/showFrame Alesia 20/pause 300/showFrame Alesia 21/playSound warrior/pause 900/screenFlash 2/warp Alesia -300 -300/playSound wand/pause 1400/move MarlonFay 0 0 3/pause 800/move farmer 0 0 1/pause 400/speak MarlonFay \"{{i18n:Alesia.Intro.07}}\"/pause 400/globalFade/viewport -1000 -1000/end dialogue MarlonFay \"{{i18n:Alesia.Intro.08}}\"",
+      },
+    },
+    {
+      //Alesia's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Alesia": true
+      }
+    },
+  ]
+}

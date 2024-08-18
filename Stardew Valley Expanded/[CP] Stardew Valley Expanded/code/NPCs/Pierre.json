@@ -1,0 +1,107 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Pierre",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pierre",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //PIERRE SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Pierre",
+            "Entries": {
+                "Mon": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 Town 46 48 0/2000 SeedShop 34 5 0/2100 SeedShop 24 4 1 pierre_sleep",
+                "Tue": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 SeedShop 11 20 0/1800 Town 92 9 1/2030 SeedShop 24 4 1 pierre_sleep",
+                "Wed": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 Town 46 48 0/2000 SeedShop 34 5 0/2100 SeedShop 24 4 1 pierre_sleep",
+                "Rain": "700 SeedShop 10 20 0/830 SeedShop 4 17 2/1700 SeedShop 11 20 0/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 SeedShop 24 4 1 pierre_sleep",
+            },
+        },
+        { //PIERRE SCHEDULE - Caroline
+            "Action": "EditData",
+            "Target": "characters/schedules/Pierre",
+            "When": {
+                "Weather": "Sun"
+            },
+            "Entries": {
+                "14": "630 SeedShop 4 17 2/1700 SeedShop 20 15 1/1740 Town 27 30 0/2030 SeedShop 24 4 1 pierre_sleep",
+                "28": "630 SeedShop 4 17 2/1700 SeedShop 20 15 1/1740 Town 27 30 0/2030 SeedShop 24 4 1 pierre_sleep",
+            },
+        },
+        { //PIERRE SCHEDULE DIALOGUE
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Pierre",
+            "Entries": {
+                "Town_46_48": "{{i18n:Pierre.Dialogue.01}}",
+                "Town_27_30": "{{i18n:Pierre.Dialogue.02}}",
+            },
+        },
+        { //PIERRE JOJA DIALOGUE
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Pierre",
+            "When": {
+                "HasSeenEvent": "5553213"
+            },
+            "Entries": {
+                "winter_Fri": "{{i18n:Pierre.Dialogue.03}}",
+                "summer_Mon": "{{i18n:Pierre.Dialogue.04}}",
+                "fall_Sat": "{{i18n:Pierre.Dialogue.05}}",
+                "Sun": "{{i18n:Pierre.Dialogue.06}}",
+                "fall_Mon": "{{i18n:Pierre.Dialogue.07}}",
+                "winter_Thu": "{{i18n:Pierre.Dialogue.08}}",
+            },
+        },
+        { //PIERRE EVENT
+            "Action": "EditData",
+            "Target": "data/events/town",
+            "Entries": {
+                "1000092/f Pierre 2000/z spring/z summer/z winter/t 1200 1600/w sunny": "springtown/-500 -500/farmer 49 58 0 Pierre 43 48 0 Alex 53 69 0 Penny 47 33 2 Abigail 71 52 2 Lewis 30 57 2 Evelyn 62 57 0/pause 500/skippable/showFrame Penny 18/showFrame Abigail 23/positionOffset Abigail 0 15/viewport 49 54 true/viewport move 0 -1 5000 true/move farmer 0 -10 0 true/pause 3000/playSound bubbles/pause 2000/playSound bubbles/pause 750/faceDirection farmer 3 true/pause 650/emote farmer 8/pause 500/speak Pierre \"{{i18n:Pierre.Event.01}}\"/pause 500/playSound bubbles/pause 500/move Pierre 3 0 1/pause 500/speak Pierre \"{{i18n:Pierre.Event.02}}\"/pause 1050/move Pierre 0 0 3/pause 1000/move Pierre 0 0 2/pause 300/move Pierre 0 0 1/pause 450/emote Pierre 40/pause 250/speak Pierre \"{{i18n:Pierre.Event.03}}\"/pause 650/question fork0 \"{{i18n:Pierre.Event.04}}\"/fork 1000092_Cider/pause 500/speak Pierre \"{{i18n:Pierre.Event.05}}\"/pause 800/move Pierre 0 0 3/pause 700/move Pierre 0 0 1/pause 500/speak Pierre \"{{i18n:Pierre.Event.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/end",
+                "1000092_Cider": "pause 500/speak Pierre \"{{i18n:Pierre.Event.Cider.01}}\"/pause 500/jump farmer/pause 1400/move Pierre -5 0 0 true/pause 350/move farmer -6 0 0 true/viewport move -1 0 3500 true/pause 4000/playSound Milking/pause 1000/speak Pierre \"{{i18n:Pierre.Event.Cider.02}}\"/pause 500/farmerEat 346/globalFade/viewport -1000 -1000/stopMusic/pause 750/message \"{{i18n:Pierre.Event.Cider.03}}\"/pause 500/friendship Pierre 125/end dialogue Pierre \"{{i18n:Pierre.Event.Cider.04}}\"",
+            },
+        },
+    ]
+}

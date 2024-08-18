@@ -72,9 +72,9 @@ namespace StardewValleyExpanded
                     unfixedTile = new Point(48, 7);
                 }
 
-                if (Game1.player.getTileLocationPoint().Equals(unfixedTile)) //if the player warped to the "unfixed" tile
+                if (Game1.player.Tile.Equals(unfixedTile)) //if the player warped to the "unfixed" tile
                 {
-                    Point fixedTile = Game1.getFarm().GetMapPropertyPosition("WarpTotemEntry", (int)unfixedTile.X, (int)unfixedTile.Y); //get the customizable map property tile if available
+                    Game1.getFarm().TryGetMapPropertyAs("WarpTotemEntry", out Point fixedTile); //get the customizable map property tile if available
                     if (fixedTile.Equals(unfixedTile) == false) //if the "fixed" tile is different from the "unfixed" tile
                     {
                         Game1.player.setTileLocation(new Vector2(fixedTile.X, fixedTile.Y +1)); //warp to the "fixed" tile

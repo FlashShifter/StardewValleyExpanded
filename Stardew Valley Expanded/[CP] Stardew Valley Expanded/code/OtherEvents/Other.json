@@ -1,0 +1,350 @@
+{
+    "Changes": [
+        ///// Intervention cutscene edit /////
+        { //Adds Victor to intervention event
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "When": {
+                "Relationship:Victor": "dating"
+            },
+            "Entries": {
+                "195099/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/f Victor 2500/o Claire/o Olivia/o Sophia/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/i 446/k 195013": "playful/-1000 -1000/farmer 27 19 1 Sam 36 20 1 Sebastian 37 19 2 Harvey 39 19 2 Shane 40 17 2 Elliott 41 19 2 Alex 42 20 3 Victor 38 22 0/positionOffset Victor -20 -20/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/pause 1000/message \"{{i18n:Intervention.Guys.01}}\"/pause 500/message \"{{i18n:Intervention.Guys.02}}\"/move farmer 5 0 1 true/viewport 37 19 true/move false/pause 500/faceDirection Sam 3 true/faceDirection Elliott 3 true/faceDirection Harvey 3 true/faceDirection Alex 3 true/faceDirection Shane 3 true/faceDirection Victor 3 true/faceDirection Sebastian 3 true/textAboveHead Sam \"{{i18n:Intervention.Guys.03}}\"/textAboveHead Alex \"{{i18n:Intervention.Guys.04}}\"/textAboveHead Shane \"{{i18n:Intervention.Guys.05}}\"/pause 1500/move farmer 3 0 1/emote farmer 32/pause 500/speak Harvey \"{{i18n:Intervention.Guys.06}}\"/pause 500/speak Elliott \"{{i18n:Intervention.Guys.07}}\"/pause 500/speak Victor \"{{i18n:Intervention.Guys.08}}\"/pause 400/speak Shane \"{{i18n:Intervention.Guys.09}}\"/pause 500/fade/viewport -1000 -1000/pause 1500/message \"{{i18n:Intervention.Guys.10}}\"/pause 1000/message \"{{i18n:Intervention.Guys.11}}\"/pause 500/end",
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/f Victor 2500/o Claire/o Olivia/o Sophia/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": "playful/-1000 -1000/farmer 27 19 1 Sam 36 20 1 Sebastian 37 19 2 Harvey 39 19 2 Shane 40 17 2 Elliott 41 19 2 Alex 42 20 3 Victor 38 22 0/positionOffset Victor -20 -20/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/move farmer 5 0 1 true/viewport 37 19 true/move false/pause 500/startJittering/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 2000/stopAnimation farmer/showFrame farmer 0/stopJittering/playSound thudStep/faceDirection farmer 3 true/showFrame farmer 7 true/startJittering/faceDirection Sam 3 true/faceDirection Elliott 3 true/faceDirection Harvey 3 true/faceDirection Alex 3 true/faceDirection Victor 3 true/faceDirection Shane 3 true/faceDirection Sebastian 3 true/textAboveHead Sam \"{{i18n:Intervention.Guys2.01}}\"/textAboveHead Alex \"{{i18n:Intervention.Guys2.02}}\"/textAboveHead Shane \"{{i18n:Intervention.Guys2.03}}\"/pause 3000/stopJittering/showFrame farmer 6 true/pause 500/faceDirection farmer 1/move farmer 3 0 1/playMusic none/emote farmer 28/pause 500/speak Sam \"{{i18n:Intervention.Guys2.04}}\"/pause 500/speak Harvey \"{{i18n:Intervention.Guys2.05}}\"/pause 400/speak Victor \"{{i18n:Intervention.Guys2.06}}\"/speak Shane \"{{i18n:Intervention.Guys2.07}}\"/pause 500/speak Alex \"{{i18n:Intervention.Guys2.08}}\"/pause 500/speak Elliott \"{{i18n:Intervention.Guys2.09}}\"/pause 500/playMusic wedding/speak Sam \"{{i18n:Intervention.Guys2.10}}\"/textAboveHead Alex \"{{i18n:Intervention.Guys2.11}}\"/pause 500/speak Sebastian \"{{i18n:Intervention.Guys2.12}}\"/pause 1000/question fork1 \"{{i18n:Intervention.Guys2.fork}}\"/fork choseToExplain/pause 500/textAboveHead Alex \"{{i18n:Intervention.Guys2.13}}\"/pause 500/speak Shane \"{{i18n:Intervention.Guys2.14}}\"/pause 1000/playMusic none/speak Sam \"{{i18n:Intervention.Guys2.15}}\"/pause 500/speak Harvey \"{{i18n:Intervention.Guys2.16}}\"/speak Elliott \"{{i18n:Intervention.Guys2.17}}\"/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.Guys2.18}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 3/end warpOut",
+                "choseToExplain": "pause 100/textAboveHead Shane \"{{i18n:Intervention.Guys2.choseToExplain.01}}\"/pause 500/resetVariable/question fork2 \"{{i18n:Intervention.Guys2.choseToExplain.fork}}\"/pause 100/fork crying/textAboveHead Sam \"{{i18n:Intervention.Guys2.choseToExplain.02}}\"/textAboveHead Alex \"{{i18n:Intervention.Guys2.choseToExplain.03}}\"/speak Elliott \"{{i18n:Intervention.Guys2.choseToExplain.04}}\"/pause 1000/faceDirection Sam 2/playMusic none/speak Sam \"{{i18n:Intervention.Guys2.choseToExplain.05}}\"/pause 500/speak Harvey \"{{i18n:Intervention.Guys2.choseToExplain.06}}\"/speak Sebastian \"{{i18n:Intervention.Guys2.choseToExplain.07}}\"/faceDirection Sam 3/pause 1000/jump Sam/jump Sebastian/jump Elliott/jump Victor/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Victor/jump Harvey/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.Guys2.choseToExplain.08}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 4/end warpOut",
+                "crying": "pause 100/faceDirection farmer 0/emote farmer 28/pause 1000/emote Harvey 12 true/emote Sebastian 12 true/emote Shane 12 true/emote Sam 12 true/emote Elliott 12 true/emote Alex 12 true/speak Harvey \"{{i18n:Intervention.Guys2.crying.01}}\"/speak Alex \"{{i18n:Intervention.Guys2.crying.02}}\"/pause 100/speak Sebastian \"{{i18n:Intervention.Guys2.crying.03}}\"/pause 1000/faceDirection Sam 2/playMusic none/speak Sam \"{{i18n:Intervention.Guys2.crying.04}}\"/pause 500/speak Harvey \"{{i18n:Intervention.Guys2.crying.05}}\"/speak Sebastian \"{{i18n:Intervention.Guys2.crying.06}}\"/faceDirection Sam 3/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Sebastian/jump Elliott/jump Victor/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.Guys2.crying.07}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 4/end warpOut"
+            },
+        },
+        { //Adds Sophia, Claire, and Olivia to intervention event
+            "Action": "EditData",
+            "Target": "data/events/haleyhouse",
+            "When": {
+                "Relationship:Sophia": "dating",
+                "Relationship:Claire": "dating",
+                "Relationship:Olivia": "dating"
+            },
+            "Entries": {
+                "195019/f Olivia 2500/f Sophia 2500/f Claire 2500/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/i 446/k 195012": "playful/-1000 -1000/farmer 8 19 1 Haley 18 18 1 Emily 19 17 2 Penny 20 17 2 Maru 21 17 2 Leah 22 18 3 Abigail 20 20 0 Sophia 18 20 0 Olivia 23 19 3 Claire 22 20 0/positionOffset Abigail -10 -15/pause 1000/message \"{{i18n:Intervention.Ladies.01}}\"/pause 500/message \"{{i18n:Intervention.Ladies.02}}\"/move farmer 5 0 1 true/viewport 17 19 true/move false/pause 500/faceDirection Haley 3 true/faceDirection Emily 3 true/faceDirection Penny 3 true/faceDirection Maru 3 true/faceDirection Leah 3 true/faceDirection Sophia 3 true/faceDirection Claire 3 true/faceDirection Abigail 3 true/textAboveHead Haley \"{{i18n:Intervention.Ladies.03}}\"/textAboveHead Abigail \"{{i18n:Intervention.Ladies.04}}\"/textAboveHead Leah \"{{i18n:Intervention.Ladies.05}}\"/pause 500/pause 2000/move farmer 4 0 1/emote farmer 32/pause 500/speak Sophia \"{{i18n:Intervention.Ladies.06}}\"/speak Abigail \"{{i18n:Intervention.Ladies.07}}\"/pause 500/speak Penny \"{{i18n:Intervention.Ladies.08}}\"/pause 500/speak Haley \"{{i18n:Intervention.Ladies.09}}\"/jump Penny/emote Penny 12/fade/viewport -1000 -1000/pause 1500/message \"{{i18n:Intervention.Ladies.10}}\"/pause 1000/message \"{{i18n:Intervention.Ladies.11}}\"/pause 500/end",
+                "195012/f Olivia 2500/f Sophia 2500/f Claire 2500/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": "playful/-1000 -1000/farmer 8 19 1 Haley 18 18 1 Emily 19 17 2 Penny 20 17 2 Maru 21 17 2 Leah 22 18 3 Abigail 20 20 0 Sophia 18 20 0 Olivia 23 19 3 Claire 22 20 0 Pierre -1000 -1000 1/positionOffset Abigail -10 -15/move farmer 5 0 1 true/viewport 17 19 true/move false/pause 500/startJittering/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 2000/stopAnimation farmer/showFrame farmer 0/stopJittering/playSound thudStep/faceDirection farmer 3 true/showFrame farmer 7 true/startJittering/faceDirection Haley 3 true/faceDirection Emily 3 true/faceDirection Sophia 3 true/faceDirection Claire 3 true/faceDirection Penny 3 true/faceDirection Maru 3 true/faceDirection Leah 3 true/faceDirection Abigail 3 true/textAboveHead Haley \"{{i18n:Intervention.Ladies2.01}}\"/textAboveHead Abigail \"{{i18n:Intervention.Ladies2.02}}\"/textAboveHead Leah \"{{i18n:Intervention.Ladies2.03}}\"/pause 3000/stopJittering/showFrame farmer 6 true/pause 500/faceDirection farmer 1/move farmer 3 0 1/playMusic none/emote farmer 28/pause 500/speak Abigail \"{{i18n:Intervention.Ladies2.04}}\"/pause 500/speak Leah \"{{i18n:Intervention.Ladies2.05}}\"/pause 500/speak Penny \"{{i18n:Intervention.Ladies2.06}}\"/pause 500/speak Maru \"{{i18n:Intervention.Ladies2.07}}\"/pause 500/speak Sophia \"{{i18n:Intervention.Ladies2.08}}\"/speak Emily \"{{i18n:Intervention.Ladies2.09}}\"/pause 500/playMusic ragtime/speak Haley \"{{i18n:Intervention.Ladies2.10}}\"/textAboveHead Leah \"{{i18n:Intervention.Ladies2.11}}\"/pause 500/textAboveHead Claire \"{{i18n:Intervention.Ladies2.12}}\"/pause 500/speak Abigail \"{{i18n:Intervention.Ladies2.13}}\"/pause 1000/question fork1 \"{{i18n:Intervention.Ladies2.fork}}\"/fork choseToExplain/pause 500/textAboveHead Maru \"{{i18n:Intervention.Ladies2.14}}\"/pause 500/speak Abigail \"{{i18n:Intervention.Ladies2.15}}\"/pause 1000/playMusic none/speak Haley \"{{i18n:Intervention.Ladies2.16}}\"/pause 500/speak Penny \"{{i18n:Intervention.Ladies2.17}}\"/speak Leah \"{{i18n:Intervention.Ladies2.18}}\"/pause 1000/jump Haley/jump Abigail/jump Emily/jump Leah/jump Maru/jump Claire/jump Olivia/jump Sophia/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.Ladies2.19}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 3/end warpOut",
+                "choseToExplain": "pause 100/textAboveHead Haley \"{{i18n:Intervention.Ladies2.choseToExplain.01}}\"/pause 500/resetVariable/question fork2 \"{{i18n:Intervention.Ladies2.choseToExplain.fork}}\"/pause 100/fork lifestyleChoice/textAboveHead Haley \"{{i18n:Intervention.Ladies2.choseToExplain.02}}\"/textAboveHead Maru \"{{i18n:Intervention.Ladies2.choseToExplain.03}}\"/speak Emily \"{{i18n:Intervention.Ladies2.choseToExplain.04}}\"/pause 500/speak Olivia \"{{i18n:Intervention.Ladies2.choseToExplain.05}}\"/pause 500/faceDirection Haley 2/playMusic none/speak Haley \"{{i18n:Intervention.Ladies2.choseToExplain.06}}\"/pause 500/speak Penny \"{{i18n:Intervention.Ladies2.choseToExplain.07}}\"/speak Leah \"{{i18n:Intervention.Ladies2.choseToExplain.08}}\"/faceDirection Haley 3/pause 1000/jump Haley/jump Abigail/jump Emily/jump Claire/jump Olivia/jump Sophia/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Claire/jump Olivia/jump Sophia/jump Abigail/jump Emily/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Abigail/jump Claire/jump Olivia/jump Sophia/jump Emily/jump Leah/jump Maru/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.Ladies2.choseToExplain.09}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 4/end warpOut",
+                "lifestyleChoice": "pause 100/speak Penny \"{{i18n:Intervention.Ladies2.lifestyleChoice.01}}\"/speak Maru \"{{i18n:Intervention.Ladies2.lifestyleChoice.02}}\"/pause 100/speak Claire \"{{i18n:Intervention.Ladies2.lifestyleChoice.03}}\"/speak Abigail \"{{i18n:Intervention.Ladies2.lifestyleChoice.04}}\"/pause 1000/faceDirection Haley 2/playMusic none/speak Haley \"{{i18n:Intervention.Ladies2.lifestyleChoice.05}}\"/pause 500/speak Penny \"{{i18n:Intervention.Ladies2.lifestyleChoice.06}}\"/speak Leah \"{{i18n:Intervention.Ladies2.lifestyleChoice.07}}\"/faceDirection Haley 3/pause 1000/jump Haley/jump Abigail/jump Claire/jump Olivia/jump Sophia/jump Emily/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Claire/jump Olivia/jump Sophia/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Leah/jump Claire/jump Olivia/jump Sophia/jump Maru/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.Ladies2.lifestyleChoice.08}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 4/end warpOut"
+            },
+        },
+        { //Adds Sophia to bachelorette intervention scene (player has rabbit's foot)
+            "Action": "EditData",
+            "Target": "data/events/haleyhouse",
+            "When": {
+                "Relationship:Sophia|contains=Married": false,
+                "Hearts:Sophia": "10"
+            },
+            "Entries": {
+                "195019/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/i 446/k 195012": "playful/-1000 -1000/farmer 8 19 1 Haley 18 18 1 Emily 19 17 2 Penny 20 17 2 Maru 21 17 2 Leah 22 18 3 Abigail 20 20 0 Sophia 19 20 0/pause 1000/message \"{{i18n:Intervention.195019.01}}\"/pause 500/message \"{{i18n:Intervention.195019.02}}\"/move farmer 5 0 1 true/viewport 17 19 true/move false/pause 500/faceDirection Haley 3 true/faceDirection Emily 3 true/faceDirection Penny 3 true/faceDirection Maru 3 true/faceDirection Leah 3 true/faceDirection Sophia 3 true/faceDirection Abigail 3 true/textAboveHead Haley \"{{i18n:Intervention.195019.03}}\"/textAboveHead Abigail \"{{i18n:Intervention.195019.04}}\"/textAboveHead Leah \"{{i18n:Intervention.195019.05}}\"/pause 2000/move farmer 4 0 1/emote farmer 32/pause 500/speak Abigail \"{{i18n:Intervention.195019.06}}\"/pause 500/speak Penny \"{{i18n:Intervention.195019.07}}\"/pause 500/speak Haley \"{{i18n:Intervention.195019.08}}\"/jump Penny/emote Penny 12/fade/viewport -1000 -1000/pause 1500/message \"{{i18n:Intervention.195019.09}}\"/pause 1000/message \"{{i18n:Intervention.195019.10}}\"/pause 500/end",
+            }
+        },
+        { //Adds Sophia to bachelorette intervention scene (player does not have rabbit's foot)
+            "Action": "EditData",
+            "Target": "data/events/haleyhouse",
+            "When": {
+                "Relationship:Sophia|contains=Married": false,
+                "Hearts:Sophia": "10"
+            },
+            "Entries": {
+                "195012/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": "playful/-1000 -1000/farmer 8 19 1 Haley 18 18 1 Emily 19 17 2 Penny 20 17 2 Maru 21 17 2 Leah 22 18 3 Abigail 20 20 0 Sophia 19 20 0 Pierre -1000 -1000 1/move farmer 5 0 1 true/viewport 17 19 true/move false/pause 500/startJittering/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 2000/stopAnimation farmer/showFrame farmer 0/stopJittering/playSound thudStep/faceDirection farmer 3 true/showFrame farmer 7 true/startJittering/faceDirection Haley 3 true/faceDirection Emily 3 true/faceDirection Penny 3 true/faceDirection Sophia 3 true/faceDirection Maru 3 true/faceDirection Leah 3 true/faceDirection Abigail 3 true/textAboveHead Haley \"{{i18n:Intervention.195012.01}}\"/textAboveHead Abigail \"{{i18n:Intervention.195012.02}}\"/textAboveHead Leah \"{{i18n:Intervention.195012.03}}\"/pause 3000/stopJittering/showFrame farmer 6 true/pause 500/faceDirection farmer 1/move farmer 3 0 1/playMusic none/emote farmer 28/pause 500/speak Abigail \"{{i18n:Intervention.195012.04}}\"/pause 500/speak Leah \"{{i18n:Intervention.195012.05}}\"/speak Sophia \"{{i18n:Intervention.195012.06}}\"/pause 500/speak Penny \"{{i18n:Intervention.195012.07}}\"/pause 500/speak Maru \"{{i18n:Intervention.195012.08}}\"/pause 500/speak Emily \"{{i18n:Intervention.195012.09}}\"/pause 500/playMusic ragtime/speak Haley \"{{i18n:Intervention.195012.10}}\"/textAboveHead Leah \"{{i18n:Intervention.195012.11}}\"/pause 500/speak Abigail \"{{i18n:Intervention.195012.12}}\"/pause 1000/question fork1 \"{{i18n:Intervention.195012.fork}}\"/fork choseToExplain/pause 500/textAboveHead Maru \"{{i18n:Intervention.195012.13}}\"/pause 500/speak Abigail \"{{i18n:Intervention.195012.14}}\"/pause 1000/playMusic none/speak Haley \"{{i18n:Intervention.195012.15}}\"/pause 500/speak Penny \"{{i18n:Intervention.195012.16}}\"/speak Leah \"{{i18n:Intervention.195012.17}}\"/pause 1000/jump Haley/jump Abigail/jump Emily/jump Sophia/jump Leah/jump Maru/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.195012.18}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 3/end warpOut",
+            }
+        },
+        { //Adds Sophia to bachelorette intervention scene (choseToExplain fork)
+            "Action": "EditData",
+            "Target": "data/events/haleyhouse",
+            "When": {
+                "Relationship:Sophia|contains=Married": false,
+                "Hearts:Sophia": "10"
+            },
+            "Entries": {
+                "choseToExplain": "pause 100/textAboveHead Haley \"{{i18n:Intervention.195012.choseToExplain.01}}\"/pause 500/resetVariable/question fork2 \"{{i18n:Intervention.195012.choseToExplain.fork}}\"/pause 100/fork lifestyleChoice/textAboveHead Haley \"{{i18n:Intervention.195012.choseToExplain.02}}\"/textAboveHead Maru \"{{i18n:Intervention.195012.choseToExplain.03}}\"/speak Emily \"{{i18n:Intervention.195012.choseToExplain.04}}\"/pause 1000/faceDirection Haley 2/playMusic none/speak Haley \"{{i18n:Intervention.195012.choseToExplain.05}}\"/pause 500/speak Penny \"{{i18n:Intervention.195012.choseToExplain.06}}\"/speak Leah \"{{i18n:Intervention.195012.choseToExplain.07}}\"/faceDirection Haley 3/pause 1000/jump Haley/jump Sophia/jump Abigail/jump Emily/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Leah/jump Maru/jump Sophia/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Leah/jump Maru/Jump Sophia/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.195012.choseToExplain.08}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 4/end warpOut",
+            }
+        },
+        { //Adds Sophia to bachelorette intervention scene (choseToExplain fork)
+            "Action": "EditData",
+            "Target": "data/events/haleyhouse",
+            "When": {
+                "Relationship:Sophia|contains=Married": false,
+                "Hearts:Sophia": "10"
+            },
+            "Entries": {
+                "lifestyleChoice": "pause 100/speak Penny \"{{i18n:Intervention.195012.lifestyleChoice.01}}\"/speak Maru \"{{i18n:Intervention.195012.lifestyleChoice.02}}\"/pause 100/speak Abigail \"{{i18n:Intervention.195012.lifestyleChoice.03}}\"/pause 1000/faceDirection Haley 2/playMusic none/speak Haley \"{{i18n:Intervention.195012.lifestyleChoice.04}}\"/pause 500/speak Penny \"{{i18n:Intervention.195012.lifestyleChoice.05}}\"/speak Leah \"{{i18n:Intervention.195012.lifestyleChoice.06}}\"/faceDirection Haley 3/pause 1000/jump Haley/jump Abigail/jump Sophia/jump Emily/jump Leah/jump Maru/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Leah/jump Maru/jump Sophia/jump Penny/pause 1000/jump Haley/jump Abigail/jump Emily/jump Sophia/jump Leah/jump Maru/jump Penny/pause 1000/speak Maru \"{{i18n:Intervention.195012.lifestyleChoice.07}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump girls 4/end warpOut",
+            }
+        },
+        { //Adds Victor to bachelor intervention scene (player has rabbit's foot)
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "When": {
+                "Relationship:Victor|contains=Married": false,
+                "Hearts:Victor": "10"
+            },
+            "Entries": {
+                "195099/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/i 446/k 195013": "playful/-1000 -1000/farmer 27 19 1 Victor 40 22 0 Sam 36 20 1 Sebastian 37 19 2 Harvey 39 19 2 Shane 40 17 2 Elliott 41 19 2 Alex 42 20 3/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/pause 1000/message \"{{i18n:Intervention.195099.01}}\"/pause 500/message \"{{i18n:Intervention.195099.02}}\"/move farmer 5 0 1 true/viewport 37 19 true/move false/pause 500/faceDirection Sam 3 true/faceDirection Victor 3 true/faceDirection Elliott 3 true/faceDirection Harvey 3 true/faceDirection Alex 3 true/faceDirection Shane 3 true/faceDirection Sebastian 3 true/textAboveHead Sam \"{{i18n:Intervention.195099.03}}\"/textAboveHead Alex \"{{i18n:Intervention.195099.04}}\"/textAboveHead Shane \"{{i18n:Intervention.195099.05}}\"/pause 2000/move farmer 3 0 1/emote farmer 32/pause 500/speak Harvey \"{{i18n:Intervention.195099.06}}\"/pause 500/speak Elliott \"{{i18n:Intervention.195099.07}}\"/pause 500/speak Shane \"{{i18n:Intervention.195099.08}}\"/pause 500/fade/viewport -1000 -1000/pause 1500/message \"{{i18n:Intervention.195099.09}}\"/pause 1000/message \"{{i18n:Intervention.195099.10}}\"/pause 500/end",
+            },
+        },
+        { //Adds Victor to bachelor intervention scene (player does not have rabbit's foot)
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "When": {
+                "Relationship:Victor|contains=Married": false,
+                "Hearts:Victor": "10"
+            },
+            "Entries": {
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": "playful/-1000 -1000/farmer 27 19 1 Victor 40 22 0 Sam 36 20 1 Sebastian 37 19 2 Harvey 39 19 2 Shane 40 17 2 Elliott 41 19 2 Alex 42 20 3/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/move farmer 5 0 1 true/viewport 37 19 true/move false/pause 500/startJittering/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 2000/stopAnimation farmer/showFrame farmer 0/stopJittering/playSound thudStep/faceDirection farmer 3 true/showFrame farmer 7 true/startJittering/faceDirection Sam 3 true/faceDirection Elliott 3 true/faceDirection Victor 3 true/faceDirection Harvey 3 true/faceDirection Alex 3 true/faceDirection Shane 3 true/faceDirection Sebastian 3 true/textAboveHead Sam \"{{i18n:Intervention.195013.01}}\"/textAboveHead Alex \"{{i18n:Intervention.195013.02}}\"/textAboveHead Victor \"{{i18n:Intervention.195013.03}}\"/textAboveHead Shane \"{{i18n:Intervention.195013.04}}\"/pause 3000/stopJittering/showFrame farmer 6 true/pause 500/faceDirection farmer 1/move farmer 3 0 1/playMusic none/emote farmer 28/pause 500/speak Sam \"{{i18n:Intervention.195013.05}}\"/pause 500/speak Harvey \"{{i18n:Intervention.195013.06}}\"/pause 500/speak Shane \"{{i18n:Intervention.195013.07}}\"/pause 500/speak Alex \"{{i18n:Intervention.195013.08}}\"/pause 500/speak Elliott \"{{i18n:Intervention.195013.09}}\"/pause 500/speak Victor \"{{i18n:Intervention.195013.10}}\"/pause 500/playMusic wedding/speak Sam \"{{i18n:Intervention.195013.11}}\"/textAboveHead Alex \"{{i18n:Intervention.195013.12}}\"/pause 500/speak Sebastian \"{{i18n:Intervention.195013.13}}\"/pause 1000/question fork1 \"{{i18n:Intervention.195013.13A}}\"/fork choseToExplain/pause 500/textAboveHead Alex \"{{i18n:Intervention.195013.14}}\"/pause 500/speak Shane \"{{i18n:Intervention.195013.15}}\"/pause 1000/playMusic none/speak Sam \"{{i18n:Intervention.195013.16}}\"/pause 500/speak Harvey \"{{i18n:Intervention.195013.17}}\"/speak Elliott \"{{i18n:Intervention.195013.18}}\"/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.195013.19}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 3/end warpOut"
+            },
+        },
+        { //Adds Victor to bachelor intervention scene (choseToExplain fork)
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "When": {
+                "Relationship:Victor|contains=Married": false,
+                "Hearts:Victor": "10"
+            },
+            "Entries": {
+                "choseToExplain": "pause 100/textAboveHead Shane \"{{i18n:Intervention.choseToExplain.01}}\"/pause 500/resetVariable/question fork2 \"{{i18n:Intervention.choseToExplain.fork}}\"/pause 100/fork crying/textAboveHead Sam \"{{i18n:Intervention.choseToExplain.02}}\"/textAboveHead Alex \"{{i18n:Intervention.choseToExplain.03}}\"/speak Elliott \"{{i18n:Intervention.choseToExplain.04}}\"/pause 1000/faceDirection Sam 2/playMusic none/speak Sam \"{{i18n:Intervention.choseToExplain.05}}\"/pause 500/speak Harvey \"{{i18n:Intervention.choseToExplain.06}}\"/speak Sebastian \"{{i18n:Intervention.choseToExplain.07}}\"/faceDirection Sam 3/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Victor/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Victor/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.choseToExplain.08}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 4/end warpOut",
+            },
+        },
+        { //Adds Victor to bachelor intervention scene (choseToExplain fork)
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "When": {
+                "Relationship:Victor|contains=Married": false,
+                "Hearts:Victor": "10"
+            },
+            "Entries": {
+                "crying": "pause 100/faceDirection farmer 0/emote farmer 28/pause 1000/emote Harvey 12 true/emote Sebastian 12 true/emote Shane 12 true/emote Sam 12 true/emote Elliott 12 true/emote Alex 12 true/speak Harvey \"{{i18n:Intervention.crying.01}}\"/speak Alex \"{{i18n:Intervention.crying.02}}\"/pause 100/speak Sebastian \"{{i18n:Intervention.crying.03}}\"/pause 1000/faceDirection Sam 2/playMusic none/speak Sam \"{{i18n:Intervention.crying.04}}\"/pause 500/speak Harvey \"{{i18n:Intervention.crying.05}}\"/speak Sebastian \"{{i18n:Intervention.crying.06}}\"/faceDirection Sam 3/pause 1000/jump Sam/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Victor/jump Harvey/pause 1000/jump Victor/jump Sam/jump Sebastian/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/jump Sam/jump Sebastian/jump Victor/jump Elliott/jump Shane/jump Alex/jump Harvey/pause 1000/speak Sam \"{{i18n:Intervention.crying.07}}\"/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/playSound slimedead/pause 2000/fade/viewport -2000 -2000/dump guys 4/end warpOut",
+            },
+        },
+        ///Player 'Death' Scenes
+        { //Edits death scene if player is killed at the Highlands
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "When": {
+                "LocationName": "Custom_Highlands, Custom_HighlandsCavern, Custom_HighlandsCavernPrison, Custom_HighlandsOutpost"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 6 6 1 Lance 8 6 3/changeLocation Custom_HighlandsOutpost/positionOffset farmer 20 0 true/positionOffset Lance -25 0 true/pause 500/message \"{{i18n:Lance.PlayerKilled.01}}\"/pause 900/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceSound/pause 600/viewport 7 6 true/pause 1500/shake Lance 500/pause 250/speak Lance \"{{i18n:Lance.PlayerKilled.02}}\"/pause 1000/speak Lance \"{{i18n:Lance.PlayerKilled.03}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/hospitaldeath/faceDirection farmer 2 true/end position 6 6"
+            },
+        },
+        { //Edits death strings
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "When": {
+                "LocationName": "Custom_Highlands, Custom_HighlandsCavern, Custom_HighlandsCavernPrison, Custom_HighlandsOutpost"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "Event.cs.1068": "{{i18n:Lance.PlayerKilled.04}}",
+                "Event.cs.1070": "{{i18n:Lance.PlayerKilled.04}}",
+            },
+        },
+        { //Edits death scene if player is killed in Galdora
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "When": {
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 24 19 0 Camilla 24 16 2/changeLocation Custom_GaldoranVoid/pause 500/message \"{{i18n:Camilla.PlayerKilled.01}}\"/pause 900/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostMusic/pause 600/viewport 24 18 true/pause 1500/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 450/speak Camilla \"{{i18n:Camilla.PlayerKilled.02}}\"/pause 300/showFrame Camilla 0 true/pause 650/speak Camilla \"{{i18n:Camilla.PlayerKilled.03}}\"/pause 800/move Camilla 0 1 2/pause 800/showFrame Camilla 1 true/pause 300/shake Camilla 700/pause 600/screenFlash 1/playSound wand/warp farmer -20 -20/pause 400/showFrame Camilla 0 true/pause 450/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/stopMusic/hospitaldeath/faceDirection farmer 2 true/end position 31 28"
+            },
+        },
+        { //Edits death strings
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "When": {
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "Event.cs.1068": "{{i18n:Camilla.PlayerKilled.04}}",
+                "Event.cs.1070": "{{i18n:Camilla.PlayerKilled.04}}",
+            },
+        },
+        { //Marlon and Gil - Mine
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "When": {
+                "DayOfWeek |contains=Monday, Tuesday, Saturday, Sunday": true,
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": false
+            },
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 19 10 2 MarlonFay 18 10 1/addTemporaryActor GilSprite 19 32 21 10 2/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/speak MarlonFay \"@!$1\"/viewport 19 10 true/pause 1000/speak MarlonFay \"{{i18n:Mines.PlayerKilled.01}}\"/pause 500/showFrame 0/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 28/minedeath/end dialogue MarlonFay \"{{i18n:Mines.PlayerKilled.02}}\""
+            },
+        },
+        { //Lance - Ginger Island
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "When": {
+                "DayOfWeek |contains=Monday, Tuesday, Saturday, Sunday": true,
+                "HasSeenEvent |contains=6951319": true,
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": false
+            },
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Lance 15 33 3/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.01}}\"/viewport 13 33 clamp true/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.02}}\"/showFrame 0/pause 1000/emote farmer 28/minedeath/end"
+            },
+        },
+        { //ENTER JUNIMMO WOODS
+            "Action": "EditData",
+            "Target": "data/events/Custom_JunimoWoods",
+            "Entries": {
+                "1000037/": "woodsTheme/-500 -500/farmer 37 7 2/pause 700/viewport 37 12 true/skippable/pause 200/move farmer 0 3 2/pause 700/move farmer 0 0 1/pause 800/move farmer 0 0 3/pause 1300/playSound junimoMeep1/pause 250/move farmer 0 0 2/pause 125/emote farmer 16/pause 300/move farmer 0 0 1/pause 500/move farmer 0 0 3/pause 800/move farmer 0 0 2/pause 700/playSound junimoMeep1/move farmer 0 1 2/pause 800/emote farmer 8/pause 500/playSound junimoMeep1/pause 500/move farmer 0 0 3/pause 300/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 100/playSound junimoMeep1/stopMusic/pause 1000/message \"{{i18n:JunimoWoods.01}}\"/pause 300/end position 37 5"
+            },
+        },
+        { //SPRITE SPRING PATH OPEN - HINT
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasSeenEvent": "418172"
+            },
+            "Entries": {
+                "1091881/k 1111200": "none/-500 -500/farmer -100 -100 2/pause 1250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 1000/message \"{{i18n:SpriteSprings.01}}\"/pause 1000/end"
+            },
+        },
+        { //SPRITE SPRING PATH OPEN
+            "Action": "EditData",
+            "Target": "data/events/Custom_ForestWest",
+            "Entries": {
+                "1091881/e 418172": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
+            },
+        },
+        { //SPRITE SPRING PATH OPEN - compatibility patch
+            "Action": "EditData",
+            "Target": "data/events/Custom_ForestWest",
+            "When": {
+                "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
+            },
+            "Entries": {
+                "1091881/e 3073012": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
+            },
+        },
+        { //SPRITE SPRING PATH OPEN - compatibility patch
+            "Action": "EditData",
+            "Target": "data/events/Custom_ForestWest",
+            "When": {
+                "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
+            },
+            "Entries": {
+                "1091881/e 3073013": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
+            },
+        },
+        { //SPRITE SPRING PATH OPEN - directly teleports players if sprite spring is the last nexus warp
+            "Action": "EditData",
+            "Target": "data/events/Custom_ForestWest",
+            "Entries": {
+                "1091882/H/e 418172/e 908072/e 908073/e 908074/e 908075/e 908077/k 908076/k 1111200": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.04}}\"/pause 1000/end position 154 141",
+            },
+        },
+        { //SPRITE SPRING EVENT
+            "Action": "EditData",
+            "Target": "data/events/Custom_SpriteSpring2",
+            "Entries": {
+                "1111200/": "FlashShifter.StardewValleyExpandedCP_GrenvilleFalls/-500 -500/farmer 11 23 1/pause 500/viewport 16 23 clamp true/skippable/move farmer 5 0 1/pause 1250/move farmer 0 0 2/pause 1300/move farmer 0 0 3/pause 1400/playSound junimoMeep1/pause 500/move farmer 0 0 0/pause 550/playSound junimoMeep1/pause 100/emote farmer 8 true/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 750/message \"{{i18n:SpriteSprings.Event.01}}\"/pause 1000/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 750/message \"{{i18n:SpriteSprings.Event.02}}\"/pause 250/move farmer -1 0 0/pause 150/emote farmer 8 true/pause 100/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 850/message \"{{i18n:SpriteSprings.Event.03}}\"/pause 200/playSound junimoMeep1/pause 150/playSound junimoMeep1/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/pause 300/move farmer 0 0 0/pause 200/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 700/message \"{{i18n:SpriteSprings.Event.04}}\"/pause 400/move farmer 1 0 2 true/pause 150/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 450/message \"{{i18n:SpriteSprings.Event.05}}\"/pause 700/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 350/message \"{{i18n:SpriteSprings.Event.06}}\"/pause 500/move farmer 0 0 0/pause 150/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 400/message \"{{i18n:SpriteSprings.Event.07}}\"/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 300/move farmer 0 0 3/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 450/message \"{{i18n:SpriteSprings.Event.08}}\"/pause 300/playSound junimoMeep1/pause 250/move farmer 0 0 0/pause 350/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 450/message \"{{i18n:SpriteSprings.Event.09}}\"/pause 300/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 400/message \"{{i18n:SpriteSprings.Event.10}}\"/pause 600/emote farmer 40/pause 400/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 350/message \"{{i18n:SpriteSprings.Event.11}}\"/pause 200/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 200/message \"{{i18n:SpriteSprings.Event.12}}\"/pause 500/emote farmer 32/pause 600/move farmer 0 0 0/pause 600/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 700/message \"{{i18n:SpriteSprings.Event.13}}\"/pause 500/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 500/message \"{{i18n:SpriteSprings.Event.14}}\"/pause 700/move farmer 0 -1 0/pause 700/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 500/message \"{{i18n:SpriteSprings.Event.15}}\"/pause 800/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 550/message \"{{i18n:SpriteSprings.Event.16}}\"/pause 650/emote farmer 40/pause 500/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 650/message \"{{i18n:SpriteSprings.Event.17}}\"/pause 600/playSound junimoMeep1/pause 300/move farmer 0 0 3/pause 500/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 800/message \"{{i18n:SpriteSprings.Event.18}}\"/pause 1000/move farmer 0 0 1/pause 500/emote farmer 16/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 600/message \"{{i18n:SpriteSprings.Event.19}}\"/pause 500/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 500/move farmer 0 0 0/pause 300/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 700/message \"{{i18n:SpriteSprings.Event.20}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 600/message \"{{i18n:SpriteSprings.Event.21}}\"/pause 1000/playSound junimoMeep1/pause 650/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 650/message \"{{i18n:SpriteSprings.Event.22}}\"/pause 500/emote farmer 32/pause 500/move farmer 0 0 1/pause 550/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 600/message \"{{i18n:SpriteSprings.Event.23}}\"/pause 750/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 600/message \"{{i18n:SpriteSprings.Event.24}}\"/pause 750/move farmer 0 0 0/pause 1000/emote farmer 32/pause 1300/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 150/playSound junimoMeep1/move farmer 0 0 1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 550/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 750/message \"{{i18n:SpriteSprings.Event.25}}\"/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/move farmer 0 0 0/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 700/message \"{{i18n:SpriteSprings.Event.26}}\"/pause 600/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 600/message \"{{i18n:SpriteSprings.Event.27}}\"/pause 500/playSound junimoMeep1/pause 50/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 70/playSound junimoMeep1/pause 500/message \"{{i18n:SpriteSprings.Event.28}}\"/pause 350/globalFade/viewport -1000 -1000/pause 700/playSound junimoMeep1/pause 300/end position 16 23",
+            },
+        },
+        { //Movie Theater Unlocked - Tagging Event ID (not married to Claire)
+            "Action": "EditData",
+            "Target": "data/events/MovieTheater",
+            "When": {
+                "Spouse |contains=Claire": false,
+                "HasSeenEvent|contains=191393": true
+            },
+            "Entries": {
+                "015305930/": "none/-500 -500/farmer 11 9 3 **Martin** 9 5 0 **Claire** 7 5 2/positionOffset **Claire** -15 3 true/skippable/pause 500/playMusic movieTheater/pause 750/viewport 8 7 true/move farmer -4 0 0 true/pause 1500/emote **Claire** 16 true/pause 500/move farmer 0 -2 0 true/pause 1250/speak **Claire** \"{{i18n:Movie.Unlock.01}}\"/pause 500/faceDirection **Martin** 3 true/pause 500/faceDirection farmer 1 true/pause 375/speak **Martin** \"{{i18n:Movie.Unlock.02}}\"/pause 325/shake **Claire** 500/pause 350/faceDirection farmer 0 true/pause 250/speak **Claire** \"{{i18n:Movie.Unlock.03}}\"/pause 500/speed **Martin** 1/move **Martin** -1 0 2/pause 400/speak **Martin** \"{{i18n:Movie.Unlock.04}}\"/pause 500/emote farmer 32/pause 150/speak **Claire** \"{{i18n:Movie.Unlock.05}}\"/pause 350/globalFade/viewport -1000 -1000/pause 500/end",
+            },
+        },
+        { //Movie Theater Unlocked - Tagging Event ID (married to Claire)
+            "Action": "EditData",
+            "Target": "data/events/MovieTheater",
+            "When": {
+                "Spouse |contains=Claire": true,
+                "HasSeenEvent|contains=191393": true
+            },
+            "Entries": {
+                "015305930/": "none/-500 -500/farmer 11 9 3 **Martin** 9 5 0 **Claire** 7 5 2 Claire -30 -30 2/positionOffset **Claire** -15 3 true/skippable/pause 500/playMusic movieTheater/pause 750/viewport 8 7 true/move farmer -4 0 0 true/pause 1500/emote **Claire** 16 true/pause 500/move farmer 0 -2 0 true/pause 1250/speak **Claire** \"{{i18n:Movie.Unlock.Married.01}}\"/pause 500/faceDirection **Martin** 3 true/pause 500/faceDirection farmer 1 true/pause 375/speak **Martin** \"{{i18n:Movie.Unlock.02}}\"/pause 325/shake **Claire** 500/pause 350/faceDirection farmer 0 true/pause 250/speak **Claire** \"{{i18n:Movie.Unlock.Married.03}}\"/pause 500/speed **Martin** 1/move **Martin** -1 0 2/pause 400/speak **Martin** \"{{i18n:Movie.Unlock.04}}\"/pause 500/emote farmer 32/pause 150/speak **Claire** \"{{i18n:Movie.Unlock.Married.05}}\"/pause 350/globalFade/viewport -1000 -1000/pause 500/end dialogue Claire \"{{i18n:Movie.Unlock.Married.06}}\"",
+            },
+        },
+        { //Movie Theater Unlocked - Tagging Event ID (joja)
+            "Action": "EditData",
+            "Target": "data/events/MovieTheater",
+            "When": {
+                "HasSeenEvent|contains=191393": false
+            },
+            "Entries": {
+                "015305930/": "none/-500 -500/Claire -30 -30 2/pause 50/end"
+            },
+        },
+        { //Allows players who completed the joja warehouse to visit the fern isles
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasSeenEvent": "502261"
+            },
+            "Entries": {
+                "3872126/J/x willyBackRoomInvitation": "null"
+            }
+        },
+        { //JAS AND VINCENT SEWER EVENT EDIT
+            "Action": "EditData",
+            "Target": "data/events/forest",
+            "Entries": {
+                "318560/j 10/t 900 1600/d Tue Wed Fri Sat": "communityCenter/94 99/farmer 98 88 2 Jas 95 100 3 Vincent 93 100 1/playMusic communityCenter/skippable/move farmer 0 6 2 true/pause 1000/speak Jas \"{{i18n:SewerEvent.01}}\"/pause 600/jump Vincent/pause 500/faceDirection Vincent 0/pause 500/showFrame Vincent 16/shake Vincent 400/playSound clank/pause 800/shake Vincent 400/playSound clank/pause 800/showFrame Vincent 8/speak Vincent \"{{i18n:SewerEvent.02}}\"/pause 800/faceDirection Jas 0/pause 800/speak Jas \"{{i18n:SewerEvent.03}}\"/pause 300/faceDirection Vincent 1/speak Vincent \"{{i18n:SewerEvent.04}}\"/pause 500/faceDirection Jas 3/speak Jas \"{{i18n:SewerEvent.05}}\"/playMusic none/pause 2000/playSound slimeHit/pause 400/playSound slimeHit/pause 400/playSound slimeHit/pause 500/emote Vincent 8 true/emote Jas 8 true/pause 900/faceDirection Vincent 0 true/faceDirection Jas 0 true/pause 1600/playSound shadowpeep/shake Vincent 5000/shake Jas 5000/jump Jas/jump Vincent/faceDirection farmer 3 true/faceDirection Vincent 0 true/faceDirection Jas 0 false/pause 1500/playSound shadowDie/jump Vincent/jump Jas/pause 800/speed Vincent 6/speed Jas 6/advancedMove Jas false 4 0 0 -7 -1 0/advancedMove Vincent false 6 0 0 -8 -1 0/proceedPosition Vincent 98 92/faceDirection farmer 0 true/faceDirection Jas 2 true/faceDirection Vincent 2 true/speak Jas \"{{i18n:SewerEvent.06}}\"/shake Jas 4000/shake Vincent 4000/pause 1000/faceDirection farmer 2/pause 1000/move farmer 0 6 3 false/move farmer -4 0 0/pause 800/emote farmer 40/pause 1600/playSound shadowpeep/faceDirection farmer 2 true/jump farmer/showFrame 94/jump Vincent/jump Jas/speed Jas 4/speed Vincent 4/move Jas 0 -6 0 true/move Vincent 0 -6 0 true/pause 1000/globalFade/viewport -1000 -1000/end"
+            },
+        },
+		{ //WILLY GLITTERING BOULDER EVENT EDIT (not raining)
+            "Action": "EditData",
+            "Target": "data/events/mountain",
+			"When": {
+                "Weather |contains=Rain, Storm, Wind, Snow": false,
+            },
+            "Entries": {
+                "404798/Hn ccFishTank": "spring_day_ambient/-1000 -1000/farmer 40 23 0 Willy 42 15 1/skippable/AddTemporaryActor WillyBag 16 32 41 15 2 false true/viewport 42 16 clamp true/pause 400/emote Willy 8/pause 200/move farmer 0 -5 1/move farmer 2 0 0/move farmer 0 -1 0/pause 800/faceDirection Willy 2/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.01}}\"/pause 500/faceDirection Willy 1/speak Willy \"{{i18n:GlitteringBoulderEvent.02}}\"/pause 500/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.03}}\"/pause 900/addTemporaryActor ShimmeringWater 40 50 43 15 0 false true/animate ShimmeringWater false true 200 0 1 2 3 4 5/playSound slosh/pause 500/faceDirection Willy 1/pause 500/jump Willy/pause 1000/speak Willy \"{{i18n:GlitteringBoulderEvent.04}}\"/pause 500/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.05}}\"/pause 500/faceDirection Willy 2/pause 400/speak Willy \"{{i18n:GlitteringBoulderEvent.06}}\"/pause 500/faceDirection farmer 0/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.07}}\"/pause 900/jump Willy/pause 800/speak Willy \"{{i18n:GlitteringBoulderEvent.08}}\"/pause 300/emote farmer 16/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.09}}\"/pause 800/faceDirection Willy 3/pause 700/showFrame Willy 13/pause 400/playSound pickUpItem/pause 400/showFrame Willy 12/pause 500/showFrame Willy 0/pause 400/showFrame Willy 3/pause 400/playSound coin/pause 400/showFrame Willy 0/pause 500/awardFestivalPrize Pan/null/pause 800/speak Willy \"{{i18n:GlitteringBoulderEvent.10}}\"/pause 300/faceDirection farmer 1 true/pause 300/faceDirection farmer 2/itemAboveHead pan/null/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 500/emote farmer 32 true/pause 300/end"
+		    },
+        },
+		{ //WILLY GLITTERING BOULDER EVENT EDIT (raining)
+            "Action": "EditData",
+            "Target": "data/events/mountain",
+			"When": {
+                "Weather |contains=Sun": false,
+            },
+            "Entries": {
+                "404798/Hn ccFishTank": "spring_day_ambient/-1000 -1000/farmer 40 23 0 Willy 42 15 1/playMusic rain/skippable/AddTemporaryActor WillyBag 16 32 41 15 2 false true/viewport 42 16 clamp true/pause 400/emote Willy 8/pause 200/move farmer 0 -5 1/move farmer 2 0 0/move farmer 0 -1 0/pause 800/faceDirection Willy 2/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.01}}\"/pause 500/faceDirection Willy 1/speak Willy \"{{i18n:GlitteringBoulderEvent.02}}\"/pause 500/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.03}}\"/pause 900/addTemporaryActor ShimmeringWater 40 50 43 15 0 false true/animate ShimmeringWater false true 200 0 1 2 3 4 5/playSound slosh/pause 500/faceDirection Willy 1/pause 500/jump Willy/pause 1000/speak Willy \"{{i18n:GlitteringBoulderEvent.04}}\"/pause 500/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.05}}\"/pause 500/faceDirection Willy 2/pause 400/speak Willy \"{{i18n:GlitteringBoulderEvent.06}}\"/pause 500/faceDirection farmer 0/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.07}}\"/pause 900/jump Willy/pause 800/speak Willy \"{{i18n:GlitteringBoulderEvent.08}}\"/pause 300/emote farmer 16/pause 500/speak Willy \"{{i18n:GlitteringBoulderEvent.09}}\"/pause 800/faceDirection Willy 3/pause 700/showFrame Willy 13/pause 400/playSound pickUpItem/pause 400/showFrame Willy 12/pause 500/showFrame Willy 0/pause 400/showFrame Willy 3/pause 400/playSound coin/pause 400/showFrame Willy 0/pause 500/awardFestivalPrize Pan/null/pause 800/speak Willy \"{{i18n:GlitteringBoulderEvent.10}}\"/pause 300/faceDirection farmer 1 true/pause 300/faceDirection farmer 2/itemAboveHead pan/null/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 500/emote farmer 32 true/pause 300/end"
+		    },
+        },
+		{
+            "Action": "Load",
+            "Target": "Characters/WillyBag",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WillyBag.png"
+        },
+		{
+            "Action": "Load",
+            "Target": "Characters/ShimmeringWater",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShimmeringWater.png"
+        },
+        { //LOST WOODS DIRECTIONS SPAWN
+            "Action": "EditData",
+            "Target": "data/events/forest",
+            "When": {
+                "IsCommunityCenterComplete": true
+            },
+            "Entries": {
+                "1091881/": "none/-500 -500/farmer -100 -100 2/viewport 19 109 clamp true/skippable/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 800/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/playSound junimoMeep1/end position 19 107",
+            },
+        },
+        { //Adds spouse strings for the movie theater
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite_Spouse_Victor": "{{i18n:Movie.SpouseInvite.01}}",
+                "MovieInvite_Spouse_Olivia": "{{i18n:Movie.SpouseInvite.02}}",
+                "MovieInvite_Spouse_Sophia": "{{i18n:Movie.SpouseInvite.03}}",
+                "MovieInvite_Spouse_Claire": "{{i18n:Movie.SpouseInvite.04}}",
+                "MovieInvite_Spouse_Wizard": "{{i18n:Movie.SpouseInvite.05}}",
+                "MovieInvite_Spouse_Lance": "{{i18n:Movie.SpouseInvite.06}}",
+            }
+        },
+    ]
+}

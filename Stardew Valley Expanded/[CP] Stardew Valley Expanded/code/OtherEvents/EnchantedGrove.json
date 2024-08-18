@@ -1,0 +1,1485 @@
+{
+    "Changes": [
+        //***ENCHANTED GROVE***//
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "MapProperties": {
+                "Music": "FlashShifter.StardewValleyExpandedCP_Nexus"
+            }
+        },
+        { //Enchanted Grove - part 1 (no grandpas farm) - player is not married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "Spouse |contains=Wizard": false,
+                "HasFlag": "galaxySword",
+                "HasSeenEvent |contains=7502582": true,
+                "HasSeenEvent |contains=8050109": true,
+                "HasSeenEvent |contains=6951319": true
+            }, //player has galaxy sword, cleared the railroad boulder, saw Alesia's event, beat the volcano dungeon
+            "Entries": {
+                "908070/t 600 900": "continue/95 49/farmer 21 20 1 Wizard 20 20 0/skippable/pause 1000/speak Wizard \"{{i18n:EnchantedGrove1.01}}\"/pause 500/emote farmer 8 true/pause 800/speak Wizard \"{{i18n:EnchantedGrove1.02}}\"/pause 850/faceDirection Wizard 1 true/pause 225/faceDirection Wizard 2 true/pause 650/showFrame Wizard 16 true/pause 400/shake Wizard 500/pause 500/screenFlash 1/playSound wand/warp Wizard -50 -50/pause 1000/end",
+            }
+        },
+        { //Enchanted Grove - part 1 (player is on grandpas farm) - player is not married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "Spouse |contains=Wizard": false,
+                "FarmType": "Standard",
+                "FarmType |contains=FrontierFarm": false,
+                "HasMod": "flashshifter.GrandpasFarm",
+                "HasFlag": "galaxySword",
+                "HasSeenEvent |contains=7502582": true,
+                "HasSeenEvent |contains=8050109": true,
+                "HasSeenEvent |contains=6951319": true
+            }, //player has galaxy sword, cleared the railroad boulder, saw Alesia's event, beat the volcano dungeon
+            "Entries": {
+                "908070/t 600 900": "continue/95 49/farmer 21 20 1 Wizard 20 20 0/skippable/pause 1000/speak Wizard \"{{i18n:EnchantedGrove1.01}}\"/pause 500/emote farmer 8 true/pause 800/speak Wizard \"{{i18n:EnchantedGrove1.02}}\"/pause 850/faceDirection Wizard 1 true/pause 225/faceDirection Wizard 2 true/pause 650/showFrame Wizard 16 true/pause 400/shake Wizard 500/pause 500/screenFlash 1/playSound wand/warp Wizard -50 -50/pause 1000/end"
+            }
+        },
+        { //Enchanted Grove - part 2 (Morgan doesn't exist yet) - player is not married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/WizardHouse",
+            "When": {
+                "Spouse |contains=Wizard": false
+            },
+            "Entries": {
+                "908071/e 908070/k 5978924": "WizardSong/-500 -500/farmer 8 28 0 Wizard 3 19 2/viewport 7 21 true/skippable/move farmer 0 -8 3 true/pause 3500/faceDirection Wizard 1 true/pause 850/speak Wizard \"{{i18n:EnchantedGrove2.01}}\"/pause 750/move farmer -2 0 0/move farmer 0 -1 3/move farmer -2 0 3/pause 800/showFrame Wizard 5 true/shake Wizard 350/pause 250/playSound pickUpItem/pause 250/showFrame Wizard 4 true/pause 700/faceDirection farmer 2 true/pause 600/playSound dwop/showFrame farmer 90 true/pause 750/showFrame farmer 91 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/playSound gulp/pause 600/playSound gulp/pause 600/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 1000/playSound dwop/faceDirection farmer 2 true/pause 750/startJittering/pause 700/showFrame farmer 96 true/pause 700/glow 100 255 255/pause 200/playSound coldSpell/pause 1100/glow 255 155 255/pause 200/playSound coldSpell/pause 1200/glow 255 255 155/pause 200/playSound coldSpell/pause 700/speak Wizard \"{{i18n:EnchantedGrove2.02}}\"/pause 700/stopJittering/pause 1600/faceDirection farmer 2 true/pause 1500/message \"{{i18n:EnchantedGrove2.03}}\"/pause 1650/faceDirection farmer 3 true/pause 650/speak Wizard \"{{i18n:EnchantedGrove2.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_NewMagicLearned/warp Wizard 10 15/faceDirection Wizard 2 true/warp farmer 7 17/faceDirection farmer 1 true/viewport 7 17 true/pause 1200/textAboveHead Wizard \"{{i18n:EnchantedGrove2.05}}\"/pause 1800/showFrame Wizard 16 true/pause 500/shake Wizard 1000/screenFlash 2/addTemporaryActor MagicWarp 48 48 9 18 2 false/playSound wand/playSound wand/pause 650/faceDirection Wizard 2 true/pause 200/emote farmer 16 true/pause 800/globalFade/viewport -1000 -1000/warp MagicWarp -30 -30/warp Wizard 3 16/faceDirection Wizard 1 true/warp farmer 5 16/faceDirection farmer 3 true/animate Wizard false true 500 19 19 19 4 4 19 19 4 19 19 19 4 4/viewport 7 17 true/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/globalFade/viewport -1000 -1000/stopAnimation Wizard/warp Wizard 7 17/faceDirection Wizard 1 true/warp farmer 10 15/faceDirection farmer 2 true/positionOffset farmer 0 23/viewport 7 17 true/pause 2000/showFrame farmer 3 true/playSound dwoop/pause 200/startJittering/pause 500/screenFlash 2/warp MagicWarp 9 18/playSound wand/playSound wand/pause 400/stopJittering/pause 700/faceDirection farmer 2 true/pause 750/jump farmer/pause 400/textAboveHead Wizard \"{{i18n:EnchantedGrove2.06}}\"/pause 850/faceDirection farmer 3 true/pause 400/globalFade/viewport -1000 -1000/stopMusic/pause 600/playSound reward/message \"{{i18n:EnchantedGrove2.07}}\"/warp MagicWarp -30 -30/warp Wizard 4 16/faceDirection Wizard 1 true/warp farmer 6 16/faceDirection farmer 3 true/pause 1000/playMusic WizardSong/pause 500/viewport 7 17 true/pause 1250/speak Wizard \"{{i18n:EnchantedGrove2.08}}\"/pause 500/emote farmer 32/pause 400/speak Wizard \"{{i18n:EnchantedGrove2.09}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:EnchantedGrove2.10}}\"",
+            }
+        },
+        { //Enchanted Grove - part 2 (Morgan exists) - player is not married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/WizardHouse",
+            "When": {
+                "Spouse |contains=Wizard": false
+            },
+            "Entries": {
+                "908071/e 908070/e 5978924": "WizardSong/-500 -500/farmer 8 28 0 Wizard 3 19 2 Morgan 8 13 0/viewport 7 21 true/skippable/move farmer 0 -8 3 true/pause 3500/faceDirection Wizard 1 true/pause 850/speak Wizard \"{{i18n:EnchantedGrove2.01}}\"/pause 500/faceDirection Morgan 1 true/pause 250/faceDirection Morgan 2 true/pause 350/speed Morgan 5/move Morgan 0 3 3/speed Morgan 5/move Morgan -2 0 2/pause 650/jump Morgan/pause 600/faceDirection farmer 0 true/pause 350/faceDirection Wizard 0 true/pause 200/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.01}}\"/pause 500/speak Wizard \"{{i18n:EnchantedGrove2.Morgan.02}}\"/pause 700/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.03}}\"/pause 500/faceDirection Morgan 3 true/pause 250/move Morgan -2 0 2/move Morgan 0 1 2/pause 600/faceDirection Wizard 1 true/pause 400/faceDirection farmer 3 true/pause 500/move farmer -2 0 0/move farmer 0 -1 3/move farmer -2 0 3/pause 800/showFrame Wizard 5 true/shake Wizard 350/pause 250/playSound pickUpItem/pause 250/showFrame Wizard 4 true/pause 700/faceDirection farmer 2 true/pause 600/playSound dwop/showFrame farmer 90 true/pause 750/showFrame farmer 91 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/playSound gulp/pause 600/playSound gulp/pause 600/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 1000/playSound dwop/faceDirection farmer 2 true/pause 750/startJittering/pause 700/showFrame farmer 96 true/pause 700/glow 100 255 255/pause 200/playSound coldSpell/pause 1100/glow 255 155 255/pause 200/playSound coldSpell/pause 1200/glow 255 255 155/pause 200/playSound coldSpell/pause 700/speak Wizard \"{{i18n:EnchantedGrove2.02}}\"/pause 700/stopJittering/pause 1600/faceDirection farmer 2 true/pause 1500/message \"{{i18n:EnchantedGrove2.03}}\"/pause 1650/faceDirection farmer 3 true/pause 650/speak Wizard \"{{i18n:EnchantedGrove2.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_NewMagicLearned/warp Wizard 10 15/faceDirection Wizard 2 true/warp farmer 7 17/warp Morgan 10 20/faceDirection Morgan 0 true/faceDirection farmer 1 true/viewport 7 17 true/pause 1200/textAboveHead Wizard \"{{i18n:EnchantedGrove2.05}}\"/pause 1800/showFrame Wizard 16 true/pause 500/shake Wizard 1000/screenFlash 2/addTemporaryActor MagicWarp 48 48 9 18 2 false/playSound wand/playSound wand/pause 650/faceDirection Wizard 2 true/pause 200/emote farmer 16 true/pause 500/jump Morgan/pause 300/globalFade/viewport -1000 -1000/warp MagicWarp -30 -30/warp Wizard 3 16/faceDirection Wizard 1 true/warp farmer 5 16/warp Morgan 4 18/faceDirection farmer 3 true/animate Wizard false true 500 19 19 19 4 4 19 19 4 19 19 19 4 4/viewport 7 17 true/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/globalFade/viewport -1000 -1000/stopAnimation Wizard/warp Wizard 7 17/faceDirection Wizard 1 true/warp farmer 10 15/faceDirection farmer 2 true/warp Morgan 10 20/positionOffset farmer 0 23/viewport 7 17 true/pause 2000/showFrame farmer 3 true/playSound dwoop/pause 200/startJittering/pause 500/screenFlash 2/warp MagicWarp 9 18/playSound wand/playSound wand/pause 400/stopJittering/pause 700/faceDirection farmer 2 true/pause 750/jump farmer/pause 400/textAboveHead Wizard \"{{i18n:EnchantedGrove2.06}}\"/pause 850/faceDirection farmer 3 true/pause 400/globalFade/viewport -1000 -1000/stopMusic/pause 600/playSound reward/message \"{{i18n:EnchantedGrove2.07}}\"/warp Wizard 4 16/faceDirection Wizard 1 true/warp farmer 6 16/faceDirection farmer 3 true/warp Morgan 5 18/pause 1000/playMusic WizardSong/pause 500/viewport 7 17 true/pause 1250/speak Wizard \"{{i18n:EnchantedGrove2.08}}\"/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.04}}\"/pause 500/emote farmer 32/pause 400/speak Wizard \"{{i18n:EnchantedGrove2.09}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:EnchantedGrove2.10}}\"",
+            }
+        },
+        { //Enchanted Grove - part 3 - player is not married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/backwoods",
+            "When": {
+                "Spouse |contains=Wizard": false
+            },
+            "Entries": {
+                "908072/e 908071": "continue/-500 -500/farmer 16 17 1 Wizard 21 12 0/showFrame Wizard 17 true/addConversationTopic wizardEnchantedGrove 14/viewport 21 14 clamp true/skippable/move farmer 5 0 0/move farmer 0 -3 0 true/pause 1500/screenFlash 1/glow 255 155 255/playSound healSound/pause 2500/faceDirection Wizard 0 true/pause 850/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/showFrame Wizard 0 true/pause 500/speak Wizard \"{{i18n:EnchantedGrove3.01}}\"/pause 600/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 400/move Wizard 0 -13 0 true/viewport move 0 -1 4000 true/pause 450/move farmer 0 -6 0 true/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Custom_FakeEnchantedGrove/faceDirection farmer 0 true/faceDirection Wizard 0 true/warp Wizard 30 36/warp farmer 30 38/viewport 30 35 true/viewport move 0 -1 6500 true/pause 1000/move Wizard 0 -8 0 true/move farmer 0 -8 0 true/pause 6000/speak Wizard \"{{i18n:EnchantedGrove3.02}}\"/pause 700/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:EnchantedGrove3.03}}\"/pause 800/faceDirection Wizard 3 true/pause 200/move Wizard -1 0 3/pause 200/faceDirection Wizard 2 true/pause 100/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 0 true/pause 100/showFrame Wizard 18 true/pause 300/showFrame Wizard 20 true/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 650/showFrame farmer 4 true/pause 400/showFrame farmer 5 true/pause 1000/globalFade/viewport -1000 -1000/pause 500/playSound healSound/glow 255 0 0/pause 1100/playSound healSound/glow 0 255 0/pause 1100/playSound healSound/glow 0 0 255/pause 1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/showFrame farmer 5 true/pause 1000/speak Wizard \"{{i18n:EnchantedGrove3.04}}\"/pause 400/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 600/faceDirection Wizard 1 true/viewport 30 28 true/pause 1000/showFrame farmer 4 true/pause 500/faceDirection farmer 2 true/pause 500/emote farmer 16 true/pause 2250/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 750/speak Wizard \"{{i18n:EnchantedGrove3.05}}\"/pause 1000/speak Wizard \"{{i18n:EnchantedGrove3.06}}\"/pause 650/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_WizardBasement/warp Wizard 10 21/warp farmer 8 21/faceDirection farmer 1 true/faceDirection Wizard 3 true/playMusic WizardSong/pause 500/viewport 8 21 true/pause 2250/speak Wizard \"{{i18n:EnchantedGrove3.07}}\"/pause 400/move Wizard -1 0 3/pause 600/showFrame Wizard 15 true/shake Wizard 400/pause 100/playSound dwop/pause 400/showFrame Wizard 12 true/pause 100/playSound pickUpItem/pause 500/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 600/speak Wizard \"{{i18n:EnchantedGrove3.08}}\"/pause 800/faceDirection farmer 0 true/pause 500/move farmer 0 -1 0 true/pause 300/move Wizard -1 0 0 true/pause 1300/showFrame farmer 15 true/pause 300/playSound stoneStep/addTemporaryActor WizardPotionObject 16 32 8 18 2 false/pause 500/move farmer 0 0 0/pause 1000/showFrame farmer 37 true/pause 800/startJittering/pause 1000/screenFlash 2/warp WizardPotionObject -30 -30/playSound wand/playSound wand/pause 600/playSound secret1/pause 150/stopJittering/pause 500/move farmer 0 0 0/pause 1350/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 700/speak Wizard \"{{i18n:EnchantedGrove3.09}}\"/pause 1000/faceDirection farmer 1 true/pause 200/faceDirection farmer 0 true/pause 500/move farmer 0 -2 0/pause 400/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 750/showFrame farmer 3/pause 500/screenFlash 1/playSound wand/warp farmer -20 -20/pause 1000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_FakeEnchantedGrove2/warp Wizard -10 -10/faceDirection Wizard 2 true/faceDirection farmer 2 true/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 925/viewport 17 25 clamp true/pause 3750/screenFlash 1/playSound wand/warp farmer 17 25/pause 1000/emote farmer 16 true/pause 500/faceDirection farmer 3 true/pause 1250/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 1000/move farmer 2 0 2 true/pause 800/screenFlash 1/playSound wand/warp Wizard 17 25/showFrame Wizard 16 true/pause 350/faceDirection farmer 3 true/pause 500/showFrame Wizard 0 true/pause 1100/emote Wizard 40/pause 350/speak Wizard \"{{i18n:EnchantedGrove3.10}}\"/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:EnchantedGrove3.11}}\"/pause 650/faceDirection Wizard 2 true/pause 500/showFrame Wizard 16 true/pause 250/shake Wizard 500/pause 400/screenFlash 1/playSound wand/warp Wizard -20 -20/pause 1250/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:EnchantedGrove3.12}}\"/pause 500/stopMusic/pause 500/addConversationTopic EnchantedGroveHint 14/end position 21 12",
+            }
+        },
+        { //Enchanted Grove - part 1 - player is married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "Spouse |contains=Wizard": true,
+                "HasFlag": "galaxySword",
+                "HasSeenEvent |contains=7502582": true,
+                "HasSeenEvent |contains=8050109": true,
+                "HasSeenEvent |contains=6951319": true
+            }, //player has galaxy sword, cleared the railroad boulder, saw Alesia's event, beat the volcano dungeon
+            "Entries": {
+                "908070/t 600 900": "continue/-500 -500/farmer -19 -19 0 Wizard -20 -20 0/pause 500/skippable/pause 500/speak Wizard \"{{i18n:EnchantedGrove1.Married.01}}\"/pause 500/end dialogue Wizard \"{{i18n:EnchantedGrove1.Married.02}}\""
+            }
+        },
+        { //Enchanted Grove - part 2 (Morgan doesn't exist yet) - player is married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/WizardHouse",
+            "When": {
+                "Spouse |contains=Wizard": true
+            },
+            "Entries": {
+                "908071/e 908070/k 5978924": "WizardSong/-500 -500/farmer 8 28 0 Wizard 3 19 2/viewport 7 21 true/skippable/move farmer 0 -8 3 true/pause 3500/faceDirection Wizard 1 true/pause 850/speak Wizard \"{{i18n:EnchantedGrove2.01}}\"/pause 750/move farmer -2 0 0/move farmer 0 -1 3/move farmer -2 0 3/pause 800/showFrame Wizard 5 true/shake Wizard 350/pause 250/playSound pickUpItem/pause 250/showFrame Wizard 4 true/pause 700/faceDirection farmer 2 true/pause 600/playSound dwop/showFrame farmer 90 true/pause 750/showFrame farmer 91 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/playSound gulp/pause 600/playSound gulp/pause 600/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 1000/playSound dwop/faceDirection farmer 2 true/pause 750/startJittering/pause 700/showFrame farmer 96 true/pause 700/glow 100 255 255/pause 200/playSound coldSpell/pause 1100/glow 255 155 255/pause 200/playSound coldSpell/pause 1200/glow 255 255 155/pause 200/playSound coldSpell/pause 700/speak Wizard \"{{i18n:EnchantedGrove2.Married.02}}\"/pause 700/stopJittering/pause 1600/faceDirection farmer 2 true/pause 1500/message \"{{i18n:EnchantedGrove2.03}}\"/pause 1650/faceDirection farmer 3 true/pause 650/speak Wizard \"{{i18n:EnchantedGrove2.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_NewMagicLearned/warp Wizard 10 15/faceDirection Wizard 2 true/warp farmer 7 17/faceDirection farmer 1 true/viewport 7 17 true/pause 1200/textAboveHead Wizard \"{{i18n:EnchantedGrove2.05}}\"/pause 1800/showFrame Wizard 16 true/pause 500/shake Wizard 1000/screenFlash 2/addTemporaryActor MagicWarp 48 48 9 18 2 false/playSound wand/playSound wand/pause 650/faceDirection Wizard 2 true/pause 200/emote farmer 16 true/pause 800/globalFade/viewport -1000 -1000/warp MagicWarp -30 -30/warp Wizard 3 16/faceDirection Wizard 1 true/warp farmer 5 16/faceDirection farmer 3 true/animate Wizard false true 500 19 19 19 4 4 19 19 4 19 19 19 4 4/viewport 7 17 true/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/globalFade/viewport -1000 -1000/stopAnimation Wizard/warp Wizard 7 17/faceDirection Wizard 1 true/warp farmer 10 15/faceDirection farmer 2 true/positionOffset farmer 0 23/viewport 7 17 true/pause 2000/showFrame farmer 3 true/playSound dwoop/pause 200/startJittering/pause 500/screenFlash 2/warp MagicWarp 9 18/playSound wand/playSound wand/pause 400/stopJittering/pause 700/faceDirection farmer 2 true/pause 750/jump farmer/pause 400/textAboveHead Wizard \"{{i18n:EnchantedGrove2.06}}\"/pause 850/faceDirection farmer 3 true/pause 400/globalFade/viewport -1000 -1000/stopMusic/pause 600/playSound reward/message \"{{i18n:EnchantedGrove2.07}}\"/warp MagicWarp -30 -30/warp Wizard 4 16/faceDirection Wizard 1 true/warp farmer 6 16/faceDirection farmer 3 true/pause 1000/playMusic WizardSong/pause 500/viewport 7 17 true/pause 1250/speak Wizard \"{{i18n:EnchantedGrove2.08}}\"/pause 500/emote farmer 32/pause 400/speak Wizard \"{{i18n:EnchantedGrove2.Married.09}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:EnchantedGrove2.10}}\"",
+            }
+        },
+        { //Enchanted Grove - part 2 (Morgan exists) - player is married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/WizardHouse",
+            "When": {
+                "Spouse |contains=Wizard": true
+            },
+            "Entries": {
+                "908071/e 908070/e 5978924": "WizardSong/-500 -500/farmer 8 28 0 Wizard 3 19 2 Morgan 8 13 0/viewport 7 21 true/skippable/move farmer 0 -8 3 true/pause 3500/faceDirection Wizard 1 true/pause 850/speak Wizard \"{{i18n:EnchantedGrove2.01}}\"/pause 500/faceDirection Morgan 1 true/pause 250/faceDirection Morgan 2 true/pause 350/speed Morgan 5/move Morgan 0 3 3/speed Morgan 5/move Morgan -2 0 2/pause 650/jump Morgan/pause 600/faceDirection farmer 0 true/pause 350/faceDirection Wizard 0 true/pause 200/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.01}}\"/pause 500/speak Wizard \"{{i18n:EnchantedGrove2.Morgan.02}}\"/pause 700/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.03}}\"/pause 500/faceDirection Morgan 3 true/pause 250/move Morgan -2 0 2/move Morgan 0 1 2/pause 600/faceDirection Wizard 1 true/pause 400/faceDirection farmer 3 true/pause 500/move farmer -2 0 0/move farmer 0 -1 3/move farmer -2 0 3/pause 800/showFrame Wizard 5 true/shake Wizard 350/pause 250/playSound pickUpItem/pause 250/showFrame Wizard 4 true/pause 700/faceDirection farmer 2 true/pause 600/playSound dwop/showFrame farmer 90 true/pause 750/showFrame farmer 91 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/playSound gulp/pause 600/playSound gulp/pause 600/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 1000/playSound dwop/faceDirection farmer 2 true/pause 750/startJittering/pause 700/showFrame farmer 96 true/pause 700/glow 100 255 255/pause 200/playSound coldSpell/pause 1100/glow 255 155 255/pause 200/playSound coldSpell/pause 1200/glow 255 255 155/pause 200/playSound coldSpell/pause 700/speak Wizard \"{{i18n:EnchantedGrove2.Married.02}}\"/pause 700/stopJittering/pause 1600/faceDirection farmer 2 true/pause 1500/message \"{{i18n:EnchantedGrove2.03}}\"/pause 1650/faceDirection farmer 3 true/pause 650/speak Wizard \"{{i18n:EnchantedGrove2.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_NewMagicLearned/warp Wizard 10 15/faceDirection Wizard 2 true/warp farmer 7 17/warp Morgan 10 20/faceDirection Morgan 0 true/faceDirection farmer 1 true/viewport 7 17 true/pause 1200/textAboveHead Wizard \"{{i18n:EnchantedGrove2.05}}\"/pause 1800/showFrame Wizard 16 true/pause 500/shake Wizard 1000/screenFlash 2/addTemporaryActor MagicWarp 48 48 9 18 2 false/playSound wand/playSound wand/pause 650/faceDirection Wizard 2 true/pause 200/emote farmer 16 true/pause 500/jump Morgan/pause 300/globalFade/viewport -1000 -1000/warp MagicWarp -30 -30/warp Wizard 3 16/faceDirection Wizard 1 true/warp farmer 5 16/warp Morgan 4 18/faceDirection farmer 3 true/animate Wizard false true 500 19 19 19 4 4 19 19 4 19 19 19 4 4/viewport 7 17 true/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/pause 1000/emote Wizard 40 true/globalFade/viewport -1000 -1000/stopAnimation Wizard/warp Wizard 7 17/faceDirection Wizard 1 true/warp farmer 10 15/faceDirection farmer 2 true/warp Morgan 10 20/positionOffset farmer 0 23/viewport 7 17 true/pause 2000/showFrame farmer 3 true/playSound dwoop/pause 200/startJittering/pause 500/screenFlash 2/warp MagicWarp 9 18/playSound wand/playSound wand/pause 400/stopJittering/pause 700/faceDirection farmer 2 true/pause 750/jump farmer/pause 400/textAboveHead Wizard \"{{i18n:EnchantedGrove2.06}}\"/pause 850/faceDirection farmer 3 true/pause 400/globalFade/viewport -1000 -1000/stopMusic/pause 600/playSound reward/message \"{{i18n:EnchantedGrove2.07}}\"/warp MagicWarp -30 -30/warp Wizard 4 16/faceDirection Wizard 1 true/warp farmer 6 16/faceDirection farmer 3 true/warp Morgan 5 18/pause 1000/playMusic WizardSong/pause 500/viewport 7 17 true/pause 1250/speak Wizard \"{{i18n:EnchantedGrove2.08}}\"/speak Morgan \"{{i18n:EnchantedGrove2.Morgan.04}}\"/pause 500/emote farmer 32/pause 400/speak Wizard \"{{i18n:EnchantedGrove2.Married.09}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:EnchantedGrove2.10}}\"",
+            }
+        },
+        { //Enchanted Grove - part 3 - player is married to the wizard
+            "Action": "EditData",
+            "Target": "data/events/backwoods",
+            "When": {
+                "Spouse |contains=Wizard": true
+            },
+            "Entries": {
+                "908072/e 908071": "continue/-500 -500/farmer 16 17 1 Wizard 21 12 0/showFrame Wizard 17 true/addConversationTopic wizardEnchantedGrove 14/viewport 21 14 clamp true/skippable/move farmer 5 0 0/move farmer 0 -3 0 true/pause 1500/screenFlash 1/glow 255 155 255/playSound healSound/pause 2500/faceDirection Wizard 0 true/pause 850/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/showFrame Wizard 0 true/pause 500/speak Wizard \"{{i18n:EnchantedGrove3.Married.01}}\"/pause 600/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 400/move Wizard 0 -13 0 true/viewport move 0 -1 4000 true/pause 450/move farmer 0 -6 0 true/pause 1000/globalFade/viewport -1000 -1000/halt/changeLocation Custom_FakeEnchantedGrove/faceDirection farmer 0 true/faceDirection Wizard 0 true/warp Wizard 30 36/warp farmer 30 38/viewport 30 35 true/viewport move 0 -1 6500 true/pause 1000/move Wizard 0 -8 0 true/move farmer 0 -8 0 true/pause 6000/speak Wizard \"{{i18n:EnchantedGrove3.02}}\"/pause 700/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:EnchantedGrove3.Married.03}}\"/pause 800/faceDirection Wizard 3 true/pause 200/move Wizard -1 0 3/pause 200/faceDirection Wizard 2 true/pause 100/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 0 true/pause 100/showFrame Wizard 18 true/pause 300/showFrame Wizard 20 true/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 650/showFrame farmer 4 true/pause 400/showFrame farmer 5 true/pause 1000/globalFade/viewport -1000 -1000/pause 500/playSound healSound/glow 255 0 0/pause 1100/playSound healSound/glow 0 255 0/pause 1100/playSound healSound/glow 0 0 255/pause 1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/showFrame farmer 5 true/pause 1000/speak Wizard \"{{i18n:EnchantedGrove3.Married.04}}\"/pause 400/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 600/faceDirection Wizard 1 true/viewport 30 28 true/pause 1000/showFrame farmer 4 true/pause 500/faceDirection farmer 2 true/pause 500/emote farmer 16 true/pause 2250/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 750/speak Wizard \"{{i18n:EnchantedGrove3.05}}\"/pause 1000/speak Wizard \"{{i18n:EnchantedGrove3.Married.06}}\"/pause 650/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_WizardBasement/warp Wizard 10 21/warp farmer 8 21/faceDirection farmer 1 true/faceDirection Wizard 3 true/playMusic WizardSong/pause 500/viewport 8 21 true/pause 2250/speak Wizard \"{{i18n:EnchantedGrove3.07}}\"/pause 400/move Wizard -1 0 3/pause 600/showFrame Wizard 15 true/shake Wizard 400/pause 100/playSound dwop/pause 400/showFrame Wizard 12 true/pause 100/playSound pickUpItem/pause 500/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 600/speak Wizard \"{{i18n:EnchantedGrove3.08}}\"/pause 800/faceDirection farmer 0 true/pause 500/move farmer 0 -1 0 true/pause 300/move Wizard -1 0 0 true/pause 1300/showFrame farmer 15 true/pause 300/playSound stoneStep/addTemporaryActor WizardPotionObject 16 32 8 18 2 false/pause 500/move farmer 0 0 0/pause 1000/showFrame farmer 37 true/pause 800/startJittering/pause 1000/screenFlash 2/warp WizardPotionObject -30 -30/playSound wand/playSound wand/pause 600/playSound secret1/pause 150/stopJittering/pause 500/move farmer 0 0 0/pause 1350/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 700/speak Wizard \"{{i18n:EnchantedGrove3.Married.09}}\"/pause 1000/faceDirection farmer 1 true/pause 200/faceDirection farmer 0 true/pause 500/move farmer 0 -2 0/pause 400/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 750/showFrame farmer 3/pause 500/screenFlash 1/playSound wand/warp farmer -20 -20/pause 1000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_FakeEnchantedGrove2/warp Wizard -10 -10/faceDirection Wizard 2 true/faceDirection farmer 2 true/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 925/viewport 17 25 clamp true/pause 3750/screenFlash 1/playSound wand/warp farmer 17 25/pause 1000/emote farmer 16 true/pause 500/faceDirection farmer 3 true/pause 1250/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 1000/move farmer 2 0 2 true/pause 800/screenFlash 1/playSound wand/warp Wizard 17 25/showFrame Wizard 16 true/pause 350/faceDirection farmer 3 true/pause 500/showFrame Wizard 0 true/pause 1100/emote Wizard 40/pause 350/speak Wizard \"{{i18n:EnchantedGrove3.Married.10}}\"/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:EnchantedGrove3.11}}\"/pause 650/emote farmer 20 true/pause 300/emote Wizard 20 true/pause 1500/faceDirection Wizard 2 true/pause 500/showFrame Wizard 16 true/pause 250/shake Wizard 500/pause 400/screenFlash 1/playSound wand/warp Wizard -20 -20/pause 1250/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:EnchantedGrove3.12}}\"/pause 500/stopMusic/pause 500/end position 21 12"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "Entries": {
+                "wizardEnchantedGrove": "{{i18n:EnchantedGrove.Magnus}}",
+                "EnchantedGroveHint": "{{i18n:EnchantedGrove.Hint}}",
+            }
+        },
+        { //Magic warp [48x48] temp actor load    <<is referenced throughout all enchanted grove events
+            "Action": "Load",
+            "Target": "Characters/MagicWarp",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MagicWarp.png"
+        },
+        { //Backwoods
+            "Action": "EditMap",
+            "Target": "Maps/Backwoods",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_Backwoods.tbin",
+            "ToArea": {
+                "X": 17,
+                "Y": 0,
+                "Width": 10,
+                "Height": 14
+            },
+            "When": {
+                "HasSeenEvent": "908071"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //potion object temp actor load
+            "Action": "Load",
+            "Target": "Characters/WizardPotionObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardPotionObject.png"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardPotion.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_WizardBasement",
+                "HasSeenEvent": "908071",
+                "HasSeenEvent |contains=908072": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/WizardPotion",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardPotion.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                //"117": "Wizard's Potion/0/-300/Crafting -9/The Joja soda machine mysteriously formed into the wizard's potion.../true/true/0/Wizard's Potion"
+                "117": {
+                    "Name": "Wizard's Potion",
+                    "DisplayName": "Wizard's Potion",
+                    "Description": "The Joja soda machine mysteriously formed into the Wizard's Potion",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\WizardPotion",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_WizardBasement",
+                "HasSeenEvent": "908071",
+                "HasSeenEvent |contains=908072": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Wizard Basement
+            "Action": "EditMap",
+            "Target": "Maps/Custom_WizardBasement",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WizardBasement.tbin",
+            "ToArea": {
+                "X": 7,
+                "Y": 18,
+                "Width": 2,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908072"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Wizard's Tower Warp
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WizardsTowerWarp.tbin",
+            "ToArea": {
+                "X": 11,
+                "Y": 20,
+                "Width": 15,
+                "Height": 10
+            },
+            "When": {
+                "HasSeenEvent |contains=908072": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Wizard's Tower Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 15,
+                "Y": 23,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908072"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Adventurer Summit - Enchanted Grove***
+       { //An emerald from the mountains (day time, sunny - not winter)
+            "Action": "EditData",
+            "Target": "data/events/AdventureGuild",
+            "Entries": {
+                "908073/e 908072/z winter/t 600 1900/w sunny": "MarlonsTheme/-500 -500/farmer 6 19 0 MarlonFay 7 15 1/pause 1000/positionOffset MarlonFay -18 -3/viewport 6 15 true/skippable/pause 200/move farmer 0 -2 0/pause 1000/faceDirection MarlonFay 2 true/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.01}}\"/pause 1200/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.02}}\"/pause 500/emote farmer 40/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp MarlonFay 6 5/faceDirection MarlonFay 0 true/warp farmer 4 5/faceDirection farmer 1 true/viewport 6 6 true/pause 1500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.04}}\"/pause 750/move MarlonFay -1 0 3/pause 500/showFrame MarlonFay 15 true/pause 100/shake MarlonFay 500/playSound pickUpItem/pause 400/showFrame MarlonFay 12 true/pause 650/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_AdventurerSummit/playMusic spring_day_ambient/pause 1250/warp MarlonFay 16 23/faceDirection MarlonFay 3 true/warp farmer 16 25/faceDirection farmer 3 true/viewport 16 25 clamp true/pause 2000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.06}}\"/pause 400/globalFade/viewport -1000 -1000/warp farmer 8 23/warp MarlonFay 16 24/faceDirection MarlonFay 3 true/faceDirection farmer 2 true/positionOffset MarlonFay -5 8/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1100/viewport 8 24 clamp true/pause 2000/showFrame farmer 1 true/pause 100/startJittering/addTemporaryActor GreenRupeeObject 16 32 8 24 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1000/showFrame farmer 3 true/pause 800/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 7 25 2 false/warp GreenRupeeObject -20 -20/addLantern 1000 8 24 1/pause 600/faceDirection farmer 2 true/playSound secret1/pause 1200/shake MarlonFay 700/pause 400/faceDirection farmer 1 true/pause 300/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 1500/playSound Ship/pause 500/playSound Ship/pause 1000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.08}}\"/pause 1000/end dialogue MarlonFay \"{{i18n:EnchantedGrove.Summit.09}}\"",
+            }
+        },
+        { //An emerald from the mountains (night time, sunny - not winter)
+            "Action": "EditData",
+            "Target": "data/events/AdventureGuild",
+            "Entries": {
+                "908073/e 908072/z winter/t 1910 2400/w sunny": "MarlonsTheme/-500 -500/farmer 6 19 0 MarlonFay 7 15 1/pause 1000/positionOffset MarlonFay -18 -3/viewport 6 15 true/skippable/pause 200/move farmer 0 -2 0/pause 1000/faceDirection MarlonFay 2 true/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.01}}\"/pause 1200/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.02}}\"/pause 500/emote farmer 40/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp MarlonFay 6 5/faceDirection MarlonFay 0 true/warp farmer 4 5/faceDirection farmer 1 true/viewport 6 6 true/pause 1500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.04}}\"/pause 750/move MarlonFay -1 0 3/pause 500/showFrame MarlonFay 15 true/pause 100/shake MarlonFay 500/playSound pickUpItem/pause 400/showFrame MarlonFay 12 true/pause 650/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_AdventurerSummit/playMusic spring_night_ambient/pause 1250/warp MarlonFay 16 23/faceDirection MarlonFay 3 true/warp farmer 16 25/faceDirection farmer 3 true/viewport 16 25 clamp true/pause 2000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.06}}\"/pause 400/globalFade/viewport -1000 -1000/warp farmer 8 23/warp MarlonFay 16 24/faceDirection MarlonFay 3 true/faceDirection farmer 2 true/positionOffset MarlonFay -5 8/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1100/viewport 8 24 clamp true/pause 2000/showFrame farmer 1 true/pause 100/startJittering/addTemporaryActor GreenRupeeObject 16 32 8 24 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1000/showFrame farmer 3 true/pause 800/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 7 25 2 false/warp GreenRupeeObject -20 -20/addLantern 1000 8 24 1/pause 600/faceDirection farmer 2 true/playSound secret1/pause 1200/shake MarlonFay 700/pause 400/faceDirection farmer 1 true/pause 300/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 1500/playSound Ship/pause 500/playSound Ship/pause 1000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.08}}\"/pause 1000/end dialogue MarlonFay \"{{i18n:EnchantedGrove.Summit.09}}\""
+            }
+        },
+        { //An emerald from the mountains (raining - not winter)
+            "Action": "EditData",
+            "Target": "data/events/AdventureGuild",
+            "Entries": {
+                "908073/e 908072/z winter/w rainy": "MarlonsTheme/-500 -500/farmer 6 19 0 MarlonFay 7 15 1/pause 1000/positionOffset MarlonFay -18 -3/viewport 6 15 true/skippable/pause 200/move farmer 0 -2 0/pause 1000/faceDirection MarlonFay 2 true/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.01}}\"/pause 1200/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.02}}\"/pause 500/emote farmer 40/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp MarlonFay 6 5/faceDirection MarlonFay 0 true/warp farmer 4 5/faceDirection farmer 1 true/viewport 6 6 true/pause 1500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.04}}\"/pause 750/move MarlonFay -1 0 3/pause 500/showFrame MarlonFay 15 true/pause 100/shake MarlonFay 500/playSound pickUpItem/pause 400/showFrame MarlonFay 12 true/pause 650/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_AdventurerSummit/playMusic rain/pause 1250/warp MarlonFay 16 23/faceDirection MarlonFay 3 true/warp farmer 16 25/faceDirection farmer 3 true/viewport 16 25 clamp true/pause 2000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.06}}\"/pause 400/globalFade/viewport -1000 -1000/warp farmer 8 23/warp MarlonFay 16 24/faceDirection MarlonFay 3 true/faceDirection farmer 2 true/positionOffset MarlonFay -5 8/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1100/viewport 8 24 clamp true/pause 2000/showFrame farmer 1 true/pause 100/startJittering/addTemporaryActor GreenRupeeObject 16 32 8 24 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1000/showFrame farmer 3 true/pause 800/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 7 25 2 false/warp GreenRupeeObject -20 -20/addLantern 1000 8 24 1/pause 600/faceDirection farmer 2 true/playSound secret1/pause 1200/shake MarlonFay 700/pause 400/faceDirection farmer 1 true/pause 300/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 1500/playSound Ship/pause 500/playSound Ship/pause 1000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.08}}\"/pause 1000/end dialogue MarlonFay \"{{i18n:EnchantedGrove.Summit.09}}\""
+            }
+        },
+        { //An emerald from the mountains (winter)
+            "Action": "EditData",
+            "Target": "data/events/AdventureGuild",
+            "Entries": {
+                "908073/e 908072/z spring/z summer/z fall": "MarlonsTheme/-500 -500/farmer 6 19 0 MarlonFay 7 15 1/pause 1000/positionOffset MarlonFay -18 -3/viewport 6 15 true/skippable/pause 200/move farmer 0 -2 0/pause 1000/faceDirection MarlonFay 2 true/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.01}}\"/pause 1200/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.02}}\"/pause 500/emote farmer 40/pause 400/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.03}}\"/pause 400/globalFade/viewport -1000 -1000/warp MarlonFay 6 5/faceDirection MarlonFay 0 true/warp farmer 4 5/faceDirection farmer 1 true/viewport 6 6 true/pause 1500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.04}}\"/pause 750/move MarlonFay -1 0 3/pause 500/showFrame MarlonFay 15 true/pause 100/shake MarlonFay 500/playSound pickUpItem/pause 400/showFrame MarlonFay 12 true/pause 650/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 500/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_AdventurerSummit/playMusic winter_day_ambient/pause 1250/warp MarlonFay 16 23/faceDirection MarlonFay 3 true/warp farmer 16 25/faceDirection farmer 3 true/viewport 16 25 clamp true/pause 2000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.06}}\"/pause 400/globalFade/viewport -1000 -1000/warp farmer 8 23/warp MarlonFay 16 24/faceDirection MarlonFay 3 true/faceDirection farmer 2 true/positionOffset MarlonFay -5 8/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1100/viewport 8 24 clamp true/pause 2000/showFrame farmer 1 true/pause 100/startJittering/addTemporaryActor GreenRupeeObject 16 32 8 24 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1000/showFrame farmer 3 true/pause 800/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 7 25 2 false/warp GreenRupeeObject -20 -20/addLantern 1000 8 24 1/pause 600/faceDirection farmer 2 true/playSound secret1/pause 1200/shake MarlonFay 700/pause 400/faceDirection farmer 1 true/pause 300/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound dwop/playSound dwop/pause 800/playSound grassyStep/playSound grassyStep/pause 1500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 1500/playSound Ship/pause 500/playSound Ship/pause 1000/speak MarlonFay \"{{i18n:EnchantedGrove.Summit.08}}\"/pause 1000/end dialogue MarlonFay \"{{i18n:EnchantedGrove.Summit.09}}\""
+            }
+        },
+		{ //Green Rupee temp actor load
+            "Action": "Load",
+            "Target": "Characters/GreenRupeeObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenRupee.png",
+        },
+        { //changes joja soda machine into green rupee.
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenRupee.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "AdventureGuild",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908073": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/GreenRupee",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenRupee.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                /*"117": "Green Rupee/0/-300/Crafting -9/The Joja soda machine mysteriously formed into the Green Rupee.../true/true/0/Green Rupee"*/
+                "117": {
+                    "Name": "Green Rupee",
+                    "DisplayName": "Green Rupee",
+                    "Description": "The Joja soda machine mysteriously formed into the Green Rupee",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\GreenRupee",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "AdventureGuild",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908073": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Adventuer Summit Map Patch
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AdventurerSummit",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AdventurerSummit.tbin",
+            "ToArea": {
+                "X": 4,
+                "Y": 20,
+                "Width": 13,
+                "Height": 11
+            },
+            "When": {
+                "HasSeenEvent": "908073",
+                "Season |contains=Winter": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Adventuer Summit Map Patch - Winter
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AdventurerSummit",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AdventurerSummit_Winter.tbin",
+            "ToArea": {
+                "X": 4,
+                "Y": 20,
+                "Width": 13,
+                "Height": 11
+            },
+            "When": {
+                "HasSeenEvent": "908073",
+                "Season": "Winter"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Adventuer Summit Warp Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AdventurerSummit",
+            "When": {
+                "HasSeenEvent": "908073"
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "8 24 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Nexus Warp
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AdventurerSummitWarp.tbin",
+            "ToArea": {
+                "X": 35,
+                "Y": 20,
+                "Width": 15,
+                "Height": 10
+            },
+            "When": {
+                "HasSeenEvent |contains=908073": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 41,
+                "Y": 23,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908073"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Farm - Enchanted Grove***
+        { //Enchanted Grove - Farm Warp Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 28,
+                "Y": 12,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908074",
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Enchanted Grove - Farm Warp Hidden
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_FarmWarp.tbin",
+            "ToArea": {
+                "X": 26,
+                "Y": 10,
+                "Width": 9,
+                "Height": 11
+            },
+            "When": {
+                "HasSeenEvent |contains=908074": false
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Overlay"
+        },
+        ////////////////
+        //// A Quality Parsnip
+        {
+            "LogName": "A Quality Parsnip",
+            "Action": "EditData",
+            "Target": "data/events/Farmhouse",
+            "When": {
+                "HasSeenEvent |contains=908072": true,
+            },
+            "Entries": {
+                "908074/": "continue/-500 -500/{{QualParsMove}}/showFrame farmer 15/pause 100/startJittering/pause 250/addObject {{Ench_Grove_X}} {{Ench_Grove_Y}} 24/playSound stoneStep/playSound stoneStep/pause 300/stopJittering/pause 230/showFrame farmer 12 true/pause 1500/playSound dwop/showFrame farmer 65 true/pause 1250/screenFlash 1/playSound wand/playSound wand/removeSprite {{Ench_Grove_X}} {{Ench_Grove_Y}}/addLantern 1000 {{Ench_Grove_X}} {{Ench_Grove_Y}} 1/addTemporaryActor MagicWarp 48 48 {{Query: {{Ench_Grove_X}} -1}} {{Query: {{Ench_Grove_Y}}+1}} 2 false/pause 400/showFrame farmer 12 true/pause 350/playSound secret1/pause 2500/globalFade/viewport -1000 -1000/end"
+            }
+        },
+        ////////////////
+        //// Enchanted Grove Warp
+        {
+            "LogName": "Statue Warp Graphic",
+            "Action": "EditMap",
+            "Target": "Maps/{{SelectedWarpMap}}",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_Farm.tbin",
+            "ToArea": {
+                "X": "{{Query: {{Ench_Grove_X}}-1}}",
+                "Y": "{{Query: {{Ench_Grove_Y}}-1}}",
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908074",
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Patches warp point on farm",
+            "Action": "EditMap",
+            "Target": "Maps/{{SelectedWarpMap}}",
+            "When": {
+                "HasSeenEvent": "908074",
+            },
+            "Update": "OnLocationChange",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": "{{Query: {{Ench_Grove_X}} }}",
+                        "Y": "{{Query: {{Ench_Grove_Y}} }}",
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "MagicWarp Custom_EnchantedGrove 30 14"
+                    }
+                }
+            ]
+        },
+        {
+            "LogName": "Statue Light",
+            "Action": "EditMap",
+            "Target": "Maps/{{SelectedWarpMap}}",
+            "When": {
+                "HasSeenEvent": "908074",
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "{{Ench_Grove_X}} {{Ench_Grove_Y}} 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        {
+            "LogName": "Patches Warp point at enchanted grove - to farm",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "When": {
+                "SelectedWarpMap |contains=Custom_GrandpasShedOutside": false
+            },
+            "Update": "OnLocationChange",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 30,
+                        "Y": 14
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "MagicWarp Farm {{Ench_Grove_X}} {{Ench_Grove_Y}}"
+                    }
+                }
+            ]
+        },
+        {
+            "LogName": "Patches Warp point at enchanted grove - to Grandpa's Shed",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "When": {
+                "SelectedWarpMap": "Custom_GrandpasShedOutside"
+            },
+            "Update": "OnLocationChange",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 30,
+                        "Y": 14
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "MagicWarp Custom_GrandpasShedOutside {{Ench_Grove_X}} {{Ench_Grove_Y}}"
+                    }
+                }
+            ]
+        },
+        /////////////
+        //   ***Apples Room - Enchanted Grove***
+        { //Iridium Quality Grape Juice (friendly condition)
+            "Action": "EditData",
+            "Target": "data/events/Custom_AuroraVineyard",
+            "When": {
+                "Relationship:Apples": "Friendly"
+            },
+            "Entries": {
+                "908075/e 908072": "continue/-500 -500/farmer 14 22 0 Apples 14 17 2/pause 1000/showFrame Apples 32 true/viewport 14 19 true/skippable/move farmer 0 -2 0/pause 1350/shake Apples 400/pause 800/shake Apples 400/pause 400/showFrame Apples 0 true/jump Apples/pause 200/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.01}}\"/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/jump Apples/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.02}}\"/pause 500/move Apples 0 1 2/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.03}}\"/pause 500/faceDirection Apples 1 true/pause 400/speed Apples 5/move Apples 7 0 2/speed Apples 5/move Apples 0 3 2/warp Apples -20 -20/playSound stairsdown/pause 200/move farmer 0 -2 1/pause 600/emote farmer 40/pause 600/move farmer 7 0 2 true/pause 300/globalFade/viewport -1000 -1000/changeLocation Custom_ApplesRoom/halt/warp Apples 9 12/faceDirection Apples 2 true/warp farmer 9 11/faceDirection farmer 2 true/positionOffset farmer 0 -10/positionOffset Apples 0 -5/viewport 9 9 true/pause 1500/playSound Ship/pause 800/jump Apples/playSound Ship/pause 1000/faceDirection Apples 1 true/pause 250/faceDirection Apples 0 true/pause 500/playSound junimoMeep1/shake Apples 500/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.04}}\"/pause 750/shake Apples 500/playSound pickUpItem/pause 1250/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 2 true/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1250/warp Apples 4 9/faceDirection Apples 3 true/warp farmer 2 8/faceDirection farmer 2 true/viewport 9 9 true/pause 2000/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor AuroraVineyardWineBottleObject 16 32 2 9 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 1 10 2 false/warp AuroraVineyardWineBottleObject -20 -20/addLantern 1000 2 9 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 2000/shake Apples 1000/pause 400/faceDirection farmer 1 true/pause 300/playMusic ragtime/pause 200/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/jump Apples/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.06}}\"/pause 1000/faceDirection Apples 2 true/pause 250/animate Apples false true 200 20 21 22 23/pause 1500/faceDirection farmer 2 true/pause 500/animate farmer false true 350 102 103/pause 2250/globalFade/viewport -1000 -1000/pause 500/stopMusic/pause 1000/end dialogue Apples \"{{i18n:EnchantedGrove.Apples.07}}\"",
+            }
+        },
+        { //Iridium Quality Grape Juice (talked to once condition)
+            "Action": "EditData",
+            "Target": "data/events/Custom_AuroraVineyard",
+            "Entries": {
+                "908075/e 908072/f Apples 10": "continue/-500 -500/farmer 14 22 0 Apples 14 17 2/pause 1000/showFrame Apples 32 true/viewport 14 19 true/skippable/move farmer 0 -2 0/pause 1350/shake Apples 400/pause 800/shake Apples 400/pause 400/showFrame Apples 0 true/jump Apples/pause 200/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.01}}\"/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/jump Apples/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.02}}\"/pause 500/move Apples 0 1 2/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.03}}\"/pause 500/faceDirection Apples 1 true/pause 400/speed Apples 5/move Apples 7 0 2/speed Apples 5/move Apples 0 3 2/warp Apples -20 -20/playSound stairsdown/pause 200/move farmer 0 -2 1/pause 600/emote farmer 40/pause 600/move farmer 7 0 2 true/pause 300/globalFade/viewport -1000 -1000/changeLocation Custom_ApplesRoom/halt/warp Apples 9 12/faceDirection Apples 2 true/warp farmer 9 11/faceDirection farmer 2 true/positionOffset farmer 0 -10/positionOffset Apples 0 -5/viewport 9 9 true/pause 1500/playSound Ship/pause 800/jump Apples/playSound Ship/pause 1000/faceDirection Apples 1 true/pause 250/faceDirection Apples 0 true/pause 500/playSound junimoMeep1/shake Apples 500/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.04}}\"/pause 750/shake Apples 500/playSound pickUpItem/pause 1250/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 2 true/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1250/warp Apples 4 9/faceDirection Apples 3 true/warp farmer 2 8/faceDirection farmer 2 true/viewport 9 9 true/pause 2000/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor AuroraVineyardWineBottleObject 16 32 2 9 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 1 10 2 false/warp AuroraVineyardWineBottleObject -20 -20/addLantern 1000 2 9 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 2000/shake Apples 1000/pause 400/faceDirection farmer 1 true/pause 300/playMusic ragtime/pause 200/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/jump Apples/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:EnchantedGrove.Apples.06}}\"/pause 1000/faceDirection Apples 2 true/pause 250/animate Apples false true 200 20 21 22 23/pause 1500/faceDirection farmer 2 true/pause 500/animate farmer false true 350 102 103/pause 2250/globalFade/viewport -1000 -1000/pause 500/stopMusic/pause 1000/end dialogue Apples \"{{i18n:EnchantedGrove.Apples.07}}\""
+            }
+        },
+        { //Aurora Vineyard Wine Bottle temp actor load
+            "Action": "Load",
+            "Target": "Characters/AuroraVineyardWineBottleObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AuroraVineyardWineBottleObject.png"
+        },
+        { //changes joja soda machine into a bottle of wine.
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AuroraVineyardWineBottle.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_ApplesRoom",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908075": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/AuroraVineyardWineBottle",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AuroraVineyardWineBottle.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                //  "117": "old bottle of Aurora Vineyard Wine/0/-300/Crafting -9/The Joja soda machine mysteriously formed into a bottle of wine.../true/true/0/old bottle of Aurora Vineyard Wine"
+                "117": {
+                    "Name": "Old bottle of Aurora Vineyard Wine",
+                    "DisplayName": "old bottle of Aurora Vineyard Wine",
+                    "Description": "The Joja soda machine mysteriously formed into a bottle of wine",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\AuroraVineyardWineBottle",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_ApplesRoom",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908075": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Apples Room - Map Patch
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ApplesRoom",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_ApplesRoomPatch.tbin",
+            "ToArea": {
+                "X": 1,
+                "Y": 8,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908075"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Apples Room - Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ApplesRoom",
+            "When": {
+                "HasSeenEvent": "908075"
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "2 9 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Apple's Room - Nexus Warp
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_ApplesRoomWarp.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 31,
+                "Width": 15,
+                "Height": 16
+            },
+            "When": {
+                "HasSeenEvent |contains=908075, 908090": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Apple's Room - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 18,
+                "Y": 39,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908075"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Aurora Vineyard Cellar - Enchanted Grove*** (Joja route)
+        { //Iridium Quality Grape Juice
+            "Action": "EditData",
+            "Target": "data/events/Custom_AuroraVineyardRefurbished",
+            "When": {
+                "HasFlag |contains=jojaMember": true
+            },
+            "Entries": {
+                "908090/e 908072": "none/-500 -500/farmer -50 -50 2/changeLocation Custom_AuroraVineyardCellarRefurbished/makeInvisible 15 5 2 2/makeInvisible 15 5 1 8/viewport 15 19 true/pause 2000/skippable/warp farmer 15 4/playsound stairsdown/move farmer 0 2 1/move farmer 1 0 1/pause 250/faceDirection farmer 0 true/pause 800/emote farmer 40/pause 250/showFrame farmer 13 true/pause 100/startJittering/pause 300/playSound Ship/pause 200/stopJittering/pause 200/playSound pickUpItem/pause 350/showFrame farmer 12/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 4000/faceDirection farmer 3 true/pause 500/move farmer -1 0 2/move farmer 0 5 2/pause 1000/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor AuroraVineyardWineBottleObject 16 32 15 12 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 14 13 2 false/warp AuroraVineyardWineBottleObject -20 -20/addLantern 1000 2 9 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 2500/globalFade/viewport -1000 -1000/pause 750/end"
+            }
+        },
+        { //changes joja soda machine into a bottle of wine.
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AuroraVineyardWineBottle.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_AuroraVineyardCellarRefurbished",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908090": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                // "117": "old bottle of Aurora Vineyard Wine/0/-300/Crafting -9/The Joja soda machine mysteriously formed into a bottle of wine.../true/true/0/old bottle of Aurora Vineyard Wine"
+                "117": {
+                    "Name": "old bottle of Aurora Vineyard wine",
+                    "DisplayName": "old bottle of Aurora Vineyard wine",
+                    "Description": "The Joja soda machine mysteriously formed into the old bottle of Aurora Vineyard wine",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\AuroraVineyardWineBottle",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_AuroraVineyardCellarRefurbished",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908090": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Map Patch (removed barrels)
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
+            "FromFile": "assets/Maps/MapPatches/AuroraVineyardCellarRefurbishedWarpEvent.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 10,
+                "Width": 4,
+                "Height": 4
+            },
+            "When": {
+                "HasSeenEvent|contains=908072": true,
+                "HasSeenEvent|contains=908090": false,
+                "HasFlag |contains=jojaMember": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Map Patch (adds warp point)
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AuroraVineyardCellarRefurbishedPatch.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 10,
+                "Width": 4,
+                "Height": 4
+            },
+            "When": {
+                "HasSeenEvent|contains=908090": true,
+                "HasFlag |contains=jojaMember": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Nexus Warp Edit
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AuroraVineyardCellarRefurbished.tbin",
+            "ToArea": {
+                "X": 15,
+                "Y": 36,
+                "Width": 11,
+                "Height": 10
+            },
+            "When": {
+                "HasSeenEvent|contains=908090": true,
+                "HasFlag |contains=jojaMember": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 18,
+                "Y": 39,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908090",
+                "HasFlag |contains=jojaMember": true
+            },
+            "Update": "OnLocationChange"
+        },
+        //***Aurora Vineyard Cellar - Enchanted Grove*** (Player took over Aurora Vineyard in community center route)
+        { //Aurora Vineyard Cellar - Map Patch (removed barrels)
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
+            "FromFile": "assets/Maps/MapPatches/AuroraVineyardCellarRefurbishedWarpEvent.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 10,
+                "Width": 4,
+                "Height": 4
+            },
+            "When": {
+                "HasSeenEvent|contains=7776012": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Map Patch (adds warp point)
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AuroraVineyardCellarRefurbishedPatch.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 10,
+                "Width": 4,
+                "Height": 4
+            },
+            "When": {
+                "HasSeenEvent|contains=7776012": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Nexus Warp Edit
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_AuroraVineyardCellarRefurbished.tbin",
+            "ToArea": {
+                "X": 15,
+                "Y": 36,
+                "Width": 11,
+                "Height": 10
+            },
+            "When": {
+                "HasSeenEvent|contains=7776012": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Aurora Vineyard Cellar - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 18,
+                "Y": 39,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent|contains=7776012": true
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Sprite Spring - Enchanted Grove*** *continue
+        { //A bouquet of flowers
+            "Action": "EditData",
+            "Target": "data/events/Custom_SpriteSpring2",
+            "When": {
+                "HasSeenEvent |contains=1111200": true
+            },
+            "Entries": {
+                "908076/e 908072": "none/-500 -500/farmer 11 23 1/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_GrenvilleFalls/pause 800/viewport 16 23 clamp true/skippable/move farmer 5 0 1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/faceDirection farmer 0 true/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.01}}\"/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.02}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.03}}\"/pause 750/playSound pickUpItem/pause 1250/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.04}}\"/pause 850/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/pause 650/playSound pullItemFromWater/pause 800/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 250/warp farmer 52 19/faceDirection farmer 2 true/pause 1000/viewport 52 20 clamp true/pause 2250/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor TulipBouquetObject 16 32 52 20 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 51 21 2 false/warp TulipBouquetObject -20 -20/addLantern 1000 52 20 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 2500/globalFade/viewport -1000 -1000/pause 1000/end warpOut",
+            }
+        },
+        { //Tulip Bouquet [16x16] temp actor load
+            "Action": "Load",
+            "Target": "Characters/TulipBouquetObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TulipBouquetObject.png"
+        },
+        { //changes joja soda machine into a tulip bouquet
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TulipBouquet.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_SpriteSpring2",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908076": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/TulipBouquet",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TulipBouquet.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                //       "117": "Tulip Bouquet/0/-300/Crafting -9/The Joja soda machine mysteriously formed into bouquet of tulips.../true/true/0/Tulip Bouquet"
+                "117": {
+                    "Name": "tulip bouquet",
+                    "DisplayName": "tulip bouquet",
+                    "Description": "The Joja soda machine mysteriously formed into bouquet of tulips",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\TulipBouquet",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_SpriteSpring2",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908076": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Sprite Spring Map Patch
+            "Action": "EditMap",
+            "Target": "Maps/Custom_SpriteSpring2",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_SpriteSpring.tbin",
+            "ToArea": {
+                "X": 51,
+                "Y": 19,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908076",
+                "Season |contains=Winter": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Sprite Spring Map Patch - Winter
+            "Action": "EditMap",
+            "Target": "Maps/Custom_SpriteSpring2",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_SpriteSpring_Winter.tbin",
+            "ToArea": {
+                "X": 51,
+                "Y": 19,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908076",
+                "Season": "Winter"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Sprite Spring Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_SpriteSpring2",
+            "When": {
+                "HasSeenEvent": "908076"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "52 20 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Sprite Spring - Nexus Warp
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_SpriteSpringWarp.tbin",
+            "ToArea": {
+                "X": 14,
+                "Y": 4,
+                "Width": 12,
+                "Height": 15
+            },
+            "When": {
+                "HasSeenEvent |contains=908076": false
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Overlay"
+        },
+        { //Sprite Spring - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 18,
+                "Y": 8,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908076"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Joja Emporium - Enchanted Grove***
+        { //A Can of Joja Cola
+            "Action": "EditData",
+            "Target": "data/events/Town",
+            "When": {
+                "HasFlag |contains=jojaMember": true
+            },
+            "Entries": {
+                "908091/e 908072/e 5553214": "continue/-500 -500/farmer 103 55 1/pause 1000/viewport 111 59 clamp true/move farmer 6 0 1/move farmer 0 3 2/move farmer 2 0 1/pause 300/faceDirection farmer 2 true/pause 1000/startJittering/showFrame farmer 1/pause 350/addObject 111 59 167/playSound stoneStep/pause 350/stopJittering/pause 100/showFrame farmer 0/pause 1250/showFrame farmer 3/pause 750/startJittering/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 110 60 2 false/removeSprite 111 59/addLantern 1000 111 59 1/pause 500/stopJittering/pause 200/showFrame farmer 0/playSound secret1/pause 2200/globalFade/viewport -1000 -1000/pause 1000/end warpOut"
+            }
+        },
+        { //Town - Warp Patch
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_Town.tbin",
+            "ToArea": {
+                "X": 110,
+                "Y": 58,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908091"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Town - Warp Light
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "When": {
+                "HasSeenEvent": "908091"
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "111 59 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Joja Emporium - Nexus Warp Edit
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_JojaEmporiumPatch.tbin",
+            "ToArea": {
+                "X": 34,
+                "Y": 36,
+                "Width": 12,
+                "Height": 11
+            },
+            "When": {
+                "HasFlag |contains=jojaMember": true
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Joja Emporium - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 38,
+                "Y": 39,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908091"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***Junimo Woods - Enchanted Grove***
+        { //An Ancient Junimo Scroll
+            "Action": "EditData",
+            "Target": "data/events/Custom_JunimoWoods",
+            "When": {
+                "HasSeenEvent |contains=1000037": true,
+                "HasFlag |contains=jojaMember": false
+            },
+            "Entries": {
+                "908077/e 908072": "none/-500 -500/farmer 45 37 2 Peaches 51 45 3/pause 800/playMusic woodsTheme/pause 700/viewport 45 41 true/viewport move 0 1 4000 true/skippable/move farmer 0 8 2 true/pause 2500/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 800/faceDirection farmer 1 true/pause 500/playSound leafrustle/pause 400/playSound leafrustle/pause 100/move Peaches -4 0 3/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 350/jump Peaches/pause 400/playSound junimoMeep1/pause 400/speak Peaches \"{{i18n:Peaches.Meep}}\"/pause 500/move Peaches -1 0 3/pause 400/shake Peaches 750/pause 150/playSound pickUpItem/pause 800/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 1 true/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 200/jump Peaches/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 700/faceDirection Peaches 2 true/pause 250/faceDirection Peaches 1 true/pause 500/move Peaches 9 0 1 true/pause 1000/move farmer 8 0 1 true/pause 1000/globalFade/viewport -1000 -1000/halt/warp Peaches 31 97/faceDirection Peaches 0 true/warp farmer 31 95/faceDirection farmer 2 true/pause 500/addTemporaryActor Junimo 16 32 -50 -50 0/addTemporaryActor Junimo1 16 32 30 95 2/addTemporaryActor Junimo2 16 32 29 96 1/addTemporaryActor Junimo3 16 32 29 97 1/addTemporaryActor Junimo4 16 32 29 98 1/addTemporaryActor Junimo5 16 32 30 99 0/addTemporaryActor Junimo6 16 32 31 99 0/addTemporaryActor Junimo7 16 32 33 98 3/addTemporaryActor Junimo8 16 32 33 96 3/addTemporaryActor Junimo9 16 32 32 95 2/addTemporaryActor Junimo10 16 32 32 99 0/positionOffset Junimo1 -6 -6/positionOffset Junimo2 -7 -2/positionOffset Junimo3 1 2/positionOffset Junimo4 -3 0/positionOffset Junimo5 -3 4/positionOffset Junimo6 3 0/positionOffset Junimo7 4 2/positionOffset Junimo8 4 0/positionOffset Junimo9 -2 1/positionOffset Junimo10 6 -4/viewport 31 97 clamp true/pause 1000/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 1000/faceDirection Peaches 1 true/pause 500/move Peaches 2 0 1/pause 350/faceDirection Peaches 2 true/pause 250/faceDirection Peaches 3 true/pause 500/stopMusic/pause 1000/move farmer 0 1 2/pause 750/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor AncientScrollObject 16 32 31 97 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 30 98 2 false/warp AncientScrollObject -20 -20/addLantern 1000 31 97 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 1500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 300/jump Junimo1/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 250/jump Junimo5/playSound junimoMeep1/pause 300/jump Junimo9/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/jump Junimo3/playSound junimoMeep1/pause 250/playSound junimoMeep1/pause 300/jump Junimo7/playSound junimoMeep1/pause 300/jump Junimo4/playSound junimoMeep1/pause 400/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/end warpOut"
+            }
+        },
+        { //Ancient Scroll [16x16] temp actor load
+            "Action": "Load",
+            "Target": "Characters/AncientScrollObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AncientScrollObject.png"
+        },
+        { //changes joja soda machine into an ancient scroll
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AncientScroll.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_JunimoWoods",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908077": false,
+                "HasFlag |contains=jojaMember": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/AncientScroll",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AncientScroll.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                //   "117": "Ancient Junimo Scroll/0/-300/Crafting -9/The Joja soda machine mysteriously formed into a Ancient Scroll../true/true/0/Ancient Junimo Scroll"
+                "117": {
+                    "Name": "Ancient Junimo Scroll",
+                    "DisplayName": "Ancient Junimo Scroll",
+                    "Description": "The Joja soda machine mysteriously formed into an Ancient Scroll",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\AncientScroll",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_JunimoWoods",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908077": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Junimo Woods < initial unlock
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "FromFile": "Assets/Maps/MapPatches/JunimoWoodsUnlocked.tbin",
+            "ToArea": {
+                "X": 16,
+                "Y": 109,
+                "Width": 6,
+                "Height": 4
+            },
+            "When": {
+                "HasSeenEvent |contains=191393": true
+            }
+        },
+        { //Junimo Woods < initial unlock light
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "When": {
+                "HasSeenEvent |contains=191393": true
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "19 109 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Junimo Woods - Map Patch
+            "Action": "EditMap",
+            "Target": "Maps/Custom_JunimoWoods",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_JunimoWoods.tbin",
+            "ToArea": {
+                "X": 30,
+                "Y": 96,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908077",
+                "Season |contains=Winter": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Junimo Woods - Map Patch - Winter
+            "Action": "EditMap",
+            "Target": "Maps/Custom_JunimoWoods",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_JunimoWoods_Winter.tbin",
+            "ToArea": {
+                "X": 30,
+                "Y": 96,
+                "Width": 3,
+                "Height": 3
+            },
+            "When": {
+                "HasSeenEvent": "908077",
+                "Season": "Winter"
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Junimo Woods Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_JunimoWoods",
+            "When": {
+                "HasSeenEvent": "908077"
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "31 97 4",
+                    "Delimiter": " "
+                }
+            ]
+        },
+        { //Junimo Woods - Nexus Warp <<remove cover
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_JunimoWoodsWarp.tbin",
+            "ToArea": {
+                "X": 32,
+                "Y": 31,
+                "Width": 15,
+                "Height": 16
+            },
+            "When": {
+                "HasSeenEvent |contains=908077, 908091": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Junimo Woods - Nexus Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 38,
+                "Y": 39,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908077"
+            },
+            "Update": "OnLocationChange"
+        },
+        //   ***The Continent of Galdora - Enchanted Grove***
+        { //A Swirl Stone
+            //(Not on Grandpa's Farm, first time meeting Camilla, player is not a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": false,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908077": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908075": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 64 15 2 Camilla 64 16 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 64 15 clamp true/pause 1250/emote farmer 8 true/pause 1000/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.02}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.03}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.04}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.05}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.06}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.07}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.08}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.09}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.10}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.11}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.12}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.13}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 64 15 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 64 15/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.14}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.15}}\"",
+            }
+        },
+        { //(Not on Grandpa's Farm, second time meeting Camilla, player is not a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": false,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908077": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908075": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 64 15 2 Camilla 64 16 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.Met.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 64 15 clamp true/pause 1250/emote farmer 8 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.02}}\"/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.Met.03}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.Met.04}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.05}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.06}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.07}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.08}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.09}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.10}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.11}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.12}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.13}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.14}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 64 15 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 64 15/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.Met.15}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.Met.16}}\""
+            }
+        },
+        {
+            //(Grandpa's Farm, first time meeting Camilla, player is not a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": false,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908077": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908075": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true,
+                "HasMod": "flashshifter.GrandpasFarm",
+                "FarmType": "Standard"
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 95 49 2 Camilla 95 50 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 95 49 true/pause 1250/emote farmer 8 true/pause 1000/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.02}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.03}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.04}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.05}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.06}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.07}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.08}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.09}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.10}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.11}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.12}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.13}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 95 49 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 95 49/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.14}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.15}}\""
+            }
+        },
+        { //(Grandpa's Farm, second time meeting Camilla, player is not a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": false,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908077": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908075": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true,
+                "HasMod": "flashshifter.GrandpasFarm",
+                "FarmType": "Standard"
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 95 49 2 Camilla 95 50 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.Met.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 95 49 true/pause 1250/emote farmer 8 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.02}}\"/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.Met.03}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.Met.04}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.05}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.06}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.07}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.08}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.09}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.10}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.11}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.12}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.13}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.14}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 95 49 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 95 49/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.Met.15}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.Met.16}}\""
+            }
+        },
+        { //(Not on Grandpa's Farm, player is a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": true,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 64 15 2 Camilla 64 16 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 64 15 clamp true/pause 1250/emote farmer 8 true/pause 1000/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.02}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.03}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.04}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.05}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.06}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.07}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.08}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.09}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.10}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.11}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.12}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.13}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 64 15 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 64 15/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.14}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.15}}\""
+            }
+        },
+        { //(Grandpa's Farm, player is a joja member)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=jojaMember": true,
+                "HasSeenEvent |contains=1337098": true,
+                "HasSeenEvent |contains=908076": true,
+                "HasSeenEvent |contains=908074": true,
+                "HasSeenEvent |contains=908073": true,
+                "HasSeenEvent |contains=908072": true,
+                "HasMod": "flashshifter.GrandpasFarm",
+                "FarmType": "Standard"
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 95 49 2 Camilla 95 50 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 95 49 true/pause 1250/emote farmer 8 true/pause 1000/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.02}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.03}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.04}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.05}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.06}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.07}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.08}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.09}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.10}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.11}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.12}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.13}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 95 49 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 95 49/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.14}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.15}}\""
+            }
+        },
+        { //(Not on Grandpa's Farm, year 3 default unlock)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "Year |contains=3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20": true,
+                "Day |contains=28": true,
+                "HasSeenEvent |contains=908072": true
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 64 15 2 Camilla 64 16 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.Met.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 64 15 clamp true/pause 1250/emote farmer 8 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.02}}\"/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.Met.03}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.Met.04}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.05}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.06}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.07}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.08}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.09}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.10}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.11}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.12}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.13}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.Met.14}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 64 15 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 64 15/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.Met.15}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.Met.16}}\""
+            }
+        },
+        {
+            //(Grandpa's Farm, year 3 default unlock)
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "Year |contains=3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20": true,
+                "Day |contains=28": true,
+                "HasSeenEvent |contains=908072": true,
+                "HasMod": "flashshifter.GrandpasFarm",
+                "FarmType": "Standard"
+            },
+            "Entries": {
+                "908078/t 600 2400": "none/-500 -500/farmer 95 49 2 Camilla 95 50 0/skippable/pause 1000/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 1000/message \"{{i18n:EnchantedGrove.Galdora.01}}\"/pause 750/playSound doorOpen/changeLocation farm/viewport 95 49 true/pause 1250/emote farmer 8 true/pause 1000/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 40/positionOffset Camilla 0 -1 true/pause 250/showFrame Camilla 9 true/pause 250/shake Camilla 250/pause 250/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -30 -30/showFrame Camilla 0 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_EnchantedGrove/makeInvisible 26 23 9 7/playMusic FlashShifter.StardewValleyExpandedCP_Nexus/pause 1500/viewport 30 29 true/pause 2000/screenFlash 1/playSound wand/warp farmer 30 30/faceDirection farmer 0 true/positionOffset farmer -3 22/warp Camilla -30 -30/faceDirection Camilla 2 true/startJittering/pause 1200/stopJittering/pause 1000/faceDirection farmer 1 true/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1100/faceDirection farmer 0 true/pause 500/playSound cacklingWitch/pause 650/message \"{{i18n:EnchantedGrove.Galdora.02}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 800/startJittering/pause 1000/stopJittering/pause 1000/playSound cacklingWitch/pause 400/message \"{{i18n:EnchantedGrove.Galdora.03}}\"/pause 400/faceDirection farmer 3 true/pause 1000/startJittering/pause 600/stopJittering/pause 500/screenFlash 2/playSound wand/warp Camilla 30 27/pause 750/faceDirection farmer 0 true/pause 500/jump farmer/pause 1300/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.04}}\"/pause 500/showFrame Camilla 0 true/pause 650/move Camilla 0 1 2/pause 300/speak Camilla \"{{i18n:EnchantedGrove.Galdora.05}}\"/pause 500/move Camilla 0 1 2/pause 400/speak Camilla \"{{i18n:EnchantedGrove.Galdora.06}}\"/pause 1000/startJittering/pause 400/stopJittering/pause 750/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 50/positionOffset farmer 0 -1/pause 800/screenFlash 2/warp Camilla -30 -30/warp farmer -20 -20/playSound wand/pause 2000/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostAmbience/faceDirection farmer 0 true/faceDirection Camilla 0 true/viewport 31 35 true/viewport move 0 -2 8000 true/pause 9500/screenFlash 2/playSound wand/warp farmer 31 20/positionOffset farmer 36 15 true/warp Camilla 30 20/positionOffset Camilla 18 -4 true/faceDirection Camilla 2 true/faceDirection farmer 2 true/pause 1000/emote farmer 16 true/pause 2250/faceDirection Camilla 1 true/pause 650/faceDirection farmer 3 true/pause 650/speak Camilla \"{{i18n:EnchantedGrove.Galdora.07}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Camilla 2 true/pause 800/globalFade/viewport 64 54 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/warp farmer 32 18/warp Camilla 31 18/faceDirection farmer 0 true/faceDirection Camilla 0 true/positionOffset Camilla -26 -20 true/positionOffset farmer -13 -3 true/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 64 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport -1000 -1000 true/pause 1500/viewport 31 19 true/pause 2000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.08}}\"/pause 500/faceDirection farmer 3 true/pause 750/faceDirection Camilla 1 true/pause 600/speak Camilla \"{{i18n:EnchantedGrove.Galdora.09}}\"/pause 1000/screenFlash 2/playSound wand/viewport 39 39/warp farmer 39 39/warp Camilla 37 39/faceDirection farmer 3 true/faceDirection Camilla 1 true/pause 1000/emote farmer 16 true/pause 1000/speak Camilla \"{{i18n:EnchantedGrove.Galdora.10}}\"/pause 800/move Camilla 1 0 1/pause 400/shake Camilla 750/showFrame Camilla 5 true/pause 150/playSound pickUpItem/pause 650/showFrame Camilla 4 true/pause 400/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/faceDirection farmer 3 true/pause 500/speak Camilla \"{{i18n:EnchantedGrove.Galdora.11}}\"/pause 800/screenFlash 2/playSound wand/warp Camilla 39 31/faceDirection Camilla 2 true/pause 1200/faceDirection farmer 0 true/pause 1000/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 2000/startJittering/pause 200/showFrame farmer 15/pause 300/addTemporaryActor SwirlStoneObject 16 32 39 36 2 false/playSound stoneStep/pause 300/stopJittering/pause 150/showFrame farmer 12 true/pause 800/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 1 2/pause 400/faceDirection farmer 1 true/pause 275/faceDirection farmer 0 true/pause 1000/showFrame farmer 36 true/pause 600/startJittering/pause 750/screenFlash 2/playSound wand/playSound wand/warp SwirlStoneObject -20 -20/pause 300/stopJittering/pause 400/faceDirection farmer 0 true/playSound secret1/pause 2000/viewport move 0 -1 4000 true/pause 2000/showFrame Camilla 17 true/pause 300/showFrame Camilla 19 true/pause 1000/showFrame Camilla 17 true/pause 400/showFrame Camilla 0 true/pause 800/speak Camilla \"{{i18n:EnchantedGrove.Galdora.12}}\"/pause 900/screenFlash 2/viewport 39 37 clamp/playSound wand/warp Camilla 39 36/pause 750/faceDirection farmer 0 true/pause 750/speak Camilla \"{{i18n:EnchantedGrove.Galdora.13}}\"/pause 800/move Camilla 0 1 2/pause 500/showFrame Camilla 1 true/pause 200/shake Camilla 500/pause 500/screenFlash 2/playSound wand/warp farmer -30 -30/warp Camilla -29 -29/pause 2000/globalFade/viewport -1000 -1000/changeLocation farm/stopMusic/pause 2000/viewport 95 49 clamp true/pause 2500/screenFlash 2/playSound wand/warp farmer 95 49/faceDirection farmer 2 true/startJittering/pause 1650/playSound cacklingWitch/pause 200/stopJittering/pause 300/message \"{{i18n:EnchantedGrove.Galdora.14}}\"/pause 1750/faceDirection farmer 1 true/pause 300/faceDirection farmer 0 true/pause 500/warp farmer -20 -20/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:EnchantedGrove.Galdora.15}}\""
+            }
+        },
+        { //Swirl Stone temp actor load
+            "Action": "Load",
+            "Target": "Characters/SwirlStoneObject",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwirlStoneObject.png"
+        },
+        { //changes joja soda machine into a swirl stone
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwirlStone.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "Custom_CastleVillageOutpost",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908078": false
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/SwirlStone",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwirlStone.png",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                //  "117": "Swirl Stone/0/-300/Crafting -9/The Joja soda machine mysteriously formed into a Swirl Stone.../true/true/0/Swirl Stone"
+                "117": {
+                    "Name": "Swirl Stone",
+                    "DisplayName": "Swirl Stone",
+                    "Description": "The Joja soda machine mysteriously formed into a Swirl Stone",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\SwirlStone",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "Custom_CastleVillageOutpost",
+                "HasSeenEvent": "908072",
+                "HasSeenEvent |contains=908078": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Alesia and Isaac event
+            "Action": "EditData",
+            "Target": "data/events/custom_desertrailway",
+            "Entries": {
+                "908079/": "FlashShifter.StardewValleyExpandedCP_OminousCavern/-500 -500/farmer 21 14 3/addTemporaryActor Alesia 16 32 15 9 1 true/addTemporaryActor Isaac 16 32 17 9 3 true/pause 1200/viewport 16 11 true/skippable/move farmer -3 0 0/move farmer 0 -2 3/move farmer -2 0 0 true/pause 200/faceDirection Alesia 2 true/pause 1000/faceDirection Isaac 2 true/pause 400/speak Alesia \"{{i18n:EnchantedGrove.Badlands.01}}\"/pause 300/speak Isaac \"{{i18n:EnchantedGrove.Badlands.02}}\"/pause 500/shake Alesia 400/pause 150/speak Alesia \"{{i18n:EnchantedGrove.Badlands.03}}\"/pause 600/faceDirection Alesia 1 true/pause 400/speak Alesia \"{{i18n:EnchantedGrove.Badlands.04}}\"/pause 700/speed Isaac 1/move Isaac 0 1 2/pause 300/speak Isaac \"{{i18n:EnchantedGrove.Badlands.05}}\"/pause 600/faceDirection Alesia 2/pause 300/move Alesia 0 1 2/pause 300/shake Alesia 300/pause 50/speak Alesia \"{{i18n:EnchantedGrove.Badlands.06}}\"/pause 600/faceDirection Alesia 1 true/pause 650/faceDirection Isaac 3 true/pause 500/speak Alesia \"{{i18n:EnchantedGrove.Badlands.07}}\"/pause 600/faceDirection Alesia 2 true/pause 400/shake Alesia 300/pause 100/speak Alesia \"{{i18n:EnchantedGrove.Badlands.08}}\"/pause 500/playSound warrior/showFrame Alesia 18/pause 300/showFrame Alesia 20/pause 300/showFrame Alesia 21/pause 400/playSound wand/playSound wand/screenFlash 2/warp Alesia -300 -300/pause 1500/speed Isaac 1/move Isaac -1 0 2 true/pause 1100/shake Isaac 400/pause 300/speak Isaac \"{{i18n:EnchantedGrove.Badlands.12}}\"/pause 650/playSound warrior/showFrame Isaac 20/pause 300/showFrame Isaac 22/pause 300/showFrame Isaac 18/pause 300/playSound wand/screenFlash 2/warp Isaac -200 -200/pause 1000/globalFade/viewport -1000 -1000/end position 16 12"
+            },
+        },
+        { //Crimson Badlands Warp
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_CrimsonBadlandsWarp.tbin",
+            "ToArea": {
+                "X": 35,
+                "Y": 4,
+                "Width": 12,
+                "Height": 15
+            },
+            "When": {
+                "HasSeenEvent |contains=908078": false
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Crimson Badlands Light
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_WarpLights.tbin",
+            "ToArea": {
+                "X": 38,
+                "Y": 8,
+                "Width": 5,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "908078"
+            },
+            "Update": "OnLocationChange"
+        },
+        //**Enchanted Grove - Those beautiful maps effects with the pretty lights and stars. This entry needs to load last to correctly overlay the map patches.**
+        { //Map Effects
+            "Action": "EditMap",
+            "Target": "Maps/Custom_EnchantedGrove",
+            "FromFile": "assets/Maps/MapPatches/EnchantedGrove_Colors.tbin",
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 61,
+                "Height": 51
+            },
+            "Update": "OnLocationChange"
+        },
+    ]
+}

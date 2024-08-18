@@ -1,0 +1,223 @@
+{
+  "Changes": [
+
+    //Sandy's new portraits
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Sandy",
+      "PatchMode": "Replace",
+      "When": {
+        "VanillaSandyPortraits": "false"
+      },
+      "FromFile": "Assets/CharacterFiles/Portraits/Sandy/Sandy.png",
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Sandy",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose FlashShifter.StardewValleyExpandedCP_Big_Conch",
+          "Delimiter": " "
+        }
+        /*Like*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar",
+          "Delimiter": " "
+        }
+        /*Dislike*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Neutral*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            9
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+      ]
+    },
+    { //SANDY SCHEDULE - Default
+      "Action": "Load",
+      "Target": "characters/schedules/Sandy",
+      "FromFile": "Assets/CharacterFiles/Schedules/Sandy/ShopSchedule.json",
+    },
+    { //SANDY SCHEDULE - Visits Stardew Valley
+      "Action": "EditData",
+      "Target": "characters/schedules/Sandy",
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+        "HasSeenEvent |contains=5553210": false
+      },
+      "Entries": {
+        "6": "0 Custom_Sandy_WarpRoom 3 4 2/840 HaleyHouse 13 20 2/1010 HaleyHouse 13 20 1/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 101 68 0/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+        "13": "0 Custom_Sandy_WarpRoom 3 4 2/810 Beach 53 24 2/1300 Forest 71 50 2/1730 HaleyHouse 7 16 0/2010 HaleyHouse 5 20 2/2200 HaleyHouse 21 4 0",
+        "20": "0 Custom_Sandy_WarpRoom 3 4 2/810 Beach 53 24 2/1300 Forest 71 50 2/1730 HaleyHouse 7 16 0/2020 HaleyHouse 5 20 2/2200 HaleyHouse 21 4 0",
+        "27": "0 Custom_Sandy_WarpRoom 3 4 2/840 HaleyHouse 13 20 2/1010 HaleyHouse 13 20 1/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 101 68 0/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+      },
+    },
+    { //SANDY SCHEDULE - Visits Stardew Valley (joja route)
+      "Action": "EditData",
+      "Target": "characters/schedules/Sandy",
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+        "HasSeenEvent": "5553210"
+      },
+      "Entries": {
+        "6": "0 Custom_Sandy_WarpRoom 3 4 2/840 HaleyHouse 13 20 2/1010 HaleyHouse 13 20 1/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+        "13": "0 Custom_Sandy_WarpRoom 3 4 2/810 Beach 53 24 2/1300 Forest 71 50 2/1730 HaleyHouse 7 16 0/2010 HaleyHouse 5 20 2/2200 HaleyHouse 21 4 0",
+        "20": "0 Custom_Sandy_WarpRoom 3 4 2/810 Beach 53 24 2/1300 Forest 71 50 2/1730 HaleyHouse 7 16 0/2020 HaleyHouse 5 20 2/2200 HaleyHouse 21 4 0",
+        "27": "0 Custom_Sandy_WarpRoom 3 4 2/840 HaleyHouse 13 20 2/1010 HaleyHouse 13 20 1/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+      },
+    },
+    { //SANDY DIALOGUE - Visits Stardew Valley
+      "Action": "EditData",
+      "Target": "characters/dialogue/Sandy",
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10"
+      },
+      "Entries": {
+        "Sat": "{{i18n:Sandy.Visit.01}}",
+        "HaleyHouse_13_20": "{{i18n:Sandy.Visit.02}}",
+        "HaleyHouse_20_6": "{{i18n:Sandy.Visit.03}}",
+        "HaleyHouse_19_4": "{{i18n:Sandy.Visit.04}}",
+        "HaleyHouse_7_16": "{{i18n:Sandy.Visit.05}}",
+        "HaleyHouse_5_20": "{{i18n:Sandy.Visit.05}}",
+        "Town_22_64": "{{i18n:Sandy.Visit.06}}",
+        "Town_101_68": "{{i18n:Sandy.Visit.07}}",
+        "Saloon_17_20": "{{i18n:Sandy.Visit.08}}",
+        "Forest_71_50": "{{i18n:Sandy.Visit.09}}",
+        "Beach_53_24": "{{i18n:Sandy.Visit.10}}",
+        "CommunityCenter_11_23": "{{i18n:Sandy.Visit.11}}",
+        "Thu4": "{{i18n:Sandy.Visit.12}}",
+      },
+    },
+    { //Emily string fix
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/rainy",
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+        "HasMod": "gizzymo.canonfriendlyexpansion"
+      },
+      "Entries": {
+        "Emily": "{{i18n:Emily.StringFix}}",
+      },
+    },
+    { //Removes Sandy's Shop tile action for the day
+      "Action": "EditMap",
+      "Target": "Maps/SandyHouse",
+      "FromFile": "Assets/Maps/MapPatches/SandyHouseNoShop.tbin",
+      "ToArea": {
+        "X": 1,
+        "Y": 6,
+        "Width": 3,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+        "DayOfWeek": "Saturday"
+      },
+    },
+    { //Removes Sandy's Shop tile action for the day - community day
+      "Action": "EditMap",
+      "Target": "Maps/SandyHouse",
+      "FromFile": "Assets/Maps/MapPatches/SandyHouseNoShop.tbin",
+      "ToArea": {
+        "X": 1,
+        "Y": 6,
+        "Width": 3,
+        "Height": 1
+      },
+      "When": {
+        "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+        "HasSeenEvent": "191393",
+        "Day": "22"
+      },
+    },
+    { //Sandy's birthday - SANDY
+      "Action": "EditData",
+      "Target": "characters/schedules/Sandy",
+      "Entries": {
+        "fall_15": "MAIL ccVault/630 SandyHouse 2 5 2/1210 SandyHouse 3 5 1 \"Strings\\schedules\\Sandy:Sandy_Birthday_Greeting\"/1300 Desert 15 16 1 \"Strings\\schedules\\Sandy:Sandy_Birthday_Hangout\"/1500 Desert 28 10 0 \"Strings\\schedules\\Sandy:Sandy_Birthday_Lake\"/1700 Desert 35 45 0 \"Strings\\schedules\\Sandy:Sandy_Birthday_Bones\"/1900 34 24 0 \"Strings\\schedules\\Sandy:Sandy_Birthday_Camel\"/2100 Desert 29 23 2 \"Strings\\schedules\\Sandy:Sandy_Birthday_Bye\"/2200 Desert 26 24 2 sandy_wave/2410 SandyHouse 2 5 2"
+      },
+    },
+    { //Sandy's birthday - EMILY
+      "Action": "EditData",
+      "Target": "characters/schedules/Emily",
+      "Entries": {
+        "fall_15": "MAIL ccVault/900 HaleyHouse 16 5 2/1000 SandyHouse 4 5 3 \"Strings\\schedules\\Emily:Sandy_Birthday_Greeting\"/1300 Desert 17 16 3 \"Strings\\schedules\\Emily:Sandy_Birthday_Hangout\"/1500 Desert 30 10 0 \"Strings\\schedules\\Emily:Sandy_Birthday_Lake\"/1700 Desert 34 45 0 \"Strings\\schedules\\Emily:Sandy_Birthday_Bones\"/1900 35 24 0 \"Strings\\schedules\\Emily:Sandy_Birthday_Camel\"/2100 Desert 29 24 0 \"Strings\\schedules\\Emily:Sandy_Birthday_Bye\"/2200 HaleyHouse 21 4 1 emily_sleep"
+      },
+    },
+    { //Sandy's birthday - string edit
+      "Action": "EditData",
+      "Target": "strings/schedules/Sandy",
+      "Entries": {
+        "Sandy_Birthday_Bones": "{{i18n:Sandy.StringFix}}",
+      },
+    },
+  
+    { //SANDY EVENT
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "1000030/f Sandy 1250/t 1200 1700/z winter/z fall/e 8050109/w sunny": "springtown/-500 -500/farmer 26 55 2 Emily 25 70 1 Sandy 27 70 3 Pam -3000 -3000 2 Harvey 9 64 0 Caroline 32 65 1 Jodi 34 65 3/pause 500/skippable/viewport 26 69 true/pause 500/textAboveHead Emily \"{{i18n:Sandy.event1.01}}\"/shake Emily 600/pause 500/emote farmer 16/pause 200/move farmer 0 3 2/textAboveHead Sandy \"{{i18n:Sandy.event1.02}}\"/move farmer 0 9 2/pause 750/move Emily 0 0 0/pause 300/move Sandy 0 0 0/pause 150/emote Sandy 16/pause 50/speak Sandy \"{{i18n:Sandy.event1.03}}\"/pause 500/speak Emily \"{{i18n:Sandy.event1.04}}\"/pause 500/move Sandy 0 0 3/pause 650/speak Sandy \"{{i18n:Sandy.event1.05}}\"/pause 500/move Emily 0 0 1/pause 400/speak Emily \"{{i18n:Sandy.event1.06}}\"/pause 500/emote Emily 20 true/pause 125/emote Sandy 20 true/pause 2200/emote farmer 40/pause 800/move Sandy 0 0 0/pause 400/move Emily 0 0 0/pause 500/speak Sandy \"{{i18n:Sandy.event1.07}}\"/pause 500/speak Emily \"{{i18n:Sandy.event1.08}}\"/pause 500/question fork0 \"{{i18n:Sandy.event1.08A}}\"/fork TourWithSandy/pause 1000/stopMusic/emote Sandy 60/pause 650/speak Sandy \"{{i18n:Sandy.event1.09}}\"/pause 1000/speak Emily \"{{i18n:Sandy.event1.10}}\"/pause 700/speak Sandy \"{{i18n:Sandy.event1.11}}\"/pause 200/globalFade/viewport -1000 -1000/pause 700/end dialogue Emily \"{{i18n:Sandy.event1.12}}\"",
+        "TourWithSandy": "pause 600/jump Sandy/pause 800/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.01}}\"/pause 750/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.02}}\"/pause 500/emote farmer 32/pause 100/globalFade/viewport -1000 -1000/pause 1000/changeLocation farm/pause 500/warp Jodi -200 -200/warp Harvey -205 -205/warp Caroline -150 -150/warp Emily 62 15/warp Sandy 63 15/warp farmer 64 15/move Emily 0 0 2/move Sandy 0 0 2/playMusic spring_day_ambient/pause 500/viewport 63 15 clamp true/pause 1250/textAboveHead Sandy \"{{i18n:Sandy.event1.TourWithSandy.03}}\"/pause 2000/move Emily 0 0 1/pause 750/move Sandy 0 0 3/pause 1000/move Sandy 0 0 1/pause 500/faceDirection farmer 3/pause 1000/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.04}}\"/pause 1250/move Sandy 0 0 3/pause 250/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.05}}\"/pause 400/move Sandy 0 0 3/pause 500/emote Sandy 16/pause 1000/move Sandy 0 0 1/pause 550/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.06}}\"/pause 1300/move Sandy 0 0 2/pause 400/move Emily 0 0 2/pause 700/move farmer 0 0 2/pause 2500/move Emily 0 0 3/pause 1000/move Sandy 0 0 3/pause 500/move Emily 0 0 1/pause 1200/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.07}}\"/pause 500/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.08}}\"/pause 750/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.09}}\"/pause 200/faceDirection farmer 3/pause 750/jump farmer/pause 1100/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.10}}\"/pause 600/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.11}}\"/pause 200/globalFade/viewport -1000 -1000/warp Emily 49 24/warp Sandy 50 24/warp farmer 51 24/move Emily 0 0 2/move Sandy 0 0 2/move farmer 0 0 2/changeLocation beach/stopMusic/pause 1100/playMusic ocean/viewport 50 25 true/pause 750/textAboveHead Sandy \"{{i18n:Sandy.event1.TourWithSandy.12}}\"/pause 2500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.13}}\"/pause 1450/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.14}}\"/pause 800/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.15}}\"/pause 2200/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.16}}\"/pause 500/faceDirection Emily 1/pause 300/faceDirection farmer 3/pause 400/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.17}}\"/pause 200/faceDirection Sandy 3/pause 800/jump Sandy/pause 1000/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.18}}\"/pause 300/globalFade/viewport -1000 -1000/changeLocation Custom_BlueMoonVineyard/playMusic spring_day_ambient/pause 1250/warp farmer 25 55/warp Emily 24 55/warp Sandy 22 55/faceDirection Emily 2/faceDirection farmer 2/faceDirection Sandy 3/pause 200/viewport 24 57 clamp true/pause 600/move Sandy -6 0 2/pause 400/faceDirection Emily 3/pause 1500/move Sandy 7 0 1/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.19}}\"/pause 500/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.20}}\"/pause 800/faceDirection Sandy 2/pause 350/faceDirection Emily 2/pause 3000/faceDirection farmer 3/pause 1000/faceDirection farmer 2/pause 600/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 1000/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.21}}\"/pause 600/faceDirection Emily 3/pause 1200/faceDirection Emily 2/pause 2000/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.22}}\"/pause 400/faceDirection Emily 3/pause 400/faceDirection farmer 3/pause 500/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.23}}\"/pause 700/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.24}}\"/pause 500/faceDirection Sandy 1/pause 500/jump Sandy/pause 900/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.26}}\"/pause 500/globalFade/viewport -1000 -1000/warp Emily 8 14/warp Sandy 10 13/warp farmer 11 13/faceDirection Emily 0/faceDirection Sandy 0/faceDirection farmer 0/changeLocation Custom_SVESummit/viewport 14 15 true/pause 700/jump Sandy/pause 800/emote Sandy 20/pause 700/faceDirection farmer 3/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.27}}\"/pause 600/faceDirection Emily 1/pause 500/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.28}}\"/pause 800/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.29}}\"/pause 500/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.30}}\"/pause 500/jump farmer/pause 900/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.31}}\"/pause 1000/faceDirection Sandy 0/pause 400/faceDirection Emily 0/pause 500/faceDirection farmer 0/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 1600/playSound SpringBirds/pause 600/playSound SpringBirds/pause 800/playSound SpringBirds/pause 5000/emote Sandy 16/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.32}}\"/pause 400/faceDirection Emily 1/pause 500/faceDirection farmer 3/pause 400/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.33}}\"/pause 500/faceDirection Sandy 3/pause 600/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.34}}\"/pause 500/faceDirection Sandy 1/pause 600/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.35}}\"/pause 700/emote farmer 32/pause 500/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.36}}\"/pause 450/globalFade/viewport -1000 -1000/changeLocation BusStop/pause 1000/warp Pam 13 10/warp Sandy 12 12/warp Emily 12 14/warp farmer 13 14/faceDirection Sandy 2/faceDirection Emily 0/faceDirection farmer 0/faceDirection Pam 2/pause 300/viewport 18 14 true/pause 800/playSound SpringBirds/pause 300/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.37}}\"/pause 400/emote farmer 32/pause 600/speak Emily \"{{i18n:Sandy.event1.TourWithSandy.38}}\"/pause 700/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.39}}\"/pause 2000/faceDirection farmer 3/pause 600/faceDirection farmer 0/pause 450/faceDirection farmer 3/pause 400/emote farmer 8/pause 200/speak Sandy \"{{i18n:Sandy.event1.TourWithSandy.40}}\"/pause 350/faceDirection farmer 0/pause 200/textAboveHead Emily \"{{i18n:Sandy.event1.TourWithSandy.41}}\"/pause 300/move Pam -1 0 0/pause 200/playSound doorClose/warp Pam -300 -300/pause 250/move Sandy 0 -2 0/pause 1000/faceDirection Sandy 2/pause 700/emote Sandy 20/pause 600/faceDirection Sandy 0/pause 400/playSound doorClose/warp Sandy -200 -200/pause 800/globalFade/viewport -1000 -1000/playSound busDriveOff/pause 2000/friendship Sandy 250/pause 300/end dialogue Sandy \"{{i18n:Sandy.event1.TourWithSandy.42}}\"",
+      },
+    },
+    { //SANDY EVENT - grandpa's farm
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "1000030/f Sandy 1250/t 1200 1700/z winter/z fall/e 8050109/w sunny": "springtown/-500 -500/farmer 26 55 2 Emily 25 70 1 Sandy 27 70 3 Pam -3000 -3000 2 Harvey 9 64 0 Caroline 32 65 1 Jodi 34 65 3/pause 500/skippable/viewport 26 69 true/pause 500/textAboveHead Emily \"{{i18n:Sandy.Event1.01}}\"/shake Emily 600/pause 500/emote farmer 16/pause 200/move farmer 0 3 2/textAboveHead Sandy \"{{i18n:Sandy.Event1.02}}\"/move farmer 0 9 2/pause 750/move Emily 0 0 0/pause 300/move Sandy 0 0 0/pause 150/emote Sandy 16/pause 50/speak Sandy \"{{i18n:Sandy.Event1.03}}\"/pause 500/speak Emily \"{{i18n:Sandy.Event1.04}}\"/pause 500/move Sandy 0 0 3/pause 650/speak Sandy \"{{i18n:Sandy.Event1.05}}\"/pause 500/move Emily 0 0 1/pause 400/speak Emily \"{{i18n:Sandy.Event1.06}}\"/pause 500/emote Emily 20 true/pause 125/emote Sandy 20 true/pause 2200/emote farmer 40/pause 800/move Sandy 0 0 0/pause 400/move Emily 0 0 0/pause 500/speak Sandy \"{{i18n:Sandy.Event1.07}}\"/pause 500/speak Emily \"{{i18n:Sandy.Event1.08}}\"/pause 500/question fork0 \"{{i18n:Sandy.Event1.08A}}\"/fork TourWithSandy/pause 1000/stopMusic/emote Sandy 60/pause 650/speak Sandy \"{{i18n:Sandy.Event1.09}}\"/pause 1000/speak Emily \"{{i18n:Sandy.Event1.10}}\"/pause 700/speak Sandy \"{{i18n:Sandy.Event1.11}}\"/pause 200/globalFade/viewport -1000 -1000/pause 700/end dialogue Emily \"{{i18n:Sandy.Event1.12}}\"",
+        "TourWithSandy": "pause 600/jump Sandy/pause 800/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.01}}\"/pause 750/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.02}}\"/pause 500/emote farmer 32/pause 100/globalFade/viewport -1000 -1000/pause 1000/changeLocation farm/pause 500/warp Jodi -200 -200/warp Harvey -205 -205/warp Caroline -150 -150/warp Emily 93 49/warp Sandy 94 49/warp farmer 95 49/move Emily 0 0 2/move Sandy 0 0 2/playMusic spring_day_ambient/pause 500/viewport 95 50 true/pause 1250/textAboveHead Sandy \"{{i18n:Sandy.Event1.TourWithSandy.03}}\"/pause 2000/move Emily 0 0 1/pause 750/move Sandy 0 0 3/pause 1000/move Sandy 0 0 1/pause 500/faceDirection farmer 3/pause 1000/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.04}}\"/pause 1250/move Sandy 0 0 3/pause 250/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.05}}\"/pause 400/move Sandy 0 0 3/pause 500/emote Sandy 16/pause 1000/move Sandy 0 0 1/pause 550/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.06}}\"/pause 1300/move Sandy 0 0 2/pause 400/move Emily 0 0 2/pause 700/move farmer 0 0 2/pause 2500/move Emily 0 0 3/pause 1000/move Sandy 0 0 3/pause 500/move Emily 0 0 1/pause 1200/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.07}}\"/pause 500/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.08}}\"/pause 750/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.09}}\"/pause 200/faceDirection farmer 3/pause 750/jump farmer/pause 1100/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.10}}\"/pause 600/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.11}}\"/pause 200/globalFade/viewport -1000 -1000/warp Emily 49 24/warp Sandy 50 24/warp farmer 51 24/move Emily 0 0 2/move Sandy 0 0 2/move farmer 0 0 2/changeLocation beach/stopMusic/pause 1100/playMusic ocean/viewport 50 25 true/pause 750/textAboveHead Sandy \"{{i18n:Sandy.Event1.TourWithSandy.12}}\"/pause 2500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.13}}\"/pause 1450/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.14}}\"/pause 800/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.15}}\"/pause 2200/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.16}}\"/pause 500/faceDirection Emily 1/pause 300/faceDirection farmer 3/pause 400/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.17}}\"/pause 200/faceDirection Sandy 3/pause 800/jump Sandy/pause 1000/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.18}}\"/pause 300/globalFade/viewport -1000 -1000/changeLocation Custom_BlueMoonVineyard/playMusic spring_day_ambient/pause 1250/warp farmer 25 55/warp Emily 24 55/warp Sandy 22 55/faceDirection Emily 2/faceDirection farmer 2/faceDirection Sandy 3/pause 200/viewport 24 57 clamp true/pause 600/move Sandy -6 0 2/pause 400/faceDirection Emily 3/pause 1500/move Sandy 7 0 1/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.19}}\"/pause 500/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.20}}\"/pause 800/faceDirection Sandy 2/pause 350/faceDirection Emily 2/pause 3000/faceDirection farmer 3/pause 1000/faceDirection farmer 2/pause 600/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 1000/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.21}}\"/pause 600/faceDirection Emily 3/pause 1200/faceDirection Emily 2/pause 2000/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.22}}\"/pause 400/faceDirection Emily 3/pause 400/faceDirection farmer 3/pause 500/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.23}}\"/pause 700/speak Sandy \"$q -1 null \"{{i18n:Sandy.Event1.TourWithSandy.24}}\"/pause 500/faceDirection Sandy 1/pause 500/jump Sandy/pause 900/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.26}}\"/pause 500/globalFade/viewport -1000 -1000/warp Emily 8 14/warp Sandy 10 13/warp farmer 11 13/faceDirection Emily 0/faceDirection Sandy 0/faceDirection farmer 0/changeLocation Custom_SVESummit/viewport 14 15 true/pause 700/jump Sandy/pause 800/emote Sandy 20/pause 700/faceDirection farmer 3/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.27}}\"/pause 600/faceDirection Emily 1/pause 500/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.28}}\"/pause 800/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.29}}\"/pause 500/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.30}}\"/pause 500/jump farmer/pause 900/faceDirection Sandy 1/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.31}}\"/pause 1000/faceDirection Sandy 0/pause 400/faceDirection Emily 0/pause 500/faceDirection farmer 0/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1000/playSound SpringBirds/pause 1600/playSound SpringBirds/pause 600/playSound SpringBirds/pause 800/playSound SpringBirds/pause 5000/emote Sandy 16/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.32}}\"/pause 400/faceDirection Emily 1/pause 500/faceDirection farmer 3/pause 400/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.33}}\"/pause 500/faceDirection Sandy 3/pause 600/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.34}}\"/pause 500/faceDirection Sandy 1/pause 600/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.35}}\"/pause 700/emote farmer 32/pause 500/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.36}}\"/pause 450/globalFade/viewport -1000 -1000/changeLocation BusStop/pause 1000/warp Pam 13 10/warp Sandy 12 12/warp Emily 12 14/warp farmer 13 14/faceDirection Sandy 2/faceDirection Emily 0/faceDirection farmer 0/faceDirection Pam 2/pause 300/viewport 18 14 true/pause 800/playSound SpringBirds/pause 300/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.37}}\"/pause 400/emote farmer 32/pause 600/speak Emily \"{{i18n:Sandy.Event1.TourWithSandy.38}}\"/pause 700/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.39}}\"/pause 2000/faceDirection farmer 3/pause 600/faceDirection farmer 0/pause 450/faceDirection farmer 3/pause 400/emote farmer 8/pause 200/speak Sandy \"{{i18n:Sandy.Event1.TourWithSandy.40}}\"/pause 350/faceDirection farmer 0/pause 200/textAboveHead Emily \"{{i18n:Sandy.Event1.TourWithSandy.41}}\"/pause 300/move Pam -1 0 0/pause 200/playSound doorClose/warp Pam -300 -300/pause 250/move Sandy 0 -2 0/pause 1000/faceDirection Sandy 2/pause 700/emote Sandy 20/pause 600/faceDirection Sandy 0/pause 400/playSound doorClose/warp Sandy -200 -200/pause 800/globalFade/viewport -1000 -1000/playSound busDriveOff/pause 2000/friendship Sandy 250/pause 300/end dialogue Sandy \"{{i18n:Sandy.Event1.TourWithSandy.42}}\""
+      },
+    },
+    { //SANDY EVENT 2
+      "Action": "EditData",
+      "Target": "data/events/desert",
+      "When": {
+        "DayEvent |contains=desertfestival": false
+      },
+      "Entries": {
+        "1000038/f Sandy 1250/t 2400 2600": "spaceMusic/-500 -500/farmer 25 16 0 Sandy 30 10 0/pause 800/addLantern 735 29 10 1/viewport 29 10 clamp true/skippable/move farmer 0 -6 1/pause 1800/faceDirection Sandy 3 true/pause 600/speak Sandy \"{{i18n:Sandy.Event2.01}}\"/pause 600/faceDirection Sandy 0 true/pause 1000/speak Sandy \"{{i18n:Sandy.Event2.02}}\"/pause 1000/move farmer 3 0 1/pause 1000/faceDirection farmer 0 true/pause 1500/speak Sandy \"{{i18n:Sandy.Event2.03}}\"/pause 800/faceDirection farmer 1 true/pause 800/speak Sandy \"{{i18n:Sandy.Event2.04}}\"/pause 1500/faceDirection Sandy 3 true/pause 500/speak Sandy \"{{i18n:Sandy.Event2.05}}\"/pause 500/globalFade/viewport -1000 -1000/removeTemporarySprites/warp farmer 35 45/warp Sandy 35 43/faceDirection Sandy 2/move farmer 0 0 0/viewport 35 43 clamp true/pause 1300/speak Sandy \"{{i18n:Sandy.Event2.06}}\"/pause 1100/faceDirection Sandy 1 true/pause 250/faceDirection Sandy 0 true/pause 600/shake Sandy 600/pause 500/playSound warrior/pause 550/faceDirection Sandy 1 true/pause 250/faceDirection Sandy 2 true/pause 450/showFrame Sandy 16/pause 200/showFrame Sandy 17/pause 200/showFrame Sandy 16/pause 200/showFrame Sandy 17/pause 200/showFrame Sandy 16/pause 100/screenFlash 1/playSound wand/warp Sandy -200 -200/pause 1500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Sandy \"{{i18n:Sandy.Event2.07}}\""
+      },
+    },
+    { //SANDY EVENT DIALOGUE ADDITIONS
+      "Action": "EditData",
+      "Target": "characters/dialogue/Sandy",
+      "Entries": {
+        "sandy_event1": "!!!$0",
+        "sandy_event2": "!!!$0"
+      }
+    },
+  ]
+}

@@ -1,0 +1,87 @@
+{
+	"Changes": [
+
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Linus",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Linus",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //LINUS SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Linus",
+			"Entries": {
+				"spring": "630 Mountain 25 5 1/700 Mountain 28 9 1/930 Mountain 48 26 1/1400 Mountain 28 9 1/1900 Tent 3 2 1/2100 Tent 1 3 2/2300 Tent 4 4 2 linus_sleep",
+				"summer": "630 Mountain 39 5 1/940 Mountain 48 26 1/1300 Mountain 48 35 2 square_3_3/1600 Mountain 28 9 1/2000 Mountain 31 8 0/2020 Tent 2 2 2",
+				"fall": "700 Mountain 25 5 1/740 Mountain 28 9 1/900 Railroad 20 57 2 square_5_5/1400 Mountain 42 12 1/1800 Tent 2 2 2",
+				"fall": "700 Mountain 25 5 1/740 Mountain 28 9 1/900 Railroad 14 19 0/1400 Mountain 48 26 1/1800 Tent 2 2 2 linus_sleep",
+			},
+		},
+		{ //LINUS SCHEDULE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Linus",
+			"Entries": {
+				"Railroad_14_19": "{{i18n:Linus.Dialogue.01}}",
+			},
+		},
+		{ //LINUS EVENT
+			"Action": "EditData",
+			"Target": "data/events/mountain",
+			"Entries": {
+				"1000025/f Linus 2500/z winter/z fall/y 3/t 600 1130/w sunny": "spring_day_ambient/-500 -500/farmer 57 32 0 Linus 64 21 2/pause 400/skippable/viewport 63 23 true/pause 400/move farmer 0 -4 0/textAboveHead Linus \"{{i18n:Linus.Event1.01}}\"/move farmer 0 -5 0/move Linus 0 0 3/move farmer 0 -2 1/pause 600/move farmer 3 0 1/pause 200/speak Linus \"{{i18n:Linus.Event1.02}}\"/speak Linus \"{{i18n:Linus.Event1.03}}\"/pause 1500/move Linus 0 0 2/pause 1000/move farmer 2 0 1/pause 750/move farmer 0 0 2/pause 1250/speak Linus \"{{i18n:Linus.Event1.04}}\"/pause 500/move farmer 0 0 1/pause 500/move farmer 0 0 2/pause 1100/emote Linus 40/pause 1050/speak Linus \"{{i18n:Linus.Event1.05}}\"/pause 750/move Linus 0 0 3/pause 500/move farmer 0 0 1/pause 1000/speak Linus \"{{i18n:Linus.Event1.06}}\"/pause 500/question fork0 \"{{i18n:Linus.Event1.07}}\"/fork 1000025_HearYourPast/pause 1000/speak Linus \"{{i18n:Linus.Event1.08}}\"/pause 1000/move Linus 0 0 2/pause 2000/speak Linus \"{{i18n:Linus.Event1.09}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end",
+				"1000025_HearYourPast": "pause 1000/move Linus 0 0 2/pause 1750/move farmer 0 0 2/pause 750/emote Linus 40/pause 900/playMusic musicboxsong/pause 700/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.01}}\"/pause 800/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.02}}\"/pause 400/move farmer 0 0 1/pause 300/emote farmer 60/pause 300/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.03}}\"/pause 1000/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.04}}\"/pause 1000/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.05}}\"/pause 400/emote farmer 16/pause 250/move Linus 0 0 3/pause 500/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.06}}\"/pause 400/emote Linus 40/pause 150/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.07}}\"/pause 1000/move Linus 0 0 2/pause 1000/move farmer 0 0 2/pause 500/playMusic spring_day_ambient/pause 2500/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.08}}\"/pause 800/question fork1 \"{{i18n:Linus.Event1.1000025_HearYourPast.09}}\"/pause 1000/move Linus 0 0 3/pause 500/move farmer 0 0 1/pause 500/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.10}}\"/pause 650/emote farmer 32/pause 350/emote Linus 32/pause 1250/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.11}}\"/pause 1000/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.12}}\"/pause 1100/speak Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.13}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Linus \"{{i18n:Linus.Event1.1000025_HearYourPast.14}}\""
+			},
+		},
+		{ //LINUS EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Linus",
+			"Entries": {
+				"linus_event1": "{{i18n:Linus.Dialogue.02}}",
+				"linus_event2": "{{i18n:Linus.Dialogue.03}}",
+				"linus_event3": "{{i18n:Linus.Dialogue.04}}",
+			}
+		},
+		{ //LINUS GARBAGE PATHING FIX
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"502969/w sunny/f Linus 50/j 7/t 2000 2400": "nightTime/-1000 -1000/farmer 72 64 1 Linus 49 58 2 George -100 -100 2 Gus -100 -100 2/skippable/specificTemporarySprite linusLights/pause 800/viewport 55 64 true/move Linus 0 4 1/move Linus 4 0 2/move Linus 0 1 3/pause 1250/animate Linus true true 500 20 21/pause 500/playSound trashcanlid/pause 1000/playSound dirtyHit/pause 1000/playSound slimeHit/pause 1000/playSound dirtyHit/pause 1600/warp George 57 64/playSound doorClose/pause 600/stopAnimation Linus/showFrame Linus 22/jump Linus/shake Linus 1000/pause 1000/speed Linus 4/move Linus 0 -1 1/faceDirection George 3/pause 500/emote George 12/move farmer -14 0 3 true/speak George \"{{i18n:Linus.Event2.01}}\"/proceedPosition farmer 58 64/faceDirection George 1/pause 500/speak George \"{{i18n:Linus.Event2.02}}\"/faceDirection George 0/playSound doorClose/warp George -100 -100/pause 500/move farmer -5 0 3 false/faceDirection Linus 2/faceDirection farmer 0/playMusic echos/pause 1000/showFrame Linus 19/pause 600/emote Linus 28/speak Linus \"{{i18n:Linus.Event2.03}}\"/pause 500/showFrame Linus 0/pause 800/move Linus -1 0 2/pause 800/showFrame Linus 19/pause 800/speak Linus \"{{i18n:Linus.Event2.04}}\"/pause 650/move Linus -2 0 1/faceDirection farmer 3/move Linus 0 2 1/move Linus 1 0 1/speak Linus \"{{i18n:Linus.Event2.05}}\"/playMusic nightTime/pause 800/faceDirection Linus 3/pause 800/faceDirection Linus 1/speak Linus \"{{i18n:Linus.Event2.06}}\"/advancedMove Linus false -3 0 0 6/viewport move -1 1 5000/pause 500/move farmer -9 0 3/warp farmer -100 -100/faceDirection Linus 3/pause 600/animate Linus true true 500 20 21/pause 1000/playSound slimeHit/pause 1000/playSound slimeHit/pause 800/warp Gus 45 71/playSound doorClose/advancedMove Gus false 0 1 3 0 0 -1/stopAnimation Linus/showFrame Linus 22/jump Linus/pause 1000/advancedMove Linus false 0 -2/proceedPosition Gus 48 71/playMusic none/speak Gus \"{{i18n:Linus.Event2.07}}\"/faceDirection Gus 0/shake Linus 2000/pause 1000/faceDirection Linus 2/pause 800/showFrame Linus 19/move Gus 0 -2 0 false/speak Gus \"{{i18n:Linus.Event2.08}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Linus.Event2.09}}\"/pause 1000/showFrame Linus 0/pause 1000/speak Gus \"{{i18n:Linus.Event2.10}}\"/pause 1000/showFrame Linus 19/pause 600/globalFade/viewport -3000 -3000/end"
+			}
+		},
+	]
+}

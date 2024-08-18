@@ -1,0 +1,147 @@
+{
+  "Changes": [
+    //ISAAC NPC
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Isaac": {
+          "DisplayName": "{{i18n:Name.Isaac}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Negative",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Isaac_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Isaac_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Isaac's sprites
+      "Action": "Load",
+      "Target": "Characters/Isaac",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Isaac/Isaac.png"
+    },
+    {
+      //Isaac's portraits
+      "Action": "Load",
+      "Target": "Portraits/Isaac",
+      "FromFile": "Assets/CharacterFiles/Portraits/Isaac/Isaac.png"
+    },
+    {
+      //Isaac's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Isaac",
+      "FromFile": "assets/CharacterFiles/Schedules/Isaac/Isaac.json"
+    },
+    { //Isaac visits the adventurer guild
+      "Action": "EditData",
+      "Target": "characters/schedules/Isaac",
+      "When": {
+        "HasSeenEvent": "908079"
+      },
+      "Entries": {
+        "4": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 16 3/1100 Custom_AdventurerSummit 51 30 2/2200 AdventureGuild 11 16 3",
+        "5": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 16 3/1000 Custom_AdventurerSummit 36 22 2/1300 AdventureGuild 11 16 3",
+        "11": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 16 3/1300 Custom_AdventurerSummit 42 27 1/1710 AdventureGuild 3 13 2",
+        "26": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 6 13 2",
+        "27": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 14 3/1150 Custom_AdventurerSummit 34 25 1/1800 AdventureGuild 11 14 3",
+        "DesertFestival_1": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+        "DesertFestival_2": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+        "DesertFestival_3": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Isaac",
+      "Entries": {
+        "DesertFestival_Isaac": "{{i18n:DesertFestival_Isaac}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Isaac",
+      "When": {
+        "HasSeenEvent": "908079",
+        "Day": "4"
+      },
+      "Entries": {
+        "Thu": "{{i18n:Isaac.Guild.01}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Isaac",
+      "When": {
+        "HasSeenEvent": "908079",
+        "Day": "5, 11"
+      },
+      "Entries": {
+        "Thu": "{{i18n:Isaac.Guild.02}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Isaac",
+      "When": {
+        "HasSeenEvent": "908079",
+        "Day": "26"
+      },
+      "Entries": {
+        "Fri": "{{i18n:Isaac.Guild.03}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Isaac",
+      "When": {
+        "HasSeenEvent": "908079",
+        "Day": "27"
+      },
+      "Entries": {
+        "Sat": "...$0",
+      }
+    },
+    /*{
+      //Isaac's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Isaac": true
+      }
+    },*/
+  ]
+}

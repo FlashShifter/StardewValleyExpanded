@@ -1,0 +1,789 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Weddings",
+            "Entries": {
+                "Sophia": {
+                    "ID": "Sophia",
+                    "Setup": "Sophia 29 68 0"
+                },
+                "Victor": {
+                    "ID": "Victor",
+                    "Setup": "Victor 30 68 0",
+                },
+                "Olivia": {
+                    "ID": "Olivia",
+                    "Setup": "Olivia 31 68 0"
+                },
+                "Andy": {
+                    "ID": "Andy",
+                    "Setup": "29 70 0"
+                },
+                "Susan": {
+                    "ID": "Susan",
+                    "Setup": "30 70 0"
+                }
+            }
+        },
+        { //Lightens building shadows outside during winter
+            "Action": "EditImage",
+            "Target": "Maps/z_SVEbuildingshadow",
+            "FromFile": "Assets/Tilesheets/z_winter_SVEbuildingShadow.png",
+            "When": {
+                "Season": "Winter",
+                "IsOutdoors": true,
+                "ImmersiveShadows": true
+            }
+        },
+        { //Removes shadows if players configure to false
+            "Action": "EditImage",
+            "Target": "Maps/z_SVEbuildingshadow",
+            "FromFile": "Assets/Tilesheets/z_SVEbuildingShadow_NoShadow.png",
+            "When": {
+                "ImmersiveShadows": false
+            }
+        },
+        { //Removes fall leaves in spring, summer, and winter
+            "Action": "EditImage",
+            "Target": "Maps/z_Leaves",
+            "FromFile": "Assets/Tilesheets/z_Leaves_noLeaves.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season |contains=Fall": false
+            }
+        },
+        //MIST EFFECTS
+        { //Adds mist effects to the railroad
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "FromFile": "Assets/Maps/MistEffects/Railroad_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 70,
+                "Height": 62
+            }
+        },
+        { //Adds mist effects to the backwoods
+            "Action": "EditMap",
+            "Target": "Maps/Backwoods",
+            "FromFile": "Assets/Maps/MistEffects/Backwoods_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 50,
+                "Height": 40
+            }
+        },
+        { //Adds mist effects to the Mountain
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "FromFile": "Assets/Maps/MistEffects/Mountain_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 135,
+                "Height": 41
+            }
+        },
+        { //Adds mist effects to cindersap forest
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "FromFile": "Assets/Maps/MistEffects/Forest_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 120,
+                "Height": 120
+            }
+        },
+        { //Adds mist effects to forest west
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ForestWest",
+            "FromFile": "Assets/Maps/MistEffects/ForestWest_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 156,
+                "Height": 156
+            }
+        },
+        { //Adds mist effects to adventurer summit
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AdventurerSummit",
+            "FromFile": "Assets/Maps/MistEffects/AdventurerSummit_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 65,
+                "Height": 43
+            }
+        },
+        //Highlands Patches and Content
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "FromFile": "Assets/Maps/MapPatches/HighlandsWinterPatch.tbin",
+            "ToArea": {
+                "X": 123,
+                "Y": 104,
+                "Width": 10,
+                "Height": 12
+            },
+            "Update": "OnLocationChange",
+            "When": {
+                "Season": "Winter"
+            },
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "FromFile": "Assets/Maps/MistEffects/Highlands_Mist.tbin",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "Update": "OnLocationChange",
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 156,
+                "Height": 156
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Tilesheets/Projectiles",
+            "FromFile": "Assets/Tilesheets/FoggyFireball.png",
+            "ToArea": {
+                "X": 32,
+                "Y": 16,
+                "Width": 16,
+                "Height": 16
+            },
+            "When": {
+                "LocationName": "Custom_Highlands",
+                "Weather": "Rain, Storm"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_Highlands_Background_Day",
+            "FromFile": "Assets/Tilesheets/Highlands_FogBackground.png",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_Highlands_Background_Night",
+            "FromFile": "Assets/Tilesheets/Highlands_FogBackground.png",
+            "When": {
+                "MistEffects": "true",
+                "Weather": "Rain, Storm"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_Highlands_Background_Day",
+            "FromFile": "Assets/Tilesheets/{{season}}_Highlands_Background_Night.png",
+            "When": {
+                "Weather |contains=Rain, Storm": false,
+                "Time": "{{Range: 1700, 2600}}"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1648,
+                "Height": 388
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Season |contains=Spring": true,
+                "Season |contains=Summer, Fall, Winter": false,
+                "Weather |contains=Rain, Storm": false
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "spring_day_ambient"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Season |contains=Summer": true,
+                "Season |contains=Spring, Fall, Winter": false,
+                "Weather |contains=Rain, Storm": false
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "summer_day_ambient"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Season |contains=Fall": true,
+                "Season |contains=Spring, Summer, Winter": false,
+                "Weather |contains=Rain, Storm": false
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "fall_day_ambient"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Season |contains=Winter": true,
+                "Season |contains=Spring, Summer, Fall": false,
+                "Weather |contains=Rain, Storm": false
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "winter_day_ambient"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Season |contains=Winter": false,
+                "Weather |contains=Rain, Storm": false,
+                "Time": "{{Range: 1800, 2600}}"
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "spring_night_ambient"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Highlands",
+            "When": {
+                "Weather |contains=Rain, Storm": true
+            },
+            "Update": "OnLocationChange",
+            "MapProperties": {
+                "Music": "rain"
+            }
+        },
+        //LOAD FENCES
+        {
+            //Basic Fences
+            "Action": "EditImage",
+            "Target": "LooseSprites/Fence1",
+            "FromFile": "assets/Recolors/Fences/{{recolor}}/Fence1_{{season}}.png",
+            "PatchMode": "Replace",
+            "When": {
+                "ReplaceDefaultFences": true
+            }
+        },
+        {
+            //Hardwood Fences
+            "Action": "EditImage",
+            "Target": "LooseSprites/Fence5",
+            "FromFile": "assets/Recolors/Fences/{{recolor}}/Fence5_{{season}}.png",
+            "PatchMode": "Replace",
+            "When": {
+                "ReplaceHardwoodFences": true
+            }
+        },
+        //Recolor compatibility
+        { //Oasis asset colors
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_z_extras",
+            "FromFile": "Assets/Tilesheets/RecolorCompatibility.png",
+            "When": {
+                "HasMod": "Lita.StarblueValley"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 3360,
+                "Width": 240,
+                "Height": 80
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 240,
+                "Height": 80
+            },
+        },
+        { //Oasis asset colors
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_z_extras",
+            "FromFile": "Assets/Tilesheets/RecolorCompatibility.png",
+            "When": {
+                "HasMod": "DaisyNiko.EarthyRecolour"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 3360,
+                "Width": 240,
+                "Height": 80
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 80,
+                "Width": 240,
+                "Height": 80
+            },
+        },
+        { //Oasis asset colors
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_z_extras",
+            "FromFile": "Assets/Tilesheets/RecolorCompatibility.png",
+            "When": {
+                "HasMod": "minervamaga.CP.eemieMapRecolour"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 3360,
+                "Width": 240,
+                "Height": 80
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 160,
+                "Width": 240,
+                "Height": 80
+            },
+        },
+        { //Oasis asset colors
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_z_extras",
+            "FromFile": "Assets/Tilesheets/RecolorCompatibility.png",
+            "When": {
+                "HasMod": "Acerbicon.Recolor"
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 3360,
+                "Width": 240,
+                "Height": 80
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 240,
+                "Width": 240,
+                "Height": 80
+            },
+        },
+        //SEASONAL EDITS
+        {
+            //Adds leaves to buildings and objects during fall
+            "Action": "EditImage",
+            "Target": "Maps/fall_town",
+            "FromFile": "assets/Tilesheets/z_Leaves_Roofs.png",
+            "When": {
+                "SeasonalEdits": true
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            //Removes leaves
+            "Action": "EditImage",
+            "Target": "Maps/z_Leafs",
+            "FromFile": "assets/Tilesheets/z_NoLeaves.png",
+            "When": {
+                "SeasonalEdits": false
+            },
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/winter_outdoorsTileSheet",
+            "FromFile": "assets/Recolors/Default/winter_outdoors.png",
+            "When": {
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow onto basic craftable fences
+            "Action": "EditImage",
+            "Target": "LooseSprites/Fence1",
+            "FromFile": "Assets/Recolors/Default/FenceSnow_Default.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season": "winter",
+                "IsOutdoors": true,
+                "LocationName |contains=IslandWest": false
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow onto hardwood craftable fences
+            "Action": "EditImage",
+            "Target": "LooseSprites/Fence5",
+            "FromFile": "Assets/Recolors/Default/FenceSnow_Default.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season": "winter",
+                "IsOutdoors": true,
+                "LocationName |contains=IslandWest": false
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/{{season}}_outdoorsTileSheet",
+            "FromFile": "assets/Recolors/StarblueValley/{{season}}_outdoors.png",
+            "When": {
+                "recolor": "StarblueValley",
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/WorldMap/{{season}}_outdoorsTileSheet",
+            "FromFile": "assets/recolors/Eemie/{{season}}_outdoors.png",
+            "When": {
+                "recolor": "Eemie",
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/winter_town",
+            "FromFile": "assets/recolors/StarblueValley/winter_town.png",
+            "When": {
+                "recolor": "StarblueValley",
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/winter_town",
+            "FromFile": "assets/recolors/Default/winter_town.png",
+            "When": {
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            //Adds snow to buildings and objects during winter
+            "Action": "EditImage",
+            "Target": "Maps/winter_town",
+            "FromFile": "assets/recolors/Eemie/winter_town.png",
+            "When": {
+                "recolor": "Eemie",
+                "SeasonalEdits": true,
+                "IsOutdoors": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        { //Adds snow to wood and rock debris
+            "Action": "EditImage",
+            "Target": "Maps/springobjects",
+            "FromFile": "assets/Recolors/Default/DebrisSnow.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season": "Winter",
+                "IsOutdoors": true,
+                "LocationName |contains=Farm, Forest, Mountain, Custom_Garden, Custom_GrandpasShedOutside": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        { //Adds snow to dead crops grown by the player
+            "Action": "EditImage",
+            "Target": "Tilesheets/crops",
+            "FromFile": "assets/Recolors/Default/SnowyDeadCrops.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season": "Winter",
+                "IsOutdoors": true,
+                "LocationName |contains=IslandWest, Island_W": false
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 400,
+                "Width": 64,
+                "Height": 16
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        { //Adds leaves to picnic table sit animation
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "assets/Tilesheets/PicnicTableLeaves.png",
+            "When": {
+                "SeasonalEdits": true,
+                "Season": "Fall"
+            },
+            "ToArea": {
+                "X": 96,
+                "Y": 64,
+                "Width": 48,
+                "Height": 16
+            },
+            "PatchMode": "Overlay"
+        },
+        { //Edits spring summit bench sprite
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "assets/Tilesheets/spring_z_extras.png",
+            "When": {
+                "Season": "Spring"
+            },
+            "ToArea": {
+                "X": 32,
+                "Y": 96,
+                "Width": 48,
+                "Height": 16
+            },
+            "FromArea": {
+                "X": 176,
+                "Y": 401,
+                "Width": 48,
+                "Height": 16
+            },
+        },
+        { //Edits summer summit bench sprite
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "assets/Tilesheets/summer_z_extras.png",
+            "When": {
+                "Season": "Summer"
+            },
+            "ToArea": {
+                "X": 32,
+                "Y": 96,
+                "Width": 48,
+                "Height": 16
+            },
+            "FromArea": {
+                "X": 176,
+                "Y": 401,
+                "Width": 48,
+                "Height": 16
+            },
+        },
+        { //Edits fall summit bench sprite
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "assets/Tilesheets/fall_z_extras.png",
+            "When": {
+                "Season": "Fall"
+            },
+            "ToArea": {
+                "X": 32,
+                "Y": 96,
+                "Width": 48,
+                "Height": 16
+            },
+            "FromArea": {
+                "X": 176,
+                "Y": 401,
+                "Width": 48,
+                "Height": 16
+            },
+        },
+        { //Edits winter summit bench sprite
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "assets/Tilesheets/winter_z_extras.png",
+            "When": {
+                "Season": "Winter"
+            },
+            "ToArea": {
+                "X": 32,
+                "Y": 96,
+                "Width": 48,
+                "Height": 16
+            },
+            "FromArea": {
+                "X": 176,
+                "Y": 401,
+                "Width": 48,
+                "Height": 16
+            },
+        },
+        { //Removes trash near hat mouse once trash bear is completed
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "FromFile": "Assets/Maps/MapPatches/HatMouse_TrashRemoved.tbin",
+            "When": {
+                "HasFlag": "trashBearDone"
+            },
+            "ToArea": {
+                "X": 30,
+                "Y": 100,
+                "Width": 7,
+                "Height": 7
+            }
+        },
+        { //SVE chair data
+            "Action": "EditData",
+            "Target": "Data/ChairTiles",
+            "Entries": {
+                "spring_z_extras/11/23": "3/1/up/summitbench/2/6/false", //altered bench
+                "Arcade_Couch/1/1": "1/1/down/couch/-1/-1/false", //Custom couch so Keychain can sit with her Abigail waifu in the saloon arcade
+                "Arcade_Couch/2/1": "1/1/down/couch/-1/-1/false"
+            }
+        },
+        /*{
+            "Action": "EditImage",
+            "Target": "Tilesheets/ChairTiles",
+            "FromFile": "Assets/Tilesheets/RemoveBenchChairTiles.png",
+            "When": {
+                "LocationName |contains=Saloon": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 128,
+                "Height": 32
+            },
+        },*/
+        //Garden and Town East patches
+        /*{ //Pelican Town
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Maps/MapPatches/Garden_Town.tbin",
+            "ToArea": {
+                "X": 114,
+                "Y": 92,
+                "Width": 6,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent |contains=1000024": false
+            }
+        },*/
+        /*{ //Joja Pelican Town
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Maps/MapPatches/Garden_Town_Joja.tbin",
+            "ToArea": {
+                "X": 114,
+                "Y": 89,
+                "Width": 14,
+                "Height": 10
+            },
+            "When": {
+                "HasSeenEvent": "5553210",
+                "HasSeenEvent |contains=1000024": false
+            }
+        },
+        { //Joja Pelican Town - Garden
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Garden",
+            "FromFile": "assets/Maps/MapPatches/Town_Joja_Garden.tbin",
+            "ToArea": {
+                "X": 0,
+                "Y": 27,
+                "Width": 1,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "5553210"
+            }
+        },*/
+        /*{ //Shearwater Bridge
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ShearwaterBridge",
+            "FromFile": "assets/Maps/MapPatches/Garden_ShearwaterBridge.tbin",
+            "ToArea": {
+                "X": 0,
+                "Y": 39,
+                "Width": 9,
+                "Height": 1
+            },
+            "When": {
+                "HasSeenEvent |contains=1000024": false
+            }
+        },*/
+    ]
+}

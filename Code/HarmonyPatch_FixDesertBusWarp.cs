@@ -61,15 +61,23 @@ namespace StardewValleyExpanded
             {
                 List<CodeInstruction> patched = new List<CodeInstruction>(instructions); //make a copy of the instructions to modify
 
-                MethodInfo getTileY = AccessTools.Method(typeof(Character), nameof(Character.getTileY)); //get info for the "Character.getTileY()" method
+                MethodInfo getTileY = AccessTools.Method(typeof(Character), nameof(Character.TilePoint)); //get info for the "Character.getTileY()" method
 
                 for (int x = patched.Count - 1; x >= 3; x--) //for each instruction (looping backward)
                 {
-                    if (patched[x].opcode == OpCodes.Bge //if this code is "break if greater than or equal"
-                        && patched[x-1].operand is sbyte number && number == 10 //AND the previous code's operand is 10
-                        && patched[x-2].operand is MethodInfo method && method.Equals(getTileY)) //AND the previous code is calling "Character.getTileY()"
+                    // X coordinate
+                    if (patched[x].opcode == OpCodes.Bne_Un
+                        && patched[x-1].operand is sbyte numberX && numberX == 16
+                        && patched[x-3].operand is MethodInfo methodX && methodX.Equals(getTileY))
                     {
-                        patched[x - 1] = new CodeInstruction(patched[x - 1].opcode, (sbyte)20); //replace 10 with 20
+                        patched[x - 1] = new CodeInstruction(patched[x - 1].opcode, (sbyte)18);
+                    }
+                    // Y coordinate
+                    else if (patched[x].opcode == OpCodes.Bne_Un
+                        && patched[x - 1].operand is sbyte numberY && numberY == 24
+                        && patched[x - 3].operand is MethodInfo methodY && methodY.Equals(getTileY))
+                    {
+                        patched[x - 1] = new CodeInstruction(patched[x - 1].opcode, (sbyte)27);
                     }
                 }
 

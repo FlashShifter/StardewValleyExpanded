@@ -1,0 +1,2340 @@
+{
+    "Changes": [
+        //Castle Village Outpost vendor patches (14 days out of a season)
+        {
+            //Isaac Shop
+            "Action": "EditMap",
+            "Target": "Maps/Custom_CastleVillageOutpost",
+            "FromFile": "Assets/Maps/MapPatches/CastleVillage_IsaacShop.tbin",
+            "ToArea": {
+                "X": 30,
+                "Y": 27,
+                "Width": 1,
+                "Height": 2
+            },
+            "When": {
+                "Day": "1, 8, 12, 19, 24",
+                "HasSeenEvent |contains=908079": true
+            },
+            "Patchmode": "Overlay"
+        },
+        {
+            //Alesia Shop
+            "Action": "EditMap",
+            "Target": "Maps/Custom_CastleVillageOutpost",
+            "FromFile": "Assets/Maps/MapPatches/CastleVillage_AlesiaShop.tbin",
+            "ToArea": {
+                "X": 30,
+                "Y": 27,
+                "Width": 1,
+                "Height": 2
+            },
+            "When": {
+                "Day": "3, 4, 13, 21, 23, 25",
+                "HasSeenEvent |contains=908079": true
+            },
+            "Patchmode": "Overlay"
+        },
+        {
+            //Camilla Shop
+            "Action": "EditMap",
+            "Target": "Maps/Custom_CastleVillageOutpost",
+            "FromFile": "Assets/Maps/MapPatches/CastleVillage_CamillaShop.tbin",
+            "ToArea": {
+                "X": 30,
+                "Y": 27,
+                "Width": 1,
+                "Height": 2
+            },
+            "When": {
+                "Day": "7, 22, 28",
+                "HasSeenEvent |contains=908079": true
+            },
+            "Patchmode": "Overlay"
+        },
+        //*** UI changes when player is in Galdora ***
+		
+		{ //Galdoran Theme 1.6 Update 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 824,
+                "Width": 99,
+                "Height": 115
+            },
+            "ToArea": {
+                "X": 394,
+                "Y": 97,
+                "Width": 99,
+                "Height": 115
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 103,
+                "Y": 824,
+                "Width": 201,
+                "Height": 96
+            },
+            "ToArea": {
+                "X": 311,
+                "Y": 234,
+                "Width": 201,
+                "Height": 96
+            },
+        },
+		
+		{ //Galdoran menu tiles 1
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 128,
+                "Width": 244,
+                "Height": 232
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 12,
+                "Width": 244,
+                "Height": 232
+            },
+        },
+        { //Galdoran menu tiles 1
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 372,
+                "Width": 124,
+                "Height": 124
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 256,
+                "Width": 124,
+                "Height": 124
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Baby Chicken Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 384,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 257,
+                "Y": 246,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Purple Star Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 401,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 216,
+                "Y": 494,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        {
+            //Galdoran portrait background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 7,
+                "Y": 7,
+                "Width": 115,
+                "Height": 97
+            },
+            "ToArea": {
+                "X": 583,
+                "Y": 411,
+                "Width": 115,
+                "Height": 97
+            },
+        },
+        {
+            //Galdoran dialogue box X icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 11,
+                "Width": 119,
+                "Height": 12
+            },
+            "ToArea": {
+                "X": 290,
+                "Y": 342,
+                "Width": 119,
+                "Height": 12
+            },
+        },
+        {
+            //Galdoran menu X icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 128,
+                "Y": 115,
+                "Width": 12,
+                "Height": 12
+            },
+            "ToArea": {
+                "X": 337,
+                "Y": 494,
+                "Width": 12,
+                "Height": 12
+            },
+        },
+        {
+            //Galdora dialogue box background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 29,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 306,
+                "Y": 320,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        {
+            //Galdoran dialogue box border
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 146,
+                "Y": 27,
+                "Width": 42,
+                "Height": 27
+            },
+            "ToArea": {
+                "X": 261,
+                "Y": 311,
+                "Width": 42,
+                "Height": 27
+            },
+        },
+        {
+            //Galdoran dialogue box continue Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 14,
+                "Width": 53,
+                "Height": 10
+            },
+            "ToArea": {
+                "X": 232,
+                "Y": 346,
+                "Width": 53,
+                "Height": 10
+            },
+        },
+        { //Galdoran watch
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 194,
+                "Y": 27,
+                "Width": 72,
+                "Height": 57
+            },
+            "ToArea": {
+                "X": 333,
+                "Y": 432,
+                "Width": 72,
+                "Height": 57
+            },
+        },
+        { //Galdoran watch hand
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 180,
+                "Y": 55,
+                "Width": 7,
+                "Height": 19
+            },
+            "ToArea": {
+                "X": 324,
+                "Y": 477,
+                "Width": 7,
+                "Height": 19
+            },
+        },
+        { //Galdoran shop border
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 156,
+                "Y": 55,
+                "Width": 18,
+                "Height": 18
+            },
+            "ToArea": {
+                "X": 384,
+                "Y": 373,
+                "Width": 18,
+                "Height": 18
+            },
+        },
+        { //Galdoran shop background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 138,
+                "Y": 57,
+                "Width": 15,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 384,
+                "Y": 396,
+                "Width": 15,
+                "Height": 15
+            },
+        },
+        { //Galdoran health and stamina bar
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 272,
+                "Y": 28,
+                "Width": 24,
+                "Height": 56
+            },
+            "ToArea": {
+                "X": 256,
+                "Y": 408,
+                "Width": 24,
+                "Height": 56
+            },
+        },
+        { //Galdoran horizontal arrows and ! sign
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 217,
+                "Y": 87,
+                "Width": 42,
+                "Height": 14
+            },
+            "ToArea": {
+                "X": 352,
+                "Y": 493,
+                "Width": 42,
+                "Height": 14
+            },
+        },
+        { //Galdoran vertical arrows, slider, and buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 269,
+                "Y": 88,
+                "Width": 27,
+                "Height": 45
+            },
+            "ToArea": {
+                "X": 420,
+                "Y": 439,
+                "Width": 27,
+                "Height": 45
+            },
+        },
+        { //Galdoran misc. 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 126,
+                "Y": 56,
+                "Width": 9,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 403,
+                "Y": 373,
+                "Width": 9,
+                "Height": 16
+            },
+        },
+        { //Galdoran misc. 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 126,
+                "Y": 76,
+                "Width": 14,
+                "Height": 5
+            },
+            "ToArea": {
+                "X": 297,
+                "Y": 420,
+                "Width": 14,
+                "Height": 5
+            },
+        },
+        { //Galdoran set button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 84,
+                "Width": 21,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 294,
+                "Y": 428,
+                "Width": 21,
+                "Height": 11
+            },
+        },
+        { //Galdoran picked up basic object icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 155,
+                "Y": 79,
+                "Width": 36,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 293,
+                "Y": 360,
+                "Width": 36,
+                "Height": 24
+            },
+        },
+        { //Galdoran picked up rare object icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 155,
+                "Y": 104,
+                "Width": 26,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 163,
+                "Y": 399,
+                "Width": 26,
+                "Height": 24
+            },
+        },
+        { //Galdoran pause menu section icons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 131,
+                "Y": 367,
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 368,
+                "Width": 128,
+                "Height": 32
+            },
+        },
+        { //Galdoran + and - buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 197,
+                "Y": 91,
+                "Width": 14,
+                "Height": 8
+            },
+            "ToArea": {
+                "X": 177,
+                "Y": 345,
+                "Width": 14,
+                "Height": 8
+            },
+        },
+        { //Galdoran wallet icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 185,
+                "Y": 108,
+                "Width": 13,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 256,
+                "Y": 267,
+                "Width": 13,
+                "Height": 16
+            },
+        },
+        { //Galdoran collection buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 131,
+                "Y": 402,
+                "Width": 64,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 640,
+                "Y": 64,
+                "Width": 64,
+                "Height": 32
+            },
+        },
+        { //Galdoran pointers
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 133,
+                "Y": 437,
+                "Width": 126,
+                "Height": 27
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 126,
+                "Height": 27
+            },
+        },
+        { //Galdoran inventory sort button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 127,
+                "Y": 98,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 162,
+                "Y": 440,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran exhausted icon and event skip button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 201,
+                "Y": 107,
+                "Width": 36,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 191,
+                "Y": 406,
+                "Width": 36,
+                "Height": 15
+            },
+        },
+        { //Galdoran OK button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 140,
+                "Width": 64,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 128,
+                "Y": 256,
+                "Width": 64,
+                "Height": 64
+            },
+        },
+        { //Galdoran cancel button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 204,
+                "Width": 64,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 256,
+                "Width": 64,
+                "Height": 64
+            },
+        },
+        { //Galdoran ? icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 0,
+                "Width": 42,
+                "Height": 13
+            },
+            "ToArea": {
+                "X": 330,
+                "Y": 357,
+                "Width": 42,
+                "Height": 13
+            },
+        },
+        { //Galdoran camera button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors2",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 244,
+                "Y": 107,
+                "Width": 18,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 72,
+                "Y": 32,
+                "Width": 18,
+                "Height": 15
+            },
+        },
+        { //Galdoran season icons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 132,
+                "Y": 466,
+                "Width": 12,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 406,
+                "Y": 441,
+                "Width": 12,
+                "Height": 32
+            },
+        },
+        { //Galdoran weather/event icons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 148,
+                "Y": 466,
+                "Width": 96,
+                "Height": 8
+            },
+            "ToArea": {
+                "X": 317,
+                "Y": 421,
+                "Width": 96,
+                "Height": 8
+            },
+        },
+        { //Galdoran big right arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 276,
+                "Width": 44,
+                "Height": 40
+            },
+            "ToArea": {
+                "X": 12,
+                "Y": 204,
+                "Width": 44,
+                "Height": 40
+            },
+        },
+        { //Galdoran big left arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 262,
+                "Y": 322,
+                "Width": 44,
+                "Height": 40
+            },
+            "ToArea": {
+                "X": 8,
+                "Y": 268,
+                "Width": 44,
+                "Height": 40
+            },
+        },
+        { //Galdoran big down arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 368,
+                "Width": 40,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 12,
+                "Y": 76,
+                "Width": 40,
+                "Height": 44
+            },
+        },
+        { //Galdoran big up arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 418,
+                "Width": 40,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 76,
+                "Y": 72,
+                "Width": 40,
+                "Height": 44
+            },
+        },
+        { //Galdoran chest color picker
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 203,
+                "Y": 391,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 119,
+                "Y": 469,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran chest sort button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 221,
+                "Y": 391,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 103,
+                "Y": 469,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran player graphic (day)
+            "Action": "EditImage",
+            "Target": "LooseSprites/daybg",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 19,
+                "Y": 508,
+                "Width": 128,
+                "Height": 192
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 128,
+                "Height": 192
+            },
+        },
+        { //Galdoran player graphic (night)
+            "Action": "EditImage",
+            "Target": "LooseSprites/nightbg",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 160,
+                "Y": 508,
+                "Width": 128,
+                "Height": 192
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 128,
+                "Height": 192
+            },
+        },
+        { //Galdoran level up borders [1]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 702,
+                "Width": 256,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 704,
+                "Width": 256,
+                "Height": 64
+            },
+        },
+        { //Galdoran level up borders [2]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 776,
+                "Width": 64,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 576,
+                "Width": 64,
+                "Height": 44
+            },
+        },
+        { //Galdoran level up borders [3]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 75,
+                "Y": 766,
+                "Width": 128,
+                "Height": 54
+            },
+            "ToArea": {
+                "X": 64,
+                "Y": 960,
+                "Width": 128,
+                "Height": 54
+            },
+        },
+        { //Galdoran level up borders [4]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 259,
+                "Y": 707,
+                "Width": 64,
+                "Height": 108
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 916,
+                "Width": 64,
+                "Height": 108
+            },
+        },
+        { //Galdoran Relationship Icon [1]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 148,
+                "Y": 476,
+                "Width": 44,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 532,
+                "Width": 44,
+                "Height": 24
+            },
+        },
+        { //Galdoran Relationship Icon [2]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 193,
+                "Y": 476,
+                "Width": 44,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 554,
+                "Width": 44,
+                "Height": 24
+            },
+        },
+        { //Galdoran Relationship Icon [3]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 238,
+                "Y": 476,
+                "Width": 44,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 576,
+                "Width": 44,
+                "Height": 11
+            },
+        },
+        { //Galdoran Relationship Icon [4]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": false,
+                "LocationName": "Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid"
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 238,
+                "Y": 487,
+                "Width": 11,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 269,
+                "Y": 495,
+                "Width": 11,
+                "Height": 11
+            },
+        },
+        //***Galdoran UI configuration**
+        { //Galdoran menu tiles 1
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 128,
+                "Width": 244,
+                "Height": 232
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 12,
+                "Width": 244,
+                "Height": 232
+            },
+        },
+        { //Galdoran menu tiles 1
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 372,
+                "Width": 124,
+                "Height": 124
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 256,
+                "Width": 124,
+                "Height": 124
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Baby Chicken Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": true,
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 384,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 257,
+                "Y": 246,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Purple Star Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "DisableGaldoranTheme": true,
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 401,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 216,
+                "Y": 494,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        {
+            //Galdoran portrait background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 7,
+                "Y": 7,
+                "Width": 115,
+                "Height": 97
+            },
+            "ToArea": {
+                "X": 583,
+                "Y": 411,
+                "Width": 115,
+                "Height": 97
+            },
+        },
+        {
+            //Galdoran dialogue box X icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 11,
+                "Width": 119,
+                "Height": 12
+            },
+            "ToArea": {
+                "X": 290,
+                "Y": 342,
+                "Width": 119,
+                "Height": 12
+            },
+        },
+        {
+            //Galdoran menu X icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 128,
+                "Y": 115,
+                "Width": 12,
+                "Height": 12
+            },
+            "ToArea": {
+                "X": 337,
+                "Y": 494,
+                "Width": 12,
+                "Height": 12
+            },
+        },
+        {
+            //Galdora dialogue box background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 29,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 306,
+                "Y": 320,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        {
+            //Galdoran dialogue box border
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 146,
+                "Y": 27,
+                "Width": 42,
+                "Height": 27
+            },
+            "ToArea": {
+                "X": 261,
+                "Y": 311,
+                "Width": 42,
+                "Height": 27
+            },
+        },
+        {
+            //Galdoran dialogue box continue Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 14,
+                "Width": 53,
+                "Height": 10
+            },
+            "ToArea": {
+                "X": 232,
+                "Y": 346,
+                "Width": 53,
+                "Height": 10
+            },
+        },
+        { //Galdoran watch
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 194,
+                "Y": 27,
+                "Width": 72,
+                "Height": 57
+            },
+            "ToArea": {
+                "X": 333,
+                "Y": 432,
+                "Width": 72,
+                "Height": 57
+            },
+        },
+        { //Galdoran watch hand
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 180,
+                "Y": 55,
+                "Width": 7,
+                "Height": 19
+            },
+            "ToArea": {
+                "X": 324,
+                "Y": 477,
+                "Width": 7,
+                "Height": 19
+            },
+        },
+        { //Galdoran shop border
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 156,
+                "Y": 55,
+                "Width": 18,
+                "Height": 18
+            },
+            "ToArea": {
+                "X": 384,
+                "Y": 373,
+                "Width": 18,
+                "Height": 18
+            },
+        },
+        { //Galdoran shop background
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 138,
+                "Y": 57,
+                "Width": 15,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 384,
+                "Y": 396,
+                "Width": 15,
+                "Height": 15
+            },
+        },
+        { //Galdoran health and stamina bar
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 272,
+                "Y": 28,
+                "Width": 24,
+                "Height": 56
+            },
+            "ToArea": {
+                "X": 256,
+                "Y": 408,
+                "Width": 24,
+                "Height": 56
+            },
+        },
+        { //Galdoran horizontal arrows and ! sign
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 217,
+                "Y": 87,
+                "Width": 42,
+                "Height": 14
+            },
+            "ToArea": {
+                "X": 352,
+                "Y": 493,
+                "Width": 42,
+                "Height": 14
+            },
+        },
+        { //Galdoran vertical arrows, slider, and buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 269,
+                "Y": 88,
+                "Width": 27,
+                "Height": 45
+            },
+            "ToArea": {
+                "X": 420,
+                "Y": 439,
+                "Width": 27,
+                "Height": 45
+            },
+        },
+        { //Galdoran misc. 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 126,
+                "Y": 56,
+                "Width": 9,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 403,
+                "Y": 373,
+                "Width": 9,
+                "Height": 16
+            },
+        },
+        { //Galdoran misc. 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 126,
+                "Y": 76,
+                "Width": 14,
+                "Height": 5
+            },
+            "ToArea": {
+                "X": 297,
+                "Y": 420,
+                "Width": 14,
+                "Height": 5
+            },
+        },
+        { //Galdoran set button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 125,
+                "Y": 84,
+                "Width": 21,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 294,
+                "Y": 428,
+                "Width": 21,
+                "Height": 11
+            },
+        },
+        { //Galdoran picked up basic object icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 155,
+                "Y": 79,
+                "Width": 36,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 293,
+                "Y": 360,
+                "Width": 36,
+                "Height": 24
+            },
+        },
+        { //Galdoran picked up rare object icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 155,
+                "Y": 104,
+                "Width": 26,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 163,
+                "Y": 399,
+                "Width": 26,
+                "Height": 24
+            },
+        },
+        { //Galdoran pause menu section icons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 131,
+                "Y": 367,
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 368,
+                "Width": 128,
+                "Height": 32
+            },
+        },
+        { //Galdoran + and - buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 197,
+                "Y": 91,
+                "Width": 14,
+                "Height": 8
+            },
+            "ToArea": {
+                "X": 177,
+                "Y": 345,
+                "Width": 14,
+                "Height": 8
+            },
+        },
+        { //Galdoran wallet icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 185,
+                "Y": 108,
+                "Width": 13,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 256,
+                "Y": 267,
+                "Width": 13,
+                "Height": 16
+            },
+        },
+        { //Galdoran collection buttons
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 131,
+                "Y": 402,
+                "Width": 64,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 640,
+                "Y": 64,
+                "Width": 64,
+                "Height": 32
+            },
+        },
+        { //Galdoran pointers
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 133,
+                "Y": 437,
+                "Width": 126,
+                "Height": 27
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 126,
+                "Height": 27
+            },
+        },
+        { //Galdoran inventory sort button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 127,
+                "Y": 98,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 162,
+                "Y": 440,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran exhausted icon and event skip button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 201,
+                "Y": 107,
+                "Width": 36,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 191,
+                "Y": 406,
+                "Width": 36,
+                "Height": 15
+            },
+        },
+        { //Galdoran OK button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 140,
+                "Width": 64,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 128,
+                "Y": 256,
+                "Width": 64,
+                "Height": 64
+            },
+        },
+        { //Galdoran cancel button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 204,
+                "Width": 64,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 256,
+                "Width": 64,
+                "Height": 64
+            },
+        },
+        { //Galdoran ? icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 246,
+                "Y": 0,
+                "Width": 42,
+                "Height": 13
+            },
+            "ToArea": {
+                "X": 330,
+                "Y": 357,
+                "Width": 42,
+                "Height": 13
+            },
+        },
+        { //Galdoran camera button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors2",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 244,
+                "Y": 107,
+                "Width": 18,
+                "Height": 15
+            },
+            "ToArea": {
+                "X": 72,
+                "Y": 32,
+                "Width": 18,
+                "Height": 15
+            },
+        },
+        { //Galdoran big right arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 276,
+                "Width": 44,
+                "Height": 40
+            },
+            "ToArea": {
+                "X": 12,
+                "Y": 204,
+                "Width": 44,
+                "Height": 40
+            },
+        },
+        { //Galdoran big left arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 262,
+                "Y": 322,
+                "Width": 44,
+                "Height": 40
+            },
+            "ToArea": {
+                "X": 8,
+                "Y": 268,
+                "Width": 44,
+                "Height": 40
+            },
+        },
+        { //Galdoran big down arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 368,
+                "Width": 40,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 12,
+                "Y": 76,
+                "Width": 40,
+                "Height": 44
+            },
+        },
+        { //Galdoran big up arrow
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 266,
+                "Y": 418,
+                "Width": 40,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 76,
+                "Y": 72,
+                "Width": 40,
+                "Height": 44
+            },
+        },
+        { //Galdoran chest color picker button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 203,
+                "Y": 391,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 119,
+                "Y": 469,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran chest sort button
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 221,
+                "Y": 391,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 103,
+                "Y": 469,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+        { //Galdoran level up borders [1]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 702,
+                "Width": 256,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 704,
+                "Width": 256,
+                "Height": 64
+            },
+        },
+        { //Galdoran level up borders [2]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 776,
+                "Width": 64,
+                "Height": 44
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 576,
+                "Width": 64,
+                "Height": 44
+            },
+        },
+        { //Galdoran level up borders [3]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 75,
+                "Y": 766,
+                "Width": 128,
+                "Height": 54
+            },
+            "ToArea": {
+                "X": 64,
+                "Y": 960,
+                "Width": 128,
+                "Height": 54
+            },
+        },
+        { //Galdoran level up borders [4]
+            "Action": "EditImage",
+            "Target": "Maps/MenuTiles",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 259,
+                "Y": 707,
+                "Width": 64,
+                "Height": 108
+            },
+            "ToArea": {
+                "X": 192,
+                "Y": 916,
+                "Width": 64,
+                "Height": 108
+            },
+        },
+        { //Galdoran Relationship Icon [1]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 148,
+                "Y": 476,
+                "Width": 44,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 532,
+                "Width": 44,
+                "Height": 24
+            },
+        },
+        { //Galdoran Relationship Icon [2]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 193,
+                "Y": 476,
+                "Width": 44,
+                "Height": 24
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 554,
+                "Width": 44,
+                "Height": 24
+            },
+        },
+        { //Galdoran Relationship Icon [3]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 238,
+                "Y": 476,
+                "Width": 44,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 140,
+                "Y": 576,
+                "Width": 44,
+                "Height": 11
+            },
+        },
+        { //Galdoran Relationship Icon [4]
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 238,
+                "Y": 487,
+                "Width": 11,
+                "Height": 11
+            },
+            "ToArea": {
+                "X": 269,
+                "Y": 495,
+                "Width": 11,
+                "Height": 11
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 1
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 0,
+                "Y": 824,
+                "Width": 99,
+                "Height": 115
+            },
+            "ToArea": {
+                "X": 394,
+                "Y": 97,
+                "Width": 99,
+                "Height": 115
+            },
+        },
+		
+		{ //Galdoran Theme 1.6 Update 2
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 103,
+                "Y": 824,
+                "Width": 201,
+                "Height": 96
+            },
+            "ToArea": {
+                "X": 311,
+                "Y": 234,
+                "Width": 201,
+                "Height": 96
+            },
+        },
+    ]
+}

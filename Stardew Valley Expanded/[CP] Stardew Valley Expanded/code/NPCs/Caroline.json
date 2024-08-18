@@ -1,0 +1,106 @@
+{
+     "Changes": [
+          
+    {
+     "Action": "EditData",
+     "Target": "Data/NPCGiftTastes",
+     "LogName": "Gift tastes: Caroline",
+     "TextOperations": [
+       /*Dislike*/
+       {
+         "Operation": "Append",
+         "Target": [
+           "Fields",
+           "Caroline",
+           5
+         ],
+         "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+         "Delimiter": " "
+       }
+       /*Neutral*/,
+       {
+         "Operation": "Append",
+         "Target": [
+           "Fields",
+           "Caroline",
+           9
+         ],
+         "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+         "Delimiter": " "
+       }
+     ]
+   },
+          { //CAROLINE SCHEDULE EDITS
+               "Action": "EditData",
+               "Target": "characters/schedules/Caroline",
+               "When": {
+                    "HasSeenEvent |contains=5553210": false
+               },
+               "Entries": {
+                    "spring": "800 SeedShop 37 6 3/1000 SeedShop 21 5 2 caroline_read/1200 SeedShop 15 23 0/1330 Town 23 71 2/1600 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+                    "Wed": "700 SeedShop 38 5 0/830 SeedShop 21 5 2 caroline_read/1100 SeedShop 21 5 0/1200 Town 97 104 0/1400 Town 103 102 1/1430 Town 101 101 3/1500 Town 104 100 2/1530 Town 96 65 1/1900 SeedShop 37 5 0/2130 SeedShop 25 4 1 caroline_sleep",
+                    "Fri": "800 SeedShop 37 6 3/1000 SeedShop 21 5 2 caroline_read/1200 ArchaeologyHouse 14 4 2 caroline_read \"Strings\\schedules\\Caroline:Fri.000\"/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+                    "Wed": "800 SeedShop 37 6 3/1000 SeedShop 21 5 2 caroline_read/1200 Town 23 27 1/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+                    "winter_3": "800 SeedShop 37 6 3/1200 Town 22 26 1/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+                    "winter_10": "800 SeedShop 37 6 3/1200 Town 22 26 1/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+               },
+          },
+          { //CAROLINE SCHEDULE - Pierre
+               "Action": "EditData",
+               "Target": "characters/schedules/Caroline",
+               "When": {
+                    "Weather": "Sun"
+               },
+               "Entries": {
+                    "14": "800 SeedShop 37 6 3/1000 SeedShop 22 5 3/1300 SeedShop 25 15 0/1400 SeedShop 38 5 2/1700 SeedShop 22 15 3/1740 Town 25 30 0/2030 SeedShop 25 4 1 caroline_sleep",
+                    "28": "800 SeedShop 37 6 3/1000 SeedShop 22 5 3/1300 SeedShop 25 15 0/1400 SeedShop 38 5 2/1700 SeedShop 22 15 3/1740 Town 25 30 0/2030 SeedShop 25 4 1 caroline_sleep",
+               },
+          },
+          { //CAROLINE JOJA TAKEOVER SCHEDULE EDITS (works part-time job in the city. Returns late at night)
+               "Action": "EditData",
+               "Target": "characters/schedules/Caroline",
+               "When": {
+                    "HasSeenEvent": "5553210"
+               },
+               "Entries": {
+                    "rain": "800 BusStop 12 8 0/940 Custom_DayEnd_WarpRoom 2 2 0/2130 BusStop 12 8 2/2150 SeedShop 25 4 1 caroline_sleep",
+                    "Wed": "800 BusStop 12 8 0/940 Custom_DayEnd_WarpRoom 2 2 0/2130 BusStop 12 8 2/2150 SeedShop 25 4 1 caroline_sleep",
+                    "Sat": "800 BusStop 12 8 0/940 Custom_DayEnd_WarpRoom 2 2 0/2130 BusStop 12 8 2/2150 SeedShop 25 4 1 caroline_sleep",
+                    "Sun": "800 BusStop 12 8 0/940 Custom_DayEnd_WarpRoom 2 2 0/2130 BusStop 12 8 2/2150 SeedShop 25 4 1 caroline_sleep",
+                    "spring": "800 BusStop 12 8 0/940 Custom_DayEnd_WarpRoom 2 2 0/2130 BusStop 12 8 2/2150 SeedShop 25 4 1 caroline_sleep",
+               },
+          },
+          { //CAROLINE JOJA DIALOGUE
+               "Action": "EditData",
+               "Target": "Characters/Dialogue/Caroline",
+               "When": {
+                    "HasSeenEvent": "5553213"
+               },
+               "Entries": {
+                    "BusStop_12_8": "{{i18n:Caroline.Dialogue.01}}",
+                    "Sun": "{{i18n:Caroline.Dialogue.02}}",
+                    "fall_Tue": "{{i18n:Caroline.Dialogue.03}}",
+                    "winter_Sat": "{{i18n:Caroline.Dialogue.04}}",
+                    "summer_Wed": "{{i18n:Caroline.Dialogue.05}}",
+                    "Custom_DayEnd_WarpRoom_2_2": "{{i18n:Caroline.Dialogue.06}}",
+               },
+          },
+          { //CAROLINE DIALOGUE
+               "Action": "EditData",
+               "Target": "Characters/Dialogue/Caroline",
+               "Entries": {
+                    "claireAerobics": "{{i18n:Caroline.Dialogue.07}}",
+                    "Town_97_104": "{{i18n:Caroline.Dialogue.08}}",
+                    "Town_101_101": "{{i18n:Caroline.Dialogue.08}}",
+                    "Town_25_30": "{{i18n:Caroline.Dialogue.09}}",
+               },
+          },
+          { //Caroline 6 hrt event fix
+               "Action": "EditData",
+               "Target": "data/events/SeedShop",
+               "Entries": {
+                    "17/f Caroline 1500/p Caroline/p Abigail": "50s/35 9/farmer 31 13 0 Abigail 34 9 1 Caroline 35 9 3/skippable/move farmer 0 -1 0/pause 500/faceDirection farmer 0/speak Abigail \"{{i18n:Caroline.Event.00}}\"/pause 500/speak Caroline \"{{i18n:Caroline.Event.01}}\"/emote Abigail 12/speak Abigail \"{{i18n:Caroline.Event.02}}\"/faceDirection Caroline 1/pause 1500/faceDirection Caroline 3/speak Caroline \"{{i18n:Caroline.Event.03}}\"/pause 500/faceDirection farmer 2/playSound woodyStep/faceDirection Abigail 2 true/faceDirection Caroline 2/speak Abigail \"{{i18n:Caroline.Event.04}}\"/faceDirection farmer 0/speed farmer 4/move farmer 0 1 3/speed farmer 4/move farmer -2 0 2 true/move Abigail -3 0 2 false/emote Abigail 8/speak Abigail \"{{i18n:Caroline.Event.05}}\"/emote Caroline 40/pause 500/end dialogue Abigail \"{{i18n:Caroline.Event.06}}\"",
+               },
+          },
+     ]
+}

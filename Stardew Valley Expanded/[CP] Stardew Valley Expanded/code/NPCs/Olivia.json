@@ -1,0 +1,702 @@
+{
+  "Changes": [
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Olivia": {
+          "DisplayName": "{{i18n:Name.Olivia}}",
+          "BirthSeason": "Spring",
+          "BirthDay": 15,
+          "HomeRegion": "Town",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "SpouseRoom": {
+            "MapAsset": "Custom_OliviasRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": "Olivia_Spouse_Area",
+            "MapSourceRect": {
+              "X": 1,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                16,
+                500
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                19,
+                1200
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                16,
+                5400
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                19,
+                1100
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                16,
+                7000
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                19,
+                1200
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                16,
+                1700
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                19,
+                1300
+              ],
+              [
+                17,
+                100
+              ],
+              [
+                18,
+                100
+              ],
+              [
+                16,
+                6000
+              ],
+              [
+                12,
+                800
+              ],
+              [
+                8,
+                3600
+              ],
+              [
+                12,
+                200
+              ],
+              [
+                0,
+                19500
+              ],
+              [
+                12,
+                200
+              ],
+              [
+                8,
+                1900
+              ],
+              [
+                12,
+                800
+              ],
+              [
+                16,
+                700
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_JenkinsHouse",
+              "Condition": null,
+              "Location": "Custom_JenkinsHouse",
+              "Tile": {
+                "X": 18,
+                "Y": 5
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Olivia_Winter",
+              "Sprite": "Characters/Olivia_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Olivia's gift tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Olivia": "{{i18n:Olivia.Gifts.Loved}}/348 124 125 220 221 FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Olivia.Gifts.Liked}}/336 432 276 608 421 FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish/{{i18n:Olivia.Gifts.Disliked}}/18 16 20 22 24 408 80 416 414 412 296 398 410 152 396 397 399 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink/{{i18n:Olivia.Gifts.Hated}}/330 284 149 151 459 346 304 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Olivia.Gifts.Neutral}}/446 402 418/"
+      }
+    },
+    {
+      //Olivia's animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Olivia_Wine1": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 18 17 16 16 16 16 16/16",
+        "Olivia_Wine2": "20/20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/20",
+        "Olivia_Wash": "24/24 24 25 25/24",
+        "Olivia_Yoga": "26/26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26/26",
+        "Olivia_Art": "32/32 32 32 33 33 33 34 34 34 35 35 35 34 34 34 33 33 33 33 33 33 33 33 33 34 34 35 35 35 35 35 35 35 35 35 35 34 34 34 33 33 34 34 35 35 34 34 33 33 33 34 34 34 35 35 35 34 34 33 32 32 33 33 34 34 34 34 33 33 32 32 32 33 33 34 34 34 35 35 34 34 33 33 32 32 32 33 33 33 32 32 33 33 32 32 33 33 33 33 33 33 33 33 33 34 34 35 35 34 34 33 33 32 32 33 33 33 34 34 35 35 34 34 34 34 34 34 34 34 34 33 33 32 32/32",
+        "Olivia_Sleep": "31/31/31"
+      }
+    },
+    {
+      //Olivia's sleep animation - married to character
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "When": {
+        "Spouse": "Olivia"
+      },
+      "Entries": {
+        "olivia_sleep": "31/31/31"
+      }
+    },
+    //Spouse Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_OliviasRoom",
+      "FromFile": "Assets/Maps/SpouseRooms/OliviasRoom.tbin",
+    },
+    //Spouse Patio
+    {
+      "Action": "Load",
+      "Target": "Maps/Olivia_Spouse_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Olivia_Spouse_Area.tbin"
+    },
+    {
+      //Olivia's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Olivia",
+      "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia.png"
+    },
+    {
+      //Olivia's Sprites
+      "Action": "Load",
+      "Target": "Characters/Olivia",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia.png"
+    },
+    {
+      //Olivia's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Olivia_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia_Winter.png"
+    },
+    {
+      //Olivia's Sprites
+      "Action": "Load",
+      "Target": "Characters/Olivia_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia_Winter.png"
+    },
+    {
+      //Olivia's beach portraits
+      "Action": "Load",
+      "Target": "Portraits/Olivia_Beach",
+      "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia_Beach.png"
+    },
+    {
+      //Olivia's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Olivia_Beach",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia_Beach.png"
+    },
+    {
+      //Olivia's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Olivia",
+      "FromFile": "assets/CharacterFiles/Schedules/Olivia/Schedule.json"
+    },
+    {
+      //Olivia Joja schedule edit
+      "Action": "EditData",
+      "Target": "characters/schedules/Olivia",
+      "When": {
+        "HasSeenEvent": "5553210"
+      },
+      "Entries": {
+        "Mon": "600 Custom_JenkinsHouse 19 5 1 Olivia_Sleep/610 Custom_JenkinsHouse 5 8 0/700 Custom_JenkinsHouse 34 37 0 Olivia_Wash/1320 Town 24 72 3/1600 Town 59 47 2/1900 Custom_JenkinsHouse 16 12 0 Olivia_Art/2200 Custom_JenkinsHouse 19 5 1 Olivia_Sleep",
+        "Thu": "600 Custom_JenkinsHouse 19 5 1 Olivia_Sleep/610 Custom_JenkinsHouse 5 8 0/700 Custom_JenkinsHouse 34 37 0 Olivia_Wash/1030 Custom_JenkinsHouse 16 12 0 Olivia_Art/1310 Town 24 72 3/1600 Town 59 47 2/1900 Custom_JenkinsHouse 16 12 0 Olivia_Art/2200 Custom_JenkinsHouse 19 5 1 Olivia_Sleep",
+        "marriage_Mon": "800 SeedShop 3 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1130 SeedShop 12 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1230 Town 24 72 3 \"Strings\\schedules\\Olivia:marriage.002\"/1600 Town 72 54 2 \"Strings\\schedules\\Olivia:marriage.003\"/2000 Bed"
+      }
+    },
+    {
+      //Olivia's Engagement Dialogue
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Olivia0": "{{i18n:Olivia.Engagement.1}}",
+        "Olivia1": "{{i18n:Olivia.Engagement.1}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "strings/StringsFromCSFiles",
+      "Entries": {
+        "Utility.cs.5367": "{{i18n:Utility.cs.5367.Olivia.Husband}}{0}{{i18n:Utility.of}}{1}{{i18n:Utility.CS.5367.Olivia}}",
+        "Utility.cs.5369": "{{i18n:Utility.cs.5369.Olivia.Wife}}{0}{{i18n:Utility.of}}{1}{{i18n:Utility.CS.5367.Olivia}}",
+        "Utility.cs.5371": "{{i18n:Utility.cs.5371.Olivia}}",
+        "Utility.cs.5377": "{{i18n:Utility.cs.5377.Olivia}}",
+      },
+      "When": {
+        "Relationship:Olivia": "Engaged"
+      },
+    },
+    //MOVIE THEATER
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Olivia": {
+          "Name": "Olivia",
+          "LovedTags": [
+            "Gourmet",
+            "Healthy"
+          ],
+          "LikedTags": [
+            "Jasmine Tea",
+            "popcorn"
+          ],
+          "DislikedTags": [
+            "Candy",
+            "Sweet",
+            "Salty"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Olivia": {
+          "NPCName": "Olivia",
+          "Reactions": [
+            {
+              "Tag": "romance",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "action",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "winter_movie_1", //romance movie
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.01}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.02}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.03}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "fall_movie_0", //horror movie
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.04}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.05}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.06}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "love",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.07}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "/shake Olivia 3000/pause 500/message \"{{i18n:Olivia.Movies.09}}\"",
+                  "Text": "{{i18n:Olivia.Movies.10}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.11}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "like",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.12}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.13}}",
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "dislike",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.14}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.15}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Olivia.Movies.16}}",
+                }
+              },
+              "ID": "reaction_6"
+            }
+          ]
+        }
+      }
+    },
+
+
+
+    {
+      //OLIVIA 2 HEART EVENT
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_JenkinsHouse",
+      "Entries": {
+        "4000001/f Olivia 500/k 2000003": "jaunty/-500 -500/farmer -300 -300 0 Victor 20 38 1 Olivia 22 38 3/pause 400/skippable/viewport 20 37 true/pause 1000/speak Olivia \"{{i18n:Olivia.2hearts.01}}\"/pause 500/speak Victor \"{{i18n:Olivia.2hearts.02}}\"/pause 800/speak Olivia \"{{i18n:Olivia.2hearts.03}}\"/pause 50/speak Victor \"{{i18n:Olivia.2hearts.04}}\"/speak Olivia \"{{i18n:Olivia.2hearts.05}}\"/pause 250/shake Victor 1000/pause 800/warp farmer 20 42/playSound doorClose/pause 200/move Victor 0 0 2/pause 250/move Olivia 0 0 2/emote farmer 8/move farmer 0 -2 0/pause 500/move Victor 0 0 1/pause 350/move Olivia 0 0 3/speak Victor \"{{i18n:Olivia.2hearts.06}}\"/pause 300/move Victor 0 1 2/pause 300/move Olivia 0 0 2/pause 250/move farmer -1 0 1/pause 300/move Victor 0 3 2/pause 150/move farmer 0 0 2/pause 150/warp Victor -500 -500/playSound doorClose/stopMusic/pause 850/emote Olivia 28/pause 300/move farmer 0 -2 1/move farmer 1 0 1/pause 300/move Olivia 0 0 3/pause 300/emote farmer 8/pause 500/speak Olivia \"{{i18n:Olivia.2hearts.07}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.2hearts.08}}\"/pause 600/move Olivia 0 0 1/pause 700/shake Olivia 800/pause 1250/speak Olivia \"{{i18n:Olivia.2hearts.09}}\"/pause 1000/move Olivia 0 0 3/pause 650/speak Olivia \"{{i18n:Olivia.2hearts.10}}\"/pause 300/globalFade/viewport -1000 -1000/pause 800/friendship Olivia 25/end dialogue Olivia \"{{i18n:Olivia.2hearts.11}}\"",
+      }
+    },
+    {
+      //OLIVIA 4 HEART EVENT
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "4000002/f Olivia 1000/f Jodi 250/f Caroline 250/w sunny/z winter/t 1200 1600": "springtown/-500 -500/farmer 29 89 0 Olivia 24 72 3 Jodi 22 72 1 Caroline 23 71 2 Penny 7 65 2 Lewis 31 67 1 Pierre 33 67 3 MarlonFay 33 103 2 Wizard 33 105 0 Gus 42 72 2 Abigail 47 88 0 Haley 16 90 3 Emily 14 90 1 Linus 104 104 2 Clint 97 77 0 Victor 40 16 0/pause 400/showFrame Penny 18/skippable/viewport 23 72 true/pause 1000/move farmer 0 -16 3 true/speak Jodi \"{{i18n:Olivia.4hearts.01}}\"/speak Caroline \"{{i18n:Olivia.4hearts.02}}\"/speak Olivia \"{{i18n:Olivia.4hearts.03}}\"/emote Jodi 8/move Olivia 0 0 2/pause 200/move Olivia 0 0 1/pause 350/move Caroline 0 0 1/pause 750/emote farmer 32/speak Caroline \"{{i18n:Olivia.4hearts.04}}\"/speak Jodi \"{{i18n:Olivia.4hearts.05}}\"/speak Olivia \"{{i18n:Olivia.4hearts.06}}\"/emote farmer 20/textAboveHead Pierre \"{{i18n:Olivia.4hearts.07}}\"/pause 200/move farmer -6 0 0 true/pause 2400/move Olivia 0 0 3/pause 300/move Caroline 0 0 2/pause 1250/speak Caroline \"{{i18n:Olivia.4hearts.08}}\"/speak Jodi \"{{i18n:Olivia.4hearts.09}}\"/emote farmer 32/pause 300/speak Olivia \"{{i18n:Olivia.4hearts.10}}\"/speak Caroline \"{{i18n:Olivia.4hearts.11}}\"/speak Jodi \"!!!$0\"/pause 200/textAboveHead Lewis \"{{i18n:Olivia.4hearts.12}}\"/pause 750/speak Olivia \"{{i18n:Olivia.4hearts.13}}\"/emote Jodi 16 true/pause 200/emote Caroline 16 true/pause 100/emote farmer 16 true/pause 750/speak Olivia \"{{i18n:Olivia.4hearts.14}}\"/pause 200/emote farmer 16/pause 600/question fork0 \"{{i18n:Olivia.4hearts.15}}\"/fork 4000002_MakesWine/pause 500/speak Olivia \"{{i18n:Olivia.4hearts.16}}\"/pause 200/emote farmer 32/emote Olivia 32/pause 500/speak Caroline \"{{i18n:Olivia.4hearts.17}}\"/speak Jodi \"{{i18n:Olivia.4hearts.18}}\"/pause 600/textAboveHead Pierre \"{{i18n:Olivia.4hearts.19}}\"/pause 600/speak Olivia \"{{i18n:Olivia.4hearts.20}}\"/pause 200/emote farmer 16 true/pause 300/emote Jodi 16/speak Caroline \"{{i18n:Olivia.4hearts.21}}\"/pause 400/speak Jodi \"...$2\"/pause 200/emote farmer 28/pause 700/speak Olivia \"{{i18n:Olivia.4hearts.22}}\"/pause 1650/speak Olivia \"{{i18n:Olivia.4hearts.23}}\"/pause 250/speak Caroline \"{{i18n:Olivia.4hearts.24}}\"/speak Jodi \"{{i18n:Olivia.4hearts.25}}\"/pause 400/emote farmer 32/pause 300/move farmer 8 0 1 true/pause 1500/globalFade/viewport -1000 -1000/pause 800/friendship Olivia 25/end dialogue Olivia \"{{i18n:Olivia.4hearts.26}}\"",
+        "4000002_MakesWine": "pause 500/speak Olivia \"{{i18n:Olivia.4hearts.MakesWine.01}}\"/pause 600/emote farmer 32/emote Olivia 32/pause 500/speak Caroline \"{{i18n:Olivia.4hearts.MakesWine.02}}\"/speak Jodi \"{{i18n:Olivia.4hearts.MakesWine.03}}\"/pause 600/speak Olivia \"{{i18n:Olivia.4hearts.MakesWine.04}}\"/pause 200/emote farmer 16 true/pause 300/emote Jodi 16/speak Caroline \"{{i18n:Olivia.4hearts.MakesWine.05}}\"/pause 400/speak Jodi \"{{i18n:Olivia.4hearts.MakesWine.06}}\"/pause 400/speak Olivia \"{{i18n:Olivia.4hearts.MakesWine.07}}\"/pause 250/speak Caroline \"{{i18n:Olivia.4hearts.MakesWine.08}}\"/speak Jodi \"{{i18n:Olivia.4hearts.MakesWine.09}}\"/pause 400/emote farmer 32/pause 300/move farmer 8 0 1 true/pause 900/globalFade/viewport -1000 -1000/pause 800/friendship Olivia 25/end dialogue Olivia \"{{i18n:Olivia.4hearts.MakesWine.10}}\"",
+        //This event has so many people in it. What are they all up to!?  <(O_O")>
+      }
+    },
+    { //OLIVIA 6 HEART EVENT
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_JenkinsHouse",
+      "Entries": {
+        "4000004/f Olivia 1500/w sunny": "none/-500 -500/farmer -300 -300 2 Olivia 10 6 2/animate Olivia false true 150 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/pause 100/changeLocation Custom_OliviaCellar/skippable/playMusic FlashShifter.StardewValleyExpandedCP_HaruhiViolinSolo/pause 300/viewport 9 6 true/pause 12000/warp farmer 13 5/playSound stairsdown/pause 400/move farmer 0 1 3/pause 750/stopAnimation Olivia/showFrame Olivia 0/pause 600/move Olivia 0 0 1/pause 500/emote Olivia 16/pause 500/move Olivia 1 0 0/pause 400/playSound openBox/stopMusic/shake Olivia 500/pause 1000/move Olivia 0 0 1/pause 300/speak Olivia \"{{i18n:Olivia.6hearts.01}}\"/pause 500/emote farmer 32/pause 1000/move Olivia 0 0 0/pause 1500/speak Olivia \"{{i18n:Olivia.6hearts.02}}\"/pause 800/speak Olivia \"{{i18n:Olivia.6hearts.03}}\"/pause 500/speak Olivia \"{{i18n:Olivia.6hearts.04}}\"/pause 800/shake Olivia 450/pause 850/speak Olivia \"{{i18n:Olivia.6hearts.05}}\"/pause 800/faceDirection Olivia 1 true/pause 800/speak Olivia \"{{i18n:Olivia.6hearts.06}}\"/pause 500/emote farmer 60/pause 400/move Olivia 0 0 0/pause 600/shake Olivia 1100/pause 300/move farmer -1 0 3 true/pause 1500/speak Olivia \"{{i18n:Olivia.6hearts.07}}\"/pause 900/speak Olivia \"{{i18n:Olivia.6hearts.08}}\"/pause 600/faceDirection Olivia 3 true/pause 350/move Olivia -5 0 0/pause 650/playSound wateringCan/shake Olivia 750/pause 250/move farmer -4 0 3/pause 1400/move Olivia 0 0 1/pause 500/speak Olivia \"{{i18n:Olivia.6hearts.09}}\"/pause 400/emote farmer 20/pause 800/move farmer -1 0 3/pause 600/move farmer 0 0 2/showFrame farmer 90/playSound pickUpItem/pause 1200/showFrame Olivia 20/pause 1600/speak Olivia \"{{i18n:Olivia.6hearts.10}}\"/pause 700/showFrame Olivia 21/pause 150/showFrame Olivia 22/pause 150/showFrame Olivia 23/pause 1250/showFrame Olivia 22/pause 150/showFrame Olivia 21/pause 150/showFrame Olivia 20/pause 1000/speak Olivia \"{{i18n:Olivia.6hearts.11}}\"/pause 800/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 750/speak Olivia \"{{i18n:Olivia.6hearts.12}}\"/pause 800/showFrame Olivia 21/pause 150/showFrame Olivia 22/pause 150/showFrame Olivia 23/pause 1500/showFrame Olivia 22/pause 150/showFrame Olivia 21/pause 150/showFrame Olivia 20/pause 1400/speak Olivia \"{{i18n:Olivia.6hearts.13}}\"/pause 750/showFrame farmer 91/pause 150/showFrame farmer 92/pause 150/showFrame farmer 93/pause 100/playSound gulp/pause 800/showFrame farmer 92/playSound gulp/pause 550/pause 150/showFrame farmer 91/pause 150/showFrame farmer 90/pause 850/showFrame farmer 0 true/pause 700/faceDirection farmer 3 true/pause 350/faceDirection farmer 0 true/pause 600/playSound stoneStep/pause 1000/faceDirection farmer 3 true/pause 500/speak Olivia \"{{i18n:Olivia.6hearts.14}}\"/pause 400/emote farmer 20/pause 600/faceDirection Olivia 1 true/pause 250/faceDirection Olivia 0 true/pause 600/playSound stoneStep/pause 900/faceDirection Olivia 1 true/pause 1000/speak Olivia \"{{i18n:Olivia.6hearts.15}}\"/pause 500/emote farmer 32/pause 1200/shake Olivia 500/pause 1000/faceDirection Olivia 0 true/pause 1000/speak Olivia \"{{i18n:Olivia.6hearts.16}}\"/pause 800/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 700/speak Olivia \"{{i18n:Olivia.6hearts.17}}\"/pause 800/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 350/move farmer 5 0 0/move farmer 0 -1 0/playSound stairsdown/warp farmer -500 -500/pause 1500/faceDirection Olivia 1 true/pause 850/move Olivia 5 0 0/pause 650/shake Olivia 500/playSound openBox/pause 200/playMusic FlashShifter.StardewValleyExpandedCP_HaruhiViolinSolo/pause 300/move Olivia -5 0 0/pause 500/shake Olivia 400/pause 600/move Olivia 0 0 2/pause 1000/showFrame Olivia 20/pause 1750/showFrame Olivia 21/pause 150/showFrame Olivia 22/pause 150/showFrame Olivia 23/pause 1700/showFrame Olivia 22/pause 150/showFrame Olivia 21/pause 150/showFrame Olivia 20/pause 3000/textAboveHead Olivia \"{{i18n:Olivia.6hearts.18}}\"/pause 2500/showFrame Olivia 21/pause 150/showFrame Olivia 22/pause 150/showFrame Olivia 23/pause 500/shake Olivia 800/pause 1500/showFrame Olivia 22/pause 150/showFrame Olivia 21/pause 150/showFrame Olivia 20/pause 1500/globalFade/viewport -1000 -1000/pause 3500/stopMusic/pause 500/mail OliviaCellar/friendship Olivia 50/end dialogue Olivia \"{{i18n:Olivia.6hearts.19}}\"",
+      }
+    },
+    {
+      //OLIVIA 8 HEART EVENT
+      "Action": "EditData",
+      "Target": "Data/Events/Saloon",
+      "Entries": {
+        "4000003/e 4000004/d Mon Tue Wed Thu Sun/f Olivia 2000/t 1700 2300/w sunny": "Saloon1/-500 -500/farmer 14 24 0 Olivia 20 18 3 Victor 42 18 3 Sophia 8 20 0 Pierre 16 20 1 Susan 12 20 0 Andy 3 22 3 Caroline 17 20 3 Jodi 18 20 0 Willy 17 22 2 Clint 19 23 3 Shane 24 18 2 Robin 22 22 1 Wizard 7 6 1 MarlonFay 8 6 3 Demetrius 23 22 3 Lewis 9 22 3 Marnie 8 22 1 Pam 7 18 1 Elliott 4 19 2 Leah 2 20 1 Gus 10 18 2 Emily 14 17 0 Harvey 10 20 0 Haley 32 18 1 Alex 33 18 0 Sam 42 21 3 Sebastian 36 21 1 Abigail 40 18 1 Maru 14 20 0/skippable/positionOffset Haley 0 -20/animate Elliott false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 19 19 18 18 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16/animate Lewis false true 100 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 22 23 23 23 23 23 22 22 22 23 23 23 23 23 23 23 23 23 23 23/animate Marnie false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 23 23 22 21/animate Andy false true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24/animate Robin false true 100 20 20 21 21 22 22/animate Demetrius false true 100 24 24 25 25 26 26/animate Shane false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/animate Sam true true 1000 34 4/animate Olivia false true 150 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 18 17 16 16 16 16 16 16/animate Victor false true 150 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 26 25 24 24 24 24 24 24 24 24/showFrame MarlonFay 12/pause 600/viewport 14 19 true/pause 150/playSound doorClose/skippable/pause 400/emote farmer 16/pause 500/move farmer 0 -3 0/pause 400/move Emily -1 0 0/pause 200/textAboveHead Maru \"{{i18n:Olivia.8hearts.01}}\"/pause 900/textAboveHead Haley \"{{i18n:Olivia.8hearts.02}}\"/shake Haley 1250/pause 600/move Emily 0 0 2/pause 900/textAboveHead Emily \"{{i18n:Olivia.8hearts.03}}\"/pause 500/move Emily 2 0 0/pause 400/textAboveHead Gus \"{{i18n:Olivia.8hearts.04}}\"/pause 800/shake Alex 1500/textAboveHead Alex \"{{i18n:Olivia.8hearts.05}}\"/pause 700/shake Haley 500/pause 400/emote farmer 40 true/pause 300/textAboveHead Harvey \"{{i18n:Olivia.8hearts.06}}\"/pause 1250/speak Olivia \"{{i18n:Olivia.8hearts.07}}\"/move farmer 0 0 1/pause 600/viewport move 1 0 5000 true/move farmer 6 0 0 true/pause 800/textAboveHead Victor \"{{i18n:Olivia.8hearts.08}}\"/pause 2300/move Emily -1 0 0 true/pause 250/textAboveHead Lewis \"{{i18n:Olivia.8hearts.09}}\"/pause 200/shake Lewis 1250/pause 200/stopAnimation Olivia/move Olivia 0 0 2 true/speak Olivia \"{{i18n:Olivia.8hearts.10}}\"/pause 400/textAboveHead Caroline \"{{i18n:Olivia.8hearts.11}}\"/shake Caroline 1000/pause 400/speak Olivia \"{{i18n:Olivia.8hearts.12}}\"/pause 200/move Emily 0 1 2/pause 300/textAboveHead Emily \"{{i18n:Olivia.8hearts.13}}\"/move farmer 0 -2 0/pause 500/speak Olivia \"{{i18n:Olivia.8hearts.14}}\"/pause 400/textAboveHead Pam \"{{i18n:Olivia.8hearts.15}}\"/shake Pam 750/pause 600/move Gus 0 0 3/emote Gus 8 true/pause 400/move farmer 0 0 0/speak Olivia \"{{i18n:Olivia.8hearts.16}}\"/pause 250/textAboveHead MarlonFay \"{{i18n:Olivia.8hearts.17}}\"/pause 300/move Gus -1 0 3 true/pause 250/textAboveHead Maru \"{{i18n:Olivia.8hearts.18}}\"/pause 250/speak Olivia \"{{i18n:Olivia.8hearts.19}}\"/pause 300/emote farmer 40 true/pause 250/move Harvey 1 0 0 true/pause 500/textAboveHead Alex \"{{i18n:Olivia.8hearts.20}}\"/shake Alex 1000/pause 200/speak Olivia \"{{i18n:Olivia.8hearts.21}}\"/pause 200/move Emily 4 0 1 true/pause 250/textAboveHead Gus \"{{i18n:Olivia.8hearts.22}}\"/pause 300/move Olivia 0 0 3 true/pause 400/move farmer 0 0 3/move Gus 2 0 0/move Gus 0 -1 0 true/speak Emily \"{{i18n:Olivia.8hearts.23}}\"/pause 300/textAboveHead Pierre \"{{i18n:Olivia.8hearts.24}}\"/shake Pierre 1000/pause 500/speak Emily \"{{i18n:Olivia.8hearts.25}}\"/move Gus 0 1 2/move Gus -2 0 3 true/speak Emily \"{{i18n:Olivia.8hearts.26}}\"/pause 250/textAboveHead Gus \"{{i18n:Olivia.8hearts.27}}\"/shake Haley 700/pause 300/speak Emily \"{{i18n:Olivia.8hearts.28}}\"/speed Emily 2/move Emily -4 0 3 true/pause 350/textAboveHead Marnie \"{{i18n:Olivia.8hearts.29}}\"/pause 500/textAboveHead Pam \"{{i18n:Olivia.8hearts.30}}\"/shake Pam 700/pause 350/move Olivia 0 0 2 true/pause 500/move Emily 0 -1 0/pause 250/move farmer 0 0 0/pause 300/speak Olivia \"{{i18n:Olivia.8hearts.31}}\"/pause 300/textAboveHead Caroline \"{{i18n:Olivia.8hearts.32}}\"/shake Caroline 1000/pause 500/textAboveHead Wizard \"{{i18n:Olivia.8hearts.33}}\"/pause 500/shake Emily 500/pause 400/textAboveHead Sebastian \"{{i18n:Olivia.8hearts.34}}\"/pause 400/move Emily 0 1 2/move Emily 4 0 1 true/pause 800/move Gus 1 0 2 true/pause 400/move farmer 0 0 3/pause 500/move Olivia 0 0 3/pause 500/speak Emily \"{{i18n:Olivia.8hearts.35}}\"/pause 400/emote farmer 32/pause 200/move Emily 0 -1 0/move Emily -4 0 0 true/pause 400/move Olivia 0 0 2 true/pause 500/textAboveHead Lewis \"{{i18n:Olivia.8hearts.36}}\"/shake Lewis 800/move farmer 0 0 0/pause 500/speak Olivia \"{{i18n:Olivia.8hearts.37}}\"/pause 500/globalFade/viewport -1000 -1000/friendship Olivia 50/stopMusic/pause 1000/end dialogue Olivia \"{{i18n:Olivia.8hearts.38}}\"",
+      }
+    },
+    {
+      //OLIVIA START ROMANCE
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_JenkinsHouse",
+      "Entries": {
+        "8982805/n OliviaDatingLetter": "playful/-500 -500/farmer 19 26 0 Olivia 15 12 0 Victor 7 27 2/pause 800/animate Victor false true 150 32 33 34 34 34 34 34 34 34 34 34 34 34 34 34 34 34 34/skippable/viewport 19 22 true/viewport move 0 -1 5000 true/move farmer 0 -8 0/pause 500/playSound stoneStep/pause 200/playSound stoneStep/emote Olivia 16 true/pause 300/playSound stoneStep/pause 500/move Olivia 0 1 1/move Olivia 4 0 2/move Olivia 0 3 2/pause 1200/doAction 19 17/pause 500/stopMusic/speak Olivia \"{{i18n:Olivia.Dating.01}}\"/pause 500/globalFade/viewport -1000 -1000/pause 100/playSound doorClose/pause 200/changeLocation SeedShop/pause 100/changeLocation Custom_JenkinsHouse/pause 100/warp farmer 20 9/warp Olivia 20 7/faceDirection farmer 0/pause 100/viewport 20 9 true/pause 1500/speak Olivia \"{{i18n:Olivia.Dating.02}}\"/pause 200/emote farmer 8/pause 800/speak Olivia \"{{i18n:Olivia.Dating.03}}\"/pause 500/faceDirection Olivia 1 true/pause 250/faceDirection Olivia 0 true/pause 400/shake Olivia 850/emote Olivia 28/pause 1500/faceDirection Olivia 1 true/pause 300/faceDirection Olivia 2 true/pause 800/speak Olivia \"{{i18n:Olivia.Dating.04}}\"/pause 500/emote farmer 60/pause 800/speak Olivia \"{{i18n:Olivia.Dating.05}}\"/pause 500/question fork0 \"{{i18n:Olivia.Dating.05A}}\"/pause 500/fork 8982805_Happy/pause 1000/faceDirection Olivia 0/pause 300/emote Olivia 28/pause 200/speak Olivia \"{{i18n:Olivia.Dating.06}}\"/pause 600/move farmer 0 4 2 true/pause 250/globalFade/viewport -1000 -1000/pause 1000/friendship Olivia -750/end dialogue Olivia \"{{i18n:Olivia.Dating.07}}\"",
+        "8982805_Happy": "pause 300/speak Olivia \"{{i18n:Olivia.Dating.Happy.01}}\"/pause 1200/emote Olivia 40/pause 400/move Olivia 0 1 2/pause 450/speak Olivia \"{{i18n:Olivia.Dating.Happy.02}}\"/pause 100/globalFade/viewport -1000 -1000/pause 1100/message \"{{i18n:Olivia.Dating.Happy.03}}\"/pause 1000/friendship Olivia 50/end dialogue Olivia \"{{i18n:Olivia.Dating.Happy.04}}\"",
+      }
+    },
+    //fake portrait for 10heart
+    {
+      "Action": "Load",
+      "Target": "Portraits/Marcello",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Marcello.png"
+    },
+    { //OLIVIA 10 HEART EVENT - House Party
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_JenkinsHouse",
+      "Entries": {
+        "8982806/n OliviaPartyLetter/t 1800 2200": "junimoKart/-500 -500/farmer -200 -200 0 Olivia 20 39 0 Andy 27 37 2 Susan 35 39 2 Gus 7 18 2 Sophia 23 18 3 Abigail 30 10 2 Victor 33 11 3 Sam 31 12 0 Sebastian 29 11 1 Lewis 22 38 3 Pierre 18 38 1 Caroline 15 18 1 Marnie 22 37 3 Jodi 17 18 3 Robin 18 25 2 Demetrius 18 27 0 Maru 6 38 1 Leah 8 38 3 Gunther 24 26 0 Shane 33 37 2 Emily 30 25 1 Sandy 32 25 3 Harvey 31 26 0 Haley 7 25 1 Alex 9 25 3 Clint 25 25 3 Willy 23 25 1 Elliott 29 38 2 Penny 15 31 0 Governor 20 36 2 Marcello 9 8 0/showFrame Abigail 23/showFrame Gunther 8/ambientLight 255 255 90/addObject 35 40 220/addObject 34 40 221/addObject 32 40 225/addObject 31 40 198/addBigProp 26 39 192/addBigProp 5 37 192/addBigProp 5 41 192/addBigProp 36 38 188/addBigProp 23 38 192/addBigProp 17 38 192/addBigProp 23 37 192/addBigProp 17 37 192/addBigProp 10 18 200/addBigProp 24 18 196/addBigProp 30 18 192/animate Victor false true 100 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 26 25 24 24/animate Sophia true true 1000 30 30 30 30 30 31 30 30 30 30 30 30 30 35 35 30 30/animate Elliott false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16/animate Lewis false true 100 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 22 23 23 23 23 23 23 22 19 19/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 23 22 21 20/animate Andy false true 100 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 29 30 31 31 31 31 31 30 29 28/pause 2300/viewport 20 38 true/skippable/pause 1000/warp farmer 20 42/playSound doorClose/pause 500/move farmer 0 -1 0/pause 200/faceDirection Olivia 1 true/pause 150/faceDirection Olivia 2 true/pause 150/textAboveHead Olivia \"{{i18n:Olivia.10hearts.01}}\"/pause 100/faceDirection Pierre 2/pause 200/textAboveHead Pierre \"{{i18n:Olivia.10hearts.02}}\"/pause 400/textAboveHead Governor \"{{i18n:Olivia.10hearts.03}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 -1 0/move farmer -1 0 0 true/pause 100/faceDirection Olivia 1 true/pause 100/faceDirection Olivia 0 true/pause 300/move farmer 0 -1 0/pause 50/faceDirection Pierre 1 true/pause 300/emote Olivia 32 true/pause 300/globalFade/viewport -1000 -1000/warp farmer 24 40/warp Governor 21 36/warp Olivia 21 38/warp Pierre 20 37/faceDirection Pierre 1/warp Marnie 15 40/warp Lewis 17 40/faceDirection farmer 1 true/animate Marnie false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 22 21 20 20 20/viewport 27 39 true/move farmer 4 0 0/pause 400/textAboveHead Andy \"{{i18n:Olivia.10hearts.04}}\"/pause 700/textAboveHead Elliott \"{{i18n:Olivia.10hearts.05}}\"/pause 800/globalFade/viewport -1000 -1000/warp farmer 31 18/faceDirection farmer 1/viewport 31 12 true/move farmer 2 0 0/pause 400/doAction 33 17/pause 400/move farmer 0 -5 0 true/pause 500/stopAnimation Victor/pause 400/faceDirection Victor 2 true/pause 400/faceDirection Sam 1 true/pause 150/textAboveHead Victor \"{{i18n:Olivia.10hearts.06}}\"/pause 600/textAboveHead Abigail \"{{i18n:Olivia.10hearts.07}}\"/pause 400/textAboveHead Sam \"{{i18n:Olivia.10hearts.08}}\"/pause 500/globalFade/viewport -1000 -1000/warp farmer 11 40/warp Penny 10 31/warp Emily 25 27/warp Andy 13 40/warp Marnie 19 30/warp Governor 20 29/warp Olivia 20 31/warp Pierre 21 30/faceDirection Pierre 3 true/warp Elliott 27 38/warp Shane 30 37/warp Susan 7 37/warp Alex 5 28/warp Haley 6 28/stopAnimation Andy/animate Andy false true 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 34 33 32/warp Willy 19 26/warp Lewis 15 40/warp Gunther 30 25/showFrame Gunther 21/warp Harvey 32 25/faceDirection Harvey 3 true/faceDirection Willy 3 true/faceDirection Clint 2 true/faceDirection Alex 1 true/faceDirection Haley 3 true/faceDirection farmer 3 true/viewport 11 39 true/move farmer -4 0 0 true/pause 600/textAboveHead Susan \"{{i18n:Olivia.10hearts.09}}\"/pause 400/faceDirection Leah 2 true/pause 250/faceDirection Maru 2 true/pause 500/textAboveHead Maru \"{{i18n:Olivia.10hearts.10}}\"/pause 1000/emote farmer 32/move farmer 0 -1 0 true/pause 200/faceDirection Leah 3 true/pause 100/faceDirection Maru 1 true/pause 800/globalFade/viewport -1000 -1000/warp farmer 22 26/warp Penny 21 23/warp Emily 25 27/warp Sandy 24 27/faceDirection Sandy 0 true/faceDirection Emily 0 true/faceDirection Penny 2 true/faceDirection farmer 1 true/viewport 21 27 true/pause 500/textAboveHead Emily \"{{i18n:Olivia.10hearts.11}}\"/pause 600/textAboveHead Pierre \"{{i18n:Olivia.10hearts.12}}\"/pause 1000/textAboveHead Governor \"{{i18n:Olivia.10hearts.13}}\"/pause 1200/shake Clint 1000/textAboveHead Clint \"{{i18n:Olivia.10hearts.14}}\"/pause 800/textAboveHead Gunther \"{{i18n:Olivia.10hearts.15}}\"/pause 1000/globalFade/viewport -1000 -1000/pause 500/warp Jodi 25 25/faceDirection Jodi 2 true/warp Alex 22 31/faceDirection Alex 0 true/warp Susan 18 31/faceDirection Susan 1 true/warp Gus 23 31/faceDirection Gus 0 true/warp Caroline 20 23/faceDirection Caroline 2 true/warp Penny 19 32/faceDirection Penny 0 true/warp Emily 20 30/warp Haley 22 29/warp Marcello 20 28/warp Robin 21 27/warp Demetrius 22 27/warp Willy 25 28/faceDirection Willy 3 true/warp Andy 26 27/faceDirection Andy 3 true/warp Alex 22 31/faceDirection Alex 0 true/warp Leah 18 30/faceDirection Leah 1 true/warp Olivia 22 25/faceDirection Olivia 2 true/warp farmer 23 25/faceDirection farmer 2/warp Marnie 18 27/warp Maru 18 26/faceDirection Maru 1 true/warp Elliott 24 27/warp Gunther 19 23/showFrame Gunther 0/warp Clint -100 -100/warp Sandy 20 32/faceDirection Sandy 0 true/warp Pierre 19 25/faceDirection Pierre 2/warp Governor 20 25/warp Shane 21 24/warp Sebastian 21 31/faceDirection Sebastian 0/warp Abigail 21 29/faceDirection Abigail 2/warp Victor 18 28/stopAnimation Sophia/warp Sophia 18 29/faceDirection Sophia 1 true/faceDirection Victor 1/warp Sam -50 -50/warp Lewis 26 26/warp Harvey 23 28/positionOffset Willy 21 5/positionOffset Andy -13 10/positionOffset farmer -3 30/positionOffset Susan -20 2/positionOffset Jodi -2 -6/positionOffset Gus 3 -7/positionOffset Marcello -6 -10/positionOffset Pierre -3 8/positionOffset Victor 0 -20/positionOffset Sophia 0 -20/positionOffset Abigail -10 -10/positionOffset farmer 5 -6/positionOffset Sebastian 0 -5/positionOffset Emily 6 -10/animate Harvey false true 250 0 29 29 0 29 29 0 29 29 0 29 29 0 29 29 0 22 22 14 14 22 22 14 14 0 29 29/animate Abigail false true 300 16 17 18 19/animate Emily false true 200 16 17 16 17 16 17 16 17 16 17 20 21 20 21 20 21 20 21 20 21 18 19 18 19 18 19 18 19 18 19 22 23 22 23 22 23 22 23 22 23/animate Elliott false true 500 20 21 22 21/animate Robin false true 200 20 20 21 21 22 22 21 21 20 20/animate Demetrius false true 200 24 24 25 25 26 26 25 25/animate Marcello false true 400 16 17 16 17 16 17 16 17 16 17 0 16 0 16 0 16 0 16 0 16 0 16 0 16 17 16 17/animate Haley false true 400 18 19/stopAnimation Andy/animate Andy false true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 26 25 24 24 24 24/stopAnimation Victor/animate Victor true true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 26 25 24 24/animate Sophia true true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 19 18 17 16/specificTemporarySprite EmilySongBackLights/viewport 22 27/glow 0 0 255 true/pause 1000/glow 0 255 255 false/pause 1760/glow 0 0 255 false/pause 1760/glow 255 0 255 false/pause 1760/glow 255 255 0 false/pause 1760/glow 0 255 255 false/pause 1760/glow 0 255 0 false/pause 1760/glow 255 0 0 false/pause 1760/glow 0 0 255 false/pause 1000/glow 255 0 255 false/pause 1760/glow 0 0 255 false/pause 1760/glow 255 0 255 false/pause 1760/glow 255 255 0 false/pause 1760/glow 0 255 255 false/pause 760/faceDirection Olivia 1 true/pause 1100/glow 0 255 0 false/pause 760/faceDirection farmer 3 true/pause 900/glow 255 0 0 false/pause 1460/showFrame farmer 101 true/showFrame Olivia 28 true/pause 300/glow 0 0 255 false/pause 1000/emote Olivia 20 true/emote farmer 20 true/pause 500/glow 0 255 0 false/pause 1300/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Olivia.10hearts.16}}\"/pause 2000/end dialogue Olivia \"{{i18n:Olivia.10hearts.17}}\"",
+      }
+    },
+    { //OLIVIA 12 Heart - part 1 - 'Yoga?'
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 1
+      },
+      "Entries": {
+        "8982807/O Olivia/f Olivia 3000/d Mon Wed Thu Fri Sat Sun/w sunny/t 600 800": "none/-500 -500/farmer 11 5 3 Olivia 4 5 0/skippable/makeInvisible 4 5 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 5 56 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.12hearts1.01}}\"/pause 700/move farmer -1 0 3/pause 550/showFrame Olivia 5 true/shake Olivia 200/pause 350/showFrame Olivia 4 true/pause 250/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/emote Olivia 16 true/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote farmer 32/speak Olivia \"{{i18n:Olivia.12hearts1.02}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Olivia \"{{i18n:Olivia.12hearts1.04}}\"/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts1.05}}\""
+      }
+    },
+    { //OLIVIA 12 Heart - part 1 - 'Yoga?'
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 2
+      },
+      "Entries": {
+        "8982807/O Olivia/f Olivia 3000/d Mon Wed Thu Fri Sat Sun/w sunny/t 600 800": "none/-500 -500/farmer 14 14 3 Olivia 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.12hearts1.01}}\"/pause 700/move farmer -1 0 3/pause 550/showFrame Olivia 5 true/shake Olivia 200/pause 350/showFrame Olivia 4 true/pause 250/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/emote Olivia 16 true/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote farmer 32/speak Olivia \"{{i18n:Olivia.12hearts1.02}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Olivia \"{{i18n:Olivia.12hearts1.04}}\"/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts1.05}}\""
+      }
+    },
+    { //OLIVIA 12 Heart - part 1 - 'Yoga?'
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3
+      },
+      "Entries": {
+        "8982807/O Olivia/f Olivia 3000/d Mon Wed Thu Fri Sat Sun/w sunny/t 600 800": "none/-500 -500/farmer 29 24 3 Olivia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 23 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.12hearts1.01}}\"/pause 700/move farmer -1 0 3/pause 550/showFrame Olivia 5 true/shake Olivia 200/pause 350/showFrame Olivia 4 true/pause 250/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/emote Olivia 16 true/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote farmer 32/speak Olivia \"{{i18n:Olivia.12hearts1.02}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Olivia \"{{i18n:Olivia.12hearts1.04}}\"/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts1.05}}\""
+      }
+    },
+    { //OLIVIA 12 Heart - if player missed the first session
+      "Action": "EditData",
+      "Target": "Data/Events/farm",
+      "Entries": {
+        "8982809/O Olivia/e 8982807/k 8982808/t 1610 2600": "none/-500 -500/farmer -30 30 0/pause 50/end dialogue Olivia \"{{i18n:Olivia.12hearts.Missed}}\""
+      }
+    },
+    { //OLIVIA 12 Heart - part 2 - 'Aerobics Class'
+      "Action": "EditData",
+      "Target": "Data/Events/seedshop",
+      "Entries": {
+        "8982808/O Olivia/d Mon Wed Thu Fri Sat Sun/w sunny/e 8982807/t 1300 1600": "none/-500 -500/farmer 20 17 1 Olivia 20 16 1 Caroline 27 16 3 Jodi 26 15 2 Marnie 23 20 2 Robin 23 22 0 Harvey 22 21 1 Emily 26 20 1 Haley 28 20 3/skippable/pause 1000/playMusic 50s/pause 1000/viewport 25 17 true/move Olivia 5 0 1 true/move farmer 6 0 0 true/pause 1500/speak Caroline \"{{i18n:Olivia.12hearts2.01}}\"/pause 850/faceDirection Caroline 2 true/pause 700/speak Caroline \"{{i18n:Olivia.12hearts2.02}}\"/pause 400/faceDirection Haley 0 true/pause 500/faceDirection Marnie 1 true/pause 200/faceDirection Emily 0 true/pause 100/faceDirection Marnie 0/pause 200/faceDirection Harvey 0 true/pause 300/globalFade/viewport -1000 -1000/warp Caroline 25 16/faceDirection Caroline 2 true/warp Robin 23 18/faceDirection Robin 0 true/warp Emily 25 18/faceDirection Emily 0 true/warp Haley 27 18/faceDirection Haley 0 true/warp Jodi 23 20/faceDirection Jodi 0 true/warp Olivia 25 20/faceDirection Olivia 0 true/warp farmer 27 20/faceDirection farmer 0 true/warp Harvey 24 22/showFrame Harvey 26 true/warp Marnie 26 22/faceDirection Marnie 0 true/positionOffset Robin -15 -3/positionOffset Emily 10 5/positionOffset Haley 12 -7/positionOffset Jodi 7 -3/positionOffset Olivia 5 3/positionOffset Harvey -3 -4/positionOffset Marnie 3 -3/pause 800/viewport 25 19 true/pause 1750/move Caroline -1 0 2/pause 1250/move Caroline 2 0 2/pause 1500/move Caroline -1 0 2/pause 500/speak Caroline \"{{i18n:Olivia.12hearts2.03}}\"/stopMusic/pause 1000/speak Caroline \"{{i18n:Olivia.12hearts2.04}}\"/playMusic FlashShifter.StardewValleyExpandedCP_Aerobics_Looped/pause 1000/animate Caroline false true 1035 0 4 0 12/animate Robin false true 1035 8 4 8 12/animate Emily false true 1035 8 4 8 12/animate Haley false true 1035 8 4 8 12/animate Jodi false true 1035 8 4 8 12/animate Olivia false true 1035 8 4 8 12/animate Marnie false true 1035 8 4 8 12/animate Harvey false true 1035 26 25 26 27/move farmer 0 0 0 true/pause 980/move farmer 0 0 1 true/pause 980/move farmer 0 0 0 true/pause 980/move farmer 0 0 3 true/pause 980/move farmer 0 0 0 true/pause 980/move farmer 0 0 1 true/pause 980/move farmer 0 0 0 true/pause 980/move farmer 0 0 3 true/pause 980/textAboveHead Caroline \"{{i18n:Olivia.12hearts2.05}}\"/move farmer 0 0 0 true/pause 980/move farmer 0 0 1 true/pause 980/move farmer 0 0 0 true/pause 980/move farmer 0 0 3 true/pause 980/move farmer 0 0 0 true/pause 980/move farmer 0 0 1 true/pause 980/move farmer 0 0 0 true/stopAnimation Caroline/stopAnimation Robin/stopAnimation Emily/stopAnimation Haley/stopAnimation Jodi/stopAnimation Olivia/stopAnimation Harvey/stopAnimation Marnie/globalFade/viewport -1000 -1000/pause 1000/stopMusic/pause 1000/speak Caroline \"{{i18n:Olivia.12hearts2.06}}\"/pause 1000/playMusic 50s/pause 800/warp Olivia 22 18/faceDirection Olivia 1 true/warp farmer 24 18/faceDirection farmer 3 true/warp Caroline 27 17/faceDirection Caroline 2 true/warp Robin 28 21/faceDirection Robin 2 true/warp Emily 28 19/faceDirection Emily 2 true/warp Haley 30 20/faceDirection Haley 3 true/warp Marnie 26 21/faceDirection Marnie 2 true/warp Jodi 22 21/warp Harvey 24 20/positionOffset Olivia -15 -2/positionOffset Caroline -15 0/positionOffset Emily -25 0/positionOffset Marnie -4 30/positionOffset Harvey -10 40/positionOffset Jodi -15 15/positionOffset Robin -10 10/animate Jodi false true 100 19 19 19 19 20 21 22 23 23 23 23 22 21 20 19 19 20 21 22 23 23 23 23 22 21 20 21 22 23 22 21 20 22 23 22 21 20/animate Robin false true 100 28 28 29 30 30 31/animate Caroline false true 100 16 16 17 17 16 16 18 18/animate Marnie false true 100 24 25 26 27/animate Emily false true 100 16 16 17 17 16 16 17 17 20 20 21 21 20 20 21 21 16 16 17 17 16 16 17 17 22 22 23 23 22 22 23 23/animate Harvey false true 1000 24 25 24 27/viewport 25 25 true/viewport move 0 -1 6000 true/pause 7000/speak Olivia \"{{i18n:Olivia.12hearts2.07}}\"/pause 750/faceDirection Olivia 2 true/pause 800/showFrame Olivia 27/pause 250/showFrame Olivia 26/pause 500/speak Olivia \"{{i18n:Olivia.12hearts2.08}}\"/pause 1000/move farmer -1 0 3/pause 400/faceDirection farmer 2 true/pause 1000/showFrame farmer 4/pause 1500/animate Olivia false true 1000 26 26 26 27/pause 200/speak Olivia \"{{i18n:Olivia.12hearts2.09}}\"/pause 1000/speak Olivia \"$q -1 null {{i18n:Olivia.12hearts2.10}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts2.11}}\"/pause 1000/showFrame farmer 5/globalFade/viewport -1000 -1000/pause 800/stopMusic/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts2.12}}\"",
+      }
+    },
+    { //OLIVIA 14 Heart - part 1 - How about we go on a trip?
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3
+      },
+      "Entries": {
+        "8982818/e 8982808/O Olivia/f Olivia 3500/t 700 2200/z spring/u 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27/t 600 2000": "none/-500 -500/farmer 29 24 3 Olivia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 22 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.14hearts1.01}}\"/pause 500/emote farmer 8/pause 300/speak Olivia \"{{i18n:Olivia.14hearts1.02}}\"/pause 1000/jump farmer/pause 1000/speak Olivia \"{{i18n:Olivia.14hearts1.03}}\"/pause 500/emote farmer 32/pause 500/speak Olivia \"{{i18n:Olivia.14hearts1.04}}\"/pause 600/showFrame farmer 97 true/pause 800/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Olivia.14hearts1.05}}\"/pause 1000/end dialogue Olivia \"{{i18n:Olivia.14hearts1.06}}\""
+      }
+    },
+    { //OLIVIA 14 Heart - part 2 - Today is the day!
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "Entries": {
+        "8982819/O Olivia/f Olivia 3500/t 600 700/e 8982818/z summer/z fall/z winter/u 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28": "none/-500 -500/farmer -10 -10 2 Olivia -11 -11 2/skippable/pause 1000/speak Olivia \"{{i18n:Olivia.14hearts2.01}}\"/pause 1000/end dialogue Olivia \"{{i18n:Olivia.14hearts2.02}}\"",
+      }
+    },
+    { //OLIVIA 14 Heart - part 3 - Sakura Vineyard
+      "Action": "EditData",
+      "Target": "Data/Events/railroad",
+      "Entries": {
+        "8982820/O Olivia/e 8982819/t 1000 1600": "none/-500 -500/farmer 44 40 3 Olivia 43 40 1 Susan 50 48 1 MarlonFay 14 19 0/animate Susan false true 750 16 17/positionOffset farmer 5 20 true/positionOffset Olivia -5 20 true/playMusic SettlingIn/pause 500/addTemporaryActor GrampletonTrain 650 66 33 44 2 false/positionOffset GrampletonTrain -23 -34/viewport 43 42 clamp true/pause 1500/faceDirection Olivia 1 true/pause 500/faceDirection farmer 3 true/pause 500/speak Olivia \"{{i18n:Olivia.14hearts3.01}}\"/pause 650/message \"{{i18n:Olivia.14hearts3.02}}\"/pause 500/faceDirection Olivia 2 true/pause 500/faceDirection farmer 2 true/pause 1000/faceDirection Olivia 1 true/pause 600/faceDirection farmer 3 true/pause 500/speak Olivia \"{{i18n:Olivia.14hearts3.03}}\"/pause 600/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 650/faceDirection Olivia 2 true/pause 500/faceDirection farmer 2 true/pause 250/globalFade/viewport -1000 -1000/warp Susan -20 -20/warp MarlonFay -21 -21/warp GrampletonTrain -20 -20/playSound FlashShifter.StardewValleyExpandedCP_GrampletonTrainStationArrival/changeLocation Custom_GrampletonTrainStation/addTemporaryActor GenericNPC1 16 32 -30 -30 2/addTemporaryActor GenericNPC1 16 32 -29 -29 2/addTemporaryActor GenericNPC1 16 32 -28 -28 2/addTemporaryActor GenericNPC1 16 32 -27 -27 2/addTemporaryActor GenericNPC1 16 32 -26 -26 2/addTemporaryActor GenericNPC2 16 32 -25 -25 2/addTemporaryActor GenericNPC3 16 32 -24 -24 2/addTemporaryActor GenericNPC4 16 32 -23 -23 2/addTemporaryActor GenericNPC5 16 32 -22 -22 2/addTemporaryActor GenericNPC6 16 32 -21 -21 2/addTemporaryActor GenericNPC7 16 32 -20 -20 2/addTemporaryActor GenericNPC8 16 32 -19 -19 2/pause 14000/playMusic FlashShifter.StardewValleyExpandedCP_GrampletonTrainStationAmbience/pause 1000/warp GenericNPC8 0 19/speed GenericNPC8 1/advancedMove GenericNPC8 false 60 0/warp GenericNPC2 42 10/advancedMove GenericNPC2 false -60 0/warp GenericNPC1 0 15/advancedMove GenericNPC1 false 60 0/warp GenericNPC4 44 10/speed GenericNPC4 1/advancedMove GenericNPC4 false -60 0/warp Olivia 26 9/faceDirection Olivia 3 true/warp farmer 24 9/faceDirection farmer 1 true/viewport 24 11 clamp true/pause 2250/speak Olivia \"{{i18n:Olivia.14hearts3.04}}\"/pause 1000/emote farmer 32 true/pause 1000/speak Olivia \"{{i18n:Olivia.14hearts3.05}}\"/pause 750/shake Olivia 500/pause 200/speak Olivia \"{{i18n:Olivia.14hearts3.06}}\"/pause 500/jump farmer/pause 500/globalFade/viewport -1000 -1000/warp GenericNPC2 -10 -10/warp GenericNPC4 -9 -9/warp GenericNPC8 -8 -8/warp GenericNPC1 -90 -90/warp farmer -5 -5/warp Olivia -4 -4/faceDirection farmer 0 true/faceDirection Olivia 0 true/changeLocation Custom_SakuraVineyardCottage/stopMusic/pause 1000/addTemporaryActor GrampletonTaxi 120 60 46 32 2 false/playSound FlashShifter.StardewValleyExpandedCP_Taxi/pause 1800/advancedMove GrampletonTaxi false -22 0/viewport 27 30 clamp true/pause 13500/globalFade/viewport -1000 -1000/warp GrampletonTaxi -80 -80/warp farmer 26 29/faceDirection farmer 3 true/warp Olivia 27 29/faceDirection Olivia 3 true/addTemporaryActor Taxi1 30 200 20 32 2 false/addTemporaryActor Taxi2 30 200 22 32 2 false/addTemporaryActor Taxi3 30 200 24 32 2 false/addTemporaryActor Taxi4 30 200 26 32 2 false/positionOffset Taxi1 4 400 true/positionOffset Taxi2 -10 400 true/positionOffset Taxi3 -24 400 true/positionOffset Taxi4 -38 400 true/speed Taxi1 3/advancedMove Taxi1 false -24 0/speed Taxi2 3/advancedMove Taxi2 false -26 0/speed Taxi3 3/advancedMove Taxi3 false -28 0/speed Taxi4 3/advancedMove Taxi4 false -28 0/viewport 27 28 clamp true/pause 6000/playMusic spring_day_ambient/shake Olivia 600/pause 650/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 750/speak Olivia \"{{i18n:Olivia.14hearts3.07}}\"/pause 750/emote farmer 32/pause 300/speak Olivia \"{{i18n:Olivia.14hearts3.08}}\"/pause 500/viewport move 0 -1 18500 true/faceDirection Olivia 0 true/pause 400/faceDirection farmer 0 true/pause 300/move Olivia 0 -11 0 true/pause 200/move farmer 0 -11 0 true/pause 6750/faceDirection Olivia 3 true/pause 750/faceDirection farmer 1 true/pause 500/emote Olivia 32/pause 500/faceDirection Olivia 0 true/pause 500/move Olivia 0 -1 0/pause 350/warp Olivia -10 -10/playSound doorClose/pause 500/move farmer 1 0 0/move farmer 0 -1 0/pause 800/warp farmer -9 -9/playSound doorClose/pause 1500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_SakuraVineyardCottageInterior/warp farmer 9 10/faceDirection farmer 3 true/warp Olivia 7 10/faceDirection Olivia 1 true/viewport 8 10 true/pause 1500/speak Olivia \"{{i18n:Olivia.14hearts3.09}}\"/pause 750/shake Olivia 750/pause 150/textAboveHead Olivia \"{{i18n:Olivia.14hearts3.10}}\"/pause 2000/speak Olivia \"{{i18n:Olivia.14hearts3.11}}\"/pause 800/move Olivia 1 0 0/move Olivia 0 -5 0 true/pause 500/faceDirection farmer 0 true/pause 750/move farmer 0 -4 0 true/globalFade/viewport -1000 -1000/pause 500/changeLocation Custom_SakuraVineyard/message \"{{i18n:Olivia.14hearts3.12}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.14hearts3.13}}\"/pause 500/playMusic kindadumbautumn/warp GenericNPC3 35 12/faceDirection GenericNPC3 0 true/pause 1000/warp farmer 36 35/faceDirection farmer 0 true/warp Olivia 37 35/faceDirection Olivia 0 true/warp GenericNPC7 38 28/speed GenericNPC7 1/move GenericNPC7 0 10 2 true/viewport 37 32 clamp true/viewport move 0 -1 10500 true/move farmer 0 -9 0 true/move Olivia 0 -9 0 true/pause 6500/faceDirection farmer 1 true/pause 750/faceDirection Olivia 3 true/pause 750/globalFade/viewport -1000 -1000/warp GenericNPC7 -60 -60/warp farmer 36 18/faceDirection farmer 0 true/warp Olivia 37 18/faceDirection Olivia 0 true/viewport 37 14 clamp true/move farmer 0 -4 0 true/move Olivia 0 -4 0 true/pause 1000/faceDirection GenericNPC3 1 true/pause 300/faceDirection GenericNPC3 2 true/pause 500/jump GenericNPC3/pause 850/move GenericNPC3 0 1 1/move GenericNPC3 1 0 2/pause 400/textAboveHead GenericNPC3 \"{{i18n:Olivia.14hearts3.14}}\"/pause 2500/globalFade/viewport -1000 -1000/changeLocation Custom_SakuraVineyardCellar/warp GenericNPC3 13 13/faceDirection GenericNPC3 3 true/warp Olivia 11 14/faceDirection Olivia 1 true/warp farmer 11 12/faceDirection farmer 1 true/viewport 17 8 clamp true/viewport move 0 1 8750 true/pause 2000/shake GenericNPC3 750/pause 250/textAboveHead GenericNPC3 \"{{i18n:Olivia.14hearts3.15}}\"/pause 4000/globalFade/viewport -1000 -1000/changeLocation Custom_SakuraVineyard/warp GenericNPC3 -20 -20/warp farmer 13 27/faceDirection farmer 1 true/warp Olivia 11 27/faceDirection Olivia 1/move farmer 18 0 1 true/move Olivia 18 0 1 true/warp GenericNPC6 10 16/speed GenericNPC6 1/move GenericNPC6 0 10 2 true/viewport 17 27 clamp true/viewport move 1 0 9000 true/pause 7000/globalFade/viewport -1000 -1000/pause 500/warp GenericNPC6 -30 -30/warp GenericNPC5 43 29/speed GenericNPC5 1/move GenericNPC5 12 0 1 true/warp Olivia 58 34/warp farmer 60 34/viewport 58 34 clamp true/viewport move -1 0 9000 true/move Olivia -19 0 3 true/move farmer -19 0 3 true/pause 7000/globalFade/viewport -1000 -1000/warp GenericNPC5 -100 -100/changeLocation Custom_SakuraVineyardDiningRoom/pause 500/warp Olivia 9 8/warp farmer 10 8/faceDirection farmer 1 true/positionOffset Olivia -5 30 true/positionOffset farmer 5 45 true/animate Olivia true true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 18 17 16/warp GenericNPC3 12 8/faceDirection GenericNPC3 3 true/viewport 10 10 clamp true/pause 1000/textAboveHead GenericNPC3 \"{{i18n:Olivia.14hearts3.16}}\"/pause 2500/faceDirection GenericNPC3 2 true/pause 250/speed GenericNPC3 1/move GenericNPC3 0 9 2 true/pause 1000/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 2500/textAboveHead Olivia \"{{i18n:Olivia.14hearts3.17}}\"/pause 2000/showFrame farmer 97 true/pause 1000/showFrame farmer 6 /pause 500/globalFade/viewport -1000 -1000/warp GenericNPC3 -20 -20/changeLocation Custom_SakuraVineyard/warp Olivia 37 7/faceDirection Olivia 2 true/stopAnimation Olivia/warp farmer 37 7/positionOffset Olivia -45 -15 true/positionOffset farmer 45 0 true/faceDirection farmer 2 true/faceDirection Olivia 2 true/ambientLight 130 130 130/stopMusic/pause 1000/playMusic spring_night_ambient/pause 1250/viewport 37 6 clamp true/showFrame Olivia 23 true/pause 1200/showFrame Olivia 22/pause 150/showFrame Olivia 21 true/pause 150/showFrame Olivia 20 true/pause 1000/showFrame Olivia 0 true/pause 2500/speak Olivia \"{{i18n:Olivia.14hearts3.18}}\"/pause 1250/faceDirection Olivia 1 true/pause 800/faceDirection farmer 3 true/pause 750/speak Olivia \"{{i18n:Olivia.14hearts3.19}}\"/pause 1000/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/positionOffset Olivia 1 0/pause 50/positionOffset farmer -1 0/pause 50/showFrame Olivia 28 true/showFrame farmer 101 true/playSound dwop/specificTemporarySprite heart 38 6/pause 2000/globalFade/viewport -1000 -1000/pause 1000/stopMusic/pause 1000/message \"{{i18n:Olivia.14hearts3.20}}\"/playSound FlashShifter.StardewValleyExpandedCP_DistantTrain/pause 6000/end dialogue Olivia \"{{i18n:Olivia.14hearts3.21}}\""
+      }
+    },
+    {
+      "Action": "Load", //650x66
+      "Target": "Characters/GrampletonTrain", //It's a train. It travels across the country. choo choo im a train
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonTrain.png"
+    },
+    {
+      "Action": "Load", //120x60
+      "Target": "Characters/GrampletonTaxi", //It's a taxi. It drives people around and stuff.
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonTaxi.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC1", //yellow hat guy
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC1.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC2", //Scarlett rip off
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC3", //Sakura Vineyard show person
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC3.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC4", //Pirate guy
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC4.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC5", //Farmer guy
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC5.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC6", //Fancy lady
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC6.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC7", //Fancy lord
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC7.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GenericNPC8", //Martin rip off
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC8.png"
+    },
+    { //DATING OLIVIA AND VICTOR EVENT - player has rabbit's foot
+      "Action": "EditData",
+      "Target": "data/events/Custom_JenkinsHouse",
+      "When": {
+        "Relationship:Victor": "Dating",
+        "Relationship:Olivia": "Dating"
+      },
+      "Entries": {
+        "6469705/i 446": "none/-500 -500/farmer 20 42 0 Victor 19 37 2 Olivia 21 37 2/pause 900/playSound doorClose/pause 300/positionOffset Victor 30 10/positionOffset Olivia -25 14/viewport 20 39 true/skippable/move farmer 0 -2 0/pause 500/emote farmer 16/speak Olivia \"{{i18n:Dating.OliviaVictor.Rabbit.01}}\"/speak Victor \"{{i18n:Dating.OliviaVictor.Rabbit.02}}\"/pause 500/speak Olivia \"{{i18n:Dating.OliviaVictor.Rabbit.03}}\"/pause 200/speak Victor \"{{i18n:Dating.OliviaVictor.Rabbit.04}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/pause 200/end dialogue Olivia \"{{i18n:Dating.OliviaVictor.Rabbit.05}}\"",
+      }
+    },
+    { //DATING OLIVIA AND VICTOR EVENT
+      "Action": "EditData",
+      "Target": "data/events/Custom_JenkinsHouse",
+      "When": {
+        "Relationship:Victor": "Dating",
+        "Relationship:Olivia": "Dating"
+      },
+      "Entries": {
+        "6469705/": "none/-500 -500/farmer 20 42 0 Victor 19 37 2 Olivia 21 37 2/friendship Victor -1250/friendship Olivia -1250/pause 900/playSound doorClose/pause 300/positionOffset Victor 30 10/positionOffset Olivia -25 14/viewport 20 39 true/skippable/move farmer 0 -2 0/pause 500/emote farmer 16/speak Olivia \"...$5\"/speak Victor \"...$5\"/pause 500/speak Olivia \"{{i18n:Dating.OliviaVictor.01}}\"/pause 200/speak Victor \"{{i18n:Dating.OliviaVictor.02}}\"/pause 800/speak Olivia \"{{i18n:Dating.OliviaVictor.03}}\"/pause 100/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Dating.OliviaVictor.04}}\"/pause 1300/message \"{{i18n:Dating.OliviaVictor.05}}\"/end dialogue Olivia \"{{i18n:Dating.OliviaVictor.06}}\"",
+      }
+    },
+  ]
+}

@@ -1,0 +1,143 @@
+{
+    "Changes": [
+
+        
+    {
+        "Action": "EditData",
+        "Target": "Data/NPCGiftTastes",
+        "LogName": "Gift tastes: Kent",
+        "TextOperations": [
+          /*Love*/
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Kent",
+              1
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+            "Delimiter": " "
+          }
+          /*Like*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Kent",
+              3
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+            "Delimiter": " "
+          }
+          /*Hate*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Kent",
+              7
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Torpedo_Trout FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish",
+            "Delimiter": " "
+          }
+          /*Neutral*/,
+          {
+            "Operation": "Append",
+            "Target": [
+              "Fields",
+              "Kent",
+              9
+            ],
+            "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+            "Delimiter": " "
+          }
+        ]
+      },
+        { //KENT SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Kent",
+            "Entries": {
+                "Fri": "700 Town 37 103 2/1130 SamHouse 8 12 2/1400 Town 6 72 1/1700 Saloon 12 20 0/2350 SamHouse 21 5 3 kent_sleep",
+            },
+        },
+        { //KENT SCHEDULE DIALOGUE 1
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kent",
+            "Entries": {
+                "Town_37_103": "{{i18n:Kent.Dialogue.01}}",
+            },
+        },
+        {
+            //Kent 8 heart event - A possible new appreciation
+            "Action": "EditData",
+            "Target": "Data/Events/Custom_AdventurerSummit",
+            "Entries": {
+                "46361083/f Kent 2000/w sunny/t 600 1800": "spring_day_ambient/-500 -500/farmer 32 32 0 Kent 42 26 1/skippable/pause 500/viewport 40 26 clamp true/move farmer 0 -6 0/pause 750/faceDirection farmer 1 true/pause 750/emote farmer 8/pause 300/move farmer 8 0 1/pause 1500/speak Kent \"{{i18n:Kent.8heart.01}}\"/pause 1000/faceDirection Kent 2 true/pause 300/faceDirection Kent 3 true/pause 600/speak Kent \"{{i18n:Kent.8heart.02}}\"/pause 800/speak Kent \"{{i18n:Kent.8heart.03}}\"/pause 1250/faceDirection Kent 2 true/pause 250/faceDirection Kent 1 true/pause 1000/speak Kent \"{{i18n:Kent.8heart.04}}\"/pause 500/emote farmer 60/pause 500/shake Kent 500/pause 800/speak Kent \"{{i18n:Kent.8heart.05}}\"/pause 750/faceDirection Kent 2 true/pause 250/faceDirection Kent 3 true/pause 650/speak Kent \"{{i18n:Kent.8heart.06}}\"/pause 800/question fork0 \"{{i18n:Kent.8heart.07}}\"/fork 46361083_KentAdventurer/pause 500/speak Kent \"{{i18n:Kent.8heart.08}}\"/pause 500/emote Kent 40/pause 500/speak Kent \"{{i18n:Kent.8heart.09}}\"/pause 500/emote farmer 32/pause 500/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 300/move farmer -7 0 3 true/pause 800/faceDirection Kent 2 true/pause 275/faceDirection Kent 1 true/pause 250/globalFade/viewport -1000 -1000/warp farmer -30 -30/pause 1000/viewport 40 26 clamp true/pause 2000/speak Kent \"{{i18n:Kent.8heart.10}}\"/pause 650/faceDirection Kent 2 true/pause 250/faceDirection Kent 3 true/pause 300/viewport move -1 0 7000 true/move Kent -10 0 2/move Kent 0 2 2/pause 1500/faceDirection Kent 1 true/pause 250/faceDirection Kent 0 true/pause 750/speak Kent \"...$2\"/pause 1000/faceDirection Kent 1 true/pause 250/faceDirection Kent 2 true/pause 750/move Kent 0 10 2 true/pause 1000/globalFade/viewport -1000 -1000/friendship Kent 50/pause 1000/end dialogue Kent \"{{i18n:Kent.8heart.11}}\"",
+                "46361083_KentAdventurer": "pause 500/speak Kent \"{{i18n:Kent.8heart.Adventurer.01}}\"/pause 500/emote Kent 40/pause 500/speak Kent \"{{i18n:Kent.8heart.Adventurer.02}}\"/pause 500/emote farmer 32/pause 500/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 300/move farmer -7 0 3 true/pause 800/faceDirection Kent 2 true/pause 275/faceDirection Kent 1 true/pause 250/globalFade/viewport -1000 -1000/warp farmer -30 -30/pause 1000/viewport 40 26 clamp true/pause 2000/speak Kent \"{{i18n:Kent.8heart.Adventurer.03}}\"/pause 650/faceDirection Kent 2 true/pause 250/faceDirection Kent 3 true/pause 300/viewport move -1 0 7000 true/move Kent -10 0 2/move Kent 0 2 2/pause 1500/faceDirection Kent 1 true/pause 250/faceDirection Kent 0 true/pause 750/speak Kent \"...$2\"/pause 2000/viewport move 0 -1 10000 true/move Kent 0 -6 0/pause 650/warp Kent -20 -20/playSound doorClose/pause 2000/globalFade/viewport -1000 -1000/addConversationTopic KentAdventurer 14/friendship Kent 50/pause 1000/end dialogue Kent \"{{i18n:Kent.8heart.Adventurer.05}}\"",
+            }
+        },
+        {
+            //Kent Adventurer Guild Schedule
+            "Action": "EditData",
+            "Target": "characters/schedules/Kent",
+            "When": {
+                "HasSeenEvent |contains=46361083": true
+            },
+            "Entries": {
+                "Thu": "700 SamHouse 4 13 2/1000 AdventureGuild 3 13 2/2000 SamHouse 21 5 3 kent_sleep"
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "characters/dialogue/Kent",
+            "Entries": {
+                "AdventureGuild_3_13": "{{i18n:Kent.Dialogue.02}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "characters/dialogue/MarlonFay",
+            "Entries": {
+                "KentAdventurer": "{{i18n:Kent.Dialogue.03}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "characters/dialogue/Sam",
+            "Entries": {
+                "KentAdventurer": "{{i18n:Kent.Dialogue.04}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "characters/dialogue/Vincent",
+            "Entries": {
+                "KentAdventurer": "{{i18n:Kent.Dialogue.05}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "characters/dialogue/Jodi",
+            "Entries": {
+                "KentAdventurer": "{{i18n:Kent.Dialogue.06}}",
+            }
+        },
+        { //KENT EVENT DIALOGUE ADDITIONS
+            "Action": "EditData",
+            "Target": "characters/dialogue/Kent",
+            "Entries": {
+                "kent_event1": "{{i18n:Kent.Dialogue.07}}",
+                "kent_event2": "{{i18n:Kent.Dialogue.07}}",
+                "kent_event3": "{{i18n:Kent.Dialogue.07}}",
+                "kent_event4": "{{i18n:Kent.Dialogue.08}}",
+                "kent_event5": "{{i18n:Kent.Dialogue.08}}",
+                "kent_event6": "{{i18n:Kent.Dialogue.09}}",
+                "kent_event7": "{{i18n:Kent.Dialogue.09}}",
+                "kent_event8": "{{i18n:Kent.Dialogue.10}}",
+                "kent_event9": "{{i18n:Kent.Dialogue.11}}",
+                "kent_event10": "{{i18n:Kent.Dialogue.12}}",
+                "kent_event11": "{{i18n:Kent.Dialogue.13}}",
+            }
+        },
+    ]
+}

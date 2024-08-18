@@ -1,0 +1,171 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Abigail",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose FlashShifter.StardewValleyExpandedCP_Bearberrys",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Abigail",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //ABIGAIL SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Abigail",
+            "Entries": {
+                "20": "800 SeedShop 35 5 2/1000 SeedShop 9 5 0/1230 SebastianRoom 3 10 0/2100 SeedShop 1 9 3 abigail_sleep",
+                "6": "900 SeedShop 39 5 0/1030 SeedShop 2 20 3/1200 Mountain 49 31 2 abigail_flute/2000 SeedShop 1 9 3 abigail_sleep",
+            },
+        },
+        { //Abigail chronicles of solaria schedule
+            "Action": "EditData",
+            "Target": "characters/schedules/Abigail",
+            "Entries": {
+                "marriage_{{Season}}_20": "1100 SebastianRoom 3 10 0/2100 Bed",
+            },
+        },
+        { //ABIGAIL DIALOGUE
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "SebastianRoom_3_10": "{{i18n:Abigail.Dialogue.01}}",
+                "Town_53_69": "{{i18n:Abigail.Dialogue.02}}",
+            },
+        },
+        //I see that you're reading through the content file. That's okay... I guess. Just don't pay attention to Abigail's event. Go away. Shoo. Nothing to see.
+        { //ABIGAIL EVENT
+            "Action": "EditData",
+            "Target": "data/events/Custom_JunimoWoods",
+            "Entries": {
+                "1000007/t 600 1150/w sunny/y 2/z winter/f Abigail 2000/e 1000037": "moonlightJellies/-500 -500/farmer -300 -300 2 Abigail 65 51 1/addTemporaryActor Apples 16 32 66 51 3 true/pause 2250/skippable/viewport 64 51 true/playSound junimoMeep1/move Apples 0 1 1/move Abigail 0 0 2/move Apples -2 0 1/move Abigail 0 0 3/move Apples 0 -2 1/playSound junimoMeep1/move Abigail 0 0 0/move Apples 2 0 1/move Abigail 0 0 1/move Apples 0 1 3/playSound junimoMeep1/pause 500/playSound junimoMeep1/textAboveHead Abigail \"{{i18n:Abigail.Apples.01}}\"/pause 250/playSound junimoMeep1/pause 150/jump Apples/pause 200/playSound dwop/pause 300/jump Apples/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/speak Apples \"{{i18n:Abigail.Apples.02}}\"/speak Abigail \"{{i18n:Abigail.Apples.03}}\"/playSound junimoMeep1/pause 300/jump Apples/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 200/jump Apples/pause 300/playSound junimoMeep1/pause 500/jump Apples/playSound junimoMeep1/pause 500/textAboveHead Abigail \"{{i18n:Abigail.Apples.04}}\"/pause 300/showFrame Abigail 7/pause 100/shake Abigail 500/pause 150/move Abigail 0 0 1/pause 100/playSound junimoMeep1/pause 300/move Apples 4 0 1/pause 600/playSound junimoMeep1/pause 200/jump Apples/pause 500/move Apples -4 0 3/playSound junimoMeep1/pause 200/emote Abigail 20/jump Apples/playSound junimoMeep1/pause 600/move Apples 0 1 1/move Abigail 0 0 2/move Apples -2 0 1/move Abigail 0 0 3/move Apples 0 -2 1/playSound junimoMeep1/move Abigail 0 0 0/move Apples 2 0 1/move Abigail 0 0 1/move Apples 0 1 3/playSound junimoMeep1/pause 500/jump Apples/pause 400/playSound junimoMeep1/pause 200/emote Abigail 20/pause 400/move Apples 0 1 3/move Abigail 0 0 2/move Apples -1 0 2/animate Apples false true 200 24 25 26 27/pause 1200/animate Abigail false true 350 28 29/pause 1500/globalFade/viewport -1000 -1000/pause 600/end dialogue Abigail \"{{i18n:Abigail.Apples.05}}\"",
+                //OLD EVENT CODE
+                //move Apples 0 3 1/move Abigail 0 0 2/playSound junimoMeep1/move Apples -1 0 1/textAboveHead Abigail \"Apples, where are you going!?\"/move Apples 0 6 1/emote Abigail 60/move farmer 3 0 0/move farmer 0 -2 1/move farmer 2 0 1/move Abigail 0 0 3/playMusic spring_day_ambient/emote farmer 16 true/pause 250/emote Abigail 16 true/pause 200/speak Abigail \"@!!!?$7\"/pause 200/speak Abigail \"$q -1 null##$r -1 0 abigail_event1#You can see Junimos too?#$r -1 0 abigail_event2#That was a Junimo you were playing with!\"/pause 500/move Abigail -1 0 3/pause 500/speak Abigail \"I don't know what to say, @. My heart is pounding right now.$2\"/pause 1000/move Abigail 0 0 2/pause 1500/emote Abigail 40/pause 1000/emote farmer 8/pause 500/speak Apples \"$q -1 null##$r -1 0 abigail_event3#How about we take turns asking questions? You can go first.#$r -1 0 abigail_event4#There are so many questions I have. I'm sure you do too.\"/pause 300/move Abigail 0 0 3/emote Abigail 40/pause 500/emote Abigail 8/pause 500/speak Abigail \"You called Apples a Junimo?\"/pause 500/speak Abigail \"$q -1 null##$r -1 0 abigail_event5#That's what the forest spirits in the valley are called. Rasmodius told me.#$r -1 0 abigail_event6#They're called Junimos. I read about them in a book.\"/pause 500/emote farmer 8/pause 300/speak Abigail \"$q -1 null##$r -1 0 abigail_event7#Is Apples your friend?#$r -1 0 abigail_event8#When did you first see a Junimo?\"/pause 500/emote Abigail 8/pause 250/speak Abigail \"When did you see a Junimo for the first time?$0\"/speak Abigail \"$q -1 null##$r -1 0 abigail_event9#I saw Junimos at the community center. I thought they were rats.#$r -1 0 abigail_event10#I think I saw my first Junimo when I was a kid.\"/pause 300/emote farmer 8/pause 250/speak Abigail \"$q -1 null##$r -1 0 abigail_event11#Can you understand their language?#$r -1 0 abigail_event12#Have you told anyone about Junimos?\"/pause 400/emote Abigail 40/emote Abigail 16/emote Abigail 48/emote Abigail 8/pause 250/speak Abigail \"Are you able to understand Junimo, @?\"/pause 500/speak Abigail \"$q -1 null##$r -1 0 abigail_event13#I can read it, but I can't speak it. Rasmodius gave me an elixir.#$r -1 0 abigail_event14#Yes, I can. The Wizard made a magical potion.\"/pause 500/move Abigail 0 0 0/pause 500/emote Abigail 40/pause 450/speak Abigail \"I sometimes walk near his tower, just because I'm curious.$8#$b#I've even knocked on his door and tried opening it a few times. But it's always locked.$9\"/pause 1000/speak Abigail \"...$2\"/pause 1500/speak Abigail \"...I don't know. I feel like my mom is hiding something from me.$2\"/pause 500/emote Abigail 28/pause 500/move Abigail 0 0 3/pause 500/speak Abigail \"@, let's keep this a secret. Okay?$2\"/pause 500/question fork0 \"#Your secret is safe with me.#No. We should tell people.\"/fork 1000007_KeepSecret/pause 1000/emote Abigail 12/pause 250/speak Abigail \"I said I FEEL like she may be hiding something. I don't have any proof.$5#$b#I'd rather keep this a secret, @...$2\"/pause 500/emote Abigail 40/pause 300/speak Abigail \"I've been out here for a while. I'll see you later.$9#$b#Please... don't say anything, to my mom or anyone else.$2\"/pause 300/move Abigail 0 1 2/move farmer 0 0 2/move Abigail -3 0 3/move Abigail 0 1 0/emote farmer 60/emote Abigail 28/pause 300/speak Abigail \"I'm serious, @. I won't forgive you if you tell my mom.$5\"/emote farmer 36/pause 400/move Abigail -3 0 3/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Abigail -250/end position 63 51/end dialogue Abigail \"@, it's important we keep this a secret to protect the Junimos.$2#$b#Who knows what would happen if Joja found out? Please...$2\"",
+                //"1000007_KeepSecret": "friendship Abigail 50/pause 400/speak Abigail \"Thanks, @.$0\"/pause 1000/speak Abigail \"In a way, we're both special, aren't we?$0#$b#We both have amazing unique gifts. I wonder why they picked us.$1\"/pause 500/warp Apples 72 52/playSound junimoMeep1/move Abigail 0 0 1/pause 200/emote Abigail 16/playMusic woodsTheme/move Apples -3 0 2/playSound junimoMeep1/pause 100/jump Apples/textAboveHead Abigail \"Apples! You came back!\"/pause 200/move Apples 0 -1 2/playSound junimoMeep1/move Apples -4 0 3/pause 200/playSound junimoMeep1/jump Apples/pause 400/speak Apples \"!!!\"/pause 100/emote Abigail 20 true/pause 250/emote farmer 20 true/pause 150/move Apples 0 1 2/move Abigail 0 0 2/move Apples -2 0 2/move farmer 0 0 2/playSound junimoMeep1/emote farmer 32/jump Apples/pause 500/jump Apples/playSound junimoMeep1/move Abigail 0 0 3/move farmer 0 0 3/move Apples -4 0 0/warp Apples -1000 -1000/pause 500/move farmer 0 0 1/pause 500/emote Abigail 32/pause 300/speak Abigail \"I think that was Apples' way of saying hello to you!$4#$b#Like I said, she's very vocal!$0\"/pause 1000/move Abigail 0 0 0/pause 1500/move Abigail 0 0 3/pause 700/emote Abigail 40/pause 200/question fork1 \"Want to walk out of the forest with me?#Of course.#I'm going to stay here. You go on ahead.\"/fork 1000007_LeaveForest/pause 500/speak Abigail \"Oh, okay. I'll catch you later then.$0\"/pause 500/move Abigail 0 1 3/move Abigail -2 0 3/move farmer 0 0 3/move Abigail -1 0 3/pause 500/move Abigail 0 0 1/pause 500/speak Abigail \"This has been a magical day, @. I'll talk to you soon!$0\"/pause 400/emote Abigail 32/emote farmer 32/pause 500/globalFade/viewport -1000 -1000/mail AbigailJunimo/pause 700/end dialogue Abigail \"I still can't believe we can both see Junimos, @. It's our little secret!$1\"",
+                //"1000007_LeaveForest": "pause 500/speak Abigail \"Great! let's go!$0\"/pause 300/pause 500/globalFade/viewport -1000 -1000/changeLocation Forest/playMusic spring_day_ambient/warp Apples 5 5/warp farmer 6 108/warp Abigail 7 108/positionOffset farmer 0 15/pause 1000/viewport 14 108 true/move farmer 0 0 1/move Abigail 0 0 3/pause 1000/speak Abigail \"Phew, I sometimes get lost in there still, even though I spend so much time exploring.$9.\"/pause 1000/speak Abigail \"Well, I'm going to head back home.$6#$b#Running into you and discovering we can both see forest spirits was...$0\"/pause 1000/move Abigail 0 0 2/pause 500/emote Abigail 20/pause 500/move Abigail 0 0 3/pause 500/speak Abigail \"It was magical, @.$0\"/pause 400/emote farmer 32/pause 200/emote Abigail 32/pause 500/move Abigail 5 0 1/pause 700/move Abigail 0 0 3/pause 500/speak Abigail \"I'll see you later!$1\"/pause 800/globalFade/viewport -1000 -1000/mail AbigailJunimo/pause 600/end dialogue Abigail \"I still can't believe we can both see Junimos, @. It's our little secret!\""
+            },
+        },
+        { //ABIGAIL EVENT 2
+            "Action": "EditData",
+            "Target": "data/events/Saloon",
+            "Entries": {
+                "1140961/f Abigail 1250/e 1/k 901756/t 1200 1700": "cowboy_outlawsong/-500 -500/farmer 20 20 1 Abigail 33 18 0 Gus 35 6 0/skippable/pause 800/viewport 33 19 true/speed farmer 1/move farmer 13 0 0 true/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/textAboveHead Abigail \"{{i18n:Abigail.2hearts.01}}\"/shake Abigail 700/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/playSound cowboy_monsterhit/pause 250/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/textAboveHead Abigail \"{{i18n:Abigail.2hearts.02}}\"/shake Abigail 700/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot play/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot play/pause 200/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_powerup/pause 150/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot play/pause 250/playSound Cowboy_gunshot/pause 250/pause 500/playSound cowboy_monsterhit/pause 250/textAboveHead Abigail \"{{i18n:Abigail.2hearts.03}}\"/shake Abigail 600/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 100/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 200/playSound cowboy_explosion/stopMusic/pause 750/jump Abigail/pause 800/speak Abigail \"{{i18n:Abigail.2hearts.04}}\"/pause 1000/move Abigail 0 0 2/pause 200/emote Abigail 16/speak Abigail \"{{i18n:Abigail.2hearts.05}}\"/pause 1000/move Abigail 0 0 0/pause 700/move Abigail 0 0 2/pause 450/speak Abigail \"{{i18n:Abigail.2hearts.06}}\"/pause 300/question fork0 \"{{i18n:Abigail.2hearts.07}}\"/fork 1140961_PlayJPK/pause 700/speak Abigail \"{{i18n:Abigail.2hearts.08}}\"/pause 1000/speak Abigail \"{{i18n:Abigail.2hearts.09}}\"/pause 500/globalFade/viewport -1000 -1000/pause 800/end position 33 20",
+                "1140961_PlayJPK": "pause 400/speak Abigail \"{{i18n:Abigail.2hearts.1140961_PlayJPK.01}}\"/pause 500/move Abigail 0 0 0/pause 400/move farmer 0 -1 3/move farmer -1 0 0/move farmer 0 -2 1 true/globalFade/viewport -1000 -1000/cutscene AbigailGame/warp Gus 33 6/warp farmer 32 18/viewport 33 19 true/playMusic 50s/pause 1000/move Abigail 0 0 3/pause 500/jump Abigail/pause 1000/speak Abigail \"{{i18n:Abigail.2hearts.1140961_PlayJPK.02}}\"/pause 700/speak Abigail \"{{i18n:Abigail.2hearts.1140961_PlayJPK.03}}\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/friendship Abigail 50/end position 33 20",
+            },
+        },
+        { //ABIGAIL 12 Heart event
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "FarmhouseUpgrade": 3
+            },
+            "Entries": {
+                "1140962/f Abigail 3000/O Abigail/t 700 2300": "50s/-500 -500/farmer 49 25 1 Abigail 53 24 0 Pierre -20 -20 0 Caroline -20 -20 0/skippable/makeInvisible 34 13 5 3/viewport 53 24 true/pause 2500/textAboveHead Abigail \"{{i18n:Abigail.12hearts.01}}\"/pause 1000/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1250/faceDirection Abigail 3 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.02}}\"/pause 1000/faceDirection Abigail 0 true/pause 1000/speak Abigail \"{{i18n:Abigail.12hearts.03}}\"/pause 500/emote Abigail 40/pause 250/speak Abigail \"{{i18n:Abigail.12hearts.04}}\"/pause 550/faceDirection farmer 0 true/pause 650/globalFade/viewport -1000 -1000/changeLocation Custom_JojaPetStore/addTemporaryActor HamishCameo 16 32 2 13 2/showFrame HamishCameo 1/positionOffset HamishCameo 0 -15 true/addTemporaryActor JojaPetStoreEmployee 16 32 16 11 3/positionOffset JojaPetStoreEmployee -15 10 true/showFrame JojaPetStoreEmployee 1 true/warp farmer -20 -20/warp Abigail -20 -20/playMusic Hospital_Ambient/message \"{{i18n:Abigail.12hearts.05}}\"/pause 1000/viewport 9 11 clamp true/pause 1800/showFrame JojaPetStoreEmployee 2 true/pause 500/showFrame JojaPetStoreEmployee 1 true/pause 800/warp Abigail 13 16/playSound doorClose/pause 650/showFrame JojaPetStoreEmployee 0 true/pause 500/textAboveHead JojaPetStoreEmployee \"{{i18n:Abigail.12hearts.06}}\"/pause 650/move Abigail 0 -5 1 true/pause 2500/showFrame JojaPetStoreEmployee 1 true/pause 750/warp Pierre 13 16/playSound doorClose/pause 300/move Pierre 0 -3 0 true/pause 400/warp Caroline 12 16/playSound doorClose/pause 200/move Caroline 0 -3 0 true/pause 1300/faceDirection Abigail 2 true/pause 400/speak Caroline \"{{i18n:Abigail.12hearts.07}}\"/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.08}}\"/pause 850/faceDirection Abigail 3 true/pause 500/move Abigail -2 0 0/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.09}}\"/pause 500/emote Abigail 40 true/pause 600/faceDirection Caroline 1 true/pause 500/faceDirection Pierre 3 true/pause 300/faceDirection Abigail 1 true/pause 300/move Abigail 2 0 0/move Abigail 0 -2 1/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.10}}\"/pause 1000/emote Abigail 40/pause 500/move Abigail 0 -2 3/move Abigail -1 0 3/pause 1200/emote Abigail 40/pause 1000/faceDirection Abigail 0 true/pause 600/emote Abigail 16 true/pause 600/speak Abigail \"{{i18n:Abigail.12hearts.11}}\"/pause 350/speed Abigail 5/move Abigail 0 -1 1/speed Abigail 5/move Abigail 1 0 0/pause 1000/emote Abigail 32/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.12}}\"/pause 1000/shake Abigail 1500/pause 500/speak Abigail \"{{i18n:Abigail.12hearts.13}}\"/pause 1000/emote Abigail 40 true/pause 900/speak Abigail \"{{i18n:Abigail.12hearts.14}}\"/pause 650/showFrame JojaPetStoreEmployee 3 true/pause 500/message \"{{i18n:Abigail.12hearts.15}}\"/pause 650/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/message \"{{i18n:Abigail.12hearts.16}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.17}}\"/pause 600/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 0 true/pause 750/jump Abigail/pause 500/playMusic musicboxsong/pause 400/speak Abigail \"{{i18n:Abigail.12hearts.18}}\"/pause 850/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 550/speak Abigail \"{{i18n:Abigail.12hearts.19}}\"/pause 650/showFrame JojaPetStoreEmployee 3/pause 500/message \"{{i18n:Abigail.12hearts.20}}\"/pause 500/faceDirection Pierre 0 true/pause 500/faceDirection Caroline 0 true/pause 450/globalFade/viewport -1000 -1000/warp JojaPetStoreEmployee 14 6/faceDirection Abigail 0 true/warp Pierre 13 8/warp Caroline 12 8/faceDirection Caroline 0 true/faceDirection Pierre 0 true/positionOffset Pierre 12 -16 true/positionOffset Caroline 10 -12 true/positionOffset Abigail 0 -20 true/positionOffset JojaPetStoreEmployee 0 -24 true/warp HamishCameo -19 -19/viewport 13 7 clamp true/pause 1000/speak Pierre \"{{i18n:Abigail.12hearts.21}}\"/pause 500/faceDirection Abigail 1 true/pause 250/faceDirection Abigail 2 true/pause 500/speak Pierre \"{{i18n:Abigail.12hearts.22}}\"/speak Caroline \"{{i18n:Abigail.12hearts.23}}\"/pause 750/speak Abigail \"{{i18n:Abigail.12hearts.24}}\"/pause 500/shake JojaPetStoreEmployee 1000/pause 500/playSound dwop/pause 1500/showFrame JojaPetStoreEmployee 1 true/pause 500/faceDirection Abigail 1 true/pause 750/message \"{{i18n:Abigail.12hearts.25}}\"/pause 1000/playSound pickUpItem/pause 500/showFrame Abigail 31 true/pause 200/textAboveHead Abigail \"{{i18n:Abigail.12hearts.26}}\"/pause 500/playSound rabbit/pause 750/playSound rabbit/pause 250/showFrame Abigail 30 true/pause 750/globalFade/viewport -1000 -1000/stopMusic/changeLocation farmhouse/warp JojaPetStoreEmployee -20 -20/warp Pierre -21 -21/warp Caroline -22 -22/warp farmer 52 24/faceDirection farmer 0 true/warp Abigail 53 24/faceDirection Abigail 0 true/positionOffset farmer 0 10 true/positionOffset Abigail 0 -5 true/viewport 53 24 true/pause 1250/speak Abigail \"{{i18n:Abigail.12hearts.27}}\"/pause 1000/faceDirection farmer 1 true/pause 750/faceDirection Abigail 3 true/pause 600/emote farmer 20 true/pause 350/emote Abigail 20 true/pause 1000/globalFade/viewport -1000 -1000/pause 500/end dialogue Abigail \"{{i18n:Abigail.12hearts.28}}\"",
+            },
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/JojaPetStoreEmployee",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaPetStoreEmployee.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/HamishCameo",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/HamishCameo.png"
+        },
+        { //ABIGAIL EVENT DIALOGUE ADDITIONS (none of these strings are used)
+            "Action": "EditData",
+            "Target": "characters/dialogue/Abigail",
+            "Entries": {
+                "abigail_event1": "{{i18n:Abigail.Dialogue.03}}",
+                "abigail_event2": "{{i18n:Abigail.Dialogue.03}}",
+                "abigail_event3": "{{i18n:Abigail.Dialogue.04}}",
+                "abigail_event4": "{{i18n:Abigail.Dialogue.05}}",
+                "abigail_event5": "{{i18n:Abigail.Dialogue.06}}",
+                "abigail_event6": "{{i18n:Abigail.Dialogue.07}}",
+                "abigail_event7": "{{i18n:Abigail.Dialogue.08}}",
+                "abigail_event8": "{{i18n:Abigail.Dialogue.09}}",
+                "abigail_event9": "{{i18n:Abigail.Dialogue.10}}",
+                "abigail_event10": "{{i18n:Abigail.Dialogue.11}}",
+                "abigail_event11": "{{i18n:Abigail.Dialogue.12}}",
+                "abigail_event12": "{{i18n:Abigail.Dialogue.13}}",
+                "abigail_event13": "{{i18n:Abigail.Dialogue.14}}",
+                "abigail_event14": "{{i18n:Abigail.Dialogue.15}}",
+            }
+        },
+        { //Abigail 14 heart crash fix
+            "Action": "EditData",
+            "Target": "data/events/backwoods",
+            "Entries": {
+                "6963327/f Abigail 3500/O Abigail/t 610 1700": "continue/-100 -100/farmer 39 14 0 golem 37 15 0 Abigail -100 23 0/makeInvisible 37 11 5 7/skippable/pause 1000/viewport 39 11 clamp true/move farmer 0 -3 0/doAction 39 10/pause 500/doAction 39 10/pause 1000/move farmer 1 0 0/playMusic none/pause 100/doAction 39 10/playSound rockGolemSpawn/move Golem 0 -4 0/doAction 39 10/move Golem 2 0 1/pause 500/faceDirection farmer 3/pause 300/playSound rockGolemHit/pause 100/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 700/showFrame Golem 5/specificTemporarySprite swordswipe 39 11/playSound swordswipe/pause 250/playSound hitEnemy/startJittering/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/pause 20/positionOffset farmer 8 0/playSound clubhit/stopJittering/pause 20/showFrame Golem 4/showFrame farmer 5/pause 1000/move Golem 1 0 1/warp Abigail 49 14/animate Golem false true 150 4 5 6 7/move Abigail -5 0 3/jump Abigail/animate Abigail false true 100 32/speak Abigail \"{{i18n:Abigail.14hearts.01}}\"/stopAnimation Abigail/speed Abigail 8/move Abigail -5 0 0/speed Abigail 8/move Abigail 0 -3 1/pause 250/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 39 11/playSound swordswipe/pause 250/playSound rockGolemHit/stopAnimation Golem/shake Golem 250/faceDirection Golem 3 true/pause 500/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 39 11/playSound swordswipe/pause 250/playSound rockGolemHit/stopAnimation Golem/shake Golem 250/pause 250/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 39 11/playSound swordswipe/pause 250/playSound rockGolemDie/specificTemporarySprite golemDie/warp Golem -100 -100/pause 750/playMusic echos/speed Abigail 4/move Abigail 1 0 1/pause 700/animate Abigail false true 100 39/pause 100/emote Abigail 28/pause 400/speak Abigail \"{{i18n:Abigail.14hearts.02}}\"/pause 1000/speak Abigail \"{{i18n:Abigail.14hearts.03}}\"/pause 1500/startJittering/pause 500/stopJittering/pause 1000/startJittering/pause 500/stopJittering/pause 1000/stopAnimation farmer/showFrame farmer 0/jump farmer/pause 250/stopAnimation Abigail/showFrame Abigail 4/pause 500/faceDirection farmer 3/speak Abigail \"{{i18n:Abigail.14hearts.04}}\"/pause 450/animate Abigail true true 100 33/positionOffset Abigail 8 0/positionOffset farmer -8 0/animate farmer true true 100 101/pause 1500/positionOffset farmer 8 0/positionOffset Abigail -8 0/stopAnimation farmer/stopAnimation Abigail/showFrame Abigail 4/pause 1300/faceDirection Abigail 2/pause 800/move Abigail 0 1 2/faceDirection farmer 2/pause 500/move farmer 0 1 3/emote Abigail 28/pause 1200/speak Abigail \"{{i18n:Abigail.14hearts.05}}\"/pause 700/faceDirection Abigail 1/pause 550/quickQuestion #{{i18n:Abigail.14hearts.06}}#{{i18n:Abigail.14hearts.07}}#{{i18n:Abigail.14hearts.08}}#{{i18n:Abigail.14hearts.09}}(break)speak Abigail \"{{i18n:Abigail.14hearts.10}}\"(break)speak Abigail \"{{i18n:Abigail.14hearts.11}}\"(break)speak Abigail \"{{i18n:Abigail.14hearts.12}}\"(break)speak Abigail \"{{i18n:Abigail.14hearts.13}}\"\\pause 600/pause 500/emote Abigail 40/pause 500/speak Abigail \"{{i18n:Abigail.14hearts.14}}\"/pause 500/animate Abigail true true 100 33/positionOffset Abigail 8 0/positionOffset farmer -8 0/animate farmer true true 100 101/specificTemporarySprite heart 40 11/pause 2000/positionOffset farmer 8 0/positionOffset Abigail -8 0/stopAnimation farmer/stopAnimation Abigail/showFrame Abigail 4/pause 1300/faceDirection Abigail 2/faceDirection farmer 2/pause 500/animate Abigail false true 100 0 1 2 3/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/positionOffset Abigail 0 2/pause 50/stopAnimation Abigail/pause 500/showFrame Abigail 26/pause 100/showFrame Abigail 27/pause 600/speak Abigail \"{{i18n:Abigail.14hearts.15}}\"/pause 600/fade/viewport -1000 -1000/pause 1000/playSound dirtyHit/pause 600/playSound dirtyHit/pause 600/playSound dirtyHit/pause 600/playSound dirtyHit/pause 2000/end dialogue Abigail \"{{i18n:Abigail.14hearts.16}}\""
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Backwoods",
+            "FromFile": "assets/Maps/MapPatches/Backwoods_GraveSite.tbin",
+            "ToArea": { 
+                "X": 34,
+                "Y": 4,
+                "Width": 3,
+                "Height": 5
+            },
+            "When": {
+                "HasSeenEvent": "6963327"
+            },
+            "Update": "OnLocationChange"
+        },
+    ]
+}

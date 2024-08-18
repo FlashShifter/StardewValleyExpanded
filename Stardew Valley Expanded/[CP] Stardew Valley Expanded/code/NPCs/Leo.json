@@ -1,0 +1,153 @@
+{
+	"Changes": [
+
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Leo",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Flower_Cookie FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Leo",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //LEO SCHEDULE EDITS AND FIXES V1
+			"Action": "EditData",
+			"Target": "characters/schedules/LeoMainland",
+			"Entries": {
+				"summer": "0 LeoTreeHouse 4 3 2/630 Mountain 27 24 2/940 Mountain 49 30 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"fall": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 90 3 1/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"spring": "0 LeoTreeHouse 4 3 2/630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 47 23 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"rain": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/1000 Tent 1 3 1 \"Strings\\schedules\\Leo:tent\"/1500 Mountain 18 7 1/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"winter_15": "0 LeoTreeHouse 4 3 2/1100 Mountain 30 9 3/1600 Beach 21 4 2 \"Strings\\schedules\\Leo:winter_15.000\"/2330 LeoTreeHouse 5 4 1 leo_sleep",
+				"summer": "0 LeoTreeHouse 4 3 2/630 Mountain 35 15 2/940 Mountain 48 24 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"fall": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 65 48 2/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"winter": "0 LeoTreeHouse 4 3 2/1100 Mountain 30 9 3/1400 ArchaeologyHouse 12 9 0 \"Strings\\schedules\\Leo:winter.000\"/2000 LeoTreeHouse 2 2 0/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Tue": "0 LeoTreeHouse 2 2 0/900 ArchaeologyHouse 18 12 0 leo_sit_up \"Strings\\schedules\\Leo:school\"/1400 Town 91 104 2/1620 Mountain 30 9 3 \"Strings\\schedules\\Leo:dinner\"/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Sat": "0 LeoTreeHouse 4 3 2/940 Town 34 90 2/1200 Town 19 14 2 square_5_1/1700 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Sun": "0 IslandHut 7 7 0/1030 IslandSouth 38 31 2/1330 IslandEast 7 44 2/1700 IslandNorth 53 71 2/2000 IslandHut 11 10 1 leo_sleep",
+				"Mon": "0 IslandHut 7 7 0/930 IslandSouth 7 9 2/1400 IslandEast 21 11 2/1700 IslandHut 6 6 0/2100 IslandHut 11 10 1 leo_sleep",
+				"spring": "0 LeoTreeHouse 4 3 2/630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 44 18 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep"
+			}
+		},
+		{ //LEO SCHEDULE EDITS AND FIXES V2
+			"Action": "EditData",
+			"Target": "characters/schedules/Leo",
+			"When": {
+				"HasSeenEvent": "6497428"
+			},
+			"Entries": {
+				"summer": "0 LeoTreeHouse 4 3 2/630 Mountain 27 24 2/940 Mountain 49 30 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"fall": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 90 3 1/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"spring": "0 LeoTreeHouse 4 3 2/630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 47 23 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"rain": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/1000 Tent 1 3 1 \"Strings\\schedules\\Leo:tent\"/1500 Mountain 18 7 1/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"winter_15": "0 LeoTreeHouse 4 3 2/1100 Mountain 30 9 3/1600 Beach 21 4 2 \"Strings\\schedules\\Leo:winter_15.000\"/2330 LeoTreeHouse 5 4 1 leo_sleep",
+				"summer": "0 LeoTreeHouse 4 3 2/630 Mountain 35 15 2/940 Mountain 48 24 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"fall": "0 LeoTreeHouse 4 3 2/700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 65 48 2/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"winter": "0 LeoTreeHouse 4 3 2/1100 Mountain 30 9 3/1400 ArchaeologyHouse 12 9 0 \"Strings\\schedules\\Leo:winter.000\"/2000 LeoTreeHouse 2 2 0/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Tue": "0 LeoTreeHouse 2 2 0/900 ArchaeologyHouse 18 12 0 leo_sit_up \"Strings\\schedules\\Leo:school\"/1400 Town 91 104 2/1620 Mountain 30 9 3 \"Strings\\schedules\\Leo:dinner\"/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Sat": "0 LeoTreeHouse 4 3 2/940 Town 34 90 2/1200 Town 19 14 2 square_5_1/1700 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+				"Sun": "0 IslandHut 7 7 0/1030 IslandSouth 38 31 2/1330 IslandEast 7 44 2/1700 IslandNorth 53 71 2/2000 IslandHut 11 10 1 leo_sleep",
+				"Mon": "0 IslandHut 7 7 0/930 IslandSouth 7 9 2/1400 IslandEast 21 11 2/1700 IslandHut 6 6 0/2100 IslandHut 11 10 1 leo_sleep",
+				"spring": "0 LeoTreeHouse 4 3 2/630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 44 18 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep"
+			}
+		},
+		{ //LEO EVENT - 'Technically Birds' (player has not seen Morgan's 10 heart event)
+			"Action": "EditData",
+			"Target": "data/events/forest",
+			"Entries": {
+				"7143050/t 900 1600/z winter/w sunny/f Leo 1250/f Vincent 1250/f Jas 1250/f Morgan 1250/k 5978939": "spring_day_ambient/-500 -500/farmer -100 -100 0 Morgan 49 44 2 Leo 43 46 1 Jas 48 47 0 Vincent 50 47 0 Leah 111 36 2 Marnie 103 16 0 Andy 86 69 1 Sophia 88 69 3 Camilla 19 107 2 Krobus 95 100 2/positionOffset Vincent -7 -16/pause 1000/viewport 49 47 true/skippable/pause 1300/speak Morgan \"{{i18n:Leo.10heart.01}}\"/pause 400/shake Vincent 500/pause 200/speak Vincent \"{{i18n:Leo.10heart.02}}\"/pause 200/shake Jas 400/pause 200/speak Jas \"{{i18n:Leo.10heart.03}}\"/pause 850/speak Morgan \"{{i18n:Leo.10heart.04}}\"/pause 400/jump Vincent/pause 775/speak Vincent \"{{i18n:Leo.10heart.05}}\"/pause 650/speak Morgan \"{{i18n:Leo.10heart.06}}\"/pause 900/showFrame Morgan 18 true/pause 700/showFrame Morgan 16 true/pause 800/shake Morgan 600/pause 400/playSound healSound/glow 0 200 0/pause 1600/shake Morgan 500/pause 250/playSound healSound/glow 0 0 200/pause 1000/doAction 42 47/pause 300/doAction 42 47/move Leo 2 0 1 true/pause 800/shake Morgan 500/pause 200/playSound healSound/glow 190 0 0/pause 700/faceDirection Leo 2 true/pause 200/faceDirection Leo 3 true/pause 200/speed Leo 4/move Leo -2 0 1 true/pause 800/doAction 42 47/pause 800/faceDirection Jas 3 true/pause 500/emote Jas 8 true/pause 300/shake Morgan 500/pause 250/playSound healSound/glow 125 125 125/pause 1200/showFrame Morgan 18 true/pause 500/showFrame Morgan 0 true/pause 500/speak Vincent \"{{i18n:Leo.10heart.07}}\"/pause 500/speak Morgan \"{{i18n:Leo.10heart.08}}\"/speak Jas \"{{i18n:Leo.10heart.09}}\"/pause 500/speed Jas 1/move Jas -1 0 3/pause 500/speak Jas \"{{i18n:Leo.10heart.10}}\"/pause 400/faceDirection Vincent 3 true/pause 250/speed Morgan 1/move Morgan 0 2 3 true/pause 200/emote Vincent 8 true/pause 500/doAction 42 47/pause 400/doAction 42 47/pause 300/emote Morgan 8 true/pause 700/speed Leo 1/move Leo 2 0 2/speed Leo 1/move Leo 0 1 1/pause 400/speak Leo \"{{i18n:Leo.10heart.11}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.12}}\"/pause 500/shake Leo 300/pause 650/move Leo 1 0 0/move Leo 0 -1 1 true/pause 350/faceDirection Jas 0 true/pause 100/move Leo 1 0 1 true/pause 175/faceDirection Jas 1 true/pause 550/speak Jas \"{{i18n:Leo.10heart.13}}\"/pause 400/shake Morgan 250/pause 150/speak Morgan \"{{i18n:Leo.10heart.14}}\"/pause 400/speak Leo \"{{i18n:Leo.10heart.15}}\"/pause 250/speak Morgan \"{{i18n:Leo.10heart.16}}\"/pause 500/faceDirection Jas 0 true/pause 500/speak Jas \"{{i18n:Leo.10heart.17}}\"/pause 400/faceDirection Leo 2 true/pause 400/speak Leo \"{{i18n:Leo.10heart.18}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.19}}\"/pause 400/emote Leo 40 true/pause 700/speak Leo \"{{i18n:Leo.10heart.20}}\"/pause 500/speak Jas \"{{i18n:Leo.10heart.21}}\"/pause 300/speak Leo \"{{i18n:Leo.10heart.22}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.23}}\"/pause 400/jump Leo/pause 800/speak Leo \"{{i18n:Leo.10heart.24}}\"/pause 500/globalFade/viewport -1000 -1000/warp Jas 97 16/warp Leo 97 17/warp Marnie 99 17/faceDirection Jas 1 true/faceDirection Leo 1 true/faceDirection Marnie 3 true/faceDirection Morgan 1 true/faceDirection Vincent 1 true/viewport 49 47 true/pause 1500/speak Vincent \"{{i18n:Leo.10heart.25}}\"/pause 600/faceDirection Vincent 0 true/pause 700/faceDirection Morgan 2 true/pause 500/speak Vincent \"{{i18n:Leo.10heart.26}}\"/pause 500/speak Morgan \"{{i18n:Leo.10heart.27}}\"/addConversationTopic leoChickens/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 500/end",
+			},
+		},
+		{ //LEO EVENT - 'Technically Birds' (player has seen Morgan's 10 heart event)
+			"Action": "EditData",
+			"Target": "data/events/forest",
+			"Entries": {
+				"7143050/t 900 1600/z winter/w sunny/f Leo 1250/f Vincent 1250/f Jas 1250/f Morgan 1250/e 5978939": "spring_day_ambient/-500 -500/farmer -100 -100 0 Morgan 49 44 2 Leo 43 46 1 Jas 48 47 0 Vincent 50 47 0 Leah 111 36 2 Marnie 103 16 0 Andy 86 69 1 Sophia 88 69 3 Camilla 19 107 2 Krobus 95 100 2/positionOffset Vincent -7 -16/pause 1000/viewport 49 47 true/skippable/pause 1300/speak Morgan \"{{i18n:Leo.10heart.01}}\"/pause 400/shake Vincent 500/pause 200/speak Vincent \"{{i18n:Leo.10heart.02}}\"/pause 200/shake Jas 400/pause 200/speak Jas \"{{i18n:Leo.10heart.03}}\"/pause 850/speak Morgan \"{{i18n:Leo.10heart.04}}\"/pause 400/jump Vincent/pause 775/speak Vincent \"{{i18n:Leo.10heart.05}}\"/pause 650/speak Morgan \"{{i18n:Leo.10heart.06}}\"/pause 900/showFrame Morgan 18 true/pause 700/showFrame Morgan 16 true/pause 800/shake Morgan 600/pause 400/playSound healSound/glow 0 200 0/pause 1600/shake Morgan 500/pause 250/playSound healSound/glow 0 0 200/pause 1000/doAction 42 47/pause 300/doAction 42 47/move Leo 2 0 1 true/pause 800/shake Morgan 500/pause 200/playSound healSound/glow 190 0 0/pause 700/faceDirection Leo 2 true/pause 200/faceDirection Leo 3 true/pause 200/speed Leo 4/move Leo -2 0 1 true/pause 800/doAction 42 47/pause 800/faceDirection Jas 3 true/pause 500/emote Jas 8 true/pause 300/shake Morgan 500/pause 250/playSound healSound/glow 125 125 125/pause 1200/showFrame Morgan 18 true/pause 500/showFrame Morgan 0 true/pause 500/speak Vincent \"{{i18n:Leo.10heart.07}}\"/pause 500/speak Morgan \"{{i18n:Leo.10heart.08}}\"/speak Jas \"{{i18n:Leo.10heart.09}}\"/pause 500/speed Jas 1/move Jas -1 0 3/pause 500/speak Jas \"{{i18n:Leo.10heart.10}}\"/pause 400/faceDirection Vincent 3 true/pause 250/speed Morgan 1/move Morgan 0 2 3 true/pause 200/emote Vincent 8 true/pause 500/doAction 42 47/pause 400/doAction 42 47/pause 300/emote Morgan 8 true/pause 700/speed Leo 1/move Leo 2 0 2/speed Leo 1/move Leo 0 1 1/pause 400/speak Leo \"{{i18n:Leo.10heart.11}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.12}}\"/pause 500/shake Leo 300/pause 650/move Leo 1 0 0/move Leo 0 -1 1 true/pause 350/faceDirection Jas 0 true/pause 100/move Leo 1 0 1 true/pause 175/faceDirection Jas 1 true/pause 550/speak Jas \"{{i18n:Leo.10heart.13}}\"/pause 400/shake Morgan 250/pause 150/speak Morgan \"{{i18n:Leo.10heart.14}}\"/pause 400/speak Leo \"{{i18n:Leo.10heart.15}}\"/pause 250/speak Morgan \"{{i18n:Leo.10heart.Alt.16}}\"/pause 500/faceDirection Jas 0 true/pause 500/speak Jas \"{{i18n:Leo.10heart.17}}\"/pause 400/faceDirection Leo 2 true/pause 400/speak Leo \"{{i18n:Leo.10heart.18}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.19}}\"/pause 400/emote Leo 40 true/pause 700/speak Leo \"{{i18n:Leo.10heart.20}}\"/pause 500/speak Jas \"{{i18n:Leo.10heart.21}}\"/pause 300/speak Leo \"{{i18n:Leo.10heart.22}}\"/pause 300/speak Jas \"{{i18n:Leo.10heart.23}}\"/pause 400/jump Leo/pause 800/speak Leo \"{{i18n:Leo.10heart.24}}\"/pause 500/globalFade/viewport -1000 -1000/warp Jas 97 16/warp Leo 97 17/warp Marnie 99 17/faceDirection Jas 1 true/faceDirection Leo 1 true/faceDirection Marnie 3 true/faceDirection Morgan 1 true/faceDirection Vincent 1 true/viewport 49 47 true/pause 1500/speak Vincent \"{{i18n:Leo.10heart.25}}\"/pause 600/faceDirection Vincent 0 true/pause 700/faceDirection Morgan 2 true/pause 500/speak Vincent \"{{i18n:Leo.10heart.26}}\"/pause 500/speak Morgan \"{{i18n:Leo.10heart.27}}\"/addConversationTopic leoChickens/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 500/end",
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jas",
+			"Entries": {
+				"leoChickens": "{{i18n:Leo.Dialogue.Jas}}",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leo",
+			"Entries": {
+				"leoChickens": "{{i18n:Leo.Dialogue.Leo}}"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Vincent",
+			"Entries": {
+				"leoChickens": "{{i18n:Leo.Dialogue.Vincent}}"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Morgan",
+			"Entries": {
+				"leoChickens": "{{i18n:Leo.Dialogue.Morgan}}"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries": {
+				"leoChickens": "{{i18n:Leo.Dialogue.Marnie}}"
+			}
+		},
+		{ //Fixes Leo pathing in town
+			"Action": "EditData",
+			"Target": "data/events/mountain",
+			"Entries": {
+				"8959199/w sunny/t 600 1900/e 6497428/f Leo 2250/F": "sad_kid/-1000 -1000/farmer -100 -100 2 Linus 30 9 3 Leo 28 9 1 Penny -100 -100 2 Jas -100 -100 3 Vincent -100 -100 1/skippable/specificTemporarySprite LeoLinusCooking/animate Linus true true 500 20 21/viewport 26 9 clamp true/viewport move 1 0 10000/pause 1000/textAboveHead Leo \"{{i18n:Leo.5heart.01}}\"/pause 4000/textAboveHead Linus \"{{i18n:Leo.5heart.02}}\"/pause 1500/emote Leo 28 true/pause 500/fade/viewport -1000 -1000/changeLocation ArchaeologyHouse/warp Penny 18 9/warp Linus -100 -100/showFrame Penny 18/warp Jas 19 10/showFrame Jas 22/warp Vincent 16 10/showFrame Vincent 24/warp Leo 18 12/showFrame Leo 24/pause 500/viewport 13 10 clamp true/viewport move 1 0 8000/pause 2000/textAboveHead Penny \"{{i18n:Leo.5heart.03}}\"/pause 1000/emote Leo 20 true/pause 2000/fade/viewport -1000 -1000/warp Penny -100 -100/warp Jas -100 -100/warp Jas -100 -100/changeLocation Beach/warp Leo 42 36/showFrame Leo 0/addTemporaryActor Willy 16 64 43 38 2/animate Willy false true 500 8 9 10 11/viewport 36 36 clamp true/viewport move 1 0 8000/pause 1000/emote Leo 40/pause 2000/shake Willy 3000/showFrame Leo 16/jump Leo/playSound waterSlosh/animate Willy false true 200 17 18/pause 500/specificTemporarySprite LeoWillyFishing/playSound dropItemInWater/textAboveHead Willy \"{{i18n:Leo.5heart.04}}\"/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/fade/viewport -1000 -1000/changeLocation Town/warp Vincent -100 -100/warp Willy -100 -100/warp Jas 18 16/animate Jas false true 80 16 17 18 19/warp Leo 25 15/faceDirection Leo 3/viewport 18 16 clamp true/viewport move 1 0 9000/pause 3000/doAction 24 16/pause 500/doAction 24 16/stopAnimation Jas/faceDirection Jas 1/emote Jas 8/doAction 24 16/showFrame Leo 16/shake Leo 3000/jump Leo/positionOffset Leo 4 0/pause 100/positionOffset Leo 4 0/pause 100/positionOffset Leo 4 0/pause 100/speed Leo 4/emote Jas 16 true/advancedMove Leo false 4 0 0 4 7 0/pause 2000/fade/viewport -1000 -1000/pause 600/changeLocation LeoTreeHouse/pause 500/warp Vincent -100 -100/warp Jas -1000 -1000/viewport 3 3 true/pause 4000/stopAnimation Leo/faceDirection Leo 0/warp Leo 3 8/playSound doorClose/move Leo 0 -3 0/move Leo -1 0 3/doAction 1 5/pause 500/speak Leo \"{{i18n:Leo.5heart.05}}\"/pause 1000/faceDirection Leo 2/pause 1000/showFrame Leo 18/pause 1000/speak Leo \"{{i18n:Leo.5heart.06}}\"/pause 400/showFrame Leo 0/speak Leo \"{{i18n:Leo.5heart.07}}\"/pause 400/faceDirection Leo 3/speak Leo \"{{i18n:Leo.5heart.08}}\"/pause 500/doAction 1 5/pause 500/doAction 1 5/pause 1000/move Leo 0 -3 0/pause 2000/speak Leo \"{{i18n:Leo.5heart.09}}\"/pause 600/faceDirection Leo 1 true/pause 140/faceDirection Leo 2/pause 800/speak Leo \"{{i18n:Leo.5heart.10}}\"/pause 1000/doAction 1 5/pause 1000/fade/viewport -1000 -1000/pause 1500/end"
+			}
+		},
+	]
+}

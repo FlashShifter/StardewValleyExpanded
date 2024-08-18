@@ -1,0 +1,116 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Emily",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Emily",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Emily",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Emily",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //EMILY SCHEDULE - Sandy visits
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+				"HasSeenEvent |contains=5553210": false
+			},
+			"Entries": {
+				"6": "700 HaleyHouse 21 16 0/810 HaleyHouse 13 24 0/1010 HaleyHouse 15 20 3/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 99 68 0/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 HaleyHouse 21 4 3 emily_sleep",
+				"27": "700 HaleyHouse 21 16 0/810 HaleyHouse 13 24 0/1010 HaleyHouse 15 20 3/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 99 68 0/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 HaleyHouse 21 4 3 emily_sleep",
+			},
+		},
+		{ //EMILY SCHEDULE - Sandy visits
+			"Action": "EditData",
+			"Target": "characters/schedules/Emily",
+			"When": {
+				"Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+				"HasSeenEvent": "5553210"
+			},
+			"Entries": {
+				"6": "700 HaleyHouse 21 16 0/810 HaleyHouse 13 24 0/1010 HaleyHouse 15 20 3/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 HaleyHouse 21 4 3 emily_sleep",
+				"27": "700 HaleyHouse 21 16 0/810 HaleyHouse 13 24 0/1010 HaleyHouse 15 20 3/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 HaleyHouse 21 4 3 emily_sleep",
+			},
+		},
+		{ //EMILY EVENT
+			"Action": "EditData",
+			"Target": "data/events/saloon",
+			"Entries": {
+				"1000008/d Mon Tue Wed Thu Sat Sun/f Emily 1250/t 1700 2200": "Saloon1/-500 -500/farmer 14 24 0 Pierre 16 20 1 Caroline 17 20 3 Jodi 18 20 0 Willy 17 22 2 Clint 19 23 3 Andy 3 22 3 Shane 21 17 2 Robin 22 22 1 Wizard 7 6 1 MarlonFay 8 6 3 Demetrius 23 22 3 Lewis 9 22 3 Marnie 8 22 1 Pam 7 18 1 Elliott 4 19 2 Leah 2 20 1 Gus 10 18 2 Emily 14 17 0/skippable/positionOffset Andy 0 15/animate Andy false true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 26 25 24 24/animate Elliott false true 200 16 17 18 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/animate Lewis false true 200 19 22 23 22 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19/animate Marnie false true 200 20 21 22 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/animate Robin false true 500 20 21 22 21/animate Demetrius false true 500 24 25 26 25/animate Shane false true 200 20 21 22 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/showFrame MarlonFay 12/pause 300/viewport 14 19 true/pause 150/playSound doorClose/skippable/pause 400/move Emily 0 0 2/pause 200/textAboveHead Emily \"{{i18n:Emily.Event.01}}\"/move farmer 0 -4 0/emote farmer 32/pause 500/speak Emily \"{{i18n:Emily.Event.02}}\"/pause 500/move Emily 0 0 3/pause 500/speak Emily \"{{i18n:Emily.Event.03}}\"/pause 700/move Gus 0 0 1/pause 500/speak Gus \"{{i18n:Emily.Event.04}}\"/pause 300/textAboveHead MarlonFay \"{{i18n:Emily.Event.05}}\"/pause 200/move Gus 0 0 2/pause 400/move Emily 0 0 2/pause 300/move Emily 0 1 2/pause 300/speak Emily \"{{i18n:Emily.Event.06}}\"/pause 500/speak Emily \"{{i18n:Emily.Event.07}}\"/pause 500/speak Emily \"{{i18n:Emily.Event.08}}\"/pause 500/move Emily 0 -1 0/pause 300/playSound openBox/pause 400/playSound Milking/pause 250/move Gus -1 0 3/pause 200/move Emily -2 0 0/pause 400/playSound dropItemInWater/pause 200/textAboveHead Gus \"{{i18n:Emily.Event.09}}\"/playSound wateringCan/pause 400/move Gus 2 0 0/move Gus 0 -1 0/playSound waterSlosh/pause 500/emote Emily 56/pause 500/move Emily 2 0 2/move Emily 0 1 2/pause 350/speak Emily \"{{i18n:Emily.Event.10}}\"/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 300/farmerEat 350/pause 300/emote farmer 16/move Gus 0 1 3/move Gus -2 0 3/pause 200/textAboveHead Gus \"{{i18n:Emily.Event.11}}\"/textAboveHead Wizard \"{{i18n:Emily.Event.12}}\"/faceDirection farmer 1 true/pause 250/faceDirection farmer 0/pause 500/question fork0 \"{{i18n:Emily.Event.13}}\"/fork 1000008_Amazing/pause 500/emote farmer 12/pause 300/emote Emily 28/pause 300/speak Emily \"{{i18n:Emily.Event.14}}\"/pause 500/move Emily 0 -1 0/move Emily -2 0 0/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Emily -250/end dialogue Emily \"{{i18n:Emily.Event.15}}\"",
+				"1000008_Amazing": "pause 500/speak Emily \"{{i18n:Emily.Event.Amazing.01}}\"/pause 300/faceDirection Pierre 3/pause 350/textAboveHead Pierre \"{{i18n:Emily.Event.Amazing.02}}\"/pause 300/faceDirection Emily 1/pause 300/textAboveHead MarlonFay \"{{i18n:Emily.Event.Amazing.03}}\"/emote Emily 16/pause 400/speak Emily \"{{i18n:Emily.Event.Amazing.04}}\"/pause 300/faceDirection Emily 2/pause 250/faceDirection Pierre 0/pause 250/speak Emily \"{{i18n:Emily.Event.Amazing.05}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Emily 50/end dialogue Emily \"{{i18n:Emily.Event.Amazing.06}}\""
+			},
+		},
+		{ //EMILY EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Emily",
+			"Entries": {
+				"emily_event1": "{{i18n:Emily.Dialogue.01}}",
+				"emily_event2": "{{i18n:Emily.Dialogue.02}}",
+				"emily_event3": "{{i18n:Emily.Dialogue.03}}",
+				"emily_event4": "{{i18n:Emily.Dialogue.04}}",
+				"emily_event5": "{{i18n:Emily.Dialogue.05}}",
+			}
+		},
+		{ //Emily 10 hrt event fix
+			"Action": "EditData",
+			"Target": "data/events/woods",
+			"Entries": {
+				"2123343/e 2111294/t 2200 2540/w sunny/F/D Emily": "nightTime/-1000 -1000/farmer 47 59 3 Emily 44 59 1/skippable/addTemporaryActor EmilyTent 64 160 44 55 2 false/AddTemporaryActor EmilyCampFire 32 32 45 60 2 false/AddTemporaryActor EmilyCampingSet 32 32 42 58 2 false/positionOffset EmilyCampingSet 0 10 true/animate EmilyCampFire false true 150 0 1 2 3/addLantern 1000 45 59 1/addLantern 1000 46 59 1/addLantern 1000 45 60 1/addLantern 1000 46 60 1/makeInvisible 32 54 19 12/positionOffset EmilyCampingSet -8 10 true/viewport 45 59 true/pause 5000/faceDirection Emily 2/pause 1000/faceDirection Emily 3/pause 1500/faceDirection Emily 2 true/pause 250/faceDirection Emily 1 true/pause 1000/speak Emily \"{{i18n:Emily.10heart.01}}\"/pause 500/faceDirection farmer 2/pause 500/faceDirection Emily 2/pause 1000/speak Emily \"{{i18n:Emily.10heart.02}}\"/pause 1000/playSound grunt/pause 800/faceDirection Emily 3 true/pause 500/emote Emily 8 true/pause 500/faceDirection farmer 3/pause 850/faceDirection Emily 0 true/pause 350/move Emily 0 -1 1/move Emily 1 0 2/faceDirection farmer 0 true/pause 400/move farmer 0 -1 3/move farmer -1 0 2/pause 2000/shake Emily 1000/pause 1250/speak Emily \"{{i18n:Emily.10heart.03}}\"/pause 1000/faceDirection Emily 1/pause 500/faceDirection Emily 2/pause 500/animate Emily false true 250 52 53/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/pause 250/playSound dwop/positionOffset Emily 4 0/pause 250/stopAnimation Emily/pause 3000/showFrame Emily 55/pause 1000/eyes 1 -8500/pause 2000/emote farmer 32/pause 500/pause 1000/playSound leafrustle/pause 2000/addTemporaryActor Bear 32 32 32 58 1 true character/playSound leafrustle/pause 1000/move Bear 7 0 1/pause 1000/shake Bear 1000/playSound grunt/faceDirection farmer 3 true/faceDirection Emily 3 true/pause 1200/showFrame Emily 26/showFrame farmer 0/faceDirection farmer 2 true/showFrame farmer 94/jump Emily/jump farmer/pause 100/positionOffset Emily -4 0/pause 100/positionOffset Emily -4 0/pause 100/positionOffset Emily -4 0/pause 100/positionOffset Emily -4 0/pause 100/positionOffset Emily -4 0/pause 100/jump Bear/positionOffset Emily -4 0/pause 400/speed Emily 4/speed farmer 4/move Emily 0 -1 0/warp Emily -1000 -1000/playSound Ship/move farmer 0 -1 0/warp farmer -1000 -1000/playSound Ship/pause 1000/shake EmilyTent 500/pause 1000/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 -2 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/positionOffset Bear 2 0 true/pause 40/pause 1000/playSound grunt/shake Bear 500/pause 800/shake Bear 500/pause 1000/faceDirection Bear 2 true/pause 300/faceDirection Bear 3 true/pause 600/move Bear -9 0 2 true/pause 4500/playSound leafrustle/warp Bear -1000 -1000/playSound leafrustle/pause 1000/speak Emily \"{{i18n:Emily.10heart.04}}\"/pause 1000/shake EmilyTent 250/playSound grassyStep/pause 500/shake EmilyTent 250/pause 500/shake EmilyTent 250/playSound grassyStep/pause 500/shake EmilyTent 250/pause 500/speak Emily \"{{i18n:Emily.10heart.05}}\"/pause 2000/speak Emily \"{{i18n:Emily.10heart.06}}\"/pause 2000/shake EmilyTent 500/playSound grassyStep/pause 500/shake EmilyTent 250/pause 500/shake EmilyTent 250/playSound grassyStep/pause 500/shake EmilyTent 250/pause 500/shake EmilyTent 250/playSound grassyStep/pause 500/shake EmilyTent 250/pause 1200/shake EmilyTent 250/playSound grassyStep/pause 500/shake EmilyTent 250/pause 1000/playSound woodyHit/pause 1500/viewport move 0 -1 6500 true/pause 3500/globalFade/viewport -2000 -2000/pause 1000/mail EmilyDoneCamping/end newDay"
+			},
+		},
+		{ //64x160
+			"Action": "Load",
+			"Target": "Characters/EmilyTent",
+			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyTent.png"
+		},
+		{ //32x32
+			"Action": "Load",
+			"Target": "Characters/EmilyCampfire",
+			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyCampfire.png"
+		},
+		{ //32x32
+			"Action": "Load",
+			"Target": "Characters/EmilyCampingSet",
+			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyCampingSet.png"
+		},
+		{ //Adjusts haley's position and topaz, adds olivia
+			"Action": "EditData",
+			"Target": "data/events/haleyhouse",
+			"Entries": {
+				"150938/n emilyStones": "SunRoom/-1000 -1000/farmer -100 -100 0 Emily 15 17 2 Haley 12 19 2 Abigail 14 20 2 Olivia 15 20 2 Caroline 13 20 2 Marnie 16 19 2/skippable/positionOffset Haley 0 32/showFrame Olivia 27/showFrame Emily 54/showFrame Marnie 35/showFrame Haley 34/hideShadow Haley true/showFrame Abigail 53/showFrame Caroline 24/addObject 14 21 66 1/addObject 16 20 70/addObject 15 21 72/addObject 12 20 68 1/addObject 15 18 64 1/addObject 13 21 60 1/positionOffset Abigail -5 20/positionOffset Marnie 10 15/positionOffset Haley -3 12/positionOffset Emily 3 12/viewport 14 19 true/pause 4000/speak Emily \"{{i18n:Emily.SpecialOrder.01}}\"/pause 3000/speak Emily \"{{i18n:Emily.SpecialOrder.02}}\"/pause 3000/speak Emily \"{{i18n:Emily.SpecialOrder.03}}\"/pause 1000/textAboveHead Abigail \"{{i18n:Emily.SpecialOrder.04}}\"/pause 2000/textAboveHead Marnie \"{{i18n:Emily.SpecialOrder.05}}\"/pause 2000/textAboveHead Caroline \"{{i18n:Emily.SpecialOrder.06}}\"/pause 4000/emote Haley 24/pause 1000/emote Haley 24 true/viewport move 1 -1 7000/pause 4000/fade/viewport -1000 -1000/message \"{{i18n:Emily.SpecialOrder.07}}\"/end"
+			}
+		},
+	]
+}

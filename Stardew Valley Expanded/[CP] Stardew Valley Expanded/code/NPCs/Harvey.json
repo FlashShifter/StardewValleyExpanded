@@ -1,0 +1,111 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Harvey",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Harvey",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Bearberrys FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Harvey",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Frog",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Harvey",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Flower_Cookie FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Harvey",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //HARVEY SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Harvey",
+            "Entries": {
+                "21": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1340 Hospital 2 5 0/1730 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 1 harvey_sleep",
+                "summer": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 Town 30 34 2 square_7_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 1 harvey_sleep",
+                "spring": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 Town 10 64 2 square_5_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 1 harvey_sleep"
+            },
+        },
+        { //HARVEY EVENT
+            "Action": "EditData",
+            "Target": "data/events/hospital",
+            "Entries": {
+                "1000003/f Harvey 1250/k 528052/p Harvey/t 900 1300": "jaunty/-500 -500/farmer 10 12 0 Harvey 2 5 0/pause 300/skippable/viewport 6 7 true/move farmer 0 -2 3/textAboveHead Harvey \"{{i18n:Harvey.Event.01}}\"/move farmer -5 0 0/doAction 5 9/pause 200/textAboveHead Harvey \"{{i18n:Harvey.Event.02}}\"/move farmer 0 -5 3/move farmer -1 0 3/emote farmer 8/speak Harvey \"{{i18n:Harvey.Event.03}}\"/pause 500/move Harvey 0 0 1/emote Harvey 16/speak Harvey \"{{i18n:Harvey.Event.04}}\"/pause 500/move Harvey 0 0 0/pause 1000/move Harvey 0 0 1/pause 500/speak Harvey \"{{i18n:Harvey.Event.05}}\"/pause 100/question fork0 \"{{i18n:Harvey.Event.06}}#{{i18n:Harvey.Event.07}}#{{i18n:Harvey.Event.08}}\"/fork 1000003_KeepSecret/pause 500/speak Harvey \"{{i18n:Harvey.Event.09}}\"/pause 1000/move Harvey 0 0 0/pause 500/speak Harvey \"{{i18n:Harvey.Event.10}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Harvey -250/end dialogue Harvey \"{{i18n:Harvey.Event.11}}\"",
+                "1000003_KeepSecret": "friendship Harvey 50/pause 500/speak Harvey \"{{i18n:Harvey.Event.1000003_KeepSecret.01}}\"/pause 700/speak Harvey \"{{i18n:Harvey.Event.1000003_KeepSecret.02}}\"/speak Harvey \"{{i18n:Harvey.Event.1000003_KeepSecret.03}}\"/pause 1000/move Harvey 0 0 0/pause 500/emote Harvey 40/pause 500/move Harvey 0 0 1/speak Harvey \"{{i18n:Harvey.Event.1000003_KeepSecret.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end position 10 10",
+            },
+        },
+        { //HARVEY EVENT DIALOGUE ADDITIONS
+            "Action": "EditData",
+            "Target": "characters/dialogue/Harvey",
+            "Entries": {
+                "harvey_event1": "{{i18n:Harvey.Dialogue.01}}",
+                "harvey_event2": "{{i18n:Harvey.Dialogue.02}}",
+            }
+        },
+        { //HARVEY 10 HEART EVENT CHANGE
+            "Action": "EditData",
+            "Target": "data/events/Town",
+            "Entries": {
+                "528013/f Harvey 2500/t 600 1700/n harveyBalloon": "continue/-300 -300/Harvey -100 -100 0 farmer 90 72 1/skippable/viewport 90 72 true/viewport move 2 0 6000 true/move farmer 12 0 1 true/pause 3500/globalFade/viewport -1000 -1000/changeLocation Custom_ShearwaterBridge/warp farmer 20 21/viewport 20 21 true/viewport move 2 0 6000 true/move farmer 12 0 1 true/pause 3500/globalFade/viewport -1000 -1000/halt/changeLocation Custom_GrampletonFields_Small/playMusic playful/warp farmer 16 42/faceDirection farmer 1/warp Harvey 24 41/faceDirection Harvey 0/viewport 24 40 true/move farmer 8 0 0/pause 500/faceDirection Harvey 3 true/pause 200/faceDirection Harvey 2/pause 250/speak Harvey \"{{i18n:Harvey.10heart3.01}}\"/faceDirection Harvey 0/jump Harvey/pause 800/speak Harvey \"{{i18n:Harvey.10heart3.02}}\"/emote farmer 8/move Harvey -1 0 1/move farmer -2 0 0/move farmer 0 -1 1/addTemporaryActor Marcello 16 32 25 19 2 true/positionOffset Marcello 36 558/animate Marcello false true 400 16 17/specificTemporarySprite marcelloLand/null/pause 1000/stopAnimation Marcello/pause 500/message \"{{i18n:Harvey.10heart3.03}}\"/pause 1000/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/jump Marcello 12/move Marcello 0 3 3/move Marcello -2 0 0/faceDirection Harvey 2/faceDirection farmer 2/message \"{{i18n:Harvey.10heart3.04}}\"/faceDirection Marcello 3/faceDirection Marcello 3/message \"{{i18n:Harvey.10heart3.05}}\"/pause 600/globalFade/viewport -1000 -1000 true/warp Marcello -100 -100/viewport 24 40 true/faceDirection farmer 1/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:Harvey.10heart3.06}}\"/pause 500/emote Harvey 40/pause 300/speak Harvey \"{{i18n:Harvey.10heart3.07}}\"/pause 500/speak Harvey \"{{i18n:Harvey.10heart3.08}}\"/pause 400/move farmer 0 1 1/faceDirection Harvey 1/move farmer 3 0 0/move farmer 0 -1 0/jump farmer 14/move farmer 0 -1 2/move Harvey 0 1 1/move Harvey 3 0 0/move Harvey 0 -1 0/jump Harvey 14/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/playMusic none/cutscene balloonDepart/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/viewport -2000 -2000/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"{{i18n:Harvey.10heart3.09}}\"/shake Harvey 2000/pause 800/speak Harvey \"{{i18n:Harvey.10heart3.10}}\"/emote Harvey 28/pause 500/speak Harvey \"{{i18n:Harvey.10heart3.11}}\"/pause 1000/speak Harvey \"{{i18n:Harvey.10heart3.12}}\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"{{i18n:Harvey.10heart3.13}}\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"{{i18n:Harvey.10heart3.14}}\"/faceDirection farmer 2/pause 3000/speak Harvey \"{{i18n:Harvey.10heart3.15}}\"/pause 400/faceDirection Harvey 3/faceDirection farmer 1/playMusic none/pause 500/speak Harvey \"{{i18n:Harvey.10heart3.16}}\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"{{i18n:Harvey.10heart3.17}}\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 5000/globalFade/viewport -1000 -1000/pause 2000/speak Harvey \"{{i18n:Harvey.10heart3.18}}\"/pause 2000/end dialogue Harvey \"{{i18n:Harvey.10heart3.19}}\"",
+            }
+        },
+        { //Removes harvey railroad event
+            "Action": "EditData",
+            "Target": "data/events/Farmhouse",
+            "Entries": {
+                "528052/D Harvey": "continue/-500 -500/farmer -100 -100 2/pause 1/end",
+            }
+        },
+        { //ADD OLIVIA TO HARVEY AEROBICS CLASS
+            "Action": "EditData",
+            "Target": "data/events/seedshop",
+            "Entries": {
+                "58/f Harvey 1500/t 1100 1500": "aerobics/-1000 -1000/farmer 14 12 1 Harvey 23 20 0 Marnie 23 18 0 Emily 23 16 0 Robin 25 18 0 Pam 25 16 0 Olivia 25 20 0 Caroline 24 14 2 Jodi 27 16 0 Leah 27 18 0/skippable/showFrame Harvey 26/viewport 24 17 true/pause 500/faceDirection Caroline 3 true/pause 500/showFrame Harvey 27 true/faceDirection Marnie 3 true/faceDirection Leah 3 true/faceDirection Olivia 3 true/faceDirection Jodi 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/pause 500/faceDirection Leah 1 true/faceDirection Jodi 1 true/faceDirection Caroline 1/pause 500/showFrame Harvey 25 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Olivia 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/pause 500/faceDirection Caroline 2/pause 500/faceDirection Leah 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Olivia 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/pause 300/showFrame Harvey 26 true/pause 200/pause 500/faceDirection Caroline 3 true/pause 500/faceDirection Leah 3 true/faceDirection Olivia 3 true/faceDirection Jodi 3 true/faceDirection Marnie 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/pause 350/showFrame Harvey 27 true/pause 150/faceDirection Caroline 1/pause 500/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Jodi 1 true/showFrame Harvey 25 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Olivia 1/faceDirection Robin 1 true/faceDirection Emily 1 true/pause 500/faceDirection Caroline 2/pause 500/faceDirection Leah 0 true/faceDirection Olivia 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/pause 500/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 1000/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Jodi 1 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/showFrame Harvey 25 true/faceDirection Caroline 1 true/pause 1000/faceDirection Leah 2 true/faceDirection Jodi 2 true/faceDirection Olivia 2 true/faceDirection Marnie 2 true/faceDirection Pam 2 true/faceDirection Robin 2 true/faceDirection Emily 2 true/showFrame Harvey 24 true/faceDirection Caroline 2 true/pause 1000/faceDirection Leah 3 true/faceDirection Jodi 3 true/faceDirection Olivia 3 true/faceDirection Marnie 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/showFrame Harvey 27 true/faceDirection Caroline 3 true/pause 1000/faceDirection Leah 0 true/faceDirection Olivia 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 500/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 1000/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Jodi 1 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/showFrame Harvey 25 true/faceDirection Caroline 1 true/pause 1000/faceDirection Leah 2 true/faceDirection Jodi 2 true/faceDirection Olivia 2 true/faceDirection Marnie 2 true/faceDirection Pam 2 true/faceDirection Robin 2 true/faceDirection Emily 2 true/showFrame Harvey 24 true/faceDirection Caroline 2 true/pause 1000/faceDirection Leah 3 true/faceDirection Jodi 3 true/faceDirection Marnie 3 true/faceDirection Olivia 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/showFrame Harvey 27 true/faceDirection Caroline 3 true/pause 1000/faceDirection Leah 0 true/faceDirection Jodi 0 true/faceDirection Olivia 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 2 true/pause 2000/speak Caroline \"{{i18n:Harvey.Aerobics.01}}\"/pause 500/speak Harvey \"{{i18n:Harvey.Aerobics.02}}\"/move Pam -1 0 3 true/faceDirection Jodi 2/faceDirection Emily 1 true/viewport move 0 -1 3000/move farmer 3 0 1 true/faceDirection Robin 3/faceDirection Marnie 1 true/move Harvey -3 0 0 true/pause 1500/move Olivia 1 0 0/move Olivia 0 -6 3 true/move Harvey 0 -8 3 true/pause 2200/faceDirection Caroline 1/pause 2000/emote Harvey 16/speak Harvey \"{{i18n:Harvey.Aerobics.03}}\"/move Harvey -2 0 3/speak Harvey \"{{i18n:Harvey.Aerobics.04}}\"/pause 400/faceDirection Harvey 1/faceDirection Harvey 3/speak Harvey \"{{i18n:Harvey.Aerobics.05}}\"/pause 500/end dialogue Harvey \"{{i18n:Harvey.Aerobics.06}}\""
+            },
+        },
+        { //ADD OLIVIA + CLAIRE TO HARVEY AEROBICS CLASS
+            "Action": "EditData",
+            "Target": "data/events/seedshop",
+            "When": {
+                "HasSeenEvent": "3219873"
+            },
+            "Entries": {
+                "58/f Harvey 1500/t 1100 1500": "aerobics/-1000 -1000/farmer 14 12 1 Harvey 23 20 0 Marnie 23 18 0 Emily 23 16 0 Robin 25 18 0 Pam 25 16 0 Olivia 25 20 0 Claire 27 20 0 Caroline 24 14 2 Jodi 27 16 0 Leah 27 18 0/skippable/showFrame Harvey 26/viewport 24 17 true/pause 500/faceDirection Caroline 3 true/pause 500/showFrame Harvey 27 true/faceDirection Marnie 3 true/faceDirection Leah 3 true/faceDirection Olivia 3 true/faceDirection Claire 3 true/faceDirection Jodi 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/pause 500/faceDirection Leah 1 true/faceDirection Jodi 1 true/faceDirection Caroline 1/pause 500/showFrame Harvey 25 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Olivia 1 true/faceDirection Claire 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/pause 500/faceDirection Caroline 2/pause 500/faceDirection Leah 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Olivia 0 true/faceDirection Claire 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/pause 300/showFrame Harvey 26 true/pause 200/pause 500/faceDirection Caroline 3 true/pause 500/faceDirection Leah 3 true/faceDirection Olivia 3 true/faceDirection Claire 3 true/faceDirection Jodi 3 true/faceDirection Marnie 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/pause 350/showFrame Harvey 27 true/pause 150/faceDirection Caroline 1/pause 500/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Claire 1 true/faceDirection Jodi 1 true/showFrame Harvey 25 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Olivia 1/faceDirection Claire 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/pause 500/faceDirection Caroline 2/pause 500/faceDirection Leah 0 true/faceDirection Olivia 0 true/faceDirection Claire 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/pause 500/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 1000/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Claire 1 true/faceDirection Jodi 1 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/showFrame Harvey 25 true/faceDirection Caroline 1 true/pause 1000/faceDirection Leah 2 true/faceDirection Jodi 2 true/faceDirection Olivia 2 true/faceDirection Claire 2 true/faceDirection Marnie 2 true/faceDirection Pam 2 true/faceDirection Robin 2 true/faceDirection Emily 2 true/showFrame Harvey 24 true/faceDirection Caroline 2 true/pause 1000/faceDirection Leah 3 true/faceDirection Jodi 3 true/faceDirection Olivia 3 true/faceDirection Claire 3 true/faceDirection Marnie 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/showFrame Harvey 27 true/faceDirection Caroline 3 true/pause 1000/faceDirection Leah 0 true/faceDirection Olivia 0 true/faceDirection Claire 0 true/faceDirection Jodi 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 500/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 0 true/pause 1000/faceDirection Leah 1 true/faceDirection Olivia 1 true/faceDirection Claire 1 true/faceDirection Jodi 1 true/faceDirection Marnie 1 true/faceDirection Pam 1 true/faceDirection Robin 1 true/faceDirection Emily 1 true/showFrame Harvey 25 true/faceDirection Caroline 1 true/pause 1000/faceDirection Leah 2 true/faceDirection Jodi 2 true/faceDirection Olivia 2 true/faceDirection Claire 2 true/faceDirection Marnie 2 true/faceDirection Pam 2 true/faceDirection Robin 2 true/faceDirection Emily 2 true/showFrame Harvey 24 true/faceDirection Caroline 2 true/pause 1000/faceDirection Leah 3 true/faceDirection Jodi 3 true/faceDirection Marnie 3 true/faceDirection Olivia 3 true/faceDirection Claire 3 true/faceDirection Pam 3 true/faceDirection Robin 3 true/faceDirection Emily 3 true/showFrame Harvey 27 true/faceDirection Caroline 3 true/pause 1000/faceDirection Leah 0 true/faceDirection Jodi 0 true/faceDirection Olivia 0 true/faceDirection Claire 0 true/faceDirection Marnie 0 true/faceDirection Pam 0 true/faceDirection Robin 0 true/faceDirection Emily 0 true/showFrame Harvey 26 true/faceDirection Caroline 2 true/pause 2000/speak Caroline \"{{i18n:Harvey.Aerobics.01}}\"/pause 500/speak Harvey \"{{i18n:Harvey.Aerobics.02}}\"/move Pam -1 0 3 true/faceDirection Jodi 2/faceDirection Emily 1 true/viewport move 0 -1 3000/move farmer 3 0 1 true/faceDirection Robin 3/faceDirection Marnie 1 true/move Harvey -3 0 0 true/pause 1500/move Olivia 1 0 0/move Olivia 0 -6 3 true/move Harvey 0 -8 3 true/pause 400/faceDirection Claire 1 true/pause 250/faceDirection Claire 2 true/pause 500/showFrame Claire 34/pause 250/showFrame Claire 35/pause 800/faceDirection Caroline 1/pause 2000/emote Harvey 16/speak Harvey \"{{i18n:Harvey.Aerobics.03}}\"/move Harvey -2 0 3/speak Harvey \"{{i18n:Harvey.Aerobics.04}}\"/pause 400/faceDirection Harvey 1/faceDirection Harvey 3/speak Harvey \"{{i18n:Harvey.Aerobics.05}}\"/pause 500/end dialogue Harvey \"{{i18n:Harvey.Aerobics.06}}\"",
+            },
+        },
+    ]
+}

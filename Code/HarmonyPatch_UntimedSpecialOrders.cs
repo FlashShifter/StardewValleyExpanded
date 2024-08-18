@@ -21,6 +21,7 @@ using StardewValley.Network;
 using System.Reflection.Emit;
 using System.Reflection;
 using xTile.ObjectModel;
+using StardewValley.SpecialOrders;
 
 namespace StardewValleyExpanded
 {
@@ -77,7 +78,10 @@ namespace StardewValleyExpanded
             "MorrisTod2",
             "MorrisTod3",
             "Lance",
-            "Krobus"
+            "Krobus",
+            "GilMinecarts",
+            "DwarfCaveShortcut",
+            "CamillaBridge"
         };
 
 

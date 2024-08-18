@@ -1,0 +1,570 @@
+  {
+    "Changes": [
+
+
+      {
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Entries": {
+          "Morgan": {
+            "DisplayName": "{{i18n:Name.Morgan}}",
+            "BirthSeason": "Fall",
+            "BirthDay": 7,
+            "HomeRegion": "Other",
+            "Language": "Default",
+            "Gender": "Undefined",
+            "Age": "Child",
+            "Manner": "Polite",
+            "SocialAnxiety": "Shy",
+            "Optimism": "Neutral",
+            "IsDarkSkinned": false,
+            "CanBeRomanced": false,
+            "LoveInterest": "",
+            "Calendar": "HiddenUntilMet",
+            "SocialTab": "HiddenUntilMet",
+            "CanSocialize": true,
+            "CanVisitIslandCondition": "FALSE",
+            "ExcludeFromIntroductionsQuest": true,
+            "ExcludeFromPerfectionScore": false,
+            "EndSlideShow": "MainGroup",
+            "FriendsAndFamily": {},
+            "WinterStarParticipant": false,
+            "UnlockConditions": "PLAYER_HAS_SEEN_EVENT Any 5978924",
+            "SpawnIfMissing": true,
+            "Home": [
+              {
+                "Id": "FlashShifter.StardewValleyExpandedCP_Morgan_WarpRoom",
+                "Condition": null,
+                "Location": "Custom_Morgan_WarpRoom",
+                "Tile": {
+                  "X": 3,
+                  "Y": 3
+                },
+                "Direction": "left"
+              }
+            ],
+            "TextureName": null,
+            "Size": {
+              "X": 16,
+              "Y": 32
+            },
+            "CustomFields": {}
+          },
+        },
+      },
+      {
+        //Morgan's Gift Tastes
+        "Action": "EditData",
+        "Target": "Data/NPCGiftTastes",
+        "Entries": {
+          "Morgan": "{{i18n:Morgan.Gift.Loved}}/337 305 308 FlashShifter.StardewValleyExpandedCP_Void_Soul/{{i18n:Morgan.Gift.Liked}}/268 155 768 769 773 772 392 394 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir/{{i18n:Morgan.Gift.Disliked}}/395 399 402 406 410 248 256 190 188 -75 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Morgan.Gift.Hated}}/348 346 283 459 303 FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog_Legs/{{i18n:Morgan.Gift.Neutral}}/446 -18 -4 -80 FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Poison_Mushroom/"
+        }
+      },
+      {
+        //Morgan's Animations
+        "Action": "EditData",
+        "Target": "Data/animationdescriptions",
+        "Entries": {
+          "Morgan_Teleport": "16/16 16 16 16 16 16 16 16 16 16 16 17 17 17 17 17 17 17 16 16/16",
+          "Morgan_Read": "20 20 21 21/23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 22 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 21 21 21 21 21 21 21 21 21 21 21 21 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 22 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23/23 23 21 21 20 20 0 0 0",
+          "Morgan_Blink1": "4/4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4/4",
+          "Morgan_Blink2": "0/0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 18 18 18 18 18 18 18 18 18 18 18 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/0 0 0",
+          "Morgan_Meditate": "0 0 0 0 18 18 18 18 18 18 24/24/24 24 24 18 18 18 18 18 0 0 0 0 0 0",
+          "Morgan_Concentrate": "0 0 0 0 0/0 0 0 0 0 18 18 18 18 18 18 18 18 18 18 18 18 18 17 17 17 17 17 17 17 17 17 17 17 17 16 16 16 16 16 16 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 0 0 0 0 0 0 0 0 0 0/0 0 0 0 0",
+        }
+      },
+      {
+        //"Morgan's Portraits
+        "Action": "Load",
+        "Target": "Portraits/Morgan",
+        "FromFile": "assets/CharacterFiles/Portraits/Morgan/Morgan.png"
+      },
+      {
+        //Morgan's Sprites
+        "Action": "Load",
+        "Target": "Characters/Morgan",
+        "FromFile": "assets/CharacterFiles/OverworldSprites/Morgan/Morgan.png"
+      },
+      {
+        //Morgan's Schedule
+        "Action": "Load",
+        "Target": "Characters/schedules/Morgan",
+        "When": {
+          "HasSeenEvent": "5978924"
+        },
+        "FromFile": "assets/CharacterFiles/Schedules/Morgan/Schedule.json"
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/ConcessionTastes",
+        "Entries": {
+          "Morgan": {
+            "Name": "Morgan",
+            "LovedTags": [
+              "Candy",
+              "Sweet",
+              "Cotton Candy"
+            ],
+            "LikedTags": [
+              "Salty"
+            ],
+            "DislikedTags": [
+              "Healthy"
+            ]
+          },
+        },
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/MoviesReactions",
+        "Entries": {
+          "Victor": {
+            "NPCName": "Morgan",
+            "Reactions": [
+              {
+                "Tag": "spring_movie_0",
+                "Response": "love",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.01}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "!!!$3"
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.02}}",
+                  }
+                },
+                "ID": "reaction_0"
+              },
+              {
+                "Tag": "horror",
+                "Response": "dislike",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.03}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "!!!$5"
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.04}}",
+                  }
+                },
+                "ID": "reaction_1"
+              },
+              {
+                "Tag": "winter_movie_1",
+                "Response": "dislike",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.05}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.06}}",
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.07}}",
+                  }
+                },
+                "ID": "reaction_2"
+              },
+              {
+                "Tag": "summer_movie_0",
+                "Response": "like",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.08}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.09}}",
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.10}}",
+                  }
+                },
+                "ID": "reaction_3"
+              },
+              {
+                "Tag": "love",
+                "Response": "like",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.11}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "",
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.12}}",
+                  }
+                },
+                "ID": "reaction_4"
+              },
+              {
+                "Tag": "like",
+                "Response": "like",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.13}}",
+                  },
+                  "DuringMovie": null,
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": ""
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.14}}",
+                  }
+                },
+                "ID": "reaction_5"
+              },
+              {
+                "Tag": "dislike",
+                "Response": "like",
+                "Whitelist": [],
+                "SpecialResponses": {
+                  "BeforeMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.15}}",
+                  },
+                  "DuringMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "*yawn*$6",
+                  },
+                  "AfterMovie": {
+                    "ResponsePoint": null,
+                    "Script": "",
+                    "Text": "{{i18n:Morgan.Movies.16}}",
+                  }
+                },
+                "ID": "reaction_6"
+              }
+            ]
+          }
+        }
+      },
+      {
+        //Prevents Morgan's room patch removal
+        "Action": "EditMap",
+        "Target": "Maps/WizardHouse",
+        "FromFile": "Assets/Maps/MapPatches/WizardHouse_MorganRoomRemoved.tbin",
+        "ToArea": {
+          "X": 9,
+          "Y": 0,
+          "Width": 5,
+          "Height": 8
+        },
+        "When": {
+          "HasSeenEvent |contains=5978924": false
+        },
+      },
+      { //MORGAN SPAWNS NEXT DAY - Conditions: Year 3, not Monday or Tuesday, player has learned how to use the 'Shrine of Illusions' (which requires 4 hearts of wizard friendship)
+        "Action": "EditData",
+        "Target": "data/events/farm",
+        "When": {
+          "Spouse |contains=Wizard": false
+        },
+        "Entries": {
+          "5978924/y 3/d Mon Tue/e 1724095": "none/-500 -500/farmer 64 14 2 Wizard 64 16 0/skippable/pause 1000/speak Wizard \"{{i18n:Morgan.Apprentice.01}}\"/pause 800/speak Wizard \"{{i18n:Morgan.Apprentice.02}}\"/pause 700/faceDirection Wizard 1 true/pause 250/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Morgan.Apprentice.03}}\"/pause 800/showFrame Wizard 0/pause 500/showFrame Wizard 16/pause 600/screenFlash 2/warp Wizard -100 -100/playSound wand/pause 700/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Morgan.Apprentice.04}}\"/pause 1000/end dialogue Wizard \"{{i18n:Morgan.Apprentice.05}}\"",
+        },
+      },
+      { //player is married to Wizard and Morgan arrives 
+        "Action": "EditData",
+        "Target": "data/events/farmhouse",
+        "When": {
+          "Spouse |contains=Wizard": true
+        },
+        "Entries": {
+          "5978924/y 3/d Mon Tue/e 1724095/t 600 2600": "none/-500 -500/farmer -20 -20 0 Wizard -21 -21 0/skippable/pause 1000/speak Wizard \"{{i18n:Morgan.Apprentice.Married.01}}\"/pause 500/end dialogue Wizard \"{{i18n:Morgan.Apprentice.Married.02}}\""
+        },
+      },
+      { //MORGAN INTRODUCTION - 'The Little Wizard'
+        "Action": "EditData",
+        "Target": "data/events/wizardhouse",
+        "When": {
+          "HasSeenEvent": "5978924",
+          "Spouse |contains=Wizard": false
+        },
+        "Entries": {
+          "5978927/": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
+        },
+      },
+      { //MORGAN INTRODUCTION - 'The Little Wizard'
+        "Action": "EditData",
+        "Target": "data/events/wizardhouse",
+        "When": {
+          "HasSeenEvent": "5978924",
+          "Spouse |contains=Wizard": true
+        },
+        "Entries": {
+          "5978927/": "WizardSong/-500 -500/farmer 9 24 0 Wizard -200 -200 2 Morgan 9 15 2/showFrame Morgan 23/showFrame Wizard 16/skippable/viewport 9 17 true/move farmer 0 -6 0/pause 1000/showFrame Morgan 21/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.Married.01}}\"/pause 500/emote farmer 40/pause 800/showFrame Morgan 20/pause 250/playSound newRecipe/pause 250/showFrame Morgan 0/pause 600/speak Morgan \"{{i18n:Morgan.Arrival.Married.02}}\"/pause 700/move Morgan 0 1 2/pause 500/speak Morgan \"{{i18n:Morgan.Arrival.03}}\"/pause 600/showFrame Morgan 17/pause 800/shake Morgan 400/pause 650/screenFlash 1/playSound healSound/pause 300/jump farmer/pause 900/playSound healSound/screenFlash 1/pause 400/glow 0 255 0/pause 650/playSound healSound/screenFlash 1/pause 800/glow 0 0 255/pause 200/playSound healSound/screenFlash 1/pause 800/screenFlash 2/playSound wand/warp Wizard 6 17/pause 400/faceDirection Morgan 3 true/pause 300/faceDirection farmer 3 true/pause 300/jump Morgan/shake Morgan 1500/pause 200/faceDirection Wizard 1 true/pause 100/emote Morgan 16 true/pause 400/speak Wizard \"{{i18n:Morgan.Arrival.04}}\"/speak Morgan \"{{i18n:Morgan.Arrival.05}}\"/speak Wizard \"{{i18n:Morgan.Arrival.06}}\"/speak Morgan \"{{i18n:Morgan.Arrival.07}}\"/speak Wizard \"{{i18n:Morgan.Arrival.08}}\"/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.09}}\"/pause 600/move Morgan 0 0 2/pause 400/faceDirection farmer 0 true/pause 300/speak Morgan \"{{i18n:Morgan.Arrival.10}}\"/pause 500/faceDirection Morgan 3 true/pause 300/move Morgan -2 0 0/move Morgan 0 -9 0 true/pause 350/faceDirection Wizard 0 true/pause 600/globalFade/viewport -1000 -1000 true/halt/warp Morgan 10 5 2/showFrame Morgan 23/faceDirection farmer 3 true/viewport 9 17 true/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Morgan.Arrival.11}}\"/pause 400/emote Wizard 40/pause 100/speak Wizard \"{{i18n:Morgan.Arrival.12}}\"/pause 400/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 300/move Wizard -4 0 3 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Morgan \"{{i18n:Morgan.Arrival.13}}\"",
+        },
+      },
+      { //MORGAN - 2 HEART - 'Having Fun'
+        "Action": "EditData",
+        "Target": "data/events/wizardhouse",
+        "Entries": {
+          "5978929/e 5978927/f Morgan 500": "none/-500 -500/farmer 9 28 0 Morgan 10 15 2 Wizard -100 -100 2/pause 750/showFrame Morgan 24/playMusic WizardSong/pause 800/viewport 7 18 true/skippable/move farmer 0 -7 0 true/pause 1850/speak Morgan \"{{i18n:Morgan.2hearts.01}}\"/pause 800/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 0/pause 650/speak Morgan \"{{i18n:Morgan.2hearts.02}}\"/pause 300/shake Morgan 500/pause 400/playSound healSound/glow 0 0 180/pause 400/emote farmer 16/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.03}}\"/pause 900/emote farmer 8/pause 800/shake Morgan 500/pause 850/showFrame Morgan 18/pause 200/showFrame Morgan 0/pause 450/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.2hearts.04}}\"/pause 1000/question fork0 \"{{i18n:Morgan.2hearts.05}}\"/fork 5978929_FooledMe/pause 300/friendship Morgan -50/speak Morgan \"{{i18n:Morgan.2hearts.06}}\"/switchEvent 5978929_Continue",
+          "5978929_FooledMe": "pause 800/friendship Morgan 50/speak Morgan \"{{i18n:Morgan.2hearts.FooledMe.01}}\"/switchEvent 5978929_Continue",
+          "5978929_Continue": "pause 800/move Morgan 0 2 2/pause 500/speak Morgan \"{{i18n:Morgan.2hearts.Continue.01}}\"/pause 600/emote Morgan 40/pause 250/speak Morgan \"{{i18n:Morgan.2hearts.Continue.02}}\"/pause 100/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Morgan.2hearts.Continue.03}}\"",
+        },
+      },
+      { //MORGAN - 4 HEART - 'Them'
+        "Action": "EditData",
+        "Target": "data/events/forest",
+        "Entries": {
+          "5978935/f Morgan 1000/e 5978929/t 1000 1500/w sunny": "none/-500 -500/farmer 85 40 3 Morgan 57 41 3 Jas 73 32 1 Vincent 75 42 2 Marnie 54 21 0 Wizard 14 30 1 Andy 63 70 0 Leah 113 40 2/pause 700/playMusic jaunty/skippable/viewport 85 39 true/viewport move -2 0 5000 true/move farmer -10 0 3/pause 100/faceDirection farmer 2/pause 500/faceDirection Vincent 1 true/pause 200/faceDirection Vincent 0/pause 400/speak Vincent \"{{i18n:Morgan.4hearts.01}}\"/move Morgan 15 0 1 true/pause 1000/playSound leafrustle/pause 600/playSound leafrustle/pause 300/faceDirection Vincent 3 true/pause 500/faceDirection farmer 3 true/pause 1400/speak Morgan \"{{i18n:Morgan.4hearts.02}}\"/pause 1200/faceDirection Morgan 2 true/pause 600/shake Morgan 1300/textAboveHead Morgan \"{{i18n:Morgan.4hearts.03}}\"/pause 2750/doAction 71 33/pause 400/faceDirection farmer 0 true/pause 150/doAction 71 33/pause 200/faceDirection Morgan 0 true/pause 400/faceDirection Vincent 0/pause 300/move Jas 1 0 2/move Jas 0 2 3/move Jas -1 0 2/move Jas 0 3 2 true/pause 200/speak Jas \"{{i18n:Morgan.4hearts.04}}\"/pause 600/speak Morgan \"{{i18n:Morgan.4hearts.05}}\"/speak Jas \"{{i18n:Morgan.4hearts.06}}\"/pause 700/move Jas 0 2 1 true/pause 400/faceDirection farmer 3 true/pause 400/speak Jas \"{{i18n:Morgan.4hearts.07}}\"/pause 300/faceDirection Morgan 1 true/pause 350/speak Vincent \"{{i18n:Morgan.4hearts.08}}\"/pause 100/faceDirection farmer 2 true/pause 600/jump Morgan/pause 600/faceDirection farmer 3 true/pause 250/speak Morgan \"{{i18n:Morgan.4hearts.09}}\"/pause 200/jump Jas/pause 700/speak Jas \"{{i18n:Morgan.4hearts.10}}\"/pause 300/shake Morgan 400/pause 450/faceDirection Morgan 2 true/pause 300/showFrame Morgan 25/pause 300/speak Morgan \"{{i18n:Morgan.4hearts.11}}\"/pause 400/faceDirection Jas 2 true/pause 300/faceDirection Vincent 3 true/pause 400/speak Jas \"{{i18n:Morgan.4hearts.12}}\"/pause 500/showFrame Morgan 0/pause 700/faceDirection Morgan 1 true/pause 200/faceDirection Morgan 0 true/pause 400/speak Morgan \"{{i18n:Morgan.4hearts.13}}\"/pause 200/speak Jas \"{{i18n:Morgan.4hearts.14}}\"/speak Morgan \"{{i18n:Morgan.4hearts.15}}\"/pause 300/jump Vincent/pause 600/faceDirection Morgan 1 true/pause 250/faceDirection farmer 2 true/pause 200/speak Vincent \"{{i18n:Morgan.4hearts.16}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1000/warp Jas 36 43/warp Vincent 51 11/warp Morgan 94 30/warp farmer 42 48/playMusic ragtime/pause 400/viewport 42 44 true/viewport move -2 0 3000 true/move farmer -6 0 3/pause 500/faceDirection farmer 0/pause 600/move farmer 0 -2 0/pause 500/jump farmer/pause 1000/textAboveHead Jas \"{{i18n:Morgan.4hearts.17}}\"/pause 100/move Jas 1 0 2/move Jas 0 1 2/pause 600/globalFade/viewport -1000 -1000 true/warp Jas 73 40/faceDirection Jas 3 true/warp farmer 43 14/faceDirection farmer 1 true/viewport 43 14 true/viewport move 2 0 3500 true/move farmer 7 0 1/pause 600/faceDirection farmer 0/pause 650/move farmer 0 -1 0/pause 250/showFrame farmer 15/pause 400/doAction 50 12/pause 400/doAction 50 12/pause 300/move farmer 0 0 0/pause 200/textAboveHead Vincent \"{{i18n:Morgan.4hearts.18}}\"/pause 300/move Vincent -2 0 2/pause 100/move farmer -1 0 0 true/pause 500/globalFade/viewport -1000 -1000 true/warp Vincent 71 40/faceDirection Vincent 1 true/warp farmer 89 25/faceDirection farmer 2 true/viewport 89 25 true/viewport move 0 2 3000 true/move farmer 0 6 2/pause 600/faceDirection farmer 1/pause 1000/question fork0 \"{{i18n:Morgan.4hearts.19}}\"/fork 5978935_LetMorganWin/switchEvent 5978935_CatchMorgan",
+          "5978935_LetMorganWin": "pause 700/friendship Morgan 50/faceDirection farmer 2 true/pause 200/move farmer 0 8 2 true/pause 1000/stopMusic/globalFade/viewport -1000 -1000 true/halt/warp Jas 71 39/warp Vincent 72 40/warp Morgan 81 39/warp farmer 74 38/faceDirection farmer 2 true/faceDirection Jas 1 true/faceDirection Vincent 0 true/pause 900/playMusic jaunty/pause 250/viewport 74 38 true/move Morgan -5 0 3 true/pause 800/faceDirection farmer 1 true/pause 450/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.01}}\"/pause 700/speak Jas \"{{i18n:Morgan.4hearts.LetMorganWin.02}}\"/faceDirection farmer 2 true/speak Vincent \"{{i18n:Morgan.4hearts.LetMorganWin.03}}\"/speak Jas \"{{i18n:Morgan.4hearts.LetMorganWin.04}}\"/stopMusic/playMusic spring_day_ambient/pause 600/faceDirection Morgan 2 true/pause 600/showFrame Morgan 25/pause 100/faceDirection farmer 1 true/pause 300/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.05}}\"/faceDirection Vincent 1 true/pause 400/speak Jas \"{{i18n:Morgan.4hearts.LetMorganWin.06}}\"/pause 800/showFrame Morgan 0/pause 900/faceDirection Morgan 3 true/pause 600/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.07}}\"/pause 100/emote Vincent 16 true/pause 250/emote Jas 16 true/pause 150/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 300/speak Vincent \"{{i18n:Morgan.4hearts.LetMorganWin.08}}\"/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.09}}\"/speak Jas \"{{i18n:Morgan.4hearts.LetMorganWin.10}}\"/pause 300/faceDirection farmer 2 true/pause 100/faceDirection farmer 1 true/pause 150/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.11}}\"/speak Vincent \"{{i18n:Morgan.4hearts.LetMorganWin.12}}\"/pause 200/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 100/speak Jas \"{{i18n:Morgan.4hearts.LetMorganWin.13}}\"/pause 300/speak Morgan \"{{i18n:Morgan.4hearts.Um}}\"pause 300/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 200/speak Morgan \"{{i18n:Morgan.4hearts.LetMorganWin.14}}\"/pause 400/emote Jas 8 true/pause 300/emote Vincent 8 true/pause 500/faceDirection farmer 2 true/pause 800/speed farmer 1/move farmer 0 1 2/pause 200/faceDirection farmer 3/pause 800/question fork0 \"{{i18n:Morgan.4hearts.LetMorganWin.15}}\"/fork 5978935_Them/switchEvent 5978935_Them",
+          "5978935_CatchMorgan": "pause 700/move farmer 1 0 1/pause 500/jump farmer/pause 1200/doAction 94 31/pause 300/textAboveHead Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.01}}\"/pause 400/move Morgan 0 -1 3/pause 1000/globalFade/viewport -1000 -1000/warp Jas 71 39/warp Vincent 72 40/warp Morgan 76 39/warp farmer 74 38/faceDirection farmer 2 true/faceDirection Jas 1 true/faceDirection Vincent 0 true/pause 900/playMusic jaunty/pause 250/faceDirection farmer 1 true/viewport 74 38 true/pause 1150/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.02}}\"/pause 700/speak Jas \"{{i18n:Morgan.4hearts.CatchMorgan.03}}\"/faceDirection farmer 2 true/speak Vincent \"{{i18n:Morgan.4hearts.CatchMorgan.04}}\"/speak Jas \"{{i18n:Morgan.4hearts.CatchMorgan.05}}\"/stopMusic/playMusic spring_day_ambient/pause 600/faceDirection Morgan 2 true/pause 600/showFrame Morgan 25/pause 100/faceDirection farmer 1 true/pause 300/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.06}}\"/faceDirection Vincent 1 true/pause 400/speak Jas \"{{i18n:Morgan.4hearts.CatchMorgan.07}}\"/pause 800/showFrame Morgan 0/pause 900/faceDirection Morgan 3 true/pause 600/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.08}}\"/pause 100/emote Vincent 16 true/pause 250/emote Jas 16 true/pause 150/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 300/speak Vincent \"{{i18n:Morgan.4hearts.CatchMorgan.09}}\"/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.10}}\"/speak Jas \"{{i18n:Morgan.4hearts.CatchMorgan.11}}\"/pause 300/faceDirection farmer 2 true/pause 100/faceDirection farmer 1 true/pause 150/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.12}}\"/speak Vincent \"{{i18n:Morgan.4hearts.CatchMorgan.13}}\"/pause 200/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 100/speak Jas \"{{i18n:Morgan.4hearts.CatchMorgan.14}}\"/pause 300/speak Morgan \"{{i18n:Morgan.4hearts.Um}}\"pause 300/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 200/speak Morgan \"{{i18n:Morgan.4hearts.CatchMorgan.15}}\"/pause 400/emote Jas 8 true/pause 300/emote Vincent 8 true/pause 500/faceDirection farmer 2 true/pause 800/speed farmer 1/move farmer 0 1 2/pause 200/faceDirection farmer 3/pause 800/question fork0 \"{{i18n:Morgan.4hearts.CatchMorgan.16}}\"/fork 5978935_Them/switchEvent 5978935_Them",
+          "5978935_Them": "pause 700/speak Vincent \"{{i18n:Morgan.4hearts.Them.01}}\"/pause 800/jump Jas/pause 1000/move Jas 1 0 1/speak Jas \"{{i18n:Morgan.4hearts.Them.02}}\"/speak Vincent \"{{i18n:Morgan.4hearts.Them.03}}\"/pause 600/faceDirection farmer 2 true/pause 100/faceDirection farmer 1 true/pause 200/speak Morgan \"{{i18n:Morgan.4hearts.Them.04}}\"/pause 400/faceDirection farmer 0 true/pause 150/move farmer 0 -1 0/pause 100/faceDirection farmer 1 true/pause 100/faceDirection farmer 2 true/pause 400/speak Jas \"{{i18n:Morgan.4hearts.Them.05}}\"/pause 400/speak Morgan \"{{i18n:Morgan.4hearts.Them.06}}\"/pause 400/speak Jas \"{{i18n:Morgan.4hearts.Them.07}}\"/pause 500/jump Vincent/pause 800/speak Vincent \"{{i18n:Morgan.4hearts.Them.08}}\"/pause 400/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.4hearts.Them.09}}\"/pause 400/globalFade/viewport -1000 -1000/pause 800/end dialogue Morgan \"{{i18n:Morgan.4hearts.Them.10}}\"",
+        },
+      },
+      { //MORGAN - 6 HEART - 'In a Distance Place'
+        "Action": "EditData",
+        "Target": "data/events/wizardhouse",
+        "Entries": {
+          "5978936/e 5978935/f Morgan 1500": "none/-500 -500/farmer 11 13 1 Morgan 15 5 2/pause 100/changeLocation Custom_WizardBasement/showFrame Morgan 23/playMusic WizardSong/pause 100/viewport 15 5 true/skippable/move farmer 4 0 0/pause 200/faceDirection farmer 0 true/pause 600/move farmer 0 -5 0/pause 1000/showFrame Morgan 21/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.01}}\"/pause 600/move farmer 0 -1 0/pause 300/speak Morgan \"{{i18n:Morgan.6hearts.02}}\"/pause 650/showFrame Morgan 23/pause 1300/speak Morgan \"{{i18n:Morgan.6hearts.03}}\"/pause 1000/stopMusic/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.04}}\"/pause 500/showFrame Morgan 23/pause 250/playMusic WizardSong/pause 1250/speak Morgan \"{{i18n:Morgan.6hearts.05}}\"/pause 1200/speak Morgan \"{{i18n:Morgan.6hearts.06}}\"/pause 700/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.07}}\"/pause 1000/speak Morgan \"{{i18n:Morgan.6hearts.08}}\"/pause 600/showFrame Morgan 23/pause 650/speak Morgan \"{{i18n:Morgan.6hearts.09}}\"/pause 1000/showFrame Morgan 21/pause 700/speak Morgan \"{{i18n:Morgan.6hearts.10}}\"/pause 1000/speak Morgan \"$q -1 null {{i18n:Morgan.6hearts.11}}\"/pause 1000/showFrame Morgan 21 true/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.12}}\"/pause 500/showFrame Morgan 23/pause 1300/textAboveHead Morgan \"{{i18n:Morgan.6hearts.13}}\"/pause 800/showFrame Morgan 22/playSound newRecipe/pause 600/showFrame Morgan 23/pause 800/showFrame Morgan 22/playSound newRecipe/pause 500/showFrame Morgan 23/pause 1000/showFrame Morgan 21/pause 600/speak Morgan \"{{i18n:Morgan.6hearts.14}}\"/pause 300/emote farmer 32 true/pause 150/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end dialogue Morgan \"{{i18n:Morgan.6hearts.15}}\"",
+        },
+      },
+      { //MORGAN - 8 HEART - 'Transmutation'
+        "Action": "EditData",
+        "Target": "data/events/wizardhouse",
+        "When": {
+          "Query: {{SkillLevel:Mining}} >= 7": true
+        },
+        "Entries": {
+          "5978937/e 5978936/f Morgan 2000": "WizardSong/-500 -500/farmer -100 -100 0 Morgan 10 15 2 Wizard 7 17 1/showFrame Morgan 24/addObject 10 17 335/pause 800/viewport 7 17 true/skippable/pause 2000/speak Morgan \"{{i18n:Morgan.8hearts.01}}\"/pause 1100/speak Wizard \"{{i18n:Morgan.8hearts.02}}\"/pause 800/shake Morgan 1000/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 168/pause 1400/showFrame Morgan 0/pause 800/emote Morgan 12/pause 500/showFrame Morgan 25/pause 950/speak Morgan \"{{i18n:Morgan.8hearts.03}}\"/pause 750/showFrame Wizard 19/pause 400/speak Wizard \"{{i18n:Morgan.8hearts.04}}\"/warp farmer 9 34/playSound doorClose/move farmer 0 -14 0 true/pause 700/showFrame Morgan 0 true/pause 350/showFrame Wizard 4 true/pause 500/showFrame Wizard 0 true/pause 1100/speak Wizard \"{{i18n:Morgan.8hearts.05}}\"/pause 800/speak Morgan \"{{i18n:Morgan.8hearts.06}}\"/pause 1200/move Wizard 1 0 2/pause 700/speak Wizard \"{{i18n:Morgan.8hearts.07}}\"/pause 600/emote farmer 40/pause 300/speak Wizard \"{{i18n:Morgan.8hearts.08}}\"/pause 400/move Morgan -1 0 2/move Morgan 0 1 2/pause 300/speak Morgan \"{{i18n:Morgan.8hearts.09}}\"/pause 600/speak Wizard \"{{i18n:Morgan.8hearts.10}}\"/pause 200/globalFade/viewport -1000 -1000 true/pause 300/removeSprite 10 17/warp farmer 10 15/faceDirection farmer 2 true/warp Morgan 7 17/faceDirection Morgan 1 true/warp Wizard 10 20/faceDirection Wizard 0 true/pause 100/viewport 7 17 true/pause 1100/move Wizard 0 -2 0/pause 500/showFrame Wizard 17/pause 200/addObject 10 17 335/playSound stoneStep/playSound stoneStep/pause 400/showFrame Wizard 8/pause 500/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 500/move Wizard 0 2 2/pause 300/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 1750/showFrame farmer 96/stopMusic/pause 1200/startJittering/pause 750/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 336/pause 500/stopJittering/pause 400/emote Morgan 16 true/pause 400/showFrame farmer 0 true/pause 400/playMusic WizardSong/pause 600/speak Morgan \"{{i18n:Morgan.8hearts.11}}\"/pause 500/speak Wizard \"{{i18n:Morgan.8hearts.12}}\"/pause 600/move Wizard 0 -2 0/pause 500/speak Wizard \"{{i18n:Morgan.8hearts.13}}\"/pause 750/speak Wizard \"{{i18n:Morgan.8hearts.14}}\"/pause 500/emote farmer 40/pause 300/speak Wizard \"{{i18n:Morgan.8hearts.15}}\"/pause 650/jump Morgan/pause 500/faceDirection Wizard 3 true/pause 400/speak Morgan \"{{i18n:Morgan.8hearts.16}}\"/pause 500/globalFade/viewport -1000 -1000 true/removeSprite 10 17/warp Morgan 10 15/faceDirection Morgan 2 true/warp Wizard 10 20/faceDirection Wizard 0 true/warp farmer 7 17/faceDirection farmer 1 true/pause 200/viewport 7 17 true/pause 1150/move Wizard 0 -2 0/pause 500/showFrame Wizard 17/pause 200/addObject 10 17 335/playSound stoneStep/playSound stoneStep/pause 400/showFrame Wizard 8/pause 500/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 2 true/pause 500/move Wizard 0 2 2/pause 300/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 1500/stopMusic/showFrame Morgan 18/pause 900/speak Morgan \"{{i18n:Morgan.8hearts.17}}\"/pause 1000/showFrame Morgan 17/pause 700/showFrame Morgan 16/pause 100/shake Morgan 600/pause 500/screenFlash 1/playSound healSound/removeSprite 10 17/addObject 10 17 336/pause 500/emote farmer 16 true/pause 300/showFrame Morgan 18/pause 300/playMusic junimoStarSong/pause 200/showFrame Morgan 0/pause 700/jump Morgan/pause 800/speak Morgan \"{{i18n:Morgan.8hearts.18}}\"/speak Wizard \"{{i18n:Morgan.8hearts.19}}\"/pause 300/jump Morgan/pause 1000/jump Morgan/textAboveHead Morgan \"{{i18n:Morgan.8hearts.20}}\"/globalFade/viewport -1000 -1000/pause 1500/friendship Morgan 50/end dialogue Morgan \"{{i18n:Morgan.8hearts.21}}\""
+        },
+      },
+      { //MORGAN - 10 HEART part 1 - 'The test'
+        "Action": "EditData",
+        "Target": "data/events/farm",
+        "Entries": {
+          "5978938/e 5978937/f Morgan 2500/w sunny/z winter/t 600 800": "continue/-500 -500/farmer 64 15 2 Morgan 64 17 0/pause 1100/speak Morgan \"{{i18n:Morgan.10hearts1.01}}\"/pause 500/speak Morgan \"{{i18n:Morgan.10hearts1.02}}\"/pause 800/faceDirection Morgan 1 true/pause 250/faceDirection Morgan 2 true/pause 650/showFrame Morgan 18/pause 500/speak Morgan \"{{i18n:Morgan.10hearts1.03}}\"/pause 750/showFrame Morgan 17/pause 400/showFrame Morgan 16/pause 400/showFrame Morgan 17/pause 400/screenFlash 2/playSound wand/warp Morgan 64 18/pause 800/showFrame Morgan 0/pause 400/jump Morgan/pause 1300/ShowFrame Morgan 4/pause 250/showFrame Morgan 8/pause 200/speak Morgan \"{{i18n:Morgan.10hearts1.04}}\"/pause 800/shake Morgan 1000/pause 1000/screenFlash 2/playSound wand/warp Morgan -50 -50/pause 1300/emote farmer 40/pause 200/end",
+        },
+      },
+      { //MORGAN - 10 HEART part 2 - 'A Pure Heart'
+        "Action": "EditData",
+        "Target": "data/events/Custom_ForestWest",
+        "Entries": {
+          "5978939/e 5978938/w sunny/t 600 1800": "spring_day_ambient/-500 -500/farmer 26 114 2 Morgan 27 127 3 Wizard 24 127 1/skippable/pause 1000/viewport 26 114 true/viewport move 0 2 5000 true/move farmer 0 10 2 true/pause 3500/faceDirection Wizard 0 true/pause 850/faceDirection Morgan 0 true/pause 800/speak Wizard \"{{i18n:Morgan.10hearts2.01}}\"/speak Morgan \"{{i18n:Morgan.10hearts2.02}}\"/pause 700/faceDirection Wizard 1 true/pause 750/speak Wizard \"{{i18n:Morgan.10hearts2.03}}\"/pause 500/faceDirection Morgan 3 true/pause 500/speak Morgan \"{{i18n:Morgan.10hearts2.04}}\"/pause 700/globalFade/viewport -1000 -1000/warp Wizard 26 129/warp farmer 28 129/warp Morgan 27 125/faceDirection Wizard 0 true/faceDirection farmer 0 true/faceDirection Morgan 2 true/showFrame Morgan 18/viewport 27 127 true/pause 1500/speak Wizard \"{{i18n:Morgan.10hearts2.05}}\"/pause 2000/shake Morgan 500/pause 1500/shake Morgan 350/pause 500/stopMusic/pause 1700/speak Morgan \"{{i18n:Morgan.10hearts2.06}}\"/pause 1600/playMusic winter_day_ambient/pause 3000/speak Morgan \"{{i18n:Morgan.10hearts2.07}}\"/pause 3000/playMusic rain/pause 1700/shake Morgan 500/pause 1300/speak Morgan \"{{i18n:Morgan.10hearts2.08}}\"/pause 2500/shake Morgan 350/pause 700/playMusic fall_day_ambient/pause 2800/speak Morgan \"{{i18n:Morgan.10hearts2.09}}\"/pause 1600/shake Morgan 400/pause 900/playMusic ocean/pause 2300/shake Morgan 200/pause 900/speak Morgan \"{{i18n:Morgan.10hearts2.10}}\"/pause 2200/playMusic moonlightJellies/pause 1500/speak Morgan \"{{i18n:Morgan.10hearts2.11}}\"/pause 2000/playSound SpringBirds/addTemporaryActor Bird1 16 32 33 125 3/move Bird1 -4 0 3/emote farmer 16 true/playSound SpringBirds/animate Bird1 false true 100 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 8 8 9 9 10 10 9 10 9 9 10 9 10 9 10 9 10 9 8 4 4 4 4 4 4/pause 1400/playSound SpringBirds/addTemporaryActor Bird2 16 32 20 124 1/move Bird2 5 0 1/animate Bird2 false true 100 12 12 12 12 12 12 12 12 12 12 13 13 13 13 13 13 12 12 12 12 12 12 8 8 9 9 9 9 10 9 10 9 10 9 10 9 9 9 9 9 10 9 10 9 10 9 10 9 9 8 12 12 12 12/pause 500/playSound SpringBirds/doAction 21 123/pause 700/doAction 21 123/addTemporaryActor Frog2 16 32 23 123 1/move Frog2 1 0 1/animate Frog2 false true 100 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 8 9 9 8 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 8 9 9 8/pause 500/playSound SpringBirds/pause 500/addTemporaryActor Frog1 16 32 31 127 3/doAction 31 128/pause 100/move Frog1 -3 0 3/animate Frog1 false true 100 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 16 17 17 17 16 15 15 15 15 15 15 15 15 15 15 15 15 15/addTemporaryActor Bird3 16 32 34 123 3/playSound SpringBirds/move Bird3 -6 0 3/playSound SpringBirds/animate Bird3 false true 100 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4/pause 1000/playSound SpringBirds/globalFade/viewport -1000 -1000/pause 50/speak Morgan \"{{i18n:Morgan.10hearts2.12}}\"/pause 100/addTemporaryActor Rabbit1 16 32 24 126 1/showFrame Rabbit1 0 true/addTemporaryActor Crow1 16 32 30 127 3/showFrame Crow1 0 true/animate Crow1 false true 250 0 0 0 0 1 0 0 0 0 0 0 0 0 1/addTemporaryActor Squirrel1 16 32 24 127 1/showFrame Squirrel1 0 true/animate Squirrel1 false true 250 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1/addTemporaryActor Rabbit2 16 32 29 126 3/showFrame Rabbit2 0 true/faceDirection Morgan 2 true/animate Morgan false true 200 0 0 0 0 0 0 4 4 4 4 4 4 4 4 0 12 12 12 12 12 12 12 12 0/viewport 27 127 true/pause 500/playSound SpringBirds/pause 1500/playSound SpringBirds/pause 1000/move Wizard 0 -2 0/pause 500/playSound SpringBirds/pause 500/faceDirection Wizard 3 true/pause 1200/faceDirection Wizard 0 true/pause 250/faceDirection Wizard 1 true/pause 700/playSound SpringBirds/pause 600/faceDirection Wizard 0 true/pause 700/stopAnimation Morgan/faceDirection Morgan 2 true/pause 200/playSound SpringBirds/pause 500/speak Wizard \"{{i18n:Morgan.10hearts2.13}}\"/pause 200/emote Morgan 8 true/pause 300/speak Morgan \"{{i18n:Morgan.10hearts2.14}}\"/speak Wizard \"{{i18n:Morgan.10hearts2.15}}\"/pause 200/playSound SpringBirds/pause 100/jump Morgan/pause 900/jump Morgan/pause 400/playSound SpringBirds/pause 500/speak Morgan \"{{i18n:Morgan.10hearts2.16}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Morgan.10hearts2.17}}\"/pause 1000/playSound reward/message \"{{i18n:Morgan.10hearts2.18}}\"/end dialogue Morgan \"{{i18n:Morgan.10hearts2.19}}\""
+        },
+      },
+      { //Increases animal products sell price by 10%
+        "Action": "EditData",
+        "Target": "Data/objectinformation",
+        "Fields": {
+          "176": {
+            1: "55"
+          }, //white egg
+          "180": {
+            1: "55"
+          }, //brown egg
+          "174": {
+            1: "105"
+          }, //large white egg
+          "182": {
+            1: "105"
+          }, //large brown egg
+          "442": {
+            1: "105"
+          }, //duck egg
+          "107": {
+            1: "385"
+          }, //dinosaur egg
+          "305": {
+            1: "72"
+          }, //void egg
+          "184": {
+            1: "138"
+          }, //milk
+          "186": {
+            1: "209"
+          }, //large milk
+          "436": {
+            1: "273"
+          }, //goat milk
+          "438": {
+            1: "380"
+          }, //large goat milk
+          "424": {
+            1: "253"
+          }, //cheese
+          "426": {
+            1: "440"
+          }, //goat cheese
+          "306": {
+            1: "209"
+          }, //mayonnaise
+          "307": {
+            1: "413"
+          }, //duck mayonnaise
+          "308": {
+            1: "303"
+          }, //void duck mayonnaise
+          "807": {
+            1: "880"
+          }, //dinosaur mayonnaise
+          "440": {
+            1: "374"
+          }, //wool
+          "428": {
+            1: "517"
+          }, //cloth
+          "430": {
+            1: "688"
+          }, //truffle
+          "432": {
+            1: "1172"
+          }, //truffle oil (Lewis uses this with Marnie. I wonder what for...)	
+        },
+        "When": {
+          "HasSeenEvent": "5978939"
+        }
+      },
+      /*{
+    "Action": "EditData",
+    "Target": "Data/objectinformation",
+	"Fields": { 
+	"176": { 1: "50" }, //white egg
+	"180": { 1: "50" }, //brown egg
+	"174": { 1: "95" }, //large white egg
+	"182": { 1: "95" }, //large brown egg
+	"442": { 1: "95" }, //duck egg
+	"107": { 1: "350" }, //dinosaur egg
+	"305": { 1: "65" }, //void egg
+	"184": { 1: "125" }, //milk
+	"186": { 1: "190" }, //large milk
+	"436": { 1: "225" }, //goat milk
+	"438": { 1: "345" }, //large goat milk
+	"424": { 1: "230" }, //cheese
+	"426": { 1: "400" }, //goat cheese
+	"306": { 1: "190" }, //mayonnaise
+	"307": { 1: "375" }, //duck mayonnaise
+	"308": { 1: "275" }, //void duck mayonnaise
+	"807": { 1: "800" }, //dinosaur mayonnaise
+	"440": { 1: "340" }, //wool
+	"428": { 1: "470" }, //cloth
+	"430": { 1: "625" }, //truffle
+	"432": { 1: "1065" }, //truffle oil	
+	},
+	"When": { "HasSeenEvent |contains=5978939": true, "LowerProfitMargins": true }
+},*/
+      { //Increases cheese sell price by 30%
+        "Action": "EditData",
+        "Target": "Data/objectinformation",
+        "When": {
+          "HasSeenEvent |contains=1000026": true,
+          "HasSeenEvent |contains=5978939": true
+        },
+        "Fields": {
+          "424": {
+            1: "300"
+          }, //cheese wheel
+          "426": {
+            1: "520"
+          }, //goat cheese wheel
+        },
+      },
+      /*{
+     "Action": "EditData",
+     "Target": "Data/objectinformation",
+     "When": { "HasSeenEvent |contains=1000026": true, "HasSeenEvent |contains=5978939": true, "LowerProfitMargins": true },
+	 "Fields": {
+	 "424": { 1: "255" }, //cheese wheel
+	 "426": { 1: "455" }, //goat cheese wheel
+	 },
+},*/
+      //Load temporary actors for Morgan 10 heart event
+      {
+        "Action": "Load",
+        "Target": "Characters/Frog1",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Frog1.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Frog2",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Frog2.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Bird1",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Bird1.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Bird2",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Bird2.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Bird3",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Bird3.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Rabbit1",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Rabbit1.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Rabbit2",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Rabbit2.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Squirrel1",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Squirrel1.png"
+      },
+      {
+        "Action": "Load",
+        "Target": "Characters/Crow1",
+        "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Crow1.png"
+      },
+      
+    ]
+  }

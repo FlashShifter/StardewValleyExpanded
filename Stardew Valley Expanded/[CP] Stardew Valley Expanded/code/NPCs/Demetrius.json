@@ -1,0 +1,94 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Demetrius",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme",
+          "Delimiter": " "
+        }
+        /*Like*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Bearberrys",
+          "Delimiter": " "
+        }
+        /*Dislike*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Hate*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            7
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish",
+          "Delimiter": " "
+        }
+        /*Neutral*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            9
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+      ]
+    },
+    { //DEMETRIUS SCHEDULE EDITS
+      "Action": "EditData",
+      "Target": "characters/schedules/Demetrius",
+      "Entries": {
+        "summer": "750 ScienceHouse 29 9 0/1100 Town 30 24 2 square_2_9/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 ScienceHouse 19 4 11 demetrius_sleep",
+        "fall": "750 ScienceHouse 29 9 0/1100 Mountain 42 16 demetrius_notes/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 ScienceHouse 19 4 11 demetrius_sleep"
+      },
+    },
+    { //DEMETRIUS EVENT
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "1000015/m 60000/w sunny/z winter/z fall/z spring/t 900 1700": "springtown/-500 -500/farmer 19 39 0 Demetrius 27 29 0 Jodi 21 24 1 Caroline 23 24 3 Penny 47 33 2/skippable/showFrame Penny 18/pause 600/viewport 26 29 true/pause 250/textAboveHead Demetrius \"{{i18n:Demetrius.Event.01}}\"/move farmer 0 -10 1/move farmer 1 0 1/emote farmer 8/pause 800/move Demetrius 0 0 3/pause 300/textAboveHead Demetrius \"{{i18n:Demetrius.Event.02}}\"/pause 1000/move farmer 5 0 1/pause 300/speak Demetrius \"{{i18n:Demetrius.Event.03}}\"/pause 800/move Demetrius 0 0 0/pause 1200/speak Demetrius \"{{i18n:Demetrius.Event.04}}\"/pause 500/move Demetrius 0 0 3/pause 500/speak Demetrius \"{{i18n:Demetrius.Event.05}}\"/pause 200/speak Demetrius \"{{i18n:Demetrius.Event.06}}\"/pause 1100/speak Demetrius \"{{i18n:Demetrius.Event.07}}\"/pause 800/speak Demetrius \"{{i18n:Demetrius.Event.08}}\"/pause 200/speak Demetrius \"{{i18n:Demetrius.Event.09}}\"/pause 800/speak Demetrius \"{{i18n:Demetrius.Event.10}}\"/pause 100/emote Demetrius 32/pause 100/question fork0 \"{{i18n:Demetrius.Event.11}}\"/fork 1000015_InformativeConversation/stopMusic/pause 500/emote Demetrius 28/pause 1000/speak Demetrius \"{{i18n:Demetrius.Event.12}}\"/pause 700/emote Demetrius 28/pause 1000/speak Demetrius \"{{i18n:Demetrius.Event.13}}\"/pause 200/globalFade/viewport -1000 -1000/pause 700/friendship Demetrius -375/end dialogue Demetrius \"{{i18n:Demetrius.Event.14}}\"",
+        "1000015_InformativeConversation": "pause 750/speak Demetrius \"{{i18n:Demetrius.Event.Informative.01}}\"/pause 200/emote Demetrius 16/speak Demetrius \"{{i18n:Demetrius.Event.Informative.02}}\"/pause 200/globalFade/viewport -1000 -1000/pause 700/friendship Demetrius 50/end dialogue Demetrius \"{{i18n:Demetrius.Event.Informative.03}}\""
+      },
+    },
+    { //DEMETRIUS EVENT DIALOGUE ADDITIONS
+      "Action": "EditData",
+      "Target": "characters/dialogue/Demetrius",
+      "Entries": {
+        "demetrius_event1": "{{i18n:Demetrius.Dialogue.01}}",
+        "demetrius_event2": "{{i18n:Demetrius.Dialogue.02}}",
+        "demetrius_event3": "{{i18n:Demetrius.Dialogue.03}}",
+        "demetrius_event4": "{{i18n:Demetrius.Dialogue.04}}",
+        "demetrius_event5": "{{i18n:Demetrius.Dialogue.05}}",
+        "demetrius_event6": "{{i18n:Demetrius.Dialogue.06}}",
+      }
+    },
+  ]
+}

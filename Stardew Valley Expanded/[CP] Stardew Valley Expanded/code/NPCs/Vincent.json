@@ -1,0 +1,93 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Vincent",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Big_Conch",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Bearberrys FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Vincent",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //VINCENT SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Vincent",
+			"Entries": {
+				"rain": "900 SamHouse 4 8 0/1100 SamHouse 2 15 2 vincent_play/1400 SamHouse 4 14 2 square_3_3/1700 SamHouse 5 6 3/1900 SamHouse 11 22 2 vincent_play/2000 SamHouse 8 22 3 vincent_sleep",
+				"spring": "900 SamHouse 4 8 0/1100 SamHouse 2 15 2 vincent_play/1400 Town 12 72 2 square_5_3/1700 SamHouse 5 6 3/1900 SamHouse 11 22 2 vincent_play/2000 SamHouse 8 22 3 vincent_sleep"
+			},
+		},
+		{ //VINCENT EVENT
+			"Action": "EditData",
+			"Target": "data/events/beach",
+			"Entries": {
+				"1000031/f Vincent 1250/y 2/z winter/z fall/z spring/t 1200 1700/w sunny": "jaunty/-500 -500/farmer 65 13 1 Vincent 73 18 2/pause 1000/viewport 72 19 true/pause 500/skippable/shake Vincent 800/textAboveHead Vincent \"{{i18n:Vincent.Event.01}}\"/move farmer 6 0 2/pause 300/emote farmer 8/pause 500/move farmer 0 5 1/pause 600/faceDirection Vincent 3/pause 600/speak Vincent \"{{i18n:Vincent.Event.02}}\"/pause 650/move farmer 1 0 2/pause 300/faceDirection Vincent 2/pause 1000/emote farmer 16/pause 1300/faceDirection Vincent 3/pause 200/speak Vincent \"{{i18n:Vincent.Event.03}}\"/pause 400/faceDirection farmer 1/pause 500/speak Vincent \"{{i18n:Vincent.Event.04}}\"/pause 1150/speak Vincent \"{{i18n:Vincent.Event.05}}\"/pause 500/emote farmer 32/pause 800/speak Vincent \"{{i18n:Vincent.Event.06}}\"/pause 1000/speak Vincent \"{{i18n:Vincent.Event.07}}\"/pause 400/emote Vincent 32/pause 800/faceDirection Vincent 2/pause 500/move farmer 0 0 2/pause 3000/shake Vincent 800/pause 1200/faceDirection farmer 1/pause 300/emote farmer 8/pause 400/emote Vincent 28/playMusic ocean/pause 700/speak Vincent \"{{i18n:Vincent.Event.08}}\"/pause 1500/speak Vincent \"{{i18n:Vincent.Event.09}}\"/pause 1200/faceDirection Vincent 3/pause 1000/speak Vincent \"{{i18n:Vincent.Event.10}}\"/pause 500/globalFade/viewport -1000 -1000/pause 800/stopMusic/pause 1200/message \"{{i18n:Vincent.Event.11}}\"/pause 700/friendship Vincent 50/end dialogue Vincent \"{{i18n:Vincent.Event.12}}\""
+			},
+			"When": {
+				"HasFlag": "beachBridgeFixed"
+			}
+		},
+		{ //VINCENT EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Vincent",
+			"Entries": {
+				"vincent_event1": "{{i18n:Vincent.Dialogue.01}}",
+				"vincent_event2": "{{i18n:Vincent.Dialogue.02}}",
+			}
+		},
+	]
+}

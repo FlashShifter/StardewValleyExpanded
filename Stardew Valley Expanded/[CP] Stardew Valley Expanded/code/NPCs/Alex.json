@@ -1,0 +1,131 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Alex",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Alex",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Alex",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Alex",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Alex",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //ALEX SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"Entries": {
+				"rain": "800 JoshHouse 8 19 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 53 69 0/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep",
+				"winter": "900 BathHouse_MensLocker 3 5 2 alex_lift_weights/1500 JoshHouse 14 5 2/1800 Town 53 69 0/1930 JoshHouse 8 19 2/2100 JoshHouse 17 5 0/2240 JoshHouse 21 4 1 alex_sleep",
+				"Wed": "NOT friendship Haley 6/800 Town 64 64 2 alex_football/1200 HaleyHouse 8 22 3 alex_sit_left/1630 Town 53 69 0/1840 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep",
+				"spring": "800 Town 64 64 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 53 69 0/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep"
+			},
+		},
+		{ //ALEX SCHEDULE - Haley
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"When": {
+				"Weather": "Sun"
+			},
+			"Entries": {
+				"6": "800 JoshHouse 5 17 0/900 JoshHouse 17 5 0/1030 JoshHouse 10 19 2/1130 Town 53 69 0/1330 Town 22 25 1/1600 Saloon 34 18 0/2110 JoshHouse 21 4 3 alex_sleep",
+				"20": "800 JoshHouse 5 17 0/900 JoshHouse 17 5 0/1030 JoshHouse 10 19 2/1130 Town 53 69 0/1330 Town 22 25 1/1600 Saloon 34 18 0/2110 JoshHouse 21 4 3 alex_sleep",
+			},
+		},
+		{ //ALEX SCHEDULE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries": {
+				"Town_53_69": "{{i18n:Alex.Dialogue.01}}",
+				"JoshHouse_10_19": "{{i18n:Alex.Dialogue.02}}",
+				"Saloon_34_18": "{{i18n:Alex.Dialogue.03}}",
+			},
+		},
+		{ //ALEX DIALOGUE - Mentions Sophia petting Dusty
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"When": {
+				"HasSeenEvent": "8185295"
+			},
+			"Entries": {
+				"fall_Thu2": "{{i18n:Alex.Dialogue.04}}",
+			},
+		},
+		{ //ALEX SCHEDULE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"When": {
+				"Hearts:Alex": "5, 6, 7, 8, 8, 10, 11, 12, 13, 14"
+			},
+			"Entries": {
+				"Town_53_69": "{{i18n:Alex.Dialogue.05}}",
+			},
+		},
+		{ //ALEX EVENT
+			"Action": "EditData",
+			"Target": "data/events/railroad",
+			"Entries": {
+				"1000001/f Alex 1750/k 911526/e 2481135/z spring/z summer/z fall/t 1000 1600": "winter_day_ambient/-500 -500/farmer 29 55 0 Alex 29 46 0/pause 550/skippable/viewport 29 48 clamp true/pause 500/move farmer 0 -6 0/pause 500/faceDirection Alex 1 true/pause 250/faceDirection Alex 2 true/pause 400/speak Alex \"{{i18n:Alex.Event.01}}\"/pause 700/move Alex 0 1 2/pause 500/speak Alex \"{{i18n:Alex.Event.02}}\"/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/speak Alex \"{{i18n:Alex.Event.03}}\"/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 450/speak Alex \"{{i18n:Alex.Event.04}}\"/pause 1000/pause 700/speak Alex \"{{i18n:Alex.Event.05}}\"/speak Alex \"{{i18n:Alex.Event.06}}\"/pause 1300/faceDirection Alex 3 true/pause 250/faceDirection Alex 0 true/pause 500/emote Alex 28/stopMusic/pause 1000/speak Alex \"{{i18n:Alex.Event.07}}\"/pause 700/faceDirection Alex 3 true/pause 250/faceDirection Alex 2 true/pause 400/playMusic desolate/pause 600/showFrame Alex 27/pause 700/speak Alex \"{{i18n:Alex.Event.08}}\"/pause 650/shake Alex 500/pause 900/speak Alex \"{{i18n:Alex.Event.09}}\"/pause 600/showFrame Alex 0/pause 500/speak Alex \"{{i18n:Alex.Event.10}}\"/pause 800/speak Alex \"{{i18n:Alex.Event.11}}\"/pause 500/stopMusic/pause 800/speak Alex \"{{i18n:Alex.Event.12}}\"/pause 1000/question fork0 \"{{i18n:Alex.Event.13}}\"/fork 1000001_Inspiring/pause 500/stopMusic/pause 1000/emote Alex 60/pause 500/speak Alex \"{{i18n:Alex.Event.14}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Alex -500/end dialogue Alex \"{{i18n:Alex.Event.15}}\"",
+				"1000001_Inspiring": "pause 300/speak Alex \"{{i18n:Alex.Event.1000001_Inspiring.01}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Alex 50/end dialogue Alex \"{{i18n:Alex.Event.1000001_Inspiring.02}}\"",
+			},
+		},
+		{ //ALEX EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Alex",
+			"Entries": {
+				"alex_event1": "{{i18n:Alex.Dialogue.06}}",
+				"alex_event2": "{{i18n:Alex.Dialogue.07}}",
+				"alex_event3": "{{i18n:Alex.Dialogue.08}}",
+			}
+		},
+		{ //ALEX 4 HEART EVENT ALTERATION W/ DUSTY PORTRAIT
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"2481135/f Alex 1000/t 900 1600": "sweet/-1000 -1000/farmer 42 73 1 Alex 53 69 0 Caroline 45 60 1 Olivia 47 60 3 Pam 71 69 2 Evelyn 62 57 0/addTemporaryActor Dusty 16 32 -300 -300 2 true/positionOffset Alex -30 0/skippable/viewport 54 69 true/move farmer 12 0 0 true/pause 1000/speak Alex \"{{i18n:Alex.4heart.01}}\"/pause 300/playSound dog_pant/pause 300/playSound dog_pant true/speak Dusty \"{{i18n:Alex.4heart.02}}\"/pause 100/speak Alex \"{{i18n:Alex.4heart.03}}\"/pause 600/move farmer 0 -4 3/pause 300/faceDirection Alex 1/pause 180/jump Alex/pause 700/speak Alex \"{{i18n:Alex.4heart.04}}\"/pause 1000/question fork1 \"{{i18n:Alex.4heart.05}}\"/fork didntHear/switchEvent AlexFourHeart",
+				"didntHear": "pause 400/pause 100/faceDirection Alex 1/speak Alex \"{{i18n:Alex.4heart.didntHear.01}}\"/switchEvent AlexFourHeart",
+				"AlexFourHeart": "pause 500/faceDirection Alex 2/pause 1000/showFrame Alex 27/pause 600/playMusic desolate/emote Alex 28/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.01}}\"/pause 1000/showFrame Alex 4 true/faceDirection Alex 1/pause 500/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.02}}\"/faceDirection Alex 0/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.03}}\"/pause 800/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.04}}\"/pause 2000/emote Alex 40/faceDirection Alex 1/playMusic spring_day_ambient/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.05}}\"/pause 500/speak Alex \"{{i18n:Alex.4heart.AlexFourHeart.06}}\"/faceDirection Alex 0/pause 300/playSound dog_bark/pause 300/move farmer 0 0 0/pause 200/playSound dog_bark/speak Dusty \"{{i18n:Alex.4heart.AlexFourHeart.07}}\"/pause 400/globalFade/viewport -1000 -1000/end"
+			},
+		},
+	]
+}

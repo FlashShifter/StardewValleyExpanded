@@ -1,0 +1,76 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Dwarf",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Dwarf",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Gemfish",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Dwarf",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Radioactive_Bass",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Dwarf",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Dwarf",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Dwarf",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //DWARF EVENT DIALOGUE ADDITIONS
+            "Action": "EditData",
+            "Target": "characters/dialogue/Dwarf",
+            "Entries": {
+                "dwarf_event1": "...",
+                "dwarf_event2": "...",
+                "dwarf_event3": "{{i18n:Dwarf.Dialogue.01}}",
+                "dwarf_event4": "{{i18n:Dwarf.Dialogue.02}}",
+            }
+        },
+    ]
+}

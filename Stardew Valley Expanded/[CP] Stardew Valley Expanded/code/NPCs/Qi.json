@@ -1,0 +1,24 @@
+{
+	"Changes": [
+		{ // Mr Qi. Event - adds SVE trailer soundtrack to jukebox
+			"Action": "EditData",
+			"Target": "data/events/farm",
+			"When": {
+				"HasFlag": "qiCave",
+				"HasFlag": "galaxySword",
+				"HasSeenEvent |contains=1925178": true,
+				"HasSeenEvent |contains=980558": true
+			}, //player completed qi skull cave quest, has galaxy sword, made it to treasure cave in the badlands, and unlocked the jukebox from Gus
+			"Entries": {
+				"6139583/": "FlashShifter.StardewValleyExpandedCP_StardewValleyExpandedTrailer/-500 -500/farmer -100 -100 2 MrQi -99 -99 0/pause 500/playMusic none/pause 10/stopMusic/emote farmer 16 true/pause 1000/speak MrQi \"{{i18n:Qi.Jukebox.01}}\"/pause 650/emote farmer 8 true/pause 1000/speak MrQi \"{{i18n:Qi.Jukebox.02}}\"/pause 800/screenFlash 1/playSound wand/warp MrQi -400 -400/pause 1250/end"
+			},
+		},
+		{ //TREASURE CAVE EVENT
+			"Action": "EditData",
+			"Target": "data/events/Custom_TreasureCave",
+			"Entries": {
+				"1925178/": "none/-300 -300/farmer 10 16 0/viewport 10 11 true/skippable/speed farmer 4/move farmer 0 -5 0 true/pause 500/playSound serpentDie/pause 600/playSound serpentDie/pause 100/move farmer 0 0 1/pause 300/move farmer 0 0 2/pause 200/startJittering/pause 700/playSound serpentDie/pause 1000/stopJittering/pause 1100/move farmer 0 0 1/pause 250/move farmer 0 0 0/pause 800/emote farmer 16/pause 450/speed farmer 1/move farmer 0 -1 0 true/pause 150/message \"{{i18n:TreasureCave.01}}\"/pause 500/move farmer 0 0 1/pause 250/move farmer 0 0 2/pause 1100/move farmer 0 0 3/pause 1200/move farmer 0 0 2/pause 250/move farmer 0 0 1/pause 1000/move farmer 0 0 0/pause 800/message \"{{i18n:TreasureCave.02}}\"/end position 10 11"
+			},
+		},
+	]
+}

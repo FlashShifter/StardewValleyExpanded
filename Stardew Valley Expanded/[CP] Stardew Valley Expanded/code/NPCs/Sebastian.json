@@ -1,0 +1,113 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Sebastian",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Frog",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Sebastian",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Clownfish",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //SEBASTIAN SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Sebastian",
+            "When": {
+                "HasSeenEvent |contains=191393, 502261": false,
+                "Spouse |contains=Sebastian": true,
+                "Day |contains=22": true
+            },
+            "Entries": {
+                "marriage_Mon": "830 Mountain 48 26 1 \"Strings\\schedules\\Sebastian:marriage_Mon.000\"/1300 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:marriage_Mon.001\"/1700 Bed",
+            },
+        },
+        { //SEBASTIAN SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Sebastian",
+            "Entries": {
+                "fall": "1030 SebastianRoom 9 4 3 sebastian_computer/1200 Mountain 48 26 1/1400 Mountain 42 12 2/1500 Mountain 42 13 1 sebastian_smoking/1600 ScienceHouse 27 9 0/1730 SebastianRoom 9 4 3 sebastian_computer/2130 SebastianRoom 11 9 1",
+                "spring": "1030 SebastianRoom 9 4 3 sebastian_computer/1500 ScienceHouse 27 9 0/1530 SebastianRoom 9 4 3 sebastian_computer/1830 Mountain 48 26 1 sebastian_smoking/2130 SebastianRoom 11 9 1",
+                "Thu": "1030 SebastianRoom 9 4 3 sebastian_computer/1400 Railroad 28 47 1 sebastian_smoking/1800 Railroad 64 45 3/1930 Railroad 5 45 1/2130 SebastianRoom 11 9 1 sebastian_sleep",
+                "20": "800 SebastianRoom 3 5 0/1000 ScienceHouse 27 9 0/1200 SebastianRoom 6 12 0/1400 SebastianRoom 3 7 2/2100 ScienceHouse 27 9 0/2220 SebastianRoom 11 9 1 sebastian_sleep",
+            },
+        },
+        { //Sebastian chronicles of solaria 
+            "Action": "EditData",
+            "Target": "characters/schedules/Sebastian",
+            "When": {
+                "Day": "20",
+                "Spouse": "Sebastian"
+            },
+            "Entries": {
+                "Sat": "730 ScienceHouse 27 9 0/1200 SebastianRoom 6 12 0/1400 SebastianRoom 3 7 2/2100 Bed",
+            },
+        },
+        { //SEBASTIAN SCHEDULE DIALOGUE
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "SebastianRoom_3_7": "{{i18n:Sebastian.Dialogue.01}}",
+            },
+        },
+        { //Sebastian 8 hrt event fix
+            "Action": "EditData",
+            "Target": "data/events/SebastianRoom",
+            "Entries": {
+                "27/f Sebastian 1500/p Sebastian": "jaunty/-1000 -1000/farmer 1 1 2 Sebastian 5 8 3 Sam 3 7 2/skippable/showFrame Sam 24/showFrame Sebastian 28/positionOffset Sebastian 0 15/doAction 1 3/viewport 5 5 true/move farmer 0 6 1/pause 500/showFrame Sebastian 29/pause 500/speak Sebastian \"{{i18n:Sebastian.8heart.01}}\"/pause 500/speak Sebastian \"{{i18n:Sebastian.8heart.02}}\"/move farmer 0 1 2/pause 500/playSound thudStep/faceDirection farmer 1 true/showFrame 117/positionOffset farmer 16 80/pause 600/speak Sebastian \"{{i18n:Sebastian.8heart.03}}\"/pause 900/showFrame Sebastian 30/playSound dwop/pause 500/showFrame Sebastian 28/pause 500/speak Sebastian \"{{i18n:Sebastian.8heart.04}}\"/pause 600/speak Sam \"{{i18n:Sebastian.8heart.05}}\"/pause 500/question chooseCharacter \"{{i18n:Sebastian.8heart.05A}}\"/pause 500/speak Sebastian \"{{i18n:Sebastian.8heart.06}}\"/pause 500/speak Sam \"{{i18n:Sebastian.8heart.07}}\"/addMailReceived choseWizard/switchEvent opening"
+            }
+        },
+    ]
+}

@@ -1,0 +1,688 @@
+{
+     "Changes": [
+          //Buying Aurora Vineyard (Joja route)
+          {
+               "Action": "EditData",
+               "Target": "Data/SpecialOrders",
+               "Update": "OnLocationChange",
+               "Entries": {
+                    "MorrisTod3": {
+                         "Name": "[MorrisTod_Name3]",
+                         "Requester": "MorrisTod",
+                         "Duration": "Month",
+                         "Repeatable": "False",
+                         "RequiredTags": "event_746153081",
+                         "OrderType": "StardewValleyExpanded",
+                         "SpecialRule": "",
+                         "Text": "[MorrisTod_Text3]",
+                         "ItemToRemoveOnEnd": null,
+                         "MailToRemoveOnEnd": null,
+                         "RandomizedElements": null,
+                         "Objectives": [
+                              {
+                                   "Type": "Deliver",
+                                   "Text": "[MorrisTod_Objective_1_Text3]",
+                                   "RequiredCount": "1",
+                                   "Data": {
+                                        "AcceptedContextTags": "item_aurora_vineyard_property_deed",
+                                        "TargetName": "MorrisTod"
+                                   }
+                              },
+                         ],
+                         "Rewards": [
+                              {
+                                   "Type": "Mail",
+                                   "Data": {
+                                        "MailReceived": "AuroraVineyardDeedOfLand"
+                                   }
+                              }
+                         ]
+                    },
+               },
+          },
+          { //Morris special order strings
+               "Action": "EditData",
+               "Target": "Strings/SpecialOrderStrings",
+               "Entries": {
+                    "MorrisTod_Name3": "{{i18n:Morris.AuroraString.01}}",
+                    "MorrisTod_Text3": "{{i18n:Morris.AuroraString.02}}",
+                    "MorrisTod_Objective_1_Text3": "{{i18n:Morris.AuroraString.03}}",
+               }
+          },
+          { //Buying Aurora Vineyard - part 1 
+               "Action": "EditData",
+               "Target": "data/events/farm",
+               "When": {
+                    "HasSeenEvent |contains=5553214": true,
+                    "HasSeenEvent |contains=8050109": true,
+                    "HasFlag |contains=Island_Resort": true
+               }, //Player has visited Joja Emporium at least once, player has built Morris' townhouse, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
+               "Entries": {
+                    "746153081/e 6663408/k 8033858/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
+                    "746153081_PurchasedAuroraVineyard": "pause 400/addMailReceived PlayerWillBuyAuroraVineyard/pause 100/message \"{{i18n:Joja.Aurora1.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.Purchased.02}}\""
+               },
+          },
+          { //Player decided to purchase aurora vineyard   ----> Allows ledger shop and special order to load
+               "Action": "EditData",
+               "Target": "data/events/town",
+               "Update": "OnLocationChange",
+               "When": {
+                    "HasFlag": "PlayerWillBuyAuroraVineyard"
+               },
+               "Entries": {
+                    "746153082": "none/-500 -500/MorrisTod -20 -20 0/end"
+               },
+          },
+          { //Buying Aurora Vineyard - part 2      ---> tagged for framework
+               "Action": "EditData",
+               "Target": "data/events/JojaMart",
+               "Entries": {
+                    "746153083/e 746153082/H": "Hospital_Ambient/-500 -500/farmer 18 20 1 MorrisTod 24 26 3 Martin 9 25 1 Sam 26 7 2 Shane_JojaMart 13 15 3 Andy 25 16 3 Pam 2 17 1 Jodi 9 8 0/animate Martin false true 1000 20 20 20 20 20 21 20 20 20 20 20 20 20 20 20 21 21/animate Sam false true 100 40 40 41 41 42 42 41 41/viewport 22 26 true/skippable/move farmer 3 0 2/move farmer 0 3 2/pause 800/playSound stoneStep/pause 400/playSound stoneStep/pause 400/playSound stoneStep/pause 600/speak MorrisTod \"{{i18n:Joja.Aurora2.01}}\"/pause 1000/doAction 21 24/pause 1000/move farmer 0 3 1/move farmer 1 0 1/pause 800/emote farmer 40/pause 500/speak MorrisTod \"{{i18n:Joja.Aurora2.02}}\"/pause 300/emote farmer 16/pause 150/speak MorrisTod \"{{i18n:Joja.Aurora2.03}}\"/pause 300/emote MorrisTod 40/pause 150/speak MorrisTod \"{{i18n:Joja.Aurora2.04}}\"/pause 500/end dialogueWarpOut MorrisTod \"{{i18n:Joja.Aurora2.05}}\""
+               },
+          },
+          { //Patches Morris aurora vineyard joja ledger shop in his home office
+               "Action": "EditMap",
+               "Target": "Maps/Custom_MorrisHouse",
+               "FromFile": "Assets/Maps/MapPatches/AuroraVineyardDeedShop.tbin",
+               "When": {
+                    "HasSeenEvent": "746153083"
+               },
+               "ToArea": {
+                    "X": 4,
+                    "Y": 6,
+                    "Width": 2,
+                    "Height": 1
+               },
+               "Update": "OnLocationChange"
+          },
+          { //Andy stops walking to Aurora Vineyard
+               "Action": "EditData",
+               "Target": "characters/schedules/Andy",
+               "When": {
+                    "HasSeenEvent": "746153083, 7776012"
+               },
+               "Entries": {
+                    "spring_15": "0 Custom_AndyHouse 18 6 0/610 Custom_AndyHouse 20 6 0/800 Custom_AndyHouse 18 14 0/1200 Forest 69 66 1 Andy_Drink3/1900 Custom_AndyHouse 5 6 0/2300 Custom_AndyHouse 9 6 1 Andy_Sleep",
+                    "summer_15": "0 Custom_AndyHouse 18 6 0/610 Custom_AndyHouse 20 6 0/800 Custom_AndyHouse 18 14 0/1200 Forest 69 66 1 Andy_Drink3/1900 Custom_AndyHouse 5 6 0/2300 Custom_AndyHouse 9 6 1 Andy_Sleep",
+                    "fall_15": "0 Custom_AndyHouse 18 6 0/610 Custom_AndyHouse 20 6 0/800 Custom_AndyHouse 18 14 0/1200 Forest 69 66 1 Andy_Drink3/1900 Custom_AndyHouse 5 6 0/2300 Custom_AndyHouse 9 6 1 Andy_Sleep",
+                    "winter_24": "0 Custom_AndyHouse 18 6 0/610 Custom_AndyHouse 20 6 0/800 Custom_AndyHouse 18 14 0/1200 Forest 69 66 1 Andy_Drink3/1900 Custom_AndyHouse 5 6 0/2300 Custom_AndyHouse 9 6 1 Andy_Sleep",
+               },
+          },
+          { //Buying Aurora Vineyard - part 3      ---> tagged for farmland map patch
+               "Action": "EditData",
+               "Target": "data/events/farm",
+               "When": {
+                    "HasFlag": "AuroraVineyardDeedOfLand"
+               },
+               "Entries": {
+                    "746153084/t 600 1000/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/addMailReceived VineyardIsBeingFixedTomorrow/skippable/pause 1000/speak MorrisTod \"{{i18n:Joja.Aurora3.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora3.02}}\"",
+               },
+          },
+          { //Buying Aurora Vineyard - part 4 (sunny)
+               "Action": "EditData",
+               "Target": "data/events/farmhouse",
+               "Entries": {
+                    "746153085/w sunny/t 2200 2600/n VineyardIsBeingFixedTomorrow/e 746153084/k 746153086/H": "none/-500 -500/farmer -50 -50 0 MorrisTod 21 12 2/changeLocation Custom_ForestWestOld/skippable/ambientLight 150 170 150/showFrame MorrisTod 38 true/animate MorrisTod false true 1000 36 37/addTemporaryActor JojaWorker1 19 28 28 10 2/animate JojaWorker1 false true 200 0 1 2 3 2 1/addTemporaryActor JojaWorker2 19 28 17 9 2/animate JojaWorker2 false true 200 0 1 2 3 2 1/addTemporaryActor JojaWorkerSuppliesPile 31 21 19 13 2 false/addTemporaryActor JojaWorkerBox 21 21 30 10 2 false/positionOffset JojaWorker2 -15 0 true/positionOffset JojaWorker1 -10 0 true/addLantern 735 22 12 1/addLantern 735 29 10 1/addLantern 735 16 10 1/playMusic nightTime/viewport 21 10 clamp true/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/globalFade/viewport -1000 -1000/end dialogue MorrisTod \"{{i18n:Joja.Aurora4.01}}\""
+               },
+          },
+          { //Buying Aurora Vineyard - part 4 (rainy)
+               "Action": "EditData",
+               "Target": "data/events/farmhouse",
+               "Entries": {
+                    "746153085/w rainy/t 2200 2600/n VineyardIsBeingFixedTomorrow/e 746153084/k 746153086/H": "none/-500 -500/farmer -50 -50 0 MorrisTod 21 12 2/changeLocation Custom_ForestWestOld/skippable/ambientLight 150 170 150/showFrame MorrisTod 38 true/animate MorrisTod false true 1000 36 37/addTemporaryActor JojaWorker1 19 28 28 10 2/animate JojaWorker1 false true 200 0 1 2 3 2 1/addTemporaryActor JojaWorker2 19 28 17 9 2/animate JojaWorker2 false true 200 0 1 2 3 2 1/addTemporaryActor JojaWorkerSuppliesPile 31 21 19 13 2 false/addTemporaryActor JojaWorkerBox 21 21 30 10 2 false/positionOffset JojaWorker2 -15 0 true/positionOffset JojaWorker1 -10 0 true/addLantern 735 22 12 1/addLantern 735 29 10 1/addLantern 735 16 10 1/playMusic rain/viewport 21 10 clamp true/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/globalFade/viewport -1000 -1000/end dialogue MorrisTod \"{{i18n:Joja.Aurora4.01}}\""
+               },
+          },
+          { //19x28
+               "Action": "Load",
+               "Target": "Characters/JojaWorker1",
+               "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorker1.png"
+          },
+          { //19x28
+               "Action": "Load",
+               "Target": "Characters/JojaWorker2",
+               "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorker2.png"
+          },
+          { //21x21
+               "Action": "Load",
+               "Target": "Characters/JojaWorkerBox",
+               "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorkerBox.png"
+          },
+          { //31x21
+               "Action": "Load",
+               "Target": "Characters/JojaWorkerSuppliesPile",
+               "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorkerSuppliesPile.png"
+          },
+          { //Removes NPC shadow at ForestWestOld
+               "Action": "EditImage",
+               "Target": "LooseSprites/Shadow",
+               "FromFile": "Assets/Tilesheets/FakeShadow.png",
+               "Update": "OnLocationChange",
+               "When": {
+                    "LocationName": "Custom_ForestWestOld"
+               }
+          },
+          { //Buying Aurora Vineyard event - part 5
+               "Action": "EditData",
+               "Target": "data/events/Custom_AuroraVineyardRefurbished",
+               "When": {
+                    "HasFlag |contains=jojaMember": true
+               },
+               "Entries": {
+                    "746153086/H": "jaunty/-500 -500/farmer 11 16 0 MorrisTod 11 8 0/addConversationTopic AuroraVineyardPurchased 14/skippable/viewport 11 9 true/move farmer 0 -6 0/pause 650/faceDirection MorrisTod 1 true/pause 250/faceDirection MorrisTod 2 true/pause 500/speak MorrisTod \"{{i18n:Joja.Aurora5.01}}\"/pause 500/jump farmer/pause 900/speak MorrisTod \"{{i18n:Joja.Aurora5.02}}\"/pause 750/speed MorrisTod 1/move MorrisTod 0 1 2/pause 300/shake MorrisTod 400/pause 200/playSound money/pause 500/speak MorrisTod \"{{i18n:Joja.Aurora5.03}}\"/pause 500/globalFade/viewport -1000 -1000/end position 11 10",
+               },
+          },
+          { //Buying Aurora Vineyard event - part 6 (sunny)
+               "Action": "EditData",
+               "Target": "data/events/Custom_ForestWest",
+               "When": {
+                    "MatureEvents": "true",
+                    "HasSeenEvent|contains=746153086": true
+               },
+               "Entries": {
+                    "746153087/w sunny/t 2000 2600": "none/-500 -500/farmer -100 -100 0 Apples -50 -50 2/addTemporaryActor ApplesSad 16 32 -20 -20 2/pause 50/playMusic nightTime/pause 1000/viewport 58 18 true/pause 2000/playSound doorClose/warp ApplesSad 58 18/pause 750/speed ApplesSad 1/move ApplesSad 0 3 2/pause 1250/faceDirection ApplesSad 1 true/pause 250/faceDirection ApplesSad 0 true/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:Joja.Aurora6.01}}\"/pause 2000/faceDirection ApplesSad 1 true/pause 250/faceDirection ApplesSad 2 true/pause 500/speed ApplesSad 1/move ApplesSad 0 10 2 true/pause 2500/globalFade/viewport -1000 -1000/pause 1250/end",
+               },
+          },
+          { //Buying Aurora Vineyard event - part 6 (rainy)
+               "Action": "EditData",
+               "Target": "data/events/Custom_ForestWest",
+               "When": {
+                    "MatureEvents": "true",
+                    "HasSeenEvent|contains=746153086": true
+               },
+               "Entries": {
+                    "746153087/w rainy/t 2000 2600": "none/-500 -500/farmer -100 -100 0 Apples -50 -50 2/addTemporaryActor ApplesSad 16 32 -20 -20 2/pause 50/playMusic rain/pause 1000/viewport 58 18 true/pause 2000/playSound doorClose/warp ApplesSad 58 18/pause 750/speed ApplesSad 1/move ApplesSad 0 3 2/pause 1250/faceDirection ApplesSad 1 true/pause 250/faceDirection ApplesSad 0 true/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/speak Apples \"{{i18n:Joja.Aurora6.01}}\"/pause 2000/faceDirection ApplesSad 1 true/pause 250/faceDirection ApplesSad 2 true/pause 500/speed ApplesSad 1/move ApplesSad 0 10 2 true/pause 2500/globalFade/viewport -1000 -1000/pause 1250/end",
+               },
+          },
+          //Reaction dialogue to player purchasing the vineyard
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/MorrisTod",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Morris}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Andy",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Andy}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Susan",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Susan}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Sophia",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Sophia}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Robin",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Robin}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Sebastian",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Sebastian}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Leah",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Leah}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Haley",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Haley}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Marnie",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Marnie}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Jodi",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Jodi}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Sam",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Sam}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Abigail",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Abigail}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Olivia",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Olivia}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Alex",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Alex}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Vincent",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Vincent}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Clint",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Clint}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Lance",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Lance}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Evelyn",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Evelyn}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/George",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.George}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Pam",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Pam}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Penny",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Penny}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Shane",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Shane}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Emily",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Emily}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Pierre",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Pierre}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Caroline",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Caroline}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Harvey",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Harvey}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Maru",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Maru}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Demetrius",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Demetrius}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Linus",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Linus}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/MarlonFay",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Marlon}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Wizard",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Magnus}}",
+               },
+          },
+          {
+               "Action": "EditData",
+               "Target": "characters/dialogue/Gus",
+               "Entries": {
+                    "AuroraVineyardPurchased": "{{i18n:Aurora.Purchased.Gus}}",
+               },
+          },
+          //Aurora Vineyard Patches
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "FromFile": "assets/Maps/MapPatches/ForestWest_Farmable.tbin",
+               "ToArea": {
+                    "X": 40,
+                    "Y": 9,
+                    "Width": 37,
+                    "Height": 29
+               },
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "FromFile": "assets/Maps/MapPatches/ForestWest_Farmable.tbin",
+               "ToArea": {
+                    "X": 40,
+                    "Y": 9,
+                    "Width": 37,
+                    "Height": 29
+               },
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "IsFarm": "T"
+               },
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "ForceAllowTreePlanting": "T"
+               },
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "IsFarm": "T"
+               },
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "ForceAllowTreePlanting": "T"
+               },
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "FromFile": "assets/Maps/MapPatches/ForestWest_Sign.tbin",
+               "ToArea": {
+                    "X": 98,
+                    "Y": 32,
+                    "Width": 1,
+                    "Height": 2
+               },
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "FromFile": "assets/Maps/MapPatches/ForestWest_Sign.tbin",
+               "ToArea": {
+                    "X": 98,
+                    "Y": 32,
+                    "Width": 1,
+                    "Height": 2
+               },
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange"
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "NightTiles"
+                         ],
+                         "Value": "AlwaysFront 74 13 368 AlwaysFront 74 20 368 AlwaysFront 74 27 368 AlwaysFront 70 32 368 AlwaysFront 63 32 368 AlwaysFront 53 32 368 AlwaysFront 46 32 368 AlwaysFront 42 27 368 AlwaysFront 42 20 368 AlwaysFront 42 13 368",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "NightTiles"
+                         ],
+                         "Value": "AlwaysFront 74 13 368 AlwaysFront 74 20 368 AlwaysFront 74 27 368 AlwaysFront 70 32 368 AlwaysFront 63 32 368 AlwaysFront 53 32 368 AlwaysFront 46 32 368 AlwaysFront 42 27 368 AlwaysFront 42 20 368 AlwaysFront 42 13 368",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "DayTiles"
+                         ],
+                         "Value": "AlwaysFront 74 13 369 AlwaysFront 74 20 369 AlwaysFront 74 27 369 AlwaysFront 70 32 369 AlwaysFront 63 32 369 AlwaysFront 53 32 369 AlwaysFront 46 32 369 AlwaysFront 42 27 369 AlwaysFront 42 20 369 AlwaysFront 42 13 369",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "DayTiles"
+                         ],
+                         "Value": "AlwaysFront 74 13 369 AlwaysFront 74 20 369 AlwaysFront 74 27 369 AlwaysFront 70 32 369 AlwaysFront 63 32 369 AlwaysFront 53 32 369 AlwaysFront 46 32 369 AlwaysFront 42 27 369 AlwaysFront 42 20 369 AlwaysFront 42 13 369",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasSeenEvent": "746153084"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "Light"
+                         ],
+                         "Value": "58 17 4 74 14 4 74 21 4 74 28 4 70 33 4 63 33 4 53 33 4 42 28 4 42 21 4 42 14 4 46 33 4",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "Light"
+                         ],
+                         "Value": "58 17 4 74 14 4 74 21 4 74 28 4 70 33 4 63 33 4 53 33 4 42 28 4 42 21 4 42 14 4 46 33 4",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasSeenEvent": "746153084",
+                    "Season": "Winter"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "Light"
+                         ],
+                         "Value": "58 17 4 56 16 4 60 16 4 58 14 4 62 16 4",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "When": {
+                    "HasFlag": "PlayerWantsAuroraVineyard",
+                    "Season": "Winter"
+               },
+               "Update": "OnLocationChange",
+               "TextOperations": [
+                    {
+                         "Operation": "Append",
+                         "Target": [
+                              "MapProperties",
+                              "Light"
+                         ],
+                         "Value": "58 17 4 56 16 4 60 16 4 58 14 4 62 16 4",
+                         "Delimiter": " "
+                    },
+               ]
+          },
+          { //Adds rejection dialogue to all NPCs, preventing players from accidentally losing their aurora vineyard property deed (250,000g)
+               "Action": "EditData",
+               "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
+               "Entries": {
+                    "reject_(O)Aurora Vineyard Property Deed": "{{i18n:Reject.PropertyDeed}}",
+               }
+          },
+     ]
+}

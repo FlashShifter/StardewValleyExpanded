@@ -1,0 +1,136 @@
+{
+	"Changes": [
+
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Sam",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Sam",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //SAM SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"Entries": {
+				"JojaMart_Replacement": "ArchaeologyHouse 44 13 2",
+				"26": "700 SamHouse 17 15 2 sam_guitar/900 Town 93 72 2 sam_skateboarding/1500 Saloon 36 21 3 sam_pool/2120 SamHouse 22 13 1 sam_sleep",
+				"20": "900 SamHouse 17 15 2 sam_guitar/1200 SebastianRoom 1 8 1/2100 SamHouse 22 13 1 sam_sleep",
+				"spring": "1000 SamHouse 15 13 0/1040 SamHouse 17 15 2 sam_guitar/1340 Town 69 101 2/1830 SamHouse 22 16 1/2100 SamHouse 22 13 1"
+			},
+		},
+		{ //Sam chrnoicles of solaria schedule
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"Day": "20",
+				"Spouse": "Sam"
+			},
+			"Entries": {
+				"Sat": "1000 SebastianRoom 1 8 1/2100 Bed",
+			},
+		},
+		{ //SAM SCHEDULE - Penny
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"Weather": "Sun"
+			},
+			"Entries": {
+				"7": "830 Town 13 90 2 sam_skateboarding/1200 SamHouse 7 5 0/1400 SamHouse 17 15 2 sam_guitar/1500 SamHouse 7 15 3/1600 Saloon 12 20 0/2100 SamHouse 22 13 1 sam_sleep",
+				"21": "830 Town 13 90 2 sam_skateboarding/1200 SamHouse 7 5 0/1400 SamHouse 17 15 2 sam_guitar/1500 SamHouse 7 15 3/1600 Saloon 12 20 0/2100 SamHouse 22 13 1 sam_sleep",
+			},
+		},
+		{ //SAM SCHEDULE - reversed
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"When": {
+				"Spouse": "Penny"
+			},
+			"Entries": {
+				"7": null,
+				"21": null
+			},
+		},
+		{ //SAM SCHEDULE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries": {
+				"ArchaeologyHouse_44_13": "{{i18n:Sam.Dialogue.01}}",
+				"SebastianRoom_1_8": "{{i18n:Sam.Dialogue.02}}",
+				"SamHouse_7_15": "{{i18n:Sam.Dialogue.03}}",
+				"Saloon_12_20": "{{i18n:Sam.Dialogue.04}}",
+			},
+		},
+		{ //SAM EVENT
+			"Action": "EditData",
+			"Target": "data/events/saloon",
+			"Entries": {
+				"1000004/f Sam 1250/t 1300 1800": "none/-500 -500/farmer 14 24 0 Sam 33 18 0 Wizard 7 6 1 MarlonFay 8 6 3 Gus 12 18 2/showFrame MarlonFay 12/animate Gus false true 500 18 19 20 19/viewport 33 18 true/advancedMove farmer false 0 -3 9 0 0 -2 8 0 0 -1 1 2000/skippable/playMusic cowboy_boss/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/shake Sam 1000/textAboveHead Sam \"{{i18n:Sam.5hearts.01}}\"/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/playSound Cowboy_monsterDie/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 250/playSound Cowboy_monsterDie/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/playSound Cowboy_monsterDie/pause 250/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/shake Sam 1000/textAboveHead Sam \"{{i18n:Sam.5hearts.02}}\"/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot play/pause 250/playSound Cowboy_monsterDie/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot play/pause 250/playSound Cowboy_monsterDie/playSound Cowboy_gunshot/playSound Cowboy_monsterDie/pause 250/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_powerup/pause 150/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot play/pause 250/playSound Cowboy_monsterDie/playSound Cowboy_gunshot/pause 250/pause 500/playSound cowboy_monsterhit/pause 250/shake Sam 1000/textAboveHead Sam \"{{i18n:Sam.5hearts.03}}\"/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_monsterDie/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_monsterDie/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/textAboveHead Wizard \"{{i18n:Sam.5hearts.04}}\"/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/playSound Cowboy_monsterDie/pause 250/playSound cowboy_monsterhit/pause 100/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 150/playSound Cowboy_gunshot/pause 250/playSound Cowboy_monsterDie/pause 250/playSound Cowboy_gunshot/pause 250/playSound cowboy_dead/playMusic none/pause 350/shake Sam 3000/speak Sam \"{{i18n:Sam.5hearts.05}}\"/pause 400/emote Sam 12/pause 1000/faceDirection Sam 3 true/pause 400/playMusic jaunty/emote Sam 16/speak Sam \"{{i18n:Sam.5hearts.06}}\"/pause 500/move Sam 0 0 0/pause 1000/textAboveHead MarlonFay \"{{i18n:Sam.5hearts.07}}\"/move Sam 0 0 3/pause 500/speak Sam \"{{i18n:Sam.5hearts.08}}\"/pause 400/speak Sam \"{{i18n:Sam.5hearts.09}}\"/pause 1000/move Sam 0 0 0/pause 250/textAboveHead Wizard \"{{i18n:Sam.5hearts.10}}\"/emote Sam 40/speak Sam \"{{i18n:Sam.5hearts.11}}\"/pause 500/move Sam 0 0 3/pause 500/speak Sam \"{{i18n:Sam.5hearts.12}}\"/pause 500/textAboveHead MarlonFay \"{{i18n:Sam.5hearts.13}}\"/pause 500/faceDirection Sam 2 true/pause 500/move Sam 0 1 3/move Sam -2 0 0 true/pause 700/advancedMove farmer false 2 1000/pause 700/speak Sam \"{{i18n:Sam.5hearts.14}}\"/pause 600/faceDirection Sam 3 true/pause 500/move Sam -10 0 3 true/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Sam 50/end dialogue Sam \"{{i18n:Sam.5hearts.15}}\"",
+			},
+		},
+		{ //SAM EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Sam",
+			"Entries": {
+				"sam_event1": "{{i18n:Sam.Event1}}",
+				"sam_event2": "{{i18n:Sam.Event2}}",
+				"sam_event3": "{{i18n:Sam.Event3}}",
+			}
+		},
+		{ //SAM 2 HEART EVENT PATHING FIX
+			"Action": "EditData",
+			"Target": "data/events/samhouse",
+			"Entries": {
+				"46/f Sam 1000/p Sam": "playful/7 4/farmer 7 12 0 Sam 7 5 0 Jodi 15 7 0/skippable/move farmer 0 -6 0/faceDirection Sam 2/pause 300/speak Sam \"{{i18n:Sam.2hearts.01}}\"/pause 500/speak Sam \"{{i18n:Sam.2hearts.02}}\"/faceDirection Sam 0/pause 500/playSound openBox/pause 500/faceDirection Sam 3/playSound dwop/specificTemporarySprite dropEgg/showFrame Sam 33/jump Sam/pause 1000/emote Sam 12/showFrame Sam 12/speak Sam \"{{i18n:Sam.2hearts.03}}\"/speed Jodi 4/move Jodi -8 0 0/speak Jodi \"{{i18n:Sam.2hearts.04}}\"/emote Jodi 16/speak Jodi \"{{i18n:Sam.2hearts.05}}\"/move Jodi -1 0 0/move Jodi 0 -1 0/speak Jodi \"{{i18n:Sam.2hearts.06}}\"/speak Sam \"{{i18n:Sam.2hearts.07}}\"/pause 300/speak Jodi \"{{i18n:Sam.2hearts.08}}\"/faceDirection Jodi 0/speak Sam \"{{i18n:Sam.2hearts.09}}\"/emote Jodi 20/speak Jodi \"{{i18n:Sam.2hearts.10}}\"/move Jodi 0 1 1/move Jodi 1 0 2 /faceDirection Sam 2 true/move Jodi 0 7 2 true/globalFade/viewport -1000 -1000/end dialogue Sam \"{{i18n:Sam.2hearts.11}}\"",
+			}
+		},
+		{ //Add Victor to Sam 8 heart
+			"Action": "EditData",
+			"Target": "data/events/busstop",
+			"Entries": {
+				"4081148/e 47/t 1600 1900": "none/-1000 -1000/farmer 23 22 0 Sam 24 10 2 Sebastian 25 11 3 Emily 20 11 3 Maru 19 10 2 Shane 22 15 0 Elliott 27 14 1 Leah 28 14 3 Abigail 23 11 1 Victor 27 10 1 Penny 28 10 3 Harvey 18 11 1 Linus 31 5 2 Jodi 18 15 2 Vincent 18 16 0/positionOffset Victor -20 4/viewport 22 11 clamp true/skippable/move farmer 0 -10 0 true/move Shane 0 -6 0 true/proceedPosition Shane/warp Shane -100 -100/proceedPosition farmer/move farmer 1 0 0 false/speak Sam \"{{i18n:Sam.8hearts.01}}\"/faceDirection Sam 3/faceDirection Sam 1/faceDirection Sam 2/speak Sam \"{{i18n:Sam.8hearts.02}}\"/jump Sam/pause 800/speak Sam \"{{i18n:Sam.8hearts.03}}\"/pause 600/move Abigail -1 0 0 true/move Emily 1 0 1 true/faceDirection Maru 1/pause 100/faceDirection Victor 2 true/pause 200/faceDirection Victor 3 true/proceedPosition Abigail/move Abigail 0 -2 2 true/move Sebastian -3 0 0 true/move Elliott -5 0 0 true/move Leah -5 0 0 true/globalFade/viewport -1000 -1000/pause 3000/speak Sam \"{{i18n:Sam.8hearts.04}}\"/pause 1000/playSound busDoorOpen/pause 4000/speak Sam \"{{i18n:Sam.8hearts.05}}\"/pause 800/changeToTemporaryMap SamShow/warp Sam 18 14/faceDirection Sam 0 true/warp Sebastian 21 14/positionOffset Sebastian 20 -20/warp Abigail 15 13/positionOffset Abigail 40 -24/warp farmer 18 20/warp Elliott 20 19/faceDirection Elliott 0/warp Leah 21 19/faceDirection Leah 0 true/warp Maru 13 16/faceDirection Maru 1 true/warp Harvey 14 17/faceDirection Harvey 0 true/warp Emily 21 16/faceDirection Emily 0 true/warp Shane 16 20/warp Victor 20 16/faceDirection Victor 0 true/positionOffset Victor -25 0/warp Linus 31 14/faceDirection Linus 0 true/warp Penny 17 16/faceDirection Penny 0 true/faceDirection Sebastian 2 true/warp Jodi 11 19/warp Vincent 12 19/faceDirection Jodi 0/viewport 18 15 true/move farmer 0 -4 0/pause 3000/faceDirection Sam 2/pause 800/jump Sam/pause 1000/cutscene bandFork/mail afterSamShow/end dialogue Sam \"{{i18n:Sam.8hearts.06}}\"",
+			}
+		},
+		{ //SAM 10 HEART EVENT PATHING FIX
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"233104/f Sam 2500/t 2000 2400/w sunny/n samMessage": "nightTime/-1000 -1000/farmer 5 90 1 Sam 10 87 2 Vincent 8 22 3 Jodi 6 13 0/viewport 10 86 clamp true/skippable/move farmer 5 0 0/move farmer 0 -2 0/pause 500/speak Sam \"{{i18n:Sam.10hearts.01}}\"/faceDirection Sam 1/faceDirection Sam 3/faceDirection Sam 2/shake Sam 1000/speak Sam \"{{i18n:Sam.10hearts.02}}\"/pause 800/move Sam 0 -1 0 true/move farmer 0 -1 0 true/globalFade/viewport -1000 -1000/changeLocation SamHouse/playSound thudStep/pause 500/playSound woodyStep/pause 200/playSound Ship/pause 500/playSound woodyStep/pause 400/playSound Ship/warp farmer 20 18/warp Sam 20 17/viewport 18 14 true/move Sam 0 -3 2 true/move farmer 0 -3 0 false/pause 1000/faceDirection Sam 3/faceDirection Sam 2/speak Sam \"{{i18n:Sam.10hearts.03}}\"/move Jodi 0 2 1 true/emote Sam 40/pause 400/speak Sam \"{{i18n:Sam.10hearts.04}}\"/move Jodi 6 0 0/playSound woodyStep/faceDirection Sam 3/playSound woodyStep/showFrame Sam 33/jump Sam/pause 800/speak Jodi \"{{i18n:Sam.10hearts.05}}\"/move Sam -1 0 3/speak Sam \"{{i18n:Sam.10hearts.06}}\"/speed farmer 4/move farmer 0 -2 1/speed farmer 4/move farmer 2 0 1 true/doAction 12 14/faceDirection Sam 3 true/move Jodi 0 -2 1 false/move Jodi 2 0 1/speak Jodi \"{{i18n:Sam.10hearts.07}}\"/move Sam 0 -1 3/speak Sam \"{{i18n:Sam.10hearts.08}}\"/emote Jodi 16/pause 300/speak Jodi \"{{i18n:Sam.10hearts.09}}\"/pause 1000/speak Sam \"{{i18n:Sam.10hearts.10}}\"/move Jodi -2 0 2/move Jodi 0 2 0/move Jodi -10 0 2 true/faceDirection Sam 1/emote Sam 28/speak Sam \"{{i18n:Sam.10hearts.10A}}\"$h/faceDirection farmer 3/speak Sam \"{{i18n:Sam.10hearts.11}}\"/pause 800/question fork1 \"{{i18n:Sam.10hearts.11A}}\"/fork stayPut/move farmer -2 0 3/pause 600/faceDirection Sam 2/faceDirection Sam 1/speak Sam \"{{i18n:Sam.10hearts.12}}\"/pause 900/speak Sam \"{{i18n:Sam.10hearts.13}}\"/resetVariable/emote Sam 40/question fork1 \"{{i18n:Sam.10hearts.14}}\"/fork rejectSam/playMusic musicboxsong/pause 2000/animate farmer true true 150 6 7 6 8/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/positionOffset farmer -2 0/pause 100/stopAnimation farmer/showFrame Sam 35/pause 1000/showFrame Sam 38 /positionOffset Sam 4 0/animate farmer true true 100 101/pause 3000/speak Sam \"{{i18n:Sam.10hearts.15}}\"/pause 1000/globalFade/viewport -1000 -1000/pause 6000/end dialogue Sam \"{{i18n:Sam.10hearts.16}}\""
+			}
+		},
+	]
+}

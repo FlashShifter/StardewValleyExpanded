@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Jodi",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jodi",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jodi",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jodi",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Mushroom_Colony",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jodi",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //JODI DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Jodi",
+			"Entries": {
+				"fall_Sun": "{{i18n:Jodi.Dialogue.01}}",
+				"Tue4": "{{i18n:Jodi.Dialogue.02}}",
+			},
+		},
+		{ //JODI DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries": {
+				"Introduction": "{{i18n:Jodi.Dialogue.03}}",
+				"Thu": "{{i18n:Jodi.Dialogue.04}}",
+			},
+		},
+		{ //JODI EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Jodi",
+			"Entries": {
+				"jodi_event1": "{{i18n:Jodi.Dialogue.05}}",
+				"jodi_event2": "{{i18n:Jodi.Dialogue.06}}",
+				"jodi_event3": "!!!$0",
+				"jodi_event4": "!!!$0"
+			}
+		},
+	]
+}

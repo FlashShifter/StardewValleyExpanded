@@ -1,0 +1,416 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Andy": {
+          "DisplayName": "{{i18n:Name.Andy}}",
+          "BirthSeason": "Spring",
+          "BirthDay": 23,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Negative",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_AndyHouse",
+              "Condition": null,
+              "Location": "Custom_AndyHouse",
+              "Tile": {
+                "X": 9,
+                "Y": 6
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Andy_Winter",
+              "Sprite": "Characters/Andy_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Andy's gift tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Andy": "{{i18n:Andy.Gifts.Loved}}/346 459 303 240 611 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme/{{i18n:Andy.Gifts.Liked}}/167 296 20 18 16 396 410 420 422 416 414 FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Bearberrys/{{i18n:Andy.Gifts.Disliked}}/60 62 64 66 68 70 72 80 82 84 86 418 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Galdoran_Gem FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Andy.Gifts.Hated}}/350 348 74 FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Andy.Gifts.Neutral}}/398 404 446 395 373 -74 FlashShifter.StardewValleyExpandedCP_Ancient_Fiber/"
+      }
+    },
+    {
+      //Andy's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Andy_Farm1": "4 4 4 4 4/16 16 16 17 17 17/4 4 4 4 4",
+        "Andy_Farm2": "0 0 0 0 0/18 18 18 19 19 19/0 0 0 0 0",
+        "Andy_Drink1": "24/24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 26 25 24 24 24 24 24 24 24 24 24/24",
+        "Andy_Drink2": "28/28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 29 30 31 31 31 31 31 31 31 31 31 31 31 30 29 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28/28",
+        "Andy_Drink3": "32/32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32 32 32/32",
+        "Andy_Stand": "8/8/8",
+        "Andy_Sleep": "21/21/21"
+      }
+    },
+    {
+      //Andy's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Andy",
+      "FromFile": "assets/CharacterFiles/Portraits/Andy/Andy.png"
+    },
+    {
+      //Andy's Sprites
+      "Action": "Load",
+      "Target": "Characters/Andy",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Andy/Andy.png"
+    },
+    {
+      //Andy's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Andy_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Andy/Andy_Winter.png"
+    },
+    {
+      //Andy's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Andy_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Andy/Andy_Winter.png"
+    },
+    {
+      //Andy's beach portraits
+      "Action": "Load",
+      "Target": "Portraits/Andy_Beach",
+      "FromFile": "assets/CharacterFiles/Portraits/Andy/Andy_Beach.png"
+    },
+    {
+      //Andy's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Andy_Beach",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Andy/Andy_Beach.png"
+    },
+    {
+      //Andy's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Andy",
+      "FromFile": "assets/CharacterFiles/Schedules/Andy/Schedule.json"
+    },
+    {
+      //Andy Schedule (works at farm all day on first of season)
+      "Action": "EditData",
+      "Target": "characters/schedules/Andy",
+      "When": {
+        "Season |contains=Winter": false,
+        "HasSeenEvent |contains=3691371": false
+      },
+      "Entries": {
+        "1": "0 Custom_AndyHouse 18 6 0/620 Custom_AndyHouse 18 6 0/700 Forest 68 66 1/800 Forest 77 62 2 Andy_Farm2/820 Forest 77 62 2 Andy_Farm2/830 Forest 75 62 2 Andy_Farm2/850 Forest 73 62 2 Andy_Farm2/900 Forest 72 62 2 Andy_Farm2/910 Forest 71 62 2 Andy_Farm2/920 Forest 70 64 1 Andy_Farm1/930 Forest 70 65 1 Andy_Farm1/940 Forest 70 66 1 Andy_Farm1/950 Forest 70 67 1 Andy_Farm1/1000 Forest 70 68 1 Andy_Farm1/1010 Forest 70 69 1 Andy_Farm1/1030 Forest 70 70 1 Andy_Farm1/1050 Forest 70 66 1 Andy_Farm1/1130 Forest 70 63 1 Andy_Farm1/1200 Forest 74 62 2 Andy_Farm2/1220 Forest 78 62 2 Andy_Farm2/1240 Forest 72 62 2 Andy_Farm2/1300 Forest 63 67 2/1340 Forest 70 65 1 Andy_Farm1/1400 Forest 70 68 1 Andy_Farm1/1420 Forest 74 61 2 Andy_Farm2/1440 Forest 79 62 2 Andy_Farm2/1500 Forest 82 68 3/1530 Forest 72 62 2 Andy_Farm2/1600 Forest 70 68 1 Andy_Farm1/1620 Forest 70 64 1 Andy_Farm1/1640 Forest 57 67 0/1730 Forest 48 71 0/1820 Custom_AndyHouse 18 6 0/1940 Custom_AndyHouse 17 15 1 Andy_Drink3/2110 Custom_AndyHouse 5 6 0/2200 Custom_AndyHouse 9 6 1 Andy_Sleep",
+      }
+    },
+    //MOVIE THEATER
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Andy": {
+          "Name": "Andy",
+          "LovedTags": [
+            "Black Licorice"
+          ],
+          "LikedTags": [
+            "Salty"
+          ],
+          "DislikedTags": [
+            "Sweet",
+            "Healthy"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Andy": {
+          "NPCName": "Andy",
+          "Reactions": [
+            {
+              "Tag": "family",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "documentary",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "horror",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "love",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.01}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.02}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "like",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.03}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.04}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "dislike",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.05}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Andy.Movies.06}}",
+                }
+              },
+              "ID": "reaction_5"
+            }
+          ]
+        },
+      }
+    },
+ 
+
+    
+
+    //ANDY 1/2 Heart event - 'Strawberries'
+    {
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "5000000/f Andy 125/w sunny/z winter/z summer/z fall/y 1/t 700 1700/j 3": "spring_day_ambient/-500 -500/farmer 76 74 3 Andy 70 65 1/pause 500/animate Andy false true 400 16 17/mail AndyStrawberrySeeds/skippable/viewport 75 74 true/pause 250/move farmer -8 0 3 true/viewport move -1 -1 6500 true/pause 4300/faceDirection farmer 0 true/pause 650/move farmer 0 -6 0/pause 400/stopAnimation Andy/pause 450/move Andy 0 0 2/pause 200/emote Andy 16/pause 100/move Andy -2 0 2/move Andy 0 1 2/speak Andy \"{{i18n:Andy.Intro.01}}\"/pause 450/emote Andy 40/pause 100/speak Andy \"{{i18n:Andy.Intro.02}}\"/pause 250/emote farmer 8/pause 500/move Andy 0 1 2/pause 500/speak Andy \"{{i18n:Andy.Intro.03}}\"/pause 300/jump farmer/pause 900/speak Andy \"{{i18n:Andy.Intro.04}}\"/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Andy 30/end dialogue Andy \"{{i18n:Andy.Intro.05}}\"",
+      },
+    },
+    //ANDY - 'Darn Crows'
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "Entries": {
+        "1111101/w sunny/j 10/z winter/z summer/z fall/y 1/e 5000000/t 600 700": "spring_day_ambient/64 16/farmer 20 20 2 Andy 20 22 0/pause 600/skippable/pause 1000/speak Andy \"{{i18n:Andy.Crows.01}}\"/pause 1000/speak Andy \"{{i18n:Andy.Crows.02}}\"/pause 1000/playSound crow/pause 300/move Andy 0 0 3/pause 500/faceDirection farmer 3/pause 200/emote Andy 16 true/pause 200/emote farmer 16 true/pause 300/playSound crow/pause 500/playSound crow/pause 600/speak Andy \"{{i18n:Andy.Crows.03}}\"/pause 700/move Andy 0 0 0/pause 800/faceDirection farmer 2/pause 1000/speak Andy \"{{i18n:Andy.Crows.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/playSound crow/pause 600/playSound crow/end",
+      },
+    },
+    //ANDY 2 Heart event - 'New Regulations'
+    {
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "5000001/f Andy 500/z winter/t 1000 1600/w sunny": "springtown/-500 -500/farmer 28 89 0 Andy 33 60 1 Lewis 35 60 3 Harvey -100 -100 2 Pierre -125 -125 2 Olivia 34 65 3 Caroline 33 64 2 Jodi 32 65 1 Alex 50 68 1 George 51 64 0 MarlonFay 33 106 2 Krobus 32 106 2 Victor 71 54 0 Pam 79 68 1 Leah 97 104 2 Clint 97 77 0 Maru 43 77 2 Penny 29 55 2/pause 500/skippable/showFrame Penny 18/showFrame Maru 31/viewport 34 61 true/move farmer 0 -29 1 true/pause 1500/speak Lewis \"{{i18n:Andy.2hearts.01}}\"/speak Andy \"{{i18n:Andy.2hearts.02}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.03}}\"/pause 500/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.04}}\"/shake Andy 350/showFrame Andy 4/showFrame Penny 23/move Olivia 0 0 0/pause 100/move Caroline 0 0 0/pause 200/move Jodi 0 0 0/pause 150/showFrame Penny 0/emote Penny 16 true/pause 100/emote Olivia 16 true/pause 200/emote Jodi 16 true/pause 100/emote Caroline 16 true/pause 200/emote farmer 16 true/pause 250/move Lewis 0 0 2/pause 900/move Lewis 0 0 3/pause 300/speak Andy \"{{i18n:Andy.2hearts.05}}\"/pause 250/playSound doorClose/warp Harvey 36 56/pause 200/emote Harvey 8 true/pause 100/speak Lewis \"{{i18n:Andy.2hearts.06}}\"pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.07}}\"/pause 100/emote Olivia 16 true/pause 150/showFrame Andy 4/shake Andy 1000/emote Jodi 16 true/pause 150/playSound doorClose/emote Penny 16 true/warp Pierre 43 57/pause 125/emote Caroline 16 true/pause 125/move Pierre 0 0 3/pause 250/emote Pierre 8 true/pause 200/showFrame Andy 4/pause 500/speak Lewis \"{{i18n:Andy.2hearts.08}}\"/pause 100/showFrame Andy 20/shake Andy 9999999/speak Andy \"{{i18n:Andy.2hearts.09}}\"/shake Andy 1000/showFrame Andy 4/emote Olivia 16 true/pause 250/emote Penny 16 true/pause 150/emote Caroline 16 true/pause 250/speak Lewis \"{{i18n:Andy.2hearts.10}}\"/speak Andy \"{{i18n:Andy.2hearts.11}}\"/pause 100/move Andy -4 0 2/pause 500/showFrame Andy 22/pause 1000/speak Andy \"{{i18n:Andy.2hearts.12}}\"/move Andy 0 7 2 true/pause 300/move farmer 0 0 2 true/pause 250/move Caroline 0 0 3 true/pause 400/move Jodi 0 0 3 true/pause 300/move Olivia 0 0 3 true/pause 300/globalFade/viewport -1000 -1000/pause 500/warp Andy -400 -400/pause 300/move Jodi 0 0 2/pause 200/viewport 34 61 true/move Olivia 0 0 3/showFrame Penny 16/pause 100/move Caroline 0 0 2/pause 150/showFrame Penny 17/pause 100/move Olivia 0 0 3/pause 50/showFrame Penny 19/pause 200/showFrame Penny 18/pause 200/move Pierre 0 0 1/pause 300/move Caroline 0 0 2/pause 250/playSound doorClose/warp Pierre -200 -200/pause 400/move Harvey 0 0 0/pause 300/warp Harvey -200 -205/playSound doorClose/pause 400/move Jodi 0 0 1/pause 200/move Lewis -5 0 3/pause 500/move farmer 0 0 1/pause 500/speak Lewis \"{{i18n:Andy.2hearts.13}}\"/pause 300/emote farmer 40/pause 300/speak Lewis \"{{i18n:Andy.2hearts.14}}\"/pause 500/speak Lewis \"{{i18n:Andy.2hearts.15}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.16}}\"/pause 300/emote farmer 60/pause 500/speak Lewis \"{{i18n:Andy.2hearts.17}}\"/pause 1000/speak Lewis \"{{i18n:Andy.2hearts.18}}\"/pause 500/question fork0 \"{{i18n:Andy.2hearts.19}}\"/fork 5000001_TalkAndy/pause 500/speak Lewis \"{{i18n:Andy.2hearts.20}}\"/pause 600/move Lewis 0 0 2/pause 700/move Lewis 0 0 3/pause 800/speak Lewis \"{{i18n:Andy.2hearts.21}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Lewis \"{{i18n:Andy.2hearts.22}}\"",
+        "5000001_TalkAndy": "pause 500/speak Lewis \"{{i18n:Andy.2hearts.TalkAndy.01}}\"/pause 600/move Lewis 0 0 2/pause 800/move Lewis 0 0 3/pause 800/speak Lewis \"{{i18n:Andy.2hearts.TalkAndy.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"{{i18n:Andy.2hearts.TalkAndy.03}}\"",
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' (joja gone)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Sophia 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\"",
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' - (player is friendly towards Sophia) (joja gone)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "Hearts:Sophia": "{{Range: 6, 10}}",
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10A}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\""
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' - (player is dating/married to Sophia) (joja gone)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "Hearts:Sophia": "{{Range: 10, 14}}",
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10B}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\""
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' (joja exists)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "HasSeenEvent |contains=191393": false
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Sophia 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03A}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\""
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' - (player is friendly towards Sophia) (joja exists)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "Hearts:Sophia": "{{Range: 6, 10}}",
+        "HasSeenEvent |contains=191393": false
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03A}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10A}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\""
+      },
+    },
+    //ANDY 4 Heart event - 'Farmers Of The Valley' - (player is dating/married to Sophia) (joja exists)
+    {
+      "Action": "EditData",
+      "Target": "data/events/seedshop",
+      "When": {
+        "Hearts:Sophia": "{{Range: 10, 14}}",
+        "HasSeenEvent |contains=191393": false
+      },
+      "Entries": {
+        "5000009/f Andy 1000/f Susan 50/f Marnie 50/t 900 1700": "none/-500 -500/farmer 13 26 1 Andy 6 29 0 Pierre 4 17 2 Susan 12 23 0 Sophia 4 19 0 Marnie 14 20 0 Caroline 21 20 0 Olivia 21 18 2 Abigail 9 5 0 George 37 18 0 Gus 2 20 3 Robin 9 27 1/positionOffset George 3 -15 true/advancedMove Gus true 3 9000 0 2 3 7000 0 3 2 8000 1 0 0 -2 4 6000 -1 0 0 -3 3 1000/advancedMove Robin false 1 7000 0 3 3 0 0 -2 3 9000 1 0 0 1 1 7000 0 1 3 0 0 -3 3 8000 0 -4 -1 0 4 6000 1 0 0 5 3 40000/pause 500/playMusic playful/pause 1000/viewport 9 23 true/skippable/move Andy 0 -6 0/pause 550/faceDirection Andy 1 true/pause 750/shake Andy 500/pause 150/speak Andy \"{{i18n:Andy.4hearts.01}}\"/pause 800/faceDirection Susan 3 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.02}}\"/pause 250/move Marnie -3 0 0 true/pause 250/speak Andy \"{{i18n:Andy.4hearts.03A}}\"/pause 400/shake Susan 500/speak Susan \"{{i18n:Andy.4hearts.04}}\"/pause 250/move Susan -1 0 3/pause 300/faceDirection Susan 0 true/pause 650/showFrame Susan 9 true/shake Susan 500/pause 250/playSound dwop/pause 500/showFrame Susan 8 true/pause 700/faceDirection Susan 3 true/pause 400/move Susan -4 0 3 true/pause 1750/faceDirection farmer 0 true/pause 300/move farmer 0 -3 0 true/pause 625/showFrame Susan 13 true/shake Susan 600/pause 225/playSound money/pause 550/showFrame Susan 12 true/pause 300/speak Andy \"{{i18n:Andy.4hearts.05}}\"/pause 350/faceDirection Sophia 1 true/pause 250/emote Susan 32 true/move Sophia 3 0 2/move Sophia 0 2 2/pause 400/jump Sophia/pause 300/speak Sophia \"{{i18n:Andy.4hearts.06}}\"/pause 550/faceDirection Andy 0 true/pause 500/faceDirection Susan 0 true/pause 400/speak Susan \"{{i18n:Andy.4hearts.07}}\"/pause 250/faceDirection farmer 3 true/pause 250/speak Sophia \"{{i18n:Andy.4hearts.08}}\"/pause 400/move farmer -4 0 3/pause 600/faceDirection Andy 1 true/pause 200/speak Andy \"{{i18n:Andy.4hearts.09}}\"/pause 400/faceDirection Susan 1 true/pause 350/textAboveHead Sophia \"{{i18n:Andy.4hearts.10B}}\"/pause 200/faceDirection Andy 2 true/pause 250/move Andy 0 1 1/move Andy 2 0 1/pause 500/faceDirection Marnie 3 true/pause 300/move Marnie -2 0 2/speak Marnie \"{{i18n:Andy.4hearts.11}}\"/pause 250/faceDirection Andy 0 true/pause 300/faceDirection Sophia 1 true/pause 300/faceDirection Susan 0 true/pause 250/faceDirection farmer 0 true/pause 150/showFrame Andy 36 true/shake Andy 650/pause 300/speak Andy \"{{i18n:Andy.4hearts.12}}\"/pause 400/faceDirection Sophia 2 true/pause 300/jump Sophia/pause 150/showFrame Sophia 39 true/pause 450/textAboveHead Sophia \"{{i18n:Andy.4hearts.13}}\"/pause 200/shake Andy 500/faceDirection Marnie 3 true/pause 500/faceDirection Susan 1 true/pause 500/faceDirection Marnie 2 true/pause 150/faceDirection farmer 3 true/pause 300/shake Susan 500/pause 500/showFrame farmer 97 true/pause 200/animate Marnie false true 150 33 34/pause 500/globalFade/viewport -1000 -1000/pause 1250/friendship Andy 50/friendship Marnie 50/friendship Sophia 50/friendship Susan 50/end dialogue Andy \"{{i18n:Andy.4hearts.14}}\""
+      },
+    },
+    //ANDY 6 Heart event - 'Aurora Vineyard'
+    {
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "5000002/t 600 1700/z winter/w rainy/f Andy 1500": "rain/-500 -500/farmer -100 -100 3 Andy -101 -101 2 MarlonFay -200 -200 2 Wizard -202 -202 2 Krobus -203 -203 0/pause 500/skippable/viewport 62 69 true/pause 2500/warp Andy 62 67/playSound doorClose/pause 1000/shake Andy 600/pause 1200/faceDirection Andy 1 true/pause 500/move Andy 6 0 2/move Andy 0 7 3 true/pause 1000/globalFade/viewport -1000 -1000 true/halt/warp Andy -99 -99/warp farmer 74 74/viewport 62 69 true/move farmer -6 0 3/pause 1000/emote farmer 8 true/pause 1400/move farmer -7 0 3 true/pause 1000/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation Custom_ForestWest/pause 400/playMusic rain/warp MarlonFay 53 114/warp Wizard 55 114/warp Krobus 54 117/warp Andy 58 20/warp farmer 58 31/pause 400/viewport 58 22 true/pause 100/move Andy 0 0 0/move farmer 0 -8 0/pause 2000/speak Andy \"{{i18n:Andy.6hearts.01}}\"/pause 3000/speak Andy \"{{i18n:Andy.6hearts.02}}\"/pause 2000/speak Andy \"{{i18n:Andy.6hearts.03}}\"/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 1100/speak Andy \"{{i18n:Andy.6hearts.04}}\"/pause 1000/showFrame Andy 22/pause 1200/speak Andy \"{{i18n:Andy.6hearts.05}}\"/pause 1250/faceDirection Andy 1 true/pause 250/faceDirection Andy 0/pause 1200/shake Andy 1000/pause 1200/speak Andy \"{{i18n:Andy.6hearts.06}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.07}}\"/pause 750/shake Andy 1000/pause 1500/faceDirection Andy 1 true/pause 250/faceDirection Andy 2 true/pause 600/speak Andy \"{{i18n:Andy.6hearts.08}}\"/pause 1250/speak Andy \"{{i18n:Andy.6hearts.09}}\"/pause 1000/speak Andy \"{{i18n:Andy.6hearts.10}}\"/pause 2000/showFrame Andy 22/pause 600/speak Andy \"{{i18n:Andy.6hearts.11}}\"/pause 1500/speak Andy \"{{i18n:Andy.6hearts.12}}\"/pause 1200/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2/pause 700/showFrame farmer 96/pause 1000/showFrame farmer 2/faceDirection farmer 2 true/move farmer 0 6 2 true/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Andy \"{{i18n:Andy.6hearts.13}}\"",
+      },
+    },
+    //ANDY 8 Heart event 'Thank You'
+    {
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "5000003/w sunny/f Andy 2000/z winter/t 900 1500": "spring_day_ambient/-500 -500/farmer 91 74 2 Andy 77 84 0 MarlonFay 7 20 2 Wizard 7 22 0 Abigail 8 29 0 Marnie 54 21 0 Leah 112 34 0 Shane 86 54 3/pause 500/skippable/viewport 90 84 true/move farmer 0 10 3 true/move Andy 3 0 0 true/pause 1600/playSound leafrustle/pause 800/move Andy 4 0 0 true/pause 2300/playSound leafrustle/pause 600/emote farmer 8/pause 400/move Andy 0 0 1/pause 300/emote Andy 16/pause 250/speak Andy \"{{i18n:Andy.8hearts.01}}\"/pause 500/move farmer -3 0 3/pause 400/speak Andy \"{{i18n:Andy.8hearts.02}}\"/pause 1000/move Andy 0 0 2/pause 1200/move Andy 0 0 1/pause 500/speak Andy \"{{i18n:Andy.8hearts.03}}\"/pause 750/globalFade/viewport -1000 -1000/pause 300/warp Andy 45 106/warp farmer 45 108/pause 100/faceDirection Andy 1 true/faceDirection farmer 1 true/pause 100/viewport 45 108 clamp true/playMusic ocean/pause 3500/speak Andy \"{{i18n:Andy.8hearts.04}}\"/pause 300/emote Andy 40/pause 400/speak Andy \"{{i18n:Andy.8hearts.05}}\"/pause 500/faceDirection farmer 0/pause 650/shake Andy 700/pause 1100/stopMusic/speak Andy \"{{i18n:Andy.8hearts.06}}\"/pause 1300/playMusic musicboxsong/pause 500/speak Andy \"{{i18n:Andy.8hearts.07}}\"/pause 800/faceDirection Andy 2 true/pause 500/speak Andy \"{{i18n:Andy.8hearts.08}}\"/pause 600/faceDirection Andy 1 true/pause 800/shake Andy 700/pause 1000/speak Andy \"{{i18n:Andy.8hearts.09}}\"/pause 750/faceDirection Andy 2 true/pause 750/showFrame Andy 22/pause 1000/speak Andy \"{{i18n:Andy.8hearts.10}}\"/pause 1000/faceDirection Andy 2 true/pause 700/speak Andy \"{{i18n:Andy.8hearts.11}}\"/pause 500/emote farmer 32/playMusic ocean/pause 1000/faceDirection Andy 1/pause 1000/faceDirection farmer 1 true/pause 2000/speak Andy \"{{i18n:Andy.8hearts.12}}\"/pause 1500/globalFade/viewport -1000 -1000/pause 250/friendship Andy 50/end dialogue Andy \"{{i18n:Andy.8hearts.13}}\"",
+      },
+    },
+    //ANDY community center event - 'The Better Life'      Cleans Andy's house patch
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_AndyHouse",
+      "Entries": {
+        "5000005/e 191393": "kindadumbautumn/-500 -500/farmer -200 -200 0 Andy 12 16 0/pause 700/skippable/viewport 12 18 true/pause 1500/warp farmer 12 22/playSound doorClose/pause 400/faceDirection Andy 2/pause 350/textAboveHead Andy \"{{i18n:Andy.BetterLife.01}}\"/pause 1000/move farmer 0 -3 0/pause 800/faceDirection farmer 3/pause 1000/faceDirection farmer 0 true/pause 250/faceDirection farmer 1/pause 800/faceDirection farmer 0/pause 400/speak Andy \"{{i18n:Andy.BetterLife.02}}\"/pause 800/faceDirection Andy 1/pause 600/faceDirection Andy 2/pause 300/speak Andy \"{{i18n:Andy.BetterLife.03}}\"/pause 300/emote farmer 32 true/pause 200/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Andy.BetterLife.04}}\"/pause 1000/end dialogue Andy \"{{i18n:Andy.BetterLife.05}}\"",
+      },
+    },
+    {
+      "Action": "EditData", //Joja variant
+      "Target": "data/events/Custom_AndyHouse",
+      "Entries": {
+        "5000005/e 502261/J": "kindadumbautumn/-500 -500/farmer -200 -200 0 Andy 12 16 0/pause 700/skippable/viewport 12 18 true/pause 1500/warp farmer 12 22/playSound doorClose/pause 400/faceDirection Andy 2/pause 350/textAboveHead Andy \"{{i18n:Andy.BetterLife.01}}\"/pause 1000/move farmer 0 -3 0/pause 800/faceDirection farmer 3/pause 1000/faceDirection farmer 1/pause 700/faceDirection farmer 0/pause 400/speak Andy \"{{i18n:Andy.BetterLife.02A}}\"/pause 800/faceDirection Andy 1/pause 600/faceDirection Andy 2/pause 300/speak Andy \"{{i18n:Andy.BetterLife.03}}\"/pause 300/emote farmer 32 true/pause 200/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Andy.BetterLife.04}}\"/pause 1000/end dialogue Andy \"{{i18n:Andy.BetterLife.05A}}\"",
+      },
+    },
+    //ANDY 10 Heart event - 'Old Friends' (Player hasn't refurbished Aurora Vineyard)
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_AndyHouse",
+      "When": {
+        "HasSeenEvent|contains=746153086": false,
+        "HasSeenEvent|contains=7776012": false
+      },
+      "Entries": {
+        "5000006/n AndyPictureLetter": "kindadumbautumn/-500 -500/Andy 16 17 3 farmer -50 -50 0/animate Andy true true 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32/pause 1000/viewport 12 15 true/skippable/pause 1750/playSound stoneStep/playSound stoneStep/pause 300/playSound stoneStep/playSound stoneStep/pause 230/playSound stoneStep/playSound stoneStep/pause 1200/warp farmer 12 22/playSound doorClose/pause 500/move farmer 0 -5 1 true/pause 2500/stopAnimation Andy/pause 500/speak Andy \"{{i18n:Andy.10Hearts.01}}\"/pause 400/move Andy -2 0 3/pause 300/speak Andy \"{{i18n:Andy.10Hearts.02}}\"/pause 600/move Andy -1 0 0/move Andy 0 -1 3/move Andy -4 0 0 true/pause 200/faceDirection farmer 0 true/pause 500/faceDirection farmer 3 true/pause 2500/move farmer -1 0 0/move farmer 0 -1 0/pause 150/faceDirection farmer 3/pause 400/showFrame Andy 36/pause 1100/playSound newRecipe/shake Andy 400/pause 800/showFrame Andy 8/pause 750/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10Hearts.03A}}\"/pause 350/showFrame Andy 38/pause 950/move farmer -1 0 3/pause 300/globalFade/viewport -1000 -1000/stopMusic/warp farmer -100 -100/warp Andy -101 -101/changeLocation Custom_AuroraVineyardPictureMap/AmbientLight 255 255 255/viewport 12 11 true/pause 250/playSound newRecipe/pause 350/playMusic musicboxsong/pause 14000/globalFade/viewport -1000 -1000/changeLocation Custom_AndyHouse/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10Hearts.04}}\"/pause 800/faceDirection Andy 0 true/pause 300/textAboveHead Andy \"{{i18n:Andy.10Hearts.05}}\"/pause 500/showFrame Andy 36/pause 1000/playSound newRecipe/shake Andy 250/pause 800/showFrame Andy 8/pause 600/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10Hearts.06}}\"/pause 800/showFrame Andy 38/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_StardustFarmPictureMap/warp farmer -40 -40/warp Andy -40 -40/ambientLight 255 255 255/viewport 10 12 true/playSound newRecipe/pause 14000/globalFade/viewport -1000 -1000/pause 100/changeLocation Custom_AndyHouse/ambientLight 90 90 90/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/positionOffset Andy -10 0/positionOffset farmer 10 7/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10Hearts.07}}\"/pause 900/speak Andy \"{{i18n:Andy.10Hearts.08}}\"/pause 1200/faceDirection Andy 2 true/pause 900/speak Andy \"{{i18n:Andy.10Hearts.09}}\"/pause 1000/showFrame Andy 22/pause 800/speak Andy \"{{i18n:Andy.10Hearts.10}}\"/pause 800/showFrame Andy 0 true/pause 700/faceDirection Andy 1 true/pause 700/speak Andy \"{{i18n:Andy.10Hearts.11}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Andy \"{{i18n:Andy.10Hearts.12}}\""
+      },
+    },
+    //ANDY 10 Heart event - 'Old Friends' (Player has refurbished Aurora Vineyard - Joja route )
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_AndyHouse",
+      "When": {
+        "HasSeenEvent|contains=746153086": true
+      },
+      "Entries": {
+        "5000006/n AndyPictureLetter": "kindadumbautumn/-500 -500/Andy 16 17 3 farmer -50 -50 0/animate Andy true true 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32/pause 1000/viewport 12 15 true/skippable/pause 1750/playSound stoneStep/playSound stoneStep/pause 300/playSound stoneStep/playSound stoneStep/pause 230/playSound stoneStep/playSound stoneStep/pause 1200/warp farmer 12 22/playSound doorClose/pause 500/move farmer 0 -5 1 true/pause 2500/stopAnimation Andy/pause 500/speak Andy \"{{i18n:Andy.10hearts.01}}\"/pause 400/move Andy -2 0 3/pause 300/speak Andy \"{{i18n:Andy.10hearts.02}}\"/pause 600/move Andy -1 0 0/move Andy 0 -1 3/move Andy -4 0 0 true/pause 200/faceDirection farmer 0 true/pause 500/faceDirection farmer 3 true/pause 2500/move farmer -1 0 0/move farmer 0 -1 0/pause 150/faceDirection farmer 3/pause 400/showFrame Andy 36/pause 1100/playSound newRecipe/shake Andy 400/pause 800/showFrame Andy 8/pause 750/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10hearts.03}}\"/pause 350/showFrame Andy 38/pause 950/move farmer -1 0 3/pause 300/globalFade/viewport -1000 -1000/stopMusic/warp farmer -100 -100/warp Andy -101 -101/changeLocation Custom_AuroraVineyardPictureMap/AmbientLight 255 255 255/viewport 12 11 true/pause 250/playSound newRecipe/pause 350/playMusic musicboxsong/pause 14000/globalFade/viewport -1000 -1000/changeLocation Custom_AndyHouse/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10hearts.04}}\"/pause 800/faceDirection Andy 0 true/pause 300/textAboveHead Andy \"{{i18n:Andy.10hearts.05}}\"/pause 500/showFrame Andy 36/pause 1000/playSound newRecipe/shake Andy 250/pause 800/showFrame Andy 8/pause 600/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10hearts.06}}\"/pause 800/showFrame Andy 38/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_StardustFarmPictureMap/warp farmer -40 -40/warp Andy -40 -40/ambientLight 255 255 255/viewport 10 12 true/playSound newRecipe/pause 14000/globalFade/viewport -1000 -1000/pause 100/changeLocation Custom_AndyHouse/ambientLight 90 90 90/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/positionOffset Andy -10 0/positionOffset farmer 10 7/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10hearts.07}}\"/pause 900/speak Andy \"{{i18n:Andy.10hearts.08}}\"/pause 1200/faceDirection Andy 2 true/pause 900/speak Andy \"{{i18n:Andy.10hearts.09}}\"/pause 1000/showFrame Andy 22/pause 800/speak Andy \"{{i18n:Andy.10hearts.10}}\"/pause 800/showFrame Andy 0 true/pause 700/faceDirection Andy 1 true/pause 700/speak Andy \"{{i18n:Andy.10hearts.11}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Andy \"{{i18n:Andy.10hearts.12}}\"",
+      },
+    },
+    //ANDY 10 Heart event - 'Old Friends' (Player has refurbished Aurora Vineyard - Community center route )
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_AndyHouse",
+      "When": {
+        "HasSeenEvent|contains=7776012": true
+      },
+      "Entries": {
+        "5000006/n AndyPictureLetter": "kindadumbautumn/-500 -500/Andy 16 17 3 farmer -50 -50 0/animate Andy true true 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32 32 32 32 32 32 32 32 32 32/pause 1000/viewport 12 15 true/skippable/pause 1750/playSound stoneStep/playSound stoneStep/pause 300/playSound stoneStep/playSound stoneStep/pause 230/playSound stoneStep/playSound stoneStep/pause 1200/warp farmer 12 22/playSound doorClose/pause 500/move farmer 0 -5 1 true/pause 2500/stopAnimation Andy/pause 500/speak Andy \"{{i18n:Andy.10hearts.01}}/pause 400/move Andy -2 0 3/pause 300/speak Andy \"{{i18n:Andy.10hearts.02}}\"/pause 600/move Andy -1 0 0/move Andy 0 -1 3/move Andy -4 0 0 true/pause 200/faceDirection farmer 0 true/pause 500/faceDirection farmer 3 true/pause 2500/move farmer -1 0 0/move farmer 0 -1 0/pause 150/faceDirection farmer 3/pause 400/showFrame Andy 36/pause 1100/playSound newRecipe/shake Andy 400/pause 800/showFrame Andy 8/pause 750/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10hearts.03B}}\"/pause 350/showFrame Andy 38/pause 950/move farmer -1 0 3/pause 300/globalFade/viewport -1000 -1000/stopMusic/warp farmer -100 -100/warp Andy -101 -101/changeLocation Custom_AuroraVineyardPictureMap/AmbientLight 255 255 255/viewport 12 11 true/pause 250/playSound newRecipe/pause 350/playMusic musicboxsong/pause 14000/globalFade/viewport -1000 -1000/changeLocation Custom_AndyHouse/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10hearts.04}}\"/pause 800/faceDirection Andy 0 true/pause 300/textAboveHead Andy \"{{i18n:Andy.10hearts.05}}\"/pause 500/showFrame Andy 36/pause 1000/playSound newRecipe/shake Andy 250/pause 800/showFrame Andy 8/pause 600/showFrame Andy 37/pause 800/speak Andy \"{{i18n:Andy.10hearts.06}}\"/pause 800/showFrame Andy 38/pause 600/globalFade/viewport -1000 -1000/changeLocation Custom_StardustFarmPictureMap/warp farmer -40 -40/warp Andy -40 -40/ambientLight 255 255 255/viewport 10 12 true/playSound newRecipe/pause 14000/globalFade/viewport -1000 -1000/pause 100/changeLocation Custom_AndyHouse/ambientLight 90 90 90/warp farmer 10 16/warp Andy 9 16/faceDirection Andy 1 true/positionOffset farmer 15 10/positionOffset Andy -10 0/positionOffset farmer 10 7/viewport 12 15 true/pause 1000/speak Andy \"{{i18n:Andy.10hearts.07}}\"/pause 900/speak Andy \"{{i18n:Andy.10hearts.08}}\"/pause 1200/faceDirection Andy 2 true/pause 900/speak Andy \"{{i18n:Andy.10hearts.09}}\"/pause 1000/showFrame Andy 22/pause 800/speak Andy \"{{i18n:Andy.10hearts.10}}\"/pause 800/showFrame Andy 0 true/pause 700/faceDirection Andy 1 true/pause 700/speak Andy \"{{i18n:Andy.10hearts.11}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Andy \"{{i18n:Andy.10hearts.12}}\"",
+      },
+    },
+  ]
+}

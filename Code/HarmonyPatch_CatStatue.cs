@@ -32,7 +32,7 @@ namespace StardewValleyExpanded
                 //apply patches
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_CatStatue)}\": postfixing SDV method \"Object.DayUpdate(GameLocation)\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(SObject), nameof(SObject.DayUpdate), new[] { typeof(GameLocation) }),
+                    original: AccessTools.Method(typeof(SObject), nameof(SObject.DayUpdate), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_CatStatue), nameof(Object_DayUpdate))
                 );
 

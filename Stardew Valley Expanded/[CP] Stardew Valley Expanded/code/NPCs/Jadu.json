@@ -1,0 +1,79 @@
+{
+    "Changes": [
+        // JADU
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Jadu": {
+                    "DisplayName": "{{i18n:Name.Jadu}}",
+                    "HomeRegion": "Other",
+                    "Language": "Default",
+                    "Gender": "Male",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Neutral",
+                    "IsDarkSkinned": false,
+                    "CanBeRomanced": false,
+                    "LoveInterest": "",
+                    "Calendar": "HiddenAlways",
+                    "SocialTab": "HiddenAlways",
+                    "CanSocialize": false,
+                    "CanVisitIslandCondition": "FALSE",
+                    "ExcludeFromIntroductionsQuest": true,
+                    "ExcludeFromPerfectionScore": true,
+                    "EndSlideShow": "TrailingGroup",
+                    "FriendsAndFamily": {},
+                    "UnlockConditions": null,
+                    "SpawnIfMissing": true,
+                    "Home": [
+                        {
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Jadu_WarpRoom",
+                            "Condition": null,
+                            "Location": "Custom_Jadu_WarpRoom",
+                            "Tile": {
+                                "X": 3,
+                                "Y": 3
+                            },
+                            "Direction": "left"
+                        }
+                    ],
+                    "TextureName": null,
+                    "Size": {
+                        "X": 16,
+                        "Y": 32
+                    },
+                    "CustomFields": {}
+                },
+            },
+        },
+        {
+            //Jadu's portraits
+            "Action": "Load",
+            "Target": "Portraits/Jadu",
+            "FromFile": "Assets/CharacterFiles/Portraits/Jadu/Jadu.png"
+        },
+        {
+            //Jadu's sprites
+            "Action": "Load",
+            "Target": "Characters/Jadu",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Jadu/Jadu.png"
+        },
+        {
+            //Jadu's schedule
+            "Action": "Load",
+            "Target": "Characters/schedules/Jadu",
+            "FromFile": "assets/CharacterFiles/Schedules/Jadu/Jadu.json"
+        },
+        //Desert Festival Schedule
+        {
+            "Action": "EditData",
+            "Target": "characters/schedules/Jadu",
+            "Entries": {
+                "DesertFestival_1": "0 Desert 39 14 2 \"Strings\\schedules\\Jadu:DesertFestival_Jadu\"",
+                "DesertFestival_3": "0 Desert 39 14 2 \"Strings\\schedules\\Jadu:DesertFestival_Jadu\"",
+            }
+        },
+    ]
+}

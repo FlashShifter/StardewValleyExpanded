@@ -1,0 +1,123 @@
+{
+  "Changes": [
+    // JOLYNE NPC
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Jolyne": {
+          "DisplayName": "{{i18n:Name.Jolyne}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Jolyne_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Jolyne_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Jolyne's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Jolyne_AnimationName": "16/16/16",
+      }
+    },
+    {
+      //Jolyne's sprites
+      "Action": "Load",
+      "Target": "Characters/Jolyne",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Jolyne/Jolyne.png"
+    },
+    {
+      //Jolyne's portraits
+      "Action": "Load",
+      "Target": "Portraits/Jolyne",
+      "FromFile": "Assets/CharacterFiles/Portraits/Jolyne/Jolyne.png"
+    },
+    {
+      //Jolyne's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Jolyne",
+      "FromFile": "assets/CharacterFiles/Schedules/Jolyne/Schedule.json"
+    },
+    {
+      //Jolyne visits adventure guild
+      "Action": "EditData",
+      "Target": "Characters/schedules/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193"
+      },
+      "Entries": {
+        "14": "0 AdventureGuild 3 13 0/610 AdventureGuild 3 13 2",
+        "22": "0 AdventureGuild 3 13 0/610 AdventureGuild 3 13 2"
+      }
+    },
+    {
+      //Jolyne adventure guild dialogue 1
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193",
+        "Day": "14"
+      },
+      "Entries": {
+        "Sun": "{{i18n:Jolyne.GuildDialogue.01}}",
+      }
+    },
+    {
+      //Jolyne adventure guild dialogue 2
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Jolyne",
+      "When": {
+        "HasSeenEvent": "65360193",
+        "Day": "22"
+      },
+      "Entries": {
+        "Mon": "{{i18n:Jolyne.GuildDialogue.02}}",
+      }
+    },
+   /* {
+      //Jolyne's AntiSocial Flag
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "Entries": {
+        "Jolyne": true
+      }
+    },*/
+  ]
+}

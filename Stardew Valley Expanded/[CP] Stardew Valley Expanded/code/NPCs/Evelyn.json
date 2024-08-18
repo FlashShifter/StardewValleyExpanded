@@ -1,0 +1,109 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Evelyn",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Evelyn",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Evelyn",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Bearberrys",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Evelyn",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Evelyn",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Evelyn",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //EVELYN SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Evelyn",
+			"When": {
+				"HasSeenEvent |contains=5553210": false
+			},
+			"Entries": {
+				"Sat": "700 JoshHouse 4 17 0/1300 Town 62 57 0/1430 Town 63 57 0/1450 Town 61 57 0/1530 Town 62 57 0/1600 JoshHouse 3 17 0/1840 JoshHouse 3 19 2/2100 JoshHouse 3 5 1",
+				"summer": "800 JoshHouse 3 17 0 square_3_1_0/1040 JoshHouse 17 22 3/1210 JoshHouse 3 19 2/1300 Town 19 62 3 evelyn_garden/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1"
+			},
+		},
+		{ //EVELYN SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Evelyn",
+			"When": {
+				"HasSeenEvent": "5553210"
+			},
+			"Entries": {
+				"Sat": "800 JoshHouse 3 17 0 square_3_1_0/1040 JoshHouse 17 22 3/1210 JoshHouse 3 19 2/1300 Town 19 62 3 evelyn_garden/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",
+				"summer": "800 JoshHouse 3 17 0 square_3_1_0/1040 JoshHouse 17 22 3/1210 JoshHouse 3 19 2/1300 Town 19 62 3 evelyn_garden/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1"
+			},
+		},
+		{ //EVELYN EVENT
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"1000016/f Evelyn 2500/y 2/z winter/z summer/z spring/t 1000 1600/w sunny": "fall_day_ambient/-500 -500/farmer 29 68 2 Evelyn 34 79 0 Jodi 25 73 3 Olivia 24 72 2 Caroline 23 73 1 Penny 44 77 2/showFrame Penny 34/positionOffset Penny -7 15/pause 300/skippable/viewport 33 79 true/pause 250/textAboveHead Evelyn \"{{i18n:Evelyn.Event.01}}\"/move farmer 0 8 2/textAboveHead Evelyn \"{{i18n:Evelyn.Event.02}}\"/move farmer 0 3 1/pause 1150/emote farmer 8/pause 500/move farmer 3 0 1/pause 500/move Evelyn 0 0 3/pause 200/emote Evelyn 16/pause 300/speak Evelyn \"{{i18n:Evelyn.Event.03}}\"/pause 500/speak Evelyn \"{{i18n:Evelyn.Event.04}}\"/pause 1000/move Evelyn 0 0 0/pause 1500/emote Evelyn 28/speak Evelyn \"{{i18n:Evelyn.Event.05}}\"/pause 800/move Evelyn 0 0 3/pause 1000/speak Evelyn \"{{i18n:Evelyn.Event.06}}\"/pause 1200/speak Evelyn \"{{i18n:Evelyn.Event.07}}\"/pause 500/question fork0 \"{{i18n:Evelyn.Event.08}}\"/fork 1000016_MoreAboutHim/pause 500/speak Evelyn \"{{i18n:Evelyn.Event.09}}\"/pause 500/emote farmer 32/pause 500/globalFade/viewport -1000 -1000/pause 700/end",
+				"1000016_MoreAboutHim": "pause 650/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.01}}\"/pause 1000/emote Evelyn 40/pause 300/playMusic musicboxsong/pause 600/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.02}}\"/pause 500/emote Evelyn 40/pause 250/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.03}}\"/pause 300/emote farmer 32/pause 100/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.04}}\"/pause 500/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.05}}\"/pause 1000/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.06}}\"/pause 1300/move Evelyn 0 0 0/pause 1200/move Evelyn 0 0 3/pause 1000/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.07}}\"/pause 300/emote Evelyn 20/pause 1000/move Evelyn 0 0 0/pause 1200/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.08}}\"/pause 650/move Evelyn 0 0 3/pause 1000/speak Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.09}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Evelyn \"{{i18n:Evelyn.Event.MoreAboutHim.10}}\""
+			},
+		},
+		{ //EVELYN EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Evelyn",
+			"Entries": {
+				"evelyn_event1": "{{i18n:Evelyn.Dialogue.01}}",
+				"evelyn_event2": "{{i18n:Evelyn.Dialogue.02}}",
+				"evelyn_event3": "{{i18n:Evelyn.Dialogue.03}}",
+				"evelyn_event4": "{{i18n:Evelyn.Dialogue.04}}",
+				"evelyn_event5": "{{i18n:Evelyn.Dialogue.04}}",
+				"evelyn_event6": "{{i18n:Evelyn.Dialogue.04}}",
+			}
+		},
+	]
+}

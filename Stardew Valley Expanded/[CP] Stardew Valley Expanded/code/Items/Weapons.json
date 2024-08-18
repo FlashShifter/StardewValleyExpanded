@@ -1,0 +1,251 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Weapons",
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_Diamond_Wand": {
+                    "Name": "Diamond Wand",
+                    "DisplayName": "{{i18n:weapon.diamond-wand.name}}",
+                    "Description": "{{i18n:weapon.diamond-wand.description}}",
+                    "MinDamage": 1,
+                    "MaxDamage": 2,
+                    "Knockback": 31.0,
+                    "Speed": 6,
+                    "Precision": 800,
+                    "Defense": 0,
+                    "Type": 3,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 1.0,
+                    "CritMultiplier": 1.0,
+                    "CanBeLostOnDeath": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\DiamondWand",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                },
+                "FlashShifter.StardewValleyExpandedCP_Tempered_Galaxy_Dagger": {
+                    "Name": "Tempered Galaxy Dagger",
+                    "DisplayName": "{{i18n:weapon.tempered-galaxy-dagger.name}}",
+                    "Description": "{{i18n:weapon.tempered-galaxy-dagger.description}}",
+                    "MinDamage": 50,
+                    "MaxDamage": 70,
+                    "Knockback": 1.0,
+                    "Speed": 10,
+                    "Precision": 100,
+                    "Defense": 10,
+                    "Type": 1,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 0.3,
+                    "CritMultiplier": 3.0,
+                    "CanBeLostOnDeath": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Dagger",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                },
+                "FlashShifter.StardewValleyExpandedCP_Tempered_Galaxy_Hammer": {
+                    "Name": "Tempered Galaxy Hammer",
+                    "DisplayName": "{{i18n:weapon.tempered-galaxy-hammer.name}}",
+                    "Description": "{{i18n:weapon.tempered-galaxy-hammer.description}}",
+                    "MinDamage": 90,
+                    "MaxDamage": 110,
+                    "Knockback": 2.5,
+                    "Speed": 1,
+                    "Precision": 100,
+                    "Defense": 25,
+                    "Type": 2,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 0.0,
+                    "CritMultiplier": 3.0,
+                    "CanBeLostOnDeath": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Hammer",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                },
+                "FlashShifter.StardewValleyExpandedCP_Tempered_Galaxy_Sword": {
+                    "Name": "Tempered Galaxy Sword",
+                    "DisplayName": "{{i18n:weapon.tempered-galaxy-sword.name}}",
+                    "Description": "{{i18n:weapon.tempered-galaxy-sword.description}}",
+                    "MinDamage": 80,
+                    "MaxDamage": 120,
+                    "Knockback": 1.0,
+                    "Speed": 5,
+                    "Precision": 100,
+                    "Defense": 15,
+                    "Type": 3,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 0.15,
+                    "CritMultiplier": 3.0,
+                    "CanBeLostOnDeath": true,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Sword",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                }
+            },
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/DiamondWand",
+            "FromFile": "assets/Items/Weapons/DiamondWand.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Dagger",
+            "FromFile": "assets/Items/Weapons/Tempered Galaxy Dagger.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Hammer",
+            "FromFile": "assets/Items/Weapons/Tempered Galaxy Hammer.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Sword",
+            "FromFile": "assets/Items/Weapons/Tempered Galaxy Sword.png",
+        },
+        { //WEAPON DATA	
+            "Action": "EditData",
+            "Target": "Data/Weapons",
+            "Fields": {
+                "0": {
+                    "MinDamage": 3,
+                    "MaxDamage": 8
+                },
+                "2": {
+                    "MinDamage": 35,
+                    "MaxDamage": 50,
+                    "CritChance":.08
+                },
+                "3": {
+                    "MinDamage": 25,
+                    "MaxDamage": 35,
+                    "CritChance":.05
+                },
+                "4": {
+                    "MinDamage": 80,
+                    "MaxDamage": 105,
+                    "CritChance":.10
+                }, //Galaxy Sword
+                "8": {
+                    "MinDamage": 40,
+                    "MaxDamage": 55,
+                    "CritChance":.08
+                },
+                "9": {
+                    "MinDamage": 60,
+                    "MaxDamage": 70,
+                    "CritChance":.08
+                }, //Lava Katana
+                "10": {
+                    "CritChance":.10
+                },
+                "14": {
+                    "MinDamage": 1,
+                    "MaxDamage": 65,
+                    "CritChance":.5
+                },
+                "19": {
+                    "MinDamage": 20,
+                    "MaxDamage": 40,
+                    "CritChance":.18
+                },
+                "21": {
+                    "MinDamage": 10,
+                    "MaxDamage": 25,
+                    "CritChance":.25
+                }, //Crystal Dagger
+                "23": {
+                    "MinDamage": 40,
+                    "MaxDamage": 45,
+                    "CritChance":.30
+                }, //Galaxy Dagger
+                "26": {
+                    "MinDamage": 23,
+                    "MaxDamage": 32,
+                    "Defence": 5
+                },
+                "27": {
+                    "MinDamage": 18,
+                    "MaxDamage": 27,
+                    "Defence": 3
+                },
+                "28": {
+                    "MinDamage": 55,
+                    "MaxDamage": 67,
+                    "Defence": 7
+                },
+                "29": {
+                    "MinDamage": 85,
+                    "MaxDamage": 100,
+                    "Defence": 10
+                }, //Galaxy Hammer
+                "34": {
+                    "Description": "{{i18n:GalaxySlingshot}}"
+                },
+                "49": {
+                    "MinDamage": 1,
+                    "MaxDamage": 25,
+                    "CritChance":.30,
+                    "CritMultiplier": 4
+                },
+                "52": {
+                    "MinDamage": 34,
+                    "MaxDamage": 50,
+                    "CritChance":.08
+                },
+                "54": {
+                    "MinDamage": 75,
+                    "MaxDamage": 100,
+                    "Defence": 7,
+                },
+                "55": {
+                    "MinDamage": 80,
+                    "MaxDamage": 90,
+                    "Defence": 15,
+                },
+                "56": {
+                    "MinDamage": 36,
+                    "MaxDamage": 42,
+                    "Defence": 8,
+                    "CritChance":.012
+                },
+                "61": {
+                    "MinDamage": 40,
+                    "MaxDamage": 70
+                },
+                "62": {
+                    "MinDamage": 140,
+                    "MaxDamage": 160,
+                    "Precision": 100,
+                    "Defence": 0,
+                    "CritChance":.20,
+                    "CritMultiplier": 3
+                }, //INFINITY BLADE: High damage. Good all-around weapon
+                "63": {
+                    "MinDamage": 100,
+                    "MaxDamage": 175,
+                    "Knockback": 3,
+                    "Precision": 100,
+                    "Defence": 15,
+                    "CritChance": 0,
+                    "CritMultiplier": 3
+                }, //INFINITY HAMMER: High damage and knockback, medium defense. Low speed and no crit 
+                "64": {
+                    "MinDamage": 60,
+                    "MaxDamage": 80,
+                    "Precision": 100,
+                    "Defence": 5,
+                    "CritChance":.35,
+                    "CritMultiplier": 3
+                } //INFINITY DAGGER: Very high damange, very high crit. Small range
+            }
+        },
+    ]
+}

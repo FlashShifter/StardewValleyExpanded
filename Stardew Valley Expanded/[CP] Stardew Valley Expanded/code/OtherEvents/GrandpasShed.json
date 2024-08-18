@@ -1,0 +1,370 @@
+{
+     "Changes": [
+          // *** START GRANDPAS SHED QUEST LINE CODE *** //
+          {
+               "Action": "EditData",
+               "Target": "Data/SpecialOrders",
+               "Update": "OnLocationChange",
+               "Entries": {
+                    "Robin3": {
+                         "Name": "[Robin3_Name]",
+                         "Requester": "Robin",
+                         "Duration": "Month",
+                         "Repeatable": "False",
+                         "RequiredTags": "event_2554902, !event_2554907",
+                         "OrderType": "StardewValleyExpanded",
+                         "SpecialRule": "",
+                         "Text": "[Robin3_Text]",
+                         "ItemToRemoveOnEnd": null,
+                         "MailToRemoveOnEnd": null,
+                         "RandomizedElements": null,
+                         "Objectives": [
+                              {
+                                   "Type": "Donate",
+                                   "Text": "[Robin3_Objective_1_Text]",
+                                   "RequiredCount": "150",
+                                   "Data": {
+                                        "DropBox": "RobinTrunk",
+                                        "DropBoxGameLocation": "Custom_GrandpasShedRuins",
+                                        "DropBoxIndicatorLocation": "17.5 9",
+                                        "AcceptedContextTags": "item_hardwood"
+                                   }
+                              },
+                              {
+                                   "Type": "Donate",
+                                   "Text": "[Robin3_Objective_2_Text]",
+                                   "RequiredCount": "600",
+                                   "Data": {
+                                        "DropBox": "RobinTrunk",
+                                        "DropBoxGameLocation": "Custom_GrandpasShedRuins",
+                                        "DropBoxIndicatorLocation": "17.5 9",
+                                        "AcceptedContextTags": "item_stone"
+                                   }
+                              },
+                              {
+                                   "Type": "Donate",
+                                   "Text": "[Robin3_Objective_3_Text]",
+                                   "RequiredCount": "50",
+                                   "Data": {
+                                        "DropBox": "RobinTrunk",
+                                        "DropBoxGameLocation": "Custom_GrandpasShedRuins",
+                                        "DropBoxIndicatorLocation": "17.5 9",
+                                        "AcceptedContextTags": "item_iron_bar"
+                                   }
+                              },
+                              {
+                                   "Type": "Donate",
+                                   "Text": "[Robin3_Objective_4_Text]",
+                                   "RequiredCount": "20",
+                                   "Data": {
+                                        "DropBox": "RobinTrunk",
+                                        "DropBoxGameLocation": "Custom_GrandpasShedRuins",
+                                        "DropBoxIndicatorLocation": "17.5 9",
+                                        "AcceptedContextTags": "item_battery_pack"
+                                   }
+                              },
+                         ],
+                         "Rewards": [
+                              {
+                                   "Type": "Mail",
+                                   "Data": {
+                                        "MailReceived": "ShedRepaired",
+                                        "Host": "true",
+                                        "NoLetter": "true"
+                                   }
+                              },
+                              {
+                                   "Type": "Friendship",
+                                   "Data": {}
+                              }
+                         ]
+                    },
+               },
+          },
+          { //Robin's grandpa shed strings
+               "Action": "EditData",
+               "Target": "Strings/SpecialOrderStrings",
+               "Entries": {
+                    "Robin3_Name": "{{i18n:GrandpasShedQuest.01}}",
+                    "Robin3_Text": "{{i18n:GrandpasShedQuest.02}}",
+                    "Robin3_Objective_1_Text": "{{i18n:GrandpasShedQuest.03}}",
+                    "Robin3_Objective_2_Text": "{{i18n:GrandpasShedQuest.04}}",
+                    "Robin3_Objective_3_Text": "{{i18n:GrandpasShedQuest.05}}",
+                    "Robin3_Objective_4_Text": "{{i18n:GrandpasShedQuest.06}}",
+               }
+          },
+          { //Configuration - Clears refurbished shed interior of static objects (barrels, desks, boxes, etc.)
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedGreenhouse,Maps",
+               "FromFile": "assets/Maps/GrandpasShed/GrandpasShedGreenhouseCleared.tbin",
+               "ToArea": {
+                    "X": 0,
+                    "Y": 0,
+                    "Width": 35,
+                    "Height": 22
+               },
+               "When": {
+                    "RemoveObjectsFromGrandpasShed": "true"
+               }
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShed,Maps",
+               "FromFile": "assets/Maps/GrandpasShed/GrandpasShedCleared.tbin",
+               "ToArea": {
+                    "X": 0,
+                    "Y": 0,
+                    "Width": 32,
+                    "Height": 18
+               },
+               "When": {
+                    "RemoveObjectsFromGrandpasShed": "true"
+               }
+          },
+		  { //Bus Stop shed path (GF, IF2R, Frontier can't be installed)
+               "Action": "EditMap",
+               "Target": "Maps/BusStop",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
+               "When": {
+					"HasMod |contains=flashshifter.GrandpasFarm": false,
+					"HasMod |contains=flashshifter.immersivefarm2remastered": false,
+               },
+               "ToArea": {
+                    "X": 13,
+                    "Y": 23,
+                    "Width": 10,
+                    "Height": 7
+               }
+          },
+		  { //Bus Stop shed path (GF installed, not playing standard)
+               "Action": "EditMap",
+               "Target": "Maps/BusStop",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
+               "When": {
+					"HasMod |contains=flashshifter.GrandpasFarm": true,
+					"FarmType |contains=Standard": false
+               },
+               "ToArea": {
+                    "X": 13,
+                    "Y": 23,
+                    "Width": 10,
+                    "Height": 7
+               }
+          },
+		  { //Bus Stop shed path (IF2R installed, not playing standard)
+               "Action": "EditMap",
+               "Target": "Maps/BusStop",
+               "FromFile": "Assets/Maps/GrandpasShed/BusStopShedPath.tmx",
+               "When": {
+					"HasMod |contains=flashshifter.immersivefarm2remastered": true,
+					"FarmType |contains=Standard": false
+               },
+               "ToArea": {
+                    "X": 13,
+                    "Y": 23,
+                    "Width": 10,
+                    "Height": 7
+               }
+          },
+          { //Immersive Farm 2 Remastered Shed warp tiles
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShed",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_IF2R.tbin",
+               "When": {
+                    "HasMod": "flashshifter.immersivefarm2remastered",
+                    "FarmType": "Standard"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedRuins",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_IF2R.tbin",
+               "When": {
+                    "HasMod": "flashshifter.immersivefarm2remastered",
+                    "FarmType": "Standard"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+          { //Grandpa's Farm Shed warps tiles
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShed",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_GF.tbin",
+               "When": {
+                    "HasMod": "flashshifter.GrandpasFarm",
+                    "FarmType": "Standard"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedRuins",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_GF.tbin",
+               "When": {
+                    "HasMod": "flashshifter.GrandpasFarm",
+                    "FarmType": "Standard"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+		  { //Frontier Farm's Farm Shed warps tiles
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShed",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_NF.tbin",
+               "When": {
+                    "FarmType": "FrontierFarm"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+          {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedRuins",
+               "FromFile": "Assets/Maps/GrandpasShed/Warps_GrandpasShed_NF.tbin",
+               "When": {
+                    "FarmType": "FrontierFarm"
+               },
+               "ToArea": {
+                    "X": 15,
+                    "Y": 17,
+                    "Width": 2,
+                    "Height": 1
+               }
+          },
+		  
+          //* Start Events *//
+          { //Event #1 - tags player entering grandpas shed
+               "Action": "EditData",
+               "Target": "data/events/Custom_GrandpasShedRuins",
+               "Entries": {
+                    "2554901/H": "continue/15 11/farmer 15 16 0/skippable/move farmer 0 -4 0/pause 700/faceDirection farmer 1 true/pause 1150/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1200/faceDirection farmer 0 true/pause 600/emote farmer 40 true/pause 600/end position 15 12"
+               },
+          },
+          { //Event #2 - Robin's Inspection
+               "Action": "EditData",
+               "Target": "data/events/Farmhouse",
+               "When": {
+                    "HasSeenEvent": "2554901",
+					"FarmType |contains=FrontierFarm": false,
+                         "FarmType |contains=MeadowlandsFarm": false,
+               },
+               "Entries": {
+                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 64 15 2 Robin 64 17 0/ignoreEventTileOffset/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 64 16 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+               },
+          },
+          { //Event #2 - Robin's Inspection (Meadowlands Farm)
+          "Action": "EditData",
+          "Target": "data/events/Farmhouse",
+          "When": {
+               "HasSeenEvent": "2554901",
+               "FarmType": "MeadowlandsFarm"
+
+          },
+          "Entries": {
+               "2554902/H/t 600 2000": "continue/-500 -500/farmer 81 19 2 Robin 81 21 0/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 64 16 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 1 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+          },
+     },
+          { //Event #2 - Robin's Inspection (Grandpa's Farm viewport)
+               "Action": "EditData",
+               "Target": "data/events/Farmhouse",
+               "When": {
+                    "HasSeenEvent": "2554901",
+                    "HasMod": "flashshifter.GrandpasFarm",
+                    "FarmType": "Standard",
+               },
+               "Entries": {
+                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 95 49 2 Robin 95 51 0/ignoreEventTileOffset/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 95 49 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 3 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+               },
+          },
+		  { //Event #2 - Robin's Inspection (Frontier Farm's viewport)
+               "Action": "EditData",
+               "Target": "data/events/Farmhouse",
+               "When": {
+                    "HasSeenEvent": "2554901",
+                    "FarmType": "FrontierFarm",
+               },
+               "Entries": {
+                    "2554902/H/t 600 2000": "continue/-500 -500/farmer 118 26 2 Robin 118 27 0/skippable/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:GrandpasShed2.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Robin 10 -25/viewport 118 27 clamp true/pause 1000/speak Robin \"{{i18n:GrandpasShed2.02}}\"/pause 1000/faceDirection Robin 3 true/pause 1300/faceDirection Robin 0 true/pause 500/speak Robin \"{{i18n:GrandpasShed2.03}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_GrandpasShedRuins/warp Robin 16 7/warp farmer 16 10/faceDirection farmer 0 true/faceDirection Robin 0 true/playSound doorClose/pause 600/playSound doorClose/pause 400/stopMusic/pause 200/viewport 16 9 true/pause 1700/faceDirection Robin 3 true/pause 1600/faceDirection Robin 0 true/pause 250/faceDirection Robin 1 true/pause 1600/faceDirection Robin 2 true/pause 1000/animate Robin false true 200 34 35/textAboveHead Robin \"{{i18n:GrandpasShed2.04}}\"/pause 3500/stopAnimation Robin/pause 800/speak Robin \"{{i18n:GrandpasShed2.05}}\"/pause 200/emote farmer 16/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed2.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 750/end dialogue Robin \"{{i18n:GrandpasShed2.07}}\""
+               },
+          },
+          { //Event #3 - Robin's material list     <<Tagged for framework
+               "Action": "EditData",
+               "Target": "data/events/ScienceHouse",
+               "Entries": {
+                    "2554903/H/e 2554902": "none/-500 -500/farmer 6 24 0 Robin 7 18 2 Maru 27 9 1 Sebastian 29 9 3 Demetrius 19 18 0/playMusic jaunty/viewport 7 21 true/skippable/speed farmer 1/move farmer 0 -2 0/pause 300/jump Robin/pause 900/faceDirection Robin 3 true/pause 250/faceDirection Robin 0 true/pause 300/speed Robin 4/move Robin 0 -1 3/speed Robin 4/move Robin -2 0 2/speed Robin 4/move Robin 0 3 1/speed Robin 4/move Robin 1 0 2/pause 400/speak Robin \"{{i18n:GrandpasShed3.01}}\"/pause 500/emote farmer 16/pause 500/speak Robin \"{{i18n:GrandpasShed3.02}}\"/pause 500/emote farmer 40/pause 200/speak Robin \"{{i18n:GrandpasShed3.03}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Robin \"{{i18n:GrandpasShed3.04}}\"",
+               },
+          },
+          { //Event #4 - Quest Complete
+               "Action": "EditData",
+               "Target": "data/events/farm",
+               "When": {
+                    "HasFlag": "ShedRepaired"
+               },
+               "Entries": {
+                    "2554906/": "continue/-500 -500/farmer 6 24 0 Robin 7 18 2/skippable/pause 1000/speak Robin \"{{i18n:GrandpasShed4.01}}\"/pause 500/emote farmer 32/pause 300/end dialogue Robin \"{{i18n:GrandpasShed4.02}}\""
+               },
+          },
+          { //Event #5 - Refurbished interior
+               "Action": "EditData",
+               "Target": "data/events/Custom_GrandpasShed",
+               "When": {
+                    "HasSeenEvent": "2554906"
+               },
+               "Entries": {
+                    "2554907/": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/viewport 16 9 true/playMusic jaunty/pause 2500/playSound doorClose/warp farmer 16 16/pause 300/move farmer 0 -2 0 true/pause 300/faceDirection Robin 1 true/pause 600/emote farmer 16/pause 200/speak Robin \"{{i18n:GrandpasShed5.01}}\"/pause 200/faceDirection farmer 3 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.02}}\"/pause 500/jump farmer/pause 1000/speak Robin \"{{i18n:GrandpasShed5.03}}\"/pause 1000/faceDirection Robin 0/pause 750/speak Robin \"{{i18n:GrandpasShed5.04}}\"/pause 750/faceDirection Robin 1 true/pause 700/speak Robin \"{{i18n:GrandpasShed5.05}}\"/pause 500/end dialogue Robin \"{{i18n:GrandpasShed5.06}}\""
+               },
+          },
+          { //Refurbished Shed (No IF2R or Grandpa's Farm)
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedOutside",
+               "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedFixed2.tbin",
+               "When": {
+                    "GrandpaShedComplete": true
+               },
+               "ToArea": {
+                    "X": 16,
+                    "Y": 6,
+                    "Width": 12,
+                    "Height": 12
+               }
+          },
+          //Grandpa's Farm Patch found in content json >>> quest continued (3 more parts)
+          { //If players updated to SVE 1.12.13 and lost their Grandpa Shed quest progress (hardwood manifest complete, no iron )
+               "Action": "EditData",
+               "Target": "data/events/farmhouse",
+               "Entries": {
+                    "2554999/e 2554904/k 2554907/H": "continue/-500 -500/Robin -10 -10 0/pause 1500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 100/message \"{{i18n:GrandpasShed.Warning.01}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/message \"{{i18n:GrandpasShed.Warning.02}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/message \"{{i18n:GrandpasShed.Warning.03}}\"/pause 1000/end"
+               },
+          },
+          { //If players updated to SVE 1.12.13 and lost their Grandpa Shed quest progress (iron manifest complete, no battery )
+               "Action": "EditData",
+               "Target": "data/events/farmhouse",
+               "Entries": {
+                    "2554999/e 2554905/k 2554907/H": "continue/-500 -500/Robin -10 -10 0/pause 1500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 100/message \"{{i18n:GrandpasShed.Warning.01}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 350/playSound junimoMeep1/pause 200/message \"{{i18n:GrandpasShed.Warning.02}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 100/message \"{{i18n:GrandpasShed.Warning.03}}\"/pause 1000/end"
+               },
+          },
+     ]
+}

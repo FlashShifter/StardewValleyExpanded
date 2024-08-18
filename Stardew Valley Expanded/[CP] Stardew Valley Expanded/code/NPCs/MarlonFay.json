@@ -1,0 +1,447 @@
+{
+  "Changes": [
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "MarlonFay": {
+          "DisplayName": "{{i18n:Name.Marlon}}",
+          "BirthSeason": "Winter",
+          "BirthDay": 19,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_AdventureGuild",
+              "Condition": null,
+              "Location": "AdventureGuild",
+              "Tile": {
+                "X": 4,
+                "Y": 11
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/MarlonFay_Winter",
+              "Sprite": "Characters/MarlonFay_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    //Removes vanilla Marlon
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Marlon": {
+          "DisplayName": "{{i18n:Name.Marlon}}",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_AdventureGuild",
+              "Condition": null,
+              "Location": "AdventureGuild",
+              "Tile": {
+                "X": -50,
+                "Y": -50
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Marlon's Gift Tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "MarlonFay": "{{i18n:Marlon.Gifts.Loved}}/244 773 413 437 439 680 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aegis_Elixir/{{i18n:Marlon.Gifts.Liked}}/346 303 348 459 205 422 287 288 FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Frog_Legs/{{i18n:Marlon.Gifts.Disliked}}/-81 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Marlon.Gifts.Hated}}/-80 283 233 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Rusty_Blade/{{i18n:Marlon.Gifts.Neutral}}/286 424 426 436 438 803 184 186 420 -28 FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia/"
+      }
+    },
+    {
+      //Marlon's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Marlon_Look": "18/18/18",
+        "Marlon_Grave": "8/8/8",
+        "Marlon_LookDown": "19/19/19",
+        "Marlon_Sneaky": "0/0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 0 0 0 0 0/18 18 18 18 18 18 18 18 18 18 4 4 4 4 4 4 4 4 4 0 0 0 12 12 12 12 12 12 12 12 12 12 0 0 0 0 0 0",
+      }
+    },
+    {
+      //Marlon's Portraits
+      "Action": "Load",
+      "Target": "Portraits/MarlonFay",
+      "FromFile": "assets/CharacterFiles/Portraits/Marlon/Marlon.png"
+    },
+    {
+      //Marlon's Sprites
+      "Action": "Load",
+      "Target": "Characters/MarlonFay",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Marlon/Marlon.png"
+    },
+    {
+      //Marlon's Portraits
+      "Action": "Load",
+      "Target": "Portraits/MarlonFay_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Marlon/MarlonFay_Winter.png"
+    },
+    {
+      //Marlon's Sprites
+      "Action": "Load",
+      "Target": "Characters/MarlonFay_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Marlon/MarlonFay_Winter.png"
+    },
+    {
+      //Marlon's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/MarlonFay",
+      "When": {
+        "HasFlag": "landslideDone"
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Marlon/Schedule.json"
+    },
+    {
+      //Marlon stuck inside until player is a member
+      "Action": "Load",
+      "Target": "Characters/schedules/MarlonFay",
+      "When": {
+        "HasFlag |contains=landslideDone": false
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Marlon/BeforeGuildMember.json"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpeechBubbles",
+      "Entries": {
+        "AdventureGuild_Marlon_Greeting_Male": "{{i18n:Marlon.Vanilla.01}}",
+        "AdventureGuild_Marlon_Greeting_Female": "{{i18n:Marlon.Vanilla.02}}",
+        "AdventureGuild_Marlon_Greeting1": "{{i18n:Marlon.Vanilla.03}}",
+        "AdventureGuild_Marlon_Greeting2": "{{i18n:Marlon.Vanilla.04}}",
+        "AdventureGuild_Marlon_Greeting3": "{{i18n:Marlon.Vanilla.04}}",
+        "AdventureGuild_Marlon_Greeting4": "{{i18n:Marlon.Vanilla.05}}",
+      }
+    },
+    //MOVIE THEATER
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "MarlonFay": {
+          "Name": "MarlonFay",
+          "LovedTags": [
+            "Gourmet",
+            "Healthy"
+          ],
+          "LikedTags": [
+            "Salty"
+          ],
+          "DislikedTags": [
+            "Sweet",
+            "Candy"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "When": {
+        "HasMod |contains=Tanpoponoko.SeasonalOutfits": false
+      },
+      "Entries": {
+        "MarlonFay": {
+          "NPCName": "MarlonFay",
+          "Reactions": [
+            {
+              "Tag": "horror",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "classic",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "fall_movie_0",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.01}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.02}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.03}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "winter_movie_1",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.04}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "...$2"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.05}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "love",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.06}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.07}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "like",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.08}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.09}}",
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "dislike",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.10}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "...$2"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Marlon.Movies.11}}",
+                }
+              },
+              "ID": "reaction_6"
+            }
+          ]
+        }
+      }
+    },
+    { //Marlon will reject movie invitations
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "When": {
+        "HasMod": "Tanpoponoko.SeasonalOutfits"
+      },
+      "Entries": {
+        "MarlonFay": {
+          "NPCName": "MarlonFay",
+          "Reactions": [
+            {
+              "Tag": "*",
+              "Response": "reject",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            }
+          ]
+        }
+      }
+    },
+    
+ 
+    { //ADVENTURER GUILD INITIATION
+      "Action": "EditData",
+      "Target": "data/events/adventureguild",
+      "When": {
+        "HasFlag": "guildMember"
+      },
+      "Entries": {
+        "1000034/j 10": "MarlonsTheme/-500 -500/farmer 6 19 0 MarlonFay 6 13 2/pause 500/showFrame MarlonFay 17/viewport 6 14 true/skippable/playSound doorClose/pause 800/shake MarlonFay 600/textAboveHead MarlonFay \"{{i18n:Marlon.Initiation.01}}\"/pause 150/move farmer 0 -4 0/pause 700/showFrame MarlonFay 0/pause 600/speak MarlonFay \"{{i18n:Marlon.Initiation.02}}\"/pause 1000/jump farmer/pause 800/jump farmer/pause 1200/speak MarlonFay \"{{i18n:Marlon.Initiation.03}}\"/pause 500/jump farmer/pause 1400/move MarlonFay 0 1 2/pause 700/speak MarlonFay \"{{i18n:Marlon.Initiation.04}}\"/pause 1000/speak MarlonFay \"{{i18n:Marlon.Initiation.05}}\"/pause 750/speak MarlonFay \"{{i18n:Marlon.Initiation.06}}\"/pause 250/globalFade/viewport -1000 -1000/pause 700/end dialogue MarlonFay \"{{i18n:Marlon.Initiation.07}}\"",
+      },
+    },
+    { //Marlon Sewer Key Event - friendship
+      "Action": "EditData",
+      "Target": "data/events/Custom_AdventurerSummit",
+      "When": {
+        "DayEvent |contains=egg festival, feast of the winter star, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "1090501/e 1000034/k 1090502/f MarlonFay 1250": "continue/-500 -500/farmer 51 16 2 Krobus -300 -300 3 MarlonFay 52 30 2/rustyKey/skippable/pause 1000/viewport 51 30 clamp true/move farmer 0 11 2/pause 1250/showFrame MarlonFay 18 true/pause 600/speak MarlonFay \"{{i18n:Marlon.Sewer.01}}\"/pause 750/faceDirection MarlonFay 2 true/pause 600/move farmer 0 3 2/pause 2000/speak MarlonFay \"{{i18n:Marlon.Sewer1.02}}\"/pause 1000/faceDirection farmer 1 true/pause 800/showFrame MarlonFay 18 true/pause 700/speak MarlonFay \"{{i18n:Marlon.Sewer.03}}\"/pause 200/emote farmer 16/pause 600/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.04A}}\"/pause 800/advancedMove MarlonFay false 0 -1 -1 0 0 -10/pause 400/faceDirection farmer 0 true/pause 1000/move farmer 0 -9 0 true/pause 2000/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation Town/stopMusic/pause 500/warp farmer 40 101/warp MarlonFay 38 101/viewport 35 97 clamp true/advancedMove MarlonFay false -3 0 0 -4/move farmer -6 0 0/move farmer 0 -4 0 true/pause 500/showFrame MarlonFay 8 true/pause 2750/faceDirection MarlonFay 3 true/pause 500/faceDirection farmer 1 true/pause 400/speak MarlonFay \"{{i18n:Marlon.Sewer.05}}\"/pause 450/faceDirection MarlonFay 0 true/pause 650/playSound openBox/shake MarlonFay 200/pause 700/shake MarlonFay 500/playSound trashcanlid/pause 900/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.06}}\"/pause 600/faceDirection MarlonFay 0 true/pause 500/faceDirection farmer 0 true/pause 800/playSound stairsdown/warp MarlonFay -40 -40/pause 600/playSound stairsdown/warp farmer -39 -39/pause 800/globalFade/viewport -1000 -1000/pause 400/changeLocation Sewer/playMusic Upper_Ambient/warp Krobus 31 20/warp MarlonFay 17 11/faceDirection farmer 2/showFrame MarlonFay 18/move Krobus -10 0 0 true/viewport 19 17 true/pause 2000/playSound stairsdown/warp farmer 16 11/pause 900/faceDirection farmer 1/pause 900/faceDirection farmer 2/pause 500/move MarlonFay 0 0 2/move MarlonFay 0 0 2/pause 400/move MarlonFay 0 6 2 true/pause 300/move farmer 0 5 2 true/pause 2000/speak MarlonFay \"{{i18n:Marlon.Sewer.07}}\"/pause 500/shake Krobus 800/emote Krobus 28 true/pause 1300/move Krobus 0 0 3/pause 500/speak Krobus \"{{i18n:Marlon.Sewer.08}}\"/pause 700/speed Krobus 2/move Krobus -4 0 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.09}}\"/pause 750/speak Krobus \"{{i18n:Marlon.Sewer.10}}\"/pause 700/move farmer 0 1 2/pause 500/emote farmer 32/pause 600/speak Krobus \"{{i18n:Marlon.Sewer.11A}}\"/pause 500/showFrame MarlonFay 18/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.12}}\"/pause 400/move farmer 0 0 1/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.13}}\"/pause 500/move farmer 0 0 2/pause 200/move MarlonFay 0 0 2/pause 400/speak Krobus \"{{i18n:Marlon.Sewer.14}}\"/pause 500/showFrame MarlonFay 18/pause 400/speak MarlonFay \"{{i18n:Marlon.Sewer.15}}\"/pause 150/move farmer 0 0 1/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.16}}\"/pause 600/showFrame MarlonFay 0/pause 500/faceDirection farmer 2/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.17}}\"/pause 500/speak Krobus \"{{i18n:Marlon.Sewer.18}}\"/pause 400/globalFade/viewport -1000 -1000/pause 600/playSound stairsdown/pause 1000/playSound stairsdown/pause 200/changeLocation AdventureGuild/pause 100/playMusic MarlonsTheme/warp farmer 6 5/warp Krobus -300 -300/warp MarlonFay 8 5/faceDirection farmer 1/pause 100/move MarlonFay 0 0 3/viewport 7 5 true/pause 1500/speak MarlonFay \"{{i18n:Marlon.Sewer.19}}\"/pause 500/playSound reward/message \"{{i18n:Marlon.Sewer.20}}\"/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.21}}\"/pause 400/globalFade/viewport -1000 -1000/pause 500/end dialogue MarlonFay \"{{i18n:Marlon.Sewer.22}}\"",
+      },
+    },
+    { //Marlon Sewer Key Event - after one year + cleared mine level 120
+      "Action": "EditData",
+      "Target": "data/events/Custom_AdventurerSummit",
+      "When": {
+        "Year |contains=1": false,
+        "DayEvent |contains=egg festival, feast of the winter star, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "1090501/e 1000034/k 1090502/b 1": "continue/-500 -500/farmer 51 16 2 Krobus -300 -300 3 MarlonFay 52 30 2/rustyKey/skippable/pause 1000/viewport 51 30 clamp true/move farmer 0 11 2/pause 1250/showFrame MarlonFay 18 true/pause 600/speak MarlonFay \"{{i18n:Marlon.Sewer.01}}\"/pause 750/faceDirection MarlonFay 2 true/pause 600/move farmer 0 3 2/pause 2000/speak MarlonFay \"{{i18n:Marlon.Sewer1.02}}\"/pause 1000/faceDirection farmer 1 true/pause 800/showFrame MarlonFay 18 true/pause 700/speak MarlonFay \"{{i18n:Marlon.Sewer.03}}\"/pause 200/emote farmer 16/pause 600/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.04}}\"/pause 800/advancedMove MarlonFay false 0 -1 -1 0 0 -10/pause 400/faceDirection farmer 0 true/pause 1000/move farmer 0 -9 0 true/pause 2000/globalFade/viewport -1000 -1000/halt/pause 500/changeLocation Town/stopMusic/pause 500/warp farmer 40 101/warp MarlonFay 38 101/viewport 35 97 clamp true/advancedMove MarlonFay false -3 0 0 -4/move farmer -6 0 0/move farmer 0 -4 0 true/pause 500/showFrame MarlonFay 8 true/pause 2750/faceDirection MarlonFay 3 true/pause 500/faceDirection farmer 1 true/pause 400/speak MarlonFay \"{{i18n:Marlon.Sewer.05}}\"/pause 450/faceDirection MarlonFay 0 true/pause 650/playSound openBox/shake MarlonFay 200/pause 700/shake MarlonFay 500/playSound trashcanlid/pause 900/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.06}}\"/pause 600/faceDirection MarlonFay 0 true/pause 500/faceDirection farmer 0 true/pause 800/playSound stairsdown/warp MarlonFay -40 -40/pause 600/playSound stairsdown/warp farmer -39 -39/pause 800/globalFade/viewport -1000 -1000/pause 400/changeLocation Sewer/playMusic Upper_Ambient/warp Krobus 31 20/warp MarlonFay 17 11/faceDirection farmer 2/showFrame MarlonFay 18/move Krobus -10 0 0 true/viewport 19 17 true/pause 2000/playSound stairsdown/warp farmer 16 11/pause 900/faceDirection farmer 1/pause 900/faceDirection farmer 2/pause 500/move MarlonFay 0 0 2/move MarlonFay 0 0 2/pause 400/move MarlonFay 0 6 2 true/pause 300/move farmer 0 5 2 true/pause 2000/speak MarlonFay \"{{i18n:Marlon.Sewer.07}}\"/pause 500/shake Krobus 800/emote Krobus 28 true/pause 1300/move Krobus 0 0 3/pause 500/speak Krobus \"{{i18n:Marlon.Sewer.08}}\"/pause 700/speed Krobus 2/move Krobus -4 0 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.09}}\"/pause 750/speak Krobus \"{{i18n:Marlon.Sewer.10}}\"/pause 700/move farmer 0 1 2/pause 500/emote farmer 32/pause 600/speak Krobus \"{{i18n:Marlon.Sewer.11}}\"/pause 500/showFrame MarlonFay 18/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.12}}\"/pause 400/move farmer 0 0 1/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.13}}\"/pause 500/move farmer 0 0 2/pause 200/move MarlonFay 0 0 2/pause 400/speak Krobus \"{{i18n:Marlon.Sewer.14}}\"/pause 500/showFrame MarlonFay 18/pause 400/speak MarlonFay \"{{i18n:Marlon.Sewer.15}}\"/pause 150/move farmer 0 0 1/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.16}}\"/pause 600/showFrame MarlonFay 0/pause 500/faceDirection farmer 2/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.17}}\"/pause 500/speak Krobus \"{{i18n:Marlon.Sewer.18}}\"/pause 400/globalFade/viewport -1000 -1000/pause 600/playSound stairsdown/pause 1000/playSound stairsdown/pause 200/changeLocation AdventureGuild/pause 100/playMusic MarlonsTheme/warp farmer 6 5/warp Krobus -300 -300/warp MarlonFay 8 5/faceDirection farmer 1/pause 100/move MarlonFay 0 0 3/viewport 7 5 true/pause 1500/speak MarlonFay \"{{i18n:Marlon.Sewer.19}}\"/pause 500/playSound reward/message \"{{i18n:Marlon.Sewer.20}}\"/pause 500/speak MarlonFay \"{{i18n:Marlon.Sewer.21}}\"/pause 400/globalFade/viewport -1000 -1000/pause 500/end dialogue MarlonFay \"{{i18n:Marlon.Sewer.22}}\"",
+      },
+    },
+    { //Krobus introduction
+      "Action": "EditData",
+      "Target": "data/events/sewer",
+      "Entries": {
+        "1090502/e 1090501": "Upper_Ambient/-500 -500/farmer 20 21 1 Krobus 31 17 2/pause 500/skippable/viewport 28 23 true/viewport move 0 -1 5000/move farmer 11 0 0 true/pause 4000/emote Krobus 16 true/pause 2500/speak Krobus \"{{i18n:Marlon.KrobusIntro.01}}\"/pause 500/question fork0 \"{{i18n:Marlon.KrobusIntro.01A}}\"/fork 1090502_MeetYou/pause 500/speak Krobus \"{{i18n:Marlon.KrobusIntro.02}}\"/pause 600/emote Krobus 40/pause 500/speak Krobus \"{{i18n:Marlon.KrobusIntro.03}}\"/pause 700/speak Krobus \"{{i18n:Marlon.KrobusIntro.04}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 -3 0 true/pause 700/globalFade/viewport -1000 -1000/pause 500/end position 31 18",
+        "1090502_MeetYou": "pause 500/speak Krobus \"{{i18n:Marlon.KrobusIntro.MeetYou.01}}\"/pause 750/speak Krobus \"{{i18n:Marlon.KrobusIntro.MeetYou.02}}\"/pause 700/speak Krobus \"{{i18n:Marlon.KrobusIntro.MeetYou.03}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 -3 0 true/pause 700/globalFade/viewport -1000 -1000/pause 500/end position 31 18",
+      },
+    },
+    { //MARLON 4 HEART EVENT
+      "Action": "EditData",
+      "Target": "data/events/railroad",
+      "Entries": {
+        "1004200/b 1/w rainy/f MarlonFay 1000": "continue/-500 -500/farmer 24 37 0 MarlonFay 24 15 2/pause 1000/skippable/viewport 22 28 true/viewport move 0 -1 4000 true/move MarlonFay 0 9 2 true/move farmer 0 -11 0 true/pause 5000/speak MarlonFay \"{{i18n:Marlon.4hearts.01}}\"/pause 1150/speak MarlonFay \"{{i18n:Marlon.4hearts.02}}\"/pause 1200/showFrame MarlonFay 19/pause 1600/speak MarlonFay \"{{i18n:Marlon.4hearts.03}}\"/pause 750/showFrame MarlonFay 0/pause 1250/speak MarlonFay \"{{i18n:Marlon.4hearts.04}}\"/pause 500/emote MarlonFay 40/speak MarlonFay \"{{i18n:Marlon.4hearts.05}}\"/move MarlonFay 0 1 2/pause 700/speak MarlonFay \"{{i18n:Marlon.4hearts.06}}\"/pause 500/question fork0 \"{{i18n:Marlon.4hearts.07}}\"/fork 1004200_Agree/pause 1000/speak MarlonFay \"{{i18n:Marlon.4hearts.08}}\"/pause 1200/speak MarlonFay \"{{i18n:Marlon.4hearts.09}}\"/move MarlonFay 0 8 2 true/move farmer -1 0 2 true/pause 2000/globalFade/viewport -1000 -1000/pause 1200/end position 21 27",
+        "1004200_Agree": "pause 1000/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.01}}\"/pause 1500/showFrame MarlonFay 18/pause 1500/showFrame MarlonFay 0/pause 1200/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.02}}\"/pause 800/move MarlonFay 0 8 2 true/move farmer -1 0 2 true/pause 2000/globalFade/viewport -1000 -1000/pause 1200/end dialogue MarlonFay \"{{i18n:Marlon.4hearts.Agree.03}}\"",
+      },
+    },
+    { //SLIME HUTCH EGGS
+      "Action": "EditData",
+      "Target": "Data/Events/farm",
+      "Entries": {
+        "690006/n slimeHutchBuilt/H": "continue/64 15/farmer 64 16 2 MarlonFay 66 15 0/broadcastEvent/pause 1000/speak MarlonFay \"{{i18n:Marlon.SlimeHutch.01}}\"/shake MarlonFay 1000/showFrame MarlonFay 16/textAboveHead MarlonFay \"{{i18n:Marlon.SlimeHutch.02}}\"/pause 1000/textAboveHead MarlonFay \"{{i18n:Marlon.SlimeHutch.03}}\"/showFrame MarlonFay 17/pause 700/showFrame MarlonFay 8/pause 800/speak MarlonFay \"{{i18n:Marlon.SlimeHutch.04}}\"/itemAboveHead slimeEgg/pause 1000/pause 1000/pause 1300/awardFestivalPrize slimeEgg/pause 300/faceDirection farmer 2 true/pause 500/speak MarlonFay \"{{i18n:Marlon.SlimeHutch.05}}\"/pause 500/end",
+      },
+    },
+    { //MARLON MINE EVENT ALTERATION
+      "Action": "EditData",
+      "Target": "data/events/mine",
+      "Entries": {
+        "100162/t 600 2600": "MarlonsTheme/21 9/farmer -100 -100 0 MarlonFay 23 6 2/addQuest 14/skippable/pause 1000/move MarlonFay 0 2 2/pause 500/showFrame MarlonFay 19/pause 1000/speak MarlonFay \"{{i18n:Marlon.Intro.01}}\"/pause 500/warp farmer 18 13/playSound stoneStep/move farmer 0 -3 1/move farmer 5 0 0/pause 500/showFrame MarlonFay 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Intro.02}}\"/pause 500/showFrame MarlonFay 18/pause 2000/showFrame MarlonFay 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Intro.03}}\"/pause 1500/speak MarlonFay \"{{i18n:Marlon.Intro.04}}\"/playSound dwop/faceDirection farmer 1 true/pause 50/faceDirection farmer 2/itemAboveHead sword/pause 3300/awardFestivalPrize sword/pause 300/faceDirection farmer 1 true/pause 100/faceDirection farmer 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Intro.05}}\"/pause 750/end",
+      }
+    },
+    { //MARLON GALAXY SWORD EVENT
+      "Action": "EditData",
+      "Target": "data/events/adventureguild",
+      "When": {
+        "HasFlag": "galaxySword"
+      },
+      "Entries": {
+        "1337098/": "MarlonsTheme/-500 -500/farmer -200 -200 0 MarlonFay 4 11 2/viewport 6 13 true/skippable/pause 2000/warp farmer 6 19/playSound doorClose/pause 500/showFrame MarlonFay 17/pause 150/textAboveHead MarlonFay \"{{i18n:Marlon.Galaxy.01}}\"/pause 350/move farmer 0 -5 3/move farmer -2 0 0/move farmer 0 -1 0/showFrame MarlonFay 0/pause 500/speak MarlonFay \"{{i18n:Marlon.Galaxy.02}}\"/pause 1000/showFrame MarlonFay 18/pause 1000/speak MarlonFay \"{{i18n:Marlon.Galaxy.03}}\"/pause 1200/speak MarlonFay \"{{i18n:Marlon.Galaxy.04}}\"/showFrame MarlonFay 0/pause 500/playSound reward/message \"{{i18n:Marlon.Galaxy.05}}\"/pause 500/end",
+      },
+    },
+    { //VOID SHARD EVENT
+      "Action": "EditData",
+      "Target": "Data/Events/adventureguild",
+      "Entries": {
+        "1579123/i FlashShifter.StardewValleyExpandedCP_Void_Shard": "MarlonsTheme/-500 -500/farmer -100 -100 0 MarlonFay 8 11 0 Wizard -101 -101 2/pause 1300/viewport 6 15 true/removeItem FlashShifter.StardewValleyExpandedCP_Void_Shard/skippable/pause 1250/playSound doorClose/warp farmer 6 19/pause 700/faceDirection MarlonFay 1 true/pause 200/faceDirection MarlonFay 2 true/pause 200/speed farmer 1/move farmer 0 -4 0 true/pause 400/textAboveHead MarlonFay \"{{i18n:Marlon.Void.01}}\"/pause 2000/move MarlonFay 0 2 3/move MarlonFay -2 0 2/pause 700/speak MarlonFay \"{{i18n:Marlon.Void.02}}\"/pause 600/emote farmer 40/pause 300/speak MarlonFay \"{{i18n:Marlon.Void.03}}\"/pause 500/emote farmer 40/speak MarlonFay \"{{i18n:Marlon.Void.04}}\"/pause 800/showFrame MarlonFay 19/pause 700/speak MarlonFay \"{{i18n:Marlon.Void.05}}\"/pause 400/showFrame MarlonFay 0/pause 300/globalFade/viewport -1000 -1000/pause 50/stopMusic/pause 50/changeLocation WizardHouse/playSound doorClose/pause 600/playSound doorClose/pause 700/playMusic WizardSong/warp Wizard 10 17/showFrame Wizard 20/warp farmer 10 23/warp MarlonFay 9 23/faceDirection MarlonFay 0 true/faceDirection farmer 0 true/pause 50/viewport 8 19 true/speed MarlonFay 1/move MarlonFay 0 -3 0 true/speed farmer 1/move farmer 0 -3 0 true/pause 800/speak Wizard \"{{i18n:Marlon.Void.06}}\"/pause 700/showFrame Wizard 21/pause 600/speak Wizard \"{{i18n:Marlon.Void.07}}\"/pause 800/showFrame Wizard 22/pause 200/showFrame Wizard 0/pause 800/speak MarlonFay \"{{i18n:Marlon.Void.08}}\"/pause 1000/speak Wizard \"{{i18n:Marlon.Void.09}}\"/pause 800/move Wizard -2 0 1/pause 700/speed farmer 1/move farmer 0 -2 0/pause 700/ShowFrame farmer 15/pause 500/addObject 10 17 FlashShifter.StardewValleyExpandedCP_Void_Shard/pause 175/playSound stoneStep/playSound stoneStep/pause 500/showFrame farmer 12/pause 500/faceDirection farmer 1 true/pause 150/faceDirection farmer 2 true/pause 200/move farmer 0 2 0/pause 800/stopMusic/pause 1000/showFrame Wizard 19/pause 1000/shake Wizard 700/pause 1400/playSound healSound/glow 255 0 0/pause 1000/playSound healSound/glow 255 0 0/pause 1200/shake Wizard 1800/pause 600/playSound shadowpeep/pause 300/glow 255 0 0/playSound shadowpeep/pause 400/playSound shadowpeep/pause 100/playSound shadowpeep/pause 150/playSound shadowpeep/pause 270/playSound shadowpeep/pause 100/playSound shadowpeep/glow 255 0 0/pause 300/playSound shadowpeep/pause 150/playSound shadowpeep/pause 200/playSound shadowpeep/pause 100/playSound shadowpeep/pause 100/playSound shadowpeep/pause 100/playSound shadowpeep/pause 100/screenFlash 2/playSound thunder/removeSprite 10 17/playSound breakingGlass/playSound breakingGlass/playSound breakingGlass/pause 900/showFrame Wizard 4/pause 200/emote farmer 16 true/pause 300/emote MarlonFay 16 true/pause 2500/move Wizard 1 0 1/pause 1000/emote Wizard 40/pause 600/faceDirection Wizard 2 true/pause 1200/showFrame Wizard 18/pause 850/speak Wizard \"{{i18n:Marlon.Void.10}}\"/pause 700/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Marlon.Void.11}}\"/pause 700/speak MarlonFay \"{{i18n:Marlon.Void.12}}\"/pause 1000/showFrame Wizard 18/pause 600/speak Wizard \"{{i18n:Marlon.Void.13}}\"/pause 500/speak MarlonFay \"{{i18n:Marlon.Void.14}}\"/pause 300/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Marlon.Void.15}}\"/pause 300/globalFade/viewport -1000 -1000/pause 100/changeLocation Custom_WizardBasement/warp MarlonFay 22 22/warp farmer 24 22/warp Wizard 23 20/pause 100/positionOffset MarlonFay 20 -10/positionOffset farmer -20 -10/viewport 23 21 true/pause 1200/speak Wizard \"{{i18n:Marlon.Void.16}}\"/pause 700/faceDirection Wizard 1 true/pause 200/faceDirection Wizard 0 true/pause 250/move Wizard 0 -2 0/pause 150/faceDirection Wizard 1 true/pause 150/faceDirection Wizard 2 true/pause 600/speak Wizard \"{{i18n:Marlon.Void.17}}\"/pause 800/showFrame Wizard 16/pause 500/screenFlash 2/playSound wand/playSound wand/warp Wizard -105 -105/pause 1000/globalFade/viewport -1000 -1000/pause 600/end dialogue MarlonFay \"{{i18n:Marlon.Void.18}}\"",
+      },
+    },
+    { //VOID SHARD EVENT WIZARD END DIALOGUE
+      "Action": "EditData",
+      "Target": "Data/Events/wizardhouse",
+      "Entries": {
+        "1579124/e 1579123": "none/-500 -500/farmer -100 -100 0/pause 50/end dialogue Wizard \"{{i18n:Marlon.Void.Wizard.01}}\"",
+      },
+    },
+    { //SEWER KEY EVENT - Marlon
+      "Action": "EditData",
+      "Target": "Data/Events/town",
+      "Entries": {
+        "1579125/e 103042015/k 1090501": "continue/-500 -500/MarlonFay 41 101 3 farmer 26 94 1/pause 1250/skippable/viewport 35 97 clamp true/move MarlonFay -6 0 0/move MarlonFay 0 -4 0/pause 1200/faceDirection MarlonFay 3 true/pause 850/faceDirection MarlonFay 0 true/pause 225/faceDirection MarlonFay 1 true/pause 1000/faceDirection MarlonFay 0 true/pause 900/playSound trashcanlid/shake MarlonFay 600/pause 1150/playSound stairsdown/warp MarlonFay -100 -100/pause 1000/move farmer 3 0 2/move farmer 0 2 1/move farmer 1 0 1/pause 600/emote farmer 8/globalFade/viewport -1000 -1000/pause 1000/end dialogue MarlonFay \"{{i18n:Marlon.SewerRejection.01}}\"",
+      },
+    },
+   
+  ]
+}

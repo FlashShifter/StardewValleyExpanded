@@ -1,0 +1,23 @@
+{
+    "Changes": [
+        { //BEAR UNLOCKED
+            "Action": "EditData",
+            "Target": "data/events/woods",
+            "Entries": {
+                "2120303/S 23/i 724/t 600 1900": "nightTime/-1000 -1000/farmer 37 21 3/makeInvisible 24 19 16 5/removeQuest 29/removeItem 724/addTemporaryActor Bear 32 32 26 20 2 true character/faceDirection Bear 1/viewport 28 20 clamp true/move farmer -5 0 3/pause 1000/startJittering/emote farmer 28/pause 1000/stopJittering/pause 500/animate Bear false true 500 16 17/pause 500/playSound rabbit/pause 1000/playSound rabbit/pause 500/stopAnimation Bear/speak Bear \"{{i18n:Bear.Event.01}}\"/pause 1000/move farmer -1 0 3/move farmer 0 -1 3/move farmer -2 0 3/pause 1000/faceDirection Bear 2/pause 1000/speak Bear \"{{i18n:Bear.Event.02}}\"/pause 100/jump Bear/pause 1000/faceDirection Bear 1/speak Bear \"{{i18n:Bear.Event.03}}\"/pause 1000/animate farmer true true 100 35/playSound coin/addObject 28 20 724/pause 500/animate Bear false true 500 16 17/pause 500/stopAnimation farmer/playSound rabbit/pause 1000/playSound rabbit/pause 500/stopAnimation Bear/shake Bear 2000/pause 500/removeTemporarySprites/speak Bear \"{{i18n:Bear.Event.04}}\"/pause 1000/emote Bear 20/animate Bear false true 200 4 5 6 7/pause 50/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/stopAnimation Bear/pause 500/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/stopAnimation farmer/pause 1000/speak Bear \"{{i18n:Bear.Event.05}}\"/pause 1000/animate Bear false true 200 4 5 6 7/pause 50/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/pause 100/positionOffset Bear 4 0/stopAnimation Bear/pause 250/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 6/pause 100/positionOffset farmer 2 0/playSound dwop/animate farmer true true 100 7/pause 100/positionOffset farmer 2 0/stopAnimation farmer/pause 1000/speak Bear \"{{i18n:Bear.Event.06}}\"/pause 500/animate Bear false true 400 8 9 10 11/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/playSound grassyStep/pause 400/stopAnimation Bear/fade/viewport -1000 -1000/pause 2000/message \"{{i18n:Bear.Event.07}}\"/pause 1000/playSound reward/message \"{{i18n:Bear.Event.08}}\"/end",
+            },
+        },
+        { //tagging woods entry
+            "Action": "EditData",
+            "Target": "data/events/woods",
+            "Entries": {
+                "7134028/": "none/-1000 -1000/Wizard -20 -20 0/pause 50/end"
+            },
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/LeahLaptopProp",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/LeahLaptopProp.png"
+        },
+    ]
+}

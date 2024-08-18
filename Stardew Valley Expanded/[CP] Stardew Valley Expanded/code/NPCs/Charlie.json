@@ -1,0 +1,120 @@
+{
+  "Changes": [
+    { //DA CHICKEN SCHEDULE - Jas
+      "Action": "EditData",
+      "Target": "characters/schedules/CharlieChicken",
+      "When": {
+        "Weather": "Sun",
+        "HasSeenEvent |contains=3910974": true,
+        "HasSeenEvent |contains=3900074": true,
+        "Spouse |contains=Shane": false
+      },
+      "Entries": {
+        "11": "0 Custom_Charlie_WarpRoom 2 3 3/850 AnimalShop 30 16 2/1030 AnimalShop 7 17 0/1130 Town 16 16 0/1540 Town 21 15 2 Charlie_Sleep/1640 AnimalShop 23 15 1/2100 AnimalShop 26 6 2 Charlie_Sleep",
+        "25": "0 Custom_Charlie_WarpRoom 2 3 3/850 AnimalShop 30 16 2/1030 AnimalShop 7 17 0/1130 Town 16 16 0/1540 Town 21 15 2 Charlie_Sleep/1640 AnimalShop 23 15 1/2100 AnimalShop 26 6 2 Charlie_Sleep"
+      },
+    },
+    // CHARLIE - SHANE'S CHICKEN
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "When": {
+        "HasSeenEvent |contains=3900074": true
+      }, //Player must have seen Shane's 8 heart event for Charlie to spawn into the game.
+      "Entries": {
+        "CharlieChicken": {
+          "DisplayName": "{{i18n:Name.Charlie}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Child",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Charlie_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Charlie_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Charlie's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Charlie_Sleep": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/16",
+      }
+    },
+    {
+      //Charlie's sprites
+      "Action": "Load",
+      "Target": "Characters/CharlieChicken",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Charlie/Charlie.png"
+    },
+    {
+      //Charlie's portraits (fake. maybe i'll make one in the future.)
+      "Action": "Load",
+      "Target": "Portraits/CharlieChicken",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Charlie.png"
+    },
+    {
+      //Charlie's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/CharlieChicken",
+      "When": {
+        "HasSeenEvent |contains=3900074": true
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Charlie/Schedule.json"
+    },
+    { //New Saturday schedule if player married Shane
+      "Action": "EditData",
+      "Target": "characters/schedules/CharlieChicken",
+      "When": {
+        "Spouse |contains=Shane": true
+      },
+      "Entries": {
+        "Sat": "0 Custom_Charlie_WarpRoom 2 3 3/630 AnimalShop 12 16 2 Charlie_Sleep/1130 AnimalShop 3 15 0 Charlie_Sleep/1430 AnimalShop 17 15 2 Charlie_Sleep/1800 AnimalShop 26 6 2 Charlie_Sleep"
+      },
+    },
+    { //Charlie Community Day schedule
+      "Action": "EditData",
+      "Target": "characters/schedules/CharlieChicken",
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasSeenEvent |contains=3900074": true
+      },
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Charlie_WarpRoom 2 3 3/800 AnimalShop 23 15 1/1030 AnimalShop 16 14 2/1100 CommunityCenter 16 22 2 Charlie_Sleep/1800 CommunityCenter 9 26 3/1850 AnimalShop 26 6 2 Charlie_Sleep",
+      },
+    },
+  ]
+}

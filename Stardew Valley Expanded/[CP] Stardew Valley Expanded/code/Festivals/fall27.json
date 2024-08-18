@@ -1,0 +1,1113 @@
+{
+    "Changes": [
+        /*
+If you're here as a modder working on compat, this is the festival that's changed the most.
+*
+EVEN SVE years map = EVEN VANILLA Years map
+ODD SVE years will rotate between the existing two SVE maps. 
+Formerlly ODD year = 1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99
+Formerly EVEN year = 3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97
+*/
+        //ANY YEAR 
+        { //Apples halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "ApplesHere": "true",
+                "Roommate": "Apples"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Apples 47 88 up",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Patches Krobus at halloween festival after players meet them for the first time
+            "Action": "EditMap",
+            "Target": "Maps/Town-Halloween",
+            "FromFile": "Assets/Maps/MapPatches/KrobusPatched.tbin",
+            "When": {
+                "HasSeenEvent": "1090501"
+            },
+            "ToArea": {
+                "X": 36,
+                "Y": 101,
+                "Width": 1,
+                "Height": 1
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town-Halloween2",
+            "FromFile": "Assets/Maps/MapPatches/KrobusPatched.tbin",
+            "When": {
+                "HasSeenEvent": "1090501"
+            },
+            "ToArea": {
+                "X": 36,
+                "Y": 101,
+                "Width": 1,
+                "Height": 1
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Alesia": "{{i18n:Alesia.Spirit}}",
+                "Claire": "{{i18n:spirit.claire.1}}",
+                "Isaac": "{{i18n:Isaac.Spirit}}",
+                "GuntherSilvian": "{{i18n:Gunther.Spirit}}",
+                "MarlonFay": "{{i18n:Marlon.Spirit}}",
+                "MorrisTod": "{{i18n:Morris.Spirit}}",
+                "Sandy": "{{i18n:Sandy.Spirit}}",
+                "Scarlett": "{{i18n:Scarlett.Spirit}}",
+                "Susan": "{{i18n:Susan.Spirit}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples": "{{i18n:Apples.Spirit}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Claire": "{{i18n:spirit.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Olivia": "{{i18n:spirit.Olivia.3}}",
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Sophia": "{{i18n:spirit.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Victor": "{{i18n:spirit.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Wizard": "{{i18n:spirit.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        //YEAR ONE and then every four years.
+        { //Adds new dialogue for several characters, advance moves additions and edits, moves Pierre's "shop" into the maze, adds patrolling monsters. Adds additional fields (pause 1)
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+            },
+            "Entries": {
+                //"shop": "BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+                "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/advancedMove Linus true 4 13000 1 0 4 6000 -1 0/advancedMove Sophia true 4 10000 1 3000 4 2000/advancedMove Maru true 1 5000 2 7000 3 3000 4 3500 1 2000 2 3000 3 1000 4 2000/advancedMove Alex true -3 0 4 4000 3 0 4 5000/advancedMove Jas true 1 1500 4 1000/advancedMove Abigail true 3 3500 2 3000 1 5000 3 5000 2 6000/advancedMove Harvey true 1 3500 4 5000 3 3000 2 5000 4 3000/advancedMove Pam true 0 1 3 7500 0 -1 3 5500/advancedMove Shane true -7 0 0 2 2 9000 0 -2 7 0 4 9000/advancedMove Demetrius true 3 18000 4 3000/addTemporaryActor Skeleton 16 32 30 59 2 false Monster/advancedMove Skeleton true 0 1 3 4000 2 0 0 -1 4 2000 -1 0 3 1000 2 2000 0 -1 4 4000 -1 0 0 1 2 5000/addTemporaryActor Skeleton 16 32 35 58 2 false Monster/addTemporaryActor Shadow_Brute 16 32 46 59 2 false Monster/addTemporaryActor Shadow_Brute 16 32 43 58 2 false Monster/advancedMove Shadow_Brute true -4 0 3 5000 4 0 2 5000 1 3000 2 1000/addTemporaryActor Skeleton_Mage 16 32 51 32 2 false Monster/advancedMove Skeleton_Mage true -2 0 0 2 1 6000 0 -2 2 0 2 5000/addTemporaryActor Wilderness_Golem 16 24 63 25 3 false Monster/advancedMove Wilderness_Golem true -9 0 0 2 2 1000 0 -2 9 0 2 1500/addTemporaryActor Stone_Golem 16 24 54 32 1 false Monster/advancedMove Stone_Golem true 9 0 4 1000 -9 0 4 400/addTemporaryActor Shadow_Shaman 16 24 68 23 2 false Monster/advancedMove Shadow_Shaman true 1 1500 2 2000 3 3000 2 5000 4 1000/addTemporaryActor Metal_Head 16 16 74 27 2 false Monster/advancedMove Metal_Head true -4 0 2 200 4 0 4 100/addTemporaryActor Mummy 16 32 74 24 2 false Monster/advancedMove Mummy true -2 0 3 200 2 0 2 6000/positionOffset Claire 5 -25/positionOffset Sandy 0 -20/positionOffset Emily 0 -26/playerControl halloween",
+                "Wizard": "{{i18n:SpiritsEve.Wizard}}",
+                "Andy": "{{i18n:Andy.Spirit.01}}",
+                "Lance": "{{i18n:spirit.lance.1}}",
+                "Martin": "{{i18n:Martin.Spirit.1}}",
+                "Linus": "{{i18n:SpiritsEve.Linus}}",
+                "Krobus": "{{i18n:SpiritsEve.Krobus}}",
+                "Pierre": "{{i18n:SpiritsEve.Pierre}}",
+                "Dwarf": "{{i18n:SpiritsEve.Dwarf}}",
+                "Evelyn": "{{i18n:SpiritsEve.Evelyn}}",
+                "George": "{{i18n:SpiritsEve.George}}",
+                "Leo": "{{i18n:SpiritsEve.Leo}}",
+                "Morgan": "{{i18n:Morgan.Spirit.01}}",
+                "Olivia": "{{i18n:spirit.Olivia.1}}",
+                "Sophia": "{{i18n:spirit.Sophia.1}}",
+                "Victor": "{{i18n:spirit.victor.1}}"
+            }
+        },
+        { //YEAR ONE halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99"
+            },
+            "TextOperations": [
+                { //victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 52 35 up",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 30 68 up",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 33 69 down",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 40 60 right",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 25 68 down",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 28 57 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "6665293"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 23 62 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Claire halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 27 64 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Martin halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 14 26 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Gunther halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "GuntherUnlocked": "true"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 34 73 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Scarlett halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "3691371"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 26 68 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Morgan halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "5978924"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 38 58 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Alesia halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "7502582"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Alesia 26 53 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Isaac halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "908079"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Isaac 48 62 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Lance halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "Spouse": "Lance"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 23 57 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Sandy halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 23 67 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent |contains=5553210": false
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween",
+            "When": {
+                "Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
+                "HasSeenEvent": "5553210"
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween_Joja.tbin"
+        },
+        { //YEAR TWO halloween festival data, and then all even years.
+            "Action": "EditData",
+            "Target": "Data/Festivals/Fall27",
+            "When": {
+                "IsOddYear": false,
+            },
+            "Entries": {
+                "set-up_y2": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween2/viewport -1000 -1000/loadActors Set-Up/advancedMove Pam true 1 10000 4 2500/advancedMove Jodi true 4 12300 3 3000/advancedMove Harvey true 3 9000 4 2000 3 500 2 2500/advancedMove Vincent true 2 11000 3 1250 2 500 1 1000/advancedMove Sebastian true 2 13500 3 1400 2 500 1 1200/advancedMove Willy true 4 12000 3 1550 4 10500 1 1750/advancedMove Emily true 2 6500 3 1000 2 4000 1 1250/advancedMove Leah true 2 4000 1 3000 4 2250 1 500 2 800 0 5 -4 0 3 1100 2 3500 3 600 -4 0 0 -4 4 500 3 4000 2 1500 3 2500 4 1500 3 1750 2 500 0 4 4 0 1 800 2 3000 3 1500 2 3250 1 500 4 0 0 -5 4 2500/advancedMove Robin true 4 8500 2 0 1 500 4 6250 3 650 -2 0 3 400 4 500/advancedMove Abigail true 4 7500 1 500 2 0 1 400 4 5500 2 0 0 -3 4 500 3 6250 2 500 0 3 -2 0 3 500 4 3750 3 400 -2 0 3 500/advancedMove Alex true 2 8000 1 1000 2 650 3 1250 2 5500 1 1500 2 750 3 1500 2 500/advancedMove Kent true 4 3800 1 400 3 0 1 400 4 9600 3 500 -2 0 3 500 4 7000 3 400 -1 0 3 400/positionOffset Clint 16 -24/positionOffset Willy 5 -15/positionOffset George 0 -12/positionOffset Evelyn 0 -16/addTemporaryActor Mummy 16 32 9 62 2 false Monster/advancedMove Mummy true 2 5000 1 0 1 800 2 4000 3 2000 2 500 1 2500 2 4000 3 500 4 500 0 -1 4 1500 1 3000 2 4000 3 800 -1 0 3 1500 2 3750 0 1 2 2000/addTemporaryActor Wilderness_Golem 16 24 18 59 2 false Monster/advancedMove Wilderness_Golem true 2 5000 3 2500 2 4000 1 2000 2 1000 3 500 -1 0 3 1000 2 6000 0 1 2 4000 3 3000 2 500 1 2500 4 650 0 -1 -1 0 3 2000 3 5000 3 3000 2 2000 1 1500 2 0 1 3000/addTemporaryActor Stone_Golem 16 24 16 61 2 false Monster/advancedMove Stone_Golem true 2 3500 0 1 2 0 1 500 2 4000 1 800 4 500 0 -1 4 2000 1 2500 2 500 3 3000 -2 0 3 3000/advancedMove Leo true 2 5000 1 3000 2 3500 1 4000/addTemporaryActor Mummy 16 32 11 60 1 false Monster/playerControl halloween/viewport player clamp true unfreeze/globalFadeToClear",
+                "Alesia_y2": "{{i18n:Alesia.Spirit}}",
+                "Claire_y2": "{{i18n:spirit.claire.1}}",
+                "Isaac_y2": "{{i18n:Isaac.Spirit}}",
+                "GuntherSilvian_y2": "{{i18n:Gunther.Spirit}}",
+                "MarlonFay_y2": "{{i18n:Marlon.Spirit}}",
+                "MorrisTod_y2": "{{i18n:Morris.Spirit}}",
+                "Sandy_y2": "{{i18n:Sandy.Spirit}}",
+                "Scarlett_y2": "{{i18n:Scarlett.Spirit}}",
+                "Susan_y2": "{{i18n:Susan.Spirit}}",
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "When": {
+                "ApplesHere": "true"
+            },
+            "Entries": {
+                "Apples_y2": "{{i18n:Apples.Spirit}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Claire_y2": "{{i18n:spirit.claire.2}}",
+            },
+            "When": {
+                "Spouse": "Claire"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Olivia_y2": "{{i18n:spirit.Olivia.3}}",
+            },
+            "When": {
+                "Spouse": "Olivia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Sophia_y2": "{{i18n:spirit.Sophia.2}}"
+            },
+            "When": {
+                "Spouse": "Sophia"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Victor_y2": "{{i18n:spirit.victor.2}}"
+            },
+            "When": {
+                "Spouse": "Victor"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "data/festivals/fall27",
+            "Entries": {
+                "Wizard_y2": "{{i18n:spirit.wizard.1}}"
+            },
+            "When": {
+                "Spouse": "Wizard"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+            },
+            "TextOperations": [
+                { //victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 4 60 right",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 32 65 left",
+                    "Delimiter": "/"
+                },
+                { //Andy
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 36 71 left",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 35 72 up",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 26 21 up",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 22 62 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
+        { //Morris halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "6665293"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 27 53 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Claire halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 28 66 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Martin halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 27 65 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Gunther halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "GuntherUnlocked": "true"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 26 53 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Scarlett halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "3691371"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 43 30 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Morgan halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "5978924"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 9 25 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Alesia halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "7502582"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Alesia 24 62 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Isaac halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "HasSeenEvent": "908079"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Isaac 21 57 left",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Lance halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "Spouse": "Lance"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 13 66 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Sandy halloween festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+                "Hearts:Sandy": "{{Range: 5, 14}}",
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 19 25 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween2",
+            "When": {
+                "HasSeenEvent |contains=5553210": false
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween2.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween2",
+            "When": {
+                "HasSeenEvent": "5553210"
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween2_Joja.tmx"
+        },
+        //YEAR THREE and then every four years.
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+            },
+            "Entries": {
+                //"shop": "O 373 0 3 O 608 0 3 BO 113 0 1 BL 746 0 1 BO 47 0 4 F 2794 0 1",
+                "set-up": "spirits_eve/-1000 -1000/farmer 12 54 1/changeToTemporaryMap Town-Halloween/loadActors Set-Up/advancedMove Harvey true 2 5000 1 200 2 200 0 5 4 0 0 2 -6 0 0 -9 4 2000 -1 0 0 1 2 2000 3 2000 2 200 1 4000 2 4000 2 200 1 0 0 8 6 0 0 -2 -4 0 0 -5 4 2000 1 200 2 5000 3 1000/advancedMove Sophia true 2 8000 3 2000 2 4000 1 2500 2 500/advancedMove Sebastian true 2 7000 1 500 2 0 1 250 2 6000 -2 0 2 500/advancedMove Olivia true 3 12000 4 1250 3 5000 2 2000 3 1000/advancedMove Demetrius true 1 18000 2 300 3 200 -1 0 0 4 2 7000 1 200 4 200 0 -4 1 0 1 1000/advancedMove Alex true 4 5000 3 0 1 300 4 4000 3 500 -3 0 3 300 4 500/advancedMove Emily true 1 14000 2 200 3 3500 2 200 1 2000/advancedMove Andy true 3 32000 2 0 0 8 1 5000 0 -8 -2 0 3 1000/advancedMove Susan true 3 15000 0 1 3 7000 0 -1 3 1000/advancedMove Shane true 3 3000 1 0 0 7 2 6500 3 200 4 500 0 -7 -1 0 3 15000/advancedMove Victor true 2 8000 2 0 2 6000 -2 0 2 9000/advancedMove Robin true 1 16000 2 4000/advancedMove Linus true 3 24000 4 2500/advancedMove Haley true 2 7000 1 500 2 4000 1 3000 2 3000/advancedMove Maru true 2 7000 -7 0 2 2000 7 0 1 4000 2 1000/advancedMove Abigail true 2 13000 3 2000/advancedMove Elliott true 2 8000 3 2000 2 2500 3 1000 -1 0 0 -2 -8 0 0 -4 4 500 1 200 2 4000 0 4 8 0 0 2 1 0 1 200 2 1000/advancedMove Penny true 2 9000 -2 0 2 7000 2 0/advancedMove Sam true 2 12000 1 4000 2 1500/addTemporaryActor Mummy 16 32 28 71 2 false Monster/advancedMove Mummy true 4 12000 -2 0 4 5000 2 0 1 2000 2 4000 1 300 4 1000/addTemporaryActor Skeleton 16 32 23 70 0 false Monster/advancedMove Skeleton true 4 9000 1 0 0 -1 4 12000 1 500 2 1000 0 1 2 600 -1 0 3 500 4 500/addTemporaryActor Wilderness_Golem 16 24 25 73 2 false Monster/advancedMove Wilderness_Golem true 4 5000 8 0 4 7000 1 2000 4 400 3 500 -8 0 3 500 4 500/addTemporaryActor Shadow_Shaman 16 24 30 69 2 false Monster/advancedMove Shadow_Shamn true 4 8000 1 4000 4 3000 2 6000 -1 0 2 4000 4 3000 2 500 3 0 1 6000 4 6000 3 2000 -2 0 3 500 4 2000/addTemporaryActor Stone_Golem 16 24 31 72 2 false Monster/advancedMove Stone_Golem true 4 4000 1 4000 4 3000 1 3500 4 2000 0 -1 4 4000 1 3000 -1 0 3 3000 4 5000 1 500 1 0 1 4000 0 1 2 1000 3 500 4 1000/addTemporaryActor Shadow_Brute 16 32 33 71 1 false Monster/advancedMove Shadow_Brute true 1 3000 4 600 0 -2 4 500 1 10000 4 5000 1 2000 2 700 0 2 2 600 1 4000/playerControl halloween",
+                "Pierre": "{{i18n:SpiritsEve2.Pierre}}",
+                "Andy": "{{i18n:Andy.Spirit.02}}",
+                "Lance": "{{i18n:spirit.lance.2}}",
+                "Martin": "{{i18n:Martin.Spirit.2}}",
+                "Marnie": "{{i18n:SpiritsEve2.Marnie}}",
+                "Jas": "{{i18n:SpiritsEve2.Jas}}",
+                "Alex": "{{i18n:SpiritsEve2.Alex}}",
+                "Sam": "{{i18n:SpiritsEve2.Sam}}",
+                "Penny": "{{i18n:SpiritsEve2.Penny}}",
+                "Shane": "{{i18n:SpiritsEve2.Shane}}",
+                "Linus": "{{i18n:SpiritsEve2.Linus}}",
+                "Sebastian": "{{i18n:SpiritsEve2.Sebastian}}",
+                "Harvey": "{{i18n:SpiritsEve2.Harvey}}",
+                "Abigail": "{{i18n:SpiritsEve2.Abigail}}",
+                "Wizard": "{{i18n:SpiritsEve2.Wizard}}",
+                "Krobus": "{{i18n:SpiritsEve2.Krobus}}",
+                "Dwarf": "{{i18n:SpiritsEve2.Dwarf}}",
+                "Evelyn": "{{i18n:SpiritsEve2.Evelyn}}",
+                "George": "{{i18n:SpiritsEve2.George}}",
+                "Leo": "{{i18n:SpiritsEve2.Leo}}",
+                "Morgan": "{{i18n:Morgan.Spirit.02}}",
+                "Olivia": "{{i18n:spirit.Olivia.2}}",
+                "Sophia": "{{i18n:ice.Sophia.1}}",
+                "Victor": "{{i18n:spirit.victor.3}}"
+            }
+        },
+        { //halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+            },
+            "TextOperations": [
+                { //Victor
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Victor 29 67 down",
+                    "Delimiter": "/"
+                },
+                { //Olivia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Olivia 29 62 left",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Andy 47 60 down",
+                    "Delimiter": "/"
+                },
+                { //Susan
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Susan 35 69 right",
+                    "Delimiter": "/"
+                },
+                { //Sophia
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sophia 27 20 down",
+                    "Delimiter": "/"
+                },
+                { //Marlon
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MarlonFay 23 63 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Morris halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "6665293"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "MorrisTod 29 57 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Claire halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Claire 40 57 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Martin halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "3219873"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Martin 33 67 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Gunther halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "GuntherUnlocked": "true"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "GuntherSilvian 27 58 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Scarlett halloween festival data 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "3691371"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 30 18 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Morgan halloween festival data year 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "5978924"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Morgan 15 35 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Alesia halloween festival data year 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "7502582"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Alesia 24 63 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Isaac halloween festival data year 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "908079"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Isaac 22 65 right",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Lance halloween festival data year 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "Spouse": "Lance"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Lance 27 65 down",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        { //Sandy halloween festival data year 
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "Hearts:Sandy": "{{Range: 5, 14}}"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Sandy 40 60 up",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        //Map Loads
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent |contains=5553210": false
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween3.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/Town-Halloween",
+            "When": {
+                "Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
+                "HasSeenEvent": "5553210"
+            },
+            "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-Halloween3_Joja.tmx"
+        },
+        //even years
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "When": {
+                "IsOddYear": false,
+            },
+            "Entries": {
+                "Victor_y2": "{{i18n:victor.Halloween2}}",
+                "Morgan_y2": "{{i18n:Morgan.Halloween2}}",
+                "Lance_y2": "{{i18n:Lance.Halloween2}}",
+                "Claire_y2": "{{i18n:Claire.Halloween2}}",
+                "Susan_y2": "{{i18n:Susan.Halloween2}}",
+                "Andy_y2": "{{i18n:Andy.Halloween2}}",
+                "Scarlett_y2": "{{i18n:Scarlett.Halloween2}}",
+                "Olivia_y2": "{{i18n:Olivia.Halloween2}}",
+                "MarlonFay_y2": "{{i18n:Marlon.Halloween2}}",
+                "GuntherSilvian_y2": "{{i18n:Gunther.Halloween2}}",
+                "Martin_y2": "{{i18n:Martin.Halloween2}}",
+                "Sophia_y2": "{{i18n:Sophia.Halloween2}}",
+                "Sandy_y2": "{{i18n:Sandy.Halloween2}}",
+                "MorrisTod_y2": "{{i18n:Morris.Halloween2}}",
+            }
+        }
+    ]
+}

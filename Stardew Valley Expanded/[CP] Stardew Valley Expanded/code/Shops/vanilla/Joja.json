@@ -1,0 +1,637 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Joja"
+            ],
+            "Entries": {
+                "Currency": 0,
+                "StackSizeVisibility": null,
+                "OpenSound": null,
+                "PurchaseSound": null,
+                "PurchaseRepeatSound": null,
+                "PriceModifiers": [
+                    {
+                        "Id": "EarlyGameMarkdown",
+                        "Condition": "!IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "Modification": "Multiply",
+                        "Amount": 0.9,
+                        "RandomAmount": null
+                    },
+                    {
+                        "Id": "JojaDayMarkDown",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "Modification": "Multiply",
+                        "Amount": 0.70,
+                        "RandomAmount": null
+                    },
+                ],
+                "PriceModifierMode": "Stack",
+                "Owners": [
+                    {
+                        "Name": "Claire",
+                        "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Joja/Claire_Vendor.png}}",
+                        "Dialogues": [
+                            {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Default",
+                                "Dialogue": "{{i18n:ShopsDialogue.ClaireJoja}}",
+                                "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                            },
+                            {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_Default",
+                                "Dialogue": "{{i18n:ShopsDialogue.Claire}}",
+                            },
+                        ]
+                    },
+                    {
+                        "Name": "Martin",
+                        "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Joja/Martin_Vendor.png}}",
+                        "Dialogues": [
+                            {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Default",
+                                "Dialogue": "{{i18n:ShopsDialogue.MartinJoja}}",
+                                "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                            },
+                            {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_Default",
+                                "Dialogue": "{{i18n:ShopsDialogue.Martin}}",
+                            },
+                        ]
+                    },
+                    {
+                        "Name": "Juliet",
+                        "Condition": "{{HasMod|contains=LemurKat.JulietHouse.NPC}}"
+                    },
+                ],
+                "VisualTheme": null,
+                "SalableItemTags": null,
+                "Items": [
+                    {
+                        "CustomFields": null,
+                        "TradeItemId": null,
+                        "TradeItemAmount": 1,
+                        "Price": 50000,
+                        "ApplyProfitMargins": null,
+                        "AvailableStock": -1,
+                        "AvailableStockLimit": "Global",
+                        "AvoidRepeat": false,
+                        "UseObjectDataPrice": false,
+                        "IgnoreShopPriceModifiers": true,
+                        "PriceModifiers": null,
+                        "PriceModifierMode": "Stack",
+                        "AvailableStockModifiers": null,
+                        "AvailableStockModifierMode": "Stack",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Host 502261",
+                        "Id": "(BC)272",
+                        "ItemId": "(BC)272",
+                        "RandomItemId": null,
+                        "MaxItems": null,
+                        "MinStack": -1,
+                        "MaxStack": -1,
+                        "Quality": -1,
+                        "ObjectInternalName": null,
+                        "ObjectDisplayName": null,
+                        "ToolUpgradeLevel": -1,
+                        "IsRecipe": false,
+                        "StackModifiers": null,
+                        "StackModifierMode": "Stack",
+                        "QualityModifiers": null,
+                        "QualityModifierMode": "Stack",
+                        "PerItemCondition": null
+                    },
+                    {
+                        "CustomFields": null,
+                        "TradeItemId": null,
+                        "TradeItemAmount": 1,
+                        "Price": 75,
+                        "ApplyProfitMargins": null,
+                        "AvailableStock": -1,
+                        "AvailableStockLimit": "Global",
+                        "AvoidRepeat": false,
+                        "UseObjectDataPrice": false,
+                        "IgnoreShopPriceModifiers": true,
+                        "PriceModifiers": null,
+                        "PriceModifierMode": "Stack",
+                        "AvailableStockModifiers": null,
+                        "AvailableStockModifierMode": "Stack",
+                        "Condition": null,
+                        "Id": "(O)167",
+                        "ItemId": "(O)167",
+                        "RandomItemId": null,
+                        "MaxItems": null,
+                        "MinStack": -1,
+                        "MaxStack": -1,
+                        "Quality": -1,
+                        "ObjectInternalName": null,
+                        "ObjectDisplayName": null,
+                        "ToolUpgradeLevel": -1,
+                        "IsRecipe": false,
+                        "StackModifiers": null,
+                        "StackModifierMode": "Stack",
+                        "QualityModifiers": null,
+                        "QualityModifierMode": "Stack",
+                        "PerItemCondition": null
+                    },
+                    {
+                        "CustomFields": null,
+                        "TradeItemId": null,
+                        "TradeItemAmount": 1,
+                        "Price": 25000,
+                        "ApplyProfitMargins": null,
+                        "AvailableStock": -1,
+                        "AvailableStockLimit": "Global",
+                        "AvoidRepeat": false,
+                        "UseObjectDataPrice": false,
+                        "IgnoreShopPriceModifiers": true,
+                        "PriceModifiers": null,
+                        "PriceModifierMode": "Stack",
+                        "AvailableStockModifiers": null,
+                        "AvailableStockModifierMode": "Stack",
+                        "Condition": null,
+                        "Id": "(F)JojaCatalogue",
+                        "ItemId": "(F)JojaCatalogue",
+                        "RandomItemId": null,
+                        "MaxItems": null,
+                        "MinStack": -1,
+                        "MaxStack": -1,
+                        "Quality": -1,
+                        "ObjectInternalName": null,
+                        "ObjectDisplayName": null,
+                        "ToolUpgradeLevel": -1,
+                        "IsRecipe": false,
+                        "StackModifiers": null,
+                        "StackModifierMode": "Stack",
+                        "QualityModifiers": null,
+                        "QualityModifierMode": "Stack",
+                        "PerItemCondition": null
+                    },
+                    {
+                        "CustomFields": null,
+                        "TradeItemId": null,
+                        "TradeItemAmount": 1,
+                        "Price": 20,
+                        "ApplyProfitMargins": null,
+                        "AvailableStock": -1,
+                        "AvailableStockLimit": "Global",
+                        "AvoidRepeat": false,
+                        "UseObjectDataPrice": false,
+                        "IgnoreShopPriceModifiers": true,
+                        "PriceModifiers": null,
+                        "PriceModifierMode": "Stack",
+                        "AvailableStockModifiers": null,
+                        "AvailableStockModifierMode": "Stack",
+                        "Condition": null,
+                        "Id": "(WP)21",
+                        "ItemId": "(WP)21",
+                        "RandomItemId": null,
+                        "MaxItems": null,
+                        "MinStack": -1,
+                        "MaxStack": -1,
+                        "Quality": -1,
+                        "ObjectInternalName": null,
+                        "ObjectDisplayName": null,
+                        "ToolUpgradeLevel": -1,
+                        "IsRecipe": false,
+                        "StackModifiers": null,
+                        "StackModifierMode": "Stack",
+                        "QualityModifiers": null,
+                        "QualityModifierMode": "Stack",
+                        "PerItemCondition": null
+                    },
+                    {
+                        "CustomFields": null,
+                        "TradeItemId": null,
+                        "TradeItemAmount": 1,
+                        "Price": 500,
+                        "ApplyProfitMargins": null,
+                        "AvailableStock": -1,
+                        "AvailableStockLimit": "Global",
+                        "AvoidRepeat": false,
+                        "UseObjectDataPrice": false,
+                        "IgnoreShopPriceModifiers": true,
+                        "PriceModifiers": null,
+                        "PriceModifierMode": "Stack",
+                        "AvailableStockModifiers": null,
+                        "AvailableStockModifierMode": "Stack",
+                        "Condition": null,
+                        "Id": "(F)1609",
+                        "ItemId": "(F)1609",
+                        "RandomItemId": null,
+                        "MaxItems": null,
+                        "MinStack": -1,
+                        "MaxStack": -1,
+                        "Quality": -1,
+                        "ObjectInternalName": null,
+                        "ObjectDisplayName": null,
+                        "ToolUpgradeLevel": -1,
+                        "IsRecipe": false,
+                        "StackModifiers": null,
+                        "StackModifierMode": "Stack",
+                        "QualityModifiers": null,
+                        "QualityModifierMode": "Stack",
+                        "PerItemCondition": null
+                    },
+                    //Spring Items
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Parsnip_Seeds",
+                        "ItemId": "472",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Potato_Seeds",
+                        "ItemId": "475",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Cauliflower_Seeds, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "ItemId": "474",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Tulip_Bulb",
+                        "ItemId": "427",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Jazz_Seeds, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "ItemId": "429",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Kale_Seeds",
+                        "ItemId": "477",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Bean_Starter",
+                        "ItemId": "473",
+                        "Condition": "SEASON Spring, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //Summer
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Melon_Seeds",
+                        "ItemId": "479",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Tomato_Seeds",
+                        "ItemId": "480",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Blueberry_Seeds",
+                        "ItemId": "481",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Pepper_Seeds",
+                        "ItemId": "482",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Wheat_Seeds",
+                        "ItemId": "483",
+                        "Condition": "SEASON Summer Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Radish_Seeds",
+                        "ItemId": "484",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Corn_Seeds",
+                        "ItemId": "487",
+                        "Condition": "SEASON Summer Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Hops_Starter",
+                        "ItemId": "302",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Spangle_Seeds",
+                        "ItemId": "455",
+                        "Condition": "SEASON Summer, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Sunflower_Seeds",
+                        "ItemId": "431",
+                        "Condition": "SEASON Summer Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //Fall Seeds
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Pumpkin_Seeds",
+                        "ItemId": "490",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Eggplant_Seeds",
+                        "ItemId": "488",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Bok_Choy",
+                        "ItemId": "491",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Amaranth_Seeds",
+                        "ItemId": "299",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Yam_Seeds",
+                        "ItemId": "492",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Cranberry_Seeds",
+                        "ItemId": "493",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Fairy_Seeds",
+                        "ItemId": "425",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Grape_Starter",
+                        "ItemId": "301",
+                        "Condition": "SEASON Fall, !PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //Year-round Seeds - Player completed joja warehouse
+                    //Spring Items
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Parsnip_Seeds",
+                        "ItemId": "472",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Potato_Seeds",
+                        "ItemId": "475",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Cauliflower_Seeds",
+                        "ItemId": "474",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Tulip_Bulb",
+                        "ItemId": "427",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Jazz_Seeds",
+                        "ItemId": "429",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Kale_Seeds",
+                        "ItemId": "477",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Bean_Starter",
+                        "ItemId": "473",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //Summer
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Melon_Seeds",
+                        "ItemId": "479",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Tomato_Seeds",
+                        "ItemId": "480",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Blueberry_Seeds",
+                        "ItemId": "481",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Pepper_Seeds",
+                        "ItemId": "482",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Wheat_Seeds",
+                        "ItemId": "483",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Radish_Seeds",
+                        "ItemId": "484",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Corn_Seeds",
+                        "ItemId": "487",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Hops_Starter",
+                        "ItemId": "302",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Poppy_Seeds",
+                        "ItemId": "453",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Spangle_Seeds",
+                        "ItemId": "455",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Sunflower_Seeds",
+                        "ItemId": "431",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //Fall Seeds
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Pumpkin_Seeds",
+                        "ItemId": "490",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Eggplant_Seeds",
+                        "ItemId": "488",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Bok_Choy",
+                        "ItemId": "491",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Amaranth_Seeds",
+                        "ItemId": "299",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Yam_Seeds",
+                        "ItemId": "492",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Cranberry_Seeds",
+                        "ItemId": "493",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Fairy_Seeds",
+                        "ItemId": "425",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Warehouse_Grape_Starter",
+                        "ItemId": "301",
+                        "Condition": "PLAYER_HAS_SEEN_EVENT Any 502261, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                    },
+                    //JOJA DAY FESTIVAL
+                    //Spring Items
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Parsnip_Seeds",
+                        "ItemId": "472",
+                        // "Price": 15,
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Potato_Seeds",
+                        "ItemId": "475",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Cauliflower_Seeds",
+                        "ItemId": "474",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Tulip_Bulb",
+                        "ItemId": "427",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Jazz_Seeds",
+                        "ItemId": "429",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Kale_Seeds",
+                        "ItemId": "477",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Bean_Starter",
+                        "ItemId": "473",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    //Summer
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Melon_Seeds",
+                        "ItemId": "479",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Tomato_Seeds",
+                        "ItemId": "480",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Blueberry_Seeds",
+                        "ItemId": "481",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Pepper_Seeds",
+                        "ItemId": "482",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Wheat_Seeds",
+                        "ItemId": "483",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Radish_Seeds",
+                        "ItemId": "484",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Corn_Seeds",
+                        "ItemId": "487",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Hops_Starter",
+                        "ItemId": "302",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Poppy_Seeds",
+                        "ItemId": "376",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Spangle_Seeds",
+                        "ItemId": "455",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Sunflower_Seeds",
+                        "ItemId": "431",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    //Fall Seeds
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Pumpkin_Seeds",
+                        "ItemId": "490",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Eggplant_Seeds",
+                        "ItemId": "488",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Bok_Choy",
+                        "ItemId": "491",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Amaranth_Seeds",
+                        "ItemId": "299",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Yam_Seeds",
+                        "ItemId": "492",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Cranberry_Seeds",
+                        "ItemId": "493",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Fairy_Seeds",
+                        "ItemId": "425",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_JojaDay_Grape_Starter",
+                        "ItemId": "301",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                ],
+            },
+        }
+    ]
+}

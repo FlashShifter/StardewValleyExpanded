@@ -1,0 +1,430 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Krobus",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Poison_Mushroom FlashShifter.StardewValleyExpandedCP_Meteor_Carp",
+          "Delimiter": " "
+        }
+        /*Like*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Radioactive_Bass FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit",
+          "Delimiter": " "
+        }
+        /*Dislike*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Flower_Cookie FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Hate*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            7
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+        /*Neutral*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            9
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice",
+          "Delimiter": " "
+        }
+      ]
+    },
+    { //Krobus Event
+      "Action": "EditData",
+      "Target": "data/events/busstop",
+      "Entries": {
+        "520702/t 600 1600/z spring/z fall/z summer": "winter_day_ambient/-1000 -1000/farmer 0 23 1 Krobus 16 23 3/viewport 14 23 clamp true/addQuest 31/skippable/move Krobus -2 0 3/pause 1000/emote Krobus 16/jump Krobus/pause 500/speed Krobus 8/move Krobus 20 0 1 true/move farmer 2 0 1 true/move false/playSound shadowpeep/warp Krobus -1000 -1000/pause 500/emote farmer 8/pause 1000/end"
+      }
+    },
+    { //KROBUS 4 HEART EVENT
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "When": {
+        "HasFlag |contains=jojaMember": false
+      },
+      "Entries": {
+        "1090503/e 1090502/w sunny/f Krobus 1000/t 600 1600/d Fri": "none/-500 -500/farmer 23 95 3 Krobus -200 -200 1 Junimo -200 -200 3/pause 500/skippable/viewport 21 95 true/move farmer -9 0 2 true/pause 2300/playSound junimoMeep1/pause 500/playSound shadowpeep/pause 700/playSound junimoMeep1/pause 700/emote farmer 8/pause 1000/move farmer 0 9 2 true/pause 1500/globalFade/viewport -1000 -1000/halt/changeLocation Custom_JunimoWoods/pause 500/warp Krobus 66 20/warp Junimo 67 20/warp farmer -200 -200/pause 500/viewport 66 18 true/pause 500/playSound junimoMeep1/pause 200/jump Junimo/pause 700/playSound shadowpeep/pause 500/jump Krobus/pause 1000/playSound junimoMeep1/pause 500/speak Krobus \"{{i18n:Krobus.4Hearts.01}}\"/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 200/jump Junimo/pause 1000/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/speak Krobus \"{{i18n:Krobus.4Hearts.02}}\"/pause 300/playSound junimoMeep1/pause 200/move Junimo 0 5 2 true/pause 350/move Krobus 0 0 2 true/pause 500/move Krobus 0 5 2 true/pause 600/playSound leafrustle/pause 2000/playSound leafrustle/pause 400/warp Krobus -200 -200/warp Junimo -200 -200/playSound shadowpeep/pause 1000/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Krobus.4Hearts.03}}\"/pause 1000/message \"{{i18n:Krobus.4Hearts.04}}\"/pause 1000/end dialogue Krobus \"{{i18n:Krobus.4Hearts.05}}\"",
+      },
+    },
+    { //KROBUS 6 HEART EVENT
+      "Action": "EditData",
+      "Target": "data/events/sewer",
+      "Entries": {
+        "1090504/f Krobus 1500/e 1090502/d Fri": "Crystal Bells/-500 -500/farmer -200 -200 2 Krobus 14 20 1/addTemporaryActor Shadow_Brute 16 32 16 20 3 false Monster/pause 2000/skippable/viewport 16 19 true/pause 1000/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 800/playSound shadowpeep/pause 1100/playSound shadowpeep/pause 750/speak Krobus \"{{i18n:Krobus.6Hearts.01}}\"/pause 300/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 500/playSound shadowpeep/pause 600/jump Krobus/pause 900/speak Krobus \"{{i18n:Krobus.6Hearts.02}}\"/pause 300/playSound shadowpeep/pause 700/emote Krobus 32/pause 1000/playSound shadowpeep/pause 1000/warp farmer 16 11/playSound stairsdown/pause 750/playMusic Upper_Ambient/move farmer 0 1 2 true/pause 800/viewport move 0 -1 1000 true/advancedMove Shadow_Brute false 0 -1/pause 400/emote farmer 16/move Krobus 0 0 0 true/pause 350/playSound shadowpeep/pause 750/playSound shadowpeep/pause 300/move Krobus 1 0 0/move Krobus 0 -1 1/pause 150/speak Krobus \"{{i18n:Krobus.6Hearts.03}}\"/pause 400/playSound shadowpeep/pause 500/move Krobus 0 0 0/viewport move 0 -1 1000 true/advancedMove Shadow_Brute false 0 -1/pause 500/playSound shadowpeep/pause 600/emote Krobus 16 true/pause 300/emote farmer 16 true/pause 400/viewport move 0 -1 1000 true/advancedMove Shadow_Brute false 0 -1/pause 300/playSound shadowpeep/pause 500/move Krobus 0 -2 1/pause 300/speak Krobus \"{{i18n:Krobus.6Hearts.04}}\"/pause 500/playSound shadowpeep/pause 300/emote farmer 16 true/pause 300/speed farmer 4/move farmer 0 -1 0/pause 100/warp farmer -300 -300/playSound stairsdown/faceDirection Krobus 0/emote Krobus 16 true/viewport move 0 -1 6000 true/advancedMove Shadow_Brute false 0 -2/globalFade/viewport -1000 -1000/stopMusic/pause 1700/message \"{{i18n:Krobus.6Hearts.05}}\"/pause 500/end dialogue Krobus \"{{i18n:Krobus.6Hearts.06}}\"",
+      },
+    },
+    {
+      //Void Soul Retrieval quest
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "Krobus": {
+          "Name": "[Krobus_Name]",
+          "Requester": "Krobus",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_1090505",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Krobus_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Deliver",
+              "Text": "[Krobus_Objective_1_Text]",
+              "RequiredCount": "60",
+              "Data": {
+                "AcceptedContextTags": "item_void_soul",
+                "TargetName": "Krobus"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "GaveVoidSouls"
+              }
+            }
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "Krobus_Name": "{{i18n:Krobus.OrderString.01}}",
+        "Krobus_Text": "{{i18n:Krobus.OrderString.02}}",
+        "Krobus_Objective_1_Text": "{{i18n:Krobus.OrderString.03}}",
+      }
+    },
+    {
+      //Krobus 10 heart - part 1    <<ID tagged by quest
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasSeenEvent": "908079",
+        "HasFlag": "Gil_Savage Ring",
+        "HasFlag": "lanceMonsterCrops",
+        "Season|contains=Winter": false
+      }, //Crimson Badlands unlocked, savage ring was obtained, player completed the Monster Crop quest, not winter
+      "Entries": {
+        "1090505/e 691039/f Krobus 2500/t 2000 2600/d Thu Fri": "spring_night_ambient/-500 -500/farmer -20 -20 0 Krobus -21 -21 0/skippable/pause 1200/speak Krobus \"{{i18n:Krobus.10Hearts1.01}}\"/pause 1000/end dialogue Krobus \"{{i18n:Krobus.10Hearts1.02}}\"",
+      }
+    },
+    {
+      //Krobus 10 heart - part 2 - 'The Shaman'    <<ID tagged by framework
+      "Action": "EditData",
+      "Target": "Data/Events/Sewer",
+      "When": {
+        "HasSeenEvent": "1090505"
+      },
+      "Entries": {
+        "1090506/d Fri": "continue/-500 -500/farmer 22 21 1 Krobus 30 17 1/addTemporaryActor ShadowBruteLargeActor1 16 32 21 20 2/addTemporaryActor ShadowBruteLargeActor2 16 32 30 22 0/addTemporaryActor ShadowBruteActor1 16 32 24 22 0/addTemporaryActor ShadowBruteActor2 16 32 27 20 2/addTemporaryActor ShadowBruteActor3 16 32 31 15 2/addTemporaryActor ShadowBruteActor4 16 32 34 21 3/addTemporaryActor Nyx 16 32 32 17 3/positionOffset ShadowBruteActor3 -10 -10 true/pause 1250/skippable/viewport 27 21 true/viewport move 1 0 4500 true/move farmer 9 0 0 true/pause 1000/playSound shadowpeep/pause 600/playSound shadowpeep/pause 350/faceDirection ShadowBruteLargeActor1 1 true/pause 350/playSound shadowpeep/pause 500/playSound shadowpeep/pause 500/playSound shadowpeep/pause 450/faceDirection ShadowBruteLargeActor1 2 true/pause 450/playSound shadowpeep/pause 250/move farmer 0 -2 0 true/viewport move 0 -1 2000 true/pause 500/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1300/playSound shadowpeep/faceDirection Nyx 2 true/pause 650/faceDirection Krobus 2 true/pause 500/playSound shadowpeep/pause 500/speak Krobus \"{{i18n:Krobus.10Hearts2.01}}\"/pause 1000/shake Nyx 800/playSound shadowpeep/pause 600/playSound shadowpeep/faceDirection Krobus 1 true/pause 500/playSound shadowpeep/pause 600/playSound shadowpeep/pause 500/faceDirection Krobus 2 true/pause 500/speak Krobus \"{{i18n:Krobus.10Hearts2.02}}\"/pause 700/shake Nyx 700/playSound shadowpeep/pause 600/playSound shadowpeep/pause 700/playSound shadowpeep/pause 800/faceDirection Krobus 1 true/pause 1100/faceDirection Krobus 2 true/pause 350/speak Krobus \"{{i18n:Krobus.10Hearts2.03}}\"/pause 600/shake Nyx 600/playSound shadowpeep/pause 500/playSound shadowpeep/pause 350/faceDirection Krobus 1 true/pause 300/playSound shadowpeep/pause 600/playSound shadowpeep/pause 700/faceDirection Krobus 2 true/pause 400/speak Krobus \"{{i18n:Krobus.10Hearts2.04}}\"/pause 750/move Nyx 0 1 3/move Nyx -1 0 2/pause 1000/showFrame Nyx 16 true/shake Nyx 600/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 400/startJittering/pause 600/screenFlash 2/playSound wand/warp Nyx -30 -30/warp ShadowBruteActor1 -29 -29/warp ShadowBruteActor2 -28 -28/warp ShadowBruteActor3 -27 -27/warp ShadowBruteActor4 -26 -26/warp ShadowBruteLargeActor1 -25 -25/warp ShadowBruteLargeActor2 -24 -24/pause 800/stopJittering/pause 750/emote Krobus 40/pause 300/speak Krobus \"{{i18n:Krobus.10Hearts2.05}}\"/pause 1250/end dialogue Krobus \"{{i18n:Krobus.10Hearts2.06}}\"",
+      }
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor1.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor3.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor4.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor5",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor5.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor6",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor6.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor7",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor7.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor8",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor8.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor9",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor9.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor10",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor10.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor11",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor11.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor12",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor12.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor13",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor13.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor14",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor14.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor15",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor15.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor16",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor16.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor17",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor17.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor18",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor18.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor19",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor19.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteActor20",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteActor20.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteLargeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteLargeActor1.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteLargeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteLargeActor2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteLargeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteLargeActor3.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowBruteLargeActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowBruteLargeActor4.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowKidActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowKidActor1.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowKidActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowKidActor2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowKidActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowKidActor3.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowShamanActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowShamanActor1.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ShadowShamanActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShadowShamanActor2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/Nyx",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Nyx.png"
+    },
+    {
+      //Krobus 10 heart - part 3
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasFlag": "GaveVoidSouls"
+      },
+      "Update": "OnLocationChange",
+      "Entries": {
+        "1090507/t 2000 2600/d Fri": "continue/-500 -500/farmer -20 -20 2 Krobus -21 -21 0/pause 1250/speak Krobus \"{{i18n:Krobus.10Hearts3.01}}\"/pause 500/end dialogue Krobus \"{{i18n:Krobus.10Hearts3.02}}\"",
+      }
+    },
+    {
+      //Krobus 10 heart - part 3 (married to lance)
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasFlag": "GaveVoidSouls",
+        "Spouse": "Lance",
+        "HasSeenEvent|contains=65360198": true
+      },
+      "Update": "OnLocationChange",
+      "Entries": {
+        "1090507/t 2000 2600/d Fri": "continue/-500 -500/farmer -20 -20 2 Krobus -21 -21 0/pause 1250/speak Krobus \"{{i18n:Krobus.10hearts3.Lance.01}}\"/pause 500/end dialogue Krobus \"{{i18n:Krobus.10Hearts3.02}}\""
+      }
+    },
+    {
+      //Krobus 10 heart - part 4 - 'Peace With The Shadow People'        <<Triggers passive shadow people patch
+      "Action": "EditData",
+      "Target": "Data/Events/Mine",
+      "Entries": {
+        "1090508/e 1090507/d Fri": "Upper_Ambient/-500 -500/farmer -20 -20 2 Krobus -21 -21 0 MarlonFay -50 -50 2/pause 1000/addConversationTopic PeaceWithShadowPeople 10/skippable/showFrame MarlonFay 300 true/addTemporaryActor ShadowBruteLargeActor1 16 32 13 10 2/positionOffset ShadowBruteLargeActor1 -15 -5 true/addTemporaryActor ShadowBruteLargeActor2 16 32 7 16 1/addTemporaryActor ShadowBruteLargeActor3 16 32 19 20 0/addTemporaryActor ShadowBruteLargeActor4 16 32 24 12 3/positionOffset ShadowBruteLargeActor 6 -20 true/addTemporaryActor ShadowBruteActor1 16 32 14 18 0/addTemporaryActor ShadowBruteActor2 16 32 20 18 0/positionOffset ShadowBruteActor2 0 8 true/addTemporaryActor ShadowBruteActor3 16 32 18 21 0/positionOffset ShadowBruteActor3 -15 10 true/addTemporaryActor ShadowBruteActor4 16 32 15 22 0/addTemporaryActor ShadowBruteActor5 16 32 13 20 0/positionOffset ShadowBruteActor5 10 13 true/addTemporaryActor ShadowBruteActor6 16 32 9 19 1/positionOffset ShadowBruteActor6 -5 -15 true/addTemporaryActor ShadowBruteActor7 16 32 11 18 1/addTemporaryActor ShadowBruteActor8 16 32 10 17 1/positionOffset ShadowBruteActor8 15 -20 true/addTemporaryActor ShadowBruteActor9 16 32 9 14 1/positionOffset ShadowBruteActor9 -10 0 true/addTemporaryActor ShadowBruteActor10 16 32 11 13 1/addTemporaryActor ShadowBruteActor11 16 32 10 12 1/positionOffset ShadowBruteActor11 -8 14 true/addTemporaryActor ShadowBruteActor12 16 32 11 9 2/positionOffset ShadowBruteActor12 15 -10 true/addTemporaryActor ShadowBruteActor13 16 32 21 16 3/addTemporaryActor ShadowBruteActor14 16 32 22 11 2/positionOffset ShadowBruteActor14 20 20 true/addTemporaryActor ShadowBruteActor15 16 32 23 19 3/addTemporaryActor ShadowBruteActor16 16 32 25 17 3/positionOffset ShadowBruteActor16 10 -12 true/addTemporaryActor ShadowBruteActor17 16 32 26 15 3/addTemporaryActor ShadowBruteActor18 16 32 11 15 1/addTemporaryActor ShadowBruteActor19 16 32 24 14 3/addTemporaryActor ShadowBruteActor20 16 32 21 10 2/positionOffset ShadowBruteActor20 -15 15 true/addTemporaryActor ShadowShamanActor1 16 32 15 9 2/addTemporaryActor ShadowShamanActor2 16 32 19 9 2/addTemporaryActor ShadowKidActor1 16 32 -50 -50 2/addTemporaryActor ShadowKidActor2 16 32 -50 -50 2/addTemporaryActor ShadowKidActor3 16 32 -50 -50 2/addTemporaryActor Nyx 16 32 -50 -50 2/speak Krobus \"{{i18n:Krobus.10Hearts4.01}}\"/pause 1000/playSound stairsdown/pause 1000/changeLocation Custom_VoidDen/warp Krobus 16 19/faceDirection Krobus 0 true/warp farmer 17 19/faceDirection farmer 0 true/positionOffset Krobus 20 0 true/positionOffset farmer 25 15 true/pause 1000/viewport 17 16 true/viewport move 0 -1 6000 true/pause 1000/playSound shadowpeep/pause 1300/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1000/warp Nyx 17 8/move Nyx 0 1 2/pause 1250/faceDirection Nyx 3 true/pause 450/playSound shadowpeep/pause 450/faceDirection Nyx 2 true/pause 250/faceDirection Nyx 1 true/pause 450/playSound shadowpeep/pause 450/faceDirection Nyx 2 true/pause 600/speed Nyx 1/move Nyx 0 4 2 true/pause 400/speed ShadowShamanActor1 1/move ShadowShamanActor1 0 4 2 true/pause 250/speed ShadowShamanActor2 1/move ShadowShamanActor2 0 4 2 true/viewport move 0 1 4250 true/pause 1500/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1200/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1600/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/showFrame Nyx 16 true/shake Nyx 1000/pause 850/AmbientLight 70 100 70/playSound healSound/addLantern 31 16 14 2/addLantern 31 18 14 2/addLantern 31 16 16 2/addLantern 31 18 16 2/pause 400/showFrame Nyx 0 true/pause 1000/faceDirection Nyx 3 true/pause 600/shake Nyx 600/playSound shadowpeep/pause 500/playSound shadowpeep/pause 500/faceDirection Nyx 2 true/pause 500/move ShadowShamanActor1 0 2 1/move ShadowShamanActor1 1 0 1/pause 600/showFrame ShadowShamanActor1 5 true/pause 200/shake ShadowShamanActor1 600/pause 200/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 500/showFrame ShadowShamanActor1 4 true/pause 500/faceDirection ShadowShamanActor1 0 true/pause 250/faceDirection ShadowShamanActor1 3 true/pause 200/playSound shadowpeep/pause 200/move ShadowShamanActor1 -1 0 0/move ShadowShamanActor1 0 -2 0/pause 300/faceDirection ShadowShamanActor1 1 true/pause 250/faceDirection ShadowShamanActor1 2 true/pause 500/stopMusic/pause 1000/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor1 17 15/shake ShadowKidActor1 2000/pause 500/showFrame Nyx 0 true/pause 1500/move ShadowBruteActor18 1 0 1/pause 250/emote ShadowBruteActor18 8 true/pause 800/faceDirection ShadowKidActor1 3 true/pause 500/playSound shadowpeep/emote ShadowKidActor1 8 true/pause 1700/emote ShadowBruteActor18 16 true/pause 300/playSound shadowpeep/pause 400/playSound shadowpeep/pause 400/shake ShadowBruteActor18 600/pause 200/playSound dwop/showFrame ShadowBruteActor18 22 true/pause 200/playMusic moonlightJellies/pause 850/jump ShadowKidActor1/pause 750/speed ShadowKidActor1 5/move ShadowKidActor1 -4 0 3 true/pause 250/jump ShadowBruteActor5/pause 200/playSound shadowpeep/pause 100/jump ShadowBruteLargeActor2/pause 100/jump ShadowBruteActor9/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/pause 200/playSound shadowpeep/pause 200/emote ShadowBruteActor18 20 true/pause 150/emote ShadowKidActor1 20 true/shake ShadowKidActor1 700/pause 300/playSound shadowpeep/pause 200/faceDirection ShadowBruteActor7 0 true/jump ShadowBruteActor11/pause 300/playSound shadowpeep/pause 100/jump ShadowBruteActor3/pause 200/jump ShadowBruteActor7/playSound shadowpeep/pause 150/jump ShadowBruteActor2/pause 200/faceDirection Nyx 1 true/pause 300/move ShadowBruteActor7 0 -2 1 true/pause 200/shake Nyx 750/playSound shadowpeep/playSound shadowpeep/pause 500/faceDirection ShadowShamanActor2 3 true/pause 350/move ShadowBruteActor7 2 0 0 true/pause 100/faceDirection Nyx 2 true/pause 400/faceDirection ShadowShamanActor2 2 true/pause 250/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 250/move ShadowShamanActor2 0 2 3/move ShadowShamanActor2 -1 0 3/playSound shadowpeep/pause 500/showFrame ShadowShamanActor2 13 true/shake ShadowShamanActor2 600/pause 400/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 300/showFrame ShadowShamanActor2 12 true/pause 250/playSound shadowpeep/pause 250/faceDirection ShadowShamanActor2 0 true/pause 250/faceDirection ShadowShamanActor2 1 true/pause 350/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/move ShadowShamanActor2 1 0 0/move ShadowShamanActor2 0 -2 0/pause 125/playSound shadowpeep/pause 125/faceDirection ShadowShamanActor2 1 true/pause 250/faceDirection ShadowShamanActor2 2 true/pause 1000/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor2 17 15/shake ShadowKidActor2 2000/pause 500/showFrame Nyx 0 true/pause 1000/emote ShadowBruteActor19 16/pause 300/playSound shadowpeep/move ShadowBruteActor19 -1 0 3 /faceDirection ShadowKidActor2 1 true/pause 500/shake ShadowBruteActor19 500/pause 125/pause 125/playSound dwop/showFrame ShadowBruteActor19 30 true/pause 500/jump ShadowKidActor2/playSound shadowpeep/pause 600/speed ShadowKidActor2 4/move ShadowKidActor2 3 0 0/speed ShadowKidActor2 4/move ShadowKidActor2 0 -1 1/speed ShadowKidActor2 4/move ShadowKidActor2 2 0 1 true/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/playSound shadowpeep/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/emote ShadowBruteActor19 20 true/pause 200/emote ShadowKidActor2 20 true/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 500/playSound shadowpeep/pause 250/jump ShadowBruteActor1/pause 200/playSound shadowpeep/pause 200/jump ShadowBruteActor6/pause 300/playSound shadowpeep/jump ShadowBruteActor11/pause 300/jump ShadowBruteActor17/pause 500/playSound shadowpeep/jump ShadowBruteActor3/pause 400/jump ShadowBruteActor5/pause 300/playSound shadowpeep/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 300/move ShadowBruteActor17 -4 0 0 true/pause 300/faceDirection Nyx 3 true/pause 600/shake Nyx 600/playSound shadowpeep/pause 500/playSound shadowpeep/pause 250/faceDirection ShadowShamanActor1 1 true/pause 450/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 300/faceDirection Nyx 2 true/pause 400/faceDirection ShadowShamanActor1 2 true/pause 300/move ShadowShamanActor1 0 2 1/move ShadowShamanActor1 1 0 1/pause 600/showFrame ShadowShamanActor1 5 true/pause 200/shake ShadowShamanActor1 600/pause 200/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 500/showFrame ShadowShamanActor1 4 true/pause 500/faceDirection ShadowShamanActor1 0 true/pause 250/faceDirection ShadowShamanActor1 3 true/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 200/playSound shadowpeep/pause 200/move ShadowShamanActor1 -1 0 0/move ShadowShamanActor1 0 -2 0/pause 300/faceDirection ShadowShamanActor1 1 true/pause 250/faceDirection ShadowShamanActor1 2 true/pause 1250/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor3 17 15/shake ShadowKidActor3 2000/pause 500/showFrame Nyx 0 true/pause 1000/emote ShadowBruteActor1 16/speed ShadowBruteActor1 4/move ShadowBruteActor1 0 -2 1/pause 500/faceDirection ShadowKidActor3 3 true/pause 500/shake ShadowBruteActor1 500/showFrame ShadowBruteActor1 22 true/playSound dwop/pause 650/playSound shadowpeep/jump ShadowKidActor3/pause 550/emote ShadowShamanActor1 16 true/speed ShadowKidActor3 4/move ShadowKidActor3 -1 0 2/speed ShadowKidActor3 4/move ShadowKidActor3 0 1 3/speed ShadowKidActor3 4/move ShadowKidActor3 -1 0 3 true/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/pause 500/emote ShadowBruteActor1 20 true/pause 250/emote ShadowKidActor3 20 true/shake ShadowBruteActor1 1000/shake ShadowKidActor3 1000/pause 150/move ShadowShamanActor1 0 2 2 true/pause 150/playSound shadowpeep/jump ShadowBruteLargeActor2/pause 200/jump ShadowShamanActor2/pause 100/speed ShadowBruteActor4 1/move ShadowBruteActor4 0 -2 0 true/pause 125/jump ShadowBruteActor13/pause 300/playSound shadowpeep/jump ShadowBruteActor15/pause 200/jump ShadowShamanActor2/faceDirection Nyx 1 true/pause 200/jump ShadowBruteActor16/pause 300/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/playSound shadowpeep/jump ShadowBruteActor5/pause 200/pause 250/jump ShadowBruteActor8/playSound shadowpeep/pause 200/pause 350/shake ShadowBruteActor1 1000/shake ShadowKidActor3 1000/pause 150/faceDirection ShadowShamanActor2 3 true/pause 250/jump ShadowBruteLargeActor4/pause 125/emote Nyx 12 true/shake Nyx 600/pause 300/playSound shadowpeep/pause 150/advancedMove ShadowBruteActor15 false 0 -2 -2 0/pause 350/emote ShadowShamanActor2 28 true/shake ShadowShamanActor2 600/pause 300/playSound shadowpeep/jump ShadowBruteActor3/pause 300/jump ShadowBruteActor16/pause 250/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/jump ShadowBruteLargeActor3/pause 250/playSound shadowpeep/shake ShadowBruteActor1 1000/shake ShadowKidActor3 2000/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Krobus.10Hearts4.02}}\"/pause 1500/message \"{{i18n:Krobus.10Hearts4.03}}\"/pause 1000/end dialogue Krobus \"{{i18n:Krobus.10Hearts4.04}}\""
+      }
+    },
+    {
+      //Krobus 10 heart - part 4 - 'Peace With The Shadow People' (player married to Lance and saw 12 heart)
+      "Action": "EditData",
+      "Target": "Data/Events/Mine",
+      "When": {
+        "Spouse": "Lance",
+        "HasSeenEvent|contains=65360198": true
+      },
+      "Entries": {
+        "1090508/e 1090507/d Fri": "Upper_Ambient/-500 -500/farmer -20 -20 2 Lance -19 -19 0 Krobus -21 -21 0 MarlonFay -50 -50 2/pause 1000/addConversationTopic PeaceWithShadowPeopleLance 10/skippable/showFrame MarlonFay 300 true/addTemporaryActor ShadowBruteLargeActor1 16 32 13 10 2/positionOffset ShadowBruteLargeActor1 -15 -5 true/addTemporaryActor ShadowBruteLargeActor2 16 32 7 16 1/addTemporaryActor ShadowBruteLargeActor3 16 32 19 20 0/addTemporaryActor ShadowBruteLargeActor4 16 32 24 12 3/positionOffset ShadowBruteLargeActor 6 -20 true/addTemporaryActor ShadowBruteActor1 16 32 14 18 0/addTemporaryActor ShadowBruteActor2 16 32 20 18 0/positionOffset ShadowBruteActor2 0 8 true/addTemporaryActor ShadowBruteActor3 16 32 18 21 0/positionOffset ShadowBruteActor3 -15 10 true/addTemporaryActor ShadowBruteActor4 16 32 15 22 0/addTemporaryActor ShadowBruteActor5 16 32 13 20 0/positionOffset ShadowBruteActor5 10 13 true/addTemporaryActor ShadowBruteActor6 16 32 9 19 1/positionOffset ShadowBruteActor6 -5 -15 true/addTemporaryActor ShadowBruteActor7 16 32 11 18 1/addTemporaryActor ShadowBruteActor8 16 32 10 17 1/positionOffset ShadowBruteActor8 15 -20 true/addTemporaryActor ShadowBruteActor9 16 32 9 14 1/positionOffset ShadowBruteActor9 -10 0 true/addTemporaryActor ShadowBruteActor10 16 32 11 13 1/addTemporaryActor ShadowBruteActor11 16 32 10 12 1/positionOffset ShadowBruteActor11 -8 14 true/addTemporaryActor ShadowBruteActor12 16 32 11 9 2/positionOffset ShadowBruteActor12 15 -10 true/addTemporaryActor ShadowBruteActor13 16 32 21 16 3/addTemporaryActor ShadowBruteActor14 16 32 22 11 2/positionOffset ShadowBruteActor14 20 20 true/addTemporaryActor ShadowBruteActor15 16 32 23 19 3/addTemporaryActor ShadowBruteActor16 16 32 25 17 3/positionOffset ShadowBruteActor16 10 -12 true/addTemporaryActor ShadowBruteActor17 16 32 26 15 3/addTemporaryActor ShadowBruteActor18 16 32 11 15 1/addTemporaryActor ShadowBruteActor19 16 32 24 14 3/addTemporaryActor ShadowBruteActor20 16 32 21 10 2/positionOffset ShadowBruteActor20 -15 15 true/addTemporaryActor ShadowShamanActor1 16 32 15 9 2/addTemporaryActor ShadowShamanActor2 16 32 19 9 2/addTemporaryActor ShadowKidActor1 16 32 -50 -50 2/addTemporaryActor ShadowKidActor2 16 32 -50 -50 2/addTemporaryActor ShadowKidActor3 16 32 -50 -50 2/addTemporaryActor Nyx 16 32 -50 -50 2/speak Krobus \"{{i18n:Krobus.10hearts4.Lance.01}}\"/pause 1000/playSound stairsdown/pause 1000/changeLocation Custom_VoidDen/warp Lance 18 19/positionOffset Lance 20 0 0 true/warp Krobus 16 19/faceDirection Krobus 0 true/warp farmer 17 19/faceDirection farmer 0 true/positionOffset Krobus 20 0 true/positionOffset farmer 25 15 true/pause 1000/viewport 17 16 true/viewport move 0 -1 6000 true/pause 1000/playSound shadowpeep/pause 1300/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1000/warp Nyx 17 8/move Nyx 0 1 2/pause 1250/faceDirection Nyx 3 true/pause 450/playSound shadowpeep/pause 450/faceDirection Nyx 2 true/pause 250/faceDirection Nyx 1 true/pause 450/playSound shadowpeep/pause 450/faceDirection Nyx 2 true/pause 600/speed Nyx 1/move Nyx 0 4 2 true/pause 400/speed ShadowShamanActor1 1/move ShadowShamanActor1 0 4 2 true/pause 250/speed ShadowShamanActor2 1/move ShadowShamanActor2 0 4 2 true/viewport move 0 1 4250 true/pause 1500/playSound shadowpeep/pause 1000/playSound shadowpeep/pause 1200/playSound shadowpeep/pause 700/playSound shadowpeep/pause 1600/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/showFrame Nyx 16 true/shake Nyx 1000/pause 850/AmbientLight 70 100 70/playSound healSound/addLantern 31 16 14 2/addLantern 31 18 14 2/addLantern 31 16 16 2/addLantern 31 18 16 2/pause 400/showFrame Nyx 0 true/pause 1000/faceDirection Nyx 3 true/pause 600/shake Nyx 600/playSound shadowpeep/pause 500/playSound shadowpeep/pause 500/faceDirection Nyx 2 true/pause 500/move ShadowShamanActor1 0 2 1/move ShadowShamanActor1 1 0 1/pause 600/showFrame ShadowShamanActor1 5 true/pause 200/shake ShadowShamanActor1 600/pause 200/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 500/showFrame ShadowShamanActor1 4 true/pause 500/faceDirection ShadowShamanActor1 0 true/pause 250/faceDirection ShadowShamanActor1 3 true/pause 200/playSound shadowpeep/pause 200/move ShadowShamanActor1 -1 0 0/move ShadowShamanActor1 0 -2 0/pause 300/faceDirection ShadowShamanActor1 1 true/pause 250/faceDirection ShadowShamanActor1 2 true/pause 500/stopMusic/pause 1000/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor1 17 15/shake ShadowKidActor1 2000/pause 500/showFrame Nyx 0 true/pause 1500/move ShadowBruteActor18 1 0 1/pause 250/emote ShadowBruteActor18 8 true/pause 800/faceDirection ShadowKidActor1 3 true/pause 500/playSound shadowpeep/emote ShadowKidActor1 8 true/pause 1700/emote ShadowBruteActor18 16 true/pause 300/playSound shadowpeep/pause 400/playSound shadowpeep/pause 400/shake ShadowBruteActor18 600/pause 200/playSound dwop/showFrame ShadowBruteActor18 22 true/pause 200/playMusic moonlightJellies/pause 850/jump ShadowKidActor1/pause 750/speed ShadowKidActor1 5/move ShadowKidActor1 -4 0 3 true/pause 250/jump ShadowBruteActor5/pause 200/playSound shadowpeep/pause 100/jump ShadowBruteLargeActor2/pause 100/jump ShadowBruteActor9/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 0 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/positionOffset ShadowBruteActor18 1 1 true/pause 25/pause 200/playSound shadowpeep/pause 200/emote ShadowBruteActor18 20 true/pause 150/emote ShadowKidActor1 20 true/shake ShadowKidActor1 700/pause 300/playSound shadowpeep/pause 200/faceDirection ShadowBruteActor7 0 true/jump ShadowBruteActor11/pause 300/playSound shadowpeep/pause 100/jump ShadowBruteActor3/pause 200/jump ShadowBruteActor7/playSound shadowpeep/pause 150/jump ShadowBruteActor2/pause 200/faceDirection Nyx 1 true/pause 300/move ShadowBruteActor7 0 -2 1 true/pause 200/shake Nyx 750/playSound shadowpeep/playSound shadowpeep/pause 500/faceDirection ShadowShamanActor2 3 true/pause 350/move ShadowBruteActor7 2 0 0 true/pause 100/faceDirection Nyx 2 true/pause 400/faceDirection ShadowShamanActor2 2 true/pause 250/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 250/move ShadowShamanActor2 0 2 3/move ShadowShamanActor2 -1 0 3/playSound shadowpeep/pause 500/showFrame ShadowShamanActor2 13 true/shake ShadowShamanActor2 600/pause 400/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 300/showFrame ShadowShamanActor2 12 true/pause 250/playSound shadowpeep/pause 250/faceDirection ShadowShamanActor2 0 true/pause 250/faceDirection ShadowShamanActor2 1 true/pause 350/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/move ShadowShamanActor2 1 0 0/move ShadowShamanActor2 0 -2 0/pause 125/playSound shadowpeep/pause 125/faceDirection ShadowShamanActor2 1 true/pause 250/faceDirection ShadowShamanActor2 2 true/pause 1000/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor2 17 15/shake ShadowKidActor2 2000/pause 500/showFrame Nyx 0 true/pause 1000/emote ShadowBruteActor19 16/pause 300/playSound shadowpeep/move ShadowBruteActor19 -1 0 3 /faceDirection ShadowKidActor2 1 true/pause 500/shake ShadowBruteActor19 500/pause 125/pause 125/playSound dwop/showFrame ShadowBruteActor19 30 true/pause 500/jump ShadowKidActor2/playSound shadowpeep/pause 600/speed ShadowKidActor2 4/move ShadowKidActor2 3 0 0/speed ShadowKidActor2 4/move ShadowKidActor2 0 -1 1/speed ShadowKidActor2 4/move ShadowKidActor2 2 0 1 true/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/playSound shadowpeep/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/positionOffset ShadowBruteActor19 -1 1 true/pause 15/positionOffset ShadowBruteActor19 -2 0 true/pause 15/positionOffset ShadowBruteActor19 -1 0 true/pause 15/emote ShadowBruteActor19 20 true/pause 200/emote ShadowKidActor2 20 true/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 500/playSound shadowpeep/pause 250/jump ShadowBruteActor1/pause 200/playSound shadowpeep/pause 200/jump ShadowBruteActor6/pause 300/playSound shadowpeep/jump ShadowBruteActor11/pause 300/jump ShadowBruteActor17/pause 500/playSound shadowpeep/jump ShadowBruteActor3/pause 400/jump ShadowBruteActor5/pause 300/playSound shadowpeep/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 300/move ShadowBruteActor17 -4 0 0 true/pause 300/faceDirection Nyx 3 true/pause 600/shake Nyx 600/playSound shadowpeep/pause 500/playSound shadowpeep/pause 250/faceDirection ShadowShamanActor1 1 true/pause 450/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 300/faceDirection Nyx 2 true/pause 400/faceDirection ShadowShamanActor1 2 true/pause 300/move ShadowShamanActor1 0 2 1/move ShadowShamanActor1 1 0 1/pause 600/showFrame ShadowShamanActor1 5 true/pause 200/shake ShadowShamanActor1 600/pause 200/playSound stoneStep/playSound stoneStep/addObject 17 15 FlashShifter.StardewValleyExpandedCP_Void_Soul/warp MarlonFay 17 15/positionOffset MarlonFay -8 16 true/pause 500/showFrame ShadowShamanActor1 4 true/pause 500/faceDirection ShadowShamanActor1 0 true/pause 250/faceDirection ShadowShamanActor1 3 true/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/pause 200/playSound shadowpeep/pause 200/move ShadowShamanActor1 -1 0 0/move ShadowShamanActor1 0 -2 0/pause 300/faceDirection ShadowShamanActor1 1 true/pause 250/faceDirection ShadowShamanActor1 2 true/pause 1250/showFrame Nyx 16 true/shake Nyx 1000/playSound shadowpeep/playSound shadowpeep/playSound shadowpeep/pause 800/glow 218 112 214/playSound healSound/pause 100/removeObject 17 15/warp MarlonFay -20 -20/warp ShadowKidActor3 17 15/shake ShadowKidActor3 2000/pause 500/showFrame Nyx 0 true/pause 1000/emote ShadowBruteActor1 16/speed ShadowBruteActor1 4/move ShadowBruteActor1 0 -2 1/pause 500/faceDirection ShadowKidActor3 3 true/pause 500/shake ShadowBruteActor1 500/showFrame ShadowBruteActor1 22 true/playSound dwop/pause 650/playSound shadowpeep/jump ShadowKidActor3/pause 550/emote ShadowShamanActor1 16 true/speed ShadowKidActor3 4/move ShadowKidActor3 -1 0 2/speed ShadowKidActor3 4/move ShadowKidActor3 0 1 3/speed ShadowKidActor3 4/move ShadowKidActor3 -1 0 3 true/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 1 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/positionOffset ShadowBruteActor1 1 0 true/pause 10/pause 500/emote ShadowBruteActor1 20 true/pause 250/emote ShadowKidActor3 20 true/shake ShadowBruteActor1 1000/shake ShadowKidActor3 1000/pause 150/move ShadowShamanActor1 0 2 2 true/pause 150/playSound shadowpeep/jump ShadowBruteLargeActor2/pause 200/jump ShadowShamanActor2/pause 100/speed ShadowBruteActor4 1/move ShadowBruteActor4 0 -2 0 true/pause 125/jump ShadowBruteActor13/pause 300/playSound shadowpeep/jump ShadowBruteActor15/pause 200/jump ShadowShamanActor2/faceDirection Nyx 1 true/pause 200/jump ShadowBruteActor16/pause 300/shake ShadowBruteActor18 1000/shake ShadowKidActor1 1000/playSound shadowpeep/jump ShadowBruteActor5/pause 200/pause 250/jump ShadowBruteActor8/playSound shadowpeep/pause 200/pause 350/shake ShadowBruteActor1 1000/shake ShadowKidActor3 1000/pause 150/faceDirection ShadowShamanActor2 3 true/pause 250/jump ShadowBruteLargeActor4/pause 125/emote Nyx 12 true/shake Nyx 600/pause 300/playSound shadowpeep/pause 150/advancedMove ShadowBruteActor15 false 0 -2 -2 0/pause 350/emote ShadowShamanActor2 28 true/shake ShadowShamanActor2 600/pause 300/playSound shadowpeep/jump ShadowBruteActor3/pause 300/jump ShadowBruteActor16/pause 250/shake ShadowBruteActor19 1000/shake ShadowKidActor2 1000/jump ShadowBruteLargeActor3/pause 250/playSound shadowpeep/shake ShadowBruteActor1 1000/shake ShadowKidActor3 2000/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Krobus.10Hearts4.02}}\"/pause 1500/message \"{{i18n:Krobus.10Hearts4.03}}\"/pause 1000/end dialogue Krobus \"{{i18n:Krobus.10Hearts4.04}}\""
+      }
+    },
+    {
+      //Shadow People become passive
+      "Action": "EditData",
+      "Target": "Data/Monsters",
+      "When": {
+        "HasSeenevent": "1090508"
+      },
+      "Update": "OnLocationChange",
+      "Fields": {
+        "Shadow Guy": {
+          0: 99999,
+          1: 0,
+          9: 0,
+          11: 100
+        },
+        "Shadow Brute": {
+          0: 99999,
+          1: 0,
+          9: 0,
+          11: 100
+        },
+        "Shadow Shaman": {
+          0: 99999,
+          1: 0,
+          9: 0,
+          11: 100
+        },
+        "Shadow Sniper": {
+          0: 99999,
+          1: 0,
+          9: 0,
+          11: 100
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarlonFay",
+      "Entries": {
+        "PeaceWithShadowPeople": "{{i18n:Krobus.Dialogue.Marlon.01}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "Entries": {
+        "PeaceWithShadowPeople": "{{i18n:Krobus.Dialogue.Magnus.01}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarlonFay",
+      "Entries": {
+        "PeaceWithShadowPeopleLance": "{{i18n:Krobus.Dialogue.Marlon.02}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "Entries": {
+        "PeaceWithShadowPeopleLance": "{{i18n:Krobus.Dialogue.Magnus.02}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lance",
+      "Entries": {
+        "PeaceWithShadowPeopleLance": "{{i18n:Krobus.Dialogue.Lance.01}}",
+      }
+    },
+  ]
+}

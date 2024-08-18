@@ -1,0 +1,225 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Shane",
+			"TextOperations": [
+			  /*Dislike*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		  {
+			//Fake portrait for 8 hearts
+			"Action": "Load",
+			"Target": "Portraits/Shane_JojaMart",
+			"FromFile": "assets/CharacterFiles/Portraits/NoPortraits/Shane_JojaMart.png"
+		  },
+		{ //SHANE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"HasSeenEvent |contains=191393, 502261": false,
+				"Spouse |contains=Shane": true,
+				"Day |contains=22": true
+			},
+			"Entries": {
+				"marriage_Mon": "830 AnimalShop 22 6 0 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 Bed",
+			},
+		},
+		{ //SHANE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"Entries": {
+				"Sun_normal": "700 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1450 AnimalShop 3 15 0/1800 Saloon 21 17 2 shane_drink/2400 AnimalShop 27 4 1 shane_sleep",
+				"summer_Sun": "700 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1450 AnimalShop 3 15 0/1800 Saloon 21 17 2 shane_drink/2400 AnimalShop 27 4 1 shane_sleep",
+				"default": "900 AnimalShop 24 17 1/1000 AnimalShop 24 15 0/1100 AnimalShop 24 5 0/1200 AnimalShop 3 16 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/2300 AnimalShop 27 4 1 shane_sleep", 
+				"GreenRain": "610 AnimalShop 24 16 3",
+			},
+		},
+		{ //SHANE SCHEDULE - Jas
+			"Action": "EditData",
+			"Target": "characters/schedules/Shane",
+			"When": {
+				"Weather": "Sun",
+				"HasSeenEvent": "3910974"
+			},
+			"Entries": {
+				"11": "620 AnimalShop 27 4 1/850 AnimalShop 24 15 0/1030 AnimalShop 6 17 0/1130 Town 15 16 0/1640 AnimalShop 24 15 0/2100 AnimalShop 27 4 1 shane_sleep",
+				"25": "620 AnimalShop 27 4 1/850 AnimalShop 24 15 0/1030 AnimalShop 6 17 0/1130 Town 15 16 0/1640 AnimalShop 24 15 0/2100 AnimalShop 27 4 1 shane_sleep"
+			},
+		},
+		{ //SHANE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Town_15_16": "{{i18n:Shane.Dialogue.01}}",
+				"AnimalShop_6_17": "{{i18n:Shane.Dialogue.02}}",
+			},
+		},
+		{ //SHANE EVENT 2 - Bottle cleanup map patch
+			"Action": "EditData",
+			"Target": "data/events/forest",
+			"Entries": {
+				"1637013/f Shane 2000/y 2/t 900 1500/w sunny/z winter": "ocean/-500 -500/farmer 86 88 2 Shane 81 98 3 Andy 63 70 0/pause 800/viewport 83 102 true/skippable/viewport move 0 -1 5000 true/move farmer 0 10 3 true/pause 6000/faceDirection Shane 2 true/pause 200/faceDirection Shane 1 true/pause 400/speak Shane \"{{i18n:Shane.BottleCleanup.01}}\"/pause 1000/move farmer -2 0 3/pause 400/emote farmer 8/pause 150/speak Shane \"{{i18n:Shane.BottleCleanup.02}}\"/pause 800/faceDirection Shane 2 true/pause 200/faceDirection Shane 3 true/pause 500/speak Shane \"{{i18n:Shane.BottleCleanup.03}}\"/pause 1000/faceDirection Shane 2 true/pause 700/move Shane 0 1 2/pause 1000/showFrame Shane 19/pause 800/speak Shane \"{{i18n:Shane.BottleCleanup.04}}\"/pause 800/move farmer -1 0 3/move farmer 0 1 2/pause 1000/showFrame farmer 96/pause 1500/speak Shane \"{{i18n:Shane.BottleCleanup.05}}\"/pause 800/showFrame Shane 0/pause 500/faceDirection Shane 1/pause 500/showFrame farmer 0/pause 400/faceDirection farmer 3/pause 300/speak Shane \"{{i18n:Shane.BottleCleanup.06}}\"/pause 500/end dialogueWarpOut Shane \"{{i18n:Shane.BottleCleanup.07}}\"",
+			},
+		},
+		{ //Patches bottles
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"FromFile": "assets/Maps/MapPatches/ShaneBottleCleanup.tbin",
+			"ToArea": {
+				"X": 77,
+				"Y": 98,
+				"Width": 4,
+				"Height": 2
+			},
+			"When": {
+				"HasSeenEvent": "1637013"
+			},
+			"Update": "OnLocationChange"
+		},
+		{ //CHARLIE EVENT - Shane 12 heart event - vanilla farms
+			"Action": "EditData",
+			"Target": "data/events/farmhouse",
+			"When": {
+				"FarmType": "Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness"
+			},
+			"Entries": {
+				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 71 10 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 69 10 4 1/positionOffset Shane 20 5 true/pause 800/viewport 71 10 clamp true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 70 10/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
+			},
+		},
+		{ //CHARLIE EVENT - Shane 12 heart event - beach farm
+			"Action": "EditData",
+			"Target": "data/events/farmhouse",
+			"When": {
+				"FarmType": "Beach"
+			},
+			"Entries": {
+				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 81 5 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 79 5 4 1/positionOffset Shane 20 5 true/pause 800/viewport 81 5 clamp true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 80 5/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
+			},
+		},
+		{ //CHARLIE EVENT - Shane 12 heart event - Grandpa's Farm
+			"Action": "EditData",
+			"Target": "data/events/farmhouse",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm": true
+			},
+			"Entries": {
+				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 80 41 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 78 41 4 1/positionOffset Shane 20 5 true/pause 800/viewport 79 41 true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 79 41/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
+			},
+		},
+		//after players see Shane's 14 heart event...
+		{ //Shane's spouse room gets clean
+			"Action": "EditMap",
+			"Target": "Maps/spouseRooms",
+			"FromFile": "assets/Maps/MapPatches/ShaneSpouseRoomClean.tbin",
+			"ToArea": {
+				"X": 0,
+				"Y": 18,
+				"Width": 6,
+				"Height": 9
+			},
+			"Update": "OnLocationChange",
+			"When": {
+				"HasSeenEvent": "3917586"
+			}
+		},
+		{
+			//Shane starts disliking beer
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"When": {
+				"HasSeenEvent": "3917586",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false
+			},
+			"Entries": {
+				"Shane": "{{i18n:Shane.Dialogue.03}}/206 215 260 306 174 182/{{i18n:Shane.Dialogue.04}}/-5 -79 303/{{i18n:Shane.Dialogue.05}}/-81 152 330 346 459 303 348 304/{{i18n:Shane.Dialogue.06}}/80 342/{{i18n:Shane.Dialogue.07}}//",
+			}
+		},
+		{ //Shane stops drinking beer before sleeping
+			"Action": "EditData",
+			"Target": "characters/dialogue/MarriageDialogueShane",
+			"When": {
+				"HasSeenEvent": "3917586",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false
+			},
+			"Entries": {
+				"Indoor_Night_0": "{{i18n:Shane.Dialogue.08}}",
+			},
+		},
+		{ //Shane stops mentioning getting beer and cider out of his fridge
+			"Action": "EditData",
+			"Target": "characters/dialogue/MarriageDialogue",
+			"When": {
+				"HasSeenEvent": "3917586",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false
+			},
+			"Entries": {
+				"spouseRoom_Shane": "{{i18n:Shane.Dialogue.09}}",
+			},
+		},
+		{ //SHANE EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Shane",
+			"Entries": {
+				"shane_event1": "{{i18n:Shane.Dialogue.10}}",
+				"shane_event2": "{{i18n:Shane.Dialogue.11}}",
+				"shane_event3": "{{i18n:Shane.Dialogue.12}}",
+			}
+		},
+		{ //SHANE 7 HEART EVENT PATHING FIX
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"831125/f Shane 1750/f Clint 500/f Emily 500/t 1000 1600/w sunny": "spring_day_ambient/-100 -100/farmer 30 87 0 Shane 30 81 1 Clint 34 81 1 Emily 35 81 3/skippable/showFrame Shane 16/move farmer 0 -5 1 true/viewport 34 82 true/pause 800/speak Shane \"{{i18n:Shane.7Hearts.01}}\"/faceDirection Clint 3/pause 300/speak Emily \"{{i18n:Shane.7Hearts.02}}\"/emote Clint 28/faceDirection Clint 1/pause 500/speak Shane \"{{i18n:Shane.7Hearts.03}}\"/pause 1500/speak Emily \"{{i18n:Shane.7Hearts.04}}\"/pause 500/speak Clint \"{{i18n:Shane.7Hearts.05}}\"/emote Shane 12/playMusic playful/speak Shane \"{{i18n:Shane.7Hearts.06}}\"/speak Clint \"{{i18n:Shane.7Hearts.07}}\"/faceDirection Clint 3/speak Clint \"{{i18n:Shane.7Hearts.08}}\"/emote Emily 8 true/emote Shane 8/pause 500/showFrame Shane 17/pause 500/jump Shane/pause 800/speak Shane \"{{i18n:Shane.7Hearts.09}}\"/faceDirection farmer 0/speak Shane \"{{i18n:Shane.7Hearts.10}}\"/showFrame Shane 16/pause 500/emote Shane 16/showFrame Shane 17/pause 500/speak Shane \"{{i18n:Shane.7Hearts.11}}\"/jump farmer/pause 800/move farmer 0 2 1 false/showFrame Shane 16/move farmer 8 0 0/faceDirection Clint 1/speak Shane \"{{i18n:Shane.7Hearts.12}}\"/playMusic sadpiano/speak Emily \"{{i18n:Shane.7Hearts.13}}\"/move farmer 0 -8 2 true/pause 500/speak Clint \"{{i18n:Shane.7Hearts.14}}\"/playMusic none/faceDirection Clint 2/pause 1000/playMusic ragtime/faceDirection Clint 1/speak Clint \"{{i18n:Shane.7Hearts.15}}\"/pause 600/speak Emily \"{{i18n:Shane.7Hearts.16}}\"/pause 600/speak Clint \"{{i18n:Shane.7Hearts.17}}\"/playMusic spring_day_ambient/speak Shane \"{{i18n:Shane.7Hearts.18}}\"/faceDirection Clint 3/move Shane 3 0 1 false/speak Shane \"{{i18n:Shane.7Hearts.19}}\"/move Shane 0 -2 1/faceDirection Clint 2 true/move Shane 5 0 0/speak Shane \"{{i18n:Shane.7Hearts.20}}\"/move farmer 0 2 2/faceDirection Clint 2/pause 1000/speak Emily \"{{i18n:Shane.7Hearts.21}}\"/pause 500/faceDirection Shane 3/faceDirection farmer 3/pause 500/playSound coin/showFrame Clint 39/shake Clint 3000/pause 2000/end dialogue Shane \"{{i18n:Shane.7Hearts.22}}\"",
+			}
+		},
+		{ //SHANE PART 1
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"3917584/f Shane 3500/O Shane/d Fri/t 800 1700": "distantBanjo/45 71/farmer 48 67 2 Marnie 52 72 0 Jas 51 72 0 Shane -100 -100 2/addConversationTopic shaneSaloon1 0/skippable/move farmer 0 3 2/warp Shane 45 71/playSound doorClose/faceDirection Marnie 3 true/faceDirection Jas 3 true/move Shane 0 1 2/pause 500/speak Shane \"{{i18n:Shane.Event1.01}}\"/pause 500/emote Marnie 28 true/emote Jas 28 true/emote farmer 28 true/pause 1000/speak Shane \"{{i18n:Shane.Event1.02}}\"/advancedMove Shane false -11 0 0 -14 -10 0 0 -3 -10 0/move farmer 0 2 3 true/pause 3000/speak Marnie \"{{i18n:Shane.Event1.03}}\"/pause 500/faceDirection Jas 1/emote Jas 28/move Marnie 0 1 3 false/faceDirection Jas 2 true/move Marnie -3 0 0/faceDirection Jas 3 true/move Marnie 0 -1 3/faceDirection farmer 1/speak Marnie \"{{i18n:Shane.Event1.04}}\"/pause 1000/faceDirection farmer 2 true/pause 100/faceDirection farmer 3/pause 1000/end dialogue Shane \"{{i18n:Shane.Event1.05}}\"",
+			},
+		},
+		{ //SHANE PART 3
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"3917586/e 3917585/O Shane/A shaneSaloon2": "spring_day_ambient/45 71/farmer 47 71 1 Shane 37 72 1 Marnie 48 70 2/addWorldState shanePK/emote Shane 56 true/move Shane 8 0 0/pause 500/speak Shane \"{{i18n:Shane.Event2.01}}\"/pause 500/move Shane 0 -1 0/playSound doorClose/warp Shane -100 -100/pause 1000/faceDirection farmer 2 true/showFrame 0/emote farmer 12 true/emote Marnie 12/speak Marnie \"{{i18n:Shane.Event2.02}}\"/move farmer 0 1 3/move farmer -2 0 0/move farmer 0 -1 0/playSound doorClose/warp farmer -100 -100/move Marnie 0 2 3/move Marnie -3 0 0/move Marnie 0 -1 0/playSound doorClose/warp Marnie -100 -100/fade/viewport -1000 -1000/changeLocation Saloon/warp Shane 33 18/warp Marnie 18 21/warp farmer 19 21/faceDirection Marnie 1 true/faceDirection farmer 1 true/positionOffset farmer 0 16/advancedMove farmer false 6 0 0 -2 8 0 4 10/advancedMove Marnie false 6 0 0 -2 8 0 4 10/specificTemporarySprite shaneSaloonCola/playMusic none/pause 3000/viewport 33 18 true/pause 800/playSound Cowboy_gunshot/pause 200/emote Shane 52 true/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/shake Shane 500/playSound cowboy_monsterhit/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_gunload/pause 700/playSound Cowboy_gunshot/shake Shane 500/pause 200/playSound Cowboy_gunshot/pause 160/playSound cowboy_monsterhit/pause 140/playSound Cowboy_gunshot/pause 170/playSound cowboy_monsterhit/jump Shane/pause 200/playSound Cowboy_monsterDie/pause 500/playSound cowboy_dead/jump Shane/pause 500/textAboveHead Shane \"{{i18n:Shane.Event2.03}}\"/pause 2000/playMusic distantBanjo/textAboveHead Shane \"{{i18n:Shane.Event2.04}}\"/pause 3000/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/animate Shane false true 100 18/jump Shane/pause 500/stopAnimation Shane/showFrame Shane 0/emote Shane 16/speak Shane \"{{i18n:Shane.Event2.05}}\"/faceDirection Marnie 1 true/faceDirection farmer 3/faceDirection Marnie 0 true/faceDirection farmer 0/speak Marnie \"{{i18n:Shane.Event2.06}}\"/pause 500/speak Shane \"{{i18n:Shane.Event2.07}}\"/faceDirection Shane 1 true/pause 100/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.08}}\"/pause 500/faceDirection Shane 1 true/pause 100/faceDirection Shane 2/pause 500/animate Shane false true 100 34/pause 500/speak Shane \"{{i18n:Shane.Event2.09}}\"/pause 500/stopAnimation Shane/pause 100/move Marnie 0 -1 1/speak Marnie \"{{i18n:Shane.Event2.10}}\"/pause 500/faceDirection Shane 3/pause 200/emote Shane 8/speak Shane \"{{i18n:Shane.Event2.11}}\"/pause 1000/faceDirection Shane 2/pause 200/faceDirection Shane 3/faceDirection Shane 2/faceDirection Shane 3/speak Shane \"{{i18n:Shane.Event2.12}}\"/faceDirection Marnie 2/emote Marnie 28/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.13}}\"/question fork0 \"{{i18n:Shane.Event2.13A}}\"/fork wewereworried/emote farmer 40/faceDirection Marnie 1/pause 1000/faceDirection Shane 2/emote Shane 40/speak Shane \"{{i18n:Shane.Event2.14}}\"/pause 500/emote Marnie 20 true/emote farmer 20 true/pause 1300/faceDirection Shane 0/speak Shane \"{{i18n:Shane.Event2.15}}\"/faceDirection Shane 2/speak Shane \"{{i18n:Shane.Event2.16}}\"/pause 1000/emote farmer 32/pause 1000/end dialogue Shane \"{{i18n:Shane.Event2.17}}\""
+			},
+		},
+	]
+}

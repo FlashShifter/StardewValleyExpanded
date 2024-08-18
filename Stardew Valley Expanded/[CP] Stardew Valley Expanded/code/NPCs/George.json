@@ -1,0 +1,91 @@
+{
+	"Changes": [
+
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: George",
+			"TextOperations": [
+			  /*Like*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "George",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Bearberrys",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "George",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose FlashShifter.StardewValleyExpandedCP_Thistle FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Ferngill_Primrose",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "George",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "George",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //GEORGE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent |contains=5553210": false
+			},
+			"Entries": {
+				"Sat": "700 JoshHouse 5 21 3//1600 JoshHouse 15 22 0/1900 JoshHouse 5 20 3/2100 JoshHouse 4 6 0",
+				"summer_Fri": "630 JoshHouse 16 22 0/1200 Town 59 64 2/1500 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+			},
+		},
+		{ //GEORGE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/George",
+			"When": {
+				"HasSeenEvent": "5553210"
+			},
+			"Entries": {
+				"Sat": "630 JoshHouse 16 22 0/1000 JoshHouse 20 18 1/1400 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+				"summer_Fri": "630 JoshHouse 16 22 0/1200 Town 59 64 2/1500 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+			},
+		},
+		{ //GEORGE DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/George",
+			"When": {
+				"Season": "Spring"
+			},
+			"Entries": {
+				"Mon2": "{{i18n:George.Dialogue.01}}",
+				"Mon6": "{{i18n:George.Dialogue.02}}",
+			},
+		},
+
+	]
+}

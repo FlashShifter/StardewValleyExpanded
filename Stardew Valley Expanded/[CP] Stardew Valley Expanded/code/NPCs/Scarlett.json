@@ -1,0 +1,1108 @@
+{
+  "Changes": [
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "ScarlettFake": {
+          "DisplayName": "{{i18n:Name.Scarlett}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Teen",
+          "Manner": "Polite",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": false,
+          "UnlockConditions": "!PLAYER_HAS_SEEN_EVENT Any 3691371",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Scarlett_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Scarlett_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Scarlett_Winter",
+              "Sprite": "Characters/Scarlett_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Fake Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/ScarlettFake",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett.png"
+    },
+    {
+      //Fake Scarlett's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/ScarlettFake",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett.png"
+    },
+    {
+      //Fake Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/ScarlettFake_Winter",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Fake Scarlett's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/ScarlettFake_Winter",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Fake Scarlett's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/ScarlettFake",
+      "FromFile": "assets/CharacterFiles/Schedules/Scarlett/FakeSchedule.json"
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 1
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "1,2,3",
+        "HasSeenEvent |contains=3691371": false
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.01}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.02}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.03}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 1 - rain
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "1,2,3",
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": true
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.04}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.05}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.06}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 2
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "8,9,10",
+        "HasSeenEvent |contains=3691371": false
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.07}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.08}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.09}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 2 - rain
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "8,9,10",
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": true
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.10}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.11}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.12}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 3
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "15,16,17",
+        "HasSeenEvent |contains=3691371": false
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.13}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.14}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.15}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 3 - rain
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "15,16,17",
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": true
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.16}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.17}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.18}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 4
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "22,23,24",
+        "HasSeenEvent |contains=3691371": false
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.19}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.20}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.21}}",
+      }
+    },
+    {
+      //Fake Scarlett's farmhand dialogue 4 - rain
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "22,23,24",
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": true
+      },
+      "Entries": {
+        "Mon": "{{i18n:FakeScarlett.Farmhand.22}}",
+        "Tue": "{{i18n:FakeScarlett.Farmhand.23}}",
+        "Wed": "{{i18n:FakeScarlett.Farmhand.24}}",
+      }
+    },
+    {
+      //Fake Scarlett's fall blue moon vineyard farmhand schedule
+      "Action": "EditData",
+      "Target": "Characters/Schedules/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Spouse |contains=Sophia": false,
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": false,
+        "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "fall_Mon": "0 Custom_SophiaHouse 24 6 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/610 Custom_SophiaHouse 24 6 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/730 Custom_SophiaHouse 23 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/900 Custom_BlueMoonVineyard 29 33 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/940 Custom_BlueMoonVineyard 23 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1010 Custom_BlueMoonVineyard 14 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1030 Custom_BlueMoonVineyard 19 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1050 Custom_BlueMoonVineyard 16 35 2/1110 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1130 Custom_BlueMoonVineyard 18 37 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1150 Custom_BlueMoonVineyard 23 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1210 Custom_BlueMoonVineyard 25 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1230 Custom_BlueMoonVineyard 21 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1250 Custom_BlueMoonVineyard 23 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.010\"/1310 Custom_BlueMoonVineyard 20 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1330 Custom_BlueMoonVineyard 17 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1350 Custom_BlueMoonVineyard 14 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1410 Custom_BlueMoonVineyard 16 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1430 Custom_BlueMoonVineyard 20 43 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1450 Custom_BlueMoonVineyard 24 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1510 Custom_BlueMoonVineyard 20 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1530 Custom_BlueMoonVineyard 18 45 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1610 Custom_BlueMoonVineyard 23 32 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1700 Custom_SophiaHouse 26 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.011\"/1900 Custom_SophiaHouse 6 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.012\"/2000 Custom_SophiaHouse 19 7 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.013\"/2100 Custom_SophiaHouse 19 7 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.014\"/2120 Custom_SophiaHouse 23 6 3 scarlett_sleep",
+        "fall_Tue": "0 Custom_SophiaHouse 24 6 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/610 Custom_SophiaHouse 24 6 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/730 Custom_SophiaHouse 23 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/900 Custom_BlueMoonVineyard 29 33 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/940 Custom_BlueMoonVineyard 23 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1010 Custom_BlueMoonVineyard 14 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1030 Custom_BlueMoonVineyard 19 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1050 Custom_BlueMoonVineyard 16 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1110 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1130 Custom_BlueMoonVineyard 18 37 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1150 Custom_BlueMoonVineyard 23 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1210 Custom_BlueMoonVineyard 25 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1230 Custom_BlueMoonVineyard 21 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1250 Custom_BlueMoonVineyard 23 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1310 Custom_BlueMoonVineyard 20 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1330 Custom_BlueMoonVineyard 17 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1350 Custom_BlueMoonVineyard 14 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1410 Custom_BlueMoonVineyard 16 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1430 Custom_BlueMoonVineyard 20 43 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1450 Custom_BlueMoonVineyard 24 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1510 Custom_BlueMoonVineyard 20 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1530 Custom_BlueMoonVineyard 18 45 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1610 Custom_BlueMoonVineyard 23 32 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.010\"/1700 Custom_SophiaHouse 26 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.011\"/1900 Custom_SophiaHouse 18 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.015\"/2000 Custom_SophiaHouse 21 8 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.014\"/2120 Custom_SophiaHouse 23 6 3 scarlett_sleep",
+        "fall_Wed": "0 Custom_SophiaHouse 24 6 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/610 Custom_SophiaHouse 24 6 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/730 Custom_SophiaHouse 23 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/900 Custom_BlueMoonVineyard 29 33 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/940 Custom_BlueMoonVineyard 23 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1010 Custom_BlueMoonVineyard 14 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1030 Custom_BlueMoonVineyard 19 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1050 Custom_BlueMoonVineyard 16 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1110 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1130 Custom_BlueMoonVineyard 18 37 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1150 Custom_BlueMoonVineyard 23 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1210 Custom_BlueMoonVineyard 25 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1230 Custom_BlueMoonVineyard 21 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1250 Custom_BlueMoonVineyard 23 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1310 Custom_BlueMoonVineyard 20 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1330 Custom_BlueMoonVineyard 17 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1350 Custom_BlueMoonVineyard 14 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1410 Custom_BlueMoonVineyard 16 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1430 Custom_BlueMoonVineyard 20 43 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1450 Custom_BlueMoonVineyard 24 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1510 Custom_BlueMoonVineyard 20 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1530 Custom_BlueMoonVineyard 18 45 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1610 Custom_BlueMoonVineyard 23 32 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1700 Custom_SophiaHouse 26 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.011\"/1900 Custom_SophiaHouse 6 23 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.012\"/2000 Custom_SophiaHouse 19 7 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.010\"/2100 Custom_SophiaHouse 19 7 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.014\"/2120 Custom_SophiaHouse 23 6 3 scarlett_sleep",
+        "fall_Thu": "0 Custom_SophiaHouse 24 6 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/610 Custom_SophiaHouse 24 6 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/730 Custom_SophiaHouse 23 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/900 Custom_BlueMoonVineyard 18 32 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/950 Custom_BlueMoonVineyard 23 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1010 Custom_BlueMoonVineyard 14 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1030 Custom_BlueMoonVineyard 19 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1050 Custom_BlueMoonVineyard 16 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1110 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1130 Custom_BlueMoonVineyard 18 37 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1150 Custom_BlueMoonVineyard 23 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1210 Custom_BlueMoonVineyard 25 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1230 Custom_BlueMoonVineyard 21 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1250 Custom_BlueMoonVineyard 23 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1310 Custom_BlueMoonVineyard 20 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1330 Custom_BlueMoonVineyard 17 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1350 Custom_BlueMoonVineyard 14 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1410 Custom_BlueMoonVineyard 16 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1430 Custom_BlueMoonVineyard 20 43 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1450 Custom_BlueMoonVineyard 24 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1510 Custom_BlueMoonVineyard 20 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1530 Custom_BlueMoonVineyard 18 45 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1610 Custom_BlueMoonVineyard 28 36 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1640 Custom_BlueMoonVineyard 24 55 2 scarlett_idle \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.015\"/1800 Custom_BlueMoonVineyard 26 49 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.016\"/1830 Custom_SophiaHouse 17 21 0/2100 Custom_SophiaHouse 23 6 2 scarlett_sleep",
+      }
+    },
+    {
+      //Fake Scarlett's fall blue moon vineyard farmhand schedule (fall 4th)
+      "Action": "EditData",
+      "Target": "Characters/Schedules/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Day": "4",
+        "Spouse |contains=Sophia": false,
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": false,
+        "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "fall_Thu": "0 Custom_SophiaHouse 24 6 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/610 Custom_SophiaHouse 24 6 3 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/730 Custom_SophiaHouse 23 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/900 Custom_BlueMoonVineyard 20 32 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/950 Custom_BlueMoonVineyard 23 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1010 Custom_BlueMoonVineyard 14 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1030 Custom_BlueMoonVineyard 19 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1050 Custom_BlueMoonVineyard 16 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1110 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1130 Custom_BlueMoonVineyard 18 37 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1150 Custom_BlueMoonVineyard 23 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1210 Custom_BlueMoonVineyard 25 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1230 Custom_BlueMoonVineyard 21 39 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1250 Custom_BlueMoonVineyard 23 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1310 Custom_BlueMoonVineyard 20 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1330 Custom_BlueMoonVineyard 17 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1350 Custom_BlueMoonVineyard 14 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1410 Custom_BlueMoonVineyard 16 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1430 Custom_BlueMoonVineyard 20 43 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1450 Custom_BlueMoonVineyard 24 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1510 Custom_BlueMoonVineyard 20 41 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1530 Custom_BlueMoonVineyard 18 45 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1610 Custom_BlueMoonVineyard 21 32 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1640 Custom_BlueMoonVineyard 24 55 2/1830 Custom_SophiaHouse 17 21 0/2100 Custom_SophiaHouse 23 6 2 scarlett_sleep",
+      }
+    },
+    {
+      //Fake Scarlett's fall blue moon vineyard farmhand schedule (Married to Sophia)
+      "Action": "EditData",
+      "Target": "Characters/Schedules/ScarlettFake",
+      "When": {
+        "Season": "Fall",
+        "Spouse |contains=Sophia": true,
+        "HasSeenEvent |contains=3691371": false,
+        "Weather |contains=rain, storm": false,
+        "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "fall_Mon": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Tue": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Wed": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\ScarlettFake:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Thu": "610 Custom_ScarlettHouse 8 6 2/910 Custom_ScarlettHouse 2 6 0/930 Custom_ScarlettHouse 7 4 0/1000 Custom_ScarlettHouse 9 21 0/1050 Custom_ScarlettHouse 7 21 2/1130 Custom_GrampletonSuburbs 21 15 0/1210 Custom_GrampletonSuburbs 10 26 2/1430 Custom_GrampletonSuburbs 37 25 0/1520 Custom_GrampletonSuburbs 44 14 2 scarlett_idle/1620 Custom_ScarlettHouse 10 6 0/1710 Custom_ScarlettHouse 14 20 2/1810 Custom_ScarlettHouse 6 21 2/1830 Custom_ScarlettHouse 8 21 0/1850 Custom_ScarlettHouse 8 6 2/1930 Custom_ScarlettHouse 7 9 2/1950 Custom_ScarlettHouse 6 9 0/2010 Custom_ScarlettHouse 7 9 2/2030 Custom_ScarlettHouse 20 20 0/2110 Custom_ScarlettHouse 10 6 2/2140 Custom_ScarlettHouse 3 5 3 scarlett_sleep"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Scarlett": {
+          "DisplayName": "{{i18n:Name.Scarlett}}",
+          "BirthSeason": "Summer",
+          "BirthDay": 7,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Teen",
+          "Manner": "polite",
+          "SocialAnxiety": "outgoing",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 3691371",
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ScarlettHouse",
+              "Condition": null,
+              "Location": "Custom_ScarlettHouse",
+              "Tile": {
+                "X": 8,
+                "Y": 6
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Scarlett_Winter",
+              "Sprite": "Characters/Scarlett_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Scarlett's Gift Tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Scarlett": "{{i18n:Scarlett.Gifts.Loved}}/438 426  444 446 638 724 340 220 221 70 208 FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Scarlett.Gifts.Liked}}/-79 -5 -6 -7 432 430/{{i18n:Scarlett.Gifts.Disliked}}/350 346 459 206 227 303 342 397 418 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Scarlett.Gifts.Hated}}/-4 -28 -20 283 167 FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Frog/{{i18n:Scarlett.Gifts.Neutral}}/-12 -2 -80 -81 -74/"
+      }
+    },
+    {
+      //Scarlett's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "scarlett_farm1": "4 4 4 4 4/20 20 20 21 21 21/4 4 4 4 4",
+        "scarlett_farm2": "0 0 0 0 0/22 22 22 23 23 23/0 0 0 0 0",
+        "scarlett_farm3": "12 12 12 12 12/24 24 24 25 25 25/12 12 12 12 12",
+        "scarlett_idle": "0 0 0 0 0/0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/0 0 0 0 0",
+        "scarlett_sleep": "26/26/26"
+      }
+    },
+    {
+      //Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/Scarlett",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett.png"
+    },
+    {
+      //Scarlett's cosplay sprites
+      "Action": "EditImage",
+      "Target": "Characters/Scarlett",
+      "When": {
+        "LocationName": "Custom_ZCCC_Entrance, Custom_ZCCC_FoodCourt, Custom_ZCCC_MainHall, Custom_ZCCC_Stage, Custom_ZCCC_VendorFloor, Custom_ZuzuCityStreet, Custom_Highway, Custom_ZCCC_Courtyard, BusStop",
+        "HasSeenEvent |contains=8185300": true,
+        "HasSeenEvent |contains=8185303": false
+      },
+      "Update": "OnLocationChange",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Cosplay.png"
+    },
+    {
+      //Scarlett's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Scarlett_Beach",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Beach.png"
+    },
+    {
+      //Scarlett's portraits
+      "Action": "Load",
+      "Target": "Portraits/Scarlett",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett.png"
+    },
+    {
+      //Fake Scarlett's sprites
+      "Action": "Load",
+      "Target": "Characters/Scarlett_Winter",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Fake Scarlett's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Scarlett_Winter",
+      "FromFile": "Assets/CharacterFiles/Portraits/Scarlett/Scarlett_Winter.png"
+    },
+    {
+      //Scarlett's beach portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Scarlett_Beach",
+      "FromFile": "assets/CharacterFiles/Portraits/Scarlett/Scarlett_Beach.png"
+    },
+    {
+      //Scarlett's cosplay portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Scarlett",
+      "When": {
+        "LocationName": "Custom_ZCCC_Entrance, Custom_ZCCC_FoodCourt, Custom_ZCCC_MainHall, Custom_ZCCC_Stage, Custom_ZCCC_VendorFloor, Custom_ZuzuCityStreet, Custom_Highway, Custom_ZCCC_Courtyard, BusStop"
+      },
+      "Update": "OnLocationChange",
+      "FromFile": "assets/CharacterFiles/Portraits/Scarlett/Scarlett_Cosplay.png"
+    },
+    {
+      //Scarlett's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Scarlett",
+      "FromFile": "assets/CharacterFiles/Schedules/Scarlett/Schedule.json",
+      "When": {
+        "HasSeenEvent": "3691371"
+      }
+    },
+    {
+      //Scarlett's fall blue moon vineyard farmhand schedule (Married to Sophia)
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Scarlett",
+      "When": {
+        "Season": "Fall",
+        "Spouse |contains=Sophia": true,
+        "Weather |contains=rain, storm": false,
+        "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "fall_Mon": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Tue": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Wed": "0 Custom_SophiaHouse 24 23 0/610 Custom_SophiaHouse 24 23 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/950 Custom_BlueMoonVineyard 27 33 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.000\"/1100 Custom_BlueMoonVineyard 18 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.001\"/1120 Custom_BlueMoonVineyard 15 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1150 Custom_BlueMoonVineyard 14 33 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.003\"/1220 Custom_BlueMoonVineyard 13 35 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1250 Custom_BlueMoonVineyard 22 35 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.005\"/1320 Custom_BlueMoonVineyard 20 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.006\"/1350 Custom_BlueMoonVineyard 14 37 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.007\"/1410 Custom_BlueMoonVineyard 15 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.008\"/1440 Custom_BlueMoonVineyard 23 41 2 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.009\"/1520 Custom_BlueMoonVineyard 21 43 0 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.004\"/1550 Custom_BlueMoonVineyard 20 32 1 \"Strings\\schedules\\Scarlett:BlueMoonVineyard.002\"/1630 Custom_SophiaHouse 15 24 1/1730 Custom_ScarlettHouse 3 5 3 scarlett_sleep",
+        "fall_Thu": "610 Custom_ScarlettHouse 8 6 2/910 Custom_ScarlettHouse 2 6 0/930 Custom_ScarlettHouse 7 4 0/1000 Custom_ScarlettHouse 9 21 0/1050 Custom_ScarlettHouse 7 21 2/1130 Custom_GrampletonSuburbs 21 15 0/1210 Custom_GrampletonSuburbs 10 26 2/1430 Custom_GrampletonSuburbs 37 25 0/1520 Custom_GrampletonSuburbs 44 14 2 scarlett_idle/1620 Custom_ScarlettHouse 10 6 0/1710 Custom_ScarlettHouse 14 20 2/1810 Custom_ScarlettHouse 6 21 2/1830 Custom_ScarlettHouse 8 21 0/1850 Custom_ScarlettHouse 8 6 2/1930 Custom_ScarlettHouse 7 9 2/1950 Custom_ScarlettHouse 6 9 0/2010 Custom_ScarlettHouse 7 9 2/2030 Custom_ScarlettHouse 20 20 0/2110 Custom_ScarlettHouse 10 6 2/2140 Custom_ScarlettHouse 3 5 3 scarlett_sleep"
+      }
+    },
+    {
+      //Scarlett's winter schedule - visits sophia on Saturdays (not on the 6th though)
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Scarlett",
+      "When": {
+        "Season": "Winter",
+        "HasSeenEvent |contains=3691371": true,
+        "Day |contains=6": false
+      },
+      "Entries": {
+        "winter_Sat": "0 Custom_SophiaHouse 24 6 0/610 Custom_SophiaHouse 24 6 3/800 Custom_SophiaHouse 23 23 2/1000 Custom_SophiaHouse 23 23 1/1030 Custom_BlueMoonVineyard 24 55 2 scarlett_idle/1300 Custom_SophiaHouse 19 7 1/1500 Custom_SophiaHouse 4 22 0/1600 Custom_SophiaHouse 17 21 0/1630 Custom_SophiaHouse 3 22 0/1700 Custom_SophiaHouse 17 21 0/1810 Custom_SophiaHouse 20 9 0/1840 Custom_SophiaHouse 23 23 1/1930 Custom_SophiaHouse 20 7 0/2040 Custom_SophiaHouse 21 7 3/2100 Custom_SophiaHouse 23 6 3 scarlett_sleep"
+      }
+    },
+  
+    //MOVIE THEATER DATA
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Scarlett": {
+          "Name": "Scarlett",
+          "LovedTags": [
+            "Popcorn",
+            "Candy",
+            "Fatty"
+          ],
+          "LikedTags": [
+            "Sour",
+            "Salty",
+            "Hot"
+          ],
+          "DislikedTags": [
+            "Healthy",
+            "Kale Smoothie",
+            "Gourmet",
+            "Jasmine Tea",
+            "Joja",
+            "Black Licorice"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Scarlett": {
+          "NPCName": "Scarlett",
+          "Reactions": [
+            {
+              "Tag": "spring_movie_0", //The Brave Little Sapling
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.01}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.02}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.03}}",
+                }
+              },
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "spring_movie_1", //Natural Wonders: Exploring Our Vibrant World
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.04}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.05}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.06}}",
+                }
+              },
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "summer_movie_0", //Journey Of The Prairie King: The Motion Picture
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.07}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "/jump Scarlett/pause 400/playSound reward/message \"{{i18n:Scarlett.Movies.08}}\"",
+                  "Text": ""
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.09}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "summer_movie_1", //Wumbus
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.10}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.11}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.12}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "fall_movie_0", //Mysterium
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.23}}", 
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.13}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.14}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "fall_movie_1", //It Howls In The Rain
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.15}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.16}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.17}}",
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "winter_movie_0", //The Miracle At Coldstar Ranch
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.18}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": ""
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.19}}",
+                }
+              },
+              "ID": "reaction_6"
+            },
+            {
+              "Tag": "winter_movie_1", //The Zuzu City Express
+              "Response": "hate",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.20}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "/shake Scarlett 1000/textAboveHead Scarlett \"{{i18n:Scarlett.Movies.21}}\"/pause 2500",
+                  "Text": ""
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Scarlett.Movies.22}}",
+                }
+              },
+              "ID": "reaction_7"
+            },
+          ]
+        }
+      }
+    },
+    //Grampleton Suburb patches
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Railroad",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsRailroadPatch.tbin",
+      "ToArea": {
+        "X": 38,
+        "Y": 39,
+        "Width": 2,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent": "3691371"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsDogAwake.tbin",
+      "ToArea": {
+        "X": 15,
+        "Y": 30,
+        "Width": 2,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=4, 5, 7, 11, 13, 14, 17, 23, 24, 26": false,
+        "Time": "{{Range: 600, 1050}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsDogSleeping.tbin",
+      "ToArea": {
+        "X": 25,
+        "Y": 32,
+        "Width": 2,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=4, 7, 11, 13, 17, 23, 27": false,
+        "Time": "{{Range: 1100, 1500}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsDogWantsAttention.tbin",
+      "ToArea": {
+        "X": 31,
+        "Y": 32,
+        "Width": 3,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=1, 4, 6, 7, 11, 13, 17, 19, 23, 27, 28": false,
+        "Time": "{{Range: 1510, 1900}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsOldMan.tbin",
+      "ToArea": {
+        "X": 20,
+        "Y": 32,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=2, 4, 7, 9, 12, 13, 14, 18, 19, 21, 23, 24, 26": false,
+        "Time": "{{Range: 1200, 1800}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsFarmerGirl.tbin",
+      "ToArea": {
+        "X": 49,
+        "Y": 33,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27": false,
+        "Time": "{{Range: 600, 1330}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsSiloGuy.tbin",
+      "ToArea": {
+        "X": 55,
+        "Y": 20,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28": false,
+        "Time": "{{Range: 1030, 1540}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrampletonSuburbs",
+      "FromFile": "Assets/Maps/MapPatches/GrampletonSuburbsRiverGuy.tbin",
+      "ToArea": {
+        "X": 10,
+        "Y": 7,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "Season |contains=Winter": false,
+        "Weather |contains=Rain, Storm": false,
+        "Day |contains=3, 4, 5, 6, 8, 12, 14, 15, 16, 17, 20, 23, 25, 26, 28": false,
+        "Time": "{{Range: 1400, 1800}}"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_HanksGarage",
+      "FromFile": "Assets/Maps/MapPatches/HanksGarageNight.tmx",
+      "When": {
+        "Time": "{{Range: 1800, 2600}}"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 15,
+        "Height": 13
+      },
+      "Update": "OnLocationChange"
+    },
+    //////// Scarlett events //////////
+    {
+      //Scarlett becomes a real NPC (catch event) - conditions: Player has seen Sophia's 8 heart event, player completed the community center/joja route, 
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "When": {
+        "HasSeenEvent |contains=8185295": true,
+        "HasSeenEvent |contains=191393, 502261": true
+      },
+      "Entries": {
+        "3691371/": "continue/-200 -200 0/Scarlett -10 -10 0/pause 50/end"
+      }
+    },
+    {
+      //Scarlett 0 heart event - 'The Seasonal Farmhand'
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasSeenEvent": "3691371"
+      }, //forces this event to play the next day to give time for other things to load in
+      "Entries": {
+        "3691372/t 600 2000": "continue/-500 -500/farmer -10 -10 2 Scarlett -12 -12 0/pause 1000/addConversationTopic ScarlettFarmhand/skippable/speak Scarlett \"{{i18n:Scarlett.Farmhand.01}}\"/pause 500/emote farmer 32/pause 150/speak Scarlett \"{{i18n:Scarlett.Farmhand.02}}\"/pause 850/end dialogue Scarlett \"{{i18n:Scarlett.Farmhand.03}}\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Andy",
+      "Entries": {
+        "ScarlettFarmhand": "{{i18n:Scarlett.Farmhand.Andy}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Susan",
+      "Entries": {
+        "ScarlettFarmhand": "{{i18n:Scarlett.Farmhand.Susan}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/Sophia",
+      "Entries": {
+        "ScarlettFarmhand": "{{i18n:Scarlett.Farmhand.Sophia}}",
+      }
+    },
+    //FARMHAND EVENTS (3)
+    {
+      //Scarlett event - working at fairhaven farm [spring]
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Entries": {
+        "3691382/e 5407915/f Scarlett 125/t 600 1800/w sunny/z summer/z fall/z winter": "none/-500 -500/farmer 72 74 3 Scarlett 70 64 1 Andy 67 66 1 Wizard 4 24 3 Leah 111 32 0 Marnie 80 15 1 Shane 82 15 3/addTemporaryActor StrawberryCart 50 40 68 63 2 false/positionOffset StrawberryCart -12 -10 true/animate Scarlett false true 500 20 21/pause 650/playMusic distantBanjo/pause 500/viewport 63 61 true/viewport move 1 1 6000 true/skippable/move farmer -4 0 0/move farmer 0 -4 3/move farmer -1 0 0/move farmer 0 -2 0/pause 1000/faceDirection Andy 2 true/pause 500/speak Andy \"{{i18n:Scarlett.Fairhaven.01}}\"/pause 500/emote farmer 32/pause 350/speak Andy \"{{i18n:Scarlett.Fairhaven.02}}\"/pause 650/stopAnimation Scarlett/pause 400/showFrame Scarlett 4 true/pause 500/faceDirection Scarlett 2 true/pause 333/move Scarlett 0 3 3/move Scarlett -1 0 3/pause 450/faceDirection Andy 1 true/pause 400/faceDirection farmer 1 true/pause 350/speak Scarlett \"{{i18n:Scarlett.Fairhaven.03}}\"/pause 500/animate farmer false true 1000 97/pause 1000/stopAnimation farmer/pause 700/faceDirection Andy 2 true/pause 400/faceDirection farmer 0 true/pause 400/speak Andy \"{{i18n:Scarlett.Fairhaven.04}}\"/pause 500/question fork0 \"{{i18n:Scarlett.Fairhaven.05}}\"/fork 3691382_HelpAndy/pause 650/speak Andy \"{{i18n:Scarlett.Fairhaven.06}}\"/pause 500/faceDirection Andy 1 true/pause 1000/faceDirection Andy 2 true/pause 600/speak Andy \"{{i18n:Scarlett.Fairhaven.07}}\"/pause 400/shake Scarlett 400/pause 300/speak Scarlett \"{{i18n:Scarlett.Fairhaven.08}}\"/pause 350/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/end dialogue Andy \"{{i18n:Scarlett.Fairhaven.09}}\"",
+        "3691382_HelpAndy": "pause 500/jump Scarlett/pause 750/faceDirection Andy 1 true/pause 400/faceDirection farmer 1 true/pause 400/speak Scarlett \"{{i18n:Scarlett.Fairhaven.3691382_HelpAndy.01}}\"/pause 500/faceDirection Andy 2 true/pause 500/faceDirection farmer 0 true/pause 325/speak Andy \"{{i18n:Scarlett.Fairhaven.3691382_HelpAndy.02}}\"/pause 300/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_AndyCellar/warp Andy 7 5/faceDirection Andy 1 true/warp Scarlett 10 5/warp farmer 9 6/faceDirection farmer 3 true/warp StrawberryCart 10 4/positionOffset StrawberryCart -7 20 true/playMusic 50s/pause 550/viewport 7 6 true/pause 1000/speak Andy \"{{i18n:Scarlett.Fairhaven.3691382_HelpAndy.03}}\"/pause 300/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.Fairhaven.3691382_HelpAndy.04}}\"/pause 600/faceDirection Andy 2 true/pause 250/faceDirection Andy 3 true/pause 500/advancedMove Andy false -3 0 0 5 2 500 3 2000 0 -2 4 350 3 1500/pause 500/advancedMove farmer false -2 0 0 3 2 400 1 1300 0 1 2 400 1 2000/pause 250/faceDirection Scarlett 2 true/pause 500/advancedMove Scarlett false 0 6 2 300 1 1300 0 -1 1 1500 0 -1 1 1000/pause 2300/playSound Ship/pause 600/playSound Ship/pause 500/playSound bubbles/pause 400/playSound Ship/pause 500/playSound bubbles/pause 300/playSound Ship/pause 600/playSound Ship/playSound bubbles/globalFade/viewport -1000 -1000/pause 1000/speak Andy \"{{i18n:Scarlett.Fairhaven.3691382_HelpAndy.05}}\"/pause 500/mail AndyPaycheck/addConversationTopic scarlettFairhavenFarm/end",
+      }
+    },
+    { //Strawberry Cart temp actor (50x40)
+      "Action": "Load",
+      "Target": "Characters/StrawberryCart",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/StrawberryCart.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/scarlett",
+      "Entries": {
+        "scarlettFairhavenFarm": "{{i18n:Scarlett.Fairhaven.CT.01}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/andy",
+      "Entries": {
+        "scarlettFairhavenFarm": "{{i18n:Scarlett.Fairhaven.CT.02}}",
+      }
+    },
+    {
+      //Scarlett event - working at emerald farm [summer]
+      "Action": "EditData",
+      "Target": "Data/Events/Railroad",
+      "Entries": {
+        "3691381/f Scarlett 125/t 600 1800/w sunny/z spring/z fall/z winter": "none/-500 -500/farmer 37 52 1 Scarlett 52 52 2 Susan 53 52 2 Linus 58 1 2 MarlonFay 14 20 0/addTemporaryActor GilSprite 16 32 15 19 2/pause 650/playMusic kindadumbautumn/pause 500/animate Scarlett false true 500 22 23/animate Susan false true 457 18 19/move farmer 12 0 1 true/viewport 52 53 clamp true/skippable/pause 1200/speak Susan \"{{i18n:Scarlett.Emerald.01}}\"/pause 150/speak Scarlett \"{{i18n:Scarlett.Emerald.02}}\"/pause 200/speak Susan \"{{i18n:Scarlett.Emerald.03}}\"/pause 750/stopAnimation Scarlett/pause 500/showFrame Scarlett 0 true/pause 500/faceDirection Scarlett 3 true/pause 300/speak Scarlett \"{{i18n:Scarlett.Emerald.04}}\"/pause 500/stopAnimation Susan/pause 457/showFrame Susan 0 true/pause 800/faceDirection Susan 3 true/pause 300/faceDirection Susan 0 true/pause 350/move Susan 0 -1 3/move Susan -1 0 3/pause 500/speak Susan \"{{i18n:Scarlett.Emerald.05}}\"/pause 500/faceDirection Scarlett 0 true/pause 600/speak Scarlett \"{{i18n:Scarlett.Emerald.06}}\"/pause 600/faceDirection Susan 2 true/pause 500/speak Susan \"{{i18n:Scarlett.Emerald.07}}\"/pause 500/faceDirection Susan 3 true/pause 600/move Susan -14 0 0 true/pause 600/faceDirection Scarlett 3 true/pause 950/faceDirection farmer 0 true/pause 700/faceDirection farmer 3 true/pause 1250/globalFade/viewport -1000 -1000/warp Susan -60 -60/viewport 52 53 clamp true/pause 1000/speed Scarlett 1/move Scarlett -1 0 3 true/pause 650/faceDirection farmer 0 true/pause 250/faceDirection farmer 1 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.Emerald.08}}\"/pause 400/showFrame Susan 0 true/pause 400/speak Scarlett \"{{i18n:Scarlett.Emerald.09}}\"/pause 650/emote Scarlett 40/pause 250/speak Scarlett \"{{i18n:Scarlett.Emerald.10}}\"/pause 500/viewport move -1 0 3500 true/pause 500/emote farmer 32 true/pause 500/emote Scarlett 32 true/pause 3000/warp Susan 38 51/playSound doorClose/pause 700/faceDirection Susan 1 true/pause 300/faceDirection farmer 0 true/pause 250/faceDirection Scarlett 0 true/faceDirection farmer 3 true/pause 500/move Scarlett 0 -1 3/pause 350/speak Susan \"{{i18n:Scarlett.Emerald.11}}\"/pause 600/jump Scarlett/pause 600/move Scarlett -13 0 3 true/pause 600/viewport move -1 0 7000 true/pause 650/move farmer -11 0 3 true/pause 1000/faceDirection Susan 0 true/pause 1000/warp Susan -20 -20/playSound doorClose/pause 800/globalFade/viewport -1000 -1000/friendship Scarlett 50/friendship Susan 50/addConversationTopic scarlettEmeraldFarm/pause 500/stopMusic/pause 750/end",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/scarlett",
+      "Entries": {
+        "scarlettEmeraldFarm": "{{i18n:Scarlett.Emerald.CT.01}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/susan",
+      "Entries": {
+        "scarlettEmeraldFarm": "{{i18n:Scarlett.Emerald.CT.02}}"
+      }
+    },
+    {
+      //Scarlett event - working at blue moon vineyard [fall]
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "Entries": {
+        "3691380/f Scarlett 125/t 600 1800/w sunny/z spring/z summer/z winter": "none/-500 -500/farmer 28 50 0 Scarlett -23 -23 0 Sophia 28 38 0/addTemporaryActor ScarlettBarrel 40 50 28 36 2 false/positionOffset ScarlettBarrel -25 -5 true/animate ScarlettBarrel false true 250 0 1 2 3/pause 650/playMusic ragtime/pause 500/viewport 28 37 true/skippable/pause 300/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 400/speak Sophia \"{{i18n:Scarlett.Bluemoon.01}}\"/pause 600/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 300/speak Scarlett \"{{i18n:Scarlett.Bluemoon.02}}\"/move farmer 0 -10 0 true/pause 400/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 800/stopAnimation ScarlettBarrel/pause 250/showFrame ScarlettBarrel 0 true/pause 800/speak Scarlett \"{{i18n:Scarlett.Bluemoon.03}}\"/pause 800/faceDirection Sophia 1 true/pause 300/faceDirection Sophia 2 true/pause 800/playSound dwop/showFrame Sophia 39 true/pause 1000/speak Sophia \"{{i18n:Scarlett.Bluemoon.04}}\"/pause 750/showFrame Sophia 0 true/pause 650/speak Sophia \"{{i18n:Scarlett.Bluemoon.05}}\"/pause 500/emote farmer 32/pause 250/globalFade/viewport -1000 -1000/warp ScarlettBarrel -30 -30/warp Scarlett 28 38/positionOffset Scarlett -10 7 true/warp Sophia 29 38/warp farmer 28 35/positionOffset farmer 28 2 true/faceDirection farmer 2 true/faceDirection Sophia 0 true/addTemporaryActor ScarlettBarrel2 40 250 28 33 2 false/positionOffset ScarlettBarrel2 -25 -5 true/viewport 28 37 true/animate farmer false true 250 0 1 0 2/pause 400/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 800/playSound slimedead/pause 400/speak Scarlett \"{{i18n:Scarlett.Bluemoon.06}}\"/pause 500/stopAnimation farmer/pause 250/showFrame farmer 0 true/pause 1000/playSound dwop/showFrame farmer 3 true/pause 1100/showFrame farmer 0 true/pause 750/jump farmer/pause 600/playSound slimedead/playSound slimedead/jump farmer/pause 600/playSound slimedead/playSound slimedead/jump farmer/pause 600/playSound slimedead/playSound slimedead/jump farmer/pause 600/playSound slimedead/playSound slimedead/emote Sophia 16 true/jump farmer/pause 600/playSound slimedead/playSound slimedead/emote Scarlett 16 true/jump farmer/pause 600/playSound slimedead/playSound slimedead/jump farmer/globalFade/viewport -1000 -1000/pause 750/stopMusic/pause 1000/friendship Scarlett 50/friendship Sophia 50/addConversationTopic stompedGrapes/end",
+      }
+    },
+    { //Grape Barrel temp actor (40x50)
+      "Action": "Load",
+      "Target": "Characters/ScarlettBarrel",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ScarlettBarrel.png"
+    },
+    { //Grape Barrel 2 temp actor (40x250)
+      "Action": "Load",
+      "Target": "Characters/ScarlettBarrel2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ScarlettBarrel2.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/scarlett",
+      "Entries": {
+        "stompedGrapes": "{{i18n:Scarlett.Bluemoon.CT.01}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "characters/dialogue/sophia",
+      "Entries": {
+        "stompedGrapes": "{{i18n:Scarlett.Bluemoon.CT.02}}",
+      }
+    },
+    //GRAMPLETON SUBURB EVENTS (3)	
+    {
+      //Catch event - player has entered the grampleton suburbs [event ID tagged to patch Treyvon's and Hank's real dialogues. This is my hacky way of giving a non-social NPC introduction dialogue. Seems to work fine!]
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_GrampletonSuburbsTrainStation",
+      "Entries": {
+        "3691373/t 600 2200": "continue/-500 -500/farmer -10 -10 2/pause 50/end"
+      }
+    },
+    {
+      //Scarlett 2 heart event - 'The Pondwood Suburbs Bulletin Board'
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_GrampletonSuburbs",
+      "Entries": {
+        "3691374/f Scarlett 500/t 600 1900/w sunny": "none/-500 -500/farmer 37 33 0 Scarlett 37 25 0/addTemporaryActor ZoomingKatie 32 24 -20 -20 1/addTemporaryActor ZoomieDoggoOwner 16 32 -18 -18 1/positionOffset Scarlett -20 -4 true/pause 750/playMusic breezy/skippable/pause 500/viewport 37 26 clamp true/move farmer 0 -6 0 true/pause 1750/textAboveHead Scarlett \"{{i18n:Scarlett.2hearts.01}}\"/pause 3000/jump farmer/pause 850/faceDirection Scarlett 1 true/pause 250/faceDirection Scarlett 2 true/pause 500/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.2hearts.02}}\"/pause 650/faceDirection Scarlett 3 true/pause 500/speak Scarlett \"{{i18n:Scarlett.2hearts.03}}\"/pause 500/emote farmer 32/pause 300/faceDirection Scarlett 2 true/pause 500/speak Scarlett \"{{i18n:Scarlett.2hearts.04}}\"/pause 1000/speak Scarlett \"{{i18n:Scarlett.2hearts.05}}\"/pause 600/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.2hearts.06}}\"/playMusic event1/playSound dog_bark/pause 500/playSound dog_bark/faceDirection Scarlett 1 true/pause 500/faceDirection farmer 1 true/pause 300/speak Scarlett \"{{i18n:Scarlett.2hearts.07}}\"/warp ZoomingKatie 64 26/speed ZoomingKatie 7/move ZoomingKatie -100 0 1 true/pause 700/warp ZoomieDoggoOwner 64 26/speed ZoomieDoggoOwner 7/move ZoomieDoggoOwner -100 0 1 true/pause 1950/textAboveHead ZoomieDoggoOwner \"{{i18n:Scarlett.2hearts.08}}\"/pause 300/playSound dog_bark/pause 500/faceDirection Scarlett 2 true/pause 400/faceDirection farmer 0 true/pause 200/faceDirection Scarlett 3 true/pause 300/faceDirection farmer 3 true/pause 400/jump Scarlett/pause 750/textAboveHead Scarlett \"{{i18n:Scarlett.2hearts.09}}\"/speed Scarlett 7/move Scarlett -100 0 1 true/pause 350/playSound dog_bark/pause 900/faceDirection farmer 2 true/pause 500/animate farmer false true 500 102 103/pause 1250/globalFade/viewport -1000 -1000/pause 750/stopMusic/pause 750/end dialogue Scarlett \"{{i18n:Scarlett.2hearts.10}}\"",
+      }
+    },
+    { //doggo temp actor (32x24)
+      "Action": "Load",
+      "Target": "Characters/ZoomingKatie",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingKatie.png"
+    },
+    { //doggo owner temp actor (16x32)
+      "Action": "Load",
+      "Target": "Characters/ZoomieDoggoOwner",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomieDoggoOwner.png"
+    },
+    {
+      //Scarlett 4 heart event - 'In The Garage'
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ScarlettHouse",
+      "When": {
+        "HasSeenEvent": "3691374"
+      },
+      "Entries": {
+        "3691375/f Scarlett 1000/t 600 2100": "none/-500 -500/farmer 13 23 3 Scarlett -30 -30 0/addTemporaryActor HankSVE 16 32 7 21 0/pause 650/playMusic distantBanjo/pause 500/viewport 9 22 true/skippable/move farmer -6 0 0 true/pause 1750/faceDirection HankSVE 1 true/pause 250/faceDirection HankSVE 2 true/pause 350/message \"{{i18n:Scarlett.4hearts.01}}\"/pause 800/emote farmer 40/pause 850/message \"{{i18n:Scarlett.4hearts.02}}\"/pause 700/emote farmer 32/pause 800/faceDirection HankSVE 1 true/pause 250/faceDirection HankSVE 0 true/pause 800/faceDirection farmer 3 true/pause 500/move farmer -4 0 3/pause 300/faceDirection farmer 0 true/pause 1000/warp farmer -20 -20/playSound doorClose/pause 800/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_HanksGarage/playMusic 50s/warp HankSVE -50 -50/warp Scarlett 6 5/faceDirection Scarlett 0 true/positionOffset Scarlett -8 -16 true/showFrame Scarlett 29 true/warp farmer 13 4/faceDirection farmer 3 true/viewport 6 6 true/move farmer -4 0 2 true/pause 700/playSound clank/shake Scarlett 300/pause 800/playSound clank/shake Scarlett 350/pause 450/move farmer 0 1 3 true/pause 1300/showFrame Scarlett 8 true/pause 550/faceDirection Scarlett 1 true/pause 500/speak Scarlett \"{{i18n:Scarlett.4hearts.03}}\"/pause 600/faceDirection Scarlett 0 true/pause 700/move farmer -2 0 3/pause 250/faceDirection farmer 0 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.4hearts.04}}\"/pause 700/faceDirection Scarlett 1 true/pause 500/faceDirection farmer 3 true/pause 600/speak Scarlett \"{{i18n:Scarlett.4hearts.05}}\"/pause 700/faceDirection Scarlett 2 true/pause 1000/faceDirection farmer 2 true/pause 550/speak Scarlett \"{{i18n:Scarlett.4hearts.06}}\"/pause 1000/faceDirection Scarlett 1 true/pause 300/faceDirection Scarlett 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote Scarlett 40/pause 650/faceDirection Scarlett 1 true/pause 500/speak Scarlett \"{{i18n:Scarlett.4hearts.07}}\"/pause 600/showFrame farmer 97 true/pause 1150/showFrame farmer 6 true/pause 500/faceDirection Scarlett 0 true/pause 350/faceDirection farmer 2 true/pause 250/move farmer 0 1 3/move farmer -3 0 0/move farmer 0 -1 0/pause 1000/showFrame farmer 15 true/pause 650/playSound dwop/pause 400/showFrame farmer 12 true/pause 500/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 300/move farmer 0 1 1/move farmer 3 0 0/move farmer 0 -1 0/pause 500/faceDirection farmer 3 true/pause 650/faceDirection Scarlett 1 true/pause 650/showFrame farmer 7 true/pause 400/playSound money/pause 400/showFrame farmer 6 true/pause 600/emote Scarlett 32/pause 650/faceDirection Scarlett 0 true/pause 500/speak Scarlett \"{{i18n:Scarlett.4hearts.08}}\"/pause 500/faceDirection farmer 0 true/pause 650/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 800/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 60/positionOffset farmer -1 -1 true/pause 1000/globalFade/viewport -1000 -1000/stopMusic/pause 1600/speak Scarlett \"{{i18n:Scarlett.4hearts.09}}\"/pause 1000/end dialogueWarpOut Scarlett \"{{i18n:Scarlett.4hearts.10}}\"",
+      }
+    },
+    {
+      //Player can now enter the garage
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ScarlettHouse",
+      "FromFile": "assets/Maps/MapPatches/ScarlettHouse_GarageOpen.tmx",
+      "ToArea": {
+        "X": 3,
+        "Y": 22,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent": "3691375"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      //Scarlett 6 heart event - 'Show Responsibility' (sunny - day)
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ScarlettHouse",
+      "When": {
+        "HasSeenEvent": "3691375"
+      },
+      "Entries": {
+        "3691376/f Scarlett 1500/t 600 1800/w sunny": "none/-500 -500/farmer -20 -20 0 Scarlett 2 6 0/doAction 10 13/addTemporaryActor Treyvon 16 32 15 14 3/pause 650/playMusic jaunty/pause 500/viewport 10 15 true/viewport move 0 -1 6000 true/skippable/move Treyvon -5 0 0 true/pause 2550/move Treyvon 0 -7 3 true/pause 4000/warp farmer 20 28/advancedMove farmer false 0 -6 -3 0 0 -8 -6 0 2 10000/pause 800/message \"{{i18n:Scarlett.6hearts.01}}\"/pause 1000/faceDirection Scarlett 1 true/pause 600/emote Scarlett 16/pause 400/faceDirection Scarlett 2 true/pause 500/move Scarlett 0 1 2 true/pause 400/move Scarlett 6 0 1 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.02}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.03}}\"/pause 700/jump Scarlett/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.04}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.05}}\"/pause 550/speak Scarlett \"{{i18n:Scarlett.6hearts.06}}\"/pause 1000/stopMusic/pause 750/showFrame Treyvon 0 true/pause 850/showFrame Treyvon 19 true/pause 1250/message \"{{i18n:Scarlett.6hearts.07}}\"/pause 600/shake Scarlett 500/pause 400/playMusic shaneTheme/pause 300/speak Scarlett \"{{i18n:Scarlett.6hearts.08}}\"/pause 500/showFrame Treyvon 2 true/pause 500/showFrame Treyvon 12 true/pause 650/shake Treyvon 650/pause 450/message \"{{i18n:Scarlett.6hearts.09}}\"/pause 650/shake Treyvon 500/pause 350/message \"{{i18n:Scarlett.6hearts.10}}\"/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.11}}\"/pause 500/emote farmer 28/pause 250/message \"{{i18n:Scarlett.6hearts.12}}\"/pause 750/emote Treyvon 40/pause 600/message \"{{i18n:Scarlett.6hearts.13}}\"/pause 750/faceDirection Scarlett 2 true/pause 500/showFrame Scarlett 17 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.14}}\"/pause 1500/message \"{{i18n:Scarlett.6hearts.15}}\"/pause 150/showFrame Scarlett 0 true/pause 150/jump Scarlett/pause 100/showFrame Scarlett 16 true/pause 1500/showFrame Scarlett 0 true/pause 400/faceDirection Scarlett 1 true/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.16}}\"/pause 300/shake Treyvon 750/pause 200/showFrame Treyvon 18 true/emote Treyvon 16 true/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.17}}\"/pause 250/emote farmer 16/pause 100/faceDirection farmer 1 true/pause 250/advancedMove farmer false 5 0 0 10/pause 300/faceDirection Treyvon 3 true/pause 300/advancedMove Scarlett false 1 0 0 1 1 0 0 6 7 0/pause 900/faceDirection Treyvon 2 true/pause 1500/shake Treyvon 500/textAboveHead Treyvon \"{{i18n:Scarlett.6hearts.18}}\"/pause 650/move Treyvon 0 7 1 true/pause 1000/globalFade/viewport -1000 -1000/halt/warp Treyvon -200 -200/stopMusic/pause 1500/message \"{{i18n:Scarlett.6hearts.19}}\"/playMusic spring_day_ambient/changeLocation Custom_GrampletonSuburbs/showFrame Scarlett 0 true/warp farmer 38 12/faceDirection farmer 3 true/viewport 36 17 true/pause 2000/faceDirection farmer 2 true/pause 1000/warp Scarlett 36 17/playSound doorClose/pause 1000/shake Scarlett 500/pause 500/showFrame Scarlett 17 true/pause 1000/move farmer 0 1 1/move farmer 1 0 2/playSound leafrustle/pause 750/playSound leafrustle/pause 250/showFrame Scarlett 0 true/pause 500/showFrame Scarlett 19 true/pause 500/emote Scarlett 8/pause 600/showFrame Scarlett 4 true/pause 800/viewport move 2 0 1500 true/move Scarlett 3 0 0/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.20}}\"/pause 500/emote farmer 28/move farmer 2 0 2/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.21}}\"/pause 1000/showFrame Scarlett 4 true/pause 250/showFrame Scarlett 0 true/pause 1000/showFrame Scarlett 17 true/pause 1350/move farmer 0 4 2/pause 250/faceDirection farmer 3 true/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.22}}\"/pause 500/shake Scarlett 500/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.23}}\"/pause 1250/playMusic echos/pause 850/speak Scarlett \"{{i18n:Scarlett.6hearts.24}}\"/pause 500/emote farmer 60/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.25}}\"/pause 1500/emote Scarlett 40/pause 500/speak Scarlett \"{{i18n:Scarlett.6hearts.26}}\"/pause 1000/showFrame Scarlett 0 true/pause 900/showFrame Scarlett 4 true/pause 650/speak Scarlett \"{{i18n:Scarlett.6hearts.27}}\"/pause 850/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 500/emote Scarlett 32/pause 750/showFrame Scarlett 0 true/pause 500/viewport move 0 1 5000 true/advancedMove Scarlett false 0 2 -3 0 0 1 -8 0/pause 500/advancedMove farmer false -2 0 0 2 -3 0 0 1 -1 0/pause 2000/globalFade/viewport -1000 -1000/pause 1000/stopMusic/pause 750/end dialogue Scarlett \"{{i18n:Scarlett.6hearts.28}}\""
+      }
+    },
+    {
+      //Scarlett 6 heart event - 'Show Responsibility' (sunny - night)
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ScarlettHouse",
+      "When": {
+        "HasSeenEvent": "3691375"
+      },
+      "Entries": {
+        "3691376/f Scarlett 1500/t 1810 2300/w sunny": "none/-500 -500/farmer -20 -20 0 Scarlett 2 6 0/doAction 10 13/addTemporaryActor Treyvon 16 32 15 14 3/pause 650/playMusic jaunty/pause 500/viewport 10 15 true/viewport move 0 -1 6000 true/skippable/move Treyvon -5 0 0 true/pause 2550/move Treyvon 0 -7 3 true/pause 4000/warp farmer 20 28/advancedMove farmer false 0 -6 -3 0 0 -8 -6 0 2 10000/pause 800/message \"{{i18n:Scarlett.6hearts.01}}\"/pause 1000/faceDirection Scarlett 1 true/pause 600/emote Scarlett 16/pause 400/faceDirection Scarlett 2 true/pause 500/move Scarlett 0 1 2 true/pause 400/move Scarlett 6 0 1 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.02}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.03}}\"/pause 700/jump Scarlett/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.04}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.05}}\"/pause 550/speak Scarlett \"{{i18n:Scarlett.6hearts.06}}\"/pause 1000/stopMusic/pause 750/showFrame Treyvon 0 true/pause 850/showFrame Treyvon 19 true/pause 1250/message \"{{i18n:Scarlett.6hearts.07}}\"/pause 600/shake Scarlett 500/pause 400/playMusic shaneTheme/pause 300/speak Scarlett \"{{i18n:Scarlett.6hearts.08}}\"/pause 500/showFrame Treyvon 2 true/pause 500/showFrame Treyvon 12 true/pause 650/shake Treyvon 650/pause 450/message \"{{i18n:Scarlett.6hearts.09}}\"/pause 650/shake Treyvon 500/pause 350/message \"{{i18n:Scarlett.6hearts.10}}\"/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.11}}\"/pause 500/emote farmer 28/pause 250/message \"{{i18n:Scarlett.6hearts.12}}\"/pause 750/emote Treyvon 40/pause 600/message \"{{i18n:Scarlett.6hearts.13}}\"/pause 750/faceDirection Scarlett 2 true/pause 500/showFrame Scarlett 17 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.14}}\"/pause 1500/message \"{{i18n:Scarlett.6hearts.15}}\"/pause 150/showFrame Scarlett 0 true/pause 150/jump Scarlett/pause 100/showFrame Scarlett 16 true/pause 1500/showFrame Scarlett 0 true/pause 400/faceDirection Scarlett 1 true/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.16}}\"/pause 300/shake Treyvon 750/pause 200/showFrame Treyvon 18 true/emote Treyvon 16 true/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.17}}\"/pause 250/emote farmer 16/pause 100/faceDirection farmer 1 true/pause 250/advancedMove farmer false 5 0 0 10/pause 300/faceDirection Treyvon 3 true/pause 300/advancedMove Scarlett false 1 0 0 1 1 0 0 6 7 0/pause 900/faceDirection Treyvon 2 true/pause 1500/shake Treyvon 500/textAboveHead Treyvon \"{{i18n:Scarlett.6hearts.18}}\"/pause 650/move Treyvon 0 7 1 true/pause 1000/globalFade/viewport -1000 -1000/halt/warp Treyvon -200 -200/stopMusic/pause 1500/message \"{{i18n:Scarlett.6hearts.19}}\"/playMusic nightTime/changeLocation Custom_GrampletonSuburbs/showFrame Scarlett 0 true/warp farmer 38 12/faceDirection farmer 3 true/viewport 36 17 true/pause 2000/faceDirection farmer 2 true/pause 1000/warp Scarlett 36 17/playSound doorClose/pause 1000/shake Scarlett 500/pause 500/showFrame Scarlett 17 true/pause 1000/move farmer 0 1 1/move farmer 1 0 2/playSound leafrustle/pause 750/playSound leafrustle/pause 250/showFrame Scarlett 0 true/pause 500/showFrame Scarlett 19 true/pause 500/emote Scarlett 8/pause 600/showFrame Scarlett 4 true/pause 800/viewport move 2 0 1500 true/move Scarlett 3 0 0/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.20}}\"/pause 500/emote farmer 28/move farmer 2 0 2/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.21}}\"/pause 1000/showFrame Scarlett 4 true/pause 250/showFrame Scarlett 0 true/pause 1000/showFrame Scarlett 17 true/pause 1350/move farmer 0 4 2/pause 250/faceDirection farmer 3 true/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.22}}\"/pause 500/shake Scarlett 500/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.23}}\"/pause 1250/playMusic echos/pause 850/speak Scarlett \"{{i18n:Scarlett.6hearts.24}}\"/pause 500/emote farmer 60/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.25}}\"/pause 1500/emote Scarlett 40/pause 500/speak Scarlett \"{{i18n:Scarlett.6hearts.26}}\"/pause 1000/showFrame Scarlett 0 true/pause 900/showFrame Scarlett 4 true/pause 650/speak Scarlett \"{{i18n:Scarlett.6hearts.27}}\"/pause 850/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 500/emote Scarlett 32/pause 750/showFrame Scarlett 0 true/pause 500/viewport move 0 1 5000 true/advancedMove Scarlett false 0 2 -3 0 0 1 -8 0/pause 500/advancedMove farmer false -2 0 0 2 -3 0 0 1 -1 0/pause 2000/globalFade/viewport -1000 -1000/pause 1000/stopMusic/pause 750/end dialogue Scarlett \"{{i18n:Scarlett.6hearts.28}}\""
+      }
+    },
+    {
+      //Scarlett 6 heart event - 'Show Responsibility' (raining)
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_ScarlettHouse",
+      "When": {
+        "HasSeenEvent": "3691375"
+      },
+      "Entries": {
+        "3691376/f Scarlett 1500/t 600 1800/w rainy": "none/-500 -500/farmer -20 -20 0 Scarlett 2 6 0/doAction 10 13/addTemporaryActor Treyvon 16 32 15 14 3/pause 650/playMusic jaunty/pause 500/viewport 10 15 true/viewport move 0 -1 6000 true/skippable/move Treyvon -5 0 0 true/pause 2550/move Treyvon 0 -7 3 true/pause 4000/warp farmer 20 28/advancedMove farmer false 0 -6 -3 0 0 -8 -6 0 2 10000/pause 800/message \"{{i18n:Scarlett.6hearts.01}}\"/pause 1000/faceDirection Scarlett 1 true/pause 600/emote Scarlett 16/pause 400/faceDirection Scarlett 2 true/pause 500/move Scarlett 0 1 2 true/pause 400/move Scarlett 6 0 1 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.02}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.03}}\"/pause 700/jump Scarlett/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.04}}\"/pause 1000/message \"{{i18n:Scarlett.6hearts.05}}\"/pause 550/speak Scarlett \"{{i18n:Scarlett.6hearts.06}}\"/pause 1000/stopMusic/pause 750/showFrame Treyvon 0 true/pause 850/showFrame Treyvon 19 true/pause 1250/message \"{{i18n:Scarlett.6hearts.07}}\"/pause 600/shake Scarlett 500/pause 400/playMusic shaneTheme/pause 300/speak Scarlett \"{{i18n:Scarlett.6hearts.08}}\"/pause 500/showFrame Treyvon 2 true/pause 500/showFrame Treyvon 12 true/pause 650/shake Treyvon 650/pause 450/message \"{{i18n:Scarlett.6hearts.09}}\"/pause 650/shake Treyvon 500/pause 350/message \"{{i18n:Scarlett.6hearts.10}}\"/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.11}}\"/pause 500/emote farmer 28/pause 250/message \"{{i18n:Scarlett.6hearts.12}}\"/pause 750/emote Treyvon 40/pause 600/message \"{{i18n:Scarlett.6hearts.13}}\"/pause 750/faceDirection Scarlett 2 true/pause 500/showFrame Scarlett 17 true/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.14}}\"/pause 1500/message \"{{i18n:Scarlett.6hearts.15}}\"/pause 150/showFrame Scarlett 0 true/pause 150/jump Scarlett/pause 100/showFrame Scarlett 16 true/pause 1500/showFrame Scarlett 0 true/pause 400/faceDirection Scarlett 1 true/pause 250/speak Scarlett \"{{i18n:Scarlett.6hearts.16}}\"/pause 300/shake Treyvon 750/pause 200/showFrame Treyvon 18 true/emote Treyvon 16 true/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.17}}\"/pause 250/emote farmer 16/pause 100/faceDirection farmer 1 true/pause 250/advancedMove farmer false 5 0 0 10/pause 300/faceDirection Treyvon 3 true/pause 300/advancedMove Scarlett false 1 0 0 1 1 0 0 6 7 0/pause 900/faceDirection Treyvon 2 true/pause 1500/shake Treyvon 500/textAboveHead Treyvon \"{{i18n:Scarlett.6hearts.18}}\"/pause 650/move Treyvon 0 7 1 true/pause 1000/globalFade/viewport -1000 -1000/halt/warp Treyvon -200 -200/stopMusic/pause 1500/message \"{{i18n:Scarlett.6hearts.19}}\"/playMusic rain/changeLocation Custom_GrampletonSuburbs/showFrame Scarlett 0 true/warp farmer 38 12/faceDirection farmer 3 true/viewport 36 17 true/pause 2000/faceDirection farmer 2 true/pause 1000/warp Scarlett 36 17/playSound doorClose/pause 1000/shake Scarlett 500/pause 500/showFrame Scarlett 17 true/pause 1000/move farmer 0 1 1/move farmer 1 0 2/playSound leafrustle/pause 750/playSound leafrustle/pause 250/showFrame Scarlett 0 true/pause 500/showFrame Scarlett 19 true/pause 500/emote Scarlett 8/pause 600/showFrame Scarlett 4 true/pause 800/viewport move 2 0 1500 true/move Scarlett 3 0 0/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.20}}\"/pause 500/emote farmer 28/move farmer 2 0 2/pause 800/speak Scarlett \"{{i18n:Scarlett.6hearts.21}}\"/pause 1000/showFrame Scarlett 4 true/pause 250/showFrame Scarlett 0 true/pause 1000/showFrame Scarlett 17 true/pause 1350/move farmer 0 4 2/pause 250/faceDirection farmer 3 true/pause 1250/speak Scarlett \"{{i18n:Scarlett.6hearts.22}}\"/pause 500/shake Scarlett 500/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.23}}\"/pause 1250/playMusic echos/pause 850/speak Scarlett \"{{i18n:Scarlett.6hearts.24}}\"/pause 500/emote farmer 60/pause 1000/speak Scarlett \"{{i18n:Scarlett.6hearts.25}}\"/pause 1500/emote Scarlett 40/pause 500/speak Scarlett \"{{i18n:Scarlett.6hearts.26}}\"/pause 1000/showFrame Scarlett 0 true/pause 900/showFrame Scarlett 4 true/pause 650/speak Scarlett \"{{i18n:Scarlett.6hearts.27}}\"/pause 850/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 500/emote Scarlett 32/pause 750/showFrame Scarlett 0 true/pause 500/viewport move 0 1 5000 true/advancedMove Scarlett false 0 2 -3 0 0 1 -8 0/pause 500/advancedMove farmer false -2 0 0 2 -3 0 0 1 -1 0/pause 2000/globalFade/viewport -1000 -1000/pause 1000/stopMusic/pause 750/end dialogue Scarlett \"{{i18n:Scarlett.6hearts.28}}\""
+      }
+    },
+    {
+      //Scarlett's room is cleaned (after the event she gets in trouble)
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ScarlettHouse",
+      "FromFile": "assets/Maps/MapPatches/ScarlettHouse_RoomClean.tmx",
+      "ToArea": {
+        "X": 2,
+        "Y": 5,
+        "Width": 10,
+        "Height": 4
+      },
+      "When": {
+        "HasSeenEvent": "3691376"
+      }
+    },
+    {
+      //Scarlett 8 heart event - "A Road Trip to the Grampleton Coast" - part 1 (player isn't married to Sophia)
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "When": {
+        "HasSeenEvent|contains=3691376": true,
+        "Spouse |contains=Sophia": false
+      },
+      "Entries": {
+        "3691377/w sunny/z winter/z fall/t 600 900/u 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27": "continue/-500 -500/farmer 20 20 2 Sophia 21 21 0/pause 1250/speak Sophia \"{{i18n:Scarlett.8hearts1.01}}\"/pause 500/end dialogue Sophia \"{{i18n:Scarlett.8hearts1.SophiaUnmarried.02}}\""
+      }
+    },
+    {
+      //Scarlett 8 heart event - "A Road Trip to the Grampleton Coast" - part 1 (player is married to Sophia)
+      "Action": "EditData",
+      "Target": "Data/Events/Farmhouse",
+      "When": {
+        "HasSeenEvent|contains=3691376": true,
+        "Spouse |contains=Sophia": true
+      },
+      "Entries": {
+        "3691377/w sunny/z winter/z fall/t 600 900": "continue/-500 -500/farmer 20 20 2 Sophia 21 21 0/pause 1250/speak Sophia \"{{i18n:Scarlett.8hearts1.01}}\"/pause 500/end dialogue Spophia \"{{i18n:Scarlett.8hearts1.SophiaMarried.02}}\""
+      }
+    },
+    {
+      //Scarlett 8 heart event - "A Road Trip to the Grampleton Coast" - part 2
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "Entries": {
+        "3691378/e 3691377/z winter/z fall/w sunny/t 600 1700": "none/-500 -500/farmer 28 52 0 Sophia 27 40 1 Scarlett 29 40 3/addTemporaryActor TreyvonsTruck1 103 61 -20 -20 2 false/addTemporaryActor TreyvonsTruck2 61 103 -30 -30 2 false/addTemporaryActor ZoomingRedCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar4 30 200 -50 -50 2 false/warp TreyvonsTruck2 27 37/positionOffset TreyvonsTruck2 -22 10 true/pause 750/viewport 28 35 true/viewport move 0 1 5000 true/playMusic breezy/Skippable/move farmer 0 -10 0 true/pause 5650/faceDirection Sophia 2 true/pause 750/faceDirection Scarlett 2 true/pause 500/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.01}}\"/pause 500/emote farmer 32/pause 150/shake Scarlett 500/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.02}}\"/pause 400/faceDirection Sophia 1 true/pause 400/emote Sophia 16 true/pause 400/faceDirection Scarlett 3 true/pause 750/faceDirection Sophia 2 true/pause 500/showFrame Sophia 39/jump Sophia/pause 600/speak Sophia \"{{i18n:Scarlett.8hearts2.03}}\"/pause 500/showFrame Sophia 0 true/pause 750/faceDirection Scarlett 2 true/pause 400/speak Scarlett \"{{i18n:Scarlett.8hearts2.04}}\"/pause 600/faceDirection Sophia 1 true/pause 600/faceDirection Scarlett 3 true/pause 300/speak Sophia \"{{i18n:Scarlett.8hearts2.05}}\"/pause 500/emote Scarlett 32/globalFade/viewport -1000 -1000/stopMusic/warp Scarlett -50 -50/warp Sophia -51 -51/warp farmer -52 -52/pause 1000/playSound doorClose/pause 850/playSound doorClose/pause 500/viewport 28 38 true/pause 900/speak Scarlett \"{{i18n:Scarlett.8hearts2.06}}\"/playSound FlashShifter.StardewValleyExpandedCP_TruckStartUp/pause 2000/shake TreyvonsTruck2 750/pause 3000/speed TreyvonsTruck2 2/move TreyvonsTruck2 0 10 2 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/pause 1000/changeLocation Custom_Highway/ambientLight 255 255 255/warp TreyvonsTruck2 -50 -50/warp TreyvonsTruck1 28 25/positionOffset TreyvonsTruck1 0 20 true/playMusic FlashShifter.StardewValleyExpandedCP_TruckOnHighway/pause 2000/warp ZoomingRedCarA1 118 22/warp ZoomingRedCarA2 120 22/warp ZoomingRedCarA3 122 22/warp ZoomingRedCarA4 124 22/positionOffset ZoomingRedCarA1 0 405 true/positionOffset ZoomingRedCarA2 -28 405 true/positionOffset ZoomingRedCarA3 -56 405 true/positionOffset ZoomingRedCarA4 -84 405 true/speed ZoomingRedCarA1 9/advancedMove ZoomingRedCarA1 false -120 0/speed ZoomingRedCarA2 9/advancedMove ZoomingRedCarA2 false -120 0/speed ZoomingRedCarA3 9/advancedMove ZoomingRedCarA3 false -120 0/speed ZoomingRedCarA4 9/advancedMove ZoomingRedCarA4 false -120 0/warp ZoomingOrangeCar1 150 22/warp ZoomingOrangeCar2 152 22/warp ZoomingOrangeCar3 154 22/warp ZoomingOrangeCar4 156 22/positionOffset ZoomingOrangeCar1 0 405 true/positionOffset ZoomingOrangeCar2 -28 405 true/positionOffset ZoomingOrangeCar3 -56 405 true/positionOffset ZoomingOrangeCar4 -84 405 true/speed ZoomingOrangeCar1 8/advancedMove ZoomingOrangeCar1 false -120 0/speed ZoomingOrangeCar2 8/advancedMove ZoomingOrangeCar2 false -120 0/speed ZoomingOrangeCar3 8/advancedMove ZoomingOrangeCar3 false -120 0/speed ZoomingOrangeCar4 8/advancedMove ZoomingOrangeCar4 false -120 0/speed TreyvonsTruck1 10 true/move TreyvonsTruck1 100 0 1 true/viewport 30 24 clamp true/viewport move 10 0 10000 true/pause 7000/globalFade/viewport -1000 -1000/pause 1000/changeLocation Custom_GrampletonCoast/pause 1000/stopMusic/speak Scarlett \"{{i18n:Scarlett.8hearts2.07}}\"/pause 750/warp ZoomingOrangeCar1 -100 -100/warp ZoomingOrangeCar2 -102 -102/warp ZoomingOrangeCar3 -104 -104/warp ZoomingOrangeCar4 -106 -106/warp ZoomingRedCarA1 -110 -110/warp ZoomingRedCarA2 -112 -112/warp ZoomingRedCarA3 -114 -114/warp ZoomingRedCarA4 -116 -116/warp TreyvonsTruck2 -80 -80/playMusic FlashShifter.StardewValleyExpandedCP_GrampletonCoastline/pause 150/warp Scarlett 15 16/warp farmer 14 15/warp Sophia 14 17/faceDirection Scarlett 1 true/faceDirection farmer 1 true/faceDirection Sophia 1 true/move Scarlett 11 0 1 true/pause 850/move farmer 10 0 1 true/move Sophia 10 0 1 true/viewport 25 26 clamp true/viewport move 0 -2 5000 true/pause 6500/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 3 true/pause 750/jump Scarlett/pause 600/speak Scarlett \"{{i18n:Scarlett.8hearts2.08}}\"/pause 650/faceDirection Scarlett 2 true/pause 250/faceDirection Scarlett 1 true/pause 500/advancedMove Scarlett false 3 0 0 1 3 0 0 1 2 0/pause 600/advancedMove Sophia false 9 0/pause 300/advancedMove farmer false 3 0 0 1 2 0 0 1 2 0/pause 2000/globalFade/viewport -1000 -1000/pause 500/halt/warp Sophia 52 11/faceDirection Sophia 1 true/warp Scarlett 52 12/faceDirection Scarlett 1 true/warp farmer 51 13/faceDirection farmer 1 true/positionOffset farmer 14 12 true/positionOffset Scarlett 5 20 true/positionOffset Sophia 0 10 true/viewport 50 20 clamp true/viewport move 0 -1 6000 true/pause 6500/shake Scarlett 600/pause 500/speak Scarlett \"{{i18n:Scarlett.8hearts2.09}}\"/pause 650/speak Sophia \"{{i18n:Scarlett.8hearts2.10}}\"/pause 1000/stopMusic/pause 1000/playMusic moonlightJellies/pause 750/viewport move 1 0 3000 true/pause 3000/viewport move 2 0 2500 true/pause 2500/viewport move 3 0 2000 true/pause 2000/viewport move 4 0 2000 true/pause 2000/viewport move 5 0 2000 true/pause 2000/viewport move 6 0 1000 true/pause 1000/viewport move 7 0 2000 true/pause 2000/viewport move 8 0 2000 true/pause 2000/viewport move 9 0 2000 true/pause 2000/viewport move 10 0 6000 true/pause 1250/globalFade/viewport -1000 -1000/pause 1500/speak Scarlett \"{{i18n:Scarlett.8hearts2.11}}\"/pause 800/stopMusic/pause 1000/end"
+      }
+    },
+    { //Treyvon's Truck side profile temp actor (103x61)
+      "Action": "Load",
+      "Target": "Characters/TreyvonsTruck1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TreyvonsTruck1.png"
+    },
+    { //Treyvon's Truck front profile temp actor (61x103)
+      "Action": "Load",
+      "Target": "Characters/TreyvonsTruck2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TreyvonsTruck2.png"
+    },
+  ]
+}

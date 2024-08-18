@@ -1,0 +1,766 @@
+//asNPCs = anti-social npcs
+{
+  "Changes": [
+    //Peaches
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Peaches": {
+          "DisplayName": "{{i18n:Name.Peaches}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Child",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Peaches_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Peaches_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Peaches' Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Peaches_Dance1": "0 0 0 0/20 20 21 21 22 22 23 23/0 0 0 0",
+        "Peaches_Dance2": "0 0 0 0 0/24 24 25 25 26 26 27 27/0 0 0 0",
+        "Peaches_Wave": "0 0 0 0/28 28 29 29 30 30 31 31/0 0 0 0",
+        "Peaches_Sleep": "19 19 18 18/32/18 18 19 19"
+      }
+    },
+    {
+      //Peaches' sprites
+      "Action": "Load",
+      "Target": "Characters/Peaches",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Peaches/Peaches.png"
+    },
+    {
+      //Peaches' portraits
+      "Action": "Load",
+      "Target": "Portraits/Peaches",
+      "FromFile": "Assets/CharacterFiles/Portraits/Peaches/Peaches.png"
+    },
+    {
+      //Peaches' schedule 
+      "Action": "Load",
+      "Target": "Characters/schedules/Peaches",
+      "When": {
+        "HasSeenEvent |contains=7776006": true,
+        "HasSeenEvent |contains=7776012": false
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Peaches/Schedule.json"
+    },
+    {
+      //Peaches' schedule - JunimoWoods
+      "Action": "Load",
+      "Target": "Characters/schedules/Peaches",
+      "When": {
+        "HasSeenEvent |contains=7776006": true,
+        "HasSeenEvent |contains=7776012": true
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Peaches/ScheduleJunimoWoods.json"
+    },
+    {
+      //Peaches schedule - roommates with apples
+      "Action": "EditData",
+      "Target": "Characters/schedules/Peaches",
+      "When": {
+        "Roommate": "Apples",
+        "Weather|contains=Rain, Storm": false
+      },
+      "Entries": {
+        "Fri": "0 Forest 19 117 0/1100 Forest 19 113 1/1130 Forest 19 113 2 Peaches_Dance1",
+      },
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "HighlandsDwarf": {
+          "DisplayName": "{{i18n:Name.Dwarf}}",
+          "HomeRegion": "Other",
+          "Language": "Dwarvish",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "Hidden",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_HighlandsDwarf_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_HighlandsDwarf_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    
+    {
+      //Highlands Dwarf's sprites
+      "Action": "Load",
+      "Target": "Characters/HighlandsDwarf",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/HighlandsDwarf/HighlandsDwarf.png"
+    },
+    {
+      //Highlands Dwarf's portraits
+      "Action": "Load",
+      "Target": "Portraits/HighlandsDwarf",
+      "FromFile": "Assets/CharacterFiles/Portraits/HighlandsDwarf/HighlandsDwarf.png"
+    },
+    {
+      //Highlands Dwarf's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/HighlandsDwarf",
+      "FromFile": "assets/CharacterFiles/Schedules/HighlandsDwarf/Schedule.json"
+    },
+
+    { //Golden Key TAGGED - highlands cavern
+      "Action": "EditData",
+      "Target": "data/events/Custom_HighlandsCavern",
+      "Entries": {
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+      }
+    },
+    { //Golden Key TAGGED - highlands
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "Entries": {
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+      }
+    },
+    { //Golden Key TAGGED - farmhouse
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "Entries": {
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_HighlandsCavernPrison",
+      "FromFile": "Assets/Maps/MapPatches/HighlandsCavernPrisonUnlocked.tbin",
+      "ToArea": {
+        "X": 16,
+        "Y": 14,
+        "Width": 8,
+        "Height": 6
+      },
+      "When": {
+        "HasSeenEvent": "55134261"
+      },
+      "Update": "OnLocationChange"
+    },
+    { //Highlands Dwarf event - first entry, player has the key
+    "Action": "EditData",
+    "Target": "data/events/Custom_HighlandsCavernPrison",
+    "Entries": {
+      "55134259/e 55134261/k 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.02}}\"/pause 750/faceDirection farmer 1 true/pause 400/move farmer 2 0 0 true/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 350/faceDirection HighlandsDwarf 1 true/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.03}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.04}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
+    }
+  },
+  { //Highlands Dwarf event - first entry, player has no key
+    "Action": "EditData",
+    "Target": "data/events/Custom_HighlandsCavernPrison",
+    "Entries": {
+      "55134260/k 55134259": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.02}}\"/pause 500/emote farmer 32/pause 400/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2 true/viewport move 0 1 1000 true/pause 400/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.03}}\"/pause 1250/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.04}}\"/pause 500/globalFade/viewport -1000 -1000/end position 19 22"
+    }
+  },
+  { //Highlands Dwarf event - second entry, player has the key
+    "Action": "EditData",
+    "Target": "data/events/Custom_HighlandsCavernPrison",
+    "Entries": {
+      "55134259/e 55134261/e 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 2/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 2/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/move farmer 2 0 0/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 250/move HighlandsDwarf 0 1 1/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.01}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.02}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
+    }
+  },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Highlands",
+      "FromFile": "Assets/Maps/MapPatches/HighlandsDwarfVendor.tbin",
+      "ToArea": {
+        "X": 109,
+        "Y": 127,
+        "Width": 20,
+        "Height": 11
+      },
+      "When": {
+        "HasSeenEvent": "55134259"
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Highlands",
+      "When": {
+        "HasSeenEvent": "55134259"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "Light"
+          ],
+          "Value": "115 134 4 116 134 4",
+          "Delimiter": " "
+        },
+      ]
+    },
+    { //Highlands Dwarf event - 'My New Home'
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "When": {
+        "HasSeenEvent": "55134259"
+      },
+      "Entries": {
+        "55134263/": "continue/-500 -500/farmer 129 139 0 HighlandsDwarf -30 -30 -30/addConversationTopic highlandsDwarf 10/skippable/viewport 129 135 true/viewport move 0 -1 4000 true/move farmer 0 -8 0 true/pause 4750/faceDirection farmer 3 true/pause 800/emote farmer 8 true/pause 200/globalFade/viewport -1000 -1000/warp farmer 116 135/faceDirection farmer 0 true/positionOffset farmer -25 -10 true/viewport 116 134 true/pause 1500/speak HighlandsDwarf \"{{i18n:Highland.NewHome.01}}\"/pause 1000/speak HighlandsDwarf \"{{i18n:Highland.NewHome.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 300/end position 116 135"
+      }
+    },
+    //HANK NPC
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "HankSVE": {
+          "DisplayName": "{{i18n:Name.Hank}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ScarlettHouse",
+              "Condition": null,
+              "Location": "Custom_ScarlettHouse",
+              "Tile": {
+                "X": 20,
+                "Y": 4
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Hank's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "hank_drink": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16/16 16 16 4 4 4",
+        "hank_sleep": "20/20/20"
+      }
+    },
+    {
+      //Hank's sprites
+      "Action": "Load",
+      "Target": "Characters/HankSVE",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Hank/Hank.png"
+    },
+    {
+      //Hank's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/HankSVE",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Hank.png"
+    },
+    {
+      //Hank's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/HankSVE",
+      "FromFile": "assets/CharacterFiles/Schedules/Hank/Schedule.json"
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Treyvon": {
+          "DisplayName": "{{i18n:Name.Treyvon}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "HiddenAlways",
+          "CanSocialize": false,
+          "CanVisitIslandCondition": "FALSE",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "TrailingGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ScarlettHouse",
+              "Condition": null,
+              "Location": "Custom_ScarlettHouse",
+              "Tile": {
+                "X": 6,
+                "Y": 21
+              },
+              "Direction": "left"
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Treyvon's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "treyvon_newspaper_kitchen": "0 0 0 0/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/16 16 16 0 0 0",
+        "treyvon_newspaper": "16/16/16",
+        "treyvon_sleep": "20/20/20"
+      }
+    },
+    {
+      //Treyvon's sprites
+      "Action": "Load",
+      "Target": "Characters/Treyvon",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Treyvon/Treyvon.png"
+    },
+    {
+      //Treyvon's portraits (fake)
+      "Action": "Load",
+      "Target": "Portraits/Treyvon",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Treyvon.png"
+    },
+    {
+      //Treyvon's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Treyvon",
+      "FromFile": "assets/CharacterFiles/Schedules/Treyvon/Schedule.json"
+    },
+
+    //SUKI NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Suki",
+      "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Suki_IceFestival",
+      "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki_IceFestival.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Suki_DesertFestival",
+      "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki_DesertFestival.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Suki",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/NoSprites/Suki/Suki.png"
+    },
+    //JACE NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Jace",
+      "FromFile": "Assets/CharacterFiles/Portraits/Jace/Jace.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Jace",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Jace/Jace.png"
+    },
+    //AXEL NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Axel",
+      "FromFile": "Assets/CharacterFiles/Portraits/Axel/Axel.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Axel",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Axel/Axel.png"
+    },
+    {
+      //Axel Gone
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "Assets/Maps/MapPatches/AxelGone.tbin",
+      "ToArea": {
+        "X": 94,
+        "Y": 56,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "5553214"
+      }
+    },
+    {
+      //Axel Shop 1
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "Assets/Maps/MapPatches/AxelShop1.tbin",
+      "ToArea": {
+        "X": 94,
+        "Y": 56,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "5553210",
+        "Day": "1, 3, 6, 9, 14, 22, 28"
+      }
+    },
+    {
+      //Axel Shop 2
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "Assets/Maps/MapPatches/AxelShop2.tbin",
+      "ToArea": {
+        "X": 94,
+        "Y": 56,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "5553210",
+        "Day": "5, 7, 11, 19, 25, 27"
+      }
+    },
+    //BROOKLYN NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Brooklyn",
+      "FromFile": "Assets/CharacterFiles/Portraits/Brooklyn/Brooklyn.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Brooklyn",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Brooklyn/Brooklyn.png"
+    },
+    //ZOEY NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Zoey",
+      "FromFile": "Assets/CharacterFiles/Portraits/Zoey/Zoey.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Zoey",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Zoey/Zoey.png"
+    },
+    //CHLOE NPC
+    {
+      "Action": "Load",
+      "Target": "Portraits/Chloe",
+      "FromFile": "Assets/CharacterFiles/Portraits/Chloe/Chloe.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Chloe",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Chloe/Chloe.png"
+    },
+    {
+      //Chloe Shop 1
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/ChloeShop1.tbin",
+      "ToArea": {
+        "X": 31,
+        "Y": 19,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "DayOfWeek": "Monday, Friday"
+      }
+    },
+    {
+      //Chloe Shop 2
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/ChloeShop2.tbin",
+      "ToArea": {
+        "X": 31,
+        "Y": 19,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "DayOfWeek": "Tuesday, Saturday"
+      }
+    },
+    {
+      //Chloe Shop 3
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/ChloeShop3.tbin",
+      "ToArea": {
+        "X": 31,
+        "Y": 19,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "DayOfWeek": "Wednesday, Sunday"
+      }
+    },
+    {
+      //Chloe Shop 4
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/ChloeShop4.tbin",
+      "ToArea": {
+        "X": 31,
+        "Y": 19,
+        "Width": 1,
+        "Height": 3
+      },
+      "When": {
+        "DayOfWeek": "Thursday"
+      }
+    },
+    //Rotate Joja Emporium Shoppers
+    {
+      //Remove shopper 1
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper1.tbin",
+      "ToArea": {
+        "X": 3,
+        "Y": 23,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Monday, Wednesday, Friday, Saturday"
+      }
+    },
+    {
+      //Remove shopper 2
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper2.tbin",
+      "ToArea": {
+        "X": 8,
+        "Y": 24,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Tuesday, Thursday, Sunday"
+      }
+    },
+    {
+      //Remove shopper 3
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper3.tbin",
+      "ToArea": {
+        "X": 13,
+        "Y": 15,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Wednesday, Friday, Saturday"
+      }
+    },
+    {
+      //Remove shopper 4
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper4.tbin",
+      "ToArea": {
+        "X": 30,
+        "Y": 16,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Monday, Tuesday, Friday"
+      }
+    },
+    {
+      //Remove shopper 5
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper5.tbin",
+      "ToArea": {
+        "X": 26,
+        "Y": 21,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Wednesday, Friday, Sunday",
+      }
+    },
+    {
+      //Remove shopper 6
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper6.tbin",
+      "ToArea": {
+        "X": 29,
+        "Y": 23,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Thursday, Saturday"
+      }
+    },
+    {
+      //Remove shopper 7
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper7.tbin",
+      "ToArea": {
+        "X": 3,
+        "Y": 8,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Monday, Wednesday, Thursday, Friday, Sunday"
+      }
+    },
+    {
+      //Remove shopper 8
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper8.tbin",
+      "ToArea": {
+        "X": 8,
+        "Y": 5,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Tuesday, Thursday, Saturday"
+      }
+    },
+    {
+      //Remove shopper 9
+      "Action": "EditMap",
+      "Target": "Maps/Custom_JojaEmporium",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_RemoveShopper9.tbin",
+      "ToArea": {
+        "X": 11,
+        "Y": 6,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "DayOfWeek": "Tuesday, Wednesday, Friday,"
+      }
+    },
+    {
+      //Hamish cameo from 'Joja Farm'
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "Assets/Maps/MapPatches/JojaEmporium_Hamish.tbin",
+      "ToArea": {
+        "X": 105,
+        "Y": 57,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent": "5553210",
+        "Day": "10, 24"
+      }
+    },
+  ]
+}

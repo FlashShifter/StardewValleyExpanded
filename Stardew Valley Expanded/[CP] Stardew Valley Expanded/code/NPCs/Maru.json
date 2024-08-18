@@ -1,0 +1,81 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Maru",
+			"TextOperations": [
+			  /*Dislike*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Maru",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Maru",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //MARU EVENT
+			"Action": "EditData",
+			"Target": "data/events/sciencehouse",
+			"Entries": {
+				"1000011/f Maru 1250/k 10/p Maru": "jaunty/-500 -500/farmer 9 20 1 Demetrius 19 18 0 Maru 22 20 1 Robin 8 18 2/skippable/pause 300/viewport 20 20 true/pause 250/textAboveHead Maru \"{{i18n:Maru.Event.01}}\"/move farmer 5 0 1/textAboveHead Demetrius \"{{i18n:Maru.Event.02}}\"/move farmer 4 0 1/emote farmer 8/pause 250/faceDirection Demetrius 2/emote Demetrius 16/pause 250/faceDirection farmer 0/speak Demetrius \"{{i18n:Maru.Event.03}}\"/pause 250/faceDirection Maru 3/emote Maru 16/pause 250/faceDirection farmer 1/pause 200/speak Maru \"{{i18n:Maru.Event.04}}\"/pause 350/faceDirection Demetrius 0/pause 200/move farmer 2 0 1/pause 450/speak Maru \"{{i18n:Maru.Event.05}}\"/pause 100/question fork1 \"{{i18n:Maru.Event.06}}\"/fork 1000011_NoMath/pause 500/speak Maru \"{{i18n:Maru.Event.07}}\"/pause 650/move Maru -1 0 3/pause 500/speak Maru \"{{i18n:Maru.Event.08}}\"/pause 450/move farmer 0 0 2/move Maru 0 3 3/move farmer 0 2 2/pause 800/textAboveHead Maru \"{{i18n:Maru.Event.09}}\"/playSound keyboardTyping/pause 1500/move Demetrius 3 0 1/move Demetrius 0 1 1/pause 1000/textAboveHead Maru \"{{i18n:Maru.Event.10}}\"/pause 3000/speak Maru \"{{i18n:Maru.Event.11}}\"/pause 500/speak Maru \"{{i18n:Maru.Event.12}}\"/pause 700/emote Maru 40/pause 300/textAboveHead Maru \"{{i18n:Maru.Event.13}}\"/playSound keyboardTyping/pause 1500/move Demetrius 0 -1 3/move Demetrius -3 0 0/pause 700/textAboveHead Maru \"{{i18n:Maru.Event.14}}\"/pause 2000/emote farmer 8/pause 1500/speak Maru \"{{i18n:Maru.Event.15}}\"/pause 500/speak Maru \"{{i18n:Maru.Event.16}}\"/pause 1000/emote Maru 40/pause 500/faceDirection Maru 0/pause 500/speak Maru \"{{i18n:Maru.Event.17}}\"/pause 250/emote Maru 32/emote farmer 32/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Maru 50/end dialogue Maru \"{{i18n:Maru.Event.18}}\"",
+				"1000011_NoMath": "pause 500/emote Maru 28/pause 350/speak Maru \"{{i18n:Maru.Event.NoMath.01}}\"/pause 500/faceDirection Maru 1/pause 500/emote Maru 40/pause 1500/speak Maru \"{{i18n:Maru.Event.NoMath.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Maru -50/end dialogue Maru \"{{i18n:Maru.Event.NoMath.03}}\""
+			},
+		},
+		{ //Allows players to visit Maru's room if dating, engaged, or married to her to sleep in her bed.
+			"Action": "EditMap",
+			"Target": "Maps/Mountain",
+			"FromFile": "Assets/Maps/MapPatches/MaruOutsideDoorUnlocked.tmx",
+			"When": {
+				"Relationship:Maru": "Dating, Engaged, Married"
+			},
+			"ToArea": {
+				"X": 8,
+				"Y": 20,
+				"Width": 1,
+				"Height": 1
+			}
+		},
+		
+		{ //MARU SCHEDULE
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Maru",
+			"Entries": {
+				"spring": "800 ScienceHouse 5 6 1 maru_tinker/1000 ScienceHouse 19 18 0/1400 Town 63 17 0/1800 ScienceHouse 5 6 1 maru_tinker/2200 ScienceHouse 2 4 3 maru_sleep"
+			},
+		},
+		
+		{ //MARU EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Maru",
+			"Entries": {
+				"maru_event1": "{{i18n:Maru.Dialogue.01}}",
+				"maru_event2": "{{i18n:Maru.Dialogue.01}}",
+				"maru_event3": "{{i18n:Maru.Dialogue.01}}",
+				"maru_event4": "{{i18n:Maru.Dialogue.02}}",
+				"maru_event5": "{{i18n:Maru.Dialogue.01}}",
+				"maru_event6": "{{i18n:Maru.Dialogue.02}}",
+				"maru_event7": "{{i18n:Maru.Dialogue.03}}",
+				"maru_event8": "{{i18n:Maru.Dialogue.03}}",
+				"maru_event9": "{{i18n:Maru.Dialogue.03}}",
+				"maru_event10": "{{i18n:Maru.Dialogue.03}}",
+			}
+		},
+	]
+}

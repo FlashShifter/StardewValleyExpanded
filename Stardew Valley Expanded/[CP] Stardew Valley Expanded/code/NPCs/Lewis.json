@@ -1,0 +1,184 @@
+{
+  "Changes": [
+    
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Lewis",
+      "TextOperations": [
+        /*Dislike*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+      ]
+    },
+    { //LEWIS SCHEDULE EDITS
+      "Action": "EditData",
+      "Target": "characters/schedules/Lewis",
+      "When": {
+        "HasSeenEvent |contains=5553210": false
+      },
+      "Entries": {
+        "spring_4": "610 ManorHouse 8 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "spring_11": "620 ManorHouse 6 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "spring_18": "610 ManorHouse 7 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "summer_4": "610 ManorHouse 8 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "summer_11": "610 ManorHouse 7 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "summer_25": "610 ManorHouse 7 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "fall_11": "610 ManorHouse 7 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "fall_18": "620 ManorHouse 6 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "fall_25": "610 ManorHouse 8 5 0/730 Town 107 100 0/1000 Town 104 104 0/1100 Town 99 100 2/1200 Town 100 68 0/1400 Town 38 14 0/1800 ManorHouse 3 6 0/2100 ManorHouse 22 4 1 lewis_sleep",
+        "winter_4": "700 ManorHouse 7 5 0/900 ManorHouse 2 6 0/1100 Town 47 87 0/1700 ManorHouse 7 5 0/2000 ManorHouse 19 9 3/2200 ManorHouse 21 4 lewis_sleep",
+        "winter_18": "640 ManorHouse 6 5 0/900 ManorHouse 2 6 0/1100 Town 47 87 0/1700 ManorHouse 7 5 0/2000 ManorHouse 19 9 3/2200 ManorHouse 21 4 lewis_sleep",
+        "3": "800 ManorHouse 8 5 0/1000 AnimalShop 13 16 0 \"Strings\\schedules\\Lewis:3.000\"/1600 ManorHouse 7 5 0 square_5_1_0/2100 ManorHouse 3 6 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "6": "800 ManorHouse 8 5 0/1000 Blacksmith 4 15 0 \"Strings\\schedules\\Lewis:6.000\"/1300 ArchaeologyHouse 6 10 0 \"Strings\\schedules\\Lewis:6.001\"/1600 ManorHouse 7 5 0 square_5_1_0/2100 ManorHouse 3 6 0/2200 ManorHouse 22 4 1"
+      },
+    },
+    { //LEWIS JOJA SCHEDULE EDIT (no longer mayor)
+      "Action": "EditData",
+      "Target": "characters/schedules/Lewis",
+      "When": {
+        "HasSeenEvent": "5553210"
+      },
+      "Entries": {
+        "rain": "800 ManorHouse 8 5 0/1000 ManorHouse 7 5 0 square_5_1_0/1400 Saloon 12 20 0/1950 ManorHouse 7 5 0 square_5_1_0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "fall_9": "830 AnimalShop 15 4 1/1030 Hospital 12 14 0/1330 Hospital 4 6 1 \"Strings\\schedules\\Lewis:fall_9.000\"/1600 AnimalShop 24 15 0/2100 AnimalShop 12 5 3",
+        "winter_16": "800 ManorHouse 8 5 0/1000 Town 62 88 0/1040 Town 65 86 3 lewis_garden/1140 Town 30 56 2/1400 Town 41 57 0/1620 Beach 40 34 2 \"Strings\\schedules\\Lewis:winter_16.000\"/2300 ManorHouse 22 4 1 lewis_sleep",
+        "Tue": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "6": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "3": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "1": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "15": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "Fri": "800 ManorHouse 8 5 0/1000 Town 62 88 0/1040 Town 65 86 3 lewis_garden/1400 Town 29 27 3/1700 Saloon 9 22 3 lewis_drink/2300 ManorHouse 22 4 1 lewis_sleep",
+        "winter_Sun": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "fall_Sun": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "summer_Sun": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "spring": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep",
+        "default": "800 ManorHouse 8 5 0/1030 ManorHouse 3 6 0/1200 ManorHouse 19 5 0/1300 ManorHouse 22 8 2/1500 ManorHouse 7 5 0/1600 ManorHouse 4 5 2/1730 ManorHouse 11 9 0/1930 ManorHouse 18 5 0/2200 ManorHouse 22 4 1 lewis_sleep"
+      },
+    },
+    { //LEWIS SCHEDULE - Marnie
+      "Action": "EditData",
+      "Target": "characters/schedules/Lewis",
+      "When": {
+        "Weather": "Sun"
+      },
+      "Entries": {
+        "10": "800 ManorHouse 8 5 0/1000 Town 62 88 0/1040 Town 65 86 3 lewis_garden/1140 Town 30 56 2/1400 Town 29 27 3/1700 Saloon 9 22 3 lewis_drink/2230 AnimalShop 13 5 3 lewis_sleep",
+        "17": "800 ManorHouse 8 5 0/1000 Town 31 56 2/1500 AnimalShop 30 16 3/1900 ManorHouse 22 4 1 lewis_sleep"
+      },
+    },
+    {
+      //Overhauls the drink animation for Lewis
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "lewis_drink": "19/19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 22 23 23 23 23 23 23 23 22 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 22 23 23 23 23 23 23 23 23 23 22 19 19 19 19 19 19/19"
+      }
+    },
+    { //LEWIS DIALOGUE (no longer mayor)
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "When": {
+        "HasSeenEvent": "5553210"
+      },
+      "Entries": {
+        "Sun": "...$2",
+        "fall_Tue": "...$2",
+        "winter_Fri6": "...$2",
+        "fall_Wed": "{{i18n:Lewis.NotMayor.01}}",
+        "summer_Tue": "{{i18n:Lewis.NotMayor.01}}",
+        "winter_Wed": "{{i18n:Lewis.NotMayor.01}}",
+      },
+    },
+    { //LEWIS DIALOGUE
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "Entries": {
+        "Town_107_100": "{{i18n:Lewis.Dialogue.01}}",
+        "Town_104_104": "{{i18n:Lewis.Dialogue.01}}",
+        "Town_99_100": "{{i18n:Lewis.Dialogue.01}}",
+        "Town_38_14": "{{i18n:Lewis.Dialogue.02}}",
+        "Town_47_87": "{{i18n:Lewis.Dialogue.03}}",
+        "Summit_13_18": "{{i18n:Lewis.Dialogue.04}}",
+        "AnimalShop_13_5": "{{i18n:Lewis.Dialogue.05}}",
+        "AnimalShop_30_16": "{{i18n:Lewis.Dialogue.06}}",
+      },
+    },
+    { //LEWIS EVENT 2
+      "Action": "EditData",
+      "Target": "data/events/mountain",
+      "Entries": {
+        "1001234/y 1/z winter/z summer/z fall/t 800 1600/j 11/f Lewis 75/w sunny": "spring_day_ambient/-500 -500/farmer 3 13 1 Lewis 9 8 0 Linus 29 8 2 Sebastian 14 31 3 Sam 12 31 1/pause 300/viewport 15 9 clamp true/skippable/move farmer 3 0 0/pause 350/move farmer 0 0 0/pause 500/emote farmer 8/pause 750/move farmer 0 -5 0/move farmer 1 0 1/pause 750/move Lewis 0 0 3/pause 350/speak Lewis \"{{i18n:Lewis.Event2.01}}\"/pause 450/move Lewis 0 0 0/pause 400/emote Lewis 28/pause 200/speak Lewis \"{{i18n:Lewis.Event2.02}}\"/pause 750/speak Lewis \"{{i18n:Lewis.Event2.03}}\"/pause 1000/speak Lewis \"{{i18n:Lewis.Event2.04}}\"/pause 250/globalFade/viewport -1000 -1000/end dialogue Lewis \"{{i18n:Lewis.Event2.05}}\"",
+      },
+    },
+    { //LEWIS MINI EVENT
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "Entries": {
+        "1000036/t 600 700/w sunny/y 1/z winter/z fall/z summer/u 25 26 27 28": "none/-500 -500/farmer 64 15 2 Lewis 64 16 0/skippable/pause 1000/speak Lewis \"{{i18n:Lewis.MiniEvent.01}}\"/pause 800/speak Lewis \"{{i18n:Lewis.MiniEvent.02}}\"/pause 400/emote farmer 32/pause 100/speak Lewis \"{{i18n:Lewis.MiniEvent.03}}\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/end",
+      },
+    },
+    { //LEWIS EVENT DIALOGUE ADDITIONS
+      "Action": "EditData",
+      "Target": "characters/dialogue/Lewis",
+      "Entries": {
+        "lewis_event1": "{{i18n:Lewis.Dialogue.07}}",
+        "lewis_event2": "{{i18n:Lewis.Dialogue.08}}",
+      }
+    },
+    { //Lewis crop field event
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "1011124/k 1000024/t 600 1800/y 2/w sunny": "continue/-500 -500/farmer 105 94 1 Lewis 22 28 0 Clint 97 77 0 Andy 78 95 2 Susan 77 95 2/pause 750/move farmer 13 0 1 true/viewport 105 94 clamp true/pause 3250/globalFade/viewport -1000 -1000/halt/changeLocation Custom_Garden/warp Andy -19 -19/warp Susan -18 -18/warp Clint -20 -20/warp farmer 12 28/faceDirection farmer 1 true/playMusic sweet/pause 500/viewport 22 28 clamp true/skippable/move farmer 8 0 1/pause 500/emote farmer 8/pause 400/faceDirection Lewis 3 true/pause 500/speak Lewis \"{{i18n:Lewis.CropField.01}}\"/pause 500/faceDirection Lewis 0 true/pause 500/speak Lewis \"{{i18n:Lewis.CropField.02}}\"/pause 400/emote Lewis 40/pause 600/faceDirection Lewis 3 true/pause 350/speak Lewis \"{{i18n:Lewis.CropField.03}}\"/speak Lewis \"{{i18n:Lewis.CropField.04}}\"/pause 1000/move Lewis 0 0 2/pause 850/move Lewis 0 0 3/pause 1050/speak Lewis \"{{i18n:Lewis.CropField.05}}\"/pause 200/globalFade/viewport -1000 -1000/pause 300/end dialogue Lewis \"{{i18n:Lewis.CropField.06}}\""
+      },
+    },
+    { //Removes barrels at garden
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Garden",
+      "FromFile": "assets/Maps/MapPatches/GardenUnlocked.tbin",
+      "ToArea": {
+        "X": 20,
+        "Y": 25,
+        "Width": 4,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "1011124"
+      },
+      "Update": "OnLocationChange"
+    },
+    //Old code 
+    /*
+{    //Lewis crop field event
+"Action": "EditData",
+"Target": "data/events/Custom_TownEast",
+"Entries": { 
+  "1000024/t 600 1800/y 2/w sunny/H": "sweet/-500 -500/farmer 9 21 1 Lewis 15 17 0/pause 300/viewport 16 17 true/skippable/move farmer 4 0 0/pause 300/emote farmer 8/pause 300/move farmer 0 -4 1/pause 400/move Lewis 0 0 3/pause 400/emote Lewis 16/pause 700/faceDirection Lewis 0 true/pause 1000/speak Lewis \"This garden space has been abandoned for a while. It used to be the community garden before we relocated it near the library.$0#$b#With no one taking care of the field, it's seen better days.$2#$b#It's a shame this is the first thing travelers from Grampleton see when they visit Pelican Town...$2\"/pause 600/move Lewis 0 0 0/pause 300/emote Lewis 40/pause 300/emote Lewis 16/pause 150/move Lewis 0 0 3/pause 250/speak Lewis \"I know you have your hands full with %farm Farm, but if you were to fix up this plot of land, you could use it to grow whatever you like.$1#$b#I tried offering it to Andy, but he said he didn't want a 'handout' from me.$2#$b#What do you say, @?$0\"/speak Lewis \"$q -1 null#Do you want this plot of land?#$r -1 0 lewis_event1#I can clean up and utilize this crop field.#$r -1 0 lewis_event2#Sorry. I'm overwhelmed with my own farm.\"/pause 1000/move Lewis 0 0 2/pause 850/move Lewis 0 0 3/pause 1050/speak Lewis \"Well, I have a pile of paperwork.$2#$b#Have a nice day, @!$1\"/pause 200/globalFade/viewport -1000 -1000/pause 300/end dialogueWarpOut Lewis \"I know you'll make some good use out of the land, @.$0\"",
+},
+},*/
+    { //Removes barrels at town east
+      "Action": "EditMap",
+      "Target": "Maps/Custom_TownEast",
+      "FromFile": "assets/Maps/MapPatches/TownEastUnlocked.tbin",
+      "ToArea": {
+        "X": 15,
+        "Y": 13,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+        "HasSeenEvent": "1000024"
+      },
+      "Update": "OnLocationChange"
+    },
+  ]
+}

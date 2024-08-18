@@ -1,0 +1,130 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Elliott",
+			"TextOperations": [
+				/*Love*/
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Elliott",
+						1
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+					"Delimiter": " "
+				}
+				/*Like*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Elliott",
+						3
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Big_Conch",
+					"Delimiter": " "
+				}
+				/*Dislike*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Elliott",
+						5
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony",
+					"Delimiter": " "
+				}
+				/*Hate*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Elliott",
+						7
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Daggerfish",
+					"Delimiter": " "
+				}
+				/*Neutral*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Elliott",
+						9
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish",
+					"Delimiter": " "
+				}
+			]
+		},
+		{ //ELLIOTT SCHEDULE EDITS - Leah
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"Weather": "Sun"
+			},
+			"Entries": {
+				"10": "820 LeahHouse 7 5 3/1230 Custom_BlueMoonVineyard 24 55 2/1600 ElliottHouse 13 4 1 elliott_sleep", //WED
+				"24": "820 LeahHouse 7 5 3/1230 Custom_BlueMoonVineyard 24 55 2/1600 ElliottHouse 13 4 1 elliott_sleep", //WED
+			},
+		},
+		{ //ELLIOTT SCHEDULE EDITS - Player marries Leah
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"When": {
+				"Spouse": "Leah"
+			},
+			"Entries": {
+				"10": null,
+				"24": null
+			},
+		},
+		{ //ELLIOTT SCHEDULE EDITS - Desert Festival
+			"Action": "EditData",
+			"Target": "characters/schedules/Elliott",
+			"Entries": {
+				"marriage_DesertFestival_1": "830 Desert 6 38 0 \"Strings\\1_6_Strings:DesertFestival_Elliott_marriage\"/2300 bed",
+			},
+		},
+		{ //ELLIOTT SCHEDULE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries": {
+				"LeahHouse_7_5": "{{i18n:Elliott.Dialogue.01}}",
+				"Custom_BlueMoonVineyard_24_55": "{{i18n:Elliott.Dialogue.02}}",
+			},
+		},
+		{ //ELLIOTT EVENT
+			"Action": "EditData",
+			"Target": "data/events/beach",
+			"Entries": {
+				"1000002/f Elliott 1250/k 43/w sunny/z winter/z fall/z spring/t 600 1130": "ocean/-500 -500/farmer 39 0 2 Elliott 44 11 0 Willy 37 33 0/skippable/pause 300/viewport 42 10 true/pause 250/textAboveHead Elliott \"{{i18n:Elliott.Event.01}}\"/move farmer 0 11 1/pause 500/textAboveHead Elliott \"{{i18n:Elliott.Event.02}}\"/pause 300/emote farmer 8/move farmer 3 0 1/move Elliott 0 0 3/emote Elliott 16/pause 100/speak Elliott \"{{i18n:Elliott.Event.03}}\"/speak Elliott \"{{i18n:Elliott.Event.04}}\"/pause 1000/move Elliott 0 0 0/pause 500/speak Elliott \"{{i18n:Elliott.Event.05}}\"/pause 500/move Elliott 0 0 2/pause 500/speak Elliott \"{{i18n:Elliott.Event.06}}\"/pause 500/move Elliott 0 0 3/pause 500/speak Elliott \"{{i18n:Elliott.Event.07}}\"/speak Elliott \"{{i18n:Elliott.Event.08}}\"/pause 500/move Elliott 0 0 0/pause 1000/emote Elliott 12/pause 500/speak Elliott \"{{i18n:Elliott.Event.09}}\"/pause 500/move Elliott 0 0 3/speak Elliott \"{{i18n:Elliott.Event.10}}\"/pause 300/globalFade/viewport -1000 -1000/pause 700/friendship Elliott 50/end"
+			},
+		},
+		{ //ELLIOTT EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Elliott",
+			"Entries": {
+				"elliott_event1": "{{i18n:Elliott.Dialogue.03}}",
+				"elliott_event2": "{{i18n:Elliott.Dialogue.04}}",
+				"elliott_event3": "{{i18n:Elliott.Dialogue.05}}",
+				"elliott_event4": "{{i18n:Elliott.Dialogue.06}}",
+				"elliott_event5": "{{i18n:Elliott.Dialogue.07}}",
+			}
+		},
+		{ //ADD OLIVIA, VICTOR, SUSAN, ANDY, SOPHIA TO ELLIOTT BOOK READ
+			"Action": "EditData",
+			"Target": "data/events/archaeologyhouse",
+			"Entries": {
+				"1848481/f Elliott 2000/t 1300 1900/n elliottReading": "breezy/14 11/Elliott 14 9 2 Pierre 10 13 1 Caroline 11 13 3 Marnie 11 15 1 Lewis 12 15 3 Sebastian 11 17 2 Abigail 12 18 3 Sam 10 18 1 Leah 15 15 0 Emily 16 16 2 Clint 15 17 1 Jodi 19 13 2 Robin 20 14 3 Demetrius 20 11 3 Maru 10 10 1 Penny 11 9 1 Gus 18 16 0 Shane 19 16 0 Willy 21 12 3 Sophia 14 16 0 Susan 19 9 3 Andy 18 18 0 Victor 16 13 1 Olivia 17 13 3 farmer 7 14 1/positionOffset Sophia -18 -15/skippable/move farmer 5 0 0/move farmer 0 -1 0/move Elliott 0 4 3/faceDirection farmer 1/speak Elliott \"{{i18n:Elliott.BookReading.01}}\"/pause 800/faceDirection Elliott 2/pause 500/faceDirection Elliott 1/pause 500/faceDirection Elliott 3/pause 500/speak Elliott \"{{i18n:Elliott.BookReading.02}}\"/pause 700/move Elliott 0 -4 2/faceDirection farmer 0/pause 500/faceDirection Elliott 1/faceDirection Elliott 2/faceDirection Elliott 3/faceDirection Elliott 2/speak Elliott \"{{i18n:Elliott.BookReading.03}}\"/pause 500/faceDirection Caroline 0 true/faceDirection Emily 0 true/textAboveHead Emily \"{{i18n:Elliott.BookReading.04}}\"/faceDirection Abigail 0/faceDirection Sebastian 0 true/faceDirection Lewis 0/faceDirection Sam 0 true/pause 300/faceDirection Victor 0/pause 200/faceDirection Olivia 0/pause 250/faceDirection Marnie 0/faceDirection Pierre 0 true/faceDirection Jodi 0/faceDirection Clint 0/speak Elliott \"{{i18n:Elliott.BookReading.05}}\"/showFrame Elliott 32/pause 200/showFrame Elliott 34/fork 958699 mysteryBook/fork 958700 romanceBook/speak Elliott \"{{i18n:Elliott.BookReading.06}}\"/animate Elliott false true 1000 33 33 34/pause 500/speak Elliott \"{{i18n:Elliott.BookReading.07}}\"/playMusic none/globalFade/viewport -100 -100/pause 1000/warp Sebastian -1000 -1000/warp Sam -1000 -1000/warp Abigail -1000 -1000/warp Jodi -1000 -1000/warp Robin -1000 -1000/warp Demetrius -1000 -1000/warp Shane -1000 -1000/warp Maru -1000 -1000/warp Pierre -1000 -1000/warp Susan -1000 -1000/warp Caroline -1000 -1000/warp Andy -1000 -1000/viewport 14 11 true/pause 1000/speak Elliott \"{{i18n:Elliott.BookReading.08}}\"/stopAnimation Elliott/showFrame Elliott 34/pause 800/speak Elliott \"{{i18n:Elliott.BookReading.09}}\"/faceDirection Lewis 3/faceDirection Marnie 1/faceDirection Emily 2 true/faceDirection Clint 1/pause 300/faceDirection Victor 1/pause 270/faceDirection Olivia 3/pause 200/move Elliott 0 4 3/faceDirection farmer 1/pause 600/speak Elliott \"{{i18n:Elliott.BookReading.10}}\"/emote farmer 32/speak Elliott \"{{i18n:Elliott.BookReading.11}}\"/move Elliott -1 0 3/emote Elliott 32/pause 1000/end",
+				"mysteryBook": "pause 400/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.01}}\"/animate Elliott false true 1000 33 33 34/pause 500/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.02}}\"/playMusic none/globalFade/viewport -100 -100/pause 1000/warp Sebastian -1000 -1000/warp Sam -1000 -1000/warp Abigail -1000 -1000/warp Jodi -1000 -1000/warp Andy -1000 -1000/warp Robin -1000 -1000/warp Demetrius -1000 -1000/warp Shane -1000 -1000/warp Maru -1000 -1000/warp Pierre -1000 -1000/warp Caroline -1000 -1000/viewport 14 11 true/pause 1000/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.03}}\"/stopAnimation Elliott/showFrame Elliott 34/pause 800/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.04}}\"/faceDirection Lewis 3/faceDirection Marnie 1/faceDirection Emily 2 true/faceDirection Clint 1/pause 200/faceDirection Victor 1/pause 200/faceDirection Olivia 3/pause 250/move Elliott 0 4 3/faceDirection farmer 1/pause 600/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.05}}\"/emote farmer 32/speak Elliott \"{{i18n:Elliott.BookReading.mysteryBook.06}}\"/move Elliott -1 0 3/emote Elliott 32/pause 1000/end",
+				"romanceBook": "pause 400/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.01}}\"/animate Elliott false true 1000 33 33 34/pause 500/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.02}}\"/playMusic none/globalFade/viewport -100 -100/pause 1000/warp Sebastian -1000 -1000/warp Sam -1000 -1000/warp Susan -1000 -1000/warp Andy -1000 -1000/warp Abigail -1000 -1000/warp Jodi -1000 -1000/warp Robin -1000 -1000/warp Demetrius -1000 -1000/warp Shane -1000 -1000/warp Maru -1000 -1000/warp Pierre -1000 -1000/warp Caroline -1000 -1000/viewport 14 11 true/pause 1000/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.03}}\"/stopAnimation Elliott/showFrame Elliott 34/pause 800/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.04}}\"/faceDirection Lewis 3/faceDirection Marnie 1/faceDirection Emily 2 true/faceDirection Clint 1/pause 250/faceDirection Victor 1/pause 200/faceDirection Olivia 3/pause 250/move Elliott 0 4 3/faceDirection farmer 1/pause 600/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.05}}\"/emote farmer 32/speak Elliott \"{{i18n:Elliott.BookReading.romanceBook.06}}\"/move Elliott -1 0 3/emote Elliott 32/pause 1000/end"
+			},
+		},
+	]
+}

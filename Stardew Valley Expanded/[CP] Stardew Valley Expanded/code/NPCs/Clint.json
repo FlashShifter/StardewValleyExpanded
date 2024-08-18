@@ -1,0 +1,139 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Clint",
+			"TextOperations": [
+			  /*Like*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //CLINT SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Clint",
+			"Entries": {
+				"Wed": "630 Town 97 77 0/730 Town 102 77 0/800 Town 98 77 0/830 Town 100 81 0/850 Blacksmith 3 13 2/1700 Town 103 98 2/2000 Blacksmith 10 4 1 clint_sleep",
+				"Thu": "620 Town 97 77 0/720 Town 102 77 0/810 Town 98 77 0/830 Town 100 81 0/850 Blacksmith 3 13 2/1700 Town 103 98 2/2000 Blacksmith 10 4 1 clint_sleep",
+				"Sat": "630 Town 97 77 0/730 Town 102 77 0/800 Town 98 77 0/830 Town 100 81 0/850 Blacksmith 3 13 2/1700 Saloon 19 23 3/2200 Blacksmith 10 4 1 clint_sleep",
+				"Sun": "610 Town 97 77 0/710 Town 102 77 0/800 Town 98 77 0/830 Town 100 81 0/850 Blacksmith 3 13 2/1700 Saloon 19 23 3/2200 Blacksmith 10 4 1 clint_sleep",
+				"winter_Wed": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
+				"winter_Thu": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
+				"winter_Sat": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
+				"winter_Sun": "850 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 Blacksmith 10 4 1 clint_sleep",
+				"winter_15": "850 Blacksmith 3 13 2/1700 Beach 10 37 3 \"Strings\\schedules\\Clint:winter_15.000\"/2400 Blacksmith 10 4 1",
+				"DesertFestival_2": "650 Blacksmith 3 13 2/910 Desert 11 53 2 \"Strings\\1_6_Strings:DesertFestival_Clint\"/2430 bed"
+			},
+		},
+		{ //CLINT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Clint",
+			"Entries": {
+				"Town_97_77": "{{i18n:Clint.Dialogue.01}}",
+				"Town4_97_77": "{{i18n:Clint.Dialogue.01}}",
+				"Town_102_77": "{{i18n:Clint.Dialogue.01}}",
+				"Town_98_77": "{{i18n:Clint.Dialogue.01}}",
+				"Town_100_81": "{{i18n:Clint.Dialogue.02}}",
+				"Town_103_98": "{{i18n:Clint.Dialogue.03}}",
+
+			}
+		},
+		
+
+		{ //CLINT INTRODUCTION DIALOGUE - IF2R
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Clint",
+			"When": {
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"Entries": {
+				"Introduction": "{{i18n:Clint.Dialogue.07}}",
+			}
+		},
+		{ //CLINT EVENT
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"1000014/t 1000 1600/f Clint 2000/w sunny/e 1000034": "playful/-500 -500/farmer 92 90 0 Clint 94 77 0 Penny 102 68 1/showFrame Penny 18/pause 700/viewport 99 77 true/pause 250/playSound clank/move farmer 0 -4 1/playSound clank/move farmer 1 0 0/move farmer 0 -3 0/playSound hammer/move farmer 0 -1 0/emote farmer 8/move farmer 3 0 1/playSound clank/move farmer 2 0 1/playSound clank/move farmer 4 0 0/playSound clank/textAboveHead Clint \"{{i18n:Clint.Event1.01}}\"/move farmer 0 -4 0/playSound clank/move farmer 0 -1 3/move farmer -2 0 3/playSound clank/pause 700/textAboveHead Clint \"{{i18n:Clint.Event1.02}}\"/pause 1000/playSound hammer/pause 550/playSound clank/pause 2000/move Clint 4 0 1/pause 500/speak Clint \"{{i18n:Clint.Event1.03}}\"/pause 1000/move Clint 0 0 3/pause 1000/speak Clint \"{{i18n:Clint.Event1.04}}\"/pause 1000/move Clint 0 0 1/pause 1500/speak Clint \"{{i18n:Clint.Event1.05}}\"/stopMusic/pause 1500/speak Clint \"{{i18n:Clint.Event1.06}}\"/pause 800/speak Clint \"{{i18n:Clint.Event1.07}}\"/pause 1000/speak Clint \"{{i18n:Clint.Event1.08}}\"/pause 1100/move Clint 0 0 3/pause 1100/move Clint 0 0 1/pause 1000/speak Clint \"{{i18n:Clint.Event1.09}}\"/pause 1200/move Clint -4 0 3 true/pause 150/globalFade/viewport -1000 -1000/pause 700/end dialogue Clint \"{{i18n:Clint.Event1.10}}\"",
+			},
+		},
+		{ //CLINT EVENT 2
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"When": {
+				"HasFlag": "ccMovieTheater",
+				"Relationship:Emily |contains=Dating, Engaged, Married": false
+			},
+			"Entries": {
+				"1005014/t 2000 2400/f Clint 2000/f Emily 2000/w sunny/e 101/z winter/y 2": "spring_night_ambient/-500 -500/farmer -30 -30 0 Clint 28 90 3 Emily 26 90 3/pause 1250/move Emily -6 0 3 true/pause 300/addConversationTopic ClintAndEmily/skippable/viewport 20 91 clamp true/move Clint -6 0 3 true/pause 3100/faceDirection Emily 2 true/pause 250/faceDirection Emily 1 true/pause 750/speak Emily \"{{i18n:Clint.Event2.01}}\"/pause 700/speak Clint \"{{i18n:Clint.Event2.02}}\"/pause 650/shake Emily 800/textAboveHead Emily \"{{i18n:Clint.Event2.03}}\"/pause 2000/speak Emily \"{{i18n:Clint.Event2.04}}\"/pause 500/speak Clint \"{{i18n:Clint.Event2.05}}\"/pause 1000/emote Clint 40/pause 500/speak Clint \"{{i18n:Clint.Event2.06}}\"/pause 400/emote Emily 8 true/pause 750/speak Emily \"{{i18n:Clint.Event2.07}}\"/pause 750/shake Clint 750/pause 1100/speak Clint \"{{i18n:Clint.Event2.08}}\"/pause 500/speak Emily \"{{i18n:Clint.Event2.09}}\"/pause 1000/faceDirection Clint 0 true/pause 250/faceDirection Clint 1 true/pause 550/speed Clint 1/move Clint 1 0 1/pause 600/shake Clint 850/pause 1650/speak Clint \"{{i18n:Clint.Event2.10}}\"/pause 500/speak Emily \"{{i18n:Clint.Event2.11}}\"/pause 1250/shake Clint 600/pause 1200/faceDirection Clint 2 true/pause 250/faceDirection Clint 3 true/pause 500/speak Clint \"{{i18n:Clint.Event2.12}}\"/pause 500/speak Emily \"{{i18n:Clint.Event2.13}}\"/speak Clint \"{{i18n:Clint.Event2.14}}\"/pause 500/emote Emily 40/pause 1000/speak Emily \"{{i18n:Clint.Event2.15}}\"/pause 1750/speed Clint 1/move Clint -1 0 3/pause 750/speak Clint \"{{i18n:Clint.Event2.16}}\"/pause 700/showFrame Emily 32 true/pause 100/jump Emily/shake Emily 1200/pause 1300/showFrame Emily 4 true/pause 500/speak Clint \"{{i18n:Clint.Event2.17}}\"/pause 750/speak Emily \"{{i18n:Clint.Event2.18}}\"/pause 1500/speak Clint \"{{i18n:Clint.Event2.19}}\"/pause 1000/speak Emily \"{{i18n:Clint.Event2.20}}\"/pause 1000/speak Clint \"{{i18n:Clint.Event2.21}}\"/pause 500/speak Emily \"{{i18n:Clint.Event2.22}}\"/pause 650/speak Clint \"{{i18n:Clint.Event2.23}}\"/pause 650/shake Emily 500/pause 750/speak Emily \"{{i18n:Clint.Event2.24}}\"/pause 1250/faceDirection Emily 2 true/pause 500/showFrame Emily 27 true/shake Emily 500/pause 1250/showFrame Emily 0 true/pause 500/faceDirection Emily 3 true/pause 250/faceDirection Emily 0 true/pause 550/speed Emily 1/move Emily 0 -1 0/pause 500/warp Emily -20 -20/playSound doorClose/pause 1500/shake Clint 800/pause 1500/faceDirection Clint 2 true/pause 250/faceDirection Clint 1 true/pause 500/speed Clint 1/move Clint 2 0 1/pause 1000/faceDirection Clint 2 true/pause 250/faceDirection Clint 3 true/pause 500/speak Clint \"{{i18n:Clint.Event2.25}}\"/pause 1250/faceDirection Clint 2 true/pause 300/faceDirection Clint 1 true/pause 500/speed Clint 1/move Clint 7 0 1 true/pause 2000/globalFade/viewport -1000 -1000/halt/warp Clint -21 -21/viewport 20 91 clamp true/pause 2000/doAction 19 94/pause 500/doAction 19 94/pause 300/warp farmer 20 93/pause 750/move farmer 0 -2 0/pause 1000/faceDirection farmer 1 true/pause 1000/emote farmer 40/pause 300/globalFade/viewport -1000 -1000/pause 1000/end",
+			},
+		},
+		{ //CLINT EVENT 3
+			"Action": "EditData",
+			"Target": "data/events/blacksmith",
+			"When": {
+				"Spouse |contains=Emily": true
+			},
+			"Entries": {
+				"1005015/e 1005014": "continue/-500 -500/farmer 5 19 0 Clint 3 13 2/pause 1000/viewport 6 15 true/move farmer 0 -2 3/move farmer -1 0 0/move farmer 0 -2 3/move farmer -1 0 3/pause 125/faceDirection farmer 0 true/pause 625/speak Clint \"{{i18n:Clint.Event3.01}}\"/pause 500/emote farmer 32/pause 650/shake Clint 500/pause 950/speak Clint \"{{i18n:Clint.Event3.02}}\"/pause 400/emote farmer 8/pause 400/speak Clint \"{{i18n:Clint.Event3.03}}\"/pause 800/speak Clint \"{{i18n:Clint.Event3.04}}\"/pause 1250/shake Clint 500/pause 1000/speak Clint \"{{i18n:Clint.Event3.05}}\"/pause 1500/speak Clint \"{{i18n:Clint.Event3.06}}\"/pause 1000/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 400/move farmer 0 1 1/move farmer 1 0 2/move farmer 0 1 1/move farmer 1 0 2/move farmer 0 2 2/warp farmer -30 -30/playSound doorClose/pause 1500/speak Clint \"{{i18n:Clint.Event3.07}}\"/friendship Clint -500/pause 800/globalFade/viewport -1000 -1000/pause 500/end dialogueWarpOut Clint \"{{i18n:Clint.Event3.08}}\""
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "characters/dialogue/Clint",
+			"Entries": {
+				"ClintAndEmily": "{{i18n:ClintandEmily.01}}", 
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "characters/dialogue/Emily",
+			"Entries": {
+				"ClintAndEmily": "{{i18n:ClintandEmily.02}}", 
+			},
+		},
+		{ //CLINT EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Clint",
+			"Entries": {
+				"clint_event1": "{{i18n:Clint.Dialogue.08}}",
+				"clint_event2": "{{i18n:Clint.Dialogue.09}}",
+				"clint_event3": "{{i18n:Clint.Dialogue.10}}",
+				"clint_event4": "{{i18n:Clint.Dialogue.11}}",
+				"clint_event5": "{{i18n:Clint.Dialogue.12}}",
+			}
+		},
+	]
+}

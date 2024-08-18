@@ -1,0 +1,1745 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Lance": {
+          "DisplayName": "{{i18n:Name.Lance}}",
+          "BirthSeason": "Spring",
+          "BirthDay": 8,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": "PLAYER_NPC_RELATIONSHIP ANY Lance MARRIED",
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "SpouseRoom": {
+            "MapAsset": "Custom_LancesRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": "Lance_Spouse_Area",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                0,
+                1200
+              ],
+              [
+                41,
+                200
+              ],
+              [
+                0,
+                2200
+              ],
+              [
+                41,
+                100
+              ],
+              [
+                0,
+                200
+              ],
+              [
+                41,
+                100
+              ],
+              [
+                0,
+                1600
+              ],
+              [
+                43,
+                1400
+              ],
+              [
+                0,
+                400
+              ],
+              [
+                42,
+                1600
+              ],
+              [
+                0,
+                1800
+              ],
+              [
+                41,
+                200
+              ],
+              [
+                0,
+                1900
+              ],
+              [
+                4,
+                300
+              ],
+              [
+                8,
+                13500
+              ],
+              [
+                4,
+                300
+              ],
+              [
+                0,
+                100
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "FriendsAndFamily": {},
+          "WinterStarParticipant": "PLAYER_NPC_RELATIONSHIP ANY Lance MARRIED",
+          "UnlockConditions": "PLAYER_HAS_SEEN_EVENT ANY 6951319",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_Lance_WarpRoom",
+              "Condition": null,
+              "Location": "Custom_Lance_WarpRoom",
+              "Tile": {
+                "X": 3,
+                "Y": 3
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Lance_Winter",
+              "Sprite": "Characters/Lance_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Lance's gift tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "When": {
+        "HasSeenEvent": "6951319"
+      },
+      "Entries": {
+        "Lance": "{{i18n:Gifts.Lance.Loved}}/907 896 FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Torpedo_Trout FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Ornate_Treasure_Chest FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Gifts.Lance.Liked}}/257 281 422 886 905 74 797 261 688 689 690 446 96 97 98 99 121 122 158 159 161 160 162 163 166 305 306 704 909 857 FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Undeadfish FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Shiny_Lunaloo FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Razor_Trout FlashShifter.StardewValleyExpandedCP_Radioactive_Bass FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lunaloo FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bonefish FlashShifter.StardewValleyExpandedCP_Bearberrys FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir/{{i18n:Gifts.Lance.Disliked}}/-80 -74 338 80 82/{{i18n:Gifts.Lance.Hated}}/-81 330 283 206 211 216 233 234 245 220 221 222 223 224 279 612 611 608 604/{{i18n:Gifts.Lance.Neutral}}/-4 -28 286 287 288 829 396 393 397 392 394 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Baby_Lunaloo 404 FlashShifter.StardewValleyExpandedCP_Mushroom_Colony 420/"
+      }
+    },
+    //LOVES: Galaxy Soul, Tropical Curry, Void Shard, Swirl Stone, Green Mushroom, Ornate Treasure Chest, Gemfish, <MONSTER CROP>, and Torpedo Trout
+    //LIKES: all monster crops
+    {
+      //Lance's animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "lance_relic": "12 12 12 12 12 12 12 12 12 12 12 12 12 12 12/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 17 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 17 17 17 17 17 16 16 16 16 16 16 16/12 12 12 12 12 12 12",
+        "lance_blink": "0/0 0 0 0 0 0 0 0 0 41 41 41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41 41 41 0 0 0 0 0 41 41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/0",
+        "lance_look": "0/0 0 0 0 0 0 0 0 0 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 0 0 0 0 0 0 0 0 0 0 0 0 43 43 43 43 43 43 43 43 43 43 43 43 43 0 0 0 0 0 0 0 0 0 0 0 0/0",
+        "lance_sleep": "19/19/19",
+        "lance_lookdown": "51/51/51"
+      }
+    },
+    //Spouse Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_LancesRoom",
+      "FromFile": "Assets/Maps/SpouseRooms/LancesRoom.tbin",
+    },
+    //Spouse Patio
+    {
+      "Action": "Load",
+      "Target": "Maps/Lance_Spouse_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Lance_Spouse_Area.tbin"
+    },
+    {
+      //Lance's sprites
+      "Action": "Load",
+      "Target": "Characters/Lance",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Lance/Lance.png"
+    },
+    {
+      //Lance's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Lance_Beach",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Lance/Lance_Beach.png"
+    },
+    {
+      //Lance's beach sprites (for character events)
+      "Action": "Load",
+      "Target": "Characters/LanceBeach",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Lance/Lance_Beach.png"
+    },
+    {
+      //Lance's portraits
+      "Action": "Load",
+      "Target": "Portraits/Lance",
+      "FromFile": "Assets/CharacterFiles/Portraits/Lance/Lance.png"
+    },
+    {
+      //Lance's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Lance_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Lance/Lance_Winter.png"
+    },
+    {
+      //Lance's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Lance_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Lance/Lance_Winter.png"
+    },
+    {
+      //Lance's beach portraits
+      "Action": "Load",
+      "Target": "Portraits/Lance_Beach",
+      "FromFile": "Assets/CharacterFiles/Portraits/Lance/Lance_Beach.png"
+    },
+    {
+      //Lance's schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Lance",
+      "When": {
+        "HasSeenEvent": "6951319"
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Lance/Lance.json"
+    },
+    {
+      //Lance starts visiting dwarf vendor
+      "Action": "EditData",
+      "Target": "characters/schedules/Lance",
+      "When": {
+        "HasSeenEvent": "55134263"
+      },
+      "Entries": {
+        "Sat": "0 Custom_HighlandsOutpost 9 6 0/700 Custom_HighlandsOutpost 11 6 0/1100 Custom_Highlands 120 111 3/1330 Custom_Highlands 115 135 0/1700 Custom_Highlands 120 111 3/1900 Custom_Highlands 127 113 2/2130 Custom_HighlandsOutpost 8 6 2",
+      }
+    },
+    {
+      //Lance Christmas Eve schedule
+      "Action": "EditData",
+      "Target": "characters/schedules/Lance",
+      "When": {
+        "Day": "24",
+        "Season": "Winter"
+      },
+      "Entries": {
+        "marriage_Wed": "800 Town 34 81 0 \"Strings\\schedules\\Lance:marriage.007\"/1800 Bed",
+      }
+    },
+    {
+      //Lance's Engagement Dialogue
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "When": {
+        "HasSeenEvent": "6951319"
+      },
+      "Entries": {
+        "Lance0": "{{i18n:Lance.engagement0}}",
+        "Lance1": "{{i18n:Lance.engagement0}}",
+      }
+    },
+    //MOVIE THEATER DATA
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Lance": {
+          "Name": "Lance",
+          "LovedTags": [
+            "Gourmet",
+            "Jasmine Tea",
+            "Panzanella Salad",
+            "Salmon Burger"
+          ],
+          "LikedTags": [
+            "Sandwich",
+            "Popcorn",
+            "Healthy"
+          ],
+          "DislikedTags": [
+            "Candy",
+            "Sweet",
+            "Sour",
+            "Sour Slimes",
+            "Ice Cream Sandwhich",
+            "Cotton Candy",
+            "Jawbreak",
+            "Personal Pizza",
+            "Rock Candy"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Lance": {
+          "NPCName": "Lance",
+          "Reactions": [
+            {
+              "Tag": "spring_movie_0", //The Brave Little Sapling
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.1}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.2}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.3}}",
+                }
+              },
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "spring_movie_1", //Natural Wonders: Exploring Our Vibrant World
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.4}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.5}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.6}}",
+                }
+              },
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "summer_movie_0", //Journey Of The Prairie King: The Motion Picture
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.7}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.8}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.9}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "summer_movie_1", //Wumbus
+              "Response": "hate",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.10}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.11}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.12}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "fall_movie_0", //Mysterium
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.13}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "...$3"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.14}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "fall_movie_1", //It Howls In The Rain
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.15}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.16}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.17}}",
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "winter_movie_0", //The Miracle At Coldstar Ranch
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.18}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.19}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.20}}",
+                }
+              },
+              "ID": "reaction_6"
+            },
+            {
+              "Tag": "winter_movie_1", //The Zuzu City Express
+              "Response": "hate",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.21}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.22}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:movies.lance.23}}",
+                }
+              },
+              "ID": "reaction_7"
+            },
+          ]
+        }
+      }
+    },
+    {
+      //Lance Night Market Schedule
+      "Action": "EditData",
+      "Target": "characters/schedules/Lance",
+      "When": {
+        "Day": "15, 16, 17",
+        "Season": "Winter"
+      },
+      "Entries": {
+        "marriage_Mon": "1500 Beach 29 34 2 \"Strings\\schedules\\Lance:NightMarket.001\"/2310 Bed",
+        "marriage_Tue": "1500 Beach 30 34 2 \"Strings\\schedules\\Lance:NightMarket.002\"/2320 Bed",
+        "marriage_Wed": "1500 Beach 30 34 2 \"Strings\\schedules\\Lance:NightMarket.003\"/2300 Bed",
+      }
+    },
+    /*{
+      "Action": "EditMap",
+      "Target": "Maps/Custom_WizardBasement",
+      "MapProperties": { "NPCWarp": "14 19 Custom_FableReef 31 41" }
+    },*/
+    //I don't know why, but this causes morgan and wizard to glitch out and they can't leave the wizard basement map once in it. NPC scheduling is so weird in this game.
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FableReef",
+      "MapProperties": {
+        "NPCWarp": "30 41 Custom_WizardBasement 14 18"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FirstSlashGuild",
+      "MapProperties": {
+        "NPCWarp": "22 9 Custom_FirstSlashHallway 34 10"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FirstSlashHallway",
+      "MapProperties": {
+        "NPCWarp": "23 7 Custom_FirstSlashGuestRoom 7 9"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FirstSlashGuestRoom",
+      "FromFile": "assets/Maps/MapPatches/FirstSlashGuestRoomMarriedLance.tbin",
+      "When": {
+        "Spouse": "Lance",
+        "DayOfWeek": "Wednesday"
+      },
+      "ToArea": {
+        "X": 6,
+        "Y": 5,
+        "Width": 2,
+        "Height": 1
+      },
+    },
+    { //Lance is patched at the First Slash 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FirstSlashGuestRoom",
+      "FromFile": "assets/Maps/MapPatches/FirstSlashGuestRoomLanceInBed.tbin",
+      "When": {
+        "Spouse": "Lance",
+        "DayOfWeek": "Thursday",
+        "Time": "{{Range: 600, 610}}"
+      },
+      "ToArea": {
+        "X": 7,
+        "Y": 3,
+        "Width": 1,
+        "Height": 3
+      },
+      "Update": "OnLocationChange"
+    },
+    { //Day 4 patch
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "When": {
+        "Day": "4"
+      },
+      "Entries": {
+        "LanceInBed": "{{i18n:LanceinBed1}}"
+      }
+    },
+    { //Day 11 patch
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "When": {
+        "Day": "11"
+      },
+      "Entries": {
+        "LanceInBed": "{{i18n:LanceinBed2}}"
+      }
+    },
+    { //Day 18 patch
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "When": {
+        "Day": "18"
+      },
+      "Entries": {
+        "LanceInBed": "{{i18n:LanceinBed3}}"
+      }
+    },
+    { //Day 25 patch
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "When": {
+        "Day": "25"
+      },
+      "Entries": {
+        "LanceInBed": "{{i18n:LanceinBed4}}"
+      }
+    },
+    {
+      //Lance Introduction event - 'The Forge'
+      "Action": "EditData",
+      "Target": "data/events/caldera",
+      "Entries": {
+        "6951319/": "continue/-500 -500/farmer 22 37 0 Lance -100 -100 2/skippable/pause 1250/showFrame Lance 39 true/viewport 22 32 true/viewport move 0 -1 4000 true/move farmer 0 -8 0/pause 650/faceDirection farmer 1/pause 1250/faceDirection farmer 0/faceDirection farmer 3/pause 1100/faceDirection farmer 0/pause 600/move farmer 0 -3 0 true/viewport move 0 -1 3000 true/pause 1500/warp Lance 22 22/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 37 true/pause 100/emote farmer 16 true/showFrame Lance 36 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 20 true/pause 650/speak Lance \"{{i18n:LanceIntro.01}}\"/pause 1000/speak Lance \"{{i18n:LanceIntro.02}}\"/pause 1000/move Lance 0 2 2/pause 300/speak Lance \"{{i18n:LanceIntro.03}}\"/pause 500/showFrame Lance 21 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 39 true/pause 100/warp Lance -100 -100/pause 200/globalFade/viewport -1000 -1000/pause 50/end position 22 25",
+      },
+    },
+    {
+      //Lance 0 heart event - 'Lance The Combat Mage'
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent |contains=6951319": true
+      },
+      "Entries": {
+        "6951321/w sunny/c 1/t 600 1000": "continue/-500 -500/farmer -50 -50 2 Lance -100 -100 0/pause 1250/emote farmer 16/pause 100/speak Lance \"{{i18n:Lance0heart.01}}\"/pause 750/faceDirection Lance 3 true/pause 900/faceDirection Lance 0 true/pause 275/faceDirection Lance 1 true/pause 825/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance0heart.02}}\"/pause 750/emote farmer 8/pause 250/speak Lance \"{{i18n:Lance0heart.03}}\"/pause 900/speak Lance \"{{i18n:Lance0heart.04}}[FlashShifter.StardewValleyExpandedCP_Lance's_Schedule]\"/pause 350/emote farmer 32/pause 250/speak Lance \"{{i18n:Lance0Heart.05}}\"/pause 400/end dialogue Lance \"{{i18n:Lance0Heart.06}}\"",
+      },
+    },
+    {
+      // lance monster crop quest
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "Lance": {
+          "Name": "[Lance_Name]",
+          "Requester": "Lance",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_65360182",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Lance_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Deliver",
+              "Text": "[Lance_Objective_0_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_monster_mushroom",
+                "TargetName": "Lance"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "[Lance_Objective_1_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_slime_berry",
+                "TargetName": "Lance"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "[Lance_Objective_2_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_monster_fruit",
+                "TargetName": "Lance"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "[Lance_Objective_3_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_void_root",
+                "TargetName": "Lance"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "lanceMonsterCrops",
+                "NoLetter": "true"
+              }
+            }
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "Lance_Name": "{{i18n:Lance.SpecialOrderName}}",
+        "Lance_Text": "{{i18n:Lance.SpecialOrderText}}",
+        "Lance_Objective_1_Text": "{{i18n:Lance.SpecialOrderSpring}}",
+        "Lance_Objective_2_Text": "{{i18n:Lance.SpecialOrderSummer}}",
+        "Lance_Objective_0_Text": "{{i18n:Lance.SpecialOrderFall}}",
+        "Lance_Objective_3_Text": "{{i18n:Lance.SpecialOrderWinter}}",
+      }
+    },
+    {
+      //Lance 2 heart event (part 1) - 'The Highlands'        <<ID tagged by quest
+      "Action": "EditData",
+      "Target": "data/events/Custom_AdventurerSummit",
+      "Entries": {
+        "65360185/e 65360184": "continue/-50 -50/farmer 51 19 2 MarlonFay 52 30 1 Lance -40 -40 3/positionOffset MarlonFay 0 5 true/skippable/viewport 51 30 clamp true/move farmer 0 9 2/pause 1000/faceDirection MarlonFay 0 true/pause 850/speak MarlonFay \"{{i18n:Lance2heart1.01}}\"/pause 500/jump farmer/pause 1000/speak MarlonFay \"{{i18n:Lance2heart1.02}}\"/pause 500/faceDirection MarlonFay 1 true/pause 500/move farmer 0 1 1/move farmer 1 0 1 true/globalFade/viewport -1000 -1000/changeLocation Custom_Highlands/warp farmer 130 143/faceDirection farmer 3 true/warp MarlonFay 129 143/faceDirection MarlonFay 1 true/warp Lance 120 111/pause 500/viewport 0 143 clamp true/viewport move 2 0 8000 true/pause 5500/globalFade/viewport -1000 -1000/pause 500/viewport 95 143 clamp true/viewport move -2 0 8000 true/pause 5500/globalFade/viewport -1000 -1000/pause 1000/viewport 129 144 clamp true/pause 1500/speak MarlonFay \"{{i18n:Lance2heart1.03}}\"/pause 500/emote farmer 32/pause 300/speak MarlonFay \"{{i18n:Lance2heart1.04}}\"/pause 750/faceDirection MarlonFay 0 true/pause 500/viewport move 0 -1 6000 true/move MarlonFay 0 -13 0 true/pause 500/move farmer -1 0 0 true/pause 500/move farmer 0 -11 0 true/pause 3000/globalFade/viewport -1000 -1000/pause 500/warp MarlonFay 125 113/warp farmer 128 113/viewport 125 112 true/move MarlonFay 0 -3 3 true/move farmer -3 0 0 true/pause 1500/move farmer 0 -1 3 true/pause 1000/speak Lance \"{{i18n:Lance2heart1.05}}\"/pause 500/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart1.06}}\"/pause 500/speak MarlonFay \"{{i18n:Lance2heart1.07}}\"/pause 500/speak Lance \"{{i18n:Lance2heart1.08}}\"/pause 650/speed Lance 1/move Lance 2 0 1 true/viewport move 1 0 2000 true/pause 2500/shake Lance 500/pause 300/speak Lance \"{{i18n:Lance2heart1.09}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsOutpost/warp Lance 7 5/faceDirection Lance 2 true/warp MarlonFay 7 7/faceDirection MarlonFay 0 true/warp farmer 8 7/faceDirection farmer 0 true/positionOffset Lance 32 -6 true/stopMusic/playSound doorClose/pause 500/playSound doorClose/pause 350/playMusic doorClose/pause 250/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic/pause 1250/positionOffset farmer 25 15 true/viewport 7 7 true/pause 1000/speak Lance \"{{i18n:Lance2heart1.10}}\"/pause 500/emote Lance 40/pause 300/speak Lance \"{{i18n:Lance2heart1.11}}\"/pause 500/shake MarlonFay 400/pause 200/speak MarlonFay \"{{i18n:Lance2heart1.12}}\"/pause 500/faceDirection farmer 3 true/pause 750/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Lance \"{{i18n:Lance2heart1.13}}\"/pause 300/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Lance2heart1.14}}\"/pause 1000/message \"{{i18n:Lance2heart1.15}}\"/pause 500/end dialogue MarlonFay \"{{i18n:Lance2heart1.16}}\"",
+      },
+    },
+    {
+      //Lance 2 heart event (part 2) - 'Monster Crops' (sunny)       <<ID tagged by framework
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "When": {
+        "Weather |contains=Rain": false
+      },
+      "Entries": {
+        "65360186/e 65360185": "continue/-50 -50/farmer 115 114 0 Lance 109 109 3/mail LanceLifeElixirs/skippable/viewport 112 111 true/move farmer 0 -5 3/pause 1000/speak Lance \"{{i18n:Lance2heart2.01}}\"/pause 750/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart2.02}}\"/pause 400/emote farmer 32/pause 450/speed Lance 1/move Lance 3 0 1/pause 850/faceDirection Lance 2 true/pause 750/speak Lance \"{{i18n:Lance2heart2.03}}\"/pause 600/showFrame Lance 0 true/pause 500/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart2.04}}\"/pause 1000/globalFade/viewport -1000 -1000/end dialogue Lance \"{{i18n:Lance2heart2.05}}\""
+      },
+    },
+    {
+      //Lance 2 heart event (part 2) - 'Monster Crops' (rainy)       <<ID tagged by framework
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "When": {
+        "Weather |contains=Rain": true
+      },
+      "Entries": {
+        "65360186/e 65360185": "rain/-50 -50/farmer 115 114 0 Lance 109 109 3/mail LanceLifeElixirs/skippable/viewport 112 111 true/move farmer 0 -5 3/pause 1000/speak Lance \"{{i18n:Lance2heart2.01}}\"/pause 750/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart2.02}}\"/pause 400/emote farmer 32/pause 450/speed Lance 1/move Lance 3 0 1/pause 850/faceDirection Lance 2 true/pause 750/speak Lance \"{{i18n:Lance2heart2.03}}\"/pause 600/showFrame Lance 0 true/pause 500/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart2.04}}\"/pause 1000/globalFade/viewport -1000 -1000/end dialogue Lance \"{{i18n:Lance2heart2.05}}\""
+      },
+    },
+    {
+      //Event 2 heart event (part 3) - Fake Event           <<Triggers reward
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasFlag": "lanceMonsterCrops"
+      },
+      "Update": "OnLocationChange",
+      "Entries": {
+        "65360187/e 65360186": "continue/-500 -500/farmer -10 -10 0/pause 50/end"
+      },
+    },
+    {
+      //Event 2 heart event (part 4) - 'The Diamond Wand'
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent": "65360187"
+      },
+      "Entries": {
+        "65360188/": "continue/-50 -50/farmer 64 15 2 Lance 64 14 0/skippable/pause 1100/speak Lance \"{{i18n:Lance2heart4.01}}\"/pause 250/emote farmer 32/pause 200/speak Lance \"{{i18n:Lance2heart4.02}}\"/pause 400/jump farmer/pause 1000/speak Lance \"{{i18n:Lance2heart4.03}}\"/pause 500/end dialogue Lance \"{{i18n:Lance2heart4.04}}\"",
+      },
+    },
+    {
+      //Lance 4 heart event - 'Blink Relic' - (Castle Village is mentioned)
+      "Action": "EditData",
+      "Target": "data/events/islandwest",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=Island_Resort": true,
+        "HasFlag |contains=Island_UpgradeBridge": true,
+        "HasSeenEvent |contains=908078": true,
+        "HasSeenEvent |contains=6951319": true
+      },
+      "Entries": {
+        "6951320/w sunny/f Lance 1000/t 600 1800": "continue/-500 -500/farmer 80 80 2 Lance -100 -100 2 Leo 94 69 2/skippable/makeInvisible 81 80 1 10/makeInvisible 78 88 1 4/viewport 80 83 clamp true/viewport move 0 1 5650 true/move farmer 0 7 2 true/pause 8000/showFrame Lance 39 true/warp Lance 83 87/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 20 true/pause 1500/speak Lance \"{{i18n:Lance4hearts.01}}\"/pause 650/faceDirection farmer 1 true/pause 400/emote farmer 16 true/pause 800/faceDirection Lance 3 true/pause 750/speak Lance \"{{i18n:Lance4hearts.02}}\"/pause 500/emote farmer 40 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.03}}\"/pause 1000/speed Lance 1/move Lance -1 0 3/pause 500/speak Lance \"{{i18n:Lance4hearts.04}}\"/pause 500/emote farmer 8 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.05}}\"/pause 500/emote Lance 40 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.06}}\"/pause 500/speed Lance 1/move Lance -1 0 3/pause 500/showFrame Lance 15 true/shake Lance 500/pause 100/playSound dwop/pause 500/showFrame Lance 12 true/pause 500/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 1650/faceDirection Lance 2 true/pause 500/speak Lance \"{{i18n:Lance4hearts.07}}\"/pause 600/faceDirection Lance 3 true/pause 750/shake Lance 600/pause 150/showFrame Lance 13 true/pause 300/showFrame Lance 16 true/pause 500/speak Lance \"{{i18n:Lance4hearts.08}}\"/pause 750/showFrame Lance 17 true/showFrame Lance 18 true/pause 750/shake Lance 500/pause 500/screenFlash 2/playSound wand/warp Lance 89 94/showFrame Lance 0 true/positionOffset Lance 20 25 true/pause 1600/faceDirection farmer 2 true/pause 1500/showFrame farmer 3 true/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 88 94/viewport 90 95 clamp/faceDirection farmer 2 true/positionOffset farmer 0 15 true/pause 1500/faceDirection Lance 3 true/pause 750/faceDirection farmer 1 true/pause 500/speak Lance \"{{i18n:Lance4hearts.09}}\"/pause 1250/faceDirection Lance 2 true/pause 1000/faceDirection farmer 2 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.10}}\"/pause 500/globalFade/viewport 109 109 clamp true/viewport move -1 0 7250 true/pause 5000/globalFade/viewport 0 109 clamp true/viewport move 1 0 7250 true/pause 5000/globalFade/viewport 67 95 clamp true/faceDirection farmer 3 true/faceDirection Lance 3 true/pause 3500/speak Lance \"{{i18n:Lance4hearts.11}}\"/pause 1250/globalFade/viewport 90 95 clamp true/pause 2000/speak Lance \"{{i18n:Lance4hearts.CV1}}\"/pause 650/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 600/startJittering/pause 600/stopJittering/pause 500/speak Lance \"{{i18n:Lance4hearts.CV2}}\"/pause 850/showFrame Lance 13 true/pause 100/shake Lance 500/pause 150/showFrame Lance 16 true/pause 500/showFrame Lance 17 true/pause 500/showFrame Lance 18 true/pause 500/shake Lance 400/pause 400/screenFlash 2/playSound wand/showFrame Lance 4 true/warp Lance 80 87/positionOffset Lance -10 -12 true/pause 1500/faceDirection farmer 2 true/pause 1500/showFrame farmer 3 true/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 82 87/viewport 81 88 clamp/faceDirection farmer 2 true/pause 1200/faceDirection farmer 3 true/pause 650/speak Lance \"{{i18n:Lance4hearts.13}}\"/pause 750/speed farmer 1/move farmer -1 0 3/pause 500/showFrame farmer 7 true/pause 100/startJittering/pause 300/playSound dwop/pause 150/stopJittering/pause 100/showFrame farmer 6 true/pause 500/message \"{{i18n:Lance4hearts.14}}\"/pause 1000/speak Lance \"{{i18n:Lance4hearts.15}}\"/pause 750/faceDirection Lance 2 true/pause 650/showFrame Lance 20 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 38 true/pause 100/warp Lance -20 -20/pause 1000/globalFade/viewport -1000 -1000/pause 500/end dialogue Leo \"{{i18n:Lance4hearts.16}}\""
+      },
+    },
+    {
+      //Lance 4 heart event - 'Blink Relic' - (Castle Village is not mentioned)
+      "Action": "EditData",
+      "Target": "data/events/islandwest",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=Island_Resort": true,
+        "HasFlag |contains=Island_UpgradeBridge": true,
+        "HasSeenEvent |contains=908078": false,
+        "HasSeenEvent |contains=6951319": true
+      },
+      "Entries": {
+        "6951320/w sunny/f Lance 1000/t 600 1800": "continue/-500 -500/farmer 80 80 2 Lance -100 -100 2 Leo 94 69 2/skippable/makeInvisible 81 80 1 10/makeInvisible 78 88 1 4/viewport 80 83 clamp true/viewport move 0 1 5650 true/move farmer 0 7 2 true/pause 8000/showFrame Lance 39 true/warp Lance 83 87/pause 100/showFrame Lance 38 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 20 true/pause 1500/speak Lance \"{{i18n:Lance4hearts.01}}\"/pause 650/faceDirection farmer 1 true/pause 400/emote farmer 16 true/pause 800/faceDirection Lance 3 true/pause 750/speak Lance \"{{i18n:Lance4hearts.02}}\"/pause 500/emote farmer 40 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.03}}\"/pause 1000/speed Lance 1/move Lance -1 0 3/pause 500/speak Lance \"{{i18n:Lance4hearts.04}}\"/pause 500/emote farmer 8 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.05}}\"/pause 500/emote Lance 40 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.06}}\"/pause 500/speed Lance 1/move Lance -1 0 3/pause 500/showFrame Lance 15 true/shake Lance 500/pause 100/playSound dwop/pause 500/showFrame Lance 12 true/pause 500/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 1650/faceDirection Lance 2 true/pause 500/speak Lance \"{{i18n:Lance4hearts.07}}\"/pause 600/faceDirection Lance 3 true/pause 750/shake Lance 600/pause 150/showFrame Lance 13 true/pause 300/showFrame Lance 16 true/pause 500/speak Lance \"{{i18n:Lance4hearts.08}}\"/pause 750/showFrame Lance 17 true/showFrame Lance 18 true/pause 750/shake Lance 500/pause 500/screenFlash 2/playSound wand/warp Lance 89 94/showFrame Lance 0 true/positionOffset Lance 20 25 true/pause 1600/faceDirection farmer 2 true/pause 1500/showFrame farmer 3 true/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 88 94/viewport 90 95 clamp/faceDirection farmer 2 true/positionOffset farmer 0 15 true/pause 1500/faceDirection Lance 3 true/pause 750/faceDirection farmer 1 true/pause 500/speak Lance \"{{i18n:Lance4hearts.09}}\"/pause 1250/faceDirection Lance 2 true/pause 1000/faceDirection farmer 2 true/pause 1000/speak Lance \"{{i18n:Lance4hearts.10}}\"/pause 500/globalFade/viewport 109 109 clamp true/viewport move -1 0 7250 true/pause 5000/globalFade/viewport 0 109 clamp true/viewport move 1 0 7250 true/pause 5000/globalFade/viewport 67 95 clamp true/faceDirection farmer 3 true/faceDirection Lance 3 true/pause 3500/speak Lance \"{{i18n:Lance4hearts.11}}\"/pause 1250/globalFade/viewport 90 95 clamp true/pause 2250/faceDirection Lance 3 true/pause 500/faceDirection farmer 2 true/pause 600/speak Lance \"{{i18n:Lance4hearts.12}}\"/pause 850/showFrame Lance 13 true/pause 100/shake Lance 500/pause 150/showFrame Lance 16 true/pause 500/showFrame Lance 17 true/pause 500/showFrame Lance 18 true/pause 500/shake Lance 400/pause 400/screenFlash 2/playSound wand/showFrame Lance 4 true/warp Lance 80 87/positionOffset Lance -10 -12 true/pause 1500/faceDirection farmer 2 true/pause 1500/showFrame farmer 3 true/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 82 87/viewport 81 88 clamp/faceDirection farmer 2 true/pause 1200/faceDirection farmer 3 true/pause 650/speak Lance \"{{i18n:Lance4hearts.13}}\"/pause 750/speed farmer 1/move farmer -1 0 3/pause 500/showFrame farmer 7 true/pause 100/startJittering/pause 300/playSound dwop/pause 150/stopJittering/pause 100/showFrame farmer 6 true/pause 500/message \"{{i18n:Lance4hearts.14}}\"/pause 1000/speak Lance \"{{i18n:Lance4hearts.15}}\"/pause 750/faceDirection Lance 2 true/pause 650/showFrame Lance 20 true/pause 100/showFrame Lance 21 true/pause 100/showFrame Lance 22 true/pause 100/showFrame Lance 23 true/pause 100/showFrame Lance 24 true/pause 100/showFrame Lance 25 true/pause 100/showFrame Lance 26 true/pause 100/showFrame Lance 27 true/pause 100/showFrame Lance 40 true/pause 100/showFrame Lance 29 true/pause 100/showFrame Lance 30 true/pause 100/showFrame Lance 31 true/pause 100/showFrame Lance 32 true/pause 100/showFrame Lance 33 true/pause 100/showFrame Lance 34 true/pause 100/showFrame Lance 35 true/pause 100/showFrame Lance 36 true/pause 100/showFrame Lance 37 true/pause 100/showFrame Lance 38 true/pause 100/warp Lance -20 -20/pause 1000/globalFade/viewport -1000 -1000/pause 500/end dialogue Leo \"{{i18n:Lance4hearts.16}}\""
+      },
+    },
+    { //Blink Relic image load
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/BlinkRelic",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlinkRelic.png"
+    },
+    {
+      //changes joja soda machine into a blink relic.
+      "Action": "EditImage",
+      "Target": "Tilesheets/Craftables",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlinkRelic.png",
+      "ToArea": {
+        "X": 80,
+        "Y": 448,
+        "Width": 16,
+        "Height": 32
+      },
+      "When": {
+        "LocationName": "IslandWest",
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=Island_Resort": true,
+        "HasFlag |contains=Island_UpgradeBridge": true,
+        "Hearts:Lance": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14",
+        "HasSeenEvent |contains=6951319": true,
+        "HasSeenEvent |contains=6951320": false
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "117": {
+          "Name": "Blink Relic",
+          "DisplayName": "Blink Relic",
+          "Description": "The Joja soda machine mysteriously formed into a Blink Relic",
+          "Price": 2500,
+          "CanBePlacedOutDoors": true,
+          "CanBePlacedIndoors": true,
+          "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\BlinkRelic",
+          "SpriteIndex": 0,
+        }
+      },
+      "When": {
+        "LocationName": "IslandWest",
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=Island_Resort": true,
+        "HasFlag |contains=Island_UpgradeBridge": true,
+        "Hearts:Lance": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14",
+        "HasSeenEvent |contains=6951319": true,
+        "HasSeenEvent |contains=6951320": false
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      //Lance 6 heart event - Monster Studies (sunny)
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "When": {
+        "Weather |contains=Rain": false
+      },
+      "Entries": {
+        "65360190/f Lance 1500": "spring_day_ambient/-500 -500/farmer 129 121 0 Lance 129 106 0/skippable/addTemporaryActor WildernessGolemActor1 16 32 -100 -100 2/addTemporaryActor WildernessGolemActor2 16 32 -99 -99 2/addTemporaryActor WildernessGolemActor3 16 32 -98 -98 2/addTemporaryActor WildernessGolemActor4 16 32 -97 -97 2/addTemporaryActor MushroomMonsterActor1 16 32 -96 -96 2/addTemporaryActor MushroomMonsterActor2 16 32 -95 -95 2/addTemporaryActor MushroomMonsterActor3 16 32 -94 -94 2/addTemporaryActor SlimeActor1 16 32 -93 -93 2/addTemporaryActor SlimeActor2 16 32 -92 -92 2/addTemporaryActor SlimeActor3 16 32 -91 -91 2/addTemporaryActor BabySlimeActor 16 32 -90 -90 2/makeInvisible 127 106 4 3/pause 750/viewport 129 111 clamp true/move farmer 0 -7 0/pause 750/faceDirection Lance 1 true/pause 250/faceDirection Lance 2 true/pause 500/move Lance 0 3 2/positionOffset Lance 0 1 true/pause 50/positionOffset Lance 0 1 true/pause 50/pause 300/shake Lance 400/pause 200/speak Lance \"{{i18n:Lance6hearts.01}}\"/pause 400/emote farmer 32/pause 300/move farmer 0 -1 0/pause 500/warp farmer -20 -20/playSound doorClose/globalFade/viewport -1000 -1000/warp farmer 129 107/faceDirection farmer 3 true/warp Lance 127 108/faceDirection Lance 1 true/pause 500/viewport 129 108 true/pause 1000/speak Lance \"{{i18n:Lance6hearts.02}}\"/pause 500/faceDirection Lance 2 true/pause 250/faceDirection Lance 3 true/pause 500/move farmer -2 0 3 true/viewport move -1 0 5000 true/pause 2500/globalFade/viewport -1000 -1000/pause 250/warp WildernessGolemActor1 109 111/faceDirection WildernessGolemActor1 1 true/warp SlimeActor1 105 108/animate SlimeActor1 false true 200 0 1 2 3/warp SlimeActor2 97 115/animate SlimeActor2 false true 137 0 1 2 3/faceDirection WildernessGolemActor1 1 true/viewport 110 111 true/pause 1000/speed WildernessGolemActor1 1/move WildernessGolemActor1 2 0 1/pause 400/playSound rockGolemHit/pause 200/shake WildernessGolemActor1 1250/pause 1000/playSound rockGolemHit/pause 250/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 3 true/pause 400/move WildernessGolemActor1 -2 0 3 true/pause 500/playSound rockGolemHit/pause 750/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 1 true/pause 400/speak Lance \"{{i18n:Lance6hearts.03}}\"/pause 1000/shake WildernessGolemActor1 500/pause 200/playSound rockGolemHit/pause 250/playSound rockGolemHit/pause 650/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 3 true/pause 400/move WildernessGolemActor1 -8 0 3 true/pause 2000/globalFade/viewport -1000 -1000/warp WildernessGolemActor1 -50 -50/positionOffset farmer 0 -50 true/viewport 128 108 true/pause 1500/faceDirection Lance 0 true/pause 550/faceDirection farmer 2 true/pause 500/speak Lance \"{{i18n:Lance6hearts.04}}\"/pause 500/jump farmer/pause 500/speak Lance \"{{i18n:Lance6hearts.05}}\"/pause 500/showFrame Lance 12 true/pause 500/showFrame Lance 16 true/playSound dwop/pause 1000/showFrame Lance 17 true/pause 300/showFrame Lance 18 true/pause 650/shake Lance 1000/pause 400/playSound healSound/glow 0 0 200/pause 200/startJittering/pause 1000/stopJittering/pause 300/showFrame Lance 17 true/pause 250/showFrame Lance 16 true/pause 300/showFrame Lance 12 true/playSound dwop/pause 600/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance6hearts.06}}\"/pause 600/speed Lance 1/move Lance 0 -1 0/pause 500/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame Lance 9 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame farmer 1 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 750/screenFlash 1/playSound wand/warp farmer -50 -50/warp Lance -49 -49/showFrame Lance 0 true/showFrame farmer 0 true/pause 2000/globalFade/viewport -1000 -1000/playMusic Cloth/warp Lance 30 129/warp farmer 29 129/positionOffset Lance 20 -20 true/positionOffset farmer 14 -16 true/warp WildernessGolemActor1 -50 -50/warp WildernessGolemActor2 36 137/faceDirection WildernessGolemActor2 3 true/warp SlimeActor1 25 135/warp SlimeActor2 38 128/warp WildernessGolemActor3 42 136/faceDirection WildernessGolemActor3 2 true/showFrame WildernessGolemActor3 20 true/viewport 23 140 clamp true/viewport move 1 -1 11000 true/pause 3500/showFrame WildernessGolemActor1 17 true/warp WildernessGolemActor1 29 137/pause 100/playSound rockGolemSpawn/showFrame WildernessGolemActor1 19 true/pause 100/showFrame WildernessGolemActor1 19 true/pause 100/showFrame WildernessGolemActor1 20 true/pause 100/showFrame WildernessGolemActor1 21 true/pause 100/showFrame WildernessGolemActor1 22 true/pause 100/showFrame WildernessGolemActor1 23 true/pause 100/showFrame WildernessGolemActor1 0 true/pause 500/advancedMove WildernessGolemActor1 false 0 2 1 0/pause 1000/showFrame Lance 41 true/pause 300/showFrame Lance 0 true/pause 2000/globalFade/viewport -1000 -1000/warp Lance 62 77/warp farmer 63 79/positionOffset Lance 20 20 true/warp WildernessGolemActor1 -30 -30/warp WildernessGolemActor2 60 73/warp WildernessGolemActor3 72 83/warp WildernessGolemActor4 78 74/warp SlimeActor1 68 78/warp SlimeActor2 69 78/makeInvisible 62 77 2 3/makeInvisible 69 77 4 3/move WildernessGolemActor2 27 0 1 true/speed WildernessGolemActor3 1/move WildernessGolemActor3 -17 0 3 true/speed WildernessGolemActor4 1/move WildernessGolemActor4 0 15 2 true/positionOffset SlimeActor1 50 0 true/positionOffset SlimeActor2 30 0 true/faceDirection farmer 1 true/faceDirection Lance 1 true/viewport 67 79 true/pause 2000/playSound dwop/specificTemporarySprite heart 70 78/playSound slime/pause 1000/playSound slime/pause 750/playSound slimeHit/warp BabySlimeActor 69 78/jump BabySlimeActor/speed BabySlimeActor 1/move BabySlimeActor 0 4 2 true/pause 500/stopAnimation SlimeActor1/speed SlimeActor1 1/move SlimeActor1 0 3 2 true/pause 350/stopAnimation SlimeActor2/speed SlimeActor2 1/move SlimeActor2 0 3 2 true/playSound slime/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 109 66/faceDirection farmer 1 true/warp Lance 109 67/faceDirection Lance 1 true/positionOffset Lance 20 15 true/warp WildernessGolemActor2 97 72/speed WildernessGolemActor2 1/move WildernessGolemActor2 13 0 1 true/warp WildernessGolemActor3 117 60/move WildernessGolemActor3 -13 0 3 true/warp WildernessGolemActor4 120 54/move WildernessGolemActor4 1 21 2 true/warp MushroomMonsterActor1 113 67/warp MushroomMonsterActor2 115 67/positionOffset MushroomMonsterActor1 10 -15/positionOffset MushroomMonsterActor2 13 -10 true/animate SlimeActor1 false true 125 0 1 2 3/animate SlimeActor2 false true 125 0 1 2 3/warp SlimeActor1 103 69/warp SlimeActor2 111 62/makeInvisible 104 60 14 1/makeInvisible 108 65 3 4/makeInvisible 112 66 5 3/makeInvisible 97 72 14 1/makeInvisible 120 54 1 22/makeInvisible 111 56 1 1/makeInvisible 103 69 1 1/viewport 114 67 true/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/jump MushroomMonsterActor2/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/jump MushroomMonsterActor2/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/shake MushroomMonsterActor1 5000/jump MushroomMonsterActor2/pause 800/playSound dustMeep/shake MushroomMonsterActor2 5000/globalFade/viewport -1000 -1000/warp farmer 105 13/faceDirection farmer 0 true/warp Lance 107 13/faceDirection Lance 0 true/warp MushroomMonsterActor1 -80 -80/warp MushroomMonsterActor2 -79 -79/warp MushroomMonsterActor3 -78 -78/warp SlimeActor1 100 16/warp SlimeActor2 -60 -60/warp WildernessGolemActor2 -30 -30/warp WildernessGolemActor3 119 18/warp WildernessGolemActor4 -28 -28/move WildernessGolemActor3 -23 0 3 true/positionOffset Lance 0 -20 true/viewport 106 13 clamp true/pause 3000/faceDirection Lance 3 true/pause 1000/faceDirection farmer 1 true/pause 1000/emote Lance 32/pause 400/faceDirection Lance 0 true/pause 1000/faceDirection farmer 0 true/pause 1000/globalFade/viewport -1000 -1000/warp SlimeActor1 -50 -50/warp WildernessGolemActor3 -80 -80/stopMusic/changeLocation Custom_HighlandsCavern/playMusic Upper_Ambient/warp Lance 46 20/warp farmer 46 22/faceDirection Lance 3 true/faceDirection farmer 3 true/makeInvisible 46 20 2 3/viewport 44 124 true/viewport move 2 -2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 0 0 clamp true/viewport move 2 2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 42 21 true/viewport move 1 0 4000 true/pause 5000/speak Lance \"{{i18n:Lance6hearts.07}}\"/pause 1000/faceDirection farmer 0 true/pause 1000/faceDirection Lance 2 true/pause 800/emote farmer 40/pause 250/shake Lance 500/pause 150/speak Lance \"{{i18n:Lance6hearts.08}}\"/pause 750/playSound healSound/glow 123 63 0/pause 1000/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance6hearts.09}}\"/pause 500/playSound shadowpeep/pause 400/playSound shadowpeep/pause 125/faceDirection farmer 1 true/pause 300/playSound shadowpeep/pause 100/showFrame Lance 43 true/pause 300/playSound shadowpeep/pause 400/faceDirection farmer 2 true/pause 100/playSound shadowpeep/pause 400/playSound shadowpeep/pause 300/playSound shadowpeep/showFrame Lance 0 true/pause 300/speak Lance \"{{i18n:Lance6hearts.10}}\"/playSound shadowpeep/pause 350/playSound shadowpeep/pause 350/faceDirection farmer 1 true/pause 250/speed Lance 1/move Lance 0 2 2 true/pause 300/faceDirection farmer 0 true/pause 200/playSound shadowpeep/pause 500/playSound wand/screenFlash 1/warp farmer -30 -30/warp Lance -30 -30/pause 350/playSound shadowpeep/pause 300/playSound shadowpeep/globalFade/viewport -1000 -1000/stopMusic/pause 1000/speak Lance \"{{i18n:Lance6hearts.11}}\"/pause 1000/end dialogue Lance \"{{i18n:Lance6hearts.12}}\""
+      },
+    },
+    {
+      //Lance 6 heart event - Monster Studies (raining)
+      "Action": "EditData",
+      "Target": "data/events/Custom_Highlands",
+      "When": {
+        "Weather |contains=Rain": true
+      },
+      "Entries": {
+        "65360190/f Lance 1500": "rain/-500 -500/farmer 129 121 0 Lance 129 106 0/skippable/addTemporaryActor WildernessGolemActor1 16 32 -100 -100 2/addTemporaryActor WildernessGolemActor2 16 32 -99 -99 2/addTemporaryActor WildernessGolemActor3 16 32 -98 -98 2/addTemporaryActor WildernessGolemActor4 16 32 -97 -97 2/addTemporaryActor MushroomMonsterActor1 16 32 -96 -96 2/addTemporaryActor MushroomMonsterActor2 16 32 -95 -95 2/addTemporaryActor MushroomMonsterActor3 16 32 -94 -94 2/addTemporaryActor SlimeActor1 16 32 -93 -93 2/addTemporaryActor SlimeActor2 16 32 -92 -92 2/addTemporaryActor SlimeActor3 16 32 -91 -91 2/addTemporaryActor BabySlimeActor 16 32 -90 -90 2/makeInvisible 127 106 4 3/pause 750/viewport 129 111 clamp true/move farmer 0 -7 0/pause 750/faceDirection Lance 1 true/pause 250/faceDirection Lance 2 true/pause 500/move Lance 0 3 2/positionOffset Lance 0 1 true/pause 50/positionOffset Lance 0 1 true/pause 50/pause 300/shake Lance 400/pause 200/speak Lance \"{{i18n:Lance6hearts.01}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 -1 0/pause 500/warp farmer -20 -20/playSound doorClose/globalFade/viewport -1000 -1000/warp farmer 129 107/faceDirection farmer 3 true/warp Lance 127 108/faceDirection Lance 1 true/pause 500/viewport 129 108 true/pause 1000/speak Lance \"{{i18n:Lance6hearts.02}}\"/pause 500/faceDirection Lance 2 true/pause 250/faceDirection Lance 3 true/pause 500/move farmer -2 0 3 true/viewport move -1 0 5000 true/pause 2500/globalFade/viewport -1000 -1000/pause 250/warp WildernessGolemActor1 109 111/faceDirection WildernessGolemActor1 1 true/warp SlimeActor1 105 108/animate SlimeActor1 false true 200 0 1 2 3/warp SlimeActor2 97 115/animate SlimeActor2 false true 137 0 1 2 3/faceDirection WildernessGolemActor1 1 true/viewport 110 111 true/pause 1000/speed WildernessGolemActor1 1/move WildernessGolemActor1 2 0 1/pause 400/playSound rockGolemHit/pause 200/shake WildernessGolemActor1 1250/pause 1000/playSound rockGolemHit/pause 250/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 3 true/pause 400/move WildernessGolemActor1 -2 0 3 true/pause 500/playSound rockGolemHit/pause 750/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 1 true/pause 400/speak Lance \"{{i18n:Lance6hearts.03}}\"/pause 1000/shake WildernessGolemActor1 500/pause 200/playSound rockGolemHit/pause 250/playSound rockGolemHit/pause 650/faceDirection WildernessGolemActor1 2 true/pause 250/faceDirection WildernessGolemActor1 3 true/pause 400/move WildernessGolemActor1 -8 0 3 true/pause 2000/globalFade/viewport -1000 -1000/warp WildernessGolemActor1 -50 -50/positionOffset farmer 0 -50 true/viewport 128 108 true/pause 1500/faceDirection Lance 0 true/pause 550/faceDirection farmer 2 true/pause 500/speak Lance \"{{i18n:Lance6hearts.04}}\"/pause 500/jump farmer/pause 500/speak Lance \"{{i18n:Lance6hearts.05}}\"/pause 500/showFrame Lance 12 true/pause 500/showFrame Lance 16 true/playSound dwop/pause 1000/showFrame Lance 17 true/pause 300/showFrame Lance 18 true/pause 650/shake Lance 1000/pause 400/playSound healSound/glow 0 0 200/pause 200/startJittering/pause 1000/stopJittering/pause 300/showFrame Lance 17 true/pause 250/showFrame Lance 16 true/pause 300/showFrame Lance 12 true/playSound dwop/pause 600/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance6hearts.06}}\"/pause 600/speed Lance 1/move Lance 0 -1 0/pause 500/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame Lance 9 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame farmer 1 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 750/screenFlash 1/playSound wand/warp farmer -50 -50/warp Lance -49 -49/showFrame Lance 0 true/showFrame farmer 0 true/pause 2000/globalFade/viewport -1000 -1000/playMusic Cloth/warp Lance 30 129/warp farmer 29 129/positionOffset Lance 20 -20 true/positionOffset farmer 14 -16 true/warp WildernessGolemActor1 -50 -50/warp WildernessGolemActor2 36 137/faceDirection WildernessGolemActor2 3 true/warp SlimeActor1 25 135/warp SlimeActor2 38 128/warp WildernessGolemActor3 42 136/faceDirection WildernessGolemActor3 2 true/showFrame WildernessGolemActor3 20 true/viewport 23 140 clamp true/viewport move 1 -1 11000 true/pause 3500/showFrame WildernessGolemActor1 17 true/warp WildernessGolemActor1 29 137/pause 100/playSound rockGolemSpawn/showFrame WildernessGolemActor1 19 true/pause 100/showFrame WildernessGolemActor1 19 true/pause 100/showFrame WildernessGolemActor1 20 true/pause 100/showFrame WildernessGolemActor1 21 true/pause 100/showFrame WildernessGolemActor1 22 true/pause 100/showFrame WildernessGolemActor1 23 true/pause 100/showFrame WildernessGolemActor1 0 true/pause 500/advancedMove WildernessGolemActor1 false 0 2 1 0/pause 1000/showFrame Lance 41 true/pause 300/showFrame Lance 0 true/pause 2000/globalFade/viewport -1000 -1000/warp Lance 62 77/warp farmer 63 79/positionOffset Lance 20 20 true/warp WildernessGolemActor1 -30 -30/warp WildernessGolemActor2 60 73/warp WildernessGolemActor3 72 83/warp WildernessGolemActor4 78 74/warp SlimeActor1 68 78/warp SlimeActor2 69 78/makeInvisible 62 77 2 3/makeInvisible 69 77 4 3/move WildernessGolemActor2 27 0 1 true/speed WildernessGolemActor3 1/move WildernessGolemActor3 -17 0 3 true/speed WildernessGolemActor4 1/move WildernessGolemActor4 0 15 2 true/positionOffset SlimeActor1 50 0 true/positionOffset SlimeActor2 30 0 true/faceDirection farmer 1 true/faceDirection Lance 1 true/viewport 67 79 true/pause 2000/playSound dwop/specificTemporarySprite heart 70 78/playSound slime/pause 1000/playSound slime/pause 750/playSound slimeHit/warp BabySlimeActor 69 78/jump BabySlimeActor/speed BabySlimeActor 1/move BabySlimeActor 0 4 2 true/pause 500/stopAnimation SlimeActor1/speed SlimeActor1 1/move SlimeActor1 0 3 2 true/pause 350/stopAnimation SlimeActor2/speed SlimeActor2 1/move SlimeActor2 0 3 2 true/playSound slime/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 109 66/faceDirection farmer 1 true/warp Lance 109 67/faceDirection Lance 1 true/positionOffset Lance 20 15 true/warp WildernessGolemActor2 97 72/speed WildernessGolemActor2 1/move WildernessGolemActor2 13 0 1 true/warp WildernessGolemActor3 117 60/move WildernessGolemActor3 -13 0 3 true/warp WildernessGolemActor4 120 54/move WildernessGolemActor4 1 21 2 true/warp MushroomMonsterActor1 113 67/warp MushroomMonsterActor2 115 67/positionOffset MushroomMonsterActor1 10 -15/positionOffset MushroomMonsterActor2 13 -10 true/animate SlimeActor1 false true 125 0 1 2 3/animate SlimeActor2 false true 125 0 1 2 3/warp SlimeActor1 103 69/warp SlimeActor2 111 62/makeInvisible 104 60 14 1/makeInvisible 108 65 3 4/makeInvisible 112 66 5 3/makeInvisible 97 72 14 1/makeInvisible 120 54 1 22/makeInvisible 111 56 1 1/makeInvisible 103 69 1 1/viewport 114 67 true/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/jump MushroomMonsterActor2/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/jump MushroomMonsterActor2/pause 800/playSound dustMeep/jump MushroomMonsterActor1/pause 800/playSound dustMeep/shake MushroomMonsterActor1 5000/jump MushroomMonsterActor2/pause 800/playSound dustMeep/shake MushroomMonsterActor2 5000/globalFade/viewport -1000 -1000/warp farmer 105 13/faceDirection farmer 0 true/warp Lance 107 13/faceDirection Lance 0 true/warp MushroomMonsterActor1 -80 -80/warp MushroomMonsterActor2 -79 -79/warp MushroomMonsterActor3 -78 -78/warp SlimeActor1 100 16/warp SlimeActor2 -60 -60/warp WildernessGolemActor2 -30 -30/warp WildernessGolemActor3 119 18/warp WildernessGolemActor4 -28 -28/move WildernessGolemActor3 -23 0 3 true/positionOffset Lance 0 -20 true/viewport 106 13 clamp true/pause 3000/faceDirection Lance 3 true/pause 1000/faceDirection farmer 1 true/pause 1000/emote Lance 32/pause 400/faceDirection Lance 0 true/pause 1000/faceDirection farmer 0 true/pause 1000/globalFade/viewport -1000 -1000/warp SlimeActor1 -50 -50/warp WildernessGolemActor3 -80 -80/stopMusic/changeLocation Custom_HighlandsCavern/playMusic Upper_Ambient/warp Lance 46 20/warp farmer 46 22/faceDirection Lance 3 true/faceDirection farmer 3 true/makeInvisible 46 20 2 3/viewport 44 124 true/viewport move 2 -2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 0 0 clamp true/viewport move 2 2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 42 21 true/viewport move 1 0 4000 true/pause 5000/speak Lance \"{{i18n:Lance6hearts.07}}\"/pause 1000/faceDirection farmer 0 true/pause 1000/faceDirection Lance 2 true/pause 800/emote farmer 40/pause 250/shake Lance 500/pause 150/speak Lance \"{{i18n:Lance6hearts.08}}\"/pause 750/playSound healSound/glow 123 63 0/pause 1000/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance6hearts.09}}\"/pause 500/playSound shadowpeep/pause 400/playSound shadowpeep/pause 125/faceDirection farmer 1 true/pause 300/playSound shadowpeep/pause 100/showFrame Lance 43 true/pause 300/playSound shadowpeep/pause 400/faceDirection farmer 2 true/pause 100/playSound shadowpeep/pause 400/playSound shadowpeep/pause 300/playSound shadowpeep/showFrame Lance 0 true/pause 300/speak Lance \"{{i18n:Lance6hearts.10}}\"/playSound shadowpeep/pause 350/playSound shadowpeep/pause 350/faceDirection farmer 1 true/pause 250/speed Lance 1/move Lance 0 2 2 true/pause 300/faceDirection farmer 0 true/pause 200/playSound shadowpeep/pause 500/playSound wand/screenFlash 1/warp farmer -30 -30/warp Lance -30 -30/pause 350/playSound shadowpeep/pause 300/playSound shadowpeep/globalFade/viewport -1000 -1000/stopMusic/pause 1000/speak Lance \"{{i18n:Lance6hearts.11}}\"/pause 1000/end dialogue Lance \"{{i18n:Lance6hearts.12}}\""
+      },
+    },
+    ///// Lance 6 heart temp actor loads /////
+    //Wilderness Golems
+    {
+      "Action": "Load",
+      "Target": "Characters/WildernessGolemActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActor1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WildernessGolemActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActor2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WildernessGolemActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActor3.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WildernessGolemActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActor4.png"
+    },
+    //Slimes
+    {
+      "Action": "Load",
+      "Target": "Characters/SlimeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SlimeActor1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/SlimeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SlimeActor2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/SlimeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SlimeActor3.png"
+    },
+    //Baby Slime
+    {
+      "Action": "Load",
+      "Target": "Characters/BabySlimeActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BabySlimeActor.png"
+    },
+    //Monster Mushrooms
+    {
+      "Action": "Load",
+      "Target": "Characters/MushroomMonsterActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterActor1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/MushroomMonsterActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterActor2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/MushroomMonsterActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterActor3.png"
+    },
+    ///// *** Seasonal Monster Actor Appearance Changes *** /////
+    //Monster Mushrooms
+    {
+      "Action": "EditImage",
+      "Target": "Characters/MushroomMonsterActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/MushroomMonsterActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/MushroomMonsterActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MushroomMonsterWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    //Baby Slime
+    {
+      "Action": "EditImage",
+      "Target": "Characters/BabySlimeActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BabyGreenSlime.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/BabySlimeActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BabyYellowSlime.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/BabySlimeActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BabyOrangeSlime.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/BabySlimeActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BabyBlueSlime.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    //Slimes
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenSlime.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenSlime.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenSlime.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/YellowSlime.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/YellowSlime.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/YellowSlime.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/OrangeSlime.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/OrangeSlime.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/OrangeSlime.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueSlime.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueSlime.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/SlimeActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueSlime.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    //Wilderness Golems
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSpring.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSpring.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSpring.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSpring.png",
+      "When": {
+        "Season": "Spring"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSummer.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSummer.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSummer.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorSummer.png",
+      "When": {
+        "Season": "Summer"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorFall.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorFall.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorFall.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorFall.png",
+      "When": {
+        "Season": "Fall"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/WildernessGolemActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WildernessGolemActorWinter.png",
+      "When": {
+        "Season": "Winter"
+      },
+    },
+    ///////////////////////////////////////
+    {
+      //Lance 8 heart event - (Island) - The First Slash
+      "Action": "EditData",
+      "Target": "data/events/IslandWest",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=lanceMonsterCrops": true
+      },
+      "Entries": {
+        "65360191/f Lance 2000": "continue/-500 -500/farmer 77 40 2 Lance 77 42 0 Martin -30 -30 0 Claire -31 -31 0 Sophia -32 -32 0 Victor -33 -33 0/showFrame Victor 56 true/showFrame Sophia 56 true/showFrame Claire 56 true/showFrame Martin 56 true/addTemporaryActor Brianna 16 32 -100 -100 2/addTemporaryActor Drake 16 32 -99 -99 2/addTemporaryActor Gale 16 32 -98 -98 2/addTemporaryActor Edmund 16 32 -97 -97 2/addTemporaryActor Jolyne 16 32 -96 -96 2/makeInvisible 77 42 19 1/viewport 77 41 true/skippable/pause 1000/speak Lance \"{{i18n:Lance8Hearts.01}}\"/pause 500/jump farmer/pause 900/speak Lance \"{{i18n:Lance8hearts.02}}\"/pause 800/faceDirection Lance 1 true/pause 500/move Lance 10 0 1 true/pause 400/move farmer 0 2 2 true/pause 1000/move farmer 6 0 1 true/pause 750/globalFade/viewport -1000 -1000/playMusic jungle_ambience/changeLocation Custom_LanceSecretWarp/pause 1000/warp farmer 21 20/faceDirection farmer 0 true/warp Lance 19 18/viewport 20 13 true/move Lance 0 -4 0 true/move farmer 0 -6 0 true/pause 4000/speak Lance \"{{i18n:Lance8hearts.03}}\"/pause 500/faceDirection Lance 1 true/pause 650/faceDirection farmer 3 true/pause 500/speak Lance \"{{i18n:Lance8hearts.04}}\"/pause 750/faceDirection Lance 0 true/pause 500/viewport move 0 -1 1500 true/move Lance 0 -1 1/move Lance 1 0 0/move Lance 0 -1 0 true/pause 200/faceDirection farmer 0 true/pause 650/faceDirection Lance 1 true/pause 250/faceDirection Lance 2 true/pause 650/shake Lance 500/pause 500/screenFlash 1/playSound wand/warp Lance -20 -20/pause 1250/move farmer 0 -2 3/move farmer -1 0 3/pause 350/faceDirection farmer 2 true/pause 500/startJittering/pause 550/screenFlash 1/warp farmer -21 -21/playsound wand/pause 2000/globalFade/viewport -1000 -1000/playMusic tropical_island_day_ambient/changeLocation Custom_FableReef/warp Lance 34 43/faceDirection Lance 3 true/warp farmer 32 43/faceDirection farmer 1 true/viewport 84 71 clamp true/viewport move -2 -2 6500 true/pause 4000/globalFade/viewport -1000 -1000/viewport 49 27 true/viewport move -2 2 8000/pause 7900/speak Lance \"{{i18n:Lance8hearts.05}}\"/pause 750/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/move Lance 9 0 0 true/pause 450/move farmer 8 0 1 true/pause 750/globalFade/viewport -1000 -1000/pause 500/playSound doorClose/pause 750/playSound doorClose/pause 500/changeLocation Custom_FirstSlashGuild/playMusic FlashShifter.StardewValleyExpandedCP_FirstSlashTheme/pause 750/warp Brianna 20 17/faceDirection Brianna 1 true/warp Drake 22 20/faceDirection Drake 0 true/warp Edmund 9 16/faceDirection Edmund 3 true/warp Gale 9 18/faceDirection Gale 3 true/warp Jolyne 14 15/faceDirection Jolyne 0 true/warp Lance 15 28/warp farmer 14 28/viewport 14 10 true/viewport move 0 1 8000 true/pause 4000/move Lance 0 -9 0 true/pause 500/move farmer 0 -9 0 true/pause 4700/faceDirection Jolyne 1 true/pause 250/faceDirection Jolyne 2 true/pause 250/emote Jolyne 16 true/pause 400/speak Jolyne \"{{i18n:Lance8hearts.06}}\"/pause 400/faceDirection Drake 3 true/pause 250/faceDirection Gale 2 true/pause 250/faceDirection Gale 1 true/pause 100/faceDirection Edmund 2 true/pause 100/faceDirection Brianna 2 true/pause 150/emote Drake 16 true/pause 100/faceDirection Brianna 3 true/pause 100/faceDirection Edmund 1 true/pause 100/speed Gale 1/move Gale 2 0 1 true/pause 100/jump Brianna/pause 100/move Drake -5 0 0 true/pause 100/faceDirection farmer 3 true/pause 400/move Edmund 3 0 2 true/pause 200/faceDirection Lance 1 true/pause 550/move Brianna -2 0 2 true/pause 50/textAboveHead Brianna \"{{i18n:lance8hearts.07}}\"/pause 700/faceDirection farmer 0 true/pause 300/textAboveHead Edmund \"{{i18n:Lance8hearts.08}}\"/move Brianna 0 1 3 true/pause 200/move Drake 0 -1 3 true/pause 750/emote Drake 32 true/pause 400/emote Lance 32 true/pause 1300/faceDirection Lance 0 true/pause 500/speak Jolyne \"{{i18n:Lance8hearts.09}}\"/pause 500/speak Lance \"{{i18n:Lance8hearts.10}}\"/pause 250/shake Brianna 500/textAboveHead Brianna \"{{i18n:Lance8hearts.11}}\"/pause 400/shake Gale 500/textAboveHead Gale \"{{i18n:Lance8hearts.12}}\"/pause 100/speed Jolyne 1/move Jolyne 0 1 2/pause 250/speak Jolyne \"{{i18n:Lance8hearts.13}}\"/pause 500/faceDirection Jolyne 1 true/pause 250/speed Jolyne 1/move Jolyne 1 0 1/pause 250/faceDirection Jolyne 2 true/pause 350/speak Jolyne \"{{i18n:Lance8hearts.14}}\"/pause 200/speak Lance \"{{i18n:Lance8hearts.15}}\"/pause 400/faceDirection Lance 3 true/pause 500/faceDirection farmer 1 true/pause 250/speak Lance \"{{i18n:Lance8hearts.16}}\"/pause 500/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 500/move farmer -2 0 3/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 500/faceDirection Lance 0 true/pause 250/faceDirection Lance 1 true/pause 400/move Lance 1 0 1/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 16 18 FlashShifter.StardewValleyExpandedCP_Monster_Fruit/warp Martin 16 18/positionOffset Martin -11 16 true/pause 300/showFrame Lance 8 true/pause 250/emote Gale 16 true/pause 250/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 15 18 FlashShifter.StardewValleyExpandedCP_Monster_Mushroom/warp Claire 15 18/positionOffset Claire -4 16 true/pause 150/shake Drake 525/textAboveHead Drake \"{{i18n:Lance8hearts.17}}\"/pause 150/showFrame Lance 8 true/pause 500/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 14 18 FlashShifter.StardewValleyExpandedCP_Slime_Berry/warp Sophia 14 18/positionOffset Sophia 0 9 true/pause 300/showFrame Lance 8 true/pause 250/textAboveHead Edmund \"{{i18n:Lance8hearts.18}}\"/pause 250/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 200/jump Brianna/pause 200/shake Lance 500/showFrame Lance 9 true/pause 200/textAboveHead Brianna \"{{i18n:Lance8hearts.19}}\"/pause 100/playSound slime/addObject 13 18 FlashShifter.StardewValleyExpandedCP_Void_Root/warp Victor 13 18/positionOffset Victor -19 16 true/pause 150/emote Gale 40 true/pause 150/showFrame Lance 8 true/pause 500/faceDirection Lance 1 true/pause 300/move Lance 1 0 2/move Lance 0 2 2/pause 250/faceDirection Lance 1 true/pause 250/faceDirection Lance 0 true/pause 450/speak Lance \"{{i18n:Lance8hearts.20}}\"/pause 250/shake Edmund 500/textAboveHead Edmund \"{{i18n:Lance8hearts.21}}\"/pause 400/emote Drake 40 true/pause 300/speed Jolyne 1/move Jolyne 0 1 2 true/pause 400/jump Brianna/pause 400/textAboveHead Gale \"{{i18n:Lance8hearts.22}}\"/pause 200/speed Drake 1/move Drake -1 0 0 true/pause 350/shake Jolyne 500/textAboveHead Jolyne \"{{i18n:Lance8hearts.23}}\"/pause 500/faceDirection Edmund 1 true/pause 250/speed Edmund 1/move Edmund 1 0 2/speed Edmund 1/move Edmund 0 1 2 true/globalfade/viewport -1000 -1000/stopMusic/pause 1500/message \"{{i18n:Lance8hearts.24}}\"/pause 1000/end dialogue Lance \"{{i18n:Lance8hearts.25}}\""
+      }
+    },
+    {
+      //Lance 8 heart event - (farm) - not on grandpa's farm
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=lanceMonsterCrops": true
+      },
+      "Entries": {
+        "65360135/k 65360191/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01}}\"/pause 500/changeLocation farm/warp farmer 64 15/warp Lance 64 17/viewport 64 16 true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02}}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03}}\""
+      }
+    },
+    {
+      //Lance 8 heart event - (farm) - on grandpa's farm
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=lanceMonsterCrops": true,
+        "HasMod|contains=flashshifter.GrandpasFarm": true,
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "65360135/k 65360191/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01}}\"/pause 500/changeLocation farm/warp farmer 95 49/warp Lance 95 50/viewport 95 48 true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02}}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03}}\""
+      }
+    },
+    {
+      //Lance 8 heart event - (farm) - on Tiny Farm
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasFlag |contains=lanceMonsterCrops": true,
+        "HasMod |contains=harvz.TinyFarm": true,
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "65360135/k 65360191/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01}}\"/pause 500/changeLocation farm/warp farmer 27 7/warp Lance 27 9/viewport 27 8 clamp true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02}}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03}}\""
+      }
+    },
+    {
+      //Wizard gives player access to his First Slash warp rune
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent": "65360191"
+      },
+      "Entries": {
+        "65360192/": "continue/-500 -500/farmer -30 -30 0 Wizard -29 -29 0/pause 1250/speak Wizard \"{{i18n:LanceWizardRune.01}}\"/pause 400/emote farmer 32/end dialogue Wizard \"{{i18n:LanceWizardRune.02}}\"",
+      }
+    },
+    {
+      //Jolyne event
+      "Action": "EditData",
+      "Target": "data/events/Custom_FirstSlashGuestRoom",
+      "Entries": {
+        "65360193/": "continue/-500 -500/farmer 5 9 0 Jolyne -30 -30 0/pause 500/viewport 5 6 true/skippable/move farmer 0 -3 0/pause 1000/faceDirection farmer 1 true/pause 1150/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 450/move farmer -1 0 3/pause 300/faceDirection farmer 0 true/pause 500/emote farmer 40/pause 400/playSound doorOpen/warp Jolyne 5 9/pause 500/speed Jolyne 1/move Jolyne 0 -1 0 true/pause 300/speak Jolyne \"{{i18n:LanceJolyne.01}}\"/pause 350/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 250/emote farmer 16 true/pause 1500/faceDirection Jolyne 1 true/pause 1000/faceDirection Jolyne 0 true/pause 250/faceDirection Jolyne 3 true/pause 1100/faceDirection Jolyne 0 true/pause 500/speak Jolyne \"{{i18n:LanceJolyne.02}}\"/pause 500/end dialogue Jolyne \"{{i18n:LanceJolyne.03}}\"",
+      }
+    },
+    {
+      //Fable Reef music que
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FableReef",
+      "When": {
+        "Weather": "Rain",
+        "LocationContext": "Island"
+      },
+      "MapProperties": {
+        "Music": "rain"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_WizardBasement",
+      "FromFile": "assets/Maps/MapPatches/FirstSlashWizardBasementWarp.tbin",
+      "When": {
+        "HasSeenEvent": "65360192"
+      },
+      "ToArea": {
+        "X": 14,
+        "Y": 18,
+        "Width": 1,
+        "Height": 1
+      },
+      "Update": "OnLocationChange",
+    },
+    {
+      //Lance 10 heart event - part 1
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent": "65360191"
+      },
+      "Entries": {
+        "65360194/f Lance 2500/t 600 1100": "continue/-100 -100/farmer -10 -10 2 Lance -12 -12 0/skippable/pause 1250/speak Lance \"{{i18n:Lance10hearts1.01}}\"/pause 200/emote farmer 32/pause 250/speak Lance \"{{i18n:Lance10hearts1.02}}\"/pause 500/end dialogue Lance \"{{i18n:Lance10hearts1.03}}\""
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Island_W",
+      "FromFile": "assets/Maps/MapPatches/IslandWestLanceSecretWarpPath.tmx",
+      "When": {
+        "HasSeenEvent": "65360194"
+      },
+      "ToArea": {
+        "X": 71,
+        "Y": 0,
+        "Width": 8,
+        "Height": 8
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      //Lance 10 heart event - part 2 - "Life On Fable Reef"
+      "Action": "EditData",
+      "Target": "data/events/Custom_FableReef",
+      "Entries": {
+        "65360195/e 65360194/f Lance 2500/t 600 1800": "tropical_island_day_ambient/-500 -500/farmer 32 44 1 Lance 44 44 2/addTemporaryActor LanceBeach 16 32 -102 -102 0/addTemporaryActor Brianna 16 32 -100 -100 2/addTemporaryActor Drake 16 32 -99 -99 2/addTemporaryActor Gale 16 32 -98 -98 2/addTemporaryActor Edmund 16 32 -97 -97 2/addTemporaryActor Jolyne 16 32 -96 -96 2/addTemporaryActor TorpedoTroutActor1 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor2 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor3 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor4 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor5 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor6 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor7 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor8 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor9 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor10 42 32 -30 -30 2 false/addTemporaryActor CampfireActor 14 25 -30 -30 2 false/addTemporaryActor CoralActor 28 28 -25 -25 2 false/pause 850/skippable/viewport 39 44 true/viewport move 1 0 4000 true/move farmer 9 0 1 true/pause 2550/faceDirection Lance 3 true/pause 450/speak Lance \"{{i18n:Lance10hearts2.01}}\"/pause 500/move Lance -1 0 3/pause 500/speak Lance \"{{i18n:Lance10hearts2.02}}\"/pause 400/emote farmer 32/pause 300/speak Lance \"{{i18n:Lance10hearts2.03}}\"/pause 350/globalFade/viewport -1000 -1000/stopMusic/playMusic moonlightJellies/pause 3000/warp Lance 35 23/faceDirection Lance 1 true/warp farmer 33 23/faceDirection farmer 1 true/makeInvisible 30 32 16 3/viewport 39 23 true/viewport move 1 0 7500 true/move Lance 15 0 1 true/move farmer 15 0 1 true/pause 5000/globalFade/viewport -1000 -1000/pause 1000/warp Lance 44 58/faceDirection Lance 2 true/warp farmer 42 58/faceDirection farmer 2 true/positionOffset Lance -30 -10 true/positionOffset farmer 30 0 true/warp TorpedoTroutActor1 48 66/positionOffset TorpedoTroutActor1 0 0 true/speed TorpedoTroutActor1 5/move TorpedoTroutActor1 -80 0 3 true/warp TorpedoTroutActor2 50 61/positionOffset TorpedoTroutActor2 0 0 true/speed TorpedoTroutActor2 6/move TorpedoTroutActor2 -80 0 3 true/warp TorpedoTroutActor3 53 64/positionOffset TorpedoTroutActor3 0 0 true/speed TorpedoTroutActor3 6/move TorpedoTroutActor3 -80 0 3 true/warp TorpedoTroutActor4 60 62/positionOffset TorpedoTroutActor4 0 0 true/speed TorpedoTroutActor4 7/move TorpedoTroutActor4 -80 0 3 true/warp TorpedoTroutActor5 63 67/positionOffset TorpedoTroutActor5 0 0 true/speed TorpedoTroutActor5 6/move TorpedoTroutActor5 -80 0 3 true/warp TorpedoTroutActor6 67 63/positionOffset TorpedoTroutActor6 0 0 true/speed TorpedoTroutActor6 6/move TorpedoTroutActor6 -80 0 3 true/warp TorpedoTroutActor7 73 65/positionOffset TorpedoTroutActor7 0 0 true/speed TorpedoTroutActor7 6/move TorpedoTroutActor7 -80 0 3 true/warp TorpedoTroutActor8 76 61/positionOffset TorpedoTroutActor8 0 0 true/speed TorpedoTroutActor8 5/move TorpedoTroutActor8 -80 0 3 true/warp TorpedoTroutActor9 79 66/positionOffset TorpedoTroutActor9 0 0 true/speed TorpedoTroutActor9 6/move TorpedoTroutActor9 -80 0 3 true/warp TorpedoTroutActor10 83 63/positionOffset TorpedoTroutActor10 0 0 true/speed TorpedoTroutActor10 6/move TorpedoTroutActor10 -80 0 3 true/makeInvisible 35 53 19 7/viewport 43 62 clamp true/showFrame Lance 43 true/pause 2000/emote farmer 16 true/pause 1000/showFrame Lance 0 true/pause 2000/showFrame Lance 42 true/globalFade/viewport -1000 -1000/warp TorpedoTroutActor1 -100 -100/warp TorpedoTroutActor2 -100 -100/warp TorpedoTroutActor3 -100 -100/warp TorpedoTroutActor4 -100 -100/warp TorpedoTroutActor5 -100 -100/warp TorpedoTroutActor6 -100 -100/warp TorpedoTroutActor7 -100 -100/warp TorpedoTroutActor8 -100 -100/warp TorpedoTroutActor9 -100 -100/warp TorpedoTroutActor10 -100 -100/changeLocation Custom_FirstSlashGuild/warp CoralActor 7 18/positionOffset CoralActor -20 5 true/warp Lance 7 19/faceDirection Lance 3 true/warp farmer 6 19/faceDirection farmer 1 true/warp Jolyne 14 15/faceDirection Jolyne 2 true/warp Edmund 20 17/faceDirection Edmund 1 true/warp Drake 17 19/faceDirection Drake 3 true/warp Brianna 15 19/faceDirection Brianna 1 true/positionOffset Lance 11 29 true/positionOffset farmer 20 40 true/warp Gale 11 14/speed Gale 1/move Gale 0 9 2 true/viewport 8 19 true/pause 2000/shake Lance 500/textAboveHead Lance \"{{i18n:Lance10hearts2.04}}\"/pause 3000/faceDirection farmer 0 true/pause 750/faceDirection Lance 0 true/pause 1000/globalFade/viewport -1000 -1000/changeLocation Custom_FableReef/warp CoralActor -40 -40/warp Edmund -30 -30/warp Drake -30 -30/warp Jolyne 18 35/warp farmer 19 31/warp Brianna 26 31/warp Lance 18 33/faceDirection Brianna 1 true/faceDirection farmer 3 true/faceDirection Jolyne 3 true/faceDirection Lance 3 true/positionOffset Lance -20 10 true/positionOffset Jolyne -8 14 true/makeInvisible 17 29 9 9/positionOffset farmer 0 25 true/warp Gale -30 -30/viewport 22 32 clamp true/speed Brianna 1/move Brianna -4 0 3 true/pause 1500/shake Brianna 800/textAboveHead Brianna \"{{i18n:Lance10hearts2.05}}\"/pause 1000/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 2000/shake Brianna 400/textAboveHead Brianna \"{{i18n:Lance10hearts2.06}}\"/pause 1800/animate farmer false false 6000 97/pause 500/globalFade/viewport -1000 -1000/stopAnimation farmer/pause 500/warp Lance 61 47/faceDirection Lance 0 true/positionOffset Lance -40 0 true/warp farmer 59 47/faceDirection farmer 0 true/positionOffset farmer -12 15 true/warp Gale 61 46/faceDirection Gale 3 true/positionOffset Gale 12 -5 true/warp Edmund 60 44/faceDirection Edmund 2 true/positionOffset Edmund 10 -3 true/warp Brianna 57 46/faceDirection Brianna 1 true/positionOffset Brianna 5 25 true/warp Drake 57 45/faceDirection Drake 1 true/positionOffset Drake 30 5 true/warp CampfireActor 59 46/positionOffset CampfireActor 32 -32 true/animate CampfireActor false true 150 0 1 2 3/ambientLight 120 150 130/addLantern 31 59 45 2/addLantern 31 60 45 2/addLantern 31 59 46 2/addLantern 31 60 46 2/makeInvisible 62 38 6 15/warp Jolyne 53 44/move Jolyne 6 0 2 true/viewport 52 39 true/viewport move 1 1 10000 true/pause 1000/textAboveHead Jolyne \"{{i18n:Lance10hearts2.07}}\"/pause 750/shake Brianna 550/pause 950/shake Drake 450/pause 2500/faceDirection Lance 3 true/pause 1500/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Jolyne -30 -30/warp Brianna -29 -29/warp Edmund -28 -28/warp Drake -27 -27/warp Gale -26 -26/warp farmer -25 -25/warp Lance -24 -24/warp CampfireActor -23 -23/changeLocation Custom_FirstSlashHallway/viewport 15 7 true/viewport move 1 0 6500 true/pause 4000/globalFade/viewport -1000 -1000/changeLocation Custom_FirstSlashGuestRoom/warp Lance 5 5/warp farmer 5 7/faceDirection Lance 2 true/faceDirection farmer 0 true/viewport 5 6 true/pause 1250/showFrame Lance 41 true/pause 150/shake Lance 500/pause 300/speak Lance \"{{i18n:Lance10hearts2.08}}\"/pause 800/showFrame Lance 0 true/pause 600/faceDirection Lance 1 true/pause 250/showFrame Lance 8 true/pause 1250/shake Lance 400/pause 390/playSound dwop/shake LanceBeach 350/warp LanceBeach 5 5/warp Lance -50 -50/pause 1000/faceDirection LanceBeach 1 true/pause 250/faceDirection LanceBeach 2 true/pause 900/speak Lance \"{{i18n:Lance10hearts2.09}}\"/pause 1000/question fork0 \"{{i18n:Lance10hearts2.10}}\"/fork 65360195_CuddleLance/pause 400/speak Lance \"{{i18n:Lance10hearts2.11}}\"/pause 1000/globalFade/viewport -1000 -1000/pause 1500/end dialogue Lance \"{{i18n:Lance10hearts2.12}}\""
+      }
+    },
+    {
+      //Lance 10 heart question fork
+      "Action": "EditData",
+      "Target": "data/events/Custom_FirstSlashGuestRoom",
+      "Entries": {
+        "65360195_CuddleLance": "pause 500/speak Lance \"{{i18n:Lance10hearts2.13}}\"/pause 500/globalFade/viewport -1000 -1000/warp LanceBeach 7 5/faceDirection LanceBeach 3/warp farmer 6 5/faceDirection farmer 1 true/positionOffset farmer -4 20 true/positionOffset LanceBeach -1 12 true/viewport 5 6 true/pause 1000/speak Lance \"{{i18n:Lance10hearts2.14}}\"/pause 1000/shake LanceBeach 500/pause 900/speak Lance \"{{i18n:Lance10hearts2.15}}\"/pause 1000/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/animate farmer false false 10000 101/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/positionOffset farmer 1 0/pause 100/positionOffset LanceBeach -1 0/showFrame LanceBeach 16 true/playSound dwop/specificTemporarySprite heart 7 4/pause 2250/globalFade/viewport -1000 -1000/pause 2000/end dialogue Lance \"{{i18n:Lance10hearts2.16}}\""
+      }
+    },
+    {
+      //Lance 10 heart event - player didn't arrive in time.
+      "Action": "EditData",
+      "Target": "data/events/Custom_FableReef",
+      "When": {
+        "LocationContext": "Island",
+        "Weather": "Sun"
+      },
+      "Entries": {
+        "65360196/k 65360195/e 65360194/f Lance 2500/t 1810 2600": "spring_night_ambient/-500 -500/farmer 36 43 1 Lance 44 43 2/pause 500/viewport 43 43 true/move farmer 6 0 1 true/pause 1500/faceDirection Lance 3 true/pause 1000/speak Lance \"{{i18n:Lance10hearts3.01}}\"/pause 500/emote farmer 28/pause 500/speak Lance \"{{i18n:Lance10hearts3.02}}\"/pause 500/end dialogue Lance \"{{i18n:Lance10hearts3.03}}\""
+      }
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor1.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor2.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor3.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor4.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor5",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor5.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor6",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor6.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor7",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor7.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor8",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor8.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor9",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor9.png"
+    },
+    {
+      "Action": "Load", //42x32
+      "Target": "Characters/TorpedoTroutActor10",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TorpedoTroutActor10.png"
+    },
+    {
+      "Action": "Load", //14x25
+      "Target": "Characters/CampfireActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/CampfireActor.png"
+    },
+    {
+      "Action": "Load", //28x28
+      "Target": "Characters/CoralActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/CoralActor.png"
+    },
+    {
+      //Lance 12 heart event - part 1 - "The Return Scepter"
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3,
+        "HasFlag": "ReturnScepter"
+      },
+      "Entries": {
+        "65360197/O Lance/f Lance 3000/t 2000 2600": "none/-500 -500/farmer 29 24 3 Lance 22 24 0/addMailReceived LanceMeetsKrobus/skippable/makeInvisible 7 14 8 1/pause 1000/ignoreCollisions farmer/ignoreCollisions Lance/viewport 22 24 true/move farmer -5 0 3/pause 800/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance12hearts1.01}}\"/pause 300/emote farmer 20/pause 500/speak Lance \"{{i18n:Lance12hearts1.02}}\"/pause 300/emote farmer 8/pause 450/move Lance 1 0 1/pause 500/speak Lance \"{{i18n:Lance12hearts1.03}}\"/pause 600/emote farmer 40/pause 100/emote farmer 40/speak Lance \"{{i18n:Lance12hearts1.04}}\"/pause 2000/speak Lance \"{{i18n:Lance12hearts1.05}}\"/pause 650/showFrame farmer 97 true/pause 300/emote farmer 40/pause 100/emote farmer 40/pause 200/showFrame farmer 6 true/pause 500/speak Lance \"{{i18n:Lance12hearts1.06}}\"/pause 500/emote farmer 40/pause 250/speak Lance \"{{i18n:Lance12hearts1.07}}\"/pause 300/emote farmer 32/pause 200/globalFade/viewport -1000 -1000/pause 500/end dialogue Lance \"{{i18n:Lance12hearts1.08}}\"",
+      }
+    },
+    {
+      //Lance 12 heart event - part 2 - "The Shadow Person In The Sewers"
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "When": {
+        "HasFlag": "LanceMeetsKrobus"
+      },
+      "Entries": {
+        "65360198/O Lance": "continue/-500 -500/farmer 34 101 0 Lance 35 101 0 Krobus -30 -30 2 MarlonFay -50 -50 2/addConversationTopic LanceMetKrobus 10/skippable/showFrame MarlonFay 300/move farmer 0 -4 0 true/pause 350/viewport 35 97 true/move Lance 0 -4 0 true/pause 3000/faceDirection farmer 1 true/pause 850/faceDirection Lance 3 true/pause 750/speak Lance \"{{i18n:Lance12hearts2.01}}\"/pause 500/jump farmer/pause 1500/faceDirection farmer 0 true/pause 750/faceDirection Lance 0 true/pause 400/showFrame farmer 13 true/pause 200/startJittering/pause 200/playSound trashcanlid/pause 450/stopJittering/pause 200/showFrame farmer 12 true/pause 1000/playSound stairsdown/warp farmer -20 -20/pause 1100/warp Lance -20 -20/playSound stairsdown/pause 1000/globalFade/viewport -1000 -1000/playMusic Icicles/changeLocation Sewer/warp Lance 24 21/warp farmer 26 21/warp Krobus 31 16/viewport 31 19 true/move farmer 4 0 0 true/move Lance 8 0 0 true/pause 2000/move farmer 0 -2 0 true/pause 2050/move Lance 0 -2 0 true/pause 1000/emote Lance 16/pause 200/move Krobus 0 1 2/pause 650/shake Krobus 600/pause 600/speak Krobus \"{{i18n:Lance12hearts2.02}}\"/pause 400/speak Lance \"{{i18n:Lance12hearts2.03}}\"/pause 500/speak Krobus \"{{i18n:Lance12hearts2.04}}\"/pause 250/faceDirection farmer 1 true/pause 750/faceDirection Lance 3 true/pause 1425/faceDirection farmer 0 true/pause 500/faceDirection Lance 0 true/pause 250/speak Lance \"{{i18n:Lance12hearts2.05}}\"/pause 300/shake Krobus 500/pause 400/speak Krobus \"{{i18n:Lance12hearts2.06}}\"/pause 500/speak Lance \"{{i18n:Lance12hearts2.07}}\"/pause 500/speed Lance 1/move Lance 0 -2 0 true/pause 1200/faceDirection Krobus 1 true/pause 1000/faceDirection Lance 3 true/pause 650/emote Lance 40/pause 200/speak Lance \"{{i18n:Lance12hearts2.08}}\"/pause 400/jump Krobus/pause 600/speak Krobus \"{{i18n:Lance12hearts2.09}}\"/pause 300/shake Lance 500/pause 400/speak Lance \"{{i18n:Lance12hearts2.10}}\"/pause 650/faceDirection Lance 2 true/pause 500/showFrame Lance 41 true/pause 400/shake Lance 400/pause 400/screenFlash 1/warp Lance -30 -30/playSound wand/pause 1500/faceDirection Krobus 2 true/speak Krobus \"{{i18n:Lance12hearts2.11}}\"/pause 400/emote farmer 32/pause 350/screenFlash 1/playSound wand/warp Lance 32 19/pause 500/faceDirection farmer 1 true/pause 400/showFrame Lance 0 true/pause 600/faceDirection Lance 3 true/pause 250/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance12hearts2.12}}\"/pause 500/move Lance 0 -1 3/pause 500/showFrame Lance 15 true/pause 250/shake Lance 500/pause 150/playSound slime/addObject 31 17 FlashShifter.StardewValleyExpandedCP_Void_Root/warp MarlonFay 31 17/positionOffset MarlonFay -19 16 true/pause 250/showFrame Lance 12 true/pause 600/faceDirection Lance 2 true/pause 250/move Lance 0 1 2/pause 250/faceDirection Lance 3 true/pause 250/faceDirection Lance 0 true/pause 800/showFrame Krobus 17 true/pause 350/emote Krobus 8/pause 500/shake Krobus 600/pause 200/showFrame Krobus 18 true/pause 400/playSound eat/removeSprite 31 17/warp MarlonFay -50 -50/pause 750/showFrame Krobus 17 true/pause 300/showFrame Krobus 0 true/pause 600/speak Krobus \"{{i18n:Lance12hearts2.13}}\"/pause 650/shake Krobus 500/pause 500/animate Krobus false true 200 20 21 22 23/pause 1000/emote Krobus 20 true/pause 1500/end dialogue Lance \"{{i18n:Lance12hearts2.14}}\"",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarlonFay",
+      "Entries": {
+        "LanceMetKrobus": "{{i18n:LanceKrobus.Marlon}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "Entries": {
+        "LanceMetKrobus": "{{i18n:LanceKrobus.Krobus}}"
+      }
+    },
+    {
+      //Patches lantern at Lance and Krobus meet
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "Assets/Maps/MapPatches/LanceLantern.tbin",
+      "When": {
+        "Time": "{{Range: 2000, 2600}}",
+        "Spouse": "Lance",
+        "Day": "10, 24",
+        "HasSeenEvent": "65360198"
+      },
+      "ToArea": {
+        "X": 97,
+        "Y": 92,
+        "Width": 1,
+        "Height": 1
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      //Patches light at Lance and Krobus meet
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "When": {
+        "Time": "{{Range: 2000, 2600}}",
+        "Spouse": "Lance",
+        "Day": "10, 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Update": "OnLocationChange",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "Light"
+          ],
+          "Value": "97 92 4",
+          "Delimiter": " "
+        },
+      ]
+    },
+    //New schedules and dialogue are added to Lance after players see his 12 heart event
+    {
+      //Lance meets with Krobus Schedule
+      "Action": "EditData",
+      "Target": "characters/schedules/Lance",
+      "When": {
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "marriage_Spring_10": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.001\"/2550 Forest 96 91 1",
+        "marriage_Spring_24": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.002\"/2550 Forest 96 91 1",
+        "marriage_Summer_10": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.003\"/2550 Forest 96 91 1",
+        "marriage_Summer_24": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.004\"/2550 Forest 96 91 1",
+        "marriage_Fall_10": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.005\"/2550 Forest 96 91 1",
+        "marriage_Fall_24": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.006\"/2550 Forest 96 91 1",
+        "marriage_Winter_10": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue.007\"/2550 Forest 96 91 1",
+      }
+    },
+    
+    {
+      //Lance meets with Krobus dialogue 1
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.1}}",
+      }
+    },
+    {
+      //Lance meets with Krobus dialogue 2
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Spring 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.2}}",
+      }
+    },
+    {
+      //Lance meets with Krobus dialogue 3
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.3}}",
+      }
+    },
+    {
+      //Lance meets with Krobus dialogue 4
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Summer 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18N:LanceKrobus.4}}",
+      }
+    },
+    {
+      //Lance meets with Krobus dialogue 5
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18N:LanceKrobus.5}}",
+      }
+    },
+
+    {
+      //Lance meets with Krobus dialogue 6
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Fall 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.6}}",
+      }
+    },
+
+    {
+      //Lance meets with Krobus dialogue 7
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueLance",
+      "When": {
+        "Date": "Winter 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "funLeave_Lance": "{{i18n:LanceKrobus.7}}",
+      }
+    },
+   /* {
+      //Krobus' new sprites
+      "Action": "EditImage",
+      "Target": "Characters/Krobus",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Krobus/Krobus.png",
+      "When": {
+        "Spouse": "Lance",
+        "Day": "10, 24",
+        "HasSeenEvent": "65360198",
+        "LocationName": "Forest"
+      },
+      "Update": "OnLocationChange"
+    },*/
+    {
+      //Krobus' Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Krobus",
+      "When": {
+        "Spouse": "Lance",
+        "Day": "10, 24",
+        "HasSeenEvent": "65360198"
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Krobus/Schedule.json"
+    },
+    {
+      //Krobus' doesn't meet with Lance on the 24th
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Krobus",
+      "When": {
+        "Spouse": "Lance",
+        "Day": "24",
+        "Season": "Winter",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Wed": "0 Custom_Krobus_WarpRoom 3 3 2/1940 Forest 97 90 2"
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Spring 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.8}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Spring 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.9}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Summer 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.10}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Summer 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.11}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Fall 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.12}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Fall 24",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.13}}",
+      },
+    },
+    {
+      //Krobus' dialogue
+      "Action": "EditData",
+      "Target": "Characters/dialogue/Krobus",
+      "When": {
+        "Date": "Winter 10",
+        "HasSeenEvent": "65360198"
+      },
+      "Entries": {
+        "Forest_98_91": "{{i18n:LanceKrobus.14}}",
+      },
+    },
+  ]
+}

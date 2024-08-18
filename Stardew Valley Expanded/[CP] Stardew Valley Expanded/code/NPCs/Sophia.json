@@ -1,0 +1,1600 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Sophia": {
+          "DisplayName": "{{i18n:Name.Sophia}}",
+          "BirthSeason": "Winter",
+          "BirthDay": 27,
+          "HomeRegion": "Town",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Teen",
+          "Manner": "Polite",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": false,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "SpouseRoom": {
+            "MapAsset": "Custom_SophiasRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": "Sophia_Spouse_Area",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                22,
+                9000
+              ],
+              [
+                23,
+                500
+              ],
+              [
+                22,
+                11000
+              ],
+              [
+                23,
+                500
+              ],
+              [
+                22,
+                6000
+              ],
+              [
+                21,
+                200
+              ],
+              [
+                20,
+                200
+              ],
+              [
+                0,
+                6000
+              ],
+              [
+                4,
+                4500
+              ],
+              [
+                0,
+                300
+              ],
+              [
+                12,
+                4400
+              ],
+              [
+                0,
+                5000
+              ],
+              [
+                39,
+                2200
+              ],
+              [
+                0,
+                3000
+              ],
+              [
+                20,
+                200
+              ],
+              [
+                21,
+                200
+              ],
+              [
+                22,
+                1100
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_SophiaHouse",
+              "Condition": null,
+              "Location": "Custom_SophiaHouse",
+              "Tile": {
+                "X": 23,
+                "Y": 6
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Sophia_Winter",
+              "Sprite": "Characters/Sophia_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Sophia's Gift Tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Sophia": "{{i18n:Gifts.Sophia.Loved}}/577 595 FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken FlashShifter.StardewValleyExpandedCP_Flower_Cookie/{{i18n:Gifts.Sophia.Liked}}/872 220 221 232 237 240 -80 428 376 446/{{i18n:Gifts.Sophia.Disliked}}/456 393 457 397 199 215 242 244 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Gifts.Sophia.Hated}}/346 303 459 149 798 151 155 -4 FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger/{{i18n:Gifts.Sophia.Neutral}}/-75 -81 18 -18 -79 -2 -7 -26 -75 -80 72 446 348 395 613 634 635 636 637 638 724 459 402 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/"
+      }
+    },
+    {
+      //Sophia's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Sophia_Farm1": "4 4 4 4 4/24 24 24 25 25 25/4 4 4 4 4",
+        "Sophia_Farm2": "0 0 0 0 0/26 26 26 27 27 27/0 0 0 0 0",
+        "Sophia_Drink": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 19 18 17 16 16 16 16 16 16 16 16/16",
+        "Sophia_Read": "20 20 21 21 23 23 22 22/22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 23 23 23 23 23 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22/22 23 23 21 21 20 20",
+        "Sophia_Phone": "4 4 4 4 4 4 30/30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 31 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30/30 51 51 4 4 4 4 4 4",
+        "Sophia_Cry": "0 0 0 0 0 0 0 34/34 34 34 34 33 33 33 33/34 0 0 0 0 0 0 0",
+        "Sophia_Depressed": "0 0 0 0 0 0 0 0 0 32/32/32 0 0 0 0",
+        "Sophia_Depressed2": "4 4 0 0 0/32/32",
+        "Sophia_WatchAnime": "20 21 23 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 49/49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 22 22 22 22 22 22 22 22 22 22 22 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 48 48 48 48 48 48 48 48 48 48 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49 49/22 23 21 20 0 0 0 0 0 4 4 4 4 4 4",
+        "Sophia_Sleep": "4 4 8 8 8 12 12 12 12 12 12/50/50",
+        "Sophia_Stretch_After_Craft": "4 4 4 4 4 4 4 4 4 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/39/0 0 0 0 0 0 0 0 0 4 4 4 4",
+        "Sophia_Stretch_After_Work": "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/39/0 0 0 0 0 0",
+        "Sophia_Stretch_After_Work2": "8 8 8 8 8 8 8 8 8 8 8 8 8 4 4 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/39/0 0 0 0 0 0 0 4 4 4 8 8 8 8 8 8",
+        "Sophia_Inspect_Keg_Right": "4 4 4 4 4 4 4 4/51 51 51 51 51 51 51 51 51 51 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 51 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4/4 4 4",
+        "Sophia_Inspect_Keg_Down": "0 0 0 0 0 0 0 0 0 0/32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/0 0 0",
+      }
+    },
+    //Spouse Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_SophiasRoom",
+      "FromFile": "Assets/Maps/SpouseRooms/SophiasRoom.tbin",
+    },
+    //Spouse Patio
+    {
+      "Action": "Load",
+      "Target": "Maps/Sophia_Spouse_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Sophia_Spouse_Area.tbin"
+    },
+    {
+      //Sophia's sleep animation - married to character
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "When": {
+        "Spouse": "Sophia"
+      },
+      "Entries": {
+        "sophia_sleep": "50/50/50"
+      }
+    },
+    {
+      //Sophia's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia",
+      "When": {
+        "OlderSophiaPortraits": false
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia.png",
+    },
+    {
+      //Sophia's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia",
+      "When": {
+        "OlderSophiaPortraits": true
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Older.png",
+    },
+    {
+      //Sophia's Makeup Portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Sophia",
+      "When": {
+        "OlderSophiaPortraits": false
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia{{SophiaMakeup}}.png",
+    },
+    {
+      //Sophia's Makeup Portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Sophia",
+      "When": {
+        "OlderSophiaPortraits": true
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Older{{SophiaMakeup}}.png",
+    },
+    {
+      //Sophia's Winter Makeup Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia_Winter",
+      "When": {
+        "OlderSophiaPortraits": false,
+        "DayOfWeek": "Friday, Saturday, Sunday",
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Winter{{SophiaMakeup}}.png",
+      "Priority": "High"
+    },
+    {
+      //Sophia's Winter Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia_Winter",
+      "When": {
+        "OlderSophiaPortraits": false,
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Winter.png",
+    },
+    {
+      //Sophia's Older Winter Makeup Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia_Winter",
+      "When": {
+        "OlderSophiaPortraits": true,
+        "DayOfWeek": "Friday, Saturday, Sunday",
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Older_Winter{{SophiaMakeup}}.png",
+      "Priority": "High"
+    },
+    {
+      //Sophia's Winter Makeup Portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia_Winter",
+      "When": {
+        "OlderSophiaPortraits": true,
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Winter.png",
+    },
+    {
+      //Sophia's Sprites
+      "Action": "Load",
+      "Target": "Characters/Sophia",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Sophia/Sophia.png"
+    },
+    {
+      //Sophia's JPK Sprites
+      "Action": "Load",
+      "Target": "Characters/SophiaJPK",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Sophia/SophiaJPKsprite.png"
+    },
+    {
+      //Sophia's Winter Sprites
+      "Action": "Load",
+      "Target": "Characters/Sophia_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Sophia/Sophia_Winter.png"
+    },
+    {
+      //Sophia's beach portraits
+      "Action": "Load",
+      "Target": "Portraits/Sophia_Beach",
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Beach.png"
+    },
+    {
+      //Sophia's older beach portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Sophia_Beach",
+      "When": {
+        "OlderSophiaPortraits": true
+      },
+      "FromFile": "assets/CharacterFiles/Portraits/Sophia/Sophia_Older_Beach.png"
+    },
+    {
+      //Sophia's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Sophia_Beach",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Sophia/Sophia_Beach.png"
+    },
+    {
+      //Sophia's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Sophia",
+      "FromFile": "assets/CharacterFiles/Schedules/Sophia/Schedule.json"
+    },
+    {
+      //Sophia's Engagement Dialogue
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Sophia0": "{{i18n:Sophia.Engagement.1}}",
+        "Sophia1": "{{i18n:Sophia.Engagement.2}}",
+      }
+    },
+    {
+      //Sophias's spring + summer marriage schedule
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Sophia",
+      "When": {
+        "Season |contains=Winter, Fall": false
+      },
+      "Entries": {
+        //works left crop field
+        "marriage_Mon": "730 Custom_BlueMoonVineyard 20 32 0 \"Strings\\schedules\\Sophia:marriage.015\"/1100 Custom_BlueMoonVineyard 23 35 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.002\"/1130 Custom_BlueMoonVineyard 16 35 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.006\"/1200 Custom_BlueMoonVineyard 14 37 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.009\"/1230 Custom_BlueMoonVineyard 21 37 1 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.008\"/1300 Custom_BlueMoonVineyard 24 39 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.007\"/1330 Custom_BlueMoonVineyard 21 41 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1400 Custom_BlueMoonVineyard 16 41 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.012\"/1430 Custom_BlueMoonVineyard 16 43 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.013\"/1500 Custom_BlueMoonVineyard 23 43 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.008\"/1530 Custom_BlueMoonVineyard 21 32 0 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Bed",
+        //checks casks
+        "marriage_Tue": "730 Custom_BlueMoonVineyard 20 32 0 \"Strings\\schedules\\Sophia:marriage.015\"/1100 Custom_BlueMoonVineyard 34 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.000\"/1130 Custom_BlueMoonVineyard 35 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.010\"/1200 Custom_BlueMoonVineyard 37 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1230 Custom_BlueMoonVineyard 36 32 0 \"Strings\\schedules\\Sophia:marriage.009\"/1300 Custom_BlueMoonVineyard 38 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.006\"/1330 Custom_BlueMoonVineyard 40 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1400 Custom_BlueMoonVineyard 40 32 0 \"Strings\\schedules\\Sophia:marriage.010\"/1430 Custom_BlueMoonVineyard 41 30 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.002\"/1500 Custom_BlueMoonVineyard 42 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.013\"/1530 Custom_BlueMoonVineyard 21 32 0 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Bed",
+        //works right crop field
+        "marriage_Wed": "730 Custom_BlueMoonVineyard 20 32 0 \"Strings\\schedules\\Sophia:marriage.015\"/1100 Custom_BlueMoonVineyard 32 33 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.001\"/1130 Custom_BlueMoonVineyard 39 33 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.002\"/1200 Custom_BlueMoonVineyard 42 35 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.008\"/1230 Custom_BlueMoonVineyard 35 37 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1300 Custom_BlueMoonVineyard 34 39 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.012\"/1330 Custom_BlueMoonVineyard 35 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.013\"/1400 Custom_BlueMoonVineyard 41 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.007\"/1430 Custom_BlueMoonVineyard 40 43 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.013\"/1500 Custom_BlueMoonVineyard 34 43 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1530 Custom_BlueMoonVineyard 21 32 0 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Bed",
+        //checks casks
+        "marriage_Thu": "730 Custom_BlueMoonVineyard 20 32 0 \"Strings\\schedules\\Sophia:marriage.015\"/1100 Custom_BlueMoonVineyard 34 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.000\"/1130 Custom_BlueMoonVineyard 35 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.010\"/1200 Custom_BlueMoonVineyard 37 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1230 Custom_BlueMoonVineyard 36 32 0 \"Strings\\schedules\\Sophia:marriage.009\"/1300 Custom_BlueMoonVineyard 38 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.006\"/1330 Custom_BlueMoonVineyard 40 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1400 Custom_BlueMoonVineyard 40 32 0 \"Strings\\schedules\\Sophia:marriage.010\"/1430 Custom_BlueMoonVineyard 41 30 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.002\"/1500 Custom_BlueMoonVineyard 42 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.013\"/1530 Custom_BlueMoonVineyard 21 32 0 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Bed",
+      }
+    },
+    {
+      //Sophias's fall marriage schedule (Scarlett is a farmhand)
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Sophia",
+      "When": {
+        "Season |contains=Spring, Summer, Winter": false,
+        "Weather |contains=rain, storm": false,
+        "DayEvent |contains=dance of the moonlight jellies, egg festival, feast of the winter star, luau, stardew valley fair, spirit's eve": false
+      },
+      "Entries": {
+        "marriage_Mon": "730 Custom_BlueMoonVineyard 29 33 3/1100 Custom_BlueMoonVineyard 35 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.002\"/1130 Custom_BlueMoonVineyard 41 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.008\"/1200 Custom_BlueMoonVineyard 39 39 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.009\"/1230 Custom_BlueMoonVineyard 35 37 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1300 Custom_BlueMoonVineyard 37 35 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.006\"/1330 Custom_BlueMoonVineyard 42 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1400 Custom_BlueMoonVineyard 38 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1430 Custom_BlueMoonVineyard 36 32 0 \"Strings\\schedules\\Sophia:marriage.011\"/1450 Custom_BlueMoonVineyard 34 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1520 Custom_BlueMoonVineyard 36 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.010\"/1600 Custom_BlueMoonVineyard 22 32 3 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Custom_SophiaHouse 17 24 3 \"Strings\\schedules\\Sophia:marriage.014\"/1730 Bed",
+        "marriage_Tue": "730 Custom_BlueMoonVineyard 29 33 3/1100 Custom_BlueMoonVineyard 35 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.002\"/1130 Custom_BlueMoonVineyard 41 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.008\"/1200 Custom_BlueMoonVineyard 39 39 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.009\"/1230 Custom_BlueMoonVineyard 35 37 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1300 Custom_BlueMoonVineyard 37 35 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.006\"/1330 Custom_BlueMoonVineyard 42 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1400 Custom_BlueMoonVineyard 38 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1430 Custom_BlueMoonVineyard 36 32 0 \"Strings\\schedules\\Sophia:marriage.011\"/1450 Custom_BlueMoonVineyard 34 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1520 Custom_BlueMoonVineyard 36 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.010\"/1600 Custom_BlueMoonVineyard 22 32 3 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Custom_SophiaHouse 17 24 3 \"Strings\\schedules\\Sophia:marriage.014\"/1730 Bed",
+        "marriage_Wed": "730 Custom_BlueMoonVineyard 29 33 3/1100 Custom_BlueMoonVineyard 35 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.002\"/1130 Custom_BlueMoonVineyard 41 41 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.008\"/1200 Custom_BlueMoonVineyard 39 39 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.009\"/1230 Custom_BlueMoonVineyard 35 37 2 Sophia_Farm2 \"Strings\\schedules\\Sophia:marriage.011\"/1300 Custom_BlueMoonVineyard 37 35 1 Sophia_Farm1 \"Strings\\schedules\\Sophia:marriage.006\"/1330 Custom_BlueMoonVineyard 42 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.000\"/1400 Custom_BlueMoonVineyard 38 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1430 Custom_BlueMoonVineyard 36 32 0 \"Strings\\schedules\\Sophia:marriage.011\"/1450 Custom_BlueMoonVineyard 34 31 1 Sophia_Inspect_Keg_Right \"Strings\\schedules\\Sophia:marriage.010\"/1520 Custom_BlueMoonVineyard 36 29 2 Sophia_Inspect_Keg_Down \"Strings\\schedules\\Sophia:marriage.010\"/1600 Custom_BlueMoonVineyard 22 32 3 \"Strings\\schedules\\Sophia:marriage.014\"/1630 Custom_SophiaHouse 17 24 3 \"Strings\\schedules\\Sophia:marriage.014\"/1730 Bed",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "Entries": {
+        "NPC.cs.4406": "{{i18n:NPC.cs.4406}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "strings/StringsFromCSFiles",
+      "Entries": {
+        "Utility.cs.5367": "{{i18n:Utility.cs.5367.Sophia.Husband}}{0}{{i18n:Utility.of}}{1}{{i18n:Utility.Sophia1}}",
+        "Utility.cs.5369": "{{i18n:Utility.cs.5369.Wife}}{0}{{i18n:Utility.of}}{1}{{i18n:Utility.Sophia1}}",
+        "Utility.cs.5371": "{{i18n:Utility.cs.5371A}}",
+        "Utility.cs.5377": "{{i18n:Utility.cs.5377A}}",
+      },
+      "When": {
+        "Relationship:Sophia": "Engaged"
+      },
+    },
+    //MOVIE THEATER
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Sophia": {
+          "Name": "Sophia",
+          "LovedTags": [
+            "Rock Candy",
+            "Candy",
+            "Cotton Candy"
+          ],
+          "LikedTags": [
+            "Sweet",
+            "Gourmet"
+          ],
+          "DislikedTags": [
+            "Healthy",
+            "Salty"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Sophia": {
+          "NPCName": "Sophia",
+          "Reactions": [
+            {
+              "Tag": "action",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "horror",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "summer_movie_0",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.01}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.02}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.03}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "spring_movie_1",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.04}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.05}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.06}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "love",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.07}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "/shake Sophia 3000/pause 500/message \"{{i18n:Sophia.Movies.08}}\"",
+                  "Text": "{{i18n:Sophia.Movies.09}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.10}}"
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "like",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.11}}"
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.12}}"
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "dislike",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.13}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.14}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Sophia.Movies.15}}"
+                }
+              },
+              "ID": "reaction_6"
+            }
+          ]
+        }
+      }
+    },
+    { //Blue Moon Vineyard - 1/5 heart - The Pink Haired Girl
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "Entries": {
+        "8185290/w sunny/c 1/t 600 1500/z winter/z fall/y 1/f Sophia 50": "kindadumbautumn/-500 -500/farmer 29 44 0 Sophia 30 34 1/animate Sophia false true 350 24 25/pause 1000/viewport 30 41 true/viewport move 0 -1 5000 true/skippable/move farmer 0 -6 0/pause 1200/stopAnimation Sophia/pause 500/move Sophia 0 0 2 true/pause 750/emote Sophia 16 true/jump Sophia/showFrame Sophia 29/pause 1200/faceDirection Sophia 1 true/pause 250/move Sophia 0 0 0 true/pause 200/speed Sophia 3/move Sophia 0 -1 1/speed Sophia 3/move Sophia 1 0 2/pause 250/showFrame Sophia 32/pause 200/shake Sophia 2000/pause 350/move farmer 0 -2 0 true/pause 200/speak Sophia \"{{i18n:Sophia.IntroEvent.01}}\"/pause 1500/showFrame Sophia 0/pause 1000/speak Sophia \"{{i18n:Sophia.IntroEvent.02}}\"/pause 1000/move Sophia 0 0 3/pause 200/speed Sophia 1/move Sophia -2 0 2/pause 600/speak Sophia \"{{i18n:Sophia.IntroEvent.03}}\"/pause 1000/move Sophia 0 0 3/pause 800/move Sophia 0 0 2/pause 300/speak Sophia \"{{i18n:Sophia.IntroEvent.04}}\"/pause 900/showFrame Sophia 32/pause 250/shake Sophia 600/pause 900/showFrame Sophia 0/pause 500/speak Sophia \"{{i18n:Sophia.IntroEvent.05}}\"/globalFade/viewport -1000 -1000 true/warp farmer 22 32/warp Sophia 20 32/faceDirection Sophia 0 true/faceDirection farmer 3 true/positionOffset farmer -10 20/viewport 20 33 clamp true/pause 1000/shake Sophia 500/playSound openChest/pause 1600/playSound pickUpItem/pause 1100/move Sophia 0 0 1/pause 600/move Sophia 1 0 1/speak Sophia \"{{i18n:Sophia.IntroEvent.06}}\"/pause 300/playSound reward/message \"{{i18n:Sophia.IntroEvent.07}}\"/pause 800/speak Sophia \"{{i18n:Sophia.IntroEvent.08}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Sophia \"{{i18n:Sophia.IntroEvent.09}}\"",
+      }
+    },
+    {
+      //Blue Moon Vineyard - 2 heart - Scarlett
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "Entries": {
+        "8185291/w sunny/z winter/f Sophia 500/t 800 1600": "none/-500 -500/farmer -100 -100 1 Sophia 23 55 2/addTemporaryActor Scarlett 16 32 21 55 1/showFrame Sophia 32/faceDirection Scarlett 1/playMusic ocean/viewport 22 56 clamp true/skippable/pause 2500/showFrame Scarlett 0/pause 1200/showFrame Scarlett 17/pause 800/speak Scarlett \"{{i18n:Sophia.2hearts.01}}\"/pause 500/shake Sophia 500/pause 900/speak Sophia \"{{i18n:Sophia.2hearts.02}}\"/pause 400/speak Scarlett \"{{i18n:Sophia.2hearts.03}}\"/pause 1800/speak Sophia \"{{i18n:Sophia.2hearts.04}}\"/pause 750/showFrame Scarlett 0/pause 300/warp farmer 0 50/move farmer 23 0 2 true/faceDirection Scarlett 1 true/pause 250/shake Scarlett 1000/speak Scarlett \"{{i18n:Sophia.2hearts.05}}\"/pause 1200/speak Sophia \"{{i18n:Sophia.2hearts.06}}\"/pause 600/showFrame Sophia 0/pause 600/faceDirection Sophia 3 true/pause 350/speak Sophia \"{{i18n:Sophia.2hearts.07}}\"/pause 1300/faceDirection Sophia 0 true/pause 500/emote Sophia 8 true/pause 400/faceDirection Scarlett 0 true/pause 500/speak Scarlett \"{{i18n:Sophia.2hearts.08}}\"/pause 700/speak Sophia \"{{i18n:Sophia.2hearts.09}}\"/pause 900/viewport move 0 -1 2250 true/move Scarlett 0 -2 1/move Scarlett 1 0 0/move Scarlett 0 -1 0/pause 700/move Sophia 0 -3 0 true/pause 200/speak Scarlett \"{{i18n:Sophia.2hearts.10}}\"/pause 300/speak Sophia \"{{i18n:Sophia.2hearts.11}}\"/pause 700/move Scarlett 0 0 1/pause 500/speak Scarlett \"{{i18n:Sophia.2hearts.12}}\"/pause 350/faceDirection Sophia 3/pause 100/speak Sophia \"{{i18n:Sophia.2hearts.13}}\"/speak Scarlett \"{{i18n:Sophia.2hearts.14}}\"/pause 800/move Scarlett 0 0 0/pause 400/speak Scarlett \"{{i18n:Sophia.2hearts.15}}\"/pause 400/move Scarlett 0 0 1/pause 200/speak Scarlett \"{{i18n:Sophia.2hearts.16}}\"/pause 400/speak Sophia \"{{i18n:Sophia.2hearts.17}}\"/pause 700/move Scarlett 0 0 0 true/pause 150/move Scarlett 0 0 3 true/pause 300/move Scarlett -8 0 3 true/pause 600/faceDirection farmer 3 true/pause 500/globalFade/viewport -1000 -1000 true/halt/warp Scarlett -300 -300/viewport 22 54 clamp true/pause 2500/speak Sophia \"{{i18n:Sophia.2hearts.18}}\"/pause 1000/faceDirection farmer 2/pause 850/faceDirection Sophia 2 true/pause 600/showFrame Sophia 32/pause 800/speak Sophia \"{{i18n:Sophia.2hearts.19}}\"/pause 1200/question fork1 \"{{i18n:Sophia.2hearts.19B}}\"/fork 8185290_Medicine/pause 1000/speak Sophia \"{{i18n:Sophia.2hearts.20}}\"/pause 500/globalFade/viewport -1000 -1000/pause 650/friendship Sophia 50/end dialogue Sophia \"{{i18n:Sophia.2hearts.21}}\"",
+        "8185290_Medicine": "pause 800/shake Sophia 800/pause 1800/speak Sophia \"{{i18n:Sophia.2hearts.Medicine.01}}\"/pause 700/speed Sophia 3/move Sophia -13 0 3 true/pause 450/faceDirection farmer 3 true/pause 1000/globalFade/viewport -1000 -1000/pause 1000/halt/pause 800/end dialogue Sophia \"{{i18n:Sophia.2hearts.Medicine.02}}\"",
+      }
+    },
+    { //Town - 4 heart - The Doctor Appointment
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "8185292/t 900 1500/w sunny/f Sophia 1000/e 8185291": "springtown/-500 -500/farmer 27 60 1 Sophia -200 -200 2 Pierre 45 59 2 Jodi 44 60 1 Olivia 45 61 0 Caroline 46 60 3 Alex 53 69 0 Evelyn 62 57 0 Penny 29 54 2 Vincent 10 63 1 Jas 12 63 3 Andy -150 -150 3 Victor -151 -151 0 Gus -99 -99 2/showFrame Penny 18/addTemporaryActor Dusty 16 32 -600 -600 2/positionOffset Jodi 5 14/positionOffset Pierre 10 -20/positionOffset Olivia 7 30/positionOffset Caroline 30 -20/pause 500/viewport 31 64 true/viewport move 1 -1 5000 true/skippable/move farmer 9 0 0 true/pause 4000/warp Sophia 36 56/playSound doorClose/pause 400/move Sophia 0 2 2 true/pause 800/emote Sophia 16 true/pause 1200/speak Sophia \"{{i18n:Sophia.4hearts.01}}\"/pause 1300/question fork0 \"{{i18n:Sophia.4hearts.02}}\"/fork 8185292_HowAreYou/pause 700/stopMusic/pause 1200/showFrame Sophia 32/pause 1000/shake Sophia 600/pause 800/speak Sophia \"...$6\"/pause 1200/speed Sophia 3/move Sophia -12 0 2 true/pause 500/faceDirection farmer 3 true/pause 600/emote farmer 60 true/pause 500/globalFade/viewport -1000 -1000/halt/pause 1000/friendship Sophia -250/end dialogue Sophia \"{{i18n:Sophia.4hearts.03}}\"",
+        "8185292_HowAreYou": "pause 1000/showFrame Sophia 32/pause 800/speak Sophia \"{{i18n:Sophia.4hearts.HowAreYou.01}}\"/pause 1300/message \"{{i18n:Sophia.4hearts.HowAreYou.02}}\"/pause 1500/question fork1 \"{{i18n:Sophia.4hearts.HowAreYou.03}}\"/fork 8185292_Dusty/pause 1000/speak Sophia \"{{i18n:Sophia.4hearts.HowAreYou.04}}\"/pause 1000/showFrame Sophia 0/pause 1000/speak Sophia \"{{i18n:Sophia.4hearts.HowAreYou.05}}\"/pause 500/emote farmer 32 true/pause 150/globalFade/viewport -1000 -1000 true/stopMusic/warp Olivia -300 -300/warp Caroline -209 -209/warp Jodi -200 -200/warp Pierre -150 -150/warp Alex -135 -135/warp Evelyn -125 -125/warp Gus 17 18/warp Andy 7 18/warp Victor 33 18/warp Sophia 17 20/warp farmer 16 20/pause 100/faceDirection Sophia 0 true/playMusic 50s/animate Andy true true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 26 25 24 24 24 24 24/pause 750/changeLocation Saloon/viewport 16 20 true/pause 1500/jump Sophia/pause 1000/speak Sophia \"{{i18n:Sophia.4hearts.HowAreYou.06}}\"/pause 300/speak Gus \"{{i18n:Sophia.4hearts.HowAreYou.07}}\"/pause 400/emote Sophia 32 true/pause 400/move Gus -1 0 3/pause 400/speak Gus \"{{i18n:Sophia.4hearts.HowAreYou.08}}\"/pause 300/emote farmer 32 true/pause 100/move Gus -7 0 3 true/pause 700/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Sophia.4hearts.HowAreYou.09}}\"/pause 500/friendship Sophia 50/end dialogue Sophia \"{{i18n:Sophia.4hearts.HowAreYou.10}}\"",
+        "8185292_Dusty": "pause 1000/speak Sophia \"{{i18n:Sophia.4hearts.Dusty.01}}\"/pause 1000/showFrame Sophia 0/pause 1000/speak Sophia \"{{i18n:Sophia.4hearts.Dusty.02}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000 true/halt/stopMusic/warp farmer 54 69/warp Sophia 53 69/warp Alex -302 -302/warp Vincent -202 -202/warp Jas -203 -203/warp Penny -204 -204/positionOffset Sophia -10 -18/faceDirection farmer 0/faceDirection Sophia 0/playMusic 50s/pause 600/viewport 53 69 true/pause 1500/playSound dog_bark/speak Dusty \"{{i18n:Sophia.4hearts.Dusty.03}}\"/speak Sophia \"{{i18n:Sophia.4hearts.Dusty.04}}\"/pause 800/playSound dog_bark/pause 1000/playSound dog_bark true/speak Dusty \"{{i18n:Sophia.4hearts.Dusty.05}}\"/pause 500/emote Sophia 20 true/pause 250/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Sophia.4hearts.Dusty.06}}\"/friendship Sophia 50/end dialogue Sophia \"{{i18n:Sophia.4hearts.Dusty.07}}\"",
+      }
+    },
+    { //Town - 6 heart - Sophia's Parents Part 1
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "8185293/e 8185292/f Sophia 1500/w rainy/z winter/t 800 1500": "rain/-500 -500/farmer -100 -100 1 Sophia 42 87 0/pause 500/viewport 42 87 true/skippable/pause 4500/screenFlash 1/pause 1150/playSound thunder_small/pause 1000/shake Sophia 800/textAboveHead Sophia \"{{i18n:Sophia.6hearts1.01}}\"/pause 2300/screenFlash 1/pause 1200/playSound thunder_small/pause 500/globalFade/viewport -1000 -1000/warp farmer 16 90/warp Sophia 29 90/faceDirection Sophia 3 true/pause 300/speed Sophia 1/move Sophia -4 0 3 true/speed farmer 1/move farmer 6 0 1 true/viewport 23 90 clamp true/pause 1300/screenFlash 1/pause 800/playSound thunder_small/pause 3500/speak Sophia \"{{i18n:Sophia.6hearts1.02}}\"/pause 1500/move Sophia -40 0 3 true/pause 800/move farmer 0 1 0 true/pause 1250/faceDirection farmer 3/pause 3000/screenFlash 1/pause 400/playSound thunder_small/globalFade/viewport -1000 -1000/halt/pause 1000/message \"{{i18n:Sophia.6hearts1.03}}\"/pause 1000/playSound thunder_small/end dialogue Sophia \"{{i18n:Sophia.6hearts1.04}}\"",
+      }
+    },
+    { //Remove moving box in hallway blocking parents bedroom
+      "Action": "EditMap",
+      "Target": "Maps/Custom_SophiaHouse",
+      "FromFile": "Assets/Maps/MapPatches/SophiaHouseRemovingMovingBox.tbin",
+      "ToArea": {
+        "X": 12,
+        "Y": 14,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent": "8185293"
+      },
+      "Update": "OnLocationChange"
+    },
+    { //Sophia's House - 6 heart - Sophia's Parents Part 2
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_SophiaHouse",
+      "Entries": {
+        "8185294/e 8185293": "continue/-500 -500/farmer 11 15 3 Sophia 8 9 2/animate Sophia false true 500 33 34/pause 1500/playMusic FlashShifter.StardewValleyExpandedCP_Lament/pause 500/viewport 10 14 true/skippable/move farmer -3 0 3 true/pause 1800/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.01}}\"/pause 700/faceDirection farmer 2/pause 1300/showFrame farmer 96/pause 1200/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.01}}\"/pause 1800/question fork0 \"{{i18n:Sophia.6hearts2.02}}\"/fork 8185294_KnockOnDoor/pause 1000/showFrame farmer 0/pause 600/faceDirection farmer 3 true/pause 400/move farmer -1 0 3/pause 200/faceDirection farmer 0/pause 500/showFrame farmer 15 true/pause 500/doAction 7 14/pause 500/showFrame farmer 12 true/pause 300/stopAnimation Sophia/pause 300/showFrame Sophia 29/emote Sophia 16 true/jump Sophia/pause 300/viewport move 0 -1 3500 true/move farmer 0 -4 0 true/pause 1200/speak Sophia \"{{i18n:Sophia.6hearts2.03}}\"/pause 400/faceDirection Sophia 1 true/pause 300/faceDirection Sophia 0 true/pause 300/speed Sophia 3/move Sophia 0 -2 0/pause 200/shake Sophia 5000/pause 500/speak Sophia \"{{i18n:Sophia.6hearts2.04}}\"/pause 400/emote farmer 60/pause 200/friendship Sophia -100/pause 200/move farmer 0 0 1/pause 200/move farmer 0 0 2/pause 400/speed farmer 1/move farmer 0 5 2 true/globalFade/viewport -1000 -1000 true/switchEvent 8185294_Wait",
+        "8185294_KnockOnDoor": "pause 800/showFrame farmer 0/pause 600/faceDirection farmer 3 true/pause 350/move farmer -1 0 3/pause 300/faceDirection farmer 0/pause 500/showFrame farmer 15 true/pause 500/playSound stoneStep/playSound stoneStep/pause 500/playSound stoneStep/playSound stoneStep/pause 400/playSound stoneStep/playSound stoneStep/pause 300/showFrame farmer 12 true/pause 300/stopAnimation Sophia/pause 300/emote Sophia 16/pause 700/showFrame Sophia 32/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.KnockOnDoor.01}}\"/pause 700/emote farmer 40/pause 800/speak Sophia \"{{i18n:Sophia.6hearts2.KnockOnDoor.02}}\"/pause 1000/shake Sophia 700/pause 1200/speak Sophia \"{{i18n:Sophia.6hearts2.KnockOnDoor.03}}\"/pause 800/emote farmer 28/pause 500/faceDirection farmer 1/pause 400/speed farmer 1/move farmer 5 0 1 true/globalFade/viewport -1000 -1000 true/switchEvent 8185294_Wait2",
+        "8185294_Wait": "pause 100/warp Sophia 15 15/warp farmer 15 23/faceDirection Sophia 2 true/pause 100/faceDirection farmer 2 true/pause 100/speed Sophia 2/showFrame farmer 96 true/pause 100/move Sophia 0 6 2 true/viewport 15 23 true/pause 800/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.01}}\"/pause 600/showFrame farmer 0/pause 600/faceDirection farmer 1/pause 200/faceDirection farmer 0/pause 700/showFrame Sophia 32/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.02}}\"/pause 1000/emote farmer 40/pause 650/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.03}}\"/pause 1300/shake Sophia 700/pause 700/showFrame Sophia 33/pause 1300/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.04}}\"/pause 1000/showFrame Sophia 32/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.05}}\"/pause 800/shake Sophia 800/pause 70/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.Wait.06}}\"/pause 2250/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.07}}\"/pause 450/shake Sophia 800/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.Wait.08}}\"/pause 1850/faceDirection Sophia 0 true/pause 250/faceDirection Sophia 0 true/pause 1200/shake Sophia 800/pause 1150/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.09}}\"/pause 1350/question fork0 \"{{i18n:Sophia.6hearts2.Wait.10}}\"/fork 8185294_HereForYou/friendship Sophia -750/pause 500/stopMusic/pause 1000/shake Sophia 1000/emote Sophia 12/pause 300/speak Sophia \"{{i18n:Sophia.6hearts2.Wait.11}}\"/pause 1500/emote farmer 60 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Sophia \"{{i18n:Sophia.6hearts2.Wait.12}}\"",
+        "8185294_Wait2": "pause 100/warp Sophia 15 15/warp farmer 15 23/faceDirection Sophia 2 true/pause 100/faceDirection farmer 2 true/pause 100/speed Sophia 2/showFrame farmer 96 true/pause 100/move Sophia 0 6 2 true/viewport 15 23 true/pause 800/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.01}}\"/pause 600/showFrame farmer 0/pause 600/faceDirection farmer 1/pause 200/faceDirection farmer 0/pause 700/showFrame Sophia 32/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.02}}\"/pause 1000/emote farmer 40/pause 650/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.03}}\"/pause 1300/shake Sophia 700/pause 700/showFrame Sophia 33/pause 1300/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.04}}\"/pause 1000/showFrame Sophia 32/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.05}}\"/pause 800/shake Sophia 800/pause 70/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.Wait2.06}}\"/pause 2250/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.07}}\"/pause 450/shake Sophia 800/textAboveHead Sophia \"{{i18n:Sophia.6hearts2.Wait2.08}}\"/pause 1850/faceDirection Sophia 0 true/pause 250/faceDirection Sophia 0 true/pause 1200/shake Sophia 800/pause 1150/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.09}}\"/pause 1350/question fork1 \"{{i18n:Sophia.6hearts2.Wait2.10}}\"/fork 8185294_HereForYou2/friendship Sophia -750/pause 500/stopMusic/pause 1000/shake Sophia 1000/emote Sophia 12/pause 300/speak Sophia \"{{i18n:Sophia.6hearts2.Wait2.11}}\"/pause 1500/emote farmer 60 true/pause 200/globalFade/viewport -1000 -1000/end dialogue Sophia \"{{i18n:Sophia.6hearts2.Wait2.12}}\"",
+        "8185294_HereForYou": "pause 1000/shake Sophia 500/pause 1200/faceDirection Sophia 1 true/pause 250/faceDirection Sophia 2 true/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou.01}}\"/pause 1000/showFrame Sophia 32/pause 900/showFrame Sophia 34/pause 950/shake Sophia 600/pause 1250/showFrame Sophia 32/pause 1350/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou.02}}\"/pause 1100/question fork1 \"{{i18n:Sophia.6hearts2.HereForYou.03}}\"/fork 8185294_WatchAnime/friendship Sophia -100/pause 600/stopMusic/pause 400/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou.04}}\"/pause 1100/faceDirection Sophia 1 true/pause 250/faceDirection Sophia 0 true/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou.05}}\"/pause 500/globalFade/viewport -1000 -1000/pause 600/end dialogue Sophia \"{{i18n:Sophia.6hearts2.HereForYou.06}}\"",
+        "8185294_HereForYou2": "pause 1000/shake Sophia 500/pause 1200/faceDirection Sophia 1 true/pause 250/faceDirection Sophia 2 true/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou2.01}}\"/pause 1000/showFrame Sophia 32/pause 900/showFrame Sophia 34/pause 950/shake Sophia 600/pause 1250/showFrame Sophia 32/pause 1350/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou2.02}}\"/pause 1100/question fork1 \"{{i18n:Sophia.6hearts2.HereForYou2.03}}\"/fork 8185294_WatchAnime2/friendship Sophia -100/pause 600/stopMusic/pause 400/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou2.04}}\"/pause 1100/faceDirection Sophia 1 true/pause 250/faceDirection Sophia 0 true/pause 1000/speak Sophia \"{{i18n:Sophia.6hearts2.HereForYou2.05}}\"/pause 500/globalFade/viewport -1000 -1000/pause 600/end dialogue Sophia \"{{i18n:Sophia.6hearts2.HereForYou2.06}}\"",
+        "8185294_WatchAnime": "pause 800/showFrame Sophia 0/pause 700/friendship Sophia 50/speak Sophia \"{{i18n:Sophia.6hearts2.WatchAnime.01}}\"/pause 1000/showFrame Sophia 32/pause 500/shake Sophia 500/pause 1100/showFrame Sophia 0/pause 600/speak Sophia \"{{i18n:Sophia.6hearts2.WatchAnime.02}}\"/pause 600/faceDirection Sophia 1 true/pause 200/faceDirection Sophia 0 true/pause 650/shake Sophia 250/pause 600/speed Sophia 1/move Sophia 0 -6 0 true/pause 1300/faceDirection farmer 3 true/pause 350/globalFade/viewport -1000 -1000/halt/stopMusic/pause 1500/message \"{{i18n:Sophia.6hearts2.WatchAnime.03}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.6hearts2.WatchAnime.04}}\"",
+        "8185294_WatchAnime2": "pause 800/showFrame Sophia 0/pause 700/friendship Sophia 50/speak Sophia \"{{i18n:Sophia.6hearts2.WatchAnime2.01}}\"/pause 1000/showFrame Sophia 32/pause 500/shake Sophia 500/pause 1100/showFrame Sophia 0/pause 600/speak Sophia \"{{i18n:Sophia.6hearts2.WatchAnime2.02}}\"/pause 600/faceDirection Sophia 1 true/pause 200/faceDirection Sophia 0 true/pause 650/shake Sophia 250/pause 600/speed Sophia 1/move Sophia 0 -6 0 true/pause 1300/faceDirection farmer 3 true/pause 350/globalFade/viewport -1000 -1000/halt/stopMusic/pause 1500/message \"{{i18n:Sophia.6hearts2.WatchAnime2.03}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.6hearts2.WatchAnime2.04}}\"",
+      }
+    },
+    { //Sophia's House - 7 heart part 1
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_SophiaHouse",
+      "When": {
+        "HasSeenEvent": "8185294"
+      },
+      "Entries": {
+        "8185297/f Sophia 1750/e 8185293": "kindadumbautumn/-500 -500/Sophia 5 12 1 farmer -100 -100 2/pause 300/changeLocation Custom_SophiaCellar/viewport 8 8 true/skippable/pause 1000/playSound bubbles/pause 1200/speed Sophia 1/move Sophia 0 -1 1/pause 1000/playSound bubbles/pause 1000/speed Sophia 1/move Sophia 0 -1 1/pause 1000/playSound bubbles/pause 1000/speed Sophia 1/move Sophia 0 -2 0 true/pause 400/warp farmer 4 5/playSound stairsdown/pause 600/move farmer 0 1 2 true/pause 400/showFrame Sophia 8 true/pause 650/speak Sophia \"{{i18n:Sophia.7hearts1.01}}\"/pause 1100/faceDirection Sophia 1 true/pause 1250/showFrame Sophia 51/pause 1000/speak Sophia \"{{i18n:Sophia.7hearts1.02}}\"/pause 1000/showFrame farmer 96/pause 1000/showFrame Sophia 4/pause 350/move Sophia 0 0 0/pause 350/speak Sophia \"{{i18n:Sophia.7hearts1.03}}\"/pause 600/showFrame farmer 0/pause 700/speak Sophia \"{{i18n:Sophia.7hearts1.04}}\"/pause 400/stopMusic/pause 400/speak Sophia \"{{i18n:Sophia.7hearts1.05}}\"/pause 500/globalFade/viewport -1000 -1000/playSound stairsdown/changeLocation Custom_SophiaHouse/warp Sophia 7 15/warp farmer 9 15/move Sophia 0 0 1/faceDirection farmer 3 true/pause 1000/viewport 10 15 true/pause 1300/showFrame Sophia 51/pause 750/speak Sophia \"{{i18n:Sophia.7hearts1.06}}\"/pause 1000/move Sophia 0 0 0/pause 500/doAction 7 14/pause 800/globalFade/viewport -1000 -1000 true/warp Sophia 8 8/warp farmer 10 8/move Sophia 0 0 1/viewport 10 9 true/pause 1550/showFrame Sophia 51/pause 800/speak Sophia \"{{i18n:Sophia.7hearts1.07}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.7hearts1.08}}\"/pause 500/shake Sophia 700/pause 500/playMusic echos/pause 650/speak Sophia \"{{i18n:Sophia.7hearts1.09}}\"/pause 850/faceDirection farmer 2 true/pause 200/showFrame farmer 96/pause 1200/speak Sophia \"{{i18n:Sophia.7hearts1.10}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.7hearts1.11}}\"/pause 700/showFrame Sophia 0 true/pause 200/showFrame Sophia 32 true/pause 400/showFrame Sophia 33/pause 250/shake Sophia 500/pause 700/showFrame Sophia 32/pause 500/speak Sophia \"{{i18n:Sophia.7hearts1.12}}\"/pause 600/faceDirection farmer 3 true/pause 600/emote farmer 40/pause 700/showFrame Sophia 0/pause 200/faceDirection Sophia 1 true/pause 700/showFrame Sophia 51/pause 1500/speak Sophia \"{{i18n:Sophia.7hearts1.13}}\"/pause 800/pause 300/showFrame Sophia 32/pause 600/showFrame Sophia 33/pause 200/shake Sophia 300/pause 1000/showFrame Sophia 32/pause 300/showFrame Sophia 51/pause 800/speak Sophia \"{{i18n:Sophia.7hearts1.14}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.7hearts1.15}}\"/pause 1000/showFrame Sophia 51/pause 1100/speak Sophia \"{{i18n:Sophia.7hearts1.16}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.7hearts1.17}}\"/stopMusic/playMusic kindadumbautumn/pause 200/showFrame Sophia 4/pause 200/showFrame Sophia 0/pause 200/showFrame Sophia 39/pause 100/jump Sophia/pause 800/speak Sophia \"{{i18n:Sophia.7hearts1.18}}\"/pause 400/showFrame Sophia 0/pause 400/showFrame Sophia 4/pause 600/speak Sophia \"{{i18n:Sophia.7hearts1.19}}\"/pause 800/speak Sophia \"{{i18n:Sophia.7hearts1.20}}\"/pause 600/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Sophia.7hearts1.21}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.7hearts1.22}}\"",
+      }
+    },
+    { //Sophia's House - 7 heart part 2
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "When": {
+        "HasSeenEvent": "8185297"
+      },
+      "Entries": {
+        "8185298": "none/-500 -500/Sophia 24 32 0 farmer 28 38 0/pause 500/playMusic jaunty/viewport 28 36 clamp true/viewport move 0 -1 3000/mail SophiaThankYouLetter/skippable/move farmer 0 -6 3/pause 500/faceDirection Sophia 1 true/pause 500/jump Sophia/pause 900/speak Sophia \"{{i18n:Sophia.7hearts2.01}}\"/pause 600/move Sophia 2 0 1/pause 500/speak Sophia \"{{i18n:Sophia.7hearts2.02}}\"/pause 500/emote farmer 32/pause 300/faceDirection farmer 0 true/pause 550/warp farmer -40 -40/playSound doorClose/pause 300/move Sophia 2 0 0/pause 400/warp Sophia -30 -30/playSound doorClose/pause 1000/globalFade/viewport -1000 -1000/changeLocation Custom_SophiaHouse/pause 1000/playSound Ship/pause 600/playSound Ship/pause 500/playSound Ship/pause 400/playSound Ship/pause 650/playSound money/pause 800/message \"{{i18n:Sophia.7hearts2.03}}\"/pause 1000/warp Sophia 10 6/warp farmer 7 9/faceDirection farmer 3 true/faceDirection Sophia 0 true/pause 200/viewport 11 16 true/viewport move 0 -1 7000 true/pause 4000/speed Sophia 1/move Sophia 0 2 3/pause 500/speak Sophia \"{{i18n:Sophia.7hearts2.04}}\"/pause 500/faceDirection farmer 1 true/pause 700/move farmer 0 -1 1/move farmer 1 0 1/pause 700/speak Sophia \"{{i18n:Sophia.7hearts2.05}}\"/pause 500/emote farmer 32/pause 500/speak Sophia \"{{i18n:Sophia.7hearts2.06}}\"/pause 500/showFrame Sophia 0/pause 300/showFrame Sophia 39/pause 100/jump Sophia/pause 700/textAboveHead Sophia \"{{i18n:Sophia.7hearts2.07}}\"/pause 300/faceDirection farmer 2 true/pause 100/animate farmer false true 200 103 102/pause 1400/globalFade/viewport -1000 -1000/pause 1000/end dialogue Sophia \"{{i18n:Sophia.7hearts2.08}}\"",
+      }
+    },
+    { //Sophia's House - 7 Heart - Parents Room Refurbished
+      "Action": "EditMap",
+      "Target": "Maps/Custom_SophiaHouse",
+      "FromFile": "Assets/Maps/MapPatches/SophiaHouseParentsRoomRestored.tbin",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 15,
+        "Height": 17
+      },
+      "When": {
+        "HasSeenEvent": "8185297"
+      },
+    },
+    { //Sophia's House - 7 Heart - Move Teddy Bear
+      "Action": "EditMap",
+      "Target": "Maps/Custom_SophiaHouse",
+      "FromFile": "Assets/Maps/MapPatches/SophiaHouseMoveTeddyBear.tbin",
+      "ToArea": {
+        "X": 25,
+        "Y": 7,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent": "8185297"
+      },
+    },
+    { //Town - 8 heart - Living Life
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "8185295/f Sophia 2000/e 8185298/t 1000 1700/w sunny/d Mon Tue Wed Thu": "kindadumbautumn/-500 -500/farmer -198 -198 0 Sophia -199 -199 2 Haley -200 -200 2 Alex 53 69 0 Gus -202 -202 0 Andy -203 -203 3 Penny 35 89 2 Olivia 34 69 3 Caroline 32 69 1 Jodi 33 68 2 Maru 44 77 2 Lewis 45 61 1 Pierre 47 61 3 Victor -200 -200 3 Sam -189 -189 1 Evelyn 34 79 0/addTemporaryActor Dusty 16 32 -600 -600 2/showFrame Penny 18/showFrame Maru 31/positionOffset Maru -20 15/pause 500/viewport 23 89 true/skippable/pause 2700/playSound doorClose/warp Sophia 20 89/pause 1300/showFrame Sophia 39/shake Sophia 750/pause 750/speak Sophia \"{{i18n:Sophia.8hearts.01}}\"/pause 500/showFrame Sophia 0/pause 1100/speed Sophia 1/move Sophia 0 2 1 true/pause 1300/playSound doorClose/warp Haley 20 89/pause 650/faceDirection Sophia 0/pause 50/speak Haley \"{{i18n:Sophia.8hearts.02}}\"/pause 200/speak Sophia \"{{i18n:Sophia.8hearts.03}}\"/pause 800/showFrame Haley 16/pause 100/showFrame Haley 17/pause 100/showFrame Haley 18/pause 250/showFrame Haley 19/pause 250/showFrame Haley 18/pause 250/showFrame Haley 19/pause 250/showFrame Haley 18/pause 250/showFrame Haley 17/pause 100/showFrame Haley 16/pause 100/showFrame Haley 0/pause 400/faceDirection Haley 1 true/pause 150/faceDirection Haley 0/pause 300/warp Haley -400 -400/playSound doorClose/pause 1300/faceDirection Sophia 1/pause 200/speak Sophia \"{{i18n:Sophia.8hearts.04}}\"/pause 800/viewport move 2 0 4000 true/move Sophia 8 0 1/shake Sophia 400/pause 600/emote Sophia 8 true/pause 800/playSound dwop/showFrame Sophia 30/pause 2200/showFrame Sophia 35/pause 600/speak Sophia \"{{i18n:Sophia.8hearts.05}}\"/pause 500/showFrame Sophia 30/pause 200/showFrame Sophia 31/pause 500/showFrame Sophia 4/pause 500/faceDirection Sophia 0/pause 650/viewport move 2 0 5000 true/move Sophia 0 -19 0 true/viewport move 0 -2 9500 true/pause 2500/textAboveHead Sophia \"{{i18n:Sophia.8hearts.06}}\"/pause 5500/textAboveHead Sophia \"{{i18n:Sophia.8hearts.07}}\"/pause 3200/faceDirection Sophia 1/pause 200/speak Sophia \"{{i18n:Sophia.8hearts.08}}\"/pause 700/viewport move 2 0 3000 true/move Sophia 6 0 0 true/pause 1800/faceDirection Olivia 2 true/pause 300/speak Olivia \"{{i18n:Sophia.8hearts.09}}\"/pause 400/faceDirection Caroline 2/pause 200/speak Sophia \"{{i18n:Sophia.8hearts.10}}\"/pause 800/faceDirection Caroline 1 true/pause 450/faceDirection Olivia 3 true/pause 750/faceDirection Sophia 1 true/pause 600/viewport move 2 0 5500 true/move Sophia 11 0 0/pause 1000/speak Sophia \"{{i18n:Sophia.8hearts.11}}\"/pause 500/move Sophia 0 -1 0/pause 550/warp Sophia -100 -100/playSound doorClose/pause 800/globalFade/viewport -1000 -1000/pause 50/changeLocation Saloon/warp Gus 12 17/warp Andy 5 20/animate Andy false true 100 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 27 27 27 27 27 27 27 27 26 25 24/viewport 14 18 true/pause 1500/warp Sophia 14 24/playSound doorClose/pause 500/faceDirection Gus 1 true/pause 200/faceDirection Gus 2 true/emote Gus 16 true/move Sophia 0 -4 0 true/pause 900/speak Gus \"{{i18n:Sophia.8hearts.12}}\"/pause 300/speed Gus 3/move Gus 2 0 2/move Gus 0 1 2/pause 500/speak Sophia \"{{i18n:Sophia.8hearts.13}}\"/speak Gus \"{{i18n:Sophia.8hearts.14}}\"/pause 200/jump Sophia/pause 1000/speak Sophia \"{{i18n:Sophia.8hearts.15}}\"/pause 300/speed Gus 1/move Gus 6 0 1 true/pause 600/globalFade/viewport -1000 -1000/halt/pause 50/changeLocation Town/warp Gus -205 -205/stopAnimation Andy/warp Andy -206 -206/warp Maru -300 -300/warp Alex 60 64/warp Sophia -207 -207/faceDirection Sophia 2 true/faceDirection Alex 2 true/warp Olivia -200 -200/warp Caroline -199 199/warp Jodi -198 -198/warp Evelyn -106 -106/warp Pierre -301 -301/warp Lewis -302 -302/viewport 45 72 true/pause 1500/warp Sophia 45 71/playSound doorClose/pause 1000/showFrame Sophia 39/pause 300/shake Sophia 600/pause 600/speak Sophia \"{{i18n:Sophia.8hearts.16}}\"/pause 1000/showFrame Sophia 0/pause 550/move Sophia 0 1 2/pause 250/faceDirection Sophia 1 true/pause 500/viewport move 2 0 5500 true/move Sophia 11 0 2 true/pause 4600/playSound dog_bark/pause 1500/faceDirection Sophia 3 true/pause 300/speak Sophia \"{{i18n:Sophia.8hearts.17}}\"/pause 500/move Sophia -2 0 0/move Sophia 0 -1 0/pause 650/playSound dog_bark/pause 900/playSound dog_bark true/speak Dusty \"{{i18n:Sophia.8hearts.18}}\"/pause 500/emote Sophia 20/viewport move 0 -1 2500 true/move Sophia 0 -2 3/move Sophia -1 0 3/pause 150/faceDirection Sophia 0 true/pause 600/speak Sophia \"{{i18n:Sophia.8hearts.19}}\"/pause 300/playSound dog_bark true/speak Dusty \"{{i18n:Sophia.8hearts.20}}\"/pause 800/speak Sophia \"{{i18n:Sophia.8hearts.21}}\"/pause 500/playSound dog_pant/pause 500/playSound dog_pant/pause 500/playSound dog_pant/pause 800/playSound dog_bark/pause 1200/playSound dog_bark true/speak Dusty \"{{i18n:Sophia.8hearts.22}}\"/pause 500/textAboveHead Sophia \"{{i18n:Sophia.8hearts.23}}\"/pause 400/playSound dog_bark/move Alex 0 4 3/pause 300/playSound dog_bark/pause 500/emote Alex 32 true/pause 400/stopMusic/globalFade/viewport -1000 -1000 true/warp Sophia 49 32/warp farmer 49 42/warp Victor 30 29/warp Sam 28 29/warp Lewis 41 14/faceDirection Lewis 0 true/pause 50/showFrame Sophia 22/pause 200/playMusic springtown/pause 600/viewport 49 33 true/move farmer 0 -7 0/pause 1300/showFrame Sophia 49/pause 250/emote Sophia 16 true/pause 800/speak Sophia \"{{i18n:Sophia.8hearts.24}}\"/pause 600/showFrame Sophia 22/pause 1100/showFrame Sophia 49/pause 600/speak Sophia \"{{i18n:Sophia.8hearts.25}}\"/pause 1000/emote Sophia 40 true/pause 400/speak Sophia \"{{i18n:Sophia.8hearts.26}}\"/pause 600/speed farmer 1/move farmer 0 -2 0 true/pause 250/globalFade/viewport -1000 -1000/halt/stopMusic/pause 1000/message \"{{i18n:Sophia.8hearts.27}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.8hearts.28}}\"",
+      }
+    },
+    //After players see Sophia's 8 heart: Scarlett appears at some festivals!!! Woo! :D
+    //SOPHIA VISTS OTHER VILLAGERS AFTER 8 HEART EVENT - SCHEDULE ADDITIONS
+    { //Sophia Schedule - Visits Victor
+      "Action": "EditData",
+      "Target": "characters/schedules/Sophia",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "6": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/650 Custom_SophiaHouse 26 23 0/830 Custom_JenkinsHouse 23 27 0/1050 Custom_JenkinsHouse 29 11 2 Sophia_WatchAnime/1700 Custom_JenkinsHouse 29 11 1/1720 Custom_JenkinsHouse 19 39 1/1820 Custom_SophiaHouse 18 22 2 Sophia_Read/2230 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+      },
+    },
+    { //Victor Schedule - Hangs Out With Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Victor",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "6": "800 Custom_JenkinsHouse 31 37 0/910 Custom_JenkinsHouse 23 25 2 Victor_Book2/1030 Custom_JenkinsHouse 23 25 2 Victor_BookStare/1050 Custom_JenkinsHouse 30 10 2 Victor_Sit/1700 Custom_JenkinsHouse 31 11 3/1720 Custom_JenkinsHouse 21 39 3/1820 Custom_JenkinsHouse 30 37 0/1900 Custom_JenkinsHouse 31 25 2/2030 Custom_JenkinsHouse 31 5 2 Victor_Sleep",
+      },
+    },
+    { //Victor Schedule Reversed - Player Marries Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Victor",
+      "When": {
+        "Spouse": "Sophia"
+      },
+      "Entries": {
+        "6": "600 Custom_JenkinsHouse 31 5 1 Victor_Sleep/700 Custom_JenkinsHouse 6 8 0/810 Custom_JenkinsHouse 30 37 0/930 ArchaeologyHouse 10 11 1 Victor_Book1/1500 Town 101 98 2/1600 Custom_JenkinsHouse 30 37 0/1830 Custom_JenkinsHouse 35 9 1/2030 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
+      },
+    },
+    { //Sophia Schedule - Visits Susan
+      "Action": "EditData",
+      "Target": "characters/schedules/Sophia",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "summer_10": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/630 Custom_SophiaHouse 24 23 2/910 Custom_SusanHouse 9 19 3/1320 Custom_SusanHouse 5 17 3/1700 Custom_SusanHouse 11 17 3/1800 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+        "fall_10": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/630 Custom_SophiaHouse 24 23 2/910 Custom_SusanHouse 9 19 3/1320 Custom_SusanHouse 5 17 3/1700 Custom_SusanHouse 11 17 3/1800 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+        "winter_10": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/630 Custom_SophiaHouse 24 23 2/910 Custom_SusanHouse 9 19 3/1320 Custom_SusanHouse 5 17 3/1700 Custom_SusanHouse 11 17 3/1800 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+      },
+    },
+    { //Susan Schedule - Hangs Out With Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Susan",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "summer_10": "700 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 2 6 0/940 Custom_SusanHouse 4 15 2 Susan_Read/1230 Custom_SusanHouse 7 19 1/1320 Custom_SusanHouse 3 16 2/1700 Custom_SusanHouse 9 17 1/1800 Custom_SusanHouse 5 19 0/1930 Custom_SusanHouse 22 6 0/2040 Custom_SusanHouse 24 6 1 Susan_Sleep",
+        "fall_10": "700 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 2 6 0/940 Custom_SusanHouse 4 15 2 Susan_Read/1230 Custom_SusanHouse 7 19 1/1320 Custom_SusanHouse 3 16 2/1700 Custom_SusanHouse 9 17 1/1800 Custom_SusanHouse 5 19 0/1930 Custom_SusanHouse 22 6 0/2040 Custom_SusanHouse 24 6 1 Susan_Sleep",
+        "winter_10": "700 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 2 6 0/940 Custom_SusanHouse 4 15 2 Susan_Read/1230 Custom_SusanHouse 7 19 1/1320 Custom_SusanHouse 3 16 2/1700 Custom_SusanHouse 9 17 1/1800 Custom_SusanHouse 5 19 0/1930 Custom_SusanHouse 22 6 0/2040 Custom_SusanHouse 24 6 1 Susan_Sleep",
+      },
+    },
+    { //Susan Schedule Reversed - Player Marries Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Susan",
+      "When": {
+        "Spouse": "Sophia"
+      },
+      "Entries": {
+        "summer_10": "640 Custom_SusanHouse 26 15 0/800 Custom_SusanHouse 15 7 0/830 Custom_SusanHouse 13 7 0/900 Custom_SusanHouse 11 7 0/930 Custom_SusanHouse 9 7 0/1000 Custom_SusanHouse 7 7 0/1030 Custom_SusanHouse 1030 5 7 0/1100 Custom_SusanHouse 2 6 0/1200 SeedShop 13 20 0/1630 Custom_SusanHouse 24 15 0/2100 Custom_SusanHouse 24 6 1 Susan_Sleep",
+        "fall_10": "640 Custom_SusanHouse 26 15 0/800 Custom_SusanHouse 15 7 0/830 Custom_SusanHouse 13 7 0/900 Custom_SusanHouse 11 7 0/930 Custom_SusanHouse 9 7 0/1000 Custom_SusanHouse 7 7 0/1030 Custom_SusanHouse 1030 5 7 0/1100 Custom_SusanHouse 2 6 0/1200 SeedShop 13 20 0/1630 Custom_SusanHouse 24 15 0/2100 Custom_SusanHouse 24 6 1 Susan_Sleep",
+        "winter_10": "640 Custom_SusanHouse 26 15 0/800 Custom_SusanHouse 15 7 0/830 Custom_SusanHouse 13 7 0/900 Custom_SusanHouse 11 7 0/930 Custom_SusanHouse 9 7 0/1000 Custom_SusanHouse 7 7 0/1030 Custom_SusanHouse 1030 5 7 0/1100 Custom_SusanHouse 2 6 0/1200 SeedShop 13 20 0/1630 Custom_SusanHouse 24 15 0/2100 Custom_SusanHouse 24 6 1 Susan_Sleep",
+      },
+    },
+    { //Sophia Schedule - Visits Haley
+      "Action": "EditData",
+      "Target": "characters/schedules/Sophia",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "14": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/630 Custom_SophiaHouse 24 23 2/830 HaleyHouse 2 21 0/1020 HaleyHouse 5 5 1/1340 HaleyHouse 8 7 1/1530 HaleyHouse 4 20 1/1610 Custom_SophiaHouse 18 22 2 Sophia_Read/2100 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+      },
+    },
+    { //Haley Schedule - Hangs Out With Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Haley",
+      "When": {
+        "HasSeenEvent": "8185295",
+        "Spouse |contains=Sophia": false
+      },
+      "Entries": {
+        "14": "730 HaleyHouse 8 7 1/820 HaleyHouse 18 16 2/940 HaleyHouse 2 18 2/1020 HaleyHouse 7 5 3/1340 HaleyHouse 8 5 2/1530 HaleyHouse 6 20 3/1610 HaleyHouse 14 17 0/1940 HaleyHouse 6 5 2/2040 HaleyHouse 2 5 2 Haley_Sleep",
+      },
+    },
+    { //Haley Schedule Reversed - Player Marries Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Haley",
+      "When": {
+        "Spouse": "Sophia"
+      },
+      "Entries": {
+        "14": "900 HaleyHouse 6 5 0/950 HaleyHouse 8 7 1/1100 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 HaleyHouse 1 5 3 haley_sleep",
+      },
+    },
+    { //Haley Schedule - Dialogue Additions
+      "Action": "EditData",
+      "Target": "characters/dialogue/haley",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "HaleyHouse_2_18": "{{i18n:Sophia.HaleyHouse.01}}",
+        "HaleyHouse_7_5": "{{i18n:Sophia.HaleyHouse.02}}",
+        "HaleyHouse_8_5": "{{i18n:Sophia.HaleyHouse.03}}",
+        "HaleyHouse_6_20": "{{i18n:Sophia.HaleyHouse.04}}",
+      },
+    },
+    { //Sophia Schedule - Visits Emily
+      "Action": "EditData",
+      "Target": "characters/schedules/Sophia",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "20": "0 Custom_SophiaHouse 23 6 3/610 Custom_SophiaHouse 23 6 3 Sophia_Sleep/630 Custom_SophiaHouse 24 23 2/1150 HaleyHouse 13 24 0/1430 HaleyHouse 16 8 0/1620 Custom_SophiaHouse 21 8 2 Sophia_Read/2100 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+      },
+    },
+    { //Emily Schedule - Hangs Out With Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Emily",
+      "When": {
+        "HasSeenEvent": "8185295",
+        "Spouse |contains=Sophia": false
+      },
+      "Entries": {
+        "20": "830 HaleyHouse 13 24 0/1010 HaleyHouse 14 23 0/1030 HaleyHouse 16 25 1/1210 HaleyHouse 13 22 2/1430 HaleyHouse 14 7 1/1620 Saloon 16 17 0/1830 Saloon 17 18 2/1910 Saloon 13 17 0/2100 Saloon 16 17 0/2130 Saloon 14 18 2/2230 HaleyHouse 19 4 1 Emily_Sleep",
+      },
+    },
+    { //Emily Schedule Reversed - Player Marries Sophia
+      "Action": "EditData",
+      "Target": "characters/schedules/Emily",
+      "When": {
+        "Spouse": "Sophia"
+      },
+      "Entries": {
+        "20": "900 HaleyHouse 16 5 2/1200 HaleyHouse 3 16 0/1530 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
+      },
+    },
+    { //Emily Schedule - Dialogue Additions
+      "Action": "EditData",
+      "Target": "characters/dialogue/emily",
+      "When": {
+        "HasSeenEvent": "8185295"
+      },
+      "Entries": {
+        "HaleyHouse_14_23": "{{i18n:Sophia.HaleyHouse.05}}",
+        "HaleyHouse_16_25": "{{i18n:Sophia.HaleyHouse.06}}",
+        "HaleyHouse_13_22": "{{i18n:Sophia.HaleyHouse.07}}",
+        "HaleyHouse_14_7": "{{i18n:Sophia.HaleyHouse.08}}",
+      },
+    },
+    { //Blue Moon Vineyard - 10 heart - The Prairie Queen
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_SophiaHouse",
+      "Entries": {
+        "8185296/f Sophia 2500/e 8185295/w sunny": "kindadumbautumn/-500 -500/Sophia -200 -200 2 farmer 12 23 3/addTemporaryActor SophiaJPK 16 32 6 22 0/positionOffset SophiaJPK -4 -25/pause 1000/viewport 10 23 true/skippable/viewport move -1 0 3000/move farmer -6 0 0 true/pause 4000/faceDirection SophiaJPK 1 true/pause 200/faceDirection SophiaJPK 2 true/pause 700/jump SophiaJPK/pause 1000/speak Sophia \"{{i18n:Sophia.10hearts.01}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.10hearts.02}}\"/pause 400/globalFade/viewport -1000 -1000/stopMusic/pause 100/changeLocation Custom_BlueMoonVineyard/pause 50/warp SophiaJPK 28 35/warp farmer 28 41/pause 50/positionOffset farmer 24 7/viewport 28 38 true/pause 1500/speak Sophia \"{{i18n:Sophia.10hearts.03}}\"/pause 1250/playSound dwop/showFrame SophiaJPK 19/pause 200/playMusic cowboy_outlawsong/pause 1250/speak Sophia \"{{i18n:Sophia.10hearts.04}}\"/pause 1200/speak Sophia \"{{i18n:Sophia.10hearts.05}}\"/pause 1600/playSound dwop/showFrame SophiaJPK 16/pause 350/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/faceDirection SophiaJPK 1 true/pause 250/showFrame SophiaJPK 17/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/faceDirection SophiaJPK 2 true/pause 250/faceDirection SophiaJPK 3 true/pause 250/showFrame SophiaJPK 18/pause 200/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/playSound Cowboy_gunshot/pause 250/faceDirection SophiaJPK 2 true/pause 900/showFrame SophiaJPK 19/pause 1000/speak Sophia \"{{i18n:Sophia.10hearts.06}}\"/pause 1200/showFrame SophiaJPK 20/pause 600/showFrame SophiaJPK 19/pause 300/showFrame SophiaJPK 21/pause 700/showFrame SophiaJPK 19/pause 700/speak Sophia \"{{i18n:Sophia.10hearts.07}}\"/pause 700/emote SophiaJPK 16 true/pause 300/playSound dwop/showFrame SophiaJPK 16/pause 400/speak Sophia \"{{i18n:Sophia.10hearts.08}}\"/pause 1000/speak Sophia \"{{i18n:Sophia.10hearts.09}}\"/pause 1600/showFrame SophiaJPK 0/playSound dwop/playMusic Cowboy_singing/pause 800/viewport move 0 1 3000 true/move SophiaJPK 0 4 2/pause 300/speak Sophia \"{{i18n:Sophia.10hearts.10}}\"/pause 1000/viewport move 0 1 1500 true/move SophiaJPK 0 1 3/move SophiaJPK -1 0 2/move SophiaJPK 0 1 1 true/pause 100/faceDirection farmer 3 true/pause 600/speak Sophia \"{{i18n:Sophia.10hearts.11}}\"/pause 750/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/positionOffset SophiaJPK 1 0/positionOffset farmer -1 0/pause 50/showFrame farmer 101 true/showFrame SophiaJPK 22 true/playSound dwop/specificTemporarySprite heart 28 40/pause 3000/globalFade/viewport -1000 -1000/pause 1000/speak Sophia \"{{i18n:Sophia.10hearts.12}}\"/pause 1000/stopMusic/pause 1000/end dialogue Sophia \"{{i18n:Sophia.10hearts.13}}\"",
+      }
+    },
+    { //SOPHIA 12 Heart - part 1
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 1
+      },
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 11 5 3 Sophia 4 5 0/skippable/makeInvisible 4 5 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia/viewport 5 5 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 66 15/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 64 15 clamp true/pause 1250/warp Sophia 64 15/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 1
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 2
+      },
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 14 14 3 Sophia 7 14 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 7 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 66 15/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 64 15 clamp true/pause 1250/warp Sophia 64 15/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 1
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3
+      }, //Original : /farmer 14 14 3 Sophia 7 14 0/  and /viewport 7 14 true/
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 29 24 3 Sophia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 22 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 66 15/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 64 15 clamp true/pause 1250/warp Sophia 64 15/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 1 - Grandpa's Farm
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 1,
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 11 5 3 Sophia 4 5 0/skippable/makeInvisible 4 5 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 5 5 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 97 49/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 95 49 true/pause 1250/warp Sophia 95 49/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 1 - Grandpa's Farm
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 2,
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 14 14 3 Sophia 7 14 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 7 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 97 49/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 95 49 true/pause 1250/warp Sophia 95 49/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 1 - Grandpa's Farm
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3,
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "8185299/O Sophia/f Sophia 3000/w sunny/t 600 1000/z spring/z summer/z winter/u 3 5 6 7 8 9 10 11 12 13 14 17 18 19 20 21 22 23 24": "none/-500 -500/farmer 29 24 3 Sophia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 22 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.01}}\"/pause 250/speak Sophia \"{{i18n:Sophia.12hearts1.02}}\"/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.03}}\"/pause 500/emote farmer 32/globalFade/viewport -1000 -1000/changeLocation Farm/warp Sophia -100 -100/warp farmer 97 49/faceDirection Sophia 2 true/faceDirection farmer 2 true/pause 500/viewport 95 49 true/pause 1250/warp Sophia 95 49/playSound doorClose/pause 650/faceDirection farmer 3 true/pause 400/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts1.04}}\"/pause 600/move Sophia 1 0 1/pause 550/showFrame Sophia 7 true/shake Sophia 300/pause 300/showFrame Sophia 4 true/pause 150/playSound pickUpItem/pause 650/faceDirection farmer 2 true/pause 500/farmerEat 201/pause 3000/faceDirection farmer 3 true/pause 350/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.12hearts1.05}}\"/pause 500/showFrame farmer 97/pause 1000/move farmer 0 0 3/pause 850/faceDirection Sophia 2 true/pause 200/showFrame Sophia 39 true/jump Sophia/pause 700/speak Sophia \"{{i18n:Sophia.12hearts1.06}}\"/pause 500/showFrame Sophia 0 true/pause 400/faceDirection Sophia 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts1.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Sophia \"{{i18n:Sophia.12hearts1.08}}\""
+      }
+    },
+    { //SOPHIA 12 Heart - part 2
+      "Action": "EditData",
+      "Target": "Data/Events/Custom_BlueMoonVineyard",
+      "Entries": {
+        "8185300/O Sophia/e 8185299/w sunny/z spring/z summer/z winter/t 600 1700": "fall_day_ambient/-500 -500/farmer 28 45 0 Sophia 22 37 2/animate Sophia false true 400 26 27/skippable/pause 500/viewport 28 42 clamp true/viewport move 0 -1 4500 true/move farmer 0 -8 0/pause 200/faceDirection farmer 3 true/pause 800/stopAnimation Sophia/pause 700/faceDirection Sophia 1 true/pause 500/jump Sophia/pause 900/speed Sophia 4/move Sophia 4 0 1 true/pause 450/speak Sophia \"{{i18n:Sophia.12hearts2.01}}\"/pause 750/faceDirection Sophia 2 true/pause 200/faceDirection Sophia 3 true/pause 200/move Sophia -9 0 3 true/pause 600/move farmer -9 0 3 true/pause 1000/globalFade/viewport -1000 -1000/halt/warp farmer 17 41/warp Sophia 14 37/faceDirection farmer 0 true/faceDirection Sophia 0 true/playMusic kindadumbautumn/pause 1500/viewport 19 39 clamp true/pause 500/move Sophia 2 0 0/pause 300/Shake Sophia 300/playSound harvest/pause 600/move farmer 1 0 0/pause 500/startJittering/playSound harvest/pause 325/stopJittering/pause 500/move Sophia 1 0 0/pause 600/shake Sophia 280/playSound harvest/pause 730/move farmer 1 0 0/pause 400/startJittering/playSound harvest/pause 400/stopJittering/pause 300/move Sophia 1 0 0/pause 500/shake Sophia 250/playSound harvest/pause 500/move farmer 1 0 0/pause 600/playSound harvest/startJittering/pause 300/stopJittering/pause 300/move Sophia 3 0 0 true/pause 500/globalFade/viewport -1000 -1000/halt/warp Sophia 36 29/warp farmer 42 32/faceDirection Sophia 0 true/faceDirection farmer 0 true/faceDirection farmer 0 true/faceDirection Sophia 2 true/pause 400/viewport 38 32 true/pause 550/shake Sophia 300/playSound Ship/pause 600/move Sophia -2 0 2/move Sophia 0 1 1/pause 500/playSound Ship/pause 400/move farmer -3 0 0/pause 300/playSound Ship/shake Sophia 300/pause 400/move Sophia 0 2 1/move Sophia 1 0 0/pause 400/playSound Ship/pause 400/move farmer -2 0 0/pause 400/playSound Ship/shake Sophia 350/pause 600/faceDirection Sophia 1 true/pause 800/faceDirection farmer 3 true/pause 500/emote Sophia 32/globalFade/viewport -1000 -1000/changeLocation Custom_SophiaCellar/warp Sophia 11 5/warp farmer 14 8/faceDirection farmer 1 true/faceDirection Sophia 3 true/viewport 13 7 true/pause 500/playSound bubbles/pause 900/playSound Ship/shake Sophia 300/pause 600/move Sophia 0 1 3/pause 500/playSound Ship/startJittering/pause 300/stopJittering/pause 150/playSound bubbles/pause 500/move farmer 0 -1 1/pause 850/faceDirection Sophia 2 true/pause 200/faceDirection Sophia 1 true/pause 50/playSound bubbles/pause 250/speak Sophia \"{{i18n:Sophia.12hearts2.02}}\"/pause 400/faceDirection farmer 2 true/pause 200/faceDirection farmer 3 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts2.03}}\"/pause 700/showFrame farmer 97/pause 1150/move farmer 0 0 3/pause 600/faceDirection Sophia 2 true/pause 200/faceDirection Sophia 3 true/pause 400/playSound bubbles/pause 250/move Sophia 0 1 3/pause 250/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 500/startJittering/playSound Ship/pause 350/stopJittering/pause 450/playSound bubbles/pause 600/move farmer 0 1 1/pause 300/speed Sophia 1/move Sophia 0 1 3 true/playSound bubbles/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_SophiaHouse/warp farmer -100 -100/warp Sophia -101 -101/faceDirection farmer 2 true/faceDirection Sophia 2 true/viewport 21 25 true/pause 1500/playSound stairsdown/warp Sophia 21 24/pause 500/faceDirection Sophia 3 true/pause 400/move Sophia -2 0 1 true/pause 400/warp farmer 21 24/playSound stairsdown/pause 650/faceDirection farmer 3 true/pause 500/speak Sophia \"{{i18n:Sophia.12hearts2.04}}\"/pause 300/emote Sophia 40/pause 300/speak Sophia \"{{i18n:Sophia.12hearts2.05}}\"/pause 1000/faceDirection Sophia 2 true/pause 200/faceDirection Sophia 3 true/pause 125/move Sophia -5 0 1 true/pause 400/move farmer -6 0 3 true/pause 200/globalFade/viewport -1000 -1000/halt/warp farmer 20 7/warp Sophia 19 7/faceDirection Sophia 0 true/faceDirection farmer 3 true/positionOffset Sophia -7 -20/positionOffset farmer 5 0/viewport 20 8 true/pause 1750/shake Sophia 300/playSound pickUpItem/pause 750/faceDirection Sophia 1 true/pause 1200/showFrame Sophia 51 true/pause 800/speak Sophia \"{{i18n:Sophia.12hearts2.06}}\"/pause 1200/showFrame Sophia 4 true/pause 450/playMusic musicboxsong/pause 250/speak Sophia \"{{i18n:Sophia.12hearts2.07}}\"/pause 850/showFrame Sophia 7 true/shake Sophia 200/pause 100/playSound newRecipe/pause 450/showFrame Sophia 4 true/pause 800/playSound reward/message \"{{i18n:Sophia.12hearts2.08}}\"/pause 500/jump farmer/pause 1000/speak Sophia \"{{i18n:Sophia.12hearts2.09}}\"/pause 500/showFrame farmer 97/pause 800/globalFade/viewport -1000 -1000/pause 1500/stopMusic/pause 1000/end dialogue Sophia \"{{i18n:Sophia.12hearts2.10}}\"",
+      }
+    },
+    { //Increases grape sell price by 100% - does affect grape wine sell price
+      "Action": "EditData",
+      "Target": "Data/objectinformation",
+      "Fields": {
+        "398": {
+          1: "160"
+        },
+      },
+      "When": {
+        "HasSeenEvent": "8185300",
+        "Spouse": "Sophia"
+      } //That's right. You must remain married to Sophia. No dumping her thinking you'll take those trade secrets with you... :P
+    },
+    /*{
+      "Action": "EditData",
+      "Target": "Data/objectinformation",
+	  "Fields": { "398": { 1: "120" }, },
+	  "When": { "HasSeenEvent": "8185300", "Spouse": "Sophia", "LowerProfitMargins": true }
+    },*/
+    { //SOPHIA 14 Heart - part 1 - We should cosplay together!
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "When": {
+        "FarmhouseUpgrade": 3
+      },
+      "Entries": {
+        "8185301/O Sophia/f Sophia 3500/t 700 2200/z spring/u 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27/t 600 2000/e 8185300": "none/-500 -500/farmer 29 24 3 Sophia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 850/playMusic 50s/pause 1000/ignoreCollisions farmer/ignoreCollisions Sophia//viewport 22 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.14hearts1.01}}\"/pause 500/emote farmer 8/pause 300/speak Sophia \"{{i18n:Sophia.14hearts1.02}}\"/pause 1000/jump farmer/pause 1000/speak Sophia \"{{i18n:Sophia.14hearts1.03}}\"/pause 500/emote farmer 32/pause 500/speak Sophia \"{{i18n:Sophia.14hearts1.04}}\"/pause 600/showFrame farmer 97 true/pause 800/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Sophia.14hearts1.05}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.14hearts1.06}}\"",
+      }
+    },
+    { //SOPHIA 14 Heart - part 2 - Let's go to the convention! Grab your costume!
+      "Action": "EditData",
+      "Target": "Data/Events/farmhouse",
+      "Entries": {
+        "8185302/O Sophia/t 600 700/e 8185301/z summer/z fall/z winter/u 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28": "none/-500 -500/farmer -10 -10 2 Sophia -11 -11 2/skippable/pause 1000/speak Sophia \"{{i18n:Sophia.14hearts2.01}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.14hearts2.02}}\"",
+      }
+    },
+    { //SOPHIA 14 Heart - part 3 - Zuzu City Comic Con
+      "Action": "EditData",
+      "Target": "Data/Events/busstop",
+      "Entries": {
+        "8185303/O Sophia/e 8185302/t 900 1500": "none/-500 -500/farmer 22 13 0 Scarlett -200 -200 0 ScarlettCosplay 23 12 3 Sophia -20 -20 0 Pam 22 10 2/pause 750/addTemporaryActor SophiaJPK 16 32 21 12 1/playMusic SettlingIn/pause 250/viewport 22 13 clamp true/pause 1000/speak Pam \"{{i18n:Sophia.14hearts3.01}}\"/pause 500/faceDirection SophiaJPK 0 true/pause 500/faceDirection ScarlettCosplay 0 true/pause 250/speak Sophia \"{{i18n:Sophia.14hearts3.02}}\"/pause 200/speak Scarlett \"{{i18n:Sophia.14hearts3.03}}\"/pause 500/faceDirection Pam 1 true/pause 300/faceDirection Pam 0 true/pause 250/move Pam 0 -1 0/warp Pam -70 -70/pause 200/move SophiaJPK 1 0 0/move SophiaJPK 0 -3 0/warp SophiaJPK -65 -65/pause 150/move ScarlettCosplay -1 0 0/move ScarlettCosplay 0 -3 0/warp ScarlettCosplay -67 -67/pause 200/move farmer 0 -4 0/warp farmer -90 -90/pause 1000/globalFade/viewport -1000 -1000/playSound busDriveOff/changeLocation Custom_Highway/stopMusic/pause 1000/AmbientLight 15 15 15/addTemporaryActor SophiaJPK 16 32 -50 -50 2/addTemporaryActor RedShirtGuy 16 32 -50 -50 2/addTemporaryActor GreenShirtGuy 16 32 -50 -50 2/addTemporaryActor ArtGuy 16 32 -50 -50 2 false/addTemporaryActor GenericNPC1 16 32 -50 -50 2/addTemporaryActor BaldGuy 16 32 -50 -50 2/addTemporaryActor BaldGuySittingDown 16 32 -50 -50 2/addTemporaryActor GreenShirtGirl 16 32 -50 -50 2/addTemporaryActor RedHatGuySittingDown 16 32 -50 -50 2/addTemporaryActor LittleGirl 16 32 -50 -50 2/addTemporaryActor BlackhairGuy 16 32 -50 -50 2/addTemporaryActor BlueDressGirl 16 32 -50 -50 2/addTemporaryActor LongNoseGuy 16 32 -50 -50 2/addTemporaryActor GirlSittingDown 16 32 -50 -50 2/addTemporaryActor Aaron 16 32 -50 -50 2/addTemporaryActor Cassandra 16 32 -50 -50 2/addTemporaryActor GirlSittingDown2 16 32 -50 -50 2/addTemporaryActor SunglassesGuy 16 32 -50 -50 2/addTemporaryActor RedBeanieGuy 16 32 -50 -50 2/addTemporaryActor NewspaperGuy 16 32 -50 -50 2/addTemporaryActor GreenDressGirl 16 32 -50 -50 2/addTemporaryActor AdventurerCosplayer 16 32 -50 -50 2/addTemporaryActor ArtifactCosplayer 16 32 -50 -50 2/addTemporaryActor BlueShadowGuy 16 32 -50 -50 2/addTemporaryActor GoblinCosplayer 16 32 -50 -50 2/addTemporaryActor BrideCosplayer 16 32 -50 -50 2/addTemporaryActor EmperorCosplayer 16 32 -50 -50 2/addTemporaryActor FairyCosplayer 16 32 -50 -50 2/addTemporaryActor FairyCosplayer2 16 32 -50 -50 2/addTemporaryActor FrogGuyCosplayer 16 32 -50 -50 2/addTemporaryActor GaldoranGirlCosplayer 16 32 -50 -50 2/addTemporaryActor GreenShadowGuy 16 32 -50 -50 2/addTemporaryActor HappyShirtCosplayer 16 32 -50 -50 2/addTemporaryActor IcePrincessCosplayer 16 32 -50 -50 2 false/addTemporaryActor JojaGirlCosplayer 16 32 -50 -50 2/addTemporaryActor JojaGuyCosplayer 16 32 -50 -50 2/addTemporaryActor JumperCosplayer 16 32 -50 -50 2/addTemporaryActor LuauGuyCosplayer 16 32 -50 -50 2 false/addTemporaryActor MainStageCosplayer 16 32 -50 -50 2/addTemporaryActor NurseCosplayer 16 32 -50 -50 2/addTemporaryActor Pirate2Cosplayer 16 32 -50 -50 2/addTemporaryActor PrinceCosplayer 16 32 -50 -50 2/addTemporaryActor PurpleWitchCosplayer 16 32 -50 -50 2/addTemporaryActor RedShadowGuy 16 32 -50 -50 2/addTemporaryActor RedWitchCosplayer 16 32 -50 -50 2/addTemporaryActor ThiefCosplayer 16 32 -50 -50 2/addTemporaryActor TopHatCosplayer 16 32 -50 -50 2/addTemporaryActor TotemGuyCosplayer 16 32 -50 -50 2/addTemporaryActor TrashGirlCosplayer 16 32 -50 -50 2/addTemporaryActor TurbanGuyCosplayer 16 32 -50 -50 2/addTemporaryActor WizardCosplayer 16 32 -50 -50 2 false/addTemporaryActor BlueBirdCosplayer 20 35 -50 -50 2/addTemporaryActor BlueMushroomGirlCosplayer 20 35 -50 -50 2 false/addTemporaryActor CaveGirlCosplayer 20 35 -50 -50 2 false/addTemporaryActor ChefGuyCosplayer 20 35 -50 -50 2 false/addTemporaryActor ConcernedApeCosplayer 20 35 -50 -50 2 false/addTemporaryActor DinoGuyCosplayer 20 35 -50 -50 2 false/addTemporaryActor GreenBirdCosplayer 20 35 -50 -50 2 false/addTemporaryActor GreenGoblinCosplayer 20 35 -50 -50 2/addTemporaryActor GreenMushroomGirlCosplayer 20 35 -50 -50 2 false/addTemporaryActor JackThePumpkinCosplayer 20 35 -50 -50 2 false/addTemporaryActor LuauGirlCosplayer 20 35 -50 -50 2 false/addTemporaryActor PirateCosplayer 20 35 -50 -50 2 false/addTemporaryActor QiBeanCosplayer 20 35 -50 -50 2 false/addTemporaryActor RedMushroomGirlCosplayer 20 35 -50 -50 2 false/addTemporaryActor VikingCosplayer 20 35 -50 -50 2 false/addTemporaryActor MrRobotCosplayer 35 48 -50 -50 2 false/addTemporaryActor WhiteCityBird1 16 50 -50 -50 2 false/addTemporaryActor WhiteCityBird2 16 50 -50 -50 2 false/addTemporaryActor ZoomingWhiteCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingPurpleCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingPurpleCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingPurpleCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingPurpleCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxi1 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxi2 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxi3 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxi4 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar1 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar2 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar3 30 200 -50 -50 2 false/addTemporaryActor ZoomingOrangeCar4 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingWhiteCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingBlueCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreyCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingRedCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCarA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCarA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCarA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingGreenCarA4 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxiA1 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxiA2 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxiA3 30 200 -50 -50 2 false/addTemporaryActor ZoomingTaxiA4 30 200 -50 -50 2 false/warp ZoomingWhiteCar1 2 22/warp ZoomingWhiteCar2 4 22/warp ZoomingWhiteCar3 6 22/warp ZoomingWhiteCar4 8 22/warp ZoomingGreenCar1 90 25/warp ZoomingGreenCar2 92 25/warp ZoomingGreenCar3 94 25/warp ZoomingGreenCar4 96 25/warp ZoomingBlueCar1 125 22/warp ZoomingBlueCar2 127 22/warp ZoomingBlueCar3 129 22/warp ZoomingBlueCar4 131 22/positionOffset ZoomingWhiteCar1 0 420 true/positionOffset ZoomingWhiteCar2 12 420 true/positionOffset ZoomingWhiteCar3 24 420 true/positionOffset ZoomingWhiteCar4 36 420 true/positionOffset ZoomingGreenCar1 0 420 true/positionOffset ZoomingGreenCar2 12 420 true/positionOffset ZoomingGreenCar3 24 420 true/positionOffset ZoomingGreenCar4 36 420 true/positionOffset ZoomingBlueCar1 0 420 true/positionOffset ZoomingBlueCar2 12 420 true/positionOffset ZoomingBlueCar3 24 420 true/positionOffset ZoomingBlueCar4 36 420 true/playMusic FlashShifter.StardewValleyExpandedCP_BusDrivingOnHighway/pause 1000/speed ZoomingWhiteCar1 10/advancedMove ZoomingWhiteCar1 false 150 0/speed ZoomingWhiteCar2 10/advancedMove ZoomingWhiteCar2 false 150 0/speed ZoomingWhiteCar3 10/advancedMove ZoomingWhiteCar3 false 150 0/speed ZoomingWhiteCar4 10/advancedMove ZoomingWhiteCar4 false 150 0/speed ZoomingGreenCar1 10/advancedMove ZoomingGreenCar1 false 80 0/speed ZoomingGreenCar2 10/advancedMove ZoomingGreenCar2 false 80 0/speed ZoomingGreenCar3 10/advancedMove ZoomingGreenCar3 false 80 0/speed ZoomingGreenCar4 10/advancedMove ZoomingGreenCar4 false 80 0/speed ZoomingBlueCar1 10/advancedMove ZoomingBlueCar1 false 140 0/speed ZoomingBlueCar2 10/advancedMove ZoomingBlueCar2 false 140 0/speed ZoomingBlueCar3 10/advancedMove ZoomingBlueCar3 false 140 0/speed ZoomingBlueCar4 10/advancedMove ZoomingBlueCar4 false 140 0/viewport 131 23 clamp true/viewport move -3 0 12000 true/pause 9500/globalFade/viewport -1000 -1000/warp ZoomingWhiteCar1 -50 -50/warp ZoomingWhiteCar2 -50 -50/warp ZoomingWhiteCar3 -50 -50/warp ZoomingWhiteCar4 -50 -50/warp ZoomingGreenCar1 -50 -50/warp ZoomingGreenCar2 -50 -50/warp ZoomingGreenCar3 -50 -50/warp ZoomingGreenCar4 -50 -50/warp ZoomingRedCar1 -50 -50/warp ZoomingRedCar2 -50 -50/warp ZoomingRedCar3 -50 -50/warp ZoomingRedCar4 -50 -50/warp ZoomingBlueCar1 -50 -50/warp ZoomingBlueCar2 -50 -50/warp ZoomingBlueCar3 -50 -50/warp ZoomingBlueCar4 -50 -50/addTemporaryActor ZuzuCityBus 128 64 129 10 2 false/warp ZoomingRedCarA1 118 13/warp ZoomingRedCarA2 120 13/warp ZoomingRedCarA3 122 13/warp ZoomingRedCarA4 124 13/positionOffset ZoomingRedCarA1 0 420 true/positionOffset ZoomingRedCarA2 -28 420 true/positionOffset ZoomingRedCarA3 -56 420 true/positionOffset ZoomingRedCarA4 -84 420 true/speed ZoomingRedCarA1 10/advancedMove ZoomingRedCarA1 false -120 0/speed ZoomingRedCarA2 10/advancedMove ZoomingRedCarA2 false -120 0/speed ZoomingRedCarA3 10/advancedMove ZoomingRedCarA3 false -120 0/speed ZoomingRedCarA4 10/advancedMove ZoomingRedCarA4 false -120 0/viewport 129 9 clamp true/viewport move -7 0 11000 true/speed ZuzuCityBus 8/move ZuzuCityBus -87 0 3 true/pause 2000/warp ZoomingOrangeCar1 140 13/warp ZoomingOrangeCar2 142 13/warp ZoomingOrangeCar3 144 13/warp ZoomingOrangeCar4 146 13/positionOffset ZoomingOrangeCar1 0 420 true/positionOffset ZoomingOrangeCar2 -28 420 true/positionOffset ZoomingOrangeCar3 -56 420 true/positionOffset ZoomingOrangeCar4 -84 420 true/speed ZoomingOrangeCar1 10/advancedMove ZoomingOrangeCar1 false -120 0/speed ZoomingOrangeCar2 10/advancedMove ZoomingOrangeCar2 false -120 0/speed ZoomingOrangeCar3 10/advancedMove ZoomingOrangeCar3 false -120 0/speed ZoomingOrangeCar4 10/advancedMove ZoomingOrangeCar4 false -120 0/pause 6250/globalFade/viewport -1000 -1000/playMusic FlashShifter.StardewValleyExpandedCP_ZuzuCity_Ambience/changeLocation Custom_ZuzuCityStreet/warp ZoomingOrangeCar1 -50 -50/warp ZoomingOrangeCar2 -50 -50/warp ZoomingOrangeCar3 -50 -50/warp ZoomingOrangeCar4 -50 -50/warp ZoomingRedCarA1 -50 -50/warp ZoomingRedCarA2 -50 -50/warp ZoomingRedCarA3 -50 -50/warp ZoomingRedCarA4 -50 -50/warp ZuzuCityBus -50 -50/AmbientLight 10 10 10/warp ZuzuCityBus -80 -80/warp ZoomingGreyCar1 22 16/warp ZoomingGreyCar2 24 16/warp ZoomingGreyCar3 26 16/warp ZoomingGreyCar4 28 16/positionOffset ZoomingGreyCar1 -22 420 true/positionOffset ZoomingGreyCar2 -44 420 true/positionOffset ZoomingGreyCar3 -66 420 true/positionOffset ZoomingGreyCar4 -88 420 true/warp ZoomingPurpleCar1 44 16/warp ZoomingPurpleCar2 46 16/warp ZoomingPurpleCar3 48 16/warp ZoomingPurpleCar4 50 16/positionOffset ZoomingPurpleCar1 -10 420 true/positionOffset ZoomingPurpleCar2 -32 420 true/positionOffset ZoomingPurpleCar3 -54 420 true/positionOffset ZoomingPurpleCar4 -76 420 true/warp ZoomingGreenCar1 71 16/warp ZoomingGreenCar2 73 16/warp ZoomingGreenCar3 75 16/warp ZoomingGreenCar4 77 16/positionOffset ZoomingGreenCar1 -21 420 true/positionOffset ZoomingGreenCar2 -43 420 true/positionOffset ZoomingGreenCar3 -65 420 true/positionOffset ZoomingGreenCar4 -87 420 true/warp ZoomingTaxi1 1 18/warp ZoomingTaxi2 3 18/warp ZoomingTaxi3 5 18/warp ZoomingTaxi4 7 18/positionOffset ZoomingTaxi1 12 440 true/positionOffset ZoomingTaxi2 18 440 true/positionOffset ZoomingTaxi3 24 440 true/positionOffset ZoomingTaxi4 30 440 true/warp ZoomingRedCar1 15 18/warp ZoomingRedCar2 17 18/warp ZoomingRedCar3 19 18/warp ZoomingRedCar4 21 18/positionOffset ZoomingRedCar1 12 440 true/positionOffset ZoomingRedCar2 18 440 true/positionOffset ZoomingRedCar3 24 440 true/positionOffset ZoomingRedCar4 30 440 true/speed ZoomingGreyCar1 7/advancedMove ZoomingGreyCar1 false -80 0/speed ZoomingGreyCar2 7/advancedMove ZoomingGreyCar2 false -80 0/speed ZoomingGreyCar3 7/advancedMove ZoomingGreyCar3 false -80 0/speed ZoomingGreyCar4 7/advancedMove ZoomingGreyCar4 false -80 0/speed ZoomingPurpleCar1 7/advancedMove ZoomingPurpleCar1 false -80 0/speed ZoomingPurpleCar2 7/advancedMove ZoomingPurpleCar2 false -80 0/speed ZoomingPurpleCar3 7/advancedMove ZoomingPurpleCar3 false -80 0/speed ZoomingPurpleCar4 7/advancedMove ZoomingPurpleCar4 false -80 0/speed ZoomingGreenCar1 7/advancedMove ZoomingGreenCar1 false -80 0/speed ZoomingGreenCar2 7/advancedMove ZoomingGreenCar2 false -80 0/speed ZoomingGreenCar3 7/advancedMove ZoomingGreenCar3 false -80 0/speed ZoomingGreenCar4 7/advancedMove ZoomingGreenCar4 false -80 0/speed ZoomingTaxi1 7/advancedMove ZoomingTaxi1 false 80 0/speed ZoomingTaxi2 7/advancedMove ZoomingTaxi2 false 80 0/speed ZoomingTaxi3 7/advancedMove ZoomingTaxi3 false 80 0/speed ZoomingTaxi4 7/advancedMove ZoomingTaxi4 false 80 0/speed ZoomingRedCar1 7/advancedMove ZoomingRedCar1 false 80 0/speed ZoomingRedCar2 7/advancedMove ZoomingRedCar2 false 80 0/speed ZoomingRedCar3 7/advancedMove ZoomingRedCar3 false 80 0/speed ZoomingRedCar4 7/advancedMove ZoomingRedCar4 false 80 0/warp GenericNPC1 33 10/positionOffset GenericNPC1 0 15 true/speed GenericNPC1 1/advancedMove GenericNPC1 false -12 0/viewport 0 20 clamp true/viewport move 2 0 10000 true/pause 4000/warp ZoomingBlueCarA1 1 18/warp ZoomingBlueCarA2 3 18/warp ZoomingBlueCarA3 5 18/warp ZoomingBlueCarA4 7 18/positionOffset ZoomingBlueCarA1 10 440 true/positionOffset ZoomingBlueCarA2 18 440 true/positionOffset ZoomingBlueCarA3 26 440 true/positionOffset ZoomingBlueCarA4 34 440 true/speed ZoomingBlueCarA1 8/advancedMove ZoomingBlueCarA1 false 80 0/speed ZoomingBlueCarA2 8/advancedMove ZoomingBlueCarA2 false 80 0/speed ZoomingBlueCarA3 8/advancedMove ZoomingBlueCarA3 false 80 0/speed ZoomingBlueCarA4 8/advancedMove ZoomingBlueCarA4 false 80 0/pause 3000/globalFade/viewport -1000 -1000/warp GenericNPC1 -50 -50/warp ZoomingTaxi1 -50 -50/warp ZoomingTaxi2 -50 -50/warp ZoomingTaxi3 -50 -50/warp ZoomingTaxi4 -50 -50/warp ZoomingRedCar1 -50 -50/warp ZoomingRedCar2 -50 -50/warp ZoomingRedCar3 -50 -50/warp ZoomingRedCar4 -50 -50/warp ZoomingGreenCar1 -50 -50/warp ZoomingGreenCar2 -50 -50/warp ZoomingGreenCar3 -50 -50/warp ZoomingGreenCar4 -50 -50/warp ZoomingPurpleCar1 -50 -50/warp ZoomingPurpleCar2 -50 -50/warp ZoomingPurpleCar3 -50 -50/warp ZoomingPurpleCar4 -50 -60/warp ZoomingOrangeCar1 -50 -50/warp ZoomingOrangeCar2 -50 -50/warp ZoomingOrangeCar3 -50 -50/warp ZoomingOrangeCar4 -50 -50/warp ZuzuCityBus 60 13/positionOffset ZuzuCityBus -15 20 true/showFrame ZuzuCityBus 0 true/pause 1000/warp ZoomingWhiteCarA1 63 16/warp ZoomingWhiteCarA2 65 16/warp ZoomingWhiteCarA3 67 16/warp ZoomingWhiteCarA4 69 16/positionOffset ZoomingWhiteCarA1 -19 420 true/positionOffset ZoomingWhiteCarA2 -43 420 true/positionOffset ZoomingWhiteCarA3 -67 420 true/positionOffset ZoomingWhiteCarA4 -91 420 true/speed ZoomingWhiteCarA1 8/advancedMove ZoomingWhiteCarA1 false -80 0/speed ZoomingWhiteCarA2 8/advancedMove ZoomingWhiteCarA2 false -80 0/speed ZoomingWhiteCarA3 8/advancedMove ZoomingWhiteCarA3 false -80 0/speed ZoomingWhiteCarA4 8/advancedMove ZoomingWhiteCarA4 false -80 0/warp ZoomingGreenCarA1 1 18/warp ZoomingGreenCarA2 3 18/warp ZoomingGreenCarA3 5 18/warp ZoomingGreenCarA4 7 18/positionOffset ZoomingGreenCarA1 10 460 true/positionOffset ZoomingGreenCarA2 18 460 true/positionOffset ZoomingGreenCarA3 26 460 true/positionOffset ZoomingGreenCarA4 34 460 true/speed ZoomingGreenCarA1 8/advancedMove ZoomingGreenCarA1 false 80 0/speed ZoomingGreenCarA2 8/advancedMove ZoomingGreenCarA2 false 80 0/speed ZoomingGreenCarA3 8/advancedMove ZoomingGreenCarA3 false 80 0/speed ZoomingGreenCarA4 8/advancedMove ZoomingGreenCarA4 false 80 0/viewport 61 20 clamp true/pause 2000/speak Pam \"{{i18n:Sophia.14hearts3.04}}\"/pause 500/globalFade/viewport -1000 -1000/warp ZuzuCityBus -30 -30/pause 1000/warp SophiaJPK 60 11/faceDirection SophiaJPK 1 true/warp ScarlettCosplay 62 11/faceDirection ScarlettCosplay 3 true/warp farmer 61 12/faceDirection farmer 0 true/warp ZoomingTaxiA1 71 16/warp ZoomingTaxiA2 73 16/warp ZoomingTaxiA3 75 16/warp ZoomingTaxiA4 77 16/positionOffset ZoomingTaxiA1 -19 420 true/positionOffset ZoomingTaxiA2 -43 420 true/positionOffset ZoomingTaxiA3 -67 420 true/positionOffset ZoomingTaxiA4 -91 420 true/speed ZoomingTaxiA1 8/advancedMove ZoomingTaxiA1 false -80 0/speed ZoomingTaxiA2 8/advancedMove ZoomingTaxiA2 false -80 0/speed ZoomingTaxiA3 8/advancedMove ZoomingTaxiA3 false -80 0/speed ZoomingTaxiA4 8/advancedMove ZoomingTaxiA4 false -80 0/warp WhiteCityBird2 44 6/speed WhiteCityBird2 4/advancedMove WhiteCityBird2 false 36 0/warp WhiteCityBird1 46 6/speed WhiteCityBird1 4/positionOffset WhiteCityBird1 10 -15/advancedMove WhiteCityBird1 false 36 0/viewport 61 10 clamp true/pause 2000/speak Sophia \"{{i18n:Sophia.14hearts3.05}}\"/pause 300/speak Scarlett \"{{i18n:Sophia.14hearts3.06}}\"/pause 400/jump SophiaJPK/pause 750/speak Sophia \"{{i18n:Sophia.14hearts3.07}}\"/pause 400/speak Scarlett \"{{i18n:Sophia.14hearts3.08}}\"/pause 750/faceDirection SophiaJPK 0 true/pause 200/faceDirection SophiaJPK 3 true/pause 200/faceDirection farmer 3 true/viewport move -1 0 6000 true/move SophiaJPK -12 0 3 true/pause 300/move farmer -11 0 3 true/pause 250/move ScarlettCosplay -11 0 3 true/pause 3000/globalFade/viewport -1000 -1000/warp ZoomingTaxiA1 -50 -50/warp ZoomingTaxiA2 -50 -50/warp ZoomingTaxiA3 -50 -50/warp ZoomingTaxiA4 -50 -50/warp ZoomingGreyCarA1 -50 -50/warp ZoomingGreyCarA2 -50 -50/warp ZoomingGreyCarA3 -50 -50/warp ZoomingGreyCarA4 -50 -50/warp ZoomingGreenCarA1 -50 -50/warp ZoomingGreenCarA2 -50 -50/warp ZoomingGreenCarA3 -50 -50/warp ZoomingGreenCarA4 -50 -50/warp ZoomingWhiteCarA1 -50 -50/warp ZoomingWhiteCarA2 -50 -50/warp ZoomingWhiteCarA3 -50 -50/warp ZoomingWhiteCarA4 -50 -50/warp WhiteCityBird1 -50 -50/warp WhiteCityBird2 -50 -50/changeLocation Custom_ZCCC_Entrance/AmbientLight 10 10 10/warp SophiaJPK 29 31/faceDirection SophiaJPK 0 true/warp ScarlettCosplay 30 32/faceDirection ScarlettCosplay 0 true/warp farmer 28 32/faceDirection farmer 0 true/warp BlueShadowGuy 6 13/showFrame BlueShadowGuy 0 true/warp RedShadowGuy 7 14/showFrame RedShadowGuy 0 true/warp GreenShadowGuy 5 14/showFrame GreenShadowGuy 0 true/warp GreenGoblinCosplayer 9 22/showFrame GreenGoblinCosplayer 2 true/warp BlueBirdCosplayer 14 12/showFrame BlueBirdCosplayer 1 true/warp GreenBirdCosplayer 14 10/showFrame GreenBirdCosplayer 0 true/positionOffset GreenBirdCosplayer -4 12 true/warp JojaGirlCosplayer 16 15/showFrame JojaGirlCosplayer 0 true/warp JojaGuyCosplayer 18 15/showFrame JojaGuyCosplayer 0 true/warp HappyShirtCosplayer 21 11/showFrame HappyShirtCosplayer 0 true/warp LuauGirlCosplayer 22 23/showFrame LuauGirlCosplayer 0 true/warp BlueMushroomGirlCosplayer 26 10/showFrame BlueMushroomGirlCosplayer 2 true/warp RedMushroomGirlCosplayer 26 11/showFrame RedMushroomGirlCosplayer 2 true/warp GreenMushroomGirlCosplayer 26 12/showFrame GreenMushroomGirlCosplayer 2 true/warp FrogGuyCosplayer 29 10/showFrame FrogGuyCosplayer 2 true/warp NurseCosplayer 30 10/faceDirection NurseCosplayer 0 true/warp PrinceCosplayer 29 11/faceDirection PrinceCosplayer 0 true/warp PurpleWitchCosplayer 29 12/showFrame PurpleWitchCosplayer 2 true/warp WizardCosplayer 30 12/faceDirection WizardCosplayer 3 true/warp RedShirtGuy 30 13/showFrame RedShirtGuy 0 true/warp PirateCosplayer 29 14/showFrame PirateCosplayer 1 true/warp JumperCosplayer 33 10/faceDirection JumperCosplayer 0 true/warp ThiefCosplayer 33 11/faceDirection ThiefCosplayer 0 true/warp DinoGuyCosplayer 38 12/showFrame DinoGuyCosplayer 3 true/warp VikingCosplayer 40 12/showFrame VikingCosplayer 1 true/warp TrashGirlCosplayer 46 10/showFrame TrashGirlCosplayer 0 true/warp TopHatCosplayer 49 16/showFrame TopHatCosplayer 1 true/warp BrideCosplayer 51 16/showFrame BrideCosplayer 0 true/warp QiBeanCosplayer 44 25/showFrame QiBeanCosplayer 0 true/warp JackThePumpkinCosplayer 59 20/showFrame JackThePumpkinCosplayer 1 true/warp BlueDressGirl 32 23/showFrame BlueDressGirl 2 true/warp GreenDressGirl 33 23/showFrame GreenDressGirl 0 true/positionOffset GreenDressGirl 20 -8 true/positionOffset BlueDressGirl 10 0 true/addTemporaryActor GenericNPC6 16 32 31 17 0/speed GenericNPC6 1/advancedMove GenericNPC6 false 0 22/warp FairyCosplayer 40 16/advancedMove FairyCosplayer false -40 0 0 8/move ScarlettCosplay 0 -12 0 true/move farmer 0 -12 0 true/move SophiaJPK 0 -12 0 true/positionOffset BlueMushroomGirlCosplayer -20 20 true/positionOffset RedMushroomGirlCosplayer 10 10 true/positionOffset GreenMushroomGirlCosplayer -8 10 true/positionOffset FrogGuyCosplayer -10 20 true/positionOffset JumperCosplayer -20 10 true/positionOffset ThiefCosplayer 10 10 true/viewport 29 36 clamp true/viewport move 0 -1 10000 true/pause 7000/jump SophiaJPK/pause 800/globalFade/viewport -1000 -1000/viewport 29 0 clamp true/pause 1250/speak Sophia \"{{i18n:Sophia.14hearts3.09}}\"/pause 350/globalFade/viewport -1000 -1000/changeLocation Custom_ZCCC_MainHall/playMusic FlashShifter.StardewValleyExpandedCP_ZCCC_Crowd_Ambience/AmbientLight 10 10 10/warp BlueShadowGuy -50 -50/warp RedShadowGuy -50 -50/warp GreenShadowGuy -50 -50/warp GreenGoblinCosplayer -50 -50/warp BlueBirdCosplayer -50 -50/warp GreenBirdCosplayer -50 -50/warp JojaGirlCosplayer -50 -50/warp JojaGuyCosplayer -50 -50/warp HappyShirtCosplayer -50 -50/warp LuauGirlCosplayer -50 -50/warp BlueMushroomGirlCosplayer -50 -50/warp RedMushroomGirlCosplayer -50 -50/warp GreenMushroomGirlCosplayer -50 -50/warp FrogGuyCosplayer -50 -50/warp NurseCosplayer -50 -50/warp PrinceCosplayer -50 -50/warp PurpleWitchCosplayer -50 -50/warp WizardCosplayer -50 -50/warp RedShirtGuy -50 -50/warp PirateCosplayer -50 -50/warp JumperCosplayer -50 -50/warp ThiefCosplayer -50 -50/warp DinoGuyCosplayer -50 -50/warp VikingCosplayer -50 -50/warp TrashGirlCosplayer -50 -50/warp TopHatCosplayer -50 -50/warp BrideCosplayer -50 -50/warp QiBeanCosplayer -50 -50/warp JackThePumpkinCosplayer -50 -50/warp BlueDressGirl -50 -50/warp GreenDressGirl -50 -50/warp GenericNPC6 -50 -50/warp FairyCosplayer -50 -50/warp CaveGirlCosplayer 4 8/showFrame CaveGirlCosplayer 0 true/positionOffset CaveGirlCosplayer -8 -20 true/warp BaldGuy 3 10/showFrame BaldGuy 0 true/positionOffset BaldGuy 15 10 true/warp IcePrincessCosplayer 9 10/showFrame IcePrincessCosplayer 0 true/warp GoblinCosplayer 10 7/showFrame GoblinCosplayer 0 true/positionOffset GoblinCosplayer 15 -8 true/warp VikingCosplayer 7 13/showFrame VikingCosplayer 3 true/warp ChefGuyCosplayer 9 13/showFrame ChefGuyCosplayer 1 true/warp ConcernedApeCosplayer 16 10/showFrame ConcernedApeCosplayer 0 true/warp QiBeanCosplayer 17 11/showFrame QiBeanCosplayer 1 true/warp GreenMushroomGirlCosplayer 14 20/showFrame GreenMushroomGirlCosplayer 3 true/warp BlueMushroomGirlCosplayer 16 20/showFrame BlueMushroomGirlCosplayer 1 true/warp RedMushroomGirlCosplayer 15 21/showFrame RedMushroomGirlCosplayer 2 true/warp BaldGuySittingDown 10 23/showFrame BaldGuySittingDown 0 true/positionOffset BaldGuySittingDown 15 -8 true/warp RedShirtGuy 34 7/showFrame RedShirtGuy 0 true/warp GaldoranGirlCosplayer 30 8/showFrame GaldoranGirlCosplayer 0 true/warp LittleGirl 37 8/showFrame LittleGirl 0 true/positionOffset LittleGirl -10 -20 true/warp TrashGirlCosplayer 38 9/showFrame TrashGirlCosplayer 1 true/positionOffset TrashGirlCosplayer -13 -20 true/warp TurbanGuyCosplayer 38 18/showFrame TurbanGuyCosplayer 0 true/warp AdventurerCosplayer 33 21/showFrame AdventurerCosplayer 1 true/warp RedWitchCosplayer 35 21/showFrame RedWitchCosplayer 1 true/warp Aaron 34 20/faceDirection Aaron 2 true/warp LuauGuyCosplayer 23 12/faceDirection LuauGuyCosplayer 0 true/warp Cassandra 24 13/faceDirection Cassandra 0 true/positionOffset Cassandra -5 10 true/warp GreenShirtGuy 26 12/showFrame GreenShirtGuy 0 true/warp LongNoseGuy 28 11/showFrame LongNoseGuy 1 true/warp Pirate2Cosplayer 25 13/faceDirection Pirate2Cosplayer 0 true/warp MrRobotCosplayer 24 10/positionOffset MrRobotCosplayer 2 20 true/animate MrRobotCosplayer false true 1000 0 0 0 0 1 1 0 2 2/warp RedHatGuySittingDown 37 23/showFrame RedHatGuySittingDown 0 true/warp JumperCosplayer 17 15/speed JumperCosplayer 1/advancedMove JumperCosplayer false -25 0/warp ThiefCosplayer 16 16/speed ThiefCosplayer 1/advancedMove ThiefCosplayer false -25 0/warp NurseCosplayer 23 14/advancedMove NurseCosplayer false 30 0/warp EmperorCosplayer 19 10/advancedMove EmperorCosplayer false 0 17/warp ScarlettCosplay 21 15/faceDirection ScarlettCosplay 2 true/warp SophiaJPK 20 16/faceDirection SophiaJPK 1 true/warp farmer 22 16/faceDirection farmer 3 true/pause 500/viewport 21 15 clamp true/pause 1500/speak Sophia \"{{i18n:Sophia.14hearts3.10}}\"/pause 500/shake ScarlettCosplay 500/pause 400/speak Scarlett \"{{i18n:Sophia.14hearts3.11}}\"/pause 500/speak Sophia \"{{i18n:Sophia.14hearts3.12}}\"/pause 800/faceDirection ScarlettCosplay 1 true/pause 300/move ScarlettCosplay 24 0 1 true/pause 500/faceDirection farmer 0 true/pause 400/faceDirection farmer 1 true/pause 1350/faceDirection farmer 0 true/pause 300/faceDirection farmer 3 true/pause 500/shake SophiaJPK 750/pause 750/speak Sophia \"{{i18n:Sophia.14hearts3.13}}\"/pause 500/emote farmer 32/pause 500/faceDirection SophiaJPK 2 true/pause 250/faceDirection SophiaJPK 3 true/pause 300/move SophiaJPK -8 0 3 true/pause 350/move farmer -7 0 3 true/pause 1250/globalFade/viewport -1000 -1000/warp ScarlettCosplay -10 -10/warp CaveGirlCosplayer -50 -50/warp BaldGuy -50 -50/warp IcePrincessCosplayer -50 -50/warp GoblinCosplayer -50 -50/warp VikingCosplayer -50 -50/warp ChefGuyCosplayer -50 -50/warp ConcernedApeCosplayer -50 -50/warp QiBeanCosplayer -50 -50/warp GreenMushroomGirlCosplayer -50 -50/warp BlueMushroomGirlCosplayer -50 -50/warp RedMushroomGirlCosplayer -50 -50/warp BaldGuySittingDown -50 -50/warp RedShirtGuy -50 -50/warp GaldoranGirlCosplayer -50 -50/warp LittleGirl -50 -50/warp TrashGirlCosplayer -50 -50/warp TurbanGuyCosplayer -50 -50/warp AdventurerCosplayer -50 -50/warp RedWitchCosplayer -50 -50/warp Aaron -50 -50/warp LuauGuyCosplayer -50 -50/warp Cassandra -50 -50/warp GreenShirtGuy -50 -50/warp LongNoseGuy -50 -50/warp Pirate2Cosplayer -50 -50/warp MrRobotCosplayer -50 -50/warp RedHatGuySittingDown -50 -50/warp JumperCosplayer -50 -50/warp ThiefCosplayer -50 -50/warp NurseCosplayer -50 -50/warp EmperorCosplayer -50 -50/changeLocation Custom_ZCCC_FoodCourt/AmbientLight 10 10 10/warp SophiaJPK 16 13/positionOffset SophiaJPK 25 2 true/warp farmer 20 13/positionOffset farmer -40 12 true/faceDirection SophiaJPK 1 true/faceDirection farmer 3 true/viewport 18 7 true/viewport move 0 1 4000 true/pause 5000/shake Sophia 500/pause 500/speak Sophia \"{{i18n:Sophia.14hearts3.14}}\"/pause 1000/faceDirection farmer 2 true/pause 500/farmerEat 241/pause 2500/faceDirection farmer 2 true/pause 500/faceDirection farmer 3 true/pause 400/speak Sophia \"{{i18n:Sophia.14hearts3.15}}\"/pause 500/showFrame farmer 97 true/pause 1000/showFrame farmer 6 true/pause 400/speak Sophia \"{{i18n:Sophia.14hearts3.16}}\"/pause 500/jump farmer/pause 800/globalFade/viewport -1000 -1000/playMusic spring_day_ambient/changeLocation Custom_ZCCC_Courtyard/AmbientLight 10 10 10/warp JumperCosplayer 21 23/speed JumperCosplayer 1/advancedMove JumperCosplayer false 0 -28/warp Pirate2Cosplayer 38 13/speed Pirate2Cosplayer 1/advancedMove Pirate2Cosplayer false 28 0/warp farmer 15 13/warp SophiaJPK 15 11/move SophiaJPK 9 0 1 true/pause 150/move farmer 9 0 1 true/viewport 30 12 clamp true/pause 6000/faceDirection SophiaJPK 2 true/pause 500/faceDirection farmer 0 true/pause 300/speak Sophia \"{{i18n:Sophia.14hearts3.17}}\"/pause 650/faceDirection SophiaJPK 1 true/pause 500/faceDirection farmer 1 true/pause 1750/warp FairyCosplayer2 22 0/move FairyCosplayer2 0 7 1/move FairyCosplayer2 6 0 2 true/pause 500/faceDirection SophiaJPK 0 true/pause 500/speak Sophia \"{{i18n:Sophia.14hearts3.18}}\"/pause 500/faceDirection farmer 0 true/pause 650/viewport move 0 -1 2500 true/move SophiaJPK 0 -4 1/move SophiaJPK 2 0 1/pause 500/shake SophiaJPK 500/textAboveHead SophiaJPK \"{{i18n:Sophia.14hearts3.19}}\"/pause 1000/faceDirection FairyCosplayer2 3 true/pause 1750/textAboveHead FairyCosplayer2 \"{{i18n:Sophia.14hearts3.20}}\"/pause 1250/jump SophiaJPK/pause 1000/globalFade/viewport -1000 -1000/warp FairyCosplayer2 -50 -50/warp Pirate2Cosplayer -50 -50/warp JumperCosplayer -50 -50/playMusic FlashShifter.StardewValleyExpandedCP_ZCCC_Crowd_Ambience/changeLocation Custom_ZCCC_VendorFloor/AmbientLight 10 10 10/warp PrinceCosplayer 36 11/advancedMove PrinceCosplayer false -29 0 0 -3/warp SophiaJPK 11 9/warp farmer 11 10/faceDirection SophiaJPK 1 true/faceDirection farmer 1 true/move farmer 11 0 1 true/pause 225/move SophiaJPK 8 0 0 true/viewport 18 10 clamp true/pause 6000/faceDirection farmer 0 true/pause 300/faceDirection farmer 3 true/pause 500/emote farmer 8/pause 300/speak Sophia \"{{i18n:Sophia.14hearts3.21}}\"/pause 500/speed SophiaJPK 1/move SophiaJPK 0 -1 0/pause 250/move farmer -2 0 0/move farmer 0 -2 0 true/pause 500/warp ThiefCosplayer 0 9/speed ThiefCosplayer 1/advancedMove ThiefCosplayer false 35 0 0 -1/warp NurseCosplayer 36 10/advancedMove NurseCosplayer false -35 0 0 -2/pause 2250/faceDirection SophiaJPK 1 true/pause 500/faceDirection farmer 3 true/pause 400/speak Sophia \"{{i18n:Sophia.14hearts3.22}}\"/pause 500/warp Aaron 0 9/speed Aaron 1/advancedMove Aaron false 35 0 0 -1/emote farmer 32/pause 250/faceDirection SophiaJPK 0 true/pause 500/faceDirection farmer 0 true/pause 300/speak Sophia \"{{i18n:Sophia.14hearts3.23}}\"/pause 750/message \"{{i18n:Sophia.14hearts3.24}}\"/pause 750/shake SophiaJPK 400/pause 500/playSound money/pause 500/emote Sophia 32 true/pause 300/globalFade/viewport -1000 -1000/warp NurseCosplayer -50 -50/warp ThiefCosplayer -50 -50/warp PrinceCosplayer -50 -50/warp Aaron -50 -50/changeLocation Custom_ZCCC_MainHall/AmbientLight 10 10 10/warp WizardCosplayer 1 14/speed WizardCosplayer 1/advancedMove WizardCosplayer false 34 0 0 4/warp PirateCosplayer 15 7/showFrame PirateCosplayer 1 true/showFrame PirateCosplayer 0 true/positionOffset PirateCosplayer -10 -5 true/warp GaldoranGirlCosplayer 20 9/speed GaldoranGirlCosplayer 1/advancedMove GaldoranGirlCosplayer false 0 17/warp TotemGuyCosplayer 14 13/showFrame TotemGuyCosplayer 0 true/warp TrashGirlCosplayer 16 13/showFrame TrashGirlCosplayer 1 true/warp AdventurerCosplayer 34 19/showFrame AdventurerCosplayer 1 true/warp RedWitchCosplayer 36 19/showFrame RedWitchCosplayer 1 true/positionOffset RedWitchCosplayer 10 -4 true/warp LuauGirlCosplayer 24 10/showFrame LuauGirlCosplayer 0 true/warp LuauGuyCosplayer 24 12/faceDirection LuauGuyCosplayer 0 true/positionOffset LuauGirlCosplayer -10 3 true/warp ConcernedApeCosplayer 32 12/showFrame ConcernedApeCosplayer 1 true/warp QiBeanCosplayer 30 12/showFrame QiBeanCosplayer 3 true/positionOffset QiBeanCosplayer -5 10 true/warp ArtGuy 28 7/showFrame ArtGuy 0 true/warp GreenShirtGirl 4 10/showFrame GreenShirtGirl 0 true/warp DinoGuyCosplayer 4 8/showFrame DinoGuyCosplayer 0 true/warp GoblinCosplayer 26 22/move GoblinCosplayer 0 -15 0 true/warp HappyShirtCosplayer 37 8/showFrame HappyShirtCosplayer 0 true/positionOffset HappyShirtCosplayer -5 -20 true/warp Cassandra 28 15/advancedMove Cassandra false -21 0 0 8/warp farmer 11 9/warp SophiaJPK 9 9/faceDirection SophiaJPK 1 true/faceDirection farmer 3 true/warp ScarlettCosplay 18 10/move ScarlettCosplay -8 0 0 true/viewport 10 9 clamp true/pause 4800/faceDirection SophiaJPK 2 true/pause 500/faceDirection farmer 2 true/pause 500/speak Scarlett \"{{i18n:Sophia.14hearts3.25}}\"/pause 500/speak Sophia \"{{i18n:Sophia.14hearts3.26}}\"/pause 300/emote ScarlettCosplay 32/pause 400/shake ScarlettCosplay 400/pause 300/speak Scarlett \"{{i18n:Sophia.14hearts3.27}}\"/pause 300/speak Sophia \"{{i18n:Sophia.14hearts3.28}}\"/pause 500/faceDirection ScarlettCosplay 1 true/pause 300/faceDirection ScarlettCosplay 2 true/pause 300/move ScarlettCosplay 0 7 2 true/pause 275/move SophiaJPK 0 6 2 true/pause 300/move farmer 0 6 2 true/pause 500/globalFade/viewport -1000 -1000/warp WizardCosplayer -50 -50/warp PirateCosplayer -50 -50/warp GaldoranGirlCosplayer -50 -50/warp TotemGuyCosplayer -50 -50/warp TrashGirlCosplayer -50 -50/warp AdventurerCosplayer -50 -50/warp RedWitchCosplayer -50 -50/warp LuauGirlCosplayer -50 -50/warp LuauGuyCosplayer -50 -50/warp ConcernedApeCosplayer -50 -50/warp QiBeanCosplayer -50 -50/warp GoblinCosplayer -50 -50/warp ArtGuy -50 -50/warp GreenShirtGirl -50 -50/warp DinoGuyCosplayer -50 -50/warp HappyShirtCosplayer -50 -50/warp Cassandra -50 -50/warp farmer -30 -30/warp SophiaJPK -9 -9/faceDirection SophiaJPK 2 true/faceDirection farmer 2 true/warp ScarlettCosplay -28 -28/faceDirection ScarlettCosplay 2 true/stopMusic/changeLocation Custom_ZCCC_Stage/AmbientLight 100 100 100/warp MainStageCosplayer 16 9/showFrame MainStageCosplayer 0 true/pause 750/speak Sophia \"{{i18n:Sophia.14hearts3.29}}\"/pause 1500/playSound FlashShifter.StardewValleyExpandedCP_ZCCC_Applause/pause 1000/viewport 16 16 true/viewport move 0 -1 6000 true/pause 4000/textAboveHead MainStageCosplayer \"{{i18n:Sophia.14hearts3.30}}\"/pause 3000/faceDirection MainStageCosplayer 1 true/pause 300/faceDirection MainStageCosplayer 0 true/pause 500/advancedMove MainStageCosplayer false 0 -3/pause 2000/warp MainStageCosplayer -50 -50/pause 1000/stopMusic/message \"{{i18n:Sophia.14hearts3.31}}\"/pause 250/playSound FlashShifter.StardewValleyExpandedCP_ZCCC_Cheering/pause 1300/warp SophiaJPK 16 6/move SophiaJPK 0 3 2 true/pause 3000/showFrame SophiaJPK 19/playSound dwop/pause 1500/globalFade/viewport -1000 -1000/pause 500/stopMusic/pause 1500/message \"{{i18n:Sophia.14hearts3.32}}\"/pause 1000/message \"{{i18n:Sophia.14hearts3.33}}\"/pause 1000/playSound busDriveOff/pause 3000/end dialogue Sophia \"{{i18n:Sophia.14hearts3.34}}\""
+      }
+    },
+    { //Removes NPC shadow at highway 
+      "Action": "EditImage",
+      "Target": "LooseSprites/Shadow",
+      "FromFile": "Assets/Tilesheets/FakeShadow.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Custom_Highway"
+      }
+    },
+    //Temporary actor loads (there's a lot...)
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ScarlettCosplay",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Scarlett/Scarlett_Cosplay.png"
+    },
+    //This one is a false portrait to make smapi happy
+    {
+      "Action": "Load",
+      "Target": "Portraits/ScarlettCosplay",
+      "FromFile": "assets/CharacterFiles/Portraits/NoPortraits/ScarlettCosplay.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GreenShirtGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenShirtGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BaldGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BaldGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/RedShirtGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedShirtGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BaldGuySittingDown",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BaldGuySittingDown.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GreenShirtGirl",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenShirtGirl.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/RedHatGuySittingDown",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedHatGuySittingDown.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/LittleGirl",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/LittleGirl.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BlackhairGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlackhairGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BlueDressGirl",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueDressGirl.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/LongNoseGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/LongNoseGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GirlSittingDown",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GirlSittingDown.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GirlSittingDown2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GirlSittingDown2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/SunglassesGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SunglassesGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/RedBeanieGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedBeanieGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/NewspaperGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/NewspaperGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GreenDressGirl",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenDressGirl.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/AdventurerCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/AdventurerCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ArtifactCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ArtifactCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BlueShadowGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueShadowGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/BrideCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BrideCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/Aaron",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Aaron.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/EmperorCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmperorCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/FairyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FairyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/FairyCosplayer2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FairyCosplayer2.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/FrogGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FrogGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GaldoranGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GaldoranGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GoblinCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GoblinCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/GreenShadowGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenShadowGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/HappyShirtCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/HappyShirtCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/IcePrincessCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/IcePrincessCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/JojaGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/JojaGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/JumperCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JumperCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/LuauGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/LuauGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/MainStageCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MainStageCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/NurseCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/NurseCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/Pirate2Cosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Pirate2Cosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/PrinceCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/PrinceCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/PurpleWitchCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/PurpleWitchCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/RedShadowGuy",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedShadowGuy.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/RedWitchCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedWitchCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/ThiefCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ThiefCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/TopHatCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TopHatCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/TotemGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TotemGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/TrashGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TrashGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/TurbanGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/TurbanGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //16x32
+      "Target": "Characters/WizardCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/BlueBirdCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueBirdCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/BlueMushroomGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BlueMushroomGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/CaveGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/CaveGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/ChefGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ChefGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/ConcernedApeCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ConcernedApeCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/DinoGuyCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/DinoGuyCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/GreenBirdCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenBirdCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/GreenGoblinCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenGoblinCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/GreenMushroomGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GreenMushroomGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/JackThePumpkinCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JackThePumpkinCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/LuauGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/LuauGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/PirateCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/PirateCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/QiBeanCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/QiBeanCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/RedMushroomGirlCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/RedMushroomGirlCosplayer.png"
+    },
+    {
+      "Action": "Load", //20x35
+      "Target": "Characters/VikingCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/VikingCosplayer.png"
+    },
+    {
+      "Action": "Load", //35x48
+      "Target": "Characters/MrRobotCosplayer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MrRobotCosplayer.png"
+    },
+    {
+      "Action": "Load", //128x64
+      "Target": "Characters/ZuzuCityBus",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZuzuCityBus.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCarA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCarA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCarA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCarA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCarA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCarA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingWhiteCarA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingWhiteCarA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingPurpleCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingPurpleCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingPurpleCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingPurpleCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingPurpleCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingPurpleCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingPurpleCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingPurpleCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCarA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCarA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCarA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCarA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCarA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCarA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingRedCarA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingRedCarA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCarA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCarA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCarA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCarA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCarA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCarA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreyCarA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreyCarA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingOrangeCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingOrangeCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingOrangeCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingOrangeCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingOrangeCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingOrangeCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingOrangeCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingOrangeCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCarA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCarA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCarA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCarA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCarA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCarA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingBlueCarA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingBlueCarA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCar1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCar1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCar2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCar2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCar3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCar3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCar4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCar4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCarA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCarA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCarA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCarA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCarA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCarA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingGreenCarA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingGreenCarA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxi1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxi1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxi2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxi2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxi3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxi3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxi4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxi4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxiA1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxiA1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxiA2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxiA2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxiA3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxiA3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/ZoomingTaxiA4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ZoomingTaxiA4.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/Taxi1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Taxi1.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/Taxi2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Taxi2.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/Taxi3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Taxi3.png"
+    },
+    {
+      "Action": "Load", //30x200
+      "Target": "Characters/Taxi4",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Taxi4.png"
+    },
+    {
+      "Action": "Load", //16x50
+      "Target": "Characters/WhiteCityBird1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WhiteCityBird1.png"
+    },
+    {
+      "Action": "Load", //16x50
+      "Target": "Characters/WhiteCityBird2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WhiteCityBird2.png"
+    },
+  ]
+}

@@ -1,0 +1,161 @@
+{
+      "Changes": [
+
+            
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Leah",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+        /*Like*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+          "Delimiter": " "
+        }
+        /*Dislike*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Hate*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            7
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+          "Delimiter": " "
+        }
+      ]
+    },
+            { //LEAH SCHEDULE EDITS
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "When": {
+                        "Season |contains=Winter": false
+                  },
+                  "Entries": {
+                        "Tue": "700 LeahHouse 12 14 0/930 Forest 112 31 3 leah_sculpt/1240 Forest 113 31 2 leah_draw/1510 Forest 111 36 2/1540 Forest 111 39 0/1610 LeahHouse 6 5 0/1730 LeahHouse 12 14 0/1930 LeahHouse 3 4 2 leah_sleep",
+                  },
+            },
+            {
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "Entries": {
+                        "GreenRain": "610 Forest 103 33 3/1300 LeahHouse 5 4 2/2200 bed",
+                  }
+            },
+            { //LEAH SCHEDULE EDITS - Elliott
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "When": {
+                        "Weather": "Sun"
+                  },
+                  "Entries": {
+                        "10": "730 LeahHouse 12 14 0/830 LeahHouse 3 7 3 leah_sculpt/1000 LeahHouse 5 5 1/1230 Custom_BlueMoonVineyard 25 55 2/1600 LeahHouse 12 14 0/2030 LeahHouse 3 4 2 leah_sleep",
+                        "24": "730 LeahHouse 12 14 0/830 LeahHouse 3 7 3 leah_sculpt/1000 LeahHouse 5 5 1/1230 Custom_BlueMoonVineyard 25 55 2/1600 LeahHouse 12 14 0/2030 LeahHouse 3 4 2 leah_sleep",
+                  },
+            },
+            { //LEAH SCHEDULE EDITS - player marries Elliott
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "When": {
+                        "Spouse": "Elliott"
+                  },
+                  "Entries": {
+                        "10": null,
+                        "24": null
+                  },
+            },
+            { //LEAH SCHEDULE DIALOGUE
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Leah",
+                  "Entries": {
+                        "Forest_109_38": "{{i18n:Leah.Dialogue.01}}",
+                        "Forest_112_34": "{{i18n:Leah.Dialogue.02}}",
+                        "Forest_109_39": "{{i18n:Leah.Dialogue.03}}",
+                        "Town_100_104": "{{i18n:Leah.Dialogue.04}}",
+                        "Town_103_104": "{{i18n:Leah.Dialogue.04}}",
+                        "Town_110_104": "{{i18n:Leah.Dialogue.05}}",
+                        "LeahHouse_5_5": "{{i18n:Leah.Dialogue.06}}",
+                        "Custom_BlueMoonVineyard_25_55": "{{i18n:Leah.Dialogue.07}}",
+                  },
+            },
+            { //LEAH SCHEDULE EDITS
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "When": {
+                        "HasSeenEvent |contains=5553210": false,
+                        "Season |contains=Winter": false
+                  },
+                  "Entries": {
+                        "Tue": "700 LeahHouse 12 14 0/930 Forest 112 31 3 leah_sculpt/1240 Forest 113 31 2 leah_draw/1510 Forest 111 36 2/1540 Forest 111 39 0/1610 LeahHouse 6 5 0/1730 LeahHouse 12 14 0/1930 LeahHouse 3 4 2 leah_sleep",
+                        "Sun": "620 LeahHouse 12 14 0/640 Forest 112 39 0/800 Forest 109 38 1/820 Forest 112 34 0/840 Forest 109 39 2/900 Town 97 104 2/1130 Town 100 104 2/1200 Town 103 104 2/1230 Town 104 104 2/1300 Town 108 104 2/1330 Town 110 104 0/1400 Town 105 63 3/1800 LeahHouse 18 10 0/2100 LeahHouse 3 4 2 leah_sleep",
+                  },
+            },
+            { //LEAH SCHEDULE EDITS
+                  "Action": "EditData",
+                  "Target": "characters/schedules/Leah",
+                  "When": {
+                        "HasSeenEvent": "5553210"
+                  },
+                  "Entries": {
+                        "Sun": "610 LeahHouse 12 14 0/650 Forest 112 39 0/800 Forest 109 38 1/820 Forest 112 34 0/840 Forest 109 39 2/900 Town 97 104 2/1130 Town 100 104 2/1200 Town 103 104 2/1230 Town 104 104 2/1300 Town 108 104 2/1330 Town 110 104 0/1400 Town 88 103 2/1800 LeahHouse 18 10 0/2100 LeahHouse 3 4 2 leah_sleep",
+                  },
+            },
+            { //LEAH EVENT
+                  "Action": "EditData",
+                  "Target": "data/events/town",
+                  "Entries": {
+                        "1000010/f Leah 70/t 700 1600/w sunny/z winter/z fall/z summer/u 21 22 23 24 25 26 27 28/y 1": "breezy/-500 -500/farmer 102 94 2 Leah 100 104 2/pause 300/viewport 100 99 true/skippable/pause 250/playSound harvest/shake Leah 400/move farmer 0 4 2/emote farmer 8/move Leah 1 0 2/pause 400/playSound harvest/shake Leah 400/pause 500/move Leah 1 0 2/pause 550/playSound harvest/shake Leah 400/pause 450/move farmer 0 4 2 true/viewport move 0 1 2500 true/pause 800/faceDirection Leah 1 true/pause 300/faceDirection Leah 0 true/pause 450/emote Leah 16 true/pause 800/speak Leah \"{{i18n:Leah.Event.01}}\"/pause 500/move Leah 1 0 2/pause 800/playSound harvest/shake Leah 400/pause 1000/faceDirection Leah 2 true/pause 250/faceDirection Leah 0 true/pause 500/speak Leah \"{{i18n:Leah.Event.02}}\"/pause 500/question fork0 \"{{i18n:Leah.Event.02A}}\"/fork 1000010_GardenAmazing/pause 500/speak Leah \"{{i18n:Leah.Event.03}}\"/friendship Leah -250/pause 1000/move Leah 1 0 2/pause 700/playSound harvest/shake Leah 400/move Leah 1 0 2/pause 800/playSound harvest/shake Leah 400/pause 500/move farmer 0 1 1/pause 300/faceDirection Leah 3/pause 350/speak Leah \"{{i18n:Leah.Event.04}}\"/pause 500/faceDirection Leah 2 true/pause 250/faceDirection Leah 1 true/pause 300/move Leah 1 0 2/pause 300/playSound harvest/shake Leah 400/pause 650/faceDirection Leah 3 true/pause 300/move Leah -3 0 0/move Leah 0 -1 3/pause 500/speak Leah \"{{i18n:Leah.Event.05}}\"/pause 500/speak Leah \"{{i18n:Leah.Event.06}}\"/pause 800/faceDirection farmer 2 true/pause 250/farmerEat 188/pause 2750/faceDirection farmer 1/pause 300/emote farmer 32 true/pause 300/emote Leah 32 true/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Leah \"{{i18n:Leah.Event.07}}\"",
+                        "1000010_GardenAmazing": "pause 500/speak Leah \"{{i18n:Leah.Event.1000010_GardenAmazing.01}}\"/pause 500/move Leah 1 0 2/pause 700/playSound harvest/shake Leah 400/move Leah 1 0 2/pause 700/playSound harvest/shake Leah 400/pause 500/move farmer 0 1 1/pause 300/faceDirection Leah 3/pause 350/speak Leah \"{{i18n:Leah.Event.1000010_GardenAmazing.02}}\"/pause 400/faceDirection Leah 2 true/pause 250/faceDirection Leah 1 true/pause 300/move Leah 1 0 2/pause 300/playSound harvest/shake Leah 400/pause 600/faceDirection Leah 3 true/pause 300/move Leah -3 0 0/move Leah 0 -1 3/pause 500/speak Leah \"{{i18n:Leah.Event.1000010_GardenAmazing.03}}\"/pause 800/faceDirection farmer 2 true/pause 300/farmerEat 188/pause 2750/faceDirection farmer 1 true/pause 300/emote farmer 32 true/pause 400/emote Leah 32 true/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Leah 50/end dialogue Leah \"{{i18n:Leah.Event.1000010_GardenAmazing.04}}\"",
+                  },
+            },
+            { //LEAH 6 HEART EVENT PATHING FIX
+                  "Action": "EditData",
+                  "Target": "data/events/forest",
+                  "Entries": {
+                        "52/f Leah 1500/p Leah/z winter": "playful/-1000 -1000/farmer 58 16 3 Leah 42 11 3/skippable/specificTemporarySprite leahTree/animate Leah false true 80 22 23 22 23 22 23 22 23 21 21 21 21 21 21/viewport 40 10 true/move farmer -9 0 2/move farmer 0 -4 3/move farmer -3 0 3/jump Leah/move farmer -3 0 3/jump Leah/move farmer 0 -1 3/stopAnimation Leah/pause 600/faceDirection Leah 1/speak Leah \"{{i18n:Leah.6heart.01}}\"/pause 430/faceDirection Leah 3/showFrame Leah 21/speak Leah \"{{i18n:Leah.6heart.02}}\"/pause 500/emote farmer 40/pause 500/faceDirection farmer 3/animate farmer true false 150 58 59 60 61 61 61 61/showFrame Leah 24/playSound pickUpItem/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -8/pause 25/positionOffset Leah 4 -4/pause 25/positionOffset Leah 4 -4/pause 25/positionOffset Leah 4 -4/pause 25/positionOffset Leah 4 -4/pause 25/positionOffset Leah 4 -4/pause 25/positionOffset Leah 4 -4/pause 25/stopAnimation farmer/animate farmer true true 100 61/shake Leah 1000/pause 250/speak Leah \"{{i18n:Leah.6heart.03}}\"/showFrame Leah 21/pause 850/animate Leah false true 60 22 23/speak Leah \"{{i18n:Leah.6heart.04}}\"/jump Leah/removeSprite 42 8/playSound coin/pause 950/stopAnimation Leah/showFrame Leah 24/stopAnimation farmer/animate farmer true false 150 61 60 59 58 58 58 58 58/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 8/pause 25/positionOffset Leah -4 4/pause 25/positionOffset Leah -4 4/pause 25/positionOffset Leah -4 4/pause 25/positionOffset Leah -4 4/pause 25/positionOffset Leah -4 4/pause 25/positionOffset Leah -4 4/pause 25/faceDirection Leah 1 true/stopAnimation farmer/faceDirection farmer 3/pause 500/speak Leah \"{{i18n:Leah.6heart.05}}\"/pause 1000/speak Leah \"{{i18n:Leah.6heart.06}}\"/pause 300/farmerEat 613/pause 900/pause 1100/stopAnimation farmer/faceDirection farmer 2/viewport move -1 1 6000/pause 2000/globalFade/viewport -1000 -1000/pause 1000/playMusic none/speak Leah \"{{i18n:Leah.6heart.07}}\"/pause 1000/end dialogue Leah \"{{i18n:Leah.6heart.08}}\"",
+                  }
+            },
+            { //Leah 8 hrt event fix
+                  "Action": "EditData",
+                  "Target": "data/events/LeahHouse",
+                  "Entries": {
+                        "584059/f Leah 2000/p Leah/n LeahInternet": "breezy/-1000 -1000/farmer -100 -100 0 Leah 12 8 2/skippable/addTemporaryActor LeahLaptopProp 29 11 11 9 2 false/positionOffset LeahLaptopProp 27 5/showFrame Leah 28/positionOffset Leah 0 40/viewport 11 9 true/playSound doorClose/warp farmer 7 9/pause 400/move farmer 0 -1 0/pause 300/faceDirection farmer 1 true/pause 200/showFrame Leah 29/pause 200/speak Leah \"{{i18n:Leah.8heart.01}}\"/pause 500/showFrame Leah 28/move farmer 4 0 2/pause 400/speak Leah \"{{i18n:Leah.8heart.02}}\"/pause 800/playSound Pickup_Coin15/showFrame Leah 29/pause 400/speak Leah \"{{i18n:Leah.8heart.03}}\"/showFrame Leah 28/emote Leah 40/speak Leah \"{{i18n:Leah.8heart.04}}\"/pause 500/playSound Pickup_Coin15/pause 300/emote Leah 16/speak Leah \"{{i18n:Leah.8heart.05}}\"/pause 800/showFrame Leah 29/speak Leah \"{{i18n:Leah.8heart.06}}\"/showFrame Leah 28/speak Leah \"{{i18n:Leah.8heart.07}}\"/pause 500/playSound Pickup_Coin15/pause 1000/playSound Pickup_Coin15/globalFade/viewport -1000 -1000/end warpOut",
+                  },
+            },
+            { //Add SVE characters to Leah art show event
+                  "Action": "EditData",
+                  "Target": "data/events/Town",
+                  "Entries": {
+                        "53/e 55/t 1500 1700": "none/-100 -100/farmer 28 57 1 Sophia 34 66 0 Andy 37 60 3 Olivia 30 65 0 Victor 29 65 0 Susan 27 63 1 Evelyn 37 58 3 Gus 30 56 2 Pam 31 56 2 Vincent 27 55 2 Jas 26 55 2 George 37 59 3 Leah 32 61 1 Shane 34 61 3 Robin 27 61 1 Demetrius 28 61 3 Emily 30 58 2 Clint 31 59 3 Harvey 34 57 2 Lewis 35 59 3 Marnie 35 58 3 Elliott 31 63 3 Maru 33 57 2 Sebastian 35 62 1 Abigail 35 63 1 Sam 36 61 2 Penny 37 62 3 Pierre 32 65 1 Caroline 33 65 3 Haley 28 59 1 Alex 28 58 1/specificTemporarySprite leahShow/skippable/animate LeahEx false true 100 4 5/viewport 33 60 true/move farmer 1 0 1/faceDirection Sebastian 2 true/faceDirection Alex 0 true/move farmer 1 0 1/faceDirection Sebastian 1 true/faceDirection Maru 3 true/move farmer 2 0 1/faceDirection Alex 1 true/faceDirection Maru 2 true/move farmer 0 1 2/faceDirection Shane 0 true/faceDirection Emily 2 true/move farmer 0 1 2/faceDirection Shane 3 true/move farmer 0 1 2/faceDirection Emily 0/move Shane 1 0 2/faceDirection Leah 0/speak Leah \"{{i18n:Leah.ArtShow.01}}\"/pause 300/faceDirection Leah 2/pause 800/faceDirection Leah 1/faceDirection Leah 2/faceDirection Leah 3/faceDirection Leah 2/speak Leah \"{{i18n:Leah.ArtShow.02}}\"/faceDirection Sebastian 3 true/faceDirection Emily 1/faceDirection Demetrius 1 true/faceDirection Elliott 0/faceDirection Pierre 0 true/faceDirection Caroline 0 true/faceDirection Shane 3/faceDirection Sam 3 true/faceDirection Abigail 3/speak Leah \"{{i18n:Leah.ArtShow.03}}\"/faceDirection Leah 1/speak Leah \"{{i18n:Leah.ArtShow.04}}\"/faceDirection Leah 3/speak Leah \"{{i18n:Leah.ArtShow.05}}\"/playMusic jaunty/move Leah -3 0 0/faceDirection farmer 3 true/faceDirection Marnie 3 true/faceDirection Emily 3 true/faceDirection Demetrius 0/move Leah 0 -1 0/speak Leah \"{{i18n:Leah.ArtShow.06}}\"/pause 1500/move Leah 0 1 2/faceDirection Demetrius 2 true/faceDirection Haley 2 true/faceDirection farmer 2/faceDirection Emily 2 true/faceDirection Clint 2 true/pause 500/speak Leah \"{{i18n:Leah.ArtShow.07}}\"/pause 1500/move Leah 3 0 2/faceDirection Demetrius 1 true/move Leah 0 1 1/faceDirection Haley 1/speak Leah \"{{i18n:Leah.ArtShow.08}}\"/pause 1500/move Leah 0 -1 0/pause 300/faceDirection Leah 2/speak Leah \"{{i18n:Leah.ArtShow.09}}\"/faceDirection Leah 3/faceDirection Leah 1/faceDirection Leah 2/speak Leah \"{{i18n:Leah.ArtShow.10}}\"/faceDirection Leah 0/speak Leah \"{{i18n:Leah.ArtShow.11}}\"/faceDirection Emily 1/faceDirection Shane 3 true/faceDirection Haley 1/faceDirection Elliott 3/pause 400/speak Lewis \"{{i18n:Leah.ArtShow.12}}\"/pause 100/textAboveHead Gus \"{{i18n:Leah.ArtShow.13}}\"/faceDirection Leah 3/speak Demetrius \"{{i18n:Leah.ArtShow.14}}\"/textAboveHead Robin \"{{i18n:Leah.ArtShow.15}}\"/speak Penny \"{{i18n:Leah.ArtShow.16}}\"/faceDirection Leah 1/emote Leah 32/faceDirection Leah 2/pause 600/speak Olivia \"{{i18n:Leah.ArtShow.17}}\"/pause 200/speak Leah \"{{i18n:Leah.ArtShow.18}}\"/faceDirection Leah 0/emote Leah 20/pause 500/speak Lewis \"{{i18n:Leah.ArtShow.19}}\"/jump Demetrius/mail afterArtShow/viewport move 2 0 8000/pause 5000/globalFade/viewport -1000 -1000/end dialogue Leah \"{{i18n:Leah.ArtShow.20}}\""
+                  },
+            },
+      ]
+}

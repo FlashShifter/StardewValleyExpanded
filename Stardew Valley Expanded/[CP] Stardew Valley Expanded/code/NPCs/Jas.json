@@ -1,0 +1,120 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Jas",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jas",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jas",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Big_Conch",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jas",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Seaweed_Salad FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Bearberrys FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jas",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Jas",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //JAS SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Jas",
+			"Entries": {
+				"Tue": "900 ArchaeologyHouse 19 10 3 jas_read/1400 Town 85 103 2/1620 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+				"GreenRain": "610 AnimalShop 23 15 2",
+			},
+		},
+		{ //JAS SCHEDULE - Shane
+			"Action": "EditData",
+			"Target": "characters/schedules/Jas",
+			"When": {
+				"Weather": "Sun",
+				"HasSeenEvent": "3910974"
+			},
+			"Entries": {
+				"11": "830 AnimalShop 6 5 0/1040 AnimalShop 6 15 2/1130 Town 16 13 2 jas_jumprope/1640 AnimalShop 6 5 0/2100 AnimalShop 1 7 2 jas_sleep",
+				"25": "830 AnimalShop 6 5 0/1040 AnimalShop 6 15 2/1130 Town 16 13 2 jas_jumprope/1640 AnimalShop 6 5 0/2100 AnimalShop 1 7 2 jas_sleep",
+			},
+		},
+		{ //JAS SCHEDULE - Shane married player
+			"Action": "EditData",
+			"Target": "characters/schedules/Jas",
+			"When": {
+				"Spouse": "Shane"
+			},
+			"Entries": {
+				"11": null,
+				"25": null
+			},
+		},
+		{ //JAS DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jas",
+			"Entries": {
+				"Town_16_13": "{{i18n:Jas.Dialogue.01}}",
+				"AnimalShop_6_15": "{{i18n:Jas.Dialogue.02}}",
+			},
+		},
+		{ //JAS EVENT
+			"Action": "EditData",
+			"Target": "data/events/forest",
+			"Entries": {
+				"7142999/t 600 1600/f Jas 250/f Marnie 250/z winter/w sunny": "playful/-500 -500/farmer 15 75 2 Jas -200 -200 0 Marnie -201 -201 2/pause 1000/viewport 19 85 true/skippable/move farmer 0 10 3 true/pause 4500/stopMusic/message \"{{i18n:Jas.Event.01}}\"/emote farmer 8/speed farmer 3/move farmer -7 0 3 true/globalFade/viewport -1000 -1000/pause 700/halt/pause 100/changeLocation Custom_ForestWest/pause 200/playMusic spring_day_ambient/pause 600/warp Jas 39 65/warp farmer 55 65/pause 150/viewport 39 65 true/move farmer -13 0 3 true/pause 650/shake Jas 1000/pause 250/textAboveHead Jas \"{{i18n:Jas.Event.02}}\"/pause 2800/move Jas 0 0 1/pause 200/emote Jas 16 true/pause 300/speak Jas \"{{i18n:Jas.Event.03}}\"/pause 600/move farmer -1 0 3/pause 500/speak Jas \"{{i18n:Jas.Event.04}}\"/pause 650/move farmer 9 0 1 true/pause 250/move Jas 8 0 1 true/pause 500/globalFade/viewport -1000 -1000/pause 1000/changeLocation Forest/halt/warp Jas 90 18/warp farmer 89 18/faceDirection farmer 0/faceDirection Jas 0/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 400/playSound stoneStep/pause 300/viewport 90 18 true/pause 1200/playSound doorClose/warp Marnie 90 16/pause 400/emote Marnie 16 true/pause 250/speak Marnie \"{{i18n:Jas.Event.05}}\"/pause 400/speak Jas \"{{i18n:Jas.Event.06}}\"/pause 400/speak Marnie \"{{i18n:Jas.Event.07}}\"/pause 500/speak Jas \"{{i18n:Jas.Event.08}}\"/pause 400/move Marnie -1 0 1 true/pause 125/move Jas 0 -2 0 true/pause 1000/warp Jas -300 -300/halt/playSound doorClose/pause 500/move Marnie 0 0 2/pause 400/speak Marnie \"{{i18n:Jas.Event.09}}\"/pause 400/move Marnie 1 0 0/pause 500/warp Marnie -200 -200/playSound doorClose/pause 500/friendship Jas 50/friendship Marnie 50/mail JasThankYouLetter/globalFade/viewport -1000 -1000/pause 800/end dialogue Marnie \"{{i18n:Jas.Event.10}}\"",
+			},
+		},
+		{ //JAS EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Jas",
+			"Entries": {
+				"Jas_event10": "{{i18n:Jas.Dialogue.03}}",
+				"Jas_event11": "{{i18n:Jas.Dialogue.04}}",
+			}
+		},
+	]
+}

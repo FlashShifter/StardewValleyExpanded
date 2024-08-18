@@ -70,7 +70,7 @@ namespace StardewValleyExpanded
             try
             {
                 //check the player's current tile for a LoadMap property and, if found, get its value
-                Vector2 tile = Game1.player.getTileLocation();
+                Vector2 tile = Game1.player.Tile;
                 string property = Game1.player.currentLocation?.doesTileHaveProperty((int)tile.X, (int)tile.Y, "TouchAction", "Back");
 
                 if (property?.StartsWith("LoadMap", StringComparison.OrdinalIgnoreCase) == true) //if this is a TMXL LoadMap property

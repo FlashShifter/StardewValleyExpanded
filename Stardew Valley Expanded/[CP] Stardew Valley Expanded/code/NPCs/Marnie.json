@@ -1,0 +1,192 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Marnie",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+				"Delimiter": " "
+			  }
+			  /*Neutral*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Marnie",
+				  9
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //MARNIE SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Marnie",
+			"Entries": {
+				"Mon": "700 Forest 55 27 0/900 Forest 51 24 1/1000 Forest 55 21 2/1020 Forest 56 21 0/1100 Forest 59 21 2/1130 Forest 61 23 3/1200 Forest 80 15 0/1330 Custom_MarnieShed 7 5 0/1600 Custom_MarnieShed 14 7 0/1700 Custom_MarnieShed 12 5 0/1800 Custom_MarnieShed 11 6 0/2100 AnimalShop 12 5 3 marnie_sleep",
+				"winter_Mon": "630 Custom_MarnieShed 7 5 0/900 Custom_MarnieShed 13 5 1/1000 Custom_MarnieShed 15 7 1/1100 Custom_MarnieShed 4 6 0/1200 SeedShop 11 20 0/1700 AnimalShop 24 15 0/2100 AnimalShop 12 5 3 marnie_sleep",
+				"GreenRain": "610 AnimalShop 22 15 1",
+			},
+		},
+		{ //MARNIE SCHEDULE - Lewis
+			"Action": "EditData",
+			"Target": "characters/schedules/Marnie",
+			"When": {
+				"Weather": "Sun"
+			},
+			"Entries": {
+				"10": "630 AnimalShop 28 15 0/800 AnimalShop 12 14 2/1600 AnimalShop 17 5 0/1700 Saloon 8 22 1 marnie_drink/2230 AnimalShop 12 5 3 marnie_sleep",
+				"17": "630 AnimalShop 28 15 0/800 AnimalShop 12 14 2/1600 AnimalShop 28 15 0/1900 AnimalShop 4 15 0/2100 AnimalShop 12 5 3 marnie_sleep",
+			},
+		},
+		{ //MARNIE DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries": {
+				"Forest_55_27": "{{i18n:Marnie.Dialogue.01}}",
+				"Forest_55_21": "{{i18n:Marnie.Dialogue.01}}",
+				"Forest_56_21": "{{i18n:Marnie.Dialogue.01}}",
+				"Forest_80_15": "{{i18n:Marnie.Dialogue.02}}",
+				"Custom_MarnieShed_7_5": "{{i18n:Marnie.Dialogue.03}}",
+				"Custom_MarnieShed_14_7": "{{i18n:Marnie.Dialogue.04}}",
+				"Custom_MarnieShed_12_5": "{{i18n:Marnie.Dialogue.05}}",
+				"Custom_MarnieShed_11_6": "{{i18n:Marnie.Dialogue.06}}",
+				"AnimalShop_12_5": "{{i18n:Marnie.Dialogue.07}}",
+			},
+		},
+		{ //MARNIE EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Marnie",
+			"Entries": {
+				"marnie_event1": "{{i18n:Marnie.Dialogue.08}}",
+				"marnie_event2": "{{i18n:Marnie.Dialogue.09}}",
+				"marnie_event3": "{{i18n:Marnie.Dialogue.10}}",
+			}
+		},
+		{ //MARNIE AND LEWIS EVENT PATHING FIX
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"639373/f Lewis 1500/f Marnie 1500/t 1900 2300/w sunny": "nightTime/68 84/farmer 65 79 1 Lewis 69 83 1 Marnie 69 84 0/skippable/pause 500/faceDirection Lewis 2/pause 200/emote Lewis 28/speak Lewis \"{{i18n:Marnie.Lewis.01}}\"/pause 300/faceDirection Marnie 1/emote Marnie 12/speak Lewis \"{{i18n:Marnie.Lewis.02}}\"/pause 1000/speak Marnie \"{{i18n:Marnie.Lewis.03}}\"/faceDirection Marnie 2/pause 500/speak Marnie \"{{i18n:Marnie.Lewis.04}}\"/pause 600/playSound leafrustle/faceDirection Marnie 3 true/faceDirection Lewis 3 true/showFrame Lewis 24/showFrame Marnie 16/jump Lewis/jump Marnie/shake Lewis 2000/shake Marnie 2000/move farmer 4 0 2/showFrame Lewis 12/showFrame Marnie 12/faceDirection Lewis 0/faceDirection Marnie 0/emote Lewis 16/speak Marnie \"{{i18n:Marnie.Lewis.05}}\"/pause 800/speak Lewis \"{{i18n:Marnie.Lewis.06}}\"/pause 800/move Marnie 0 1 2/pause 800/faceDirection Marnie 3/faceDirection farmer 2/speak Marnie \"{{i18n:Marnie.Lewis.07}}\"/faceDirection farmer 2/pause 300/jump farmer/pause 1000/speed farmer 4/move farmer -7 0 3/playSound leafrustle/pause 600/faceDirection Lewis 2/faceDirection Marnie 0/pause 300/emote Lewis 8 true/emote Marnie 8 true/pause 1000/end",
+			}
+		},
+		{ //kills event id if morris becomes mayor
+			"Action": "EditData",
+			"Target": "data/events/town",
+			"Entries": {
+				"639373/f Lewis 1500/f Marnie 1500/t 1900 2300/w sunny/k 6665293": "nightTime/68 84/farmer 65 79 1 Lewis 69 83 1 Marnie 69 84 0/skippable/pause 500/faceDirection Lewis 2/pause 200/emote Lewis 28/speak Lewis \"{{i18n:Marnie.Lewis.01}}\"/pause 300/faceDirection Marnie 1/emote Marnie 12/speak Lewis \"{{i18n:Marnie.Lewis.02}}\"/pause 1000/speak Marnie \"{{i18n:Marnie.Lewis.03}}\"/faceDirection Marnie 2/pause 500/speak Marnie \"{{i18n:Marnie.Lewis.04}}\"/pause 600/playSound leafrustle/faceDirection Marnie 3 true/faceDirection Lewis 3 true/showFrame Lewis 24/showFrame Marnie 16/jump Lewis/jump Marnie/shake Lewis 2000/shake Marnie 2000/move farmer 4 0 2/showFrame Lewis 12/showFrame Marnie 12/faceDirection Lewis 0/faceDirection Marnie 0/emote Lewis 16/speak Marnie \"{{i18n:Marnie.Lewis.05}}\"/pause 800/speak Lewis \"{{i18n:Marnie.Lewis.06}}\"/pause 800/move Marnie 0 1 2/pause 800/faceDirection Marnie 3/faceDirection farmer 2/speak Marnie \"{{i18n:Marnie.Lewis.07}}\"/faceDirection farmer 2/pause 300/jump farmer/pause 1000/speed farmer 4/move farmer -7 0 3/playSound leafrustle/pause 600/faceDirection Lewis 2/faceDirection Marnie 0/pause 300/emote Lewis 8 true/emote Marnie 8 true/pause 1000/end",
+			},
+		},
+		{ //MARNIE 8 Heart event
+			"Action": "EditData",
+			"Target": "data/events/Custom_MarnieShed",
+			"Entries": {
+				"1000026/f Marnie 2000/t 900 2000": "none/-500 -500/farmer -200 -200 0 Marnie 13 5 1/skippable/positionOffset Marnie 0 -15/pause 500/viewport 10 6 true/playMusic jaunty/pause 1500/textAboveHead Marnie \"{{i18n:Marnie.8heart.01}}\"/pause 400/playSound bubbles/pause 2500/move Marnie 0 1 1/pause 1300/textAboveHead Marnie \"{{i18n:Marnie.8heart.02}}\"/pause 1450/playSound bubbles/pause 1500/playSound doorClose/warp farmer 6 9/pause 400/move Marnie 0 0 3/pause 250/textAboveHead Marnie \"{{i18n:Marnie.8heart.03}}\"/pause 100/move farmer 0 -3 1/pause 550/playSound bubbles/move farmer 5 0 1/pause 500/speak Marnie \"{{i18n:Marnie.8heart.04}}\"/pause 1100/move Marnie 0 0 1/pause 1350/move Marnie 0 0 3/pause 1250/speak Marnie \"{{i18n:Marnie.8heart.05}}\"/pause 900/move Marnie -1 0 3/pause 300/textAboveHead Marnie \"{{i18n:Marnie.8heart.06}}\"/pause 700/move farmer 0 1 0/pause 400/move Marnie -3 0 3/move farmer 0 0 3/move Marnie -2 0 3/move Marnie 0 -1 0/pause 500/textAboveHead Marnie \"{{i18n:Marnie.8heart.07}}\"/pause 400/emote farmer 8/pause 450/move farmer -2 0 0/move farmer 0 -2 3/pause 1200/speak Marnie \"{{i18n:Marnie.8heart.08}}\"/pause 500/emote Marnie 40/pause 400/move Marnie 0 0 1/pause 400/speak Marnie \"{{i18n:Marnie.8heart.09}}\"/pause 500/jump farmer/pause 700/speak Marnie \"{{i18n:Marnie.8heart.10}}\"/pause 500/emote farmer 32 true/pause 400/globalFade/viewport -1000 -1000/pause 1000/playSound reward/message \"{{i18n:Marnie.8heart.11}}\"/stopMusic/pause 1000/end dialogue Marnie \"{{i18n:Marnie.8heart.12}}\""
+			},
+		},
+		{ //Changes name, description, and health/energy recovered when consumed
+			"Action": "EditData",
+			"Target": "Data/objectinformation",
+			"When": {
+				"HasSeenEvent": "1000026"
+			},
+			"Fields": {
+				"424": {
+					2: 100,
+					4: "{{i18n:Cheesewheel.01}}",
+					5: "{{i18n:Cheesewheel.02}}"
+				},
+				"426": {
+					2: 130,
+					4: "{{i18n:Cheesewheel.03}}",
+					5: "{{i18n:Cheesewheel.04}}"
+				}
+			},
+		},
+		{ //Increases cheese sell price by 20%
+			"Action": "EditData",
+			"Target": "Data/objectinformation",
+			"When": {
+				"HasSeenEvent": "1000026"
+			},
+			"Fields": {
+				"424": {
+					1: "276"
+				},
+				"426": {
+					1: "480"
+				},
+			},
+		},
+		/*{	 //Increases cheese sell price to vanilla amount
+     "Action": "EditData",
+     "Target": "Data/objectinformation",
+     "When": { "HasSeenEvent": "1000026", "LowerProfitMargins": true },
+	 "Fields": {
+	 "424": { 1: "230" },
+	 "426": { 1: "400" },
+	 },
+},*/
+		{ //Changes cheese sprites to a wheel
+			"Action": "EditImage",
+			"Target": "Maps/springobjects",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"HasSeenEvent": "1000026"
+			},
+			"FromArea": {
+				"X": 336,
+				"Y": 2448,
+				"Width": 16,
+				"Height": 16
+			},
+			"ToArea": {
+				"X": 256,
+				"Y": 272,
+				"Width": 16,
+				"Height": 16
+			},
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Maps/springobjects",
+			"FromFile": "Assets/Tilesheets/spring_z_extras.png",
+			"When": {
+				"HasSeenEvent": "1000026"
+			},
+			"FromArea": {
+				"X": 352,
+				"Y": 2448,
+				"Width": 16,
+				"Height": 16
+			},
+			"ToArea": {
+				"X": 288,
+				"Y": 272,
+				"Width": 16,
+				"Height": 16
+			},
+		},
+	]
+}

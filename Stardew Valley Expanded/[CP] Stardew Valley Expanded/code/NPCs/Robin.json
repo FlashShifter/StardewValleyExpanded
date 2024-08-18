@@ -1,0 +1,64 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Robin",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Robin",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal_Supreme",
+                "Delimiter": " "
+              }
+              /*Like*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Robin",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Robin",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //ROBIN EVENT
+            "Action": "EditData",
+            "Target": "data/events/backwoods",
+            "Entries": {
+                "1000029/w sunny/m 500000/t 600 1130/z winter/z fall/z spring": "summer_day_ambient/-500 -500/farmer 14 39 0 Robin 14 26 1/skippable/pause 500/viewport 19 28 true/pause 400/textAboveHead Robin \"{{i18n:Robin.Event.01}}\"/move farmer 0 -10 0/pause 650/move Robin 0 0 2/emote Robin 16/pause 150/speak Robin \"{{i18n:Robin.Event.02}}\"/pause 1250/speak Robin \"{{i18n:Robin.Event.03}}\"/pause 1100/speak Robin \"{{i18n:Robin.Event.04}}\"/pause 500/question fork0 \"{{i18n:Robin.Event.05}}\"/fork 1000029_WonderfulJob/pause 500/emote Robin 16/pause 350/emote Robin 28/pause 600/speak Robin \"{{i18n:Robin.Event.06}}\"/pause 500/move Robin 0 0 0/pause 1000/emote Robin 28/pause 500/speak Robin \"{{i18n:Robin.Event.07}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/friendship Robin -625/end dialogue Robin \"{{i18n:Robin.Event.08}}\"",
+                "1000029_WonderfulJob": "pause 600/speak Robin \"{{i18n:Robin.Event.1000029_WonderfulJob.01}}\"/pause 2000/speak Robin \"{{i18n:Robin.Event.1000029_WonderfulJob.02}}\"/pause 1500/speak Robin \"{{i18n:Robin.Event.1000029_WonderfulJob.03}}\"/pause 600/emote farmer 32/pause 200/emote Robin 32/pause 1250/speak Robin \"{{i18n:Robin.Event.1000029_WonderfulJob.04}}\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Robin \"{{i18n:Robin.Event.1000029_WonderfulJob.05}}\"",
+            },
+        },
+        { //Adjusts deluxe bed position
+            "Action": "EditData",
+            "Target": "data/events/sciencehouse",
+            "Entries": {
+                "1053978/n robinDeluxeBed": "distantBanjo/-1000 -1000/farmer -100 -100 0 Robin 5 20 3 Demetrius 8 20 3 Maru 8 18 2 Sebastian 3 23 0/skippable/addTemporaryActor DeluxeBed 48 63 3 21 2 false/positionOffset Robin 75 0/viewport 5 20 true/pause 3000/speak Robin \"{{i18n:Robin.DeluxBed.01}}\"/pause 400/emote Demetrius 8/speak Demetrius \"{{i18n:Robin.DeluxBed.02}}\"/emote Robin 12/faceDirection Robin 1/speak Robin \"{{i18n:Robin.DeluxBed.03}}\"/emote Demetrius 8/speak Demetrius \"{{i18n:Robin.DeluxBed.04}}\"/pause 500/jump Robin/pause 500/speak Robin \"{{i18n:Robin.DeluxBed.05}}\"/pause 100/animate Demetrius true true 100 18/shake Demetrius 1000/emote Maru 28 true/emote Sebastian 12 true/jump Demetrius/pause 1000/stopAnimation Demetrius/pause 400/warp farmer 6 24/playSound doorClose/move farmer 0 -1 0/faceDirection Robin 2 true/faceDirection Demetrius 2 true/faceDirection Sebastian 1/speak Robin \"{{i18n:Robin.DeluxBed.06}}\"/move farmer 0 -2 0/speak Robin \"{{i18n:Robin.DeluxBed.07}}\"/faceDirection farmer 3/faceDirection Robin 3 true/faceDirection Demetrius 3/pause 300/speak Robin \"{{i18n:Robin.DeluxBed.08}}\"/quickQuestion #{{i18n:Robin.DeluxBed.09}}#{{i18n:Robin.DeluxBed.10}}(break)faceDirection Sebastian 0 true\\textAboveHead Sebastian \"{{i18n:Robin.DeluxBed.11}}\"\\emote Robin 20 true\\emote Demetrius 12\\pause 2000\\move Demetrius 14 0 1 true\\pause 500\\speak Demetrius \"{{i18n:Robin.DeluxBed.12}}\"(break)emote Demetrius 32\\speak Demetrius \"{{i18n:Robin.DeluxBed.13}}\"\\emote Robin 12 \\speak Robin \"{{i18n:Robin.DeluxBed.14}}\"/pause 1000/speak Robin \"{{i18n:Robin.DeluxBed.15}}\"/faceDirection Robin 2/speak Robin \"{{i18n:Robin.DeluxBed.16}}\"/faceDirection farmer 2 true/startJittering/animate farmer false true 100 94/jump farmer/pause 200/textAboveHead Maru \"{{i18n:Robin.DeluxBed.17}}\"/pause 1000/fade/viewport -1000 -1000/end"
+            }
+        },
+        { //Allows precise positioning of Robin's deluxe bed
+            "Action": "Load",
+            "Target": "Characters/DeluxeBed",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/DeluxeBed.png"
+        },
+    ]
+}

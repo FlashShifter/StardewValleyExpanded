@@ -1,0 +1,835 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Wizard",
+      "TextOperations": [
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Shiny_Lunaloo FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Ancient_Fiber FlashShifter.StardewValleyExpandedCP_Aegis_Elixir",
+          "Delimiter": " "
+        }
+        /*Like*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Water_Grub FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Radioactive_Bass FlashShifter.StardewValleyExpandedCP_Poison_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lunaloo FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Baby_Lunaloo",
+          "Delimiter": " "
+        }
+        /*Dislike*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Neutral*/ ,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            9
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Mushroom_Berry_Rice",
+          "Delimiter": " "
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "TargetField": [
+        "Wizard"
+      ],
+      "Entries": {
+        "CanBeRomanced": true,
+        "SpouseRoom": {
+          "MapAsset": "Custom_WizardsRoom",
+          "MapSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 6,
+            "Height": 9
+          }
+        },
+        "SpousePatio": {
+          "MapAsset": "Wizard_Spouse_Area",
+          "MapSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 4,
+            "Height": 4
+          },
+          "SpriteAnimationFrames": [
+            [
+              0,
+              30000
+            ],
+            [
+              21,
+              400
+            ],
+            [
+              20,
+              66000
+            ],
+            [
+              21,
+              200
+            ],
+            [
+              22,
+              200
+            ],
+            [
+              0,
+              500
+            ]
+          ],
+          "SpriteAnimationPixelOffset": {
+            "X": 0,
+            "Y": 0
+          }
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "TargetField": [
+        "Wizard"
+      ],
+      "When": {
+        "Hearts:Wizard": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14"
+      },
+      "Entries": {
+        "DisplayName": "{{i18n:Name.Magnus}}",
+      },
+    },
+    /* {
+      //Wizard's NPC disposition - Changes display name to "Magnus" at 4+ hearts
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "When": {
+        "Hearts:Wizard": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14"
+      },
+      "Entries": {
+        "Wizard": "adult/rude/neutral/negative/male/datable/null/Other/winter 17//WizardHouse 3 17/{{i18n:Name.Magnus}}",
+      }
+    },*/
+    //Spouse Room
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_WizardsRoom",
+      "FromFile": "Assets/Maps/SpouseRooms/WizardsRoom.tbin",
+    },
+    //Spouse Patio
+    {
+      "Action": "Load",
+      "Target": "Maps/Wizard_Spouse_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Wizard_Spouse_Area.tbin"
+    },
+    {
+      //Wizard's Portraits
+      "Action": "EditImage",
+      "Target": "Portraits/Wizard",
+      "PatchMode": "Replace",
+      "FromFile": "assets/CharacterFiles/Portraits/Magnus/Magnus.png"
+    },
+    {
+      //Wizard's Sprites
+      "Action": "EditImage",
+      "Target": "Characters/Wizard",
+      "PatchMode": "Replace",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Magnus/Magnus.png",
+      "When": {
+        "HasMod |contains=Parrot.RomRas": false,
+        "HasMod |contains=Jellonip.RRRR": false
+      }
+    },
+    {
+      //Wizard's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Wizard_Meditate": "0 0 0 0 22 21 20/20/20 20 21 22 0 0 0 0",
+        "Wizard_Concentrate": "17/17/17",
+        "Wizard_Concentrate1": "19/19/19",
+        "Wizard_Concentrate2": "16/16/16",
+        "Wizard_LookDown": "18/18/18",
+        "Wizard_Sleep": "29/29/29",
+        "Wizard_Lecture": "4 4 4 4 4 4 4 4/4 4 4 4 19 19 19 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 19 19 19 19 19 19 19 19 19 19 19 4 4 4 4 4 4 4 4 4 4/4 4 4 4 4",
+        "Wizard_Lecture2": "8 8 8 8/8 8 8 8 8 8 8 8 8 17 17 17 17 17 17 17 17 17 17 17 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 17 17 17 17 17 17 17 17 17 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 17 17 17 17 17 17 17 17 17 8 8 8 8 8/8",
+      }
+    },
+    {
+      //Wizard's sleep animation - married to character
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "When": {
+        "Spouse": "Wizard"
+      },
+      "Entries": {
+        "wizard_sleep": "29/29/29"
+      }
+    },
+    { //Wizard dialogue additions
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "Entries": {
+        "Mon4": "{{i18n:WizardDialogue.01}}",
+        "Mon8": "{{i18n:WizardDialogue.02}}",
+        "Tue6": "{{i18n:WizardDialogue.03}}",
+        "Tue10": "{{i18n:WizardDialogue.04}}",
+        "Wed4": "{{i18n:WizardDialogue.05}}",
+        "Wed8": "{{i18n:WizardDialogue.06}}",
+        "Thu4": "{{i18n:WizardDialogue.07}}",
+        "Thu10": "{{i18n:WizardDialogue.08}}",
+        "Fri10": "{{i18n:WizardDialogue.09}}",
+        "Sat2": "{{i18n:WizardDialogue.10}}",
+        "Sat8": "{{i18n:WizardDialogue.13}}",
+        "Sun4": "{{i18n:WizardDialogue.11}}",
+        "Sun10": "{{i18n:WizardDialogue.12}}",
+        "divorced": "{{i18n:WizardDialogue.Divorced}}",
+        "breakUp": "{{i18n:WizardDialogue.breakup}}",
+        "dumped_Guys": "{{i18n:WizardDialogue.dumped}}",
+        "secondChance_Guys": "{{i18n:WizardDialogue.SecondChance}}",
+        "AdventureGuild_4_13": "{{i18n:WizardDialogue.AdventureGuild}}",
+        "Custom_ForestWest_52_117": "{{i18n:WizardDialogue.Forest West}}",
+        "wizard_event1": "{{i18n:WizardDialogue.Event01}}",
+        "wizard_event2": "{{i18n:WizardDialogue.Event02}}",
+        "wizard_event3": "{{i18n:WizardDialogue.Event03}}",
+        "wizard_event4": "{{i18n:WizardDialogue.Event04}}",
+        "GreenRainFinished": "{{i18n: Magnus.GreenRainFinished}}",
+        "AcceptGift_(O)769": "{{i18n:Magnus.Gift769}}",
+        "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Shard": "{{i18n: Magnus.GiftVoidShard}}",
+        "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Void_Pebble": "{{i18n: Magnus.GiftVoidPebble}}",
+        "AcceptGift_(O)422": "{{i18n: Magnus.Gift422}}",
+        "AcceptBirthdayGift_Positive": "{{i18n:Magnus.GiftBDPos}}",
+        "AcceptBirthdayGift_Negative": "{{i18n:Magnus.GiftBDneg}}",
+        "married_Lance": "{{i18n:Magnus.MarriedLance}}",
+        "married": "{{i18n:Magnus.Married}}", // This overwrites the vanilla key. 
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "When": {
+        "Spouse": "Wizard"
+      },
+      "Entries": {
+        "married": "{{i18n:Magnus.MarriedMagnus}}"
+      },
+    },
+    { //Wizard dialogue additions
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "When": {
+        "Spouse": "Wizard"
+      },
+      "Entries": {
+        "accept_868": "{{i18n:WizardDialogue.Event05}}"
+      },
+    },
+    {
+      //Wizard's Engagement Dialogue
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Wizard0": "{{i18n:Wizard.Engagement.0}}",
+        "Wizard1": "{{i18n:Wizard.Engagement.0}}",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "Entries": {
+        "Sun": "{{i18n:WizardDialogue.Event06}}",
+      },
+    },
+    {
+      //Wizard's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Wizard",
+      "When": {
+        "HasSeenEvent": "112"
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Magnus/WizardSchedule.json"
+    },
+
+    //WIZARD SCHEDULE: Morgan = 'true'
+    {
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "When": {
+        "HasSeenEvent": "5978924"
+      },
+      "Entries": {
+        //Potion brewing
+        "2": "610 WizardHouse 10 17 2 Wizard_Meditate/740 WizardHouse 2 17 1/900 WizardHouse 3 19 2/1300 WizardHouse 2 17 1 Wizard_Lecture/1630 WizardHouse 3 22 0/1800 WizardHouse 10 17 2 Wizard_Meditate/1940 WizardHouse 2 17 3/2300 WizardHouse 3 4 2 Wizard_Sleep",
+        "13": "610 WizardHouse 10 17 2 Wizard_Meditate/740 WizardHouse 2 17 1/900 WizardHouse 3 19 2/1300 WizardHouse 2 17 1 Wizard_Lecture/1630 WizardHouse 3 22 0/1800 WizardHouse 10 17 2 Wizard_Meditate/1940 WizardHouse 2 17 3/2300 WizardHouse 3 4 2 Wizard_Sleep",
+        //Magic training in basement
+        "3": "730 Custom_WizardBasement 16 7 0 Wizard_Lecture2/1300 Custom_WizardBasement 20 6 1 Wizard_Lecture/1600 WizardHouse 10 19 2 Wizard_Lecture2/1930 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+        "18": "730 Custom_WizardBasement 16 7 0 Wizard_Lecture2/1300 Custom_WizardBasement 20 6 1 Wizard_Lecture/1600 WizardHouse 10 19 2 Wizard_Lecture2/1930 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+        //Field trip to the western forest
+        "7": "610 WizardHouse 5 17 2/820 Custom_WizardBasement 15 5 0/1110 WizardHouse 6 17 0 Wizard_Lecture2/1200 WizardHouse 9 31 0 Wizard_Lecture2/1230 Custom_ForestWest 51 118 2 Wizard_Meditate",
+        "26": "610 WizardHouse 5 17 2/820 Custom_WizardBasement 15 5 0/1110 WizardHouse 6 17 0 Wizard_Lecture2/1200 WizardHouse 9 31 0 Wizard_Lecture2/1230 Custom_ForestWest 51 118 2 Wizard_Meditate",
+      },
+    },
+    //Magnus meets with Camilla after players complete their Nexus
+    {
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "When": {
+        "HasSeenEvent": "908078"
+      },
+      "Entries": {
+        "1": "840 Custom_WizardBasement 5 12 2/920 WizardHouse 2 17 1/1400 Custom_WizardBasement 12 5 3/1830 WizardHouse 10 19 0",
+        "15": "840 Custom_WizardBasement 5 12 2/920 WizardHouse 2 17 1/1400 Custom_WizardBasement 12 5 3/1830 WizardHouse 10 19 0",
+      },
+    },
+    //Wizard ???
+    {
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Wizard",
+      "When": {
+        "Spouse |contains=Olivia, Wizard": false,
+        "Relationship:Wizard |contains=Dating": false,
+        "Season |contains=Summer": true,
+        "Day |contains=25": true
+      },
+      "Entries": {
+        "25": "630 WizardHouse 10 17 2 Wizard_Meditate/1210 WizardHouse 10 29 0/1240 WizardHouse 11 32 1/1300 WizardHouse 7 32 3/1320 WizardHouse 2 29 0/1340 WizardHouse 2 29 3/1400 WizardHouse 5 17 2/2230 WizardHouse 7 21 1 \"Strings\\schedules\\Wizard:OliviaVisitWhichTotallyIsNotWhatYouThinkItIs.001\"/2250 WizardHouse 2 4 1 Wizard_Sleep \"Strings\\schedules\\Wizard:OliviaVisitWhichTotallyIsNotWhatYouThinkItIs.002\""
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Wizard",
+      "When": {
+        "Spouse |contains=Olivia, Wizard": false,
+        "Relationship:Wizard |contains=Dating": false,
+        "Season |contains=Summer": true,
+        "Day |contains=25": true
+      },
+      "Entries": {
+        "OliviaVisitWhichTotallyIsNotWhatYouThinkItIs.001": "{{i18n:WizardOlivia.01}}",
+        "OliviaVisitWhichTotallyIsNotWhatYouThinkItIs.002": "{{i18n:WizardOlivia.02}}",
+      },
+    },
+    //Olivia ???
+    {
+      "Action": "EditData",
+      "Target": "Characters/Schedules/Olivia",
+      "When": {
+        "Spouse |contains=Olivia, Wizard": false,
+        "Relationship:Olivia |contains=Dating": false,
+        "Season |contains=Summer": true,
+        "Day |contains=25": true
+      },
+      "Entries": {
+        "25": "0 Custom_JenkinsHouse 19 5 0/610 Custom_JenkinsHouse 5 8 0/700 Custom_JenkinsHouse 34 37 0 Olivia_Wash/1030 Custom_JenkinsHouse 16 12 0 Olivia_Art/1310 Town 24 72 3/1600 Custom_JenkinsHouse 32 37 2 Olivia_Wine2/1910 WizardHouse 9 21 3 \"Strings\\schedules\\Olivia:WizardVisitWhichTotallyIsNotWhatYouThinkItIs.001\"/2250 WizardHouse 3 4 1 Olivia_Sleep \"Strings\\schedules\\Olivia:WizardVisitWhichTotallyIsNotWhatYouThinkItIs.002\""
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Olivia",
+      "When": {
+        "Spouse |contains=Olivia, Wizard": false,
+        "Relationship:Olivia |contains=Dating": false,
+        "Season |contains=Summer": true,
+        "Day |contains=25": true
+      },
+      "Entries": {
+        "WizardVisitWhichTotallyIsNotWhatYouThinkItIs.001": "{{i18n:WizardOlivia.03}}",
+        "WizardVisitWhichTotallyIsNotWhatYouThinkItIs.002": "{{i18n:WizardOlivia.04}}",
+      },
+    },
+    { //6:30am > 10:10am === 3 hours 40 minutes travel time from farmhouse to wizard tower
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "Entries": {
+        "marriage_Mon": "700 WizardHouse 4 17 2 \"Strings\\schedules\\Wizard:marriage.002\"/1200 WizardHouse 1 5 0 \"Strings\\schedules\\Wizard:marriage.003\"/1400 WizardHouse 3 22 0 \"Strings\\schedules\\Wizard:marriage.014\"/1700 Bed",
+        "marriage_Tue": "630 WizardHouse 4 17 2 \"Strings\\schedules\\Wizard:marriage.003\"/1100 WizardHouse 10 17 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.001\"/1530 WizardHouse 2 14 0 \"Strings\\schedules\\Wizard:marriage.015\"/1700 Bed",
+        "marriage_Wed": "650 WizardHouse 4 17 2 \"Strings\\schedules\\Wizard:marriage.004\"/1120 Custom_WizardBasement 19 13 0 \"Strings\\schedules\\Wizard:marriage.000\"/1220 Custom_WizardBasement 21 13 0 \"Strings\\schedules\\Wizard:marriage.001\"/1300 Custom_WizardBasement 18 5 0 \"Strings\\schedules\\Wizard:marriage.002\"/1330 Custom_WizardBasement 14 5 0 \"Strings\\schedules\\Wizard:marriage.003\"/1400 Custom_WizardBasement 23 6 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.003\"/1500 WizardHouse 2 17 3 \"Strings\\schedules\\Wizard:marriage.015\"/1710 Bed",
+        "marriage_Thu": "710 WizardHouse 8 13 0 \"Strings\\schedules\\Wizard:marriage.005\"/1140 Forest 10 21 0 \"Strings\\schedules\\Wizard:marriage.004\"/1300 Forest 5 21 3 \"Strings\\schedules\\Wizard:marriage.005\"/1320 Forest 3 23 0 \"Strings\\schedules\\Wizard:marriage.003\"/1340 Forest 3 19 2 \"Strings\\schedules\\Wizard:marriage.002\"/1400 Forest 5 21 3 \"Strings\\schedules\\Wizard:marriage.001\"/1420 Forest 4 23 0 \"Strings\\schedules\\Wizard:marriage.000\"/1440 Forest 3 19 2 \"Strings\\schedules\\Wizard:marriage.014\"/1500 Forest 14 29 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.016\"/1730 Bed",
+        "GreenRain": "0 Forest 5 21 3/1800 WizardHouse 3 22 0",
+      },
+    },
+    { //Wizard marriage schedule - meets with Camilla
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "When": {
+        "HasSeenEvent": "908078"
+      },
+      "Entries": {
+        "marriage_Mon": "610 WizardHouse 2 17 1 \"Strings\\schedules\\Wizard:marriage.017\"/1400 Custom_WizardBasement 12 5 3 \"Strings\\schedules\\Wizard:marriage.017\"/1830 WizardHouse 10 19 0 \"Strings\\schedules\\Wizard:marriage.018\"",
+      },
+    },
+    { //Wizard marriage schedule - Morgan lecture
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "When": {
+        "HasSeenEvent": "5978924",
+        "Day |contains=2, 3, 7, 13, 18, 26": true
+      },
+      "Entries": {
+        "marriage_Tue": "640 WizardHouse 3 19 2 \"Strings\\schedules\\Wizard:marriage.009\"/1300 WizardHouse 2 17 1 Wizard_Lecture \"Strings\\schedules\\Wizard:marriage.010\"/1630 WizardHouse 3 22 0 \"Strings\\schedules\\Wizard:marriage.014\"/1800 WizardHouse 10 17 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.014\"/1830 Bed",
+        "marriage_Wed": "630 Custom_WizardBasement 16 7 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.006\"/1300 Custom_WizardBasement 20 6 1 Wizard_Lecture \"Strings\\schedules\\Wizard:marriage.007\"/1600 WizardHouse 10 19 2 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.008\"/1930 Bed",
+        "marriage_Thu": "630 Custom_WizardBasement 16 7 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.008\"/1300 Custom_WizardBasement 20 6 1 Wizard_Lecture \"Strings\\schedules\\Wizard:marriage.006\"/1600 WizardHouse 10 19 2 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.016\"/1930 Bed",
+        "marriage_Fri": "630 Custom_WizardBasement 15 5 0 \"Strings\\schedules\\Wizard:marriage.002\"/1110 WizardHouse 6 17 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.004\"/1200 WizardHouse 9 31 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.012\"/1230 Custom_ForestWest 51 118 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.013\"",
+        "marriage_Sat": "700 WizardHouse 3 19 2 \"Strings\\schedules\\Wizard:marriage.011\"/1300 WizardHouse 2 17 1 Wizard_Lecture \"Strings\\schedules\\Wizard:marriage.010\"/1630 WizardHouse 3 22 0 \"Strings\\schedules\\Wizard:marriage.015\"/1800 WizardHouse 10 17 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.015\"/1830 Bed",
+        "marriage_Sun": "630 Custom_WizardBasement 15 5 0 \"Strings\\schedules\\Wizard:marriage.000\"/1110 WizardHouse 6 17 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.007\"/1200 WizardHouse 9 31 0 Wizard_Lecture2 \"Strings\\schedules\\Wizard:marriage.012\"/1230 Custom_ForestWest 51 118 2 Wizard_Meditate \"Strings\\schedules\\Wizard:marriage.013\"",
+      },
+    },
+    { //Wizard marriage schedule - summoning the halloween maze
+      "Action": "EditData",
+      "Target": "characters/schedules/Wizard",
+      "When": {
+        "Day": "27",
+        "Season": "Fall"
+      },
+      "Entries": {
+        "marriage_Sat": "1000 Town 26 29 0",
+      },
+    },
+
+    //**end marriage dialogue
+    { //WIZARD EVENT - 'The Basement'
+      "Action": "EditData",
+      "Target": "data/events/Custom_WizardBasement",
+      "When": {
+        "HasFlag |contains=jojaMember": false
+      },
+      "Entries": {
+        "1000035/": "WizardSong/-500 -500/farmer -100 -100 2 Wizard -101 -101 1/pause 800/viewport 4 6 true/skippable/pause 1500/playSound stairsdown/warp farmer 4 4/pause 1000/emote farmer 16/pause 1200/move farmer 0 7 2 true/pause 800/globalFade/viewport -1000 -1000 true/halt/warp farmer 16 11/faceDirection farmer 0 true/viewport 15 7 true/move farmer 0 -5 0/pause 700/faceDirection farmer 3 true/pause 1200/faceDirection farmer 0 true/pause 200/faceDirection farmer 1 true/pause 1350/faceDirection farmer 0 true/pause 1000/message \"{{i18n:Wizard.Basement.01}}\"/pause 1000/move farmer 0 -1 0/pause 1000/showFrame farmer 15/pause 700/message \"{{i18n:Wizard.Basement.02}}\"/pause 500/showFrame farmer 37/pause 350/playSound newRecipe/playSound newRecipe/pause 1700/emote farmer 40/pause 1300/screenFlash 2/playSound wand/warp Wizard 14 5/pause 250/faceDirection farmer 3 true/pause 200/jump farmer/pause 900/startJittering/pause 120/speak Wizard \"{{i18n:Wizard.Basement.03}}\"/pause 400/stopJittering/pause 900/emote farmer 40/pause 400/speak Wizard \"{{i18n:Wizard.Basement.04}}\"/pause 500/showFrame Wizard 19/pause 700/speak Wizard \"{{i18n:Wizard.Basement.05}}\"/pause 200/showFrame Wizard 4/pause 500/speak Wizard \"{{i18n:Wizard.Basement.06}}\"/pause 500/showFrame Wizard 4 true/pause 700/speak Wizard \"{{i18n:Wizard.Basement.07}}\"/pause 500/jump farmer/pause 800/speak Wizard \"{{i18n:Wizard.Basement.08}}\"/pause 450/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.Basement.09Junimo}}\"/pause 600/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Wizard.Basement.10}}\"",
+      },
+    },
+    { //WIZARD EVENT - 'The Basement'
+      "Action": "EditData",
+      "Target": "data/events/Custom_WizardBasement",
+      "When": {
+        "HasFlag |contains=jojaMember": true
+      },
+      "Entries": {
+        "1000035/": "WizardSong/-500 -500/farmer -100 -100 2 Wizard -101 -101 1/pause 800/viewport 4 6 true/skippable/pause 1500/playSound stairsdown/warp farmer 4 4/pause 1000/emote farmer 16/pause 1200/move farmer 0 7 2 true/pause 800/globalFade/viewport -1000 -1000 true/halt/warp farmer 16 11/faceDirection farmer 0 true/viewport 15 7 true/move farmer 0 -5 0/pause 700/faceDirection farmer 3 true/pause 1200/faceDirection farmer 0 true/pause 200/faceDirection farmer 1 true/pause 1350/faceDirection farmer 0 true/pause 1000/message \"{{i18n:Wizard.Basement.01}}\"/pause 1000/move farmer 0 -1 0/pause 1000/showFrame farmer 15/pause 700/message \"{{i18n:Wizard.Basement.02}}\"/pause 500/showFrame farmer 37/pause 350/playSound newRecipe/playSound newRecipe/pause 1700/emote farmer 40/pause 1300/screenFlash 2/playSound wand/warp Wizard 14 5/pause 250/faceDirection farmer 3 true/pause 200/jump farmer/pause 900/startJittering/pause 120/speak Wizard \"{{i18n:Wizard.Basement.03}}\"/pause 400/stopJittering/pause 900/emote farmer 40/pause 400/speak Wizard \"{{i18n:Wizard.Basement.04}}\"/pause 500/showFrame Wizard 19/pause 700/speak Wizard \"{{i18n:Wizard.Basement.05}}\"/pause 200/showFrame Wizard 4/pause 500/speak Wizard \"{{i18n:Wizard.Basement.06}}\"/pause 500/showFrame Wizard 4 true/pause 700/speak Wizard \"{{i18n:Wizard.Basement.07}}\"/pause 500/jump farmer/pause 800/speak Wizard \"{{i18n:Wizard.Basement.08}}\"/pause 450/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.Basement.09Joja}}\"/pause 600/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Wizard.Basement.10}}\"",
+      },
+    },
+    { //WIZARD EVENT - 'The Sprite Spring' (not married to wizard)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "When": {
+        "Spouse |contains=Wizard": false
+      },
+      "Entries": {
+        "1032000/e 1111200": "WizardSong/-500 -500/farmer 9 28 0 Wizard 10 17 2/skippable/showFrame Wizard 20/pause 1000/viewport 8 17 true/move farmer 0 -8 0 true/pause 4750/speak Wizard \"{{i18n:Wizard.SpriteSpring.01}}\"/pause 600/emote farmer 8/pause 1250/showFrame Wizard 21/pause 200/showFrame Wizard 22/pause 200/showFrame Wizard 0/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.02}}\"/pause 800/showFrame Wizard 16/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.03}}\"/pause 800/showFrame Wizard 0/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.04}}\"/pause 700/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.SpriteSpring.05}}\"/pause 800/showFrame Wizard 0/pause 500/showFrame Wizard 22/pause 200/showFrame Wizard 21/pause 200/showFrame Wizard 20/pause 1200/speak Wizard \"{{i18n:Wizard.SpriteSpring.06}}\"/pause 400/emote farmer 32/pause 500/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 500/move farmer 0 7 2 true/pause 600/globalFade/viewport -1000 -1000/pause 1000/friendship Wizard 50/end dialogue Wizard \"{{i18n:Wizard.SpriteSpring.07}}\"",
+      },
+    },
+    { //WIZARD EVENT - 'The Sprite Spring' (married to wizard)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "When": {
+        "Spouse |contains=Wizard": true
+      },
+      "Entries": {
+        "1032000/e 1111200": "WizardSong/-500 -500/farmer 9 28 0 Wizard 10 17 2/skippable/showFrame Wizard 20/pause 1000/viewport 8 17 true/move farmer 0 -8 0 true/pause 4750/speak Wizard \"{{i18n:Wizard.SpriteSpring.01Married}}\"/pause 600/emote farmer 8/pause 1250/showFrame Wizard 21/pause 200/showFrame Wizard 22/pause 200/showFrame Wizard 0/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.02Married}}\"/pause 800/showFrame Wizard 16/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.03}}\"/pause 800/showFrame Wizard 0/pause 700/speak Wizard \"{{i18n:Wizard.SpriteSpring.04}}\"/pause 700/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.SpriteSpring.05Married}}\"/pause 800/showFrame Wizard 0/pause 500/showFrame Wizard 22/pause 200/showFrame Wizard 21/pause 200/showFrame Wizard 20/pause 1200/speak Wizard \"{{i18n:Wizard.SpriteSpring.06}}\"/pause 400/emote farmer 32/pause 500/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 500/move farmer 0 7 2 true/pause 600/globalFade/viewport -1000 -1000/pause 1000/friendship Wizard 50/end dialogue Wizard \"{{i18n:Wizard.SpriteSpring.07Married}}\"",
+      },
+    },
+    { //WIZARD EVENT - 'Dwarf and Krobus' (married to wizard) (vanilla event)
+      "Action": "EditData",
+      "Target": "data/events/sewer",
+      "When": {
+        "Spouse |contains=Wizard": true
+      },
+      "Entries": {
+        "691039/f Dwarf 50/n CF_Sewer": "Overcast/16 13/farmer -1000 -1000 0 Dwarf 14 13 1 Krobus 18 13 3 Wizard -1000 -1000 2/skippable/pause 500/emote Dwarf 12/speak Dwarf \"{{i18n:Wizard.Sewer.01}}\"/move Krobus -1 0 3/emote Krobus 12/playSound shadowpeep/speak Krobus \"{{i18n:Wizard.Sewer.02}}\"/move Dwarf 1 0 1/speak Dwarf \"{{i18n:Wizard.Sewer.03}}\"/jump Dwarf/pause 500/animate Dwarf false true 50 4 5 6 7/jump Krobus/pause 500/animate Krobus false true 50 12 13 14 15/pause 1000/playSound throw/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/positionOffset Dwarf 4 0/positionOffset Krobus -4 0/pause 30/shake Dwarf 500/playSound clubhit/jump Krobus/pause 500/shake Krobus 500/playSound clubSmash/jump Dwarf/pause 500/shake Dwarf 250/pause 250/playSound hitEnemy/pause 250/shake Krobus 250/playSound shadowHit/pause 500/faceDirection farmer 0 true/animate farmer false true 500 13 14/warp farmer 16 9/playSound stoneStep/shake Dwarf 250/pause 250/playSound hitEnemy/pause 250/playSound stoneStep/positionOffset farmer 0 16/shake Krobus 250/playSound shadowHit/pause 500/playSound stoneStep/positionOffset farmer 0 16/shake Dwarf 250/pause 250/playSound hitEnemy/pause 250/positionOffset farmer 0 16/shake Krobus 250/playSound shadowHit/pause 500/playSound stoneStep/positionOffset farmer 0 16/shake Dwarf 250/pause 250/playSound hitEnemy/pause 250/playSound stoneStep/positionOffset farmer 0 16/shake Krobus 250/playSound shadowHit/pause 500/positionOffset farmer 0 16/shake Dwarf 250/pause 250/playSound hitEnemy/pause 250/playSound stoneStep/positionOffset farmer 0 16/shake Krobus 250/playSound shadowHit/pause 500/playSound stoneStep/positionOffset farmer 0 16/warp farmer 16 11/faceDirection farmer 2/pause 300/showFrame farmer 94/jump farmer/startJittering/pause 1000/stopJittering/speed farmer 6/showFrame 0/move farmer 0 2 2 true/pause 300/shake Dwarf 1000/shake Krobus 1000/playSound clubSmash/positionOffset Dwarf -16 0/positionOffset Krobus 16 0/pause 30/positionOffset Dwarf -16 0/positionOffset Krobus 16 0/pause 30/positionOffset Dwarf -16 0/positionOffset Krobus 16 0/pause 30/positionOffset Dwarf -16 0/positionOffset Krobus 16 0/pause 30/showFrame farmer 0/pause 500/faceDirection farmer 3/faceDirection farmer 1/faceDirection farmer 2/speak Dwarf \"{{i18n:Wizard.Sewer.04}}\"/speak Krobus \"{{i18n:Wizard.Sewer.05}}\"/playMusic none/pause 1000/playSound wand/screenFlash 3/showFrame Wizard 16/warp Wizard 16 16/pause 2000/showFrame Wizard 0/pause 500/faceDirection Wizard 1 true/pause 50/faceDirection Wizard 0/pause 800/showFrame Wizard 17/screenFlash .35/playSound flameSpellHit/shake Wizard 500/specificTemporarySprite wizardSewerMagic/stopAnimation Krobus/stopAnimation Dwarf/faceDirection Krobus 2 true/faceDirection Dwarf 2 true/shake Krobus 1000/shake Dwarf 1000/pause 1000/speak Wizard \"{{i18n:Wizard.Sewer.06}}\"/pause 500/showFrame Wizard 8/playSound dwop/pause 1000/playMusic Upper_Ambient/speak Wizard \"{{i18n:Wizard.Sewer.07}}\"/pause 1000/faceDirection Dwarf 3 true/faceDirection Krobus 1 true/pause 500/emote Dwarf 40 true/emote Krobus 40 true/pause 3000/speak Dwarf \"{{i18n:Wizard.Sewer.08}}\"/faceDirection farmer 3/faceDirection Dwarf 1/pause 500/faceDirection farmer 1/pause 500/faceDirection Krobus 3/speak Krobus \"{{i18n:Wizard.Sewer.09}}\"/pause 1000/faceDirection farmer 2 true/faceDirection Dwarf 2 true/faceDirection Krobus 2 true/pause 1000/speak Wizard \"{{i18n:Wizard.Sewer.10}}\"/pause 1000/faceDirection Wizard 3 true/playSound dwop/pause 50/faceDirection Wizard 2/pause 1500/showFrame Wizard 16/playSound yoba/specificTemporarySprite WizardPromise/pause 3000/speed farmer 2/move farmer 0 -2 2/emote farmer 40/pause 800/end dialogue Wizard \"{{i18n:Wizard.Sewer.11}}\"",
+      },
+    },
+    { //WIZARD EVENT - (vanilla event, portrait expression edits) 
+      "Action": "EditData",
+      "Target": "data/events/railroad",
+      "When": {
+        "Spouse |contains=Wizard": false
+      },
+      "Entries": {
+        "529952/C": "WizardSong/54 36/Wizard 54 36 0 farmer 50 40 1/addQuest 28/skippable/move farmer 1 0 0/move farmer 0 -4 1/faceDirection Wizard 3 true/move farmer 1 0 1/pause 800/faceDirection Wizard 0/pause 600/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.Railroad.01}}\"/pause 800/faceDirection Wizard 3/pause 400/faceDirection Wizard 0/pause 400/speak Wizard \"{{i18n:Wizard.Railroad.02}}\"/pause 800/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 2/pause 800/showFrame Wizard 18/pause 800/speak Wizard \"{{i18n:Wizard.Railroad.03}}\"/pause 500/showFrame Wizard 0/pause 800/faceDirection Wizard 3/speak Wizard \"{{i18n:Wizard.Railroad.04}}\"/pause 400/faceDirection Wizard 0/speak Wizard \"{{i18n:Wizard.Railroad.05}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.Railroad.06}}\"/move Wizard -1 0 3/speak Wizard \"{{i18n:Wizard.Railroad.07}}\"/pause 500/faceDirection Wizard 3/speak Wizard \"{{i18n:Wizard.Railroad.08}}\"/pause 500/faceDirection Wizard 2/pause 500/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp2/faceDirection farmer 2 true/showFrame farmer 94/pause 3000/showFrame farmer 0/specificTemporarySprite witchFlyby/pause 4000/end"
+      },
+    },
+    { //WIZARD EVENT -  (vanilla event, portrait expression edits)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "When": {
+        "Spouse |contains=Wizard": false
+      },
+      "Entries": {
+        "418172/n hasPickedUpMagicInk": "WizardSong/2 14/farmer 3 14 3 Wizard 1 14 1/skippable/pause 1000/speak Wizard \"{{i18n:Wizard.MagicInk.01}}\"/move Wizard 1 0 1/pause 1000/speak Wizard \"{{i18n:Wizard.MagicInk.02}}\"/faceDirection Wizard 2/pause 500/showFrame Wizard 18/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.03}}\"/pause 500/showFrame Wizard 0/emote Wizard 12/pause 500/faceDirection Wizard 3/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.04}}\"/pause 500/pause 500/faceDirection Wizard 2/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.05}}\"/move Wizard -1 0 1/pause 800/faceDirection Wizard 2/pause 1000/showFrame Wizard 16/pause 800/specificTemporarySprite arcaneBook/playSound fireball/shake Wizard 500/pause 4000/faceDirection farmer 0/faceDirection Wizard 1/faceDirection Wizard 0/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.06}}\"/pause 500/faceDirection farmer 3/faceDirection Wizard 1/speak Wizard \"{{i18n:Wizard.MagicInk.07}}\"/pause 1000/emote farmer 32/pause 800/end"
+      },
+    },
+    { //WIZARD EVENT - 'the witch lair' (married to wizard) (vanilla event)
+      "Action": "EditData",
+      "Target": "data/events/railroad",
+      "When": {
+        "Spouse |contains=Wizard": true
+      },
+      "Entries": {
+        "529952/C": "WizardSong/54 36/Wizard 54 36 0 farmer 50 40 1/addQuest 28/skippable/move farmer 1 0 0/move farmer 0 -4 1/faceDirection Wizard 3 true/move farmer 1 0 1/pause 800/faceDirection Wizard 0/pause 600/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Wizard.Railroad.01Married}}\"/pause 800/faceDirection Wizard 3/pause 400/faceDirection Wizard 0/pause 400/speak Wizard \"{{i18n:Wizard.Railroad.02Married}}\"/pause 800/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 2/pause 800/showFrame Wizard 18/pause 800/speak Wizard \"...$2\"/pause 500/showFrame Wizard 0/pause 800/faceDirection Wizard 3/speak Wizard \"{{i18n:Wizard.Railroad.03}}\"/pause 400/faceDirection Wizard 0/speak Wizard \"{{i18n:Wizard.Railroad.04}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.Railroad.05}}\"/move Wizard -1 0 3/speak Wizard \"{{i18n:Wizard.Railroad.06Married}}\"/move Wizard 1 0 0/speak Wizard \"{{i18n:Wizard.Railroad.07}}\"/pause 500/faceDirection Wizard 3/speak Wizard \"{{i18n:Wizard.Railroad.08}}\"/pause 500/faceDirection Wizard 2/pause 500/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp2/faceDirection farmer 2 true/showFrame farmer 94/pause 3000/showFrame farmer 0/specificTemporarySprite witchFlyby/pause 4000/end",
+      },
+    },
+    { //WIZARD EVENT - 'his ex' (married to wizard) (vanilla event)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "When": {
+        "Spouse |contains=Wizard": true
+      },
+      "Entries": {
+        "418172/n hasPickedUpMagicInk": "WizardSong/2 14/farmer 3 14 3 Wizard 1 14 1/skippable/pause 1000/speak Wizard \"{{i18n:Wizard.MagicInk.01}}\"/move Wizard 1 0 1/pause 1000/speak Wizard \"{{i18n:Wizard.MagicInk.02}}\"/faceDirection Wizard 2/pause 500/showFrame Wizard 18/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.03Married}}\"/pause 500/showFrame Wizard 0/emote Wizard 12/pause 500/faceDirection Wizard 3/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.04Married}}\"/pause 500/pause 500/faceDirection Wizard 2/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.05Married}}\"/move Wizard -1 0 1/pause 800/faceDirection Wizard 2/pause 1000/showFrame Wizard 16/pause 800/specificTemporarySprite arcaneBook/playSound fireball/shake Wizard 500/pause 4000/faceDirection farmer 0/faceDirection Wizard 1/faceDirection Wizard 0/pause 500/speak Wizard \"{{i18n:Wizard.MagicInk.06Married}}\"/pause 500/faceDirection farmer 3/faceDirection Wizard 1/speak Wizard \"{{i18n:Wizard.MagicInk.07Married}}\"/pause 1000/emote farmer 32/pause 800/end",
+      },
+    },
+    { //WIZARD 2 HEART EVENT - 'The Barrier'
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "1000075/f Wizard 500/w sunny/t 600 1800": "spring_day_ambient/-500 -500/farmer 77 118 3 Wizard 54 118 0 Andy 58 20 0 Krobus 10 5 0/changeLocation Custom_ForestWest/skippable/showFrame Wizard 17/viewport 67 118 true/viewport move -1 0 9000 true/move farmer -18 0 3 true/pause 3500/playSound healSound/glow 135 206 235/pause 2500/playSound healSound/glow 65 105 225/pause 3000/playSound healSound/glow 176 224 230/pause 1000/emote farmer 8 true/pause 1350/showFrame Wizard 8/pause 800/move Wizard 0 0 1/pause 900/speak Wizard \"...\"/pause 1500/speak Wizard \"{{i18n:Wizard.2Hearts.01}}\"/pause 800/faceDirection Wizard 2 true/pause 600/showFrame Wizard 16/pause 1200/shake Wizard 500/pause 500/emote farmer 8/pause 500/move farmer -2 0 3/pause 1250/showFrame Wizard 0/pause 1000/faceDirection Wizard 1 true/pause 800/speak Wizard \"{{i18n:Wizard.2Hearts.02}}\"/pause 500/emote farmer 8/pause 1000/speak Wizard \"{{i18n:Wizard.2Hearts.03}}\"/pause 250/emote farmer 16/pause 1200/speak Wizard \"{{i18n:Wizard.2Hearts.04}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.2Hearts.05}}\"/pause 600/emote Wizard 40 true/pause 750/speak Wizard \"{{i18n:Wizard.2Hearts.06}}\"/pause 750/faceDirection Wizard 2 true/pause 500/showFrame Wizard 16/pause 750/screenFlash 1/playSound wand/warp Wizard -200 -200/pause 1450/globalFade/viewport -1000 -1000/pause 1000/end dialogue Wizard \"{{i18n:Wizard.2Hearts.07}}\"",
+      },
+    },
+    { //WIZARD 4 HEART EVENT - 'Shrine of Illusions' (Female)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "Entries": {
+        "1724095/g female/n ShrineOfIllusionsLetter": "WizardSong/-500 -500/farmer -100 -100 0 Wizard 7 29 0/addTemporaryActor FemaleFarmer 16 32 -104 -104 0/pause 1000/showFrame Wizard 17/viewport 9 30 true/skippable/pause 1300/shake Wizard 250/playSound leafrustle/pause 1200/shake Wizard 250/playSound leafrustle/pause 1200/playSound doorClose/warp farmer 9 34/pause 1100/shake Wizard 250/playSound leafrustle/pause 300/move farmer 0 -5 3/pause 600/playSound leafrustle/shake Wizard 300/pause 1500/speak Wizard \"{{i18n:Wizard.4hearts.01}}\"/pause 900/shake Wizard 250/playSound leafrustle/pause 1250/shake Wizard 250/playSound leafrustle/pause 1000/shake Wizard 250/playSound leafrustle/pause 500/emote farmer 8/pause 600/showFrame Wizard 8/pause 600/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.02}}\"/pause 700/emote farmer 60/pause 100/speak Wizard \"{{i18n:Wizard.4hearts.03}}\"/pause 400/globalFade/viewport -1000 -1000 true/warp Wizard 3 19/warp farmer 6 19/faceDirection Wizard 2/viewport 6 20 true/pause 2000/playSound pullItemFromWater/shake Wizard 700/pause 1600/speak Wizard \"{{i18n:Wizard.4hearts.04}}\"/pause 600/showFrame Wizard 16/pause 800/screenFlash .5/playSound healSound/pause 400/screenFlash .5/playSound healSound/pause 700/showFrame Wizard 0/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.05}}\"/pause 600/move farmer -2 0 3/pause 600/faceDirection farmer 2 true/pause 300/playSound dwop/showFrame farmer 90/pause 1000/showFrame farmer 91/pause 200/showFrame farmer 93/playSound gulp/pause 200/showFrame farmer 92/pause 200/showFrame farmer 93/pause 200/showFrame farmer 92/pause 200/showFrame farmer 93/pause 200/showFrame farmer 92/showFrame farmer 91/pause 100/showFrame farmer 90/showFrame farmer 0/pause 900/glow 0 0 200/playSound coldSpell/pause 800/glow 0 0 255/pause 500/glow 0 0 140/pause 700/message \"{{i18n:Wizard.4hearts.06}}\"/pause 800/faceDirection farmer 3 true/pause 400/emote farmer 32/pause 200/speak Wizard \"{{i18n:Wizard.4hearts.07}}\"/pause 400/globalFade/viewport -1000 -1000/changeLocation Custom_WizardBasement/warp Wizard 23 6/warp farmer 20 6/faceDirection Wizard 3 true/faceDirection farmer 1 true/viewport 16 6 true/pause 1200/speak Wizard \"{{i18n:Wizard.4hearts.08}}\"/stopMusic/pause 700/faceDirection Wizard 0/pause 800/showFrame Wizard 17/pause 700/shake Wizard 800/pause 700/screenFlash 2/playSound healSound/playSound yoba/warp Wizard 23 6/showFrame Wizard 24 true/pause 800/emote farmer 16/pause 400/showFrame Wizard 25 true/pause 600/speak Wizard \"{{i18n:Wizard.4hearts.09}}\"/pause 600/showFrame Wizard 24 true/pause 1200/screenFlash 2/playSound healSound/playSound yoba/warp Wizard 23 6/showFrame Wizard 8 true/pause 1000/faceDirection Wizard 3 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.10}}\"/pause 400/globalFade/viewport -1000 -1000 true/warp Wizard 20 6/warp farmer 23 6/faceDirection Wizard 1 true/faceDirection farmer 0 true/viewport 16 6 true/pause 2200/startJittering/pause 800/screenFlash 2/playSound healSound/playSound yoba/stopJittering/warp farmer -200 -200/warp FemaleFarmer 23 6/pause 1400/faceDirection FemaleFarmer 3 true/pause 1300/speak Wizard \"{{i18n:Wizard.4hearts.11}}\"/pause 800/faceDirection FemaleFarmer 0/pause 1200/screenFlash 2/playSound healSound/playSound yoba/warp FemaleFarmer -195 -195/warp farmer 23 6/pause 1750/faceDirection farmer 3 true/pause 600/speak Wizard \"{{i18n:Wizard.4hearts.12}}\"/pause 700/jump farmer/pause 700/speak Wizard \"{{i18n:Wizard.4hearts.13}}\"/pause 700/globalFade/viewport -1000 -1000/pause 1000/playSound reward/message \"{{i18n:Wizard.4hearts.14}}\"/pause 1000/end dialogue Wizard \"{{i18n:Wizard.4hearts.15}}\"",
+      },
+    },
+    { //WIZARD 4 HEART EVENT - 'Shrine of Illusions' (Male)
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "Entries": {
+        "1724095/g male/n ShrineOfIllusionsLetter": "WizardSong/-500 -500/farmer -100 -100 0 Wizard 7 29 0/addTemporaryActor MaleFarmer 16 32 -104 -104 0/pause 1000/showFrame Wizard 17/viewport 9 30 true/skippable/pause 1300/shake Wizard 250/playSound leafrustle/pause 1200/shake Wizard 250/playSound leafrustle/pause 1200/playSound doorClose/warp farmer 9 34/pause 1100/shake Wizard 250/playSound leafrustle/pause 300/move farmer 0 -5 3/pause 600/playSound leafrustle/shake Wizard 300/pause 1500/speak Wizard \"{{i18n:Wizard.4hearts.01}}\"/pause 900/shake Wizard 250/playSound leafrustle/pause 1250/shake Wizard 250/playSound leafrustle/pause 1000/shake Wizard 250/playSound leafrustle/pause 500/emote farmer 8/pause 600/showFrame Wizard 8/pause 600/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.02}}\"/pause 700/emote farmer 60/pause 100/speak Wizard \"{{i18n:Wizard.4hearts.03}}\"/pause 400/globalFade/viewport -1000 -1000 true/warp Wizard 3 19/warp farmer 6 19/faceDirection Wizard 2/viewport 6 20 true/pause 2000/playSound pullItemFromWater/shake Wizard 700/pause 1600/speak Wizard \"{{i18n:Wizard.4hearts.04}}\"/pause 600/showFrame Wizard 16/pause 800/screenFlash .5/playSound healSound/pause 400/screenFlash .5/playSound healSound/pause 700/showFrame Wizard 0/pause 700/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.05}}\"/pause 600/move farmer -2 0 3/pause 600/faceDirection farmer 2 true/pause 300/playSound dwop/showFrame farmer 90/pause 1000/showFrame farmer 91/pause 200/showFrame farmer 93/playSound gulp/pause 200/showFrame farmer 92/pause 200/showFrame farmer 93/pause 200/showFrame farmer 92/pause 200/showFrame farmer 93/pause 200/showFrame farmer 92/showFrame farmer 91/pause 100/showFrame farmer 90/showFrame farmer 0/pause 900/glow 0 0 200/playSound coldSpell/pause 800/glow 0 0 255/pause 500/glow 0 0 140/pause 700/message \"{{i18n:Wizard.4hearts.06}}\"/pause 800/faceDirection farmer 3 true/pause 400/emote farmer 32/pause 200/speak Wizard \"{{i18n:Wizard.4hearts.07}}\"/pause 400/globalFade/viewport -1000 -1000/changeLocation Custom_WizardBasement/warp Wizard 23 6/warp farmer 20 6/faceDirection Wizard 3 true/faceDirection farmer 1 true/viewport 16 6 true/pause 1200/speak Wizard \"{{i18n:Wizard.4hearts.08}}\"/stopMusic/pause 700/faceDirection Wizard 0/pause 800/showFrame Wizard 17/pause 700/shake Wizard 800/pause 700/screenFlash 2/playSound healSound/playSound yoba/warp Wizard 23 6/showFrame Wizard 24 true/pause 800/emote farmer 16/pause 400/showFrame Wizard 25 true/pause 600/speak Wizard \"{{i18n:Wizard.4hearts.09}}\"/pause 600/showFrame Wizard 24 true/pause 1200/screenFlash 2/playSound healSound/playSound yoba/warp Wizard 23 6/showFrame Wizard 8 true/pause 1000/faceDirection Wizard 3 true/pause 500/speak Wizard \"{{i18n:Wizard.4hearts.10}}\"/pause 400/globalFade/viewport -1000 -1000 true/warp Wizard 20 6/warp farmer 23 6/faceDirection Wizard 1 true/faceDirection farmer 0 true/viewport 16 6 true/pause 2200/startJittering/pause 800/screenFlash 2/playSound healSound/playSound yoba/stopJittering/warp farmer -200 -200/warp MaleFarmer 23 6/pause 1400/faceDirection MaleFarmer 3 true/pause 1300/speak Wizard \"{{i18n:Wizard.4hearts.11}}\"/pause 800/faceDirection MaleFarmer 0/pause 1200/screenFlash 2/playSound healSound/playSound yoba/warp MaleFarmer -195 -195/warp farmer 23 6/pause 1750/faceDirection farmer 3 true/pause 600/speak Wizard \"{{i18n:Wizard.4hearts.12}}\"/pause 700/jump farmer/pause 700/speak Wizard \"{{i18n:Wizard.4hearts.13}}\"/pause 700/globalFade/viewport -1000 -1000/pause 1000/playSound reward/message \"{{i18n:Wizard.4hearts.14}}\"/pause 1000/end dialogue Wizard \"{{i18n:Wizard.4hearts.15}}\"",
+      },
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/FemaleFarmer",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/FemaleFarmer.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/FemaleFarmer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/FemaleFarmer/FemaleFarmer.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/MaleFarmer",
+      "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/MaleFarmer.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/MaleFarmer",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/MaleFarmer/MaleFarmer.png"
+    },
+    { //Patches shrine of illusions
+      "Action": "EditMap",
+      "Target": "Maps/Custom_WizardBasement",
+      "FromFile": "assets/Maps/MapPatches/ShrineOfIllusions.tbin",
+      "ToArea": {
+        "X": 23,
+        "Y": 4,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent": "1724095"
+      },
+      "Update": "OnLocationChange"
+    },
+    { //WIZARD 6 HEART EVENT - 'A Wizard's Garden'
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "1724096/f Wizard 1500/t 900 1700/w sunny/z winter": "continue/-500 -500/farmer 9 28 0 Wizard 5 21 3 Leah 34 25 2/skippable/pause 1000/viewport 9 22 clamp true/move farmer 0 -6 3 true/pause 1500/showFrame Wizard 15 true/shake Wizard 500/pause 500/screenFlash 1/playSound healSound/pause 500/showFrame Wizard 12 true/pause 800/faceDirection Wizard 2/pause 350/faceDirection Wizard 1/pause 600/speak Wizard \"{{i18n:Wizard.6Hearts.01}}\"/pause 500/faceDirection Wizard 2/pause 350/speed Wizard 1/move Wizard 0 1 2/pause 300/faceDirection Wizard 3 true/pause 1000/showFrame Wizard 15 true/pause 400/shake Wizard 500/pause 500/screenFlash 1/playSound healSound/pause 400/showFrame Wizard 12 true/pause 300/move farmer -2 0 3/pause 600/emote farmer 8 true/pause 800/faceDirection Wizard 2 true/pause 300/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.6Hearts.02}}\"/pause 800/faceDirection Wizard 2 true/pause 500/faceDirection Wizard 3 true/pause 800/showFrame Wizard 15 true/pause 400/shake Wizard 500/pause 500/screenFlash 1/playSound healSound/pause 400/showFrame Wizard 12 true/pause 850/speak Wizard \"{{i18n:Wizard.6Hearts.03}}\"/pause 850/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 1 true/pause 1000/speak Wizard \"{{i18n:Wizard.6Hearts.04}}\"/pause 750/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 500/speak Wizard \"{{i18n:Wizard.6Hearts.05}}\"/pause 1000/faceDirection Wizard 2 true/pause 300/faceDirection Wizard 1 true/pause 750/speak Wizard \"$q -1 null #{{i18n:Wizard.6Hearts.06}}#$r -1 0 wizard_event1#{{i18n:Wizard.6Hearts.07}}#$r -1 0 wizard_event2#{{i18n:Wizard.6Hearts.08}}\"/pause 800/speak Wizard \"{{i18n:Wizard.6Hearts.09}}\"/pause 800/globalFade/viewport -1000 -1000/pause 500/end dialogue Wizard \"{{i18n:Wizard.6Hearts.10}}\"",
+      },
+    },
+    { //WIZARD 8 HEART EVENT - 'Junimo Rising'
+      "Action": "EditData",
+      "Target": "data/events/wizardhouse",
+      "Entries": {
+        "1724097/f Wizard 2000": "none/-500 -500/farmer 9 32 0 Wizard 10 17 2/skippable/addTemporaryActor Junimo 16 32 -20 -20 2/addTemporaryActor WizardSpellBook 16 16 6 16 2 false/addTemporaryActor WizardJunimo1 16 32 9 17 2/addTemporaryActor WizardJunimo2 16 32 11 17 2/addTemporaryActor WizardJunimo3 16 32 10 18 2/addTemporaryActor WizardJunimo4 16 32 10 16 2/positionOffset WizardJunimo4 -17 30/positionOffset WizardJunimo1 17 14 true/positionOffset WizardJunimo2 -15 5 true/positionOffset WizardJunimo3 4 -35 true/pause 1000/playMusic ragtime/faceDirection WizardJunimo1 1 true/faceDirection WizardJunimo2 3 true/viewport 7 18 true/move farmer 0 -12 0 true/pause 500/jump WizardJunimo1/pause 200/playSound junimoMeep1/pause 600/shake Wizard 600/playSound junimoMeep1/pause 400/jump WizardJunimo2/shake WizardJunimo3 500/pause 400/playSound junimoMeep1/pause 500/playSound junimoMeep1/shake Wizard 800/pause 300/playSound junimoMeep1/jump WizardJunimo4/pause 600/shake WizardJunimo1 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Wizard \"{{i18n:Wizard.8hearts.01}}\"/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/shake WizardJunimo3 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/shake Wizard 2000/pause 300/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 200/showFrame Wizard 16 true/pause 500/playSound junimoMeep1/pause 500/screenFlash 1/playSound healSound/warp WizardJunimo1 9 17/warp WizardJunimo2 11 17/warp WizardJunimo3 10 18/warp WizardJunimo4 10 16/emote farmer 16 true/jump WizardJunimo1/jump WizardJunimo2/jump WizardJunimo3/jump WizardJunimo4/speed WizardJunimo1 1/move WizardJunimo1 -1 0 1 true/speed WizardJunimo2 1/move WizardJunimo2 1 0 3 true/speed WizardJunimo3 1/move WizardJunimo3 0 1 0 true/speed WizardJunimo4 1/move WizardJunimo4 0 -1 2 true/pause 250/playSound junimoMeep1/pause 150/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 100/playSound junimoMeep1/pause 150/showFrame Wizard 0 true/pause 500/shake WizardJunimo1 500/playSound junimoMeep1/textAboveHead WizardJunimo1 \"{{i18n:Wizard.8hearts.02}}\"/pause 300/speed WizardJunimo1 1/move WizardJunimo1 1 0 1 true/pause 300/playSound junimoMeep1/faceDirection Wizard 3 true/pause 500/shake WizardJunimo4 600/playSound junimoMeep1/textAboveHead WizardJunimo4 \"{{i18n:Wizard.8hearts.03}}\"/pause 750/faceDirection Wizard 0 true/pause 640/shake WizardJunimo2 700/playSound junimoMeep1/textAboveHead WizardJunimo2 \"{{i18n:Wizard.8hearts.04}}\"/pause 300/faceDirection Wizard 1 true/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 400/faceDirection Wizard 2 true/pause 250/playSound junimoMeep1/pause 250/speak Wizard \"{{i18n:Wizard.8hearts.05}}\"/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/positionOffset WizardJunimo1 1 0 true/pause 10/shake WizardJunimo1 1000/pause 350/speed WizardJunimo2 1/move WizardJunimo2 -1 0 3 true/pause 500/faceDirection Wizard 1 true/playSound junimoMeep1/pause 300/speak Wizard \"{{i18n:Wizard.8hearts.06}}\"/pause 300/playSound junimoMeep1/speed WizardJunimo4 1/move WizardJunimo4 0 1 2 true/pause 400/playSound junimoMeep1/pause 250/faceDirection Wizard 0 true/pause 500/shake WizardJunimo2 500/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 300/speed WizardJunimo3 1/move WizardJunimo3 0 -1 0 true/pause 300/playSound junimoMeep1/pause 500/faceDirection Wizard 1 true/pause 250/faceDirection Wizard 2 true/pause 100/playSound junimoMeep1/pause 100/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 10/positionOffset WizardJunimo3 0 -1 true/pause 150/playSound junimoMeep1/shake WizardJunimo4 500/pause 200/faceDirection Wizard 3 true/pause 400/speak Wizard \"{{i18n:Wizard.8hearts.07}}\"/pause 400/playSound junimoMeep1/shake WizardJunimo1 400/pause 300/viewport move 0 -1 3000 true/move farmer -2 0 0/playSound junimoMeep1/move farmer 0 -1 3/shake WizardJunimo3 500/move farmer -1 0 0/jump WizardJunimo2/playSound junimoMeep1/move farmer 0 -2 0/pause 300/playSound junimoMeep1/pause 200/showFrame farmer 15 true/pause 250/playSound newRecipe/warp WizardSpellBook -10 -10/pause 500/showFrame farmer 37 true/pause 400/shake WizardJunimo2 400/playSound junimoMeep1/pause 600/screenFlash 2/playSound wand/warp WizardJunimo1 -30 -30/warp WizardJunimo2 -29 29/warp WizardJunimo3 -28 -28/stopMusic/warp WizardJunimo4 10 16/speed WizardJunimo4 1/move WizardJunimo4 0 -1 2/pause 800/showFrame farmer 12 true/pause 400/faceDirection Wizard 3 true/pause 250/faceDirection Wizard 0 true/pause 400/faceDirection farmer 1 true/pause 500/speak Junimo \"{{i18n:Wizard.8hearts.08}}\"/pause 500/emote Wizard 28 true/pause 1000/faceDirection Wizard 3 true/pause 500/speak Wizard \"{{i18n:Wizard.8hearts.09}}\"/pause 750/faceDirection Wizard 0 true/pause 500/speak Wizard \"{{i18n:Wizard.8hearts.10}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Wizard.8hearts.11}}\"/pause 1250/message \"{{i18n:Wizard.8hearts.12}}\"/pause 500/playMusic WizardSong/warp Wizard 11 19/faceDirection Wizard 0 true/positionOffset Wizard -10 0 true/warp farmer 9 19/faceDirection farmer 0 true/positionOffset farmer -8 -4 true/warp WizardJunimo4 10 17/positionOffset WizardJunimo4 3 -4 true/viewport 7 19 true/pause 800/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 300/animate WizardJunimo4 false true 150 24 25 26 27/pause 800/showFrame Wizard 17 true/pause 500/shake Wizard 500/pause 500/screenFlash 1/playSound wand/stopAnimation WizardJunimo4/warp WizardJunimo4 -27 -27/pause 750/showFrame Wizard 8 true/pause 800/faceDirection Wizard 3 true/pause 600/faceDirection farmer 1 true/pause 600/speak Wizard \"{{i18n:Wizard.8hearts.13}}\"/pause 850/speak Wizard \"{{i18n:Wizard.8hearts.14}}{{i18n:Wizard.8hearts.15}}{{i18n:Wizard.8hearts.16}}\"/pause 800/shake Wizard 2000/textAboveHead Wizard \"{{i18n:Wizard.8hearts.17}}\"/pause 2500/speak Wizard \"{{i18n:Wizard.8hearts.18}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.8hearts.19}}\"/pause 500/globalFade/viewport -1000 -1000/friendship Wizard 50/pause 500/end dialogue Wizard \"{{i18n:Wizard.8hearts.20}}\"",
+      },
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WizardJunimo1", //Blue, left
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/WizardJunimo1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WizardJunimo2", //Yellow, right
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/WizardJunimo2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WizardJunimo3", //Green, bottom
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/WizardJunimo3.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WizardJunimo4", //Purple, top
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/WizardJunimo4.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/WizardSpellBook",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardSpellBook.png"
+    },
+    { //WIZARD 10 HEART EVENT - 'A Forest Feast'
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "1724098/n MysteriousWizardLetter/t 1330 1630": "continue/-500 -500/farmer 115 35 3 Wizard 105 35 3/skippable/changeLocation Custom_ForestWest/positionOffset Wizard 7 0 true/viewport 111 35 true/viewport move -1 0 4000 true/move farmer -8 0 3 true/pause 4750/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.10hearts.01}}\"/pause 850/speed Wizard 1/move Wizard 1 0 1/pause 500/speak Wizard \"{{i18n:Wizard.10hearts.02}}\"/pause 1000/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/showFrame farmer 7 true/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/positionOffset farmer -1 0 true/pause 25/pause 500/showFrame Wizard 5 true/pause 500/shake Wizard 1000/pause 300/startJittering/pause 600/screenFlash 1/playSound wand/warp farmer -100 -100/warp Wizard -100 -100/stopJittering/faceDirection Wizard 2 true/faceDirection farmer 2 true/showFrame farmer 0 true/showFrame Wizard 16 true/pause 2000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_GrenvilleFalls/playMusic FlashShifter.StardewValleyExpandedCP_GrenvilleFalls/viewport 30 23 true/pause 2500/screenFlash 1/playSound wand/warp farmer 31 22/warp Wizard 29 22/pause 1250/emote farmer 16 true/pause 300/showFrame Wizard 0 true/pause 2250/faceDirection Wizard 1 true/pause 750/faceDirection farmer 3 true/pause 600/speak Wizard \"{{i18n:Wizard.10hearts.03}}\"/pause 1000/faceDirection farmer 2 true/pause 850/faceDirection Wizard 2 true/pause 1000/globalFade/viewport 54 0 clamp true/viewport move -1 0 6250 true/pause 4000/globalFade/viewport 0 0 clamp true/viewport move 1 0 6250 true/pause 4000/globalFade/viewport 30 23 true/pause 1750/speak Wizard \"{{i18n:Wizard.10hearts.04}}\"/pause 500/emote Wizard 40/pause 400/faceDirection farmer 3 true/pause 800/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.10hearts.05}}\"/pause 850/faceDirection Wizard 0 true/pause 600/speed Wizard 1/move Wizard 0 -2 0 true/viewport move 0 -1 2000 true/pause 750/faceDirection farmer 0 true/pause 1350/speak Wizard \"{{i18n:Wizard.10hearts.06}}\"/pause 1000/showFrame Wizard 17 true/pause 500/shake Wizard 750/pause 750/screenFlash 1/positionOffset Wizard -8 0 true/playSound wand/addTemporaryActor WizardFeast 111 50 27 18 2 false/positionOffset WizardFeast -35 12 true/addLantern 1000 29 18 2/pause 500/jump farmer/pause 500/showFrame Wizard 8 true/pause 500/shake Wizard 500/pause 800/viewport move 0 -1 2500 true/move farmer 0 -1 3/move farmer -1 0 0/shake Wizard 650/move farmer 0 -1 3/pause 850/shake Wizard 500/pause 1000/speak Wizard \"{{i18n:Wizard.10hearts.07}}\"/pause 750/shake Wizard 500/pause 1000/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.10hearts.08}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.10hearts.09}}\"/pause 1000/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/showFrame farmer 101 true/showFrame Wizard 28 true/playSound dwop/specificTemporarySprite heart 30 19/pause 2250/positionOffset Wizard -1 0/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/showFrame Wizard 4 true/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/showFrame farmer 6 true/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 1000/speak Wizard \"{{i18n:Wizard.10hearts.10}}\"/pause 1000/faceDirection farmer 0 true/pause 750/faceDirection Wizard 0 true/pause 800/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/pause 800/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 25/positionOffset farmer -1 0/pause 500/globalFade/viewport -1000 -1000/pause 1500/stopMusic/pause 500/end",
+      },
+    },
+    { //111x50
+      "Action": "Load",
+      "Target": "Characters/WizardFeast",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardFeast.png"
+    },
+    { //Wizard 14 heart event - part 1 - (farmhouse level II)
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasSeenEvent": "1724098",
+        "FarmhouseUpgrade": 1,
+        "HasFlag |contains=Island_UpgradeHouse": true
+      },
+      "Entries": {
+        "1724099/O Wizard/f Wizard 3500/t 1800 2600/e 1724098": "none/-500 -500/farmer 11 5 3 Wizard 4 5 0/makeInvisible 4 5 8 1/pause 750/playMusic 50s/pause 500/positionOffset Wizard 0 -13/skippable/viewport 5 5 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.14hearts1.01}}\"/pause 500/emote farmer 8 true/pause 1000/speak Wizard \"{{i18n:Wizard.14hearts1.02}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Wizard.14hearts1.03}}\""
+      },
+    },
+    { //Wizard 14 heart event - part 1 - (farmhouse level III)
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasSeenEvent": "1724098",
+        "FarmhouseUpgrade": 2,
+        "HasFlag |contains=Island_UpgradeHouse": true
+      },
+      "Entries": {
+        "1724099/O Wizard/f Wizard 3500/t 1800 2600/e 1724098": "none/-500 -500/farmer 14 14 3 Wizard 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.14hearts1.01}}\"/pause 500/emote farmer 8 true/pause 1000/speak Wizard \"{{i18n:Wizard.14hearts1.02}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Wizard.14hearts1.03}}\""
+      },
+    },
+    { //Wizard 14 heart event - part 1 - Farmhouse level (IV)
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasSeenEvent": "1724098",
+        "FarmhouseUpgrade": 3,
+        "HasFlag |contains=Island_UpgradeHouse": true
+      },
+      "Entries": {
+        "1724099/O Wizard/f Wizard 3500/t 1800 2600/e 1724098": "none/-500 -500/farmer 29 24 3 Wizard 22 24 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 23 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Wizard.14hearts1.01}}\"/pause 500/emote farmer 8 true/pause 1000/speak Wizard \"{{i18n:Wizard.14hearts1.02}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogue Wizard \"{{i18n:Wizard.14hearts1.03}}\""
+      },
+    },
+    { //WIZARD 14 heart event - part 2 - 'Under the Sea'   
+      "Action": "EditData",
+      "Target": "data/events/IslandWest",
+      "When": {
+        "HasSeenEvent |contains=1724099": true
+      },
+      "Entries": {
+        "1724100/O Wizard/c 1/t 1000 1700": "50s/-500 -500/farmer 47 83 3 Wizard 32 83 0/addTemporaryActor WizardsMagicBubble 48 64 -50 -50 2 false/addTemporaryActor FarmersMagicBubble 48 64 -45 -45 2 false/addTemporaryActor FishGroup1Light 60 150 -30 -30 2 false/addTemporaryActor FishGroup1Dark 60 150 -28 -28 2 false/addTemporaryActor FishGroup2Light 60 150 -26 -26 2 false/addTemporaryActor FishGroup2Dark 60 150 -24 -24 2 false/addTemporaryActor FishGroup3Light 60 150 -22 -22 2 false/addTemporaryActor FishGroup3Dark 60 150 -20 -20 2 false/addTemporaryActor FishGroup4Light 60 150 -18 -18 2 false/addTemporaryActor FishGroup4Dark 60 150 -16 -16 2 false/addTemporaryActor FishGroup5Light 60 150 -14 -14 2 false/addTemporaryActor FishGroup5Dark 60 150 -12 -12 2 false/addTemporaryActor FishGroup6Dark 60 150 -10 -10 2 false/addTemporaryActor FishGroup7Dark 60 150 -4 -4 2 false/addTemporaryActor FishGroup8Dark 60 150 -2 -2 2 false/addTemporaryActor FishGroup9Dark 60 150 -3 -3 2 false/addTemporaryActor FishGroup10Dark 60 150 -4 -4 2 false/addTemporaryActor FishGroup11Dark 60 150 -4 -4 2 false/addTemporaryActor FishGroup12Dark 60 150 -4 -4 2 false/addTemporaryActor FishGroup13Dark 60 150 -4 -4 2 false/addTemporaryActor BubbleGroup1 60 150 -8 -8 2 false/addTemporaryActor BubbleGroup2 60 150 -6 -6 2 false/addTemporaryActor BubbleGroup3 60 150 -16 -6 2 false/viewport 40 83 true/viewport move -1 0 7000 true/move farmer -13 0 3 true/pause 4800/faceDirection Wizard 1 true/pause 900/speak Wizard \"{{i18n:Wizard14hearts2.01}}\"/pause 1000/faceDirection Wizard 2 true/pause 600/speak Wizard \"{{i18n:Wizard14hearts2.02}}\"/pause 750/move Wizard 0 6 2 true/viewport move 0 1 6500 true/pause 750/faceDirection farmer 2 true/pause 650/move farmer 0 6 2 true/pause 5000/speak Wizard \"{{i18n:Wizard14hearts2.03}}\"/pause 500/faceDirection farmer 3 true/pause 650/emote Wizard 40/pause 400/speak Wizard \"{{i18n:Wizard14hearts2.04}}\"/pause 500/faceDirection Wizard 1 true/pause 600/speak Wizard \"{{i18n:Wizard14hearts2.05}}\"/pause 800/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 400/move farmer 2 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 1000/showFrame Wizard 19 true/pause 800/shake Wizard 500/pause 500/screenFlash 2/warp FarmersMagicBubble 35 90/warp WizardsMagicBubble 31 90/positionOffset WizardsMagicBubble -5 -5 true/positionOffset FarmersMagicBubble -4 -3 true/playSound wand/glow 255 192 203/pause 700/emote farmer 16 true/pause 500/showFrame Wizard 4 true/pause 500/speak Wizard \"{{i18n:Wizard14hearts2.06}}\"/pause 1000/speak Wizard \"{{i18n:Wizard14hearts2.07}}\"/pause 600/startJittering/pause 600/stopJittering/pause 650/speak Wizard \"{{i18n:Wizard14hearts2.08}}\"/pause 600/faceDirection Wizard 2 true/pause 1000/faceDirection farmer 2 true/pause 500/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_Atlantis/warp farmer -20 -20/warp Wizard -21 -21/playMusic FlashShifter.StardewValleyExpandedCP_Atlantis/pause 2000/playSound pullItemFromWater/pause 5250/warp FishGroup1Light 16 9/speed FishGroup1Light 1/move FishGroup1Light -50 0 2 true/warp FishGroup2Light 36 8/speed FishGroup2Light 1/move FishGroup2Light 50 0 2 true/warp FishGroup3Light 27 9/speed FishGroup3Light 1/move FishGroup3Light -50 0 2 true/warp FishGroup4Light 5 13/speed FishGroup4Light 1/move FishGroup4Light 50 0 2 true/warp FishGroup5Light 42 12/speed FishGroup5Light 1/move FishGroup5Light -50 0 2 true/warp BubbleGroup1 27 16/speed BubbleGroup1 1/move BubbleGroup1 0 -20 2 true/warp BubbleGroup2 34 22/speed BubbleGroup2 1/move BubbleGroup2 0 -20 2 true/warp BubbleGroup3 14 20/speed BubbleGroup3 1/move BubbleGroup3 0 -20 2 true/viewport 0 0 clamp true/viewport move 1 0 9250 true/pause 7000/globalFade/viewport -1000 -1000/pause 1250/warp FishGroup1Dark 55 64/speed FishGroup1Dark 1/move FishGroup1Dark -65 0 2 true/warp FishGroup3Dark 35 57/speed FishGroup3Dark 1/move FishGroup3Dark -65 0 2 true/warp FishGroup4Dark 32 74/speed FishGroup4Dark 1/move FishGroup4Dark 65 0 2 true/warp FishGroup5Dark 36 71/speed FishGroup5Dark 1/move FishGroup5Dark -65 0 2 true/warp FishGroup6Dark 1 57/speed FishGroup6Dark 1/move FishGroup6Dark -65 0 2 true/warp FishGroup10Dark 12 51/speed FishGroup10Dark 1/move FishGroup10Dark 65 0 2 true/viewport 59 79 clamp true/warp FishGroup8Dark 59 53/speed FishGroup8Dark 1/move FishGroup8Dark -65 0 2 true/viewport 59 79 clamp true/viewport move -1 0 9250 true/pause 7000/globalFade/viewport -1000 -1000/warp farmer 24 60/warp Wizard 28 59/warp WizardsMagicBubble 27 60/warp FarmersMagicBubble 23 61/positionOffset FarmersMagicBubble 20 -45 true/positionOffset WizardsMagicBubble 0 -15 true/positionOffset Wizard 0 -15 true/positionOffset farmer 20 -34 true/pause 1000/viewport 26 53 true/viewport move 0 1 12000 true/warp FishGroup5Dark -20 -20/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/positionOffset farmer 0 2/positionOffset FarmersMagicBubble 0 2/positionOffset Wizard 0 2/positionOffset WizardsMagicBubble 0 2/pause 25/warp FishGroup2Dark 0 68/speed FishGroup2Dark 1/move FishGroup2Dark 65 0 2 true/pause 1000/faceDirection Wizard 3 true/pause 650/faceDirection farmer 1 true/pause 500/warp FishGroup7Dark 0 56/speed FishGroup7Dark 1/move FishGroup7Dark 65 0 2 true/speak Wizard \"{{i18n:Wizard14hearts2.09}}\"/pause 700/startJittering/pause 500/stopJittering/pause 1500/faceDirection farmer 2 true/pause 1500/faceDirection farmer 3 true/pause 1300/faceDirection farmer 0 true/pause 1800/faceDirection farmer 1 true/pause 500/emote farmer 20/pause 600/speak Wizard \"{{i18n:Wizard14hearts2.10}}\"/pause 750/faceDirection Wizard 2 true/pause 275/faceDirection Wizard 1 true/pause 500/globalFade/viewport -1000 -1000/warp farmer 34 60/warp Wizard 38 60/faceDirection Wizard 0 true/faceDirection farmer 0 true/warp WizardsMagicBubble 37 61/warp FarmersMagicBubble 33 61/positionOffset FarmersMagicBubble 15 2 true/positionOffset WizardsMagicBubble -15 -10 true/positionOffset farmer 20 25 true/positionOffset Wizard -15 0 true/faceDirection farmer 1 true/faceDirection Wizard 0 true/warp FishGroup1Dark 55 59/speed FishGroup1Dark 1/move FishGroup1Dark -65 0 2 true/warp FishGroup2Dark 5 52/speed FishGroup2Dark 1/move FishGroup2Dark 65 0 2 true/warp FishGroup3Dark 60 66/speed FishGroup3Dark 1/move FishGroup3Dark -65 0 2 true/warp FishGroup4Dark 15 54/speed FishGroup4Dark 1/move FishGroup4Dark 65 0 2 true/warp FishGroup5Dark 60 73/speed FishGroup5Dark 1/move FishGroup5Dark -65 0 2 true/warp FishGroup7Dark 0 56/speed FishGroup7Dark 1/move FishGroup7Dark 65 0 2 true/speed FishGroup10Dark 1/move FishGroup10Dark 65 0 2 true/viewport 36 59 clamp true/pause 2000/speak Wizard \"{{i18n:Wizard14hearts2.11}}\"/pause 800/showFrame Wizard 17 true/pause 800/shake Wizard 500/pause 500/screenFlash 1/playSound healSound/pause 900/showFrame Wizard 8 true/pause 600/emote farmer 8/pause 1000/faceDirection Wizard 1 true/pause 1000/speak Wizard \"{{i18n:Wizard14hearts2.12}}\"/addTemporaryActor MermaidSwim 51 22 59 57 3 false/speed MermaidSwim 4/move MermaidSwim -25 0 3 true/pause 1250/faceDirection farmer 1 true/pause 500/emote farmer 16 true/pause 1000/faceDirection Wizard 0 true/pause 850/faceDirection farmer 0 true/globalFade/viewport -1000 -1000/warp MermaidSwim -30 -30/halt/addTemporaryActor Mermaid 28 90 36 59 2 false/showFrame Mermaid 0 true/positionOffset Mermaid -10 30 true/faceDirection Wizard 0 true/faceDirection farmer 0 true/speed FishGroup10Dark 1/move FishGroup10Dark 65 0 2 true/speed FishGroup1Dark 1/move FishGroup1Dark -65 0 2 true/speed FishGroup2Dark 1/move FishGroup2Dark 65 0 2 true/speed FishGroup3Dark 1/move FishGroup3Dark -65 0 2 true/speed FishGroup4Dark 1/move FishGroup4Dark 65 0 2 true/speed FishGroup5Dark 1/move FishGroup5Dark -65 0 2 true/speed FishGroup6Dark 1/move FishGroup6Dark 65 0 2 true/speed FishGroup7Dark 1/move FishGroup7Dark 65 0 2 true/viewport 36 59 clamp true/pause 2650/speak Mermaid \"{{i18n:Wizard14hearts2.13}}\"/pause 1500/emote Wizard 40/faceDirection farmer 1 true/pause 150/emote Wizard 40 true/pause 1500/faceDirection farmer 0 true/pause 1000/speak Mermaid \"{{i18n:Wizard14hearts2.14}}\"/pause 1500/showFrame Mermaid 7 true/playMusic mermaidSong/pause 1000/animate Mermaid false false 100 5 5 5 5 5 5 5 5 7 7 7 7 7 7 7 7 6 6 6 6 6 6 6 7 7 7 7 7 7 7 5 5 5 5 5 5 5 7 7 7 7 7 7 6 6 6 6 6 6 6 7 7 7 7 7 7 7 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 7 7 7 7 7 7 7 7 7 7/warp FishGroup11Dark 0 60/speed FishGroup11Dark 1/move FishGroup11Dark 65 0 2 true/warp FishGroup13Dark 59 52/speed FishGroup13Dark 1/move FishGroup13Dark -65 0 2 true/pause 2500/warp FishGroup12Dark 59 69/speed FishGroup12Dark 1/move FishGroup12Dark -65 0 2 true/pause 2500/warp FishGroup10Dark 0 70/speed FishGroup10Dark 1/move FishGroup10Dark 65 0 2 true/pause 22500/playMusic FlashShifter.StardewValleyExpandedCP_Atlantis/stopAnimation Mermaid/showFrame Mermaid 0 true/pause 1500/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 700/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 1500/showFrame Mermaid 6 true/pause 500/showFrame Mermaid 3 true/pause 850/showFrame Mermaid 4 true/pause 500/speak Mermaid \"...[FlashShifter.StardewValleyExpandedCP_Mermaid's_Bracelet]$1\"/pause 500/globalFade/viewport -1000 -1000/warp Mermaid -20 -20/halt/warp MermaidSwim 36 57/faceDirection Wizard 1 true/faceDirection farmer 1 true/warp FishGroup1Dark 55 59/speed FishGroup1Dark 1/move FishGroup1Dark -65 0 2 true/warp FishGroup2Dark 5 54/speed FishGroup2Dark 1/move FishGroup2Dark 65 0 2 true/warp FishGroup3Dark 60 66/speed FishGroup3Dark 1/move FishGroup3Dark -65 0 2 true/warp FishGroup4Dark 15 54/speed FishGroup4Dark 1/move FishGroup4Dark 65 0 2 true/warp FishGroup6Dark 45 40/speed FishGroup6Dark 1/move FishGroup6Dark 65 0 2 true/warp FishGroup7Dark 0 62/speed FishGroup7Dark 1/move FishGroup7Dark 65 0 2 true/move FishGroup10Dark 65 0 2 true/move FishGroup11Dark 65 0 2 true/move FishGroup12Dark -65 0 2 true/move FishGroup13Dark -65 0 2 true/viewport 36 59 clamp true/speed MermaidSwim 4/move MermaidSwim 24 1 2 true/pause 5000/warp MermaidSwim -20 -20/pause 500/faceDirection Wizard 2 true/pause 250/faceDirection Wizard 3 true/pause 700/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 600/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/positionOffset FarmersMagicBubble 1 0/positionOffset farmer 1 0/pause 25/pause 500/emote farmer 20/pause 750/speak Wizard \"{{i18n:Wizard14hearts2.15}}\"/pause 1000/emote farmer 32 true/pause 600/viewport move 0 -1 8000 true/pause 5000/globalFade/viewport -1000 -1000/warp FishGroup1Light -10 -10/warp FishGroup2Light -10 -10/warp FishGroup3Light -10 -10/warp FishGroup4Light -10 -10/warp FishGroup5Light -10 -10/warp FishGroup1Dark -10 -10/warp FishGroup2Dark -10 -10/warp FishGroup3Dark -10 -10/warp FishGroup4Dark -10 -10/warp FishGroup5Dark -10 -10/warp FishGroup6Dark -10 -10/warp FishGroup7Dark -10 -10/warp FishGroup8Dark -10 -10/warp BubbleGroup1 -10 -10/warp BubbleGroup2 -10 -10/warp BubbleGroup3 -10 -10/warp FarmersMagicBubble -10 -10/warp WizardMagicBubble -10 -10/warp farmer 26 83/faceDirection farmer 3 true/warp Wizard 25 83/faceDirection Wizard 1 true/pause 1000/playMusic 50s/playSound pullItemFromWater/changeLocation IslandWest/positionOffset Wizard -11 -10 true/viewport 26 83 clamp true/pause 2250/speak Wizard \"{{i18n:Wizard14hearts2.16}}\"/pause 1000/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/positionOffset farmer -1 0 true/pause 50/positionOffset Wizard 1 0 true/pause 50/showFrame farmer 101 true/showFrame Wizard 28 true/playSound dwop/specificTemporarySprite heart 26 82/pause 2250/positionOffset Wizard -1 0/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/showFrame Wizard 4 true/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/showFrame farmer 6 true/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset Wizard -1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 50/positionOffset farmer 1 0 true/pause 1000/speak Wizard \"{{i18n:Wizard14hearts2.17}}\"/pause 600/emote farmer 20 true/pause 400/emote Wizard 20 true/pause 400/globalFade/viewport -1000 -1000/pause 500/end dialogue Wizard \"{{i18n:Wizard14hearts2.18}}\"",
+      },
+    },
+    { //changes joja soda machine into a mermaid bracelet.
+      "Action": "EditImage",
+      "Target": "Tilesheets/Craftables",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MermaidBracelet.png",
+      "ToArea": {
+        "X": 80,
+        "Y": 448,
+        "Width": 16,
+        "Height": 32
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "LocationName": "Custom_Atlantis"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftablesInformation",
+      "Entries": {
+        "117": "Mermaid's Bracelet/0/-300/Crafting -9/The Joja soda machine mysteriously formed into the mermaid's bracelet.../true/true/0/Mermaid's Bracelet"
+      },
+      "When": {
+        "LocationName": "Custom_Atlantis"
+      },
+      "Update": "OnLocationChange"
+    },
+    //Adds rejection dialogue to all NPCs, preventing players from gifting their Mermaid Bracelet
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
+      "Entries": {
+        "reject_(O)Mermaid's Bracelet": "{{i18n:MermaidPendantGift}}"
+      }
+    },
+    //*** Load temporary actors for wizard 14 heart event***
+    { //48x64
+      "Action": "Load",
+      "Target": "Characters/WizardsMagicBubble",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WizardsMagicBubble.png"
+    },
+    { //48x64
+      "Action": "Load",
+      "Target": "Characters/FarmersMagicBubble",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FarmersMagicBubble.png"
+    },
+    { //51x22
+      "Action": "Load",
+      "Target": "Characters/MermaidSwim",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MermaidSwim.png"
+    },
+    { //Mermaid's portraits
+      "Action": "Load",
+      "Target": "Portraits/Mermaid",
+      "FromFile": "assets/CharacterFiles/Portraits/Mermaid/Mermaid.png"
+    },
+    { //28x74
+      "Action": "Load",
+      "Target": "Characters/Mermaid",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/Mermaid.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup1Light",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup1Light.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup1Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup1Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup2Light",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup2Light.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup2Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup2Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup3Light",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup3Light.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup3Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup3Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup4Light",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup4Light.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup4Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup4Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup5Light",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup5Light.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup5Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup5Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup6Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup6Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup7Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup7Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup8Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup8Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup9Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup9Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup10Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup10Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup11Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup11Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup12Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup12Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/FishGroup13Dark",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/FishGroup13Dark.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/BubbleGroup1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BubbleGroup1.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/BubbleGroup2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BubbleGroup2.png"
+    },
+    { //60x150
+      "Action": "Load",
+      "Target": "Characters/BubbleGroup3",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BubbleGroup3.png"
+    },
+
+
+
+    { //Wizard junimo scroll event fix
+      "Action": "EditData",
+      "Target": "data/events/WizardHouse",
+      "Entries": {
+        "112/n seenJunimoNote": "WizardSong/-1000 -1000/farmer 8 23 0 Wizard 10 15 2 Junimo -2000 -2000 2/skippable/addConversationTopic cc_Begin/showFrame Wizard 20/viewport 8 18 true/move farmer 0 -2 0/pause 2000/speak Wizard \"{{i18n:Wizard.JunimoScroll.01}}\"/pause 800/animate Wizard false false 100 20 21 22 0/playSound dwop/pause 1000/stopAnimation Wizard/move Wizard -2 0 3 false/move Wizard 0 2 2/pause 1500/speak Wizard \"{{i18n:Wizard.JunimoScroll.02}}\"/pause 1000/move Wizard 0 1 2/speak Wizard \"{{i18n:Wizard.JunimoScroll.03}}\"/pause 1500/speak Wizard \"{{i18n:Wizard.JunimoScroll.04}}\"/pause 500/faceDirection Wizard 1/playMusic none/pause 800/speak Wizard \"{{i18n:Wizard.JunimoScroll.05}}\"/playMusic clubloop/pause 1000/showFrame Wizard 19/playSound wand/screenFlash .8/warp Junimo 10 17/specificTemporarySprite junimoCage/pause 500/jump farmer/pause 2500/shake Junimo 800/playSound junimoMeep1/pause 1000/shake Junimo 800/playSound junimoMeep1/pause 1000/faceDirection Wizard 1 true/showFrame Wizard 4/pause 2000/shake Junimo 800/playSound junimoMeep1/pause 1000/speak Wizard \"{{i18n:Wizard.JunimoScroll.06}}\"/move Wizard 0 -1 1/pause 1000/shake Junimo 800/playSound junimoMeep1/pause 1000/speak Wizard \"{{i18n:Wizard.JunimoScroll.07}}\"/pause 1000/playSound dwop/faceDirection Wizard 2 true/showFrame Wizard 16/pause 500/playSound wand/screenFlash .8/warp Junimo -3000 -3000/specificTemporarySprite junimoCageGone/playMusic WizardSong/pause 1000/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Wizard.JunimoScroll.08}}\"/pause 1000/move farmer 0 -1 0/emote farmer 48/pause 1000/speak Wizard \"{{i18n:Wizard.JunimoScroll.09}}\"/move Wizard 0 1 2/speak Wizard \"{{i18n:Wizard.JunimoScroll.10}}\"/pause 1000/playSound shwip/faceDirection Wizard 3 true/pause 50/faceDirection Wizard 0 true/pause 50/faceDirection Wizard 1 true/pause 50/faceDirection Wizard 2 true/pause 50/showFrame Wizard 16/pause 500/playSound wand/warp Wizard -3000 -3000/specificTemporarySprite wizardWarp/pause 2000/faceDirection farmer 1/faceDirection farmer 3/faceDirection farmer 0/pause 1000/faceDirection Wizard 0 true/faceDirection farmer 1 true/pause 550/faceDirection farmer 2/pause 700/faceDirection farmer 3/pause 500/showFrame Wizard 16/screenFlash 2/playSound wand/warp Wizard 10 17/faceDirection farmer 0 true/pause 250/emote farmer 16 true/jump farmer/pause 700/showFrame Wizard 0/pause 500/move Wizard -2 0 2/pause 500/speak Wizard \"{{i18n:Wizard.JunimoScroll.11}}\"/move Wizard -2 0 2/move Wizard 0 4 3 true/pause 1300/faceDirection farmer 3 true/pause 800/speak Wizard \"{{i18n:Wizard.JunimoScroll.12}}\"/pause 1000/message \"{{i18n:Wizard.JunimoScroll.13}}\"/pause 500/move Wizard 0 -2 3/faceDirection farmer 3 true/move Wizard -3 0 2/pause 1000/showFrame Wizard 18/emote Wizard 40/speak Wizard \"{{i18n:Wizard.JunimoScroll.14}}\"/pause 1000/speak Wizard \"{{i18n:Wizard.JunimoScroll.15}}\"/pause 1500/showFrame Wizard 0/jump Wizard/pause 800/speak Wizard \"{{i18n:Wizard.JunimoScroll.16}}\"/pause 800/faceDirection Wizard 1/speak Wizard \"{{i18n:Wizard.JunimoScroll.17}}\"/pause 500/move farmer -2 0 0/move farmer 0 -1 3/move farmer -2 0 3/move Wizard -1 0 2/move farmer -1 0 2/pause 500/speak Wizard \"{{i18n:Wizard.JunimoScroll.18}}\"/pause 500/showFrame Wizard 18/showFrame 96/pause 1000/speak Wizard \"{{i18n:Wizard.JunimoScroll.19}}\"/pause 800/emote farmer 28/showFrame Wizard 19/pause 800/showFrame farmer 90/pause 1000/farmerEat 184/pause 4000/playSound gulp/animate farmer false true 350 104 105/pause 4000/specificTemporarySprite farmerForestVision/pause 7000/pause 19500/globalFade .008/specificTemporarySprite junimoCageGone2/viewport -1000 -1000/playMusic none/pause 2000/playSound reward/pause 300/message \"{{i18n:Wizard.JunimoScroll.20}}\"/end warpOut",
+      }
+    },
+  ]
+}

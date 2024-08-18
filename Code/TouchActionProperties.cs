@@ -136,7 +136,7 @@ namespace StardewValleyExpanded
             if (!Context.IsWorldReady)
                 return;
 
-            Vector2 tile = Game1.player.getTileLocation(); //get the current local player's tile
+            Vector2 tile = Game1.player.Tile; //get the current local player's tile
             if (tile != LastPlayerTile.Value) //if their tile has changed since the last check
             {
                 LastPlayerTile.Value = tile; //update their most recent tile

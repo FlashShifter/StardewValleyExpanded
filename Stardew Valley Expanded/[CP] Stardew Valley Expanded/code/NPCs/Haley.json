@@ -1,0 +1,133 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Haley",
+            "TextOperations": [
+              /*Like*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  3
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Big_Conch",
+                "Delimiter": " "
+              }
+              /*Dislike*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  5
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Salal_Berry FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed FlashShifter.StardewValleyExpandedCP_Bearberrys",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Haley",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber",
+                "Delimiter": " "
+              }
+            ]
+          },
+        { //HALEY SCHEDULE EDITS
+            "Action": "EditData",
+            "Target": "characters/schedules/Haley",
+            "Entries": {
+                "spring_Mon": "800 HaleyHouse 6 5 0/1000 HaleyHouse 19 16 0/1100 Forest 77 44 2 haley_photo/1630 HaleyHouse 19 16 0 square_5_1/2000 HaleyHouse 5 7 2 square_5_5/2300 HaleyHouse 1 5 3 haley_sleep",
+                "spring": "900 HaleyHouse 6 5 0/950 HaleyHouse 8 7 1/1100 Town 24 23 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 HaleyHouse 1 5 3 haley_sleep",
+            },
+        },
+        { //HALEY SCHEDULE - Alex
+            "Action": "EditData",
+            "Target": "characters/schedules/Haley",
+            "When": {
+                "Weather": "Sun"
+            },
+            "Entries": {
+                "6": "800 HaleyHouse 19 16 0/930 JoshHouse 10 21 0/1130 Town 52 69 0/1330 Town 22 26 1/1600 Saloon 32 18 1/2110 HaleyHouse 1 5 3 haley_sleep",
+                "20": "800 HaleyHouse 19 16 0/930 JoshHouse 10 21 0/1130 Town 52 69 0/1330 Town 22 26 1/1600 Saloon 32 18 1/2110 HaleyHouse 1 5 3 haley_sleep",
+            },
+        },
+        { //HALEY SCHEDULE - Alex married
+            "Action": "EditData",
+            "Target": "characters/schedules/Haley",
+            "When": {
+                "Spouse": "Alex"
+            },
+            "Entries": {
+                "6": null,
+                "20": null
+            },
+        },
+        { //HALEY SCHEDULE DIALOGUE
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "JoshHouse_10_21": "{{i18n:Haley.Dialogue.01}}",
+                "Town_52_69": "{{i18n:Haley.Dialogue.02}}",
+                "Saloon_32_18": "{{i18n:Haley.Dialogue.03}}",
+            },
+        },
+        { //HALEY EVENT
+            "Action": "EditData",
+            "Target": "data/events/town",
+            "Entries": {
+                /*"1000099/k 15/f Haley 1750/t 1000 1500/z winter/z fall/w sunny": "springtown/-500 -500/farmer 29 91 3 Haley 18 82 0 Penny 35 89 2 MarlonFay 33 106 2 Caroline 23 73 1 Jodi 24 73 3/pause 500/showFrame Penny 18/skippable/pause 100/viewport 26 87 true/viewport move -1 0 5500 true/move farmer -11 0 3/pause 300/move farmer 0 0 0/pause 700/viewport move 0 -1 3500 true/move farmer 0 -6 0/pause 800/move Haley 0 0 2/pause 550/emote Haley 16/pause 150/speak Haley \"{{i18n:Haley.Event.01}}\"/pause 1200/shake Haley 1000/pause 1200/speak Haley \"{{i18n:Haley.Event.02}}\"/pause 850/question fork0 \"{{i18n:Haley.Event.03}}\"/fork 1000099_TalkInside/pause 1100/showFrame Haley 0/pause 500/move Haley 0 0 0/pause 800/emote Haley 28/pause 450/move farmer 0 6 2 true/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Haley -125/end dialogue Haley \"{{i18n:Haley.Event.04}}\"",
+                "1000099_TalkInside": "pause 600/showFrame Haley 0/pause 800/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.01}}\"/pause 650/move farmer 0 5 1 true/pause 300/move Haley 0 5 2 true/pause 100/globalFade/viewport -1000 -1000/pause 500/stopMusic/pause 400/changeLocation HaleyHouse/warp MarlonFay -200 -200/warp Penny -198 -198/warp Jodi -195 -195/warp Caroline -192 -192/warp Haley 5 15/warp farmer 5 17/faceDirection farmer 0/move Haley 0 0 2/pause 300/viewport 10 15 true/pause 1500/showFrame Haley 22/pause 1300/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.02}}\"/pause 1300/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.03}}\"/pause 700/textAboveHead Haley \"{{i18n:Haley.Event.1000099_TalkInside.04}}\"/shake Haley 800/pause 1500/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.05}}\"/pause 900/shake Haley 700/pause 900/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.06}}\"/pause 1000/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.07}}\"/pause 500/shake Haley 800/pause 1200/move Haley 0 0 0/pause 800/speak Haley \"{{i18n:Haley.Event.1000099_TalkInside.08}}\"/pause 600/move Haley 0 -1 0/pause 400/doAction 5 13/pause 500/move Haley 0 -8 0 true/pause 1200/emote farmer 60 true/pause 600/move farmer 0 -9 0 true/pause 400/stopMusic/pause 500/globalFade/viewport -1000 -1000/pause 750/message \"{{i18n:Haley.Event.1000099_TalkInside.09}}\"/pause 500/end dialogue Haley \"{{i18n:Haley.Event.1000099_TalkInside.10}}\"", */
+
+                "1000099/k 15/f Haley 1750/t 1000 1500/z winter/z fall/w sunny": "springtown/-500 -500/farmer 29 91 3 Haley 18 82 0 Penny 35 89 2 MarlonFay 33 106 2 Caroline 23 73 1 Jodi 24 73 3/pause 500/showFrame Penny 18/skippable/pause 100/viewport 26 87 true/viewport move -1 0 5500 true/move farmer -11 0 3/pause 300/move farmer 0 0 0/pause 700/viewport move 0 -1 3500 true/move farmer 0 -6 0/pause 800/move Haley 0 0 2/pause 550/emote Haley 16/pause 150/speak Haley \"{{i18n:Haley.Event.01}}\"/pause 1200/shake Haley 1000/pause 1200/speak Haley \"{{i18n:Haley.Event.02}}\"/pause 850/question fork0 \"{{i18n:Haley.Event.03}}\"/fork 1000099_TalkInside/pause 1100/showFrame Haley 0/pause 500/move Haley 0 0 0/pause 800/emote Haley 28/pause 450/move farmer 0 6 2 true/pause 300/globalFade/viewport -1000 -1000/pause 500/friendship Haley -125/end dialogue Haley \"{{i18n:Haley.Event.04}}\"",
+
+                "1000099_TalkInside": "pause 600/showFrame Haley 0/pause 800/speak Haley \"{{i18n:Haley.Event.TalkInside.01}}\"/pause 650/move farmer 0 5 1 true/pause 300/move Haley 0 5 2 true/pause 100/globalFade/viewport -1000 -1000/pause 500/stopMusic/pause 400/changeLocation HaleyHouse/warp MarlonFay -200 -200/warp Penny -198 -198/warp Jodi -195 -195/warp Caroline -192 -192/warp Haley 5 15/warp farmer 5 17/faceDirection farmer 0/move Haley 0 0 2/pause 300/viewport 10 15 true/pause 1500/showFrame Haley 22/pause 1300/speak Haley \"{{i18n:Haley.Event.TalkInside.02}}\"/pause 1300/speak Haley \"{{i18n:Haley.Event.TalkInside.03}}\"/pause 700/textAboveHead Haley \"{{i18n:Haley.Event.TalkInside.04}}\"/shake Haley 800/pause 1500/speak Haley \"{{i18n:Haley.Event.TalkInside.05}}\"/pause 900/shake Haley 700/pause 900/speak Haley \"{{i18n:Haley.Event.TalkInside.06}}\"/pause 1000/speak Haley \"...$3\"/pause 500/shake Haley 800/pause 1200/move Haley 0 0 0/pause 800/speak Haley \"{{i18n:Haley.Event.TalkInside.07}}\"/pause 600/move Haley 0 -1 0/pause 400/doAction 5 13/pause 500/move Haley 0 -8 0 true/pause 1200/emote farmer 60 true/pause 600/move farmer 0 -9 0 true/pause 400/stopMusic/pause 500/globalFade/viewport -1000 -1000/pause 750/message \"{{i18n:Haley.Event.TalkInside.08}}\"/pause 500/end dialogue Haley \"{{i18n:Haley.Event.TalkInside.09}}\"",
+
+            },
+        },
+        { //HALEY EVENT DIALOGUE ADDITIONS
+            "Action": "EditData",
+            "Target": "characters/dialogue/Haley",
+            "Entries": {
+                "haley_event1": "{{i18n:Haley.Dialogue.04}}",
+                "haley_event2": "{{i18n:Haley.Dialogue.05}}",
+            }
+        },
+        //Shane walked through a lamp post. I had to fix this. It broke all of my immersions. 
+        { //HALEY 8 HEART EVENT PATHING FIX
+            "Action": "EditData",
+            "Target": "data/events/forest",
+            "Entries": {
+                "14/f Haley 2000/z winter/t 1000 1600/w sunny": "spring_day_ambient/100 23/farmer 94 24 1 Haley 100 23 1/skippable/pause 2000/showFrame Haley 25/pause 500/playSound cameraNoise/shake Haley 50/screenFlash .5/pause 800/pause 500/faceDirection Haley 2 true/showFrame Haley 24/pause 500/playSound cameraNoise/shake Haley 50/screenFlash .5/move farmer 5 0 1 true/pause 1200/faceDirection Haley 3 true/showFrame Haley 27/pause 400/jump Haley/pause 600/showFrame Haley 12/faceDirection Haley 3/move farmer 0 -1 1/pause 300/speak Haley \"{{i18n:Haley.8heart.01}}\"/pause 500/faceDirection Haley 2/pause 800/speak Haley \"{{i18n:Haley.8heart.02}}\"/pause 600/faceDirection Haley 3/pause 600/faceDirection Haley 3/pause 400/speak Haley \"{{i18n:Haley.8heart.03}}\"/pause 500/faceDirection Haley 0/pause 800/speak Haley \"{{i18n:Haley.8heart.04}}\"/pause 600/emote Haley 16/faceDirection Haley 3/speak Haley \"{{i18n:Haley.8heart.05}}\"/move Haley 0 1 2/faceDirection farmer 2/playSound sandyStep/addBigProp 100 25 106/pause 600/move Haley 0 -1 3/faceDirection farmer 1/speak Haley \"{{i18n:Haley.8heart.06}}\"/move Haley 0 1 2/faceDirection farmer 2/pause 900/playSound openBox/move Haley 0 -1 3/faceDirection farmer 1/pause 700/faceDirection farmer 0/faceDirection Haley 0/playMusic 50s/globalFade/viewport -1000 -1000/cutscene haleyCows/pause 2000/speak Haley \"{{i18n:Haley.8heart.07}}\"/pause 1000/speak Haley \"{{i18n:Haley.8heart.08}}\"/pause 500/speak Haley \"{{i18n:Haley.8heart.09}}\"/pause 1000/mail haleyGarden/end dialogue Haley \"{{i18n:Haley.8heart.10}}\"",
+            }
+        },
+        { //edits out Lewis' mayor status from Haley's 14 hrt event
+            "Action": "EditData",
+            "Target": "data/events/town",
+            "When": {
+                "HasSeenEvent": "6665293"
+            },
+            "Entries": {
+                "6184644/e 8675611/O Haley/A haleyCakewalk2/t 600 1500/w sunny/i 220": "ragtime/-100 -100/farmer 29 60 2 Haley 27 64 2 Marnie 27 66 1 Caroline 29 66 1 Emily 31 66 2 Jodi 31 68 2 Lewis 25 68 1 Robin 25 70 1 Jas 31 70 3 Vincent 29 70 3 Pam 27 70 0 Clint 27 68 0 Penny 31 64 2 Pierre 25 66 1 Gus 35 66 3 Evelyn 23 67 1 George 24 67 1/removeQuest 127/removeItem 220/specificTemporarySprite haleyCakeWalk/beginSimultaneousCommand/advancedMove Marnie true 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2/advancedMove Caroline true 2 0 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0/advancedMove Emily true 0 2 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0/advancedMove Jodi true 0 2 -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2/advancedMove Jas true -2 0 -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2/advancedMove Vincent true -2 0 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0/advancedMove Pam true 0 -2 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0/advancedMove Clint true 0 -2 2 0 2 0 0 2 0 2 -2 0 -2 0 0 -2/endSimultaneousCommand/viewport 29 68 true/move farmer 0 4 3/pause 1000/addObject 28 64 220/playSound coin/faceDirection farmer 3/faceDirection Haley 1/speak Haley \"{{i18n:Haley.18heart.01}}\"/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 500/showFrame Haley 23/playSound slimeHit/pause 400/showFrame Haley 4/pause 1000/speak Haley \"{{i18n:Haley.18heart.02}}\"/faceDirection Haley 2/faceDirection farmer 2/speak Haley \"{{i18n:Haley.18heart.03}}\"/emote farmer 32/speak Marnie \"{{i18n:Haley.18heart.04}}\"/jump Haley/pause 500/speak Haley \"{{i18n:Haley.18heart.05}}\"/showFrame Haley 19/playMusic none/playSound whistle/shake Haley 500/stopAdvancedMoves next/pause 500/showFrame Haley 0/pause 1000/playMusic distantBanjo/pause 2000/speak Haley \"{{i18n:Haley.18heart.06}}\"/textAboveHead Emily \"{{i18n:Haley.18heart.07}}\"/jump Vincent/textAboveHead Marnie \"{{i18n:Haley.18heart.08}}\"/textAboveHead Pam \"{{i18n:Haley.18heart.09}}\"/faceDirection Pam 0 true/faceDirection Marnie 0 true/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Marnie 0 true/faceDirection Clint 0 true/faceDirection Emily 0 true/faceDirection Caroline 0 true/faceDirection Jodi 0 true/pause 1000/speak Haley \"{{i18n:Haley.18heart.10}}\"/move Haley 0 -1 1/move Haley 6 0 2/move Haley 0 2 2/speak Haley \"{{i18n:Haley.18heart.11}}\"/emote Marnie 28 true/textAboveHead Caroline \"{{i18n:Haley.18heart.12}}\"/pause 1000/speak Haley \"{{i18n:Haley.18heart.13}}\"/emote Emily 32/textAboveHead Gus \"{{i18n:Haley.18heart.14}}\"/pause 1000/speak Pam \"{{i18n:Haley.18heart.15}}\"/pause 500/speak Haley \"{{i18n:Haley.18heart.16}}\"/emote Jas 28 true/pause 200/speak Clint \"{{i18n:Haley.18heart.17}}\"/pause 200/emote Jas 28/pause 500/speak Haley \"{{i18n:Haley.18heart.18}}\"/jump Vincent/textAboveHead Jodi \"{{i18n:Haley.18heart.19}}\"/pause 800/jump Vincent/pause 800/jump Vincent/pause 800/speak Haley \"{{i18n:Haley.18heart.20}}\"/pause 200/textAboveHead Jodi \"{{i18n:Haley.18heart.21}}\"/pause 800/viewport move 0 -1 1500/move Haley 0 -2 3/move Haley -5 0 2/speak Haley \"{{i18n:Haley.18heart.22}}\"/pause 500/textAboveHead Pam \"{{i18n:Haley.18heart.23}}\"/pause 1000/speak Haley \"{{i18n:Haley.18heart.24}}\"/pause 500/speak George \"{{i18n:Haley.18heart.25}}\"/pause 200/faceDirection Haley 1/speak Haley \"{{i18n:Haley.18heart.26}}\"/faceDirection Penny 3/faceDirection farmer 1 true/emote Penny 8/speak Haley \"{{i18n:Haley.18heart.27}}\"/jump Penny/pause 500/textAboveHead Penny \"{{i18n:Haley.18heart.28}}\"/pause 800/faceDirection Penny 2/speak Penny \"{{i18n:Haley.18heart.29}}\"/emote Jas 20 true/emote Vincent 28/pause 500/faceDirection Penny 3/speak Penny \"{{i18n:Haley.18heart.30}}\"/emote farmer 32/viewport move -1 0 3000/advancedMove George false 0 -5 24 0/advancedMove Evelyn false 1 0 0 -5 24 0/move Haley 2 0 2/pause 2000/faceDirection Robin 0/faceDirection Pierre 2/speak Robin \"{{i18n:Haley.18heart.31}}\"/pause 500/showFrame Lewis 26/jump Lewis/playSound Duck/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/pause 30/positionOffset Lewis -4 0/advancedMove Robin false 0 -1 3 100/advancedMove Pierre false 0 1 3 100/pause 1500/end dialogue Haley \"{{i18n:Haley.18heart.32}}\""
+            },
+        },
+    ]
+}

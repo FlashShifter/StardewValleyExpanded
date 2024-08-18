@@ -1,0 +1,91 @@
+{
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Gift tastes: Gus",
+			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Frog_Legs",
+				"Delimiter": " "
+			  }
+			  /*Dislike*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  5
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink",
+				"Delimiter": " "
+			  }
+			  /*Hate*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Gus",
+				  7
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Goldenfish",
+				"Delimiter": " "
+			  }
+			]
+		  },
+		{ //GUS SCHEDULE EDITS
+			"Action": "EditData",
+			"Target": "characters/schedules/Gus",
+			"Entries": {
+				"Tue": "700 Town 37 16 0/930 Town 41 14 0/950 Town 37 14 0/1130 Town 109 101 3/1400 Town 107 100 2/1420 Town 106 100 2/1440 Town 105 100 2/1500 Town 104 100 2/1520 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"winter_Tue": "800 Saloon 16 4 2 gus_sit_down/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep"
+			},
+		},
+		{ //GUS DIALOGUE
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",
+			"Entries": {
+				"Town_37_16": "{{i18n:Gus.Dialogue.01}}",
+				"Town_37_14": "{{i18n:Gus.Dialogue.01}}",
+				"Town_41_14": "{{i18n:Gus.Dialogue.01}}",
+				"Town_109_101": "{{i18n:Gus.Dialogue.02}}",
+				"Town_107_100": "{{i18n:Gus.Dialogue.02}}",
+				"Town_106_100": "{{i18n:Gus.Dialogue.02}}",
+				"Town_105_100": "{{i18n:Gus.Dialogue.02}}",
+				"Town_104_100": "{{i18n:Gus.Dialogue.02}}",
+				"claireSaloon": "{{i18n:Gus.Dialogue.03}}",
+				"claireSaloonPaid": "{{i18n:Gus.Dialogue.04}}",
+			},
+		},
+		{ //GUS EVENT DIALOGUE ADDITIONS
+			"Action": "EditData",
+			"Target": "characters/dialogue/Gus",
+			"Entries": {
+				"gus_event1": "{{i18n:Gus.Dialogue.05}}",
+				"gus_event2": "{{i18n:Gus.Dialogue.06}}",
+				"gus_event3": "{{i18n:Gus.Dialogue.07}}",
+				"gus_event4": "{{i18n:Gus.Dialogue.08}}",
+				"gus_event5": "{{i18n:Gus.Dialogue.09}}",
+			}
+		},
+	]
+}

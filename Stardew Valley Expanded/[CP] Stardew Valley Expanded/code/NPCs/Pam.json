@@ -1,0 +1,53 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "LogName": "Gift tastes: Pam",
+            "TextOperations": [
+              /*Love*/
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pam",
+                  1
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+                "Delimiter": " "
+              }
+              /*Hate*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pam",
+                  7
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Grass_Carp FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+                "Delimiter": " "
+              }
+              /*Neutral*/,
+              {
+                "Operation": "Append",
+                "Target": [
+                  "Fields",
+                  "Pam",
+                  9
+                ],
+                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Clownfish",
+                "Delimiter": " "
+              }
+            ]
+          },
+        {   //PAM EVENT
+            "Action": "EditData",
+            "Target": "data/events/busstop",
+            "Entries": {
+                "1000027/f Pam 2000/t 1000 1600/z spring/z summer/z fall": "winter_day_ambient/-500 -500/farmer 24 23 0 Pam 24 11 0/skippable/pause 500/viewport 26 12 clamp true/textAboveHead Pam \"{{i18n:Pam.Event.01}}\"/move farmer 0 -10 0/emote farmer 8/pause 200/faceDirection Pam 1 true/pause 150/faceDirection Pam 2 true/pause 100/emote Pam 16/speak Pam \"{{i18n:Pam.Event.01A}}\"/pause 100/emote farmer 28/pause 600/move Pam 0 0 1/pause 850/emote Pam 12/pause 600/move Pam 0 0 2/pause 500/speak Pam \"{{i18n:Pam.Event.02}}\"/pause 1000/speak Pam \"{{i18n:Pam.Event.03}}\"/pause 200/question fork0 \"{{i18n:Pam.Event.04}}\"/fork 1000027_WhatsBotheringYou/pause 500/speak Pam \"...$2\"/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Pam \"{{i18n:Pam.Event.05}}\"",
+                "1000027_WhatsBotheringYou": "pause 800/speak Pam \"...$2\"/pause 700/faceDirection Pam 1/pause 300/faceDirection Pam 0 true/pause 1000/playMusic echos/pause 1000/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.01}}\"/pause 1500/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.02}}\"/pause 500/emote Pam 28/pause 450/faceDirection Pam 1 true/pause 300/faceDirection Pam 2 true/pause 850/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.03}}\"/pause 600/shake Pam 1000/pause 600/faceDirection Pam 1 true/pause 300/faceDirection Pam 0 true/pause 800/shake Pam 500/pause 1250/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.04}}\"/pause 1000/stopAnimation Pam/pause 1250/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.05}} \"/pause 500/question fork1 \"{{i18n:Pam.Event.WhatsBotheringYou.06}}\"/fork 1000027_DidntKnow/pause 500/faceDirection Pam 1 true/pause 300/faceDirection Pam 2 true/stopMusic/pause 1000/emote Pam 12/pause 500/speak Pam \"{{i18n:Pam.Event.WhatsBotheringYou.07}}\"/globalFade/viewport -1000 -1000/pause 700/friendship Pam -1000/end dialogue Pam \"{{i18n:Pam.Event.WhatsBotheringYou.08}}\"",
+                "1000027_DidntKnow": "pause 750/stopMusic/pause 1000/faceDirection Pam 1 true/pause 300/faceDirection Pam 2 true/pause 800/speak Pam \"{{i18n:Pam.Event.DidntKnow.01}}\"/pause 1000/speak Pam \"{{i18n:Pam.Event.DidntKnow.02}}\"/pause 1000/faceDirection farmer 3 true/pause 340/faceDirection farmer 2 true/pause 300/move farmer 0 8 2 true/pause 500/globalFade/viewport -1000 -1000/pause 700/end dialogue Pam \"{{i18n:Pam.Event.DidntKnow.03}}\""
+            },
+        }
+    ]
+}

@@ -43,31 +43,31 @@ namespace StardewValleyExpanded
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FarmComputerLocations)}\": postfixing SDV method \"Farm.getTotalCrops()\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Farm), nameof(Farm.getTotalCrops), new Type[0]),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getTotalCrops), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_FarmComputerLocations), nameof(Farm_getTotalCrops))
                 );
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FarmComputerLocations)}\": postfixing SDV method \"Farm.getTotalCropsReadyForHarvest()\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Farm), nameof(Farm.getTotalCropsReadyForHarvest), new Type[0]),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getTotalCropsReadyForHarvest), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_FarmComputerLocations), nameof(Farm_getTotalCropsReadyForHarvest))
                 );
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FarmComputerLocations)}\": postfixing SDV method \"Farm.getTotalUnwateredCrops()\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Farm), nameof(Farm.getTotalUnwateredCrops), new Type[0]),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getTotalUnwateredCrops), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_FarmComputerLocations), nameof(Farm_getTotalUnwateredCrops))
                 );
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FarmComputerLocations)}\": postfixing SDV method \"Farm.getTotalOpenHoeDirt()\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Farm), nameof(Farm.getTotalOpenHoeDirt), new Type[0]),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getTotalOpenHoeDirt), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_FarmComputerLocations), nameof(Farm_getTotalOpenHoeDirt))
                 );
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_FarmComputerLocations)}\": postfixing SDV method \"Farm.getTotalGreenhouseCropsReadyForHarvest()\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Farm), nameof(Farm.getTotalGreenhouseCropsReadyForHarvest), new Type[0]),
+                    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getTotalGreenhouseCropsReadyForHarvest), new Type[0]),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_FarmComputerLocations), nameof(Farm_getTotalGreenhouseCropsReadyForHarvest))
                 );
 
@@ -221,7 +221,7 @@ namespace StardewValleyExpanded
                         int amount = 0;
                         foreach (TerrainFeature t in loc.terrainFeatures.Values)
                         {
-                            if (t is HoeDirt && (t as HoeDirt).crop == null && !loc.objects.ContainsKey(t.currentTileLocation))
+                            if (t is HoeDirt && (t as HoeDirt).crop == null && !loc.objects.ContainsKey(t.Tile))
                             {
                                 amount++;
                             }
@@ -239,7 +239,7 @@ namespace StardewValleyExpanded
 
         /// <summary>Adds any extra greenhouse locations' crops to this method's total.</summary>
         /// <param name="__result">The result of the original method.</param>
-        private static void Farm_getTotalGreenhouseCropsReadyForHarvest(ref int __result)
+        private static void Farm_getTotalGreenhouseCropsReadyForHarvest(ref int? __result)
         {
             try
             {

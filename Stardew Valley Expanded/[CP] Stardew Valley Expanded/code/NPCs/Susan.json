@@ -1,0 +1,387 @@
+{
+  "Changes": [
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Susan": {
+          "DisplayName": "{{i18n:Name.Susan}}",
+          "BirthSeason": "Fall",
+          "BirthDay": 28,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 1000077",
+          "CanVisitIslandCondition": true,
+          "ExcludeFromIntroductionsQuest": true,
+          "ExcludeFromPerfectionScore": false,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_SusanHouse",
+              "Condition": null,
+              "Location": "Custom_SusanHouse",
+              "Tile": {
+                "X": 4,
+                "Y": 15
+              },
+              "Direction": "left"
+            }
+          ],
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": "!{{HasMod |contains=Poltergeister.SeasonalCuteSpritesSVE}}",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Susan_Winter",
+              "Sprite": "Characters/Susan_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+    {
+      //Susan's Gift Tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Susan": "{{i18n:Susan.Gifts.Loved}}/611 230 211 220 221 223 222 608 233 234 612 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie/{{i18n:Susan.Gifts.Liked}}/60 709 336 335 334 373 74 446/{{i18n:Susan.Gifts.Disliked}}/346 459 303 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Susan.Gifts.Hated}}/167 226 283 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Susan.Gifts.Neutral}}/348 350 395 -74/"
+      }
+    },
+    {
+      //Susan's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Susan_Farm1": "4 4 4 4 4/16 16 16 17 17 17/4 4 4 4 4",
+        "Susan_Farm2": "0 0 0 0 0/18 18 18 19 19 19/0 0 0 0 0",
+        "Susan_Farm3": "12 12 12 12 12/20 20 20 21 21 21/12 12 12 12 12",
+        "Susan_Craft": "24/24 24 25 25 26 26 27 27/24",
+        "Susan_Gaze": "8/8/8",
+        "Susan_Read": "23/22 22 22 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23/23",
+        "Susan_Sleep": "29/29/29"
+      }
+    },
+    {
+      //Susan's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Susan",
+      "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan.png"
+    },
+    {
+      //Susan's Sprites
+      "Action": "Load",
+      "Target": "Characters/Susan",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan.png"
+    },
+    {
+      //Susan's Portraits
+      "Action": "Load",
+      "Target": "Portraits/Susan_Winter",
+      "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan_Winter.png"
+    },
+    {
+      //Susan's Sprites
+      "Action": "Load",
+      "Target": "Characters/Susan_Winter",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan_Winter.png"
+    },
+    {
+      //Susan's beach portraits
+      "Action": "Load",
+      "Target": "Portraits/Susan_Beach",
+      "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan_Beach.png"
+    },
+    {
+      //Susan's beach sprites
+      "Action": "Load",
+      "Target": "Characters/Susan_Beach",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan_Beach.png"
+    },
+    {
+      //Susan's Fake Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Susan",
+      "When": {
+        "HasSeenEvent |contains=1000077": false
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Susan/FakeSchedule.json"
+    },
+    {
+      //Susan's Schedule
+      "Action": "Load",
+      "Target": "Characters/schedules/Susan",
+      "When": {
+        "HasSeenEvent": "1000077"
+      },
+      "FromFile": "assets/CharacterFiles/Schedules/Susan/Schedule.json"
+    },
+    //MOVIE THEATER
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "Susan": {
+          "Name": "Susan",
+          "LovedTags": [
+            "Candy",
+            "Sweet",
+            "Cotton Candy"
+          ],
+          "LikedTags": [
+            "Jasmine Tea",
+            "Hot"
+          ],
+          "DislikedTags": [
+            "Healthy"
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "Susan": {
+          "NPCName": "Susan",
+          "Reactions": [
+            {
+              "Tag": "Classic",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "horror",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "spring_movie_0",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.01}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.02}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.03}}",
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "winter_movie_0",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.04}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.05}}",
+                }
+              },
+              "ID": "reaction_3"
+            },
+            {
+              "Tag": "love",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.06}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "/shake Susan 2000/pause 500/message \"{{i18n:Susan.Movies.07}}\"",
+                  "Text": "{{i18n:Susan.Movies.08}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.09}}",
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "like",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.10}}",
+                },
+                "DuringMovie": null,
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.11}}",
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "dislike",
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.12}}",
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.13}}",
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:Susan.Movies.14}}",
+                }
+              },
+              "ID": "reaction_6"
+            }
+          ]
+        }
+      }
+    },
+   
+    //INTRO EVENT
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "Entries": {
+        "1000077/j 30": "kindadumbautumn/-200 -200/farmer 2 2 2 Susan 3 3 0/skippable/pause 1500/speak Susan \"{{i18n:Susan.Intro.01}}\"/pause 1000/faceDirection Susan 1 true/pause 900/faceDirection Susan 0/pause 600/speak Susan \"{{i18n:Susan.Intro.02}}\"/pause 250/end dialogue Susan \"{{i18n:Susan.Intro.03}}\"",
+      },
+    },
+    //SUSAN 2 HEART EVENT
+    {
+      "Action": "EditData",
+      "Target": "data/events/Railroad",
+      "Entries": {
+        "1000078/f Susan 500/t 600 1150/z winter/w sunny": "breezy/-500 -500/farmer 34 54 1 Susan 45 52 2 MarlonFay 15 20 2 Wizard 15 22 0/pause 500/skippable/viewport 35 51 true/viewport move 1 0 6100 true/move farmer 4 0 0/move farmer 0 -2 1/move farmer 2 0 1/pause 900/move Susan 0 0 3/pause 500/speak Susan \"{{i18n:Susan.2hearts.01}}\"/pause 900/move Susan -2 0 3/pause 1200/move Susan 0 0 0/pause 1000/speak Susan \"{{i18n:Susan.2hearts.02}}\"/pause 1000/question fork0 \"{{i18n:Susan.2hearts.03}}\"/fork 1000078_NoBreaks/pause 500/move Susan 0 0 3/pause 350/speak Susan \"{{i18n:Susan.2hearts.04}}\"/pause 700/speak Susan \"{{i18n:Susan.2hearts.05}}\"/pause 1000/move Susan 0 0 2/pause 500/speak Susan \"{{i18n:Susan.2hearts.06}}\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Susan.2hearts.07}}\"/end dialogue Susan \"{{i18n:Susan.2hearts.08}}\"",
+        "1000078_NoBreaks": "pause 500/move Susan 0 0 3/pause 700/speak Susan \"{{i18n:Susan.2hearts.NoBreaks.01}}\"/pause 1200/speak Susan \"{{i18n:Susan.2hearts.NoBreaks.02}}\"/pause 1000/move Susan 0 0 2/pause 500/speak Susan \"{{i18n:Susan.2hearts.NoBreaks.03}}\"/pause 300/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Susan.2hearts.NoBreaks.04}}\"/end dialogue Susan \"{{i18n:Susan.2hearts.NoBreaks.05}}\"",
+      },
+    },
+    //SUSAN 4 HEART EVENT
+    {
+      "Action": "EditData",
+      "Target": "data/events/Railroad",
+      "Entries": {
+        "1000079/f Susan 1000/t 800 1500/z spring/z summer/z winter/w sunny": "kindadumbautumn/-500 -500/farmer 38 51 1 Susan 54 50 0/pause 500/skippable/viewport 39 50 true/viewport move 1 0 9250 true/move farmer 11 0 1/move farmer 0 -1 1/move farmer 3 0 1/pause 500/move Susan 0 0 3/pause 200/emote Susan 16/pause 150/speak Susan \"{{i18n:Susan.4hearts.01}}\"/pause 700/speak Susan \"{{i18n:Susan.4hearts.02}}\"/pause 500/question fork1 \"{{i18n:Susan.4hearts.03}}\"/fork 1000079_WitchCave/pause 600/speak Susan \"{{i18n:Susan.4hearts.04}}\"/pause 300/emote farmer 32/pause 200/emote Susan 32/pause 100/speak Susan \"{{i18n:Susan.4hearts.05}}\"/pause 1100/move Susan 0 0 0/pause 1300/move Susan 0 0 3/pause 700/speak Susan \"{{i18n:Susan.4hearts.06}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Susan \"{{i18n:Susan.4hearts.07}}\"",
+        "1000079_WitchCave": "pause 200/stopMusic/pause 300/emote Susan 8/pause 500/speak Susan \"{{i18n:Susan.4hearts.WitchCave.01}}\"/pause 400/emote farmer 40/pause 150/speak Susan \"{{i18n:Susan.4hearts.WitchCave.02}}\"/pause 300/globalFade/viewport -1000 -1000/warp Susan 54 38/warp farmer 53 39/faceDirection Susan 0/faceDirection farmer 0/viewport 48 38 true/pause 600/emote Susan 8/pause 300/speak Susan \"{{i18n:Susan.4hearts.WitchCave.03}}\"/pause 800/faceDirection Susan 3/pause 300/faceDirection farmer 1/pause 600/speak Susan \"{{i18n:Susan.4hearts.WitchCave.04}}\"/pause 200/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Susan.4hearts.WitchCave.05}}\"/pause 700/end dialogue Susan \"{{i18n:Susan.4hearts.WitchCave.06}}\"",
+      },
+    },
+    //SUSAN 7 HEART EVENT
+    {
+      "Action": "EditData",
+      "Target": "data/events/Railroad",
+      "Entries": {
+        "1000080/f Susan 1750/z spring/z summer/z fall/t 600 1500/w sunny": "kindadumbautumn/-500 -500/farmer 30 56 0 Susan 30 46 2/viewport 30 50 true/skippable/move farmer 0 -4 0 true/move Susan 0 4 2 true/pause 2000/speak Susan \"{{i18n:Susan.7hearts.01}}\"/pause 850/speak Susan \"{{i18n:Susan.7hearts.02}}\"/pause 400/emote Susan 40/pause 200/speak Susan \"{{i18n:Susan.7hearts.03}}\"/pause 500/question fork0 \"{{i18n:Susan.7hearts.04}}\"/fork 1000080_SusanHouse/pause 750/speak Susan \"{{i18n:Susan.7hearts.05}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/end",
+        "1000080_SusanHouse": "pause 550/speak Susan \"{{i18n:Susan.7hearts.SusanHouse.01}}\"/pause 150/emote farmer 32 true/pause 200/stopMusic/globalFade/viewport -1000 -1000/pause 800/changeLocation Custom_SusanHouse/pause 300/warp farmer 24 15/warp Susan 26 15/pause 100/move farmer 0 0 1/move Susan 0 0 0/pause 800/playMusic 50s/pause 500/viewport 17 14 true/pause 900/playSound Milking/shake Susan 600/pause 1000/speak Susan \"{{i18n:Susan.7hearts.SusanHouse.02}}\"/pause 400/move Susan 0 0 3/pause 500/move farmer 1 0 1/pause 600/showFrame farmer 90/playSound pickUpItem/pause 500/showFrame farmer 91/pause 150/showFrame farmer 92/pause 150/showFrame farmer 93/pause 100/playSound gulp/pause 750/playSound gulp/pause 800/playSound gulp/pause 500/showFrame farmer 92/pause 150/showFrame farmer 91/pause 150/showFrame farmer 90/pause 200/faceDirection farmer 0/pause 300/playSound stoneStep/pause 500/faceDirection farmer 1/pause 300/emote farmer 32/emote Susan 16/speak Susan \"{{i18n:Susan.7hearts.SusanHouse.03}}\"/pause 1200/speak Susan \"{{i18n:Susan.7hearts.SusanHouse.04}}\"/pause 200/globalFade/viewport -1000 -1000/pause 700/stopMusic/pause 600/message \"{{i18n:Susan.7hearts.SusanHouse.05}}\"/pause 800/friendship Susan 50/end dialogue Susan \"{{i18n:Susan.7hearts.SusanHouse.06}}\"",
+      },
+    },
+    //SUSAN 10 HEART EVENT
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_SusanHouse",
+      "Entries": {
+        "1000083/f Susan 2500": "none/-500 -500/farmer -100 -100 0 Susan 3 19 0/addTemporaryActor GrampletonWardrobe 16 32 -101 -101 2 false/showFrame GrampletonWardrobe 1 true/animate Susan false true 350 24 25 26 27/pause 750/viewport 7 19 true/skippable/playMusic 50s/pause 1500/playSound crafting/shake Susan 300/pause 650/playSound crafting/shake Susan 300/pause 650/playSound crafting/shake Susan 300/pause 300/stopAnimation Susan/pause 1350/emote Susan 40 true/pause 750/speak Susan \"{{i18n:Susan.10hearts.01}}\"/pause 1350/playSound stoneStep/pause 300/playSound stoneStep/pause 200/faceDirection Susan 1 true/pause 150/playSound stoneStep/pause 500/speak Susan \"{{i18n:Susan.10hearts.02}}\"/pause 850/warp farmer 10 21/playSound doorClose/pause 650/move farmer 0 -2 3/pause 500/speak Susan \"{{i18n:Susan.10hearts.03}}\"/pause 500/emote farmer 32/move farmer -6 0 0 true/pause 2000/faceDirection Susan 0 true/pause 2000/speak Susan \"{{i18n:Susan.10hearts.04}}\"/pause 1600/faceDirection farmer 3 true/pause 500/faceDirection Susan 1 true/pause 500/jump farmer/pause 1000/speak Susan \"{{i18n:Susan.10hearts.05}}\"/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 3 true/faceDirection Susan 3 true/warp Susan 5 19/warp farmer 4 19/warp GrampletonWardrobe 3 19/pause 500/playSound crafting/pause 500/playSound crafting/pause 500/playSound crafting/pause 650/playSound Ship/pause 700/showFrame GrampletonWardrobe 0 true/viewport 7 19 true/pause 1300/jump Susan/pause 900/speak Susan \"{{i18n:Susan.10hearts.06}}\"/pause 650/faceDirection farmer 2 true/pause 200/faceDirection farmer 1 true/pause 350/speak Susan \"{{i18n:Susan.10hearts.07}}\"/pause 1000/question fork0 \"{{i18n:Susan.10hearts.08}}\"/fork 1000083_CantExplain/pause 500/speak Susan \"{{i18n:Susan.10hearts.09}}\"/pause 1000/speak Susan \"{{i18n:Susan.10hearts.10}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound reward/message \"{{i18n:Susan.10hearts.11}}\"/pause 1000/end dialogue Susan \"{{i18n:Susan.10hearts.12}}\"",
+        "1000083_CantExplain": "pause 500/emote Susan 16 true/pause 300/speak Susan \"{{i18n:Susan.10hearts.CantExplain.01}}\"/pause 800/emote farmer 32/pause 200/speak Susan \"{{i18n:Susan.10hearts.CantExplain.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/playSound reward/message \"{{i18n:Susan.10hearts.CantExplain.03}}\"/pause 1000/end dialogue Susan \"{{i18n:Susan.10hearts.CantExplain.04}}\""
+      },
+    },
+    //Load temporary actor for Susan 10 heart event
+    {
+      "Action": "Load",
+      "Target": "Characters/GrampletonWardrobe",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonWardrobe.png"
+    },
+    { //Reduces resource requirements for kegs, preserve jars, and casks
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "When": {
+        "HasSeenEvent": "1000083"
+      },
+      "Fields": {
+        "Keg": {
+          0: "388 20 335 1 725 1"
+        },
+        "Cask": {
+          0: "388 20"
+        },
+        "Preserves Jar": {
+          0: "388 25 390 20 382 4"
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "When": {
+        "HasSeenEvent": "1000083",
+        "BalancedCrafting": true
+      },
+      "Fields": {
+        "Keg": {
+          0: "388 30 334 1 335 1 725 1"
+        },
+        "Cask": {
+          0: "388 20 725 1"
+        },
+        "Preserves Jar": {
+          0: "390 15 388 20 709 3 725 1"
+        },
+      },
+    },
+  ]
+}

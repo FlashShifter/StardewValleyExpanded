@@ -35,15 +35,15 @@ namespace SpiritsEveChestEditor
         {
             List<Item> itemList = new List<Item>(); //create a blank list
 
-            if (Game1.year % 2 == 1) //if this is an odd-numbered year
+            if (Game1.year % 4 == 1) //if this is an odd-numbered year
             {
-                itemList.Add(new StardewValley.Object(Vector2.Zero, 373, 1)); //add a golden pumpkin
+                itemList.Add(new StardewValley.Object("373", 1)); //add a golden pumpkin
                //itemList.Add(new StardewValley.Object(276, 1, false, -1, 4)); //add 1 iridium-quality pumpkin
                //itemList.Add(Utility.fuzzyItemSearch("Galaxy Sword", 1)); //add a modded weapon
             }
-            else //if this is an even-numbered year
+            else if ( Game1.year % 4 == 3)
             {
-                itemList.Add(new StardewValley.Object(Vector2.Zero, 373, 3)); //add a stack of 3 golden pumpkins
+                itemList.Add(new StardewValley.Object("373", 3)); //add a stack of 3 golden pumpkins
             }
 
             return itemList; //return the completed list
@@ -52,13 +52,13 @@ namespace SpiritsEveChestEditor
         /// <summary>Generates the new tile position for the Spirit's Eve festival chest.</summary>
         private static Vector2 GetChestTile()
         {
-            Vector2 newTile; //the chest's new tile position
+            Vector2 newTile = new Vector2(); //the chest's new tile position
 
-            if (Game1.year % 2 == 1) //if this is an odd-numbered year
+            if (Game1.year % 4 == 1) //if this is an odd-numbered year
             {
                 newTile = new Vector2(63, 16);
             }
-            else
+            else if (Game1.year % 4 == 3)
             {
                 newTile = new Vector2(71, 3);
             }
@@ -95,9 +95,10 @@ namespace SpiritsEveChestEditor
         private static void Player_Warped_SpiritsEve(object sender, WarpedEventArgs e)
         {
 
-            if (Game1.dayOfMonth == 27 && Game1.currentSeason == "fall" && e.NewLocation.NameOrUniqueName == "Temp") //if this player just warped to the Spirit's Eve festival
+            if (Game1.dayOfMonth == 27 && Game1.currentSeason == "fall" && (e.NewLocation.currentEvent?.isFestival ?? false)) //if this player just warped to the Spirit's Eve festival
             {
-                editSpiritsEveChest = true; //enable the chest editing event
+                if ( Game1.year % 2 == 1 )
+                    editSpiritsEveChest = true; //enable the chest editing event
             }
             else //if the player warped anywhere else
             {
@@ -112,7 +113,7 @@ namespace SpiritsEveChestEditor
                 return; //do nothing
 
             //look for a chest containing a golden pumpkin (null if not found)
-            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.items.Any(item => item.ParentSheetIndex == 373) == true) as Chest;
+            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.Items.Any(item => item.QualifiedItemId == "373") == true) as Chest;
 
             if (chest == null) //if the chest was NOT found
                 return; //do nothing (but keep checking)
@@ -121,9 +122,9 @@ namespace SpiritsEveChestEditor
             Vector2 newTile = GetChestTile(); //get the chest's new tile position
 
             Vector2 oldTile = chest.TileLocation; //get the chest's original tile
-            Game1.currentLocation.moveObject((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y); //move the chest to its new tile
-            chest.items.Clear(); //clear the old list of items
-            chest.items.Set(newItems); //add the new list of items
+            Game1.currentLocation.moveObject((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y, null); //move the chest to its new tile
+            chest.Items.Clear(); //clear the old list of items
+            chest.Items.AddRange(newItems); //add the new list of items
 
             editSpiritsEveChest = false; //disable this event
         }

@@ -31,7 +31,7 @@ namespace StardewValleyExpanded
 
                 Monitor.Log($"Applying Harmony patch \"{nameof(HarmonyPatch_DestroyableBushesSVE)}\": postfixing SDV method \"Bush.isDestroyable(GameLocation, Vector2)\".", LogLevel.Trace);
                 harmony.Patch(
-                    original: AccessTools.Method(typeof(Bush), nameof(Bush.isDestroyable), new[] { typeof(GameLocation), typeof(Vector2) }),
+                    original: AccessTools.Method(typeof(Bush), nameof(Bush.isDestroyable)),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_DestroyableBushesSVE), nameof(Bush_isDestroyable))
                 );
 
@@ -57,7 +57,7 @@ namespace StardewValleyExpanded
         {
             if (location?.Name == "Custom_ForestWest")
             {
-                if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains(746153084)) == true) //if any player has seen this event
+                if (Game1.getAllFarmers().Any(farmer => farmer.eventsSeen.Contains("746153084")) == true) //if any player has seen this event
                     return true; //bush is destroyable
                 else
                     return false;
@@ -75,8 +75,10 @@ namespace StardewValleyExpanded
         /// <param name="location">The in-game location of the bush.</param>
         /// <param name="tile">The tile position of the bush. Typically its left-most "collision" tile.</param>
         /// <param name="__result">The result of the original method.</param>
-        private static void Bush_isDestroyable(Bush __instance, GameLocation location, Vector2 tile, ref bool __result)
+        private static void Bush_isDestroyable(Bush __instance, ref bool __result)
         {
+            GameLocation location = __instance.Location;
+            Vector2 tile = __instance.Tile;
             try
             {
                 if (__result) //if this bush is already destroyable

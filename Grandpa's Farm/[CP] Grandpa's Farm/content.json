@@ -1,80 +1,64 @@
 {
-  "Format": "1.22",
-
+  "Format": "2.0",
   "ConfigSchema": {
-
-      "MistEffects": {
+    "MistEffects": {
       "AllowValues": "true, false",
       "Default": "true"
-   },
-
-      "SandboxLayout": {
+    },
+    "SandboxLayout": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "RemoveFences": {
+    },
+    "RemoveFences": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "RemoveGrassStretch": {
+    },
+    "RemoveGrassStretch": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "RemovePetHouse": {
+    },
+    "RemoveLandExpansionPond": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "RemoveLandExpansionPond": {
+    },
+    "GrassCropField": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "GrassCropField": {
+    },
+    "HeavyDebris": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "HeavyDebris": {
+    },
+    "LargerBridgeToGrandpasShed": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-     "LargerBridgeToGrandpasShed": {
+    },
+    "LargerGreenhouse": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "LargerGreenhouse": {
+    },
+    "RemoveGreenhouseObjects": {
       "AllowValues": "true, false",
       "Default": "false"
-   },
-   
-      "RemoveGreenhouseObjects": {
-      "AllowValues": "true, false",
-      "Default": "false"
-   } 
-},
-
-
+    }
+  },
   "CustomLocations": [
-  {
-    "Name": "Custom_FarmCliff",
-    "FromMapFile": "Assets/NewLocations/FarmCliff.tbin",
-    "MigrateLegacyNames": [ "FarmCliff" ]
-  },
-  {
-    "Name": "Custom_GrandpasGrove",
-    "FromMapFile": "Assets/NewLocations/GrandpasGrove.tbin",
-    "MigrateLegacyNames": [ "GrandpasGrove" ]
-  },
-],
-
+    {
+      "Name": "Custom_FarmCliff",
+      "FromMapFile": "Assets/NewLocations/FarmCliff.tbin",
+      "MigrateLegacyNames": [
+        "FarmCliff"
+      ]
+    },
+    {
+      "Name": "Custom_GrandpasGrove",
+      "FromMapFile": "Assets/NewLocations/GrandpasGrove.tbin",
+      "MigrateLegacyNames": [
+        "GrandpasGrove"
+      ]
+    },
+  ],
   "DynamicTokens": [
-
     {
       "Name": "GrandpaShedComplete",
       "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554906}}"
@@ -83,975 +67,1450 @@
       "Name": "BridgeComplete",
       "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554909}}"
     },
-	{
+    {
       "Name": "GroveComplete",
       "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554911}}"
     },
-	{
+    {
       "Name": "ExtraLand",
       "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=8033861}}"
     },
- ],
- 
-  "Changes": [ 
-
-    //Load tilesheets
-    {
+  ],
+  "Changes": [
+    { //Load tilesheets
       "Action": "Load",
       "Target": "Maps/z_petbowl, Maps/z_FarmCliff_Shadow, Maps/GrandpasGrove_Shadows1, Maps/GrandpasGrove_Shadows2, Maps/z_FarmCliff_Copper, Maps/z_FarmCliff_Iron, Maps/z_FarmCliff_Gold, Maps/z_FarmCliff_Gems, Maps/z_FarmCliff_Blank",
       "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
     },
-	
-    //Load mist tilesheets
-    {
+    { //Load mist tilesheets
       "Action": "Load",
       "Target": "Maps/z_GrandpasFarm_mist, Maps/z_GrandpasGrove_mist",
       "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
-	  "When": { "MistEffects": "true" }
+      "When": {
+        "MistEffects": "true"
+      }
     },
-	
     { //Adds mist effects to the farm
-     "Action": "EditMap",
-	 "Target": "Maps/Farm",
-	 "FromFile": "Assets/MistEffects/GrandpasFarm_Mist.tbin",
-	 "When": { "MistEffects": "true", "Weather": "Rain, Storm", "FarmType": "Standard" },
-	 "ToArea": { "X": 0, "Y": 0, "Width": 120, "Height": 97 }
+      "Action": "EditMap",
+      "Target": "Maps/Farm",
+      "FromFile": "Assets/MistEffects/GrandpasFarm_Mist.tbin",
+      "When": {
+        "MistEffects": "true",
+        "Weather": "Rain, Storm",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 120,
+        "Height": 93
+      }
     },
-	
-	{ //Adds mist effects to the grandpa's grove
-     "Action": "EditMap",
-	 "Target": "Maps/Custom_GrandpasGrove",
-	 "FromFile": "Assets/MistEffects/GrandpasGrove_Mist.tbin",
-	 "When": { "MistEffects": "true", "Weather": "Rain, Storm", "FarmType": "Standard" },
-	 "ToArea": { "X": 0, "Y": 0, "Width": 50, "Height": 48 }
+    { //Adds mist effects to the grandpa's grove
+      "Action": "EditMap",
+      "Target": "Maps/Custom_GrandpasGrove",
+      "FromFile": "Assets/MistEffects/GrandpasGrove_Mist.tbin",
+      "When": {
+        "MistEffects": "true",
+        "Weather": "Rain, Storm",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 50,
+        "Height": 48
+      }
     },
-
-	//Load grandpa's farm
-	{
+    { //Load grandpa's farm
       "Action": "Load",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/Maps/GrandpasFarm.tbin",
-	  "When": { "SandboxLayout": "false" }
     },
-	
-	//Load grandpa's farm
-	{
-      "Action": "Load",
+    //Configurations
+    { //Sandbox Layout
+      "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/Maps/GrandpasFarm_SandboxLayout.tbin",
-	  "When": { "SandboxLayout": "true" }
+      "When": {
+        "SandboxLayout": "true"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 140,
+        "Height": 85
+      }
     },
-	
-	
-	//Configurations
-	
     { //Remove Static Fences
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences1.tbin",
-      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
-      "When": { "FarmType": "Standard", "RemoveFences": "true", "RemoveGrassStretch": "true", "SandboxLayout": "false" }
+      "ToArea": {
+        "X": 35,
+        "Y": 35,
+        "Width": 35,
+        "Height": 50
+      },
+      "When": {
+        "FarmType": "Standard",
+        "RemoveFences": "true",
+        "RemoveGrassStretch": "true",
+        "SandboxLayout": "false"
+      }
     },
-	{ //Remove Static Fences
+    { //Remove Static Fences
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences2.tbin",
-      "ToArea": { "X": 35, "Y": 35, "Width": 35, "Height": 50 },
-      "When": { "FarmType": "Standard", "RemoveFences": "true", "RemoveGrassStretch": "false", "SandboxLayout": "false" }
+      "ToArea": {
+        "X": 35,
+        "Y": 35,
+        "Width": 35,
+        "Height": 50
+      },
+      "When": {
+        "FarmType": "Standard",
+        "RemoveFences": "true",
+        "RemoveGrassStretch": "false",
+        "SandboxLayout": "false"
+      }
     },
-	
-	{ //Removes grass stretch
+    { //Removes grass stretch
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveGrassStretch.tbin",
-      "ToArea": { "X": 69, "Y": 53, "Width": 11, "Height": 30 },
-      "When": { "FarmType": "Standard", "RemoveGrassStretch": "true", "SandboxLayout": "false" }
+      "ToArea": {
+        "X": 69,
+        "Y": 53,
+        "Width": 11,
+        "Height": 30
+      },
+      "When": {
+        "FarmType": "Standard",
+        "RemoveGrassStretch": "true",
+        "SandboxLayout": "false"
+      }
     },
-	
-	{ //Removes Pet House
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_RemovePetHouse.tbin",
-      "ToArea": { "X": 101, "Y": 35, "Width": 3, "Height": 5 },
-      "When": { "FarmType": "Standard", "RemovePetHouse": "true" }
-    },
-	
     { //Grass crop field
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_GrassCropField.tbin",
-      "ToArea": { "X": 74, "Y": 51, "Width": 40, "Height": 30 },
-      "When": { "FarmType": "Standard", "GrassCropField": "true", "SandboxLayout": "false" }
+      "ToArea": {
+        "X": 74,
+        "Y": 51,
+        "Width": 40,
+        "Height": 30
+      },
+      "When": {
+        "FarmType": "Standard",
+        "GrassCropField": "true",
+        "SandboxLayout": "false"
+      }
     },
-	
     { //heavy debris config 1
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_HeavyDebris.tbin",
-      "ToArea": { "X": 0, "Y": 0, "Width": 120, "Height": 97 },
-      "When": { "FarmType": "Standard", "HeavyDebris": "true", "SandboxLayout": "false" }
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 120,
+        "Height": 93
+      },
+      "When": {
+        "FarmType": "Standard",
+        "HeavyDebris": "true",
+        "SandboxLayout": "false"
+      }
     },
-	
     { //heavy debris config 2 - fence area
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_RemoveFences_HeavyDebris.tbin",
-      "ToArea": { "X": 35, "Y": 35, "Width": 34, "Height": 50 },
-      "When": { "FarmType": "Standard", "HeavyDebris": "true", "RemoveFences": "true", }
+      "ToArea": {
+        "X": 35,
+        "Y": 35,
+        "Width": 34,
+        "Height": 50
+      },
+      "When": {
+        "FarmType": "Standard",
+        "HeavyDebris": "true",
+        "RemoveFences": "true",
+      }
     },
-	
-	//Load greenhouse
-	{
+    //Load greenhouse
+    {
       "Action": "Load",
       "Target": "Maps/Greenhouse,Maps",
       "FromFile": "assets/Maps/Greenhouse_GrandpasFarm.tbin",
-	  "When": { "LargerGreenhouse": "true" }
+      "When": {
+        "LargerGreenhouse": "true"
+      }
     },
-	
-	{
+    {
       "Action": "EditMap",
       "Target": "Maps/Greenhouse,Maps",
       "FromFile": "assets/MapPatches/Greenhouse_Cleared_GrandpasFarm.tbin",
-	  "When": { "LargerGreenhouse": "true", "RemoveGreenhouseObjects": "true" },
-	  "ToArea": { "X": 0, "Y": 0, "Width": 27, "Height": 32 }
+      "When": {
+        "LargerGreenhouse": "true",
+        "RemoveGreenhouseObjects": "true"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 27,
+        "Height": 32
+      }
     },
-	
-	//Patches surrounding maps with warp tiles + redesigns
+    //Patches surrounding maps with warp tiles + redesigns
     {
       "Action": "EditMap",
       "Target": "Maps/BusStop",
-      "FromFile": "assets/MapPatches/GrandpasFarm_BusStopWarps.tbin",
-      "ToArea": { "X": 0, "Y": 22, "Width": 18, "Height": 8 },
-      "When": { "FarmType": "Standard", "HasSeenEvent|contains=8033861": false }
-    },
-	{
-      "Action": "EditMap",
-      "Target": "Maps/BusStop",
-      "FromFile": "assets/MapPatches/GrandpasFarm_BusStopWarps_ExpandedLand.tbin",
-      "ToArea": { "X": 0, "Y": 22, "Width": 18, "Height": 8 },
-      "When": { "FarmType": "Standard", "HasSeenEvent|contains=8033861": true }
+      "FromFile": "assets/MapPatches/GrandpasFarm_BusStopWarps.tmx",
+      "ToArea": {
+        "X": 0,
+        "Y": 22,
+        "Width": 27,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "Standard",
+        "HasSeenEvent|contains=8033861": false
+      }
     },
     {
       "Action": "EditMap",
-      "Target": "Maps/Forest",
-      "FromFile": "assets/MapPatches/GrandpasFarm_ForestMarnieYard.tbin",
-      "ToArea": { "X": 105, "Y": 0, "Width": 15, "Height": 19 },
-      "When": { "FarmType": "Standard" }
+      "Target": "Maps/BusStop",
+      "FromFile": "assets/MapPatches/GrandpasFarm_BusStopWarps_ExpandedLand.tmx",
+      "ToArea": {
+        "X": 0,
+        "Y": 22,
+        "Width": 27,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "Standard",
+        "HasSeenEvent|contains=8033861": true
+      }
     },
     {
       "Action": "EditMap",
       "Target": "Maps/Forest",
       "FromFile": "assets/MapPatches/GrandpasFarm_ForestShortcut.tbin",
-      "ToArea": { "X": 37, "Y": 0, "Width": 6, "Height": 8 },
-      "When": { "FarmType": "Standard" }
+      "ToArea": {
+        "X": 37,
+        "Y": 0,
+        "Width": 6,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "Standard"
+      }
     },
-	{
-     "Action": "EditMap",
-     "Target": "Maps/Backwoods",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_BackwoodsBottom.tbin",
-     "ToArea": { "X": 35, "Y": 30, "Width": 15, "Height": 10 },
-	 "When": { "FarmType": "Standard" }
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Backwoods",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_BackwoodsBottom.tbin",
+      "ToArea": {
+        "X": 35,
+        "Y": 30,
+        "Width": 15,
+        "Height": 10
+      },
+      "When": {
+        "FarmType": "Standard"
+      }
     },
     {
       "Action": "EditMap",
       "Target": "Maps/Woods",
       "FromFile": "assets/MapPatches/GrandpasFarm_WoodsWarps.tmx",
-      "ToArea": { "X": 64, "Y": 0, "Width": 8, "Height": 7 },
-      "When": { "FarmType": "Standard" }
+      "ToArea": {
+        "X": 64,
+        "Y": 0,
+        "Width": 8,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "Standard"
+      }
     },
-	
-	//Patches grandpa's farm forest entrance
+    //Patches backwoods staircase
     {
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_Forest_Joja.tbin",
-      "ToArea": { "X": 66, "Y": 82, "Width": 5, "Height": 15 },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "false" }
-    },
-	{
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_Forest_Joja2.tbin",
-      "ToArea": { "X": 66, "Y": 82, "Width": 5, "Height": 15 },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "true" }
-    },
-	{
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_SandboxLayout_Forest_Joja.tbin",
-      "ToArea": { "X": 66, "Y": 82, "Width": 5, "Height": 15 },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", "SandboxLayout": "true" }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/Farm",
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard" },
-	  "Update": "OnLocationChange",
-      "TextOperations": [
-     {
-      "Operation": "Append",
-      "Target": [ "MapProperties", "Light" ],
-      "Value": "67 95 4",
-      "Delimiter": " "
-       }
-     ]
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "MapProperties": { "DayTiles": "AlwaysFront 67 93 907" },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard", }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "MapProperties": { "NightTiles": "AlwaysFront 67 93 908" },
-      "When": { "HasSeenEvent": "5553210", "FarmType": "Standard" }
-    },
-	
-	//Patches backwoods staircase
-	{
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/GrandpasFarm_BackwoodsStairs.tbin",
-      "ToArea": { "X": 76, "Y": 0, "Width": 6, "Height": 3 },
-      "When": { "HasFlag": "communityUpgradeShortcuts", "FarmType": "Standard" }
+      "ToArea": {
+        "X": 76,
+        "Y": 0,
+        "Width": 6,
+        "Height": 3
+      },
+      "When": {
+        "HasFlag": "communityUpgradeShortcuts",
+        "FarmType": "Standard"
+      }
     },
-	
-	//Patches traveling merchant
-	{
-      "Action": "EditMap",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/MapPatches/GrandpasFarm_ForestTravelingMerchant.tbin",
-      "ToArea": { "X": 23, "Y": 93, "Width": 8, "Height": 4 },
-      "When": { "DayOfWeek": "Friday, Sunday", "FarmType": "Standard" }
-    },	
-	{
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "assets/MapPatches/GrandpasFarm_ForestTravelingMerchant_Gone.tbin",
-     "ToArea": { "X": 27, "Y": 95,"Width": 1, "Height": 2 },
-     "When": { "DayOfWeek": "Friday, Sunday" },
-	 "PatchMode": "Overlay",
-	 "Update": "OnLocationChange"
-    },
-	
-	//Fixes an issue where moving the greenhouse caused glitched tiles.
-	{
+    //Fixes an issue where moving the greenhouse caused glitched tiles.
+    {
       "Action": "EditMap",
       "Target": "Maps/Farm_Greenhouse_Dirt",
       "FromFile": "assets/MapPatches/GrandpasFarm_GreenhousePatch.tmx",
-      "When": { "FarmType": "Standard" },
-	  "ToArea": { "X": 0, "Y": 0, "Width": 9, "Height": 6 },
-    }, 
-
-
-
-	// *** START GRANDPAS SHED CODE - CONTINUED *** //
-	
-	
-	
-	//Patches fixed grandpa's shed
-	{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_ShedFixed.tbin",
-	 "When": { "GrandpaShedComplete": true },
-     "ToArea": { "X": 15, "Y": 11, "Width": 11, "Height": 12 }
-    },
-	
-	
-	//Start Bridge quest
-	
-    {
-      "Action": "EditData",
-      "Target": "Data/SpecialOrders",
-     "Update": "OnLocationChange",
-      "Entries": {
-      "Robin4": {
-        "Name": "[Robin4_Name]",
-        "Requester": "Robin",
-        "Duration": "Month",
-         "Repeatable": "False",
-        "RequiredTags": "event_2554908, !event_2554909",
-        "OrderType": "StardewValleyExpanded",
-        "SpecialRule": "",
-        "Text": "[Robin4_Text]",
-        "ItemToRemoveOnEnd": null,
-        "MailToRemoveOnEnd": null,
-       "RandomizedElements": null,
-        "Objectives": [
-	       {
-            "Type": "Donate",
-            "Text": "[Robin4_Objective_1_Text]",
-            "RequiredCount": "900",
-            "Data": {
-              "DropBox": "RobinChest",
-              "DropBoxGameLocation": "ScienceHouse",
-              "DropBoxIndicatorLocation": "3 19.2",
-              "AcceptedContextTags": "item_stone"
-           }
-         },
-       ],
-        "Rewards": [
-          {
-            "Type": "Mail",
-            "Data": {
-              "MailReceived": "BridgeBuilt"
-            }
-          },
-          {
-            "Type": "Friendship",
-            "Data": {}
-          }
-        ]
+      "When": {
+        "FarmType": "Standard"
       },
-     },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 9,
+        "Height": 6
+      },
     },
-
-    {   //Robin's stone bridge strings
-     "Action": "EditData",
-     "Target": "Strings/SpecialOrderStrings",
-     "Entries": {
-     "Robin4_Name": "Stone Bridge",
-     "Robin4_Text": "Robin needs 900 stone to build a bridge on my property. It'll make traveling to the shed much easier!",
-     "Robin4_Objective_1_Text": "Drop off stone at Robin's chest at her workshop.",
-	    }
-    },
-
-
-	//Event #8 - Stone Bridge    <<ID tagged by quest
+    // *** START GRANDPAS SHED CODE - CONTINUED *** //
+    //Patches fixed grandpa's shed
     {
-	 "Action": "EditData",
-	 "Target": "data/events/Farm",
-	 "When": { "HasSeenEvent": "2554907", "FarmType": "Standard" },
-	 "Entries": {
-	 "2554908/t 900 1800/H": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/pause 1000/speak Robin \"Hi, @!$1#$b#I was reading a stone masonry magazine and I was inspired to try my hand at it!#$b#If you supplied me with the stone, I could build a little bridge to your shed.$0#$b#How does that sound?$1\"/pause 200/emote farmer 32/pause 300/speak Robin \"To be on the safe side, I think this project will require 900 pieces of stone.#$b#You can drop off the stone in my storage chest at my workshop!$0\"/pause 500/end"
-	    },
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_ShedFixed.tbin",
+      "When": {
+        "GrandpaShedComplete": true
+      },
+      "ToArea": {
+        "X": 15,
+        "Y": 11,
+        "Width": 11,
+        "Height": 12
+      }
     },
-	
-	//Event #9 - Stone Bridge    <<ID tagged by framework
-    {
-	 "Action": "EditData",
-	 "Target": "data/events/ScienceHouse",
-	 "When": { "FarmType": "Standard" },
-	 "Entries": {
-	 "2554928/e 2554908/k 2554909/t 900 1800/H": "none/-500 -500/Robin -10 -10 0/end"
-	    },
-    },
-	
-	//Event #10 - Stone Bridge  <<Triggers map patch
-    {
-	 "Action": "EditData",
-	 "Target": "data/events/Farm",
-	 "When": { "FarmType": "Standard", "HasFlag": "BridgeBuilt" },
-	 "Entries": {
-	 "2554909/t 600 1150/H": "continue/64 15/farmer 64 15 2 Robin 64 17 0/skippable/pause 1000/speak Robin \"Morning, @! You gathered all the stone I requested!$1#$b#I'll get started on the bridge first thing tomorrow!$0\"/pause 500/end",              
-	    },
-    },
-
-	//Patches bridge
-	{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge.tbin",
-	 "When": { "BridgeComplete": "true", "FarmType": "Standard", "LargerBridgeToGrandpasShed": "false" },
-     "ToArea": { "X": 31, "Y": 32, "Width": 4, "Height": 5 }
-    },
-	
-	//Patches bridge (config)
-	{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge2.tbin",
-	 "When": { "BridgeComplete": "true", "FarmType": "Standard", "LargerBridgeToGrandpasShed": "true" },
-     "ToArea": { "X": 31, "Y": 31, "Width": 4, "Height": 6 }
-    },
-
-
-     //Start grove quest
+    //Start Bridge quest
     {
       "Action": "EditData",
       "Target": "Data/SpecialOrders",
       "Update": "OnLocationChange",
       "Entries": {
-      "Clint3": {
-        "Name": "[Clint3_Name]",
-        "Requester": "Clint",
-        "Duration": "Month",
-        "Repeatable": "False",
-        "RequiredTags": "event_2554910, !event_2554911",
-        "OrderType": "StardewValleyExpanded",
-        "SpecialRule": "",
-        "Text": "[Clint3_Text]",
-        "ItemToRemoveOnEnd": null,
-        "MailToRemoveOnEnd": null,
-        "RandomizedElements": null,
-        "Objectives": [
-		   {
-            "Type": "Donate",
-            "Text": "[Clint3_Objective_1_Text]",
-            "RequiredCount": "30",
-            "Data": {
-              "DropBox": "ClintShelf",
-              "DropBoxGameLocation": "Blacksmith",
-              "DropBoxIndicatorLocation": "13 16.4",
-              "AcceptedContextTags": "item_gold_bar"
-           }
-         },
-       ],
-        "Rewards": [
-          {
-            "Type": "Mail",
-            "Data": {
-              "MailReceived": "GoldenStatueCommission"
+        "Robin4": {
+          "Name": "[Robin4_Name]",
+          "Requester": "Robin",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_2554908, !event_2554909",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Robin4_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "[Robin4_Objective_1_Text]",
+              "RequiredCount": "900",
+              "Data": {
+                "DropBox": "RobinChest",
+                "DropBoxGameLocation": "ScienceHouse",
+                "DropBoxIndicatorLocation": "3 19.2",
+                "AcceptedContextTags": "item_stone"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "BridgeBuilt"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {}
             }
-          },
-          {
-            "Type": "Friendship",
-            "Data": {}
-          }
-        ]
+          ]
+        },
       },
-     },
     },
-
-    {   //Clint's gold bar request
-     "Action": "EditData",
-     "Target": "Strings/SpecialOrderStrings",
-     "Entries": {
-     "Clint3_Name": "A Strange Commission",
-     "Clint3_Text": "Clint needs 30 gold bars for a project. In return, he'll clear away thicket near my shed. He says there's something special there!",
-	 "Clint3_Objective_1_Text": "Drop off gold bars at Clint's ingot shelf.",
-	    }
+    { //Robin's stone bridge strings
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "Robin4_Name": "{{i18n:GF.Bridge.01}}",
+        "Robin4_Text": "{{i18n:GF.Bridge.02}}",
+        "Robin4_Objective_1_Text": "{{i18n:GF.Bridge.03}}",
+      }
     },
-
-
-	{ //Temporary patch for gold bar drop off
-     "Action": "EditMap",
-     "Target": "Maps/BlackSmith",
-     "FromFile": "Assets/MapPatches/IngotShelf.tbin",
-	 "When": { "HasSeenEvent": "2554910", "HasSeenEvent |contains=2554911": false },
-     "ToArea": { "X": 13, "Y": 16, "Width": 1, "Height": 3 },
-	 "Update": "OnLocationChange"
+    //Event #8 - Stone Bridge    <<ID tagged by quest
+    {
+      "Action": "EditData",
+      "Target": "data/events/Farm",
+      "When": {
+        "HasSeenEvent": "2554907",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "2554908/t 900 1800/H": "none/-500 -500/farmer -200 -200 0 Robin 13 13 0/skippable/pause 1000/speak Robin \"{{i18n:GF.Event8.01}}\"/pause 200/emote farmer 32/pause 300/speak Robin \"{{i18n:GF.Event8.02}}\"/pause 500/end"
+      },
     },
-
-	
+    //Event #9 - Stone Bridge    <<ID tagged by framework
+    {
+      "Action": "EditData",
+      "Target": "data/events/ScienceHouse",
+      "When": {
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "2554928/e 2554908/k 2554909/t 900 1800/H": "none/-500 -500/Robin -10 -10 0/end"
+      },
+    },
+    //Event #10 - Stone Bridge  <<Triggers map patch
+    {
+      "Action": "EditData",
+      "Target": "data/events/Farm",
+      "When": {
+        "FarmType": "Standard",
+        "HasFlag": "BridgeBuilt"
+      },
+      "Entries": {
+        "2554909/t 600 1150/H": "continue/64 15/farmer 64 15 2 Robin 64 17 0/skippable/pause 1000/speak Robin \"{{i18n:GF.Event10.01}}\"/pause 500/end",
+      },
+    },
+    //Patches bridge
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge.tbin",
+      "When": {
+        "BridgeComplete": "true",
+        "FarmType": "Standard",
+        "LargerBridgeToGrandpasShed": "false"
+      },
+      "ToArea": {
+        "X": 31,
+        "Y": 32,
+        "Width": 4,
+        "Height": 5
+      }
+    },
+    //Patches bridge (config)
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_Bridge2.tbin",
+      "When": {
+        "BridgeComplete": "true",
+        "FarmType": "Standard",
+        "LargerBridgeToGrandpasShed": "true"
+      },
+      "ToArea": {
+        "X": 31,
+        "Y": 31,
+        "Width": 4,
+        "Height": 6
+      }
+    },
+    //Start grove quest
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "Clint3": {
+          "Name": "[Clint3_Name]",
+          "Requester": "Clint",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_2554910, !event_2554911",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Clint3_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "[Clint3_Objective_1_Text]",
+              "RequiredCount": "30",
+              "Data": {
+                "DropBox": "ClintShelf",
+                "DropBoxGameLocation": "Blacksmith",
+                "DropBoxIndicatorLocation": "13 16.4",
+                "AcceptedContextTags": "item_gold_bar"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "GoldenStatueCommission"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {}
+            }
+          ]
+        },
+      },
+    },
+    { //Clint's gold bar request
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "Clint3_Name": "{{i18n:Clint.GoldBar.01}}",
+        "Clint3_Text": "{{i18n:Clint.GoldBar.02}}",
+        "Clint3_Objective_1_Text": "{{i18n:Clint.GoldBar.03}}",
+      }
+    },
+    { //Temporary patch for gold bar drop off
+      "Action": "EditMap",
+      "Target": "Maps/BlackSmith",
+      "FromFile": "Assets/MapPatches/IngotShelf.tbin",
+      "When": {
+        "HasSeenEvent": "2554910",
+        "HasSeenEvent |contains=2554911": false
+      },
+      "ToArea": {
+        "X": 13,
+        "Y": 16,
+        "Width": 1,
+        "Height": 3
+      },
+      "Update": "OnLocationChange"
+    },
     //Part 1 - A strange commission - Lewis     <<ID tagged by quest
     {
-	 "Action": "EditData",
-	 "Target": "data/events/Blacksmith",
-	 "When": { "HasSeenEvent": "2554909", "FarmType": "Standard" },
-	 "Entries": {
-	 "2554910/y 2/k 6665293/H": "continue/-500 -500/farmer 13 1 0 Clint 3 13 2 Lewis 3 15 0/pause 500/viewport 7 14 true/pause 1000/speak Lewis \"I look forward to it. Thank you!$0\"/pause 500/faceDirection Lewis 1 true/pause 300/faceDirection Lewis 2 true/pause 300/move Lewis 0 1 1/move Lewis 2 0 2/move Lewis 0 3 2/warp Lewis -40 -40/playSound doorClose/pause 700/shake Clint 500/pause 700/speak Clint \"Hmm... I wonder how I'm gonna get the gold for his commission.$2\"/pause 1000/playSound doorClose/warp farmer 5 19/pause 400/move farmer 0 -2 3/move farmer -2 0 0/move farmer 0 -2 0 true/speak Clint \"Hey, @. You dropped by at a good time.$0\"/pause 500/emote farmer 8/pause 500/speak Clint \"I need to source 30 gold bars for a... project. Was wonderin' if you were interested, seeing as you're an adventurer and all.$0\"/pause 500/emote farmer 40/pause 200/speak Clint \"For payment, I was thinking I could use one of my new tools to clear away thicket on your farm.$0#$b#That big shed of yours is near natural hot springs. I'd clear a path for you.$0\"/pause 500/jump farmer/pause 1000/speak Clint \"Great. Thanks for the help. You can drop off the gold bars at my ingot shelf in the corner there.$0\"/pause 500/faceDirection farmer 1 true/pause 650/globalFade/viewport -1000 -1000/end dialogueWarpOut Clint \"Oh. What's the project? I can't really talk about it.$0\""
-	 },
+      "Action": "EditData",
+      "Target": "data/events/Blacksmith",
+      "When": {
+        "HasSeenEvent": "2554909",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "2554910/y 2/k 6663408/H": "continue/-500 -500/farmer 13 1 0 Clint 3 13 2 Lewis 3 15 0/pause 500/viewport 7 14 true/pause 1000/speak Lewis \"{{i18n:Lewis.Commission.01}}\"/pause 500/faceDirection Lewis 1 true/pause 300/faceDirection Lewis 2 true/pause 300/move Lewis 0 1 1/move Lewis 2 0 2/move Lewis 0 3 2/warp Lewis -40 -40/playSound doorClose/pause 700/shake Clint 500/pause 700/speak Clint \"{{i18n:Commission.02}}\"/pause 1000/playSound doorClose/warp farmer 5 19/pause 400/move farmer 0 -2 3/move farmer -2 0 0/move farmer 0 -2 0 true/speak Clint \"{{i18n:Commission.03}}\"/pause 500/emote farmer 8/pause 500/speak Clint \"{{i18n:Commission.04}}\"/pause 500/emote farmer 40/pause 200/speak Clint \"{{i18n:Commission.05}}\"/pause 500/jump farmer/pause 1000/speak Clint \"{{i18n:Commission.06}}\"/pause 500/faceDirection farmer 1 true/pause 650/globalFade/viewport -1000 -1000/end dialogueWarpOut Clint \"{{i18n:Commission.07}}\""
+      },
     },
-	
     //Part 1 - A strange commission - Morris     <<ID tagged by quest
     {
-	 "Action": "EditData",
-	 "Target": "data/events/Blacksmith",
-	 "When": { "HasSeenEvent": "2554909", "FarmType": "Standard" },
-	 "Entries": {
-	 "2554910/y 2/e 6665293/H": "continue/-500 -500/farmer 13 1 0 Clint 3 13 2 MorrisTod 3 15 0/pause 500/viewport 7 14 true/pause 1000/speak MorrisTod \"Marvelouse. I await the results!$1\"/pause 500/faceDirection MorrisTod 1 true/pause 300/faceDirection MorrisTod 2 true/pause 300/move MorrisTod 0 1 1/move MorrisTod 2 0 2/move MorrisTod 0 3 2/warp MorrisTod -40 -40/playSound doorClose/pause 700/shake Clint 500/pause 700/speak Clint \"Hmm... I wonder how I'm gonna get the gold for his commission.$2\"/pause 1000/playSound doorClose/warp farmer 5 19/pause 400/move farmer 0 -2 3/move farmer -2 0 0/move farmer 0 -2 0 true/speak Clint \"Hey, @. You dropped by at a good time.$0\"/pause 500/emote farmer 8/pause 500/speak Clint \"I need to source 30 gold bars for a... project. Was wonderin' if you were interested, seeing as you're an adventurer and all.$0\"/pause 500/emote farmer 40/pause 200/speak Clint \"For payment, I was thinking I could use one of my new tools to clear away thicket on your farm.$0#$b#That big shed of yours is near natural hot springs. I'd clear a path for you.$0\"/pause 500/jump farmer/pause 1000/speak Clint \"Great. Thanks for the help. You can drop off the gold bars at my ingot shelf in the corner there.$0\"/pause 500/faceDirection farmer 1 true/pause 650/globalFade/viewport -1000 -1000/end dialogueWarpOut Clint \"Oh. What's the project? I can't really talk about it.$0\""
-	 },
+      "Action": "EditData",
+      "Target": "data/events/Blacksmith",
+      "When": {
+        "HasSeenEvent": "2554909",
+        "FarmType": "Standard"
+      },
+      "Entries": {
+        "2554910/y 2/e 6663408/H": "continue/-500 -500/farmer 13 1 0 Clint 3 13 2 MorrisTod 3 15 0/pause 500/viewport 7 14 true/pause 1000/speak MorrisTod \"{{i18n:Morris.Commission.01}}\"/pause 500/faceDirection MorrisTod 1 true/pause 300/faceDirection MorrisTod 2 true/pause 300/move MorrisTod 0 1 1/move MorrisTod 2 0 2/move MorrisTod 0 3 2/warp MorrisTod -40 -40/playSound doorClose/pause 700/shake Clint 500/pause 700/speak Clint \"{{i18n:Commission.02}}\"/pause 1000/playSound doorClose/warp farmer 5 19/pause 400/move farmer 0 -2 3/move farmer -2 0 0/move farmer 0 -2 0 true/speak Clint \"{{i18n:Commission.03}}\"/pause 500/emote farmer 8/pause 500/speak Clint \"{{i18n:Commission.04}}\"/pause 500/emote farmer 40/pause 200/speak Clint \"{{i18n:Commission.05}}\"/pause 500/jump farmer/pause 1000/speak Clint \"{{i18n:Commission.06}}\"/pause 500/faceDirection farmer 1 true/pause 650/globalFade/viewport -1000 -1000/end dialogueWarpOut Clint \"{{i18n:Commission.07}}\""
+      },
     },
-	
-	//Part 2 - A strange commission    <<ID tagged by framework
+    //Part 2 - A strange commission    <<ID tagged by framework
     {
-	 "Action": "EditData",
-	 "Target": "data/events/Blacksmith",
-	 "Entries": {
-	 "2551994/e 2554910/k 2554911/H": "continue/-500 -500/Clint -20 -20 0/end" 
-	 },
+      "Action": "EditData",
+      "Target": "data/events/Blacksmith",
+      "Entries": {
+        "2551994/e 2554910/k 2554911/H": "continue/-500 -500/Clint -20 -20 0/end"
+      },
     },
-
-	
-	//Part 3 - A strange commission    <<Map patched next day
-	{
-	 "Action": "EditData",
-	 "Target": "data/events/Farm",
-	 "When": { "FarmType": "Standard", "HasFlag": "GoldenStatueCommission" },
-	 "Entries": {
-	 "2554911/H": "continue/95 49/farmer 64 15 2 Clint 64 17 0/pause 1000/speak Clint \"Hey, uhh.. I looked around the thicket by your shed. Looks like I was right. It does lead somewhere nice...$0#$b#A path will be cleared by tomorrow. Thanks again for helping out, @.$0\"/pause 500/end dialogue Clint \"I don't really question what people commission from me.$0#$e#Lot of hot springs in the mountains. It's great one is close to your property.$0\""
-	 },
+    //Part 3 - A strange commission    <<Map patched next day
+    {
+      "Action": "EditData",
+      "Target": "data/events/Farm",
+      "When": {
+        "FarmType": "Standard",
+        "HasFlag": "GoldenStatueCommission"
+      },
+      "Entries": {
+        "2554911/H": "continue/95 49/farmer 64 15 2 Clint 64 17 0/pause 1000/speak Clint \"{{i18n:Commission3.01}}\"/pause 500/end dialogue Clint \"{{i18n:Commission3.02}}\""
+      },
     },
-	
     //Patches grove entrance
-	{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_GroveUnlocked.tbin",
-	 "When": { "GroveComplete": "true", "FarmType": "Standard" },
-     "ToArea": { "X": 0, "Y": 17, "Width": 9, "Height": 6 }
-    },
-	
-
-	
-{ //Lewis's Special Order #2 - allows player on Grandpa's Farm to purchase more land   ---> Quest is added to journal automatically
-  "Action": "EditData",
-  "Target": "Data/SpecialOrders",
-  "Update": "OnLocationChange",
-  "Entries": {
-  "Lewis2": {
-    "Name": "[Lewis2_Name]",
-    "Requester": "Lewis",
-    "Duration": "Month",
-    "Repeatable": "False",
-    "RequiredTags": "event_8033758, !event_6665293, !event_8033861",
-    "OrderType": "StardewValleyExpanded",
-    "SpecialRule": "",
-    "Text": "[Lewis2_Text]",
-    "ItemToRemoveOnEnd": null,
-    "MailToRemoveOnEnd": null,
-    "RandomizedElements": null,
-    "Objectives": [
-      {
-        "Type": "Deliver",
-        "Text": "[Lewis2_Objective_1_Text]",
-        "RequiredCount": "1",
-        "Data": {
-          "AcceptedContextTags": "item_property_deed",
-          "TargetName": "Lewis"
-        }
-      },
-    ],
-    "Rewards": [
-      {
-        "Type": "Mail",
-        "Data": {
-          "MailReceived": "DeedOfLand"
-        }
-      }
-    ]
-  },
- },
-},
-
-{   //Lewis special order strings
-    "Action": "EditData",
-    "Target": "Strings/SpecialOrderStrings",
-	"When": { "HasSeenEvent |contains=6665293": false },
-    "Entries": {
-       "Lewis2_Name": "Expanding My Farmland",
-       "Lewis2_Text": "Sign the property deed and submit a 250,000g direct payment using the red ledger.",
-       "Lewis2_Objective_1_Text": "Turn in the property deed to Lewis.",
-	}
-},
-
-{    //Patches Lewis' manor ledger shop
-     "Action": "EditMap",
-	 "Target": "Maps/ManorHouse",
-	 "FromFile": "Assets/MapPatches/PropertyDeedShop.tbin",
-	 "When": { "HasSeenEvent": "8033758", "HasSeenEvent |contains=6665293": false, "HasSeenEvent |contains=8033860": false, "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
-	 "ToArea": { "X": 1, "Y": 7, "Width": 1, "Height": 1 },
-	 "Update": "OnLocationChange"
-},
-
-{    //Lewis special order event - part 1
-	 "Action": "EditData",
-	 "Target": "data/events/farmhouse",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent |contains=6665293": false }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on
-	 "Entries": {
-	 "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"Someone's knocking on the front door.\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"Hello, @. Hard at work on the farm today I see.$0#$b#May I take a moment of your time? There's something I want to talk to you about!$0\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"Follow me over there, past those fences.$0\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"I haven't hopped a fence like that since I was a youngin!$1\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"You've been cultivating %farm Farm for a couple years now. Have you thought about expanding?$0#$b#There's a lot of good land here next to your property.$0\"/pause 600/emote farmer 40/speak Lewis \"This is roughly one acre, which would cost 250,000g when all is said and done.$0#$b#Visit me at my estate when you've reached your decision, @.$1\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"Should I expand the farm?\"/pause 800/question fork0 \"#Expand the farm.#Don't expand the farm.\"/fork 8033858_ExpandFarm/pause 750/message \"All right. I'm not purchasing more land. I should let Lewis know.\"/pause 500/end dialogue Lewis \"Ah, you don't need to expand your farmland? Thank you for letting me know, @.$0#$e#Some areas of Stardew Valley should just remain how they are.$0\"",
-	  
-     },
-},
-
-{    //Lewis special order event - part 1 (players can start questline early if they meet conditions)
-	 "Action": "EditData",
-	 "Target": "data/events/farmhouse",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent |contains=6665293": false, "HasSeenEvent |contains=191393": true, "HasFlag |contains=ccMovieTheater": true, "HasSeenEvent |contains=8050109": true, "HasFlag |contains=Island_Resort": true }, //=Player has completed community center, theater, island resort, and cleared railroad boulder
-	 "Entries": {
-	 "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"Someone's knocking on the front door.\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"Hello, @. Hard at work on the farm today I see.$0#$b#May I take a moment of your time? There's something I want to talk to you about!$0\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"Follow me over there, past those fences.$0\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"I haven't hopped a fence like that since I was a youngin!$1\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"You've been cultivating %farm Farm for some time now. Have you thought about expanding?$0#$b#There's a lot of good land here next to your property.$0\"/pause 600/emote farmer 40/speak Lewis \"This is roughly one acre, which would cost 250,000g when all is said and done.$0#$b#Visit me at my estate when you've reached your decision, @.$1\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"Should I expand the farm?\"/pause 800/question fork0 \"#Expand the farm.#Don't expand the farm.\"/fork 8033858_ExpandFarm/pause 750/message \"All right. I'm not purchasing more land. I should let Lewis know.\"/pause 500/end dialogue Lewis \"Ah, you don't need to expand your farmland? Thank you for letting me know, @.$0#$e#Some areas of Stardew Valley should just remain how they are.$0\"",
-	  
-     },
-},
-
-{    //Player decided to purchase land
-	 "Action": "EditData",
-	 "Target": "data/events/farm",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent |contains=6665293": false },
-	 "Entries": {
-	 "8033858_ExpandFarm": "pause 400/addMailReceived PlayerWillExpandFarm/pause 100/message \"All right. I'll purchase more land. I should let Lewis know.\"/pause 500/end dialogue Lewis \"Land value in Stardew Valley has skyrocketed this past year.$0\""
-	 },
-},
-
-{    //Player decided to purchase land    ---->Allows ledger shop and special order to load
-	 "Action": "EditData",
-	 "Target": "data/events/town",
-	 "Update": "OnLocationChange",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "HasFlag": "PlayerWillExpandFarm", "FarmType": "Standard", "HasSeenEvent |contains=6665293": false },
-	 "Entries": {
-	 "8033758": "none/-500 -500/Lewis -20 -20 0/end"
-	 },
-},
-
-{    //Lewis special order event - part 2      --->8033859 tagged for framework
-	 "Action": "EditData",
-	 "Target": "data/events/ManorHouse",
-	 "When": { "HasSeenEvent |contains=6665293": false },
-	 "Entries": {
-	 "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/viewport 5 9 clamp true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"Sorry, didn't hear you over the sink. Had to give my hands a good wash.$0\"/pause 600/emote farmer 40/pause 150/speak Lewis \"So, you decided to purchase more property? Great to hear.$0#$b#If there's anyone who'll get good use out of that land, it's you.$1\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"Use the red ledger to buy the property deed, then turn it into me for approval.$0\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"I look forward to seeing what you do with the space, @.$0#$b#Now, I need to go take care of something. Come find me later today with that signed deed.$0\"/pause 500/end dialogueWarpOut Lewis \"That new pond you'll have is in a great spot.$1#$e#Ah, what did I have to take care of? Nothing of your concern.$0#$e#...$3#$e#%Lewis is now ignoring you.\""
-	 },
-},
-
-{    //Lewis special order event - part 3      --->8033860 tagged for farmland map patch
-	 "Action": "EditData",
-	 "Target": "data/events/farm",
-	 "When": { "HasSeenEvent |contains=6665293": false, "HasFlag": "DeedOfLand" },
-	 "Entries": {
-	 "8033861/t 600 1100/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/skippable/pause 1000/speak Lewis \"Great news, @. The application for your farm's expansion has been approved.$0#$b#The land will be cleared and ready to use tomorrow!$1\"/pause 500/end dialogue Lewis \"There's a lot you could do with that newly acquired land.$0#$e#Maybe raise pigs and make truffle oil! It's a very valuable artisan good.$1\""
-	 },
-},
-
-
-  //JOJA VARIANT OF FARM EXPANSION
-{ //Morris Special Order #1 - allows player on Grandpa's Farm to purchase more land   ---> Quest is added to journal automatically
-  "Action": "EditData",
-  "Target": "Data/SpecialOrders",
-  "Update": "OnLocationChange",
-  "Entries": {
-  "Morris": {
-    "Name": "[Morris_Name]",
-    "Requester": "MorrisTod",
-    "Duration": "Month",
-    "Repeatable": "False",
-    "RequiredTags": "event_8033758, event_6665293, !event_8033861",
-    "OrderType": "StardewValleyExpanded",
-    "SpecialRule": "",
-    "Text": "[Morris_Text]",
-    "ItemToRemoveOnEnd": null,
-    "MailToRemoveOnEnd": null,
-    "RandomizedElements": null,
-    "Objectives": [
-      {
-        "Type": "Deliver",
-        "Text": "[Morris_Objective_1_Text]",
-        "RequiredCount": "1",
-        "Data": {
-          "AcceptedContextTags": "item_property_deed",
-          "TargetName": "MorrisTod"
-        }
-      },
-    ],
-    "Rewards": [
-      {
-        "Type": "Mail",
-        "Data": {
-          "MailReceived": "DeedOfLand"
-        }
-      }
-    ]
-  },
- },
-},
-
-{   //Morris special order strings
-    "Action": "EditData",
-    "Target": "Strings/SpecialOrderStrings",
-	"When": { "HasSeenEvent": "6665293" },
-    "Entries": {
-       "Morris_Name": "Expanding My Farmland",
-       "Morris_Text": "Sign the property deed and submit a 250,000g direct payment using the bookshelf in my office.",
-       "Morris_Objective_1_Text": "Turn in the property deed to Morris.",
-	}
-},
-
-{    //Patches Morris joja ledger shop
-     "Action": "EditMap",
-	 "Target": "Maps/JojaMart",
-	 "FromFile": "Assets/MapPatches/PropertyDeedShop_Joja.tbin",
-	 "When": { "HasSeenEvent": "8033758", "HasSeenEvent |contains=191393": false, "HasSeenEvent |contains=8033860": false, "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard" },
-	 "ToArea": { "X": 25, "Y": 25, "Width": 1, "Height": 1 },
-	 "Update": "OnLocationChange"
-},
-
-{    //Morris special order event - part 1
-	 "Action": "EditData",
-	 "Target": "data/events/farmhouse",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent |contains=6665293": true, "HasSeenEvent |contains=6663408": true }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on, player built Morris townhouse
-	 "Entries": {
-	 "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"Someone's knocking on the front door.\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"Hello, @. Hard at work on the farm today I see.$0#$b#May I take a moment of your time? There's something I want to talk to you about!$1\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"Follow me over there, past those fences.$0\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"Hmm...$0\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"You've been cultivating %farm Farm for a of couple years now. Have you thought about expanding?$0#$b#There's a lot of good land here next to your property.$4\"/pause 600/emote farmer 40/speak MorrisTod \"This is roughly one acre, which would cost 250,000g when all is said and done.$0#$b#Visit me at JojaMart when you've reached your decision, @.$4\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"Should I expand the farm?\"/pause 800/question fork0 \"#Expand the farm.#Don't expand the farm.\"/fork 8033858_ExpandFarm/pause 750/message \"All right. I'm not purchasing more land. I should let Morris know.\"/pause 500/end dialogue MorrisTod \"Ah, you don't want to expand your farmland?$0#$e#I suppose some areas of Stardew Valley should just remain how they are...$0\"",
-	  
-     },
-}, 
-
-{    //Morris special order event - part 1 (alternate)
-	 "Action": "EditData",
-	 "Target": "data/events/farmhouse",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent |contains=191393": false, "HasSeenEvent |contains=6663408": true, "HasSeenEvent |contains=502261": true, "HasFlag |contains=ccMovieTheaterJoja": true, "HasSeenEvent |contains=8050109": true, "HasFlag |contains=Island_Resort": true }, //=Player has completed joja dev form, theater, island resort, player built Morris townhouse, and cleared railroad boulder
-	 "Entries": {
-	 "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"Someone's knocking on the front door.\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"Hello, @. Hard at work on the farm today I see.$0#$b#May I take a moment of your time? There's something I want to talk to you about!$1\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"Follow me over there, past those fences.$0\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"Hmm...$0\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"You've been cultivating %farm Farm for some time now. Have you thought about expanding?$0#$b#There's a lot of good land here next to your property.$4\"/pause 600/emote farmer 40/speak MorrisTod \"This is roughly one acre, which would cost 250,000g when all is said and done.$0#$b#Visit me at JojaMart when you've reached your decision, @.$4\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"Should I expand the farm?\"/pause 800/question fork0 \"#Expand the farm.#Don't expand the farm.\"/fork 8033858_ExpandFarm/pause 750/message \"All right. I'm not purchasing more land. I should let Morris know.\"/pause 500/end dialogue MorrisTod \"Ah, you don't want to expand your farmland?$0#$e#I suppose some areas of Stardew Valley should just remain how they are...$0\"",
-	  
-     },
-},
-
-{    //Player decided to purchase land
-	 "Action": "EditData",
-	 "Target": "data/events/farm",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent": "6665293" },
-	 "Entries": {
-	 "8033858_ExpandFarm": "pause 400/addMailReceived PlayerWillExpandFarm/pause 100/message \"All right. I'll purchase more land. I should let Morris know.\"/pause 500/end dialogue MorrisTod \"Land value in Stardew Valley has skyrocketed this past year!$5#$e#Believe it or not, you're actually getting quite the deal for that land.$0\""
-	 },
-},
-
-{    //Player decided to purchase land    ---->Allows ledger shop and special order to load
-	 "Action": "EditData",
-	 "Target": "data/events/town",
-	 "Update": "OnLocationChange",
-	 "When": { "HasMod": "flashshifter.GrandpasFarm", "FarmType": "Standard", "HasSeenEvent": "6665293", "HasFlag": "PlayerWillExpandFarm" },
-	 "Entries": {
-	 "8033758": "none/-500 -500/MorrisTod -20 -20 0/end"
-	 },
-},
-
-{    //Morris special order event - part 2      --->9033859 tagged for framework
-	 "Action": "EditData",
-	 "Target": "data/events/JojaMart",
-	 "When": { "HasSeenEvent": "6665293" },
-	 "Entries": {
-	 "9033859/e 8033758/H": "jaunty/-500 -500/farmer 18 20 1 MorrisTod 24 26 3 Martin 9 25 1 Sam 26 7 2 Shane_JojaMart 13 15 3 Andy 25 16 3 Pam 2 17 1 Jodi 9 8 0/animate Martin false true 1000 20 20 20 20 20 21 20 20 20 20 20 20 20 20 20 21 21/animate Sam false true 100 40 40 41 41 42 42 41 41/viewport 22 26 true/skippable/move farmer 3 0 2/move farmer 0 3 2/pause 800/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 600/speak MorrisTod \"Ah, yes? Please come in!$1\"/pause 1000/doAction 21 24/pause 1000/move farmer 0 3 1/move farmer 1 0 1/pause 800/emote farmer 40/pause 500/speak MorrisTod \"So, you decided to purchase more property? Great to hear.$0#$b#If there's anyone who'll get good use out of that land, it's you.$1\"/pause 650/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"There's a ledger in this book shelf. Purchase the property deed, then turn it into me for approval.$0\"/pause 400/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 3 true/pause 500/speak MorrisTod \"I look forward to seeing what you do with the space, @.$0#$b#Now, I need to take care of something. Come find me later today with that signed deed.$0\"/pause 500/end dialogueWarpOut MorrisTod \"Developing land is exciting, isn't it?$1\""
-	 },
-},
-
-{    //Morris special order event - part 3      --->8033860 tagged for farmland map patch
-	 "Action": "EditData",
-	 "Target": "data/events/farm",
-	 "When": { "HasSeenEvent": "6665293", "HasFlag": "DeedOfLand" },
-	 "Entries": {
-	 "8033861/t 600 1000/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/skippable/pause 1000/speak MorrisTod \"Great news, @. The application for your farm's expansion has been approved.$0#$b#The land will be cleared and ready to use tomorrow!$1\"/pause 500/end"
-	 },
-},
-	
-
-//Patches extra land
-{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand.tbin",
-	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "false", "GrassCropField": "false", "FarmType": "Standard" },
-     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
-},
-
-{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField.tbin",
-	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "false", "GrassCropField": "true", "FarmType": "Standard" },
-     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
-},
-
-{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_NoPond.tbin",
-	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "true", "GrassCropField": "false", "FarmType": "Standard" },
-     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
-},
-
-{ 
-     "Action": "EditMap",
-     "Target": "Maps/Farm,Maps",
-     "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField_NoPond.tbin",
-	 "When": { "ExtraLand": "true", "RemoveLandExpansionPond": "true", "GrassCropField": "true", "FarmType": "Standard" },
-     "ToArea": { "X": 110, "Y": 33, "Width": 26, "Height": 42 }
-},
-
-
-
-      //Adds rejection dialogue to all NPCs, preventing players from accidentally losing their property deed (250,000g)
-
-{    "Action": "EditData", "Target": "Characters/Dialogue/Alex", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Elliott", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Harvey", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Sam", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Sebastian", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Shane", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Abigail", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Emily", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Haley", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Leah", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Maru", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Penny", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Caroline", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Clint", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Demetrius", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Dwarf", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Evelyn", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/George", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Gus", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Jas", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Jodi", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Kent", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Krobus", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Leo", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Linus", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Marnie", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Pam", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Pierre", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Robin", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Sandy", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Vincent", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Willy", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Wizard", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Sophia", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Olivia", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Victor", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Andy", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Susan", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Morgan", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Lance", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Scarlett", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Apples", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/MarlonFay", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/GuntherSilvian", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Claire", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Martin", "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/Lewis", "When": { "HasSeenEvent": "6665293" }, "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-{    "Action": "EditData", "Target": "Characters/Dialogue/MorrisTod", "When": { "HasSeenEvent |contains=6665293": false }, "Entries": { "reject_{{spacechase0.JsonAssets/ObjectId:Property Deed}}": "%This needs to be given to someone else..." }},
-
-
-
-	//Fall leaves
-	{
-     "Action": "EditMap",
-	 "Target": "Maps/Farm",
-	 "FromFile": "Assets/MapPatches/GrandpasFarm_Leaves.tbin",
-	 "When": { "Season": "Fall" },
-	 "ToArea": { "X": 0, "Y": 0, "Width": 140, "Height": 97 }
-    },
-	
-	//Makes gem appearances dynamic to players mining level
     {
-     "Action": "EditImage",
-	 "Target": "Maps/z_FarmCliff_Copper",
-	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
-	 "When": { "SkillLevel:Mining": "0, 1, 2" }
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_GroveUnlocked.tbin",
+      "When": {
+        "GroveComplete": "true",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 17,
+        "Width": 9,
+        "Height": 6
+      }
     },
-	{
-     "Action": "EditImage",
-	 "Target": "Maps/z_FarmCliff_Iron",
-	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
-	 "When": { "SkillLevel:Mining": "0, 1, 2, 3, 4, 5" }
+    { //Lewis's Special Order #2 - allows player on Grandpa's Farm to purchase more land   ---> Quest is added to journal automatically
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "Lewis2": {
+          "Name": "[Lewis2_Name]",
+          "Requester": "Lewis",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_8033758, !event_6665293, !event_8033861",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Lewis2_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Deliver",
+              "Text": "[Lewis2_Objective_1_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_property_deed",
+                "TargetName": "Lewis"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "DeedOfLand"
+              }
+            }
+          ]
+        },
+      },
     },
-	{
-     "Action": "EditImage",
-	 "Target": "Maps/z_FarmCliff_Gold",
-	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
-	 "When": { "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7" }
+    { //Lewis special order strings
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "When": {
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "Lewis2_Name": "{{i18n:Expansion.Order.01}}",
+        "Lewis2_Text": "{{i18n:Expansion.Order.02}}",
+        "Lewis2_Objective_1_Text": "{{i18n:Expansion.Order.03}}",
+      }
     },
-	{
-     "Action": "EditImage",
-	 "Target": "Maps/z_FarmCliff_Gems",
-	 "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
-	 "When": { "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7, 9" }
+    { //Patches Lewis' manor ledger shop
+      "Action": "EditMap",
+      "Target": "Maps/ManorHouse",
+      "FromFile": "Assets/MapPatches/PropertyDeedShop.tbin",
+      "When": {
+        "HasSeenEvent": "8033758",
+        "HasSeenEvent |contains=191393": true,
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 1,
+        "Y": 7,
+        "Width": 1,
+        "Height": 1
+      },
+      "Update": "OnLocationChange"
     },
-
-	
-	//Patches world map
-	{
-      "Action": "EditImage",
-      "Target": "LooseSprites/map",
-      "FromFile": "Assets/Maps/WorldMaps/{{Season}}_GrandpasFarm_Map.png",
-      "PatchMode": "Overlay",
-      "ToArea": { "X": 58, "Y": 51, "Width": 91, "Height": 59 },
-      "When": { "FarmType": "Standard" }
+    { //Lewis special order event - part 1
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=191393": true
+      }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on
+      "Entries": {
+        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/ignoreEventTileOffset/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
+      },
     },
-	//Grass Crop Field Configuration
-	{
-      "Action": "EditImage",
-      "Target": "LooseSprites/map",
-      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_GrassCropField.png",
-      "PatchMode": "Overlay",
-      "ToArea": { "X": 110, "Y": 85, "Width": 28, "Height": 11 },
-      "When": { "FarmType": "Standard", "GrassCropField": "true", "SandboxLayout": "false" }
+    { //Lewis special order event - part 1 (players can start questline early if they meet conditions)
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=8033758": true,
+        "HasFlag |contains=ccMovieTheater": true,
+        "HasSeenEvent |contains=8050109": true,
+        "HasFlag |contains=Island_Resort": true
+      }, //=Player has completed community center, theater, island resort, and cleared railroad boulder
+      "Entries": {
+        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/ignoreEventTileOffset/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset Lewis 10 -25/viewport 95 49 clamp true/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection Lewis 1 true/pause 500/speak Lewis \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection Lewis 3 true/warp farmer 120 57/warp Lewis 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump Lewis/pause 1000/speak Lewis \"{{i18n:Expansion.Event1.04}}\"/pause 1200/faceDirection Lewis 2 true/pause 1000/faceDirection Lewis 3 true/pause 300/faceDirection Lewis 0 true/pause 1000/faceDirection Lewis 3 true/pause 400/speak Lewis \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak Lewis \"{{i18n:Expansion.Event1.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp Lewis -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.09}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event1.10}}\"",
+      },
     },
-	//Remove Fences Configuration
-	{
-      "Action": "EditImage",
-      "Target": "LooseSprites/map",
-      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_RemoveFences.png",
-      "PatchMode": "Overlay",
-      "ToArea": { "X": 89, "Y": 71, "Width": 17, "Height": 24 },
-      "When": { "FarmType": "Standard", "RemoveFences": "true", "SandboxLayout": "false" }
+    { //Player decided to purchase land
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "8033858_ExpandFarm": "pause 400/addMailReceived PlayerWillExpandFarm/pause 100/message \"{{i18n:Expansion.Purchased.01}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Purchased.02}}\""
+      },
     },
-	//Sandbox Layout Configuration
-	{
-      "Action": "EditImage",
-      "Target": "LooseSprites/map",
-      "FromFile": "Assets/Maps/WorldMaps/Configurations/{{Season}}_SandboxLayout.png",
-      "PatchMode": "Overlay",
-      "ToArea": { "X": 89, "Y": 67, "Width": 35, "Height": 30 },
-      "When": { "FarmType": "Standard", "SandboxLayout": "true" }
+    { //Player decided to purchase land    ---->Allows ledger shop and special order to load
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "HasFlag": "PlayerWillExpandFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "8033758/": "none/-500 -500/Lewis -20 -20 0/end"
+      },
     },
-	
-    //Voids dirt under petbowl
+    { //Lewis special order event - part 2      --->8033859 tagged for framework
+      "Action": "EditData",
+      "Target": "data/events/ManorHouse",
+      "When": {
+        "HasSeenEvent |contains=191393": true
+      },
+      "Entries": {
+        "8033859/e 8033758/H": "50s/-500 -500/farmer 5 11 0 Lewis 8 5 0 Marnie 22 4 1/positionOffset Marnie -6 10/viewport 5 9 clamp true/skippable/move farmer 0 -2 0/pause 1000/faceDirection Lewis 3 true/pause 200/faceDirection Lewis 2 true/pause 300/emote Lewis 16/pause 300/faceDirection Lewis 3 true/pause 100/move Lewis -2 0 2/move Lewis 0 1 3/move Lewis -1 0 2/move Lewis 0 1 2/pause 650/speak Lewis \"{{i18n:Expansion.Event2.01}}\"/pause 600/emote farmer 40/pause 150/speak Lewis \"{{i18n:Expansion.Event2.02}}\"/pause 650/faceDirection Lewis 3 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.03}}\"/pause 400/faceDirection Lewis 2 true/pause 500/speak Lewis \"{{i18n:Expansion.Event2.04}}\"/pause 500/end dialogueWarpOut Lewis \"{{i18n:Expansion.Event2.05}}\""
+      },
+    },
+    { //Lewis special order event - part 3      --->8033860 tagged for farmland map patch
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent |contains=191393": true,
+        "HasFlag": "DeedOfLand"
+      },
+      "Entries": {
+        "8033861/t 600 1100/H": "continue/-500 -500/farmer 95 49 2 Lewis 95 51 0/skippable/pause 1000/speak Lewis \"{{i18n:Expansion.Event3.01}}\"/pause 500/end dialogue Lewis \"{{i18n:Expansion.Event3.02}}\""
+      },
+    },
+    //JOJA VARIANT OF FARM EXPANSION
+    { //Morris Special Order #1 - allows player on Grandpa's Farm to purchase more land   ---> Quest is added to journal automatically
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "Morris": {
+          "Name": "[Morris_Name]",
+          "Requester": "MorrisTod",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_8033758, event_6663408, !event_8033861",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[Morris_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Deliver",
+              "Text": "[Morris_Objective_1_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_property_deed",
+                "TargetName": "MorrisTod"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "DeedOfLand"
+              }
+            }
+          ]
+        },
+      },
+    },
+    { //Morris special order strings
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "Morris_Name": "{{i18n:Morris.Order.01}}",
+        "Morris_Text": "{{i18n:Morris.Order.02}}",
+        "Morris_Objective_1_Text": "{{i18n:Morris.Order.03}}",
+      }
+    },
+    { //Patches Morris joja ledger shop
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart",
+      "FromFile": "Assets/MapPatches/PropertyDeedShop_Joja.tbin",
+      "When": {
+        "HasSeenEvent": "8033758",
+        "HasSeenEvent |contains=191393": false,
+        "HasSeenEvent |contains=8033861": false,
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 25,
+        "Y": 25,
+        "Width": 1,
+        "Height": 1
+      },
+      "Update": "OnLocationChange"
+    },
+    { //Morris special order event - part 1
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=6663408": true,
+      }, //= Summer 17th year 3 minimum, Grandpa's Farm is being played on, player built Morris townhouse
+      "Entries": {
+        "8033858/t 600 2200/j 268/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/ignoreEventTileOffset/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
+      },
+    },
+    { //Morris special order event - part 1 (alternate)
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent |contains=191393": false,
+        "HasSeenEvent |contains=6663408": true,
+        "HasSeenEvent |contains=502261": true,
+        "HasFlag |contains=ccMovieTheaterJoja": true,
+        "HasSeenEvent |contains=8050109": true,
+        "HasFlag |contains=Island_Resort": true
+      }, //=Player has completed joja dev form, theater, island resort, player built Morris townhouse, and cleared railroad boulder
+      "Entries": {
+        "8033858/t 600 2200/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/ignoreEventTileOffset/pause 1000/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 300/pause 800/message \"{{i18n:Expansion.Event1.01}}\"/changeLocation farm/pause 500/playSound doorOpen/pause 500/positionOffset farmer 0 -20/positionOffset MorrisTod 10 -25/viewport 95 49 clamp true/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.02}}\"/pause 650/emote farmer 8 true/pause 1500/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Expansion.Event1.03}}\"/pause 600/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/faceDirection farmer 1 true/faceDirection MorrisTod 3 true/warp farmer 120 57/warp MorrisTod 122 57/pause 500/viewport 121 57 clamp true/pause 1400/jump MorrisTod/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.04}}\"/pause 1200/faceDirection MorrisTod 2 true/pause 1000/faceDirection MorrisTod 3 true/pause 300/faceDirection MorrisTod 0 true/pause 1000/faceDirection MorrisTod 3 true/pause 400/speak MorrisTod \"{{i18n:Expansion.Event1.05}}\"/pause 600/emote farmer 40/speak MorrisTod \"{{i18n:Expansion.Event1.Morris.06}}\"/pause 600/globalFade/viewport -1000 -1000/warp MorrisTod -50 -50/viewport 121 57 clamp true/pause 1700/faceDirection farmer 2 true/pause 1250/message \"{{i18n:Expansion.Event1.07}}\"/pause 800/question fork0 \"{{i18n:Expansion.Event1.08}}\"/fork 8033858_ExpandFarm/pause 750/message \"{{i18n:Expansion.Event1.Morris.09}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Expansion.Event1.10}}\"",
+      },
+    },
+    { //Player decided to purchase land
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent": "6663408"
+      },
+      "Entries": {
+        "8033858_ExpandFarm": "pause 400/addMailReceived PlayerWillExpandFarm/pause 100/message \"{{i18n:Morris.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Morris.Purchased.02}}\""
+      },
+    },
+    { //Player decided to purchase land    ---->Allows ledger shop and special order to load
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasMod": "flashshifter.GrandpasFarm",
+        "FarmType": "Standard",
+        "HasSeenEvent": "6663408",
+        "HasFlag": "PlayerWillExpandFarm"
+      },
+      "Entries": {
+        "8033758/": "none/-500 -500/MorrisTod -20 -20 0/end"
+      },
+    },
+    { //Morris special order event - part 2      --->9033859 tagged for framework
+      "Action": "EditData",
+      "Target": "data/events/JojaMart",
+      "When": {
+        "HasSeenEvent": "6663408"
+      },
+      "Entries": {
+        "9033859/e 8033758/H": "jaunty/-500 -500/farmer 18 20 1 MorrisTod 24 26 3 Martin 9 25 1 Sam 26 7 2 Shane_JojaMart 13 15 3 Andy 25 16 3 Pam 2 17 1 Jodi 9 8 0/animate Martin false true 1000 20 20 20 20 20 21 20 20 20 20 20 20 20 20 20 21 21/animate Sam false true 100 40 40 41 41 42 42 41 41/viewport 22 26 true/skippable/move farmer 3 0 2/move farmer 0 3 2/pause 800/playSound stoneStep/pause 300/playSound stoneStep/pause 300/playSound stoneStep/pause 600/speak MorrisTod \"{{i18n:Morris.Expansion2.01}}\"/pause 1000/doAction 21 24/pause 1000/move farmer 0 3 1/move farmer 1 0 1/pause 800/emote farmer 40/pause 500/speak MorrisTod \"{{i18n:Morris.Expansion2.02}}\"/pause 650/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 1 true/pause 500/speak MorrisTod \"{{i18n:Morris.Expansion2.03}}\"/pause 400/faceDirection MorrisTod 2 true/pause 300/faceDirection MorrisTod 3 true/pause 500/speak MorrisTod \"{{i18n:Morris.Expansion2.04}}\"/pause 500/end dialogueWarpOut MorrisTod \"{{i18n:Morris.Expansion2.05}}\""
+      },
+    },
+    { //Morris special order event - part 3      --->8033860 tagged for farmland map patch
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent": "6663408",
+        "HasFlag": "DeedOfLand"
+      },
+      "Entries": {
+        "8033861/t 600 1000/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/skippable/pause 1000/speak MorrisTod \"{{i18n:Expansion.Event3.01}}\"/pause 500/end"
+      },
+    },
+    //Patches extra land
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand.tbin",
+      "When": {
+        "ExtraLand": "true",
+        "RemoveLandExpansionPond": "false",
+        "GrassCropField": "false",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 110,
+        "Y": 33,
+        "Width": 26,
+        "Height": 42
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField.tbin",
+      "When": {
+        "ExtraLand": "true",
+        "RemoveLandExpansionPond": "false",
+        "GrassCropField": "true",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 110,
+        "Y": 33,
+        "Width": 26,
+        "Height": 42
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_NoPond.tbin",
+      "When": {
+        "ExtraLand": "true",
+        "RemoveLandExpansionPond": "true",
+        "GrassCropField": "false",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 110,
+        "Y": 33,
+        "Width": 26,
+        "Height": 42
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_ExtraLand_GrassField_NoPond.tbin",
+      "When": {
+        "ExtraLand": "true",
+        "RemoveLandExpansionPond": "true",
+        "GrassCropField": "true",
+        "FarmType": "Standard"
+      },
+      "ToArea": {
+        "X": 110,
+        "Y": 33,
+        "Width": 26,
+        "Height": 42
+      }
+    },
+    //Adds rejection dialogue to all NPCs, preventing players from accidentally losing their property deed (250,000g)
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Demetrius",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Dwarf",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kent",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leo",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pierre",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sandy",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Willy",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sophia",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Olivia",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Victor",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Andy",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Susan",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Morgan",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lance",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Scarlett",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Apples",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarlonFay",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/GuntherSilvian",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Claire",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Martin",
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "When": {
+        "HasSeenEvent": "6663408"
+      },
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MorrisTod",
+      "When": {
+        "HasSeenEvent |contains=6663408": false
+      },
+      "Entries": {
+        "reject_FlashShifter.StardewValleyExpandedCP_Property_Deed": "{{i18n:DeedGift}}"
+      }
+    },
+    //Fall leaves
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm",
+      "FromFile": "Assets/MapPatches/GrandpasFarm_Leaves.tbin",
+      "When": {
+        "Season": "Fall"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 140,
+        "Height": 93
+      }
+    },
+    //Makes gem appearances dynamic to players mining level
     {
       "Action": "EditImage",
-      "Target": "Maps/{{season}}_outdoorsTileSheet",
-      "FromFile": "assets/Tilesheets/z_petbowl.png",
-      "ToArea": { "X": 208, "Y": 1232,"Width": 32, "Height": 16 },
-      "When": { "FarmType": "Standard" },
-	  "Update": "OnLocationChange"
+      "Target": "Maps/z_FarmCliff_Copper",
+      "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2"
+      }
     },
-	
+    {
+      "Action": "EditImage",
+      "Target": "Maps/z_FarmCliff_Iron",
+      "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/z_FarmCliff_Gold",
+      "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/z_FarmCliff_Gems",
+      "FromFile": "Assets/Tilesheets/z_FarmCliff_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7, 9"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map",
+      "FromFile": "assets/Maps/WorldMaps/Spring_Grandpas_WorldMap.png",
+      "ToArea": {
+        "X": 0,
+        "Y": 43,
+        "Width": 142,
+        "Height": 61
+      },
+      "When": {
+        "FarmType": "Standard"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Summer",
+      "FromFile": "assets/Maps/WorldMaps/Summer_Grandpas_WorldMap.png",
+      "ToArea": {
+        "X": 0,
+        "Y": 43,
+        "Width": 142,
+        "Height": 61
+      },
+      "When": {
+        "FarmType": "Standard"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Fall",
+      "FromFile": "assets/Maps/WorldMaps/Fall_Grandpas_WorldMap.png",
+      "ToArea": {
+        "X": 0,
+        "Y": 43,
+        "Width": 142,
+        "Height": 61
+      },
+      "When": {
+        "FarmType": "Standard"
+      },
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Winter",
+      "FromFile": "assets/Maps/WorldMaps/Winter_Grandpas_WorldMap.png",
+      "ToArea": {
+        "X": 0,
+        "Y": 43,
+        "Width": 142,
+        "Height": 61
+      },
+      "When": {
+        "FarmType": "Standard"
+      },
+    },
     //Changes standard farm icon to grandpa
     {
       "Action": "EditImage",
       "Target": "Loosesprites/Cursors",
       "FromFile": "assets/Tilesheets/Icon.png",
-      "ToArea": { "X": 2, "Y": 324,"Width": 18, "Height": 20 },
+      "ToArea": {
+        "X": 2,
+        "Y": 324,
+        "Width": 18,
+        "Height": 20
+      },
     },
-	
-	//Changes standard farm string
-	{
-	  "Action": "EditData",
-	  "Target": "Strings/UI",
-	  "Entries": {
-	  "Character_FarmStandard": "Grandpa's Farm_Modestly sized farmland with tillable grass, different landmark locations, shortcuts to surrounding areas, and secrets to discover.",
-	  }
-	},
-	
-	//Opening event pathing and viewport fix
+    //Changes standard farm string
+    {
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+        "Character_FarmStandard": "{{i18n:FarmString}}",
+      }
+    },
+    //Opening event pathing and viewport fix
     {
       "Action": "EditData",
       "Target": "data/events/busstop",
-	  "When": { "FarmType": "Standard" },
+      "When": {
+        "FarmType": "Standard"
+      },
       "Entries": {
-      "60367/u 0": "none/-1000 -1000/farmer 12 10 2 Robin 12 13 0 Lewis -100 -100 2/skippable/pause 500/playSound busDoorOpen/pause 5000/viewport 13 14 clamp true/move farmer 0 2 2/playMusic SettlingIn/speak Robin \"Hello! You must be @.#$b#I'm Robin, the local carpenter. Mayor Lewis sent me here to fetch you and show you the way to your new home. He's there right now, tidying things up for your arrival.#$b#The farm's right over here, if you'll follow me.\"/viewport move 0 2 800/move Robin 0 5 2 true/pause 800/move farmer 0 4 2 true/fade/speed farmer 2/viewport -200 -200/changeLocation Farm/halt/warp Robin 109 51/faceDirection Robin 3/warp farmer 110 51/faceDirection farmer 3/viewport 105 51 clamp/viewport move -1 0 4000/move Robin -8 0 3 farmer -8 0 3/pause 700/faceDirection Robin 2/speak Robin \"This is %farm farm.\"/pause 500/faceDirection farmer 2/showFrame 94/jump farmer/startJittering/pause 1000/emote farmer 28/showFrame 0/stopJittering/pause 800/faceDirection Robin 1/pause 200/speak Robin \"What's the matter?#$b#Sure, it's a bit overgrown, but there's some good soil underneath that mess!#$b#With a little dedication you'll have it cleaned up in no time.\"/pause 500/faceDirection farmer 3/pause 200/viewport move -1 0 5000/move Robin -7 0 0 farmer -7 0 0/pause 400/faceDirection Robin 0/speak Robin \"...And here we are, your new home.$h\"/pause 300/faceDirection farmer 0/pause 500/playSound doorClose/warp Lewis 95 49/pause 1500/speak Lewis \"Ah, the new farmer!$h\"/move Lewis 0 1 2/move Lewis 1 0 2/move Lewis 0 1 3/faceDirection farmer 1/faceDirection Robin 1/pause 600/speak Lewis \"Welcome! I'm Lewis, Mayor of Pelican Town.#$b#You know, everyone's been asking about you.#$b#It's not every day that someone new moves in. It's quite a big deal!\"/pause 1000/faceDirection Lewis 3/pause 100/faceDirection Lewis 0/pause 500/speak Lewis \"So... You're moving into your grandfather's old cottage.#$b#It's a good house... very 'rustic'.\"/pause 300/faceDirection Robin 0 true/faceDirection farmer 0/viewport move 0 -1 2000/pause 3000/speak Robin \"Rustic? That's one way to put it... $4#$b#'Crusty' might be a little more apt, though.$4\"/faceDirection Lewis 3 true/jump Lewis/shake Lewis 1600/textAboveHead Lewis \"Rude!\"/showFrame Lewis 24/pause 500/faceDirection Robin 1 true/pause 100/faceDirection Robin 2 true/pause 100/animate Robin false true 100 32 33/faceDirection farmer 2/pause 1000/showFrame Lewis 12/stopAnimation Robin/pause 300/faceDirection Robin 1/showFrame Lewis 12/faceDirection farmer 1/speak Lewis \"Don't listen to her, @. She's just trying to make you dissatisfied so that you buy one of her house upgrades.$u\"/showFrame Lewis 12/showFrame Robin 19/shake Robin 800/pause 1200/showFrame Robin 0/pause 600/animate Robin false true 300 34 35/textAboveHead Robin \"Hmmph.\"/pause 1500/speak Lewis \"Anyway... You must be tired from the long journey. You should get some rest.#$b#Tomorrow you ought to explore the town a bit and introduce yourself.#$b#The townspeople would appreciate that.\"/move Lewis 4 0 1 true/viewport move 1 0 2000/pause 3000/proceedPosition Lewis/faceDirection Lewis 0/pause 500/faceDirection Lewis 3/speak Lewis \"Oh, I almost forgot. If you have anything to sell, just place it in this box here. I'll come by during the night to collect it.#$b#Well... Good luck!\"/pause 300/move Lewis 8 0 1 true/faceDirection farmer 0/stopAnimation Robin/advancedMove Robin false 0 1 2 0 0 -1 5 0/pause 1000/globalFade/viewport -1000 -1000/playMusic none/pause 2000/playSound rooster/pause 1000/end beginGame",
-	  }
+        "60367/u 0": "none/-1000 -1000/farmer 22 10 2 Robin 22 13 0 Lewis -100 -100 2/skippable/ignoreEventTileOffset/pause 500/playSound busDoorOpen/pause 5000/viewport 23 14 clamp true/move farmer 0 2 2/playMusic SettlingIn/speak Robin \"{{i18n:OpeningEvent.01}}\"/viewport move 0 2 800/move Robin 0 5 2 true/pause 800/move farmer 0 4 2 true/fade/speed farmer 2/viewport -200 -200/changeLocation Farm/halt/warp Robin 109 51/faceDirection Robin 3/warp farmer 110 51/faceDirection farmer 3/viewport 105 51 clamp/viewport move -1 0 4000/move Robin -8 0 3 farmer -8 0 3/pause 700/faceDirection Robin 2/speak Robin \"{{i18n:OpeningEvent.02}}\"/pause 500/faceDirection farmer 2/showFrame 94/jump farmer/startJittering/pause 1000/emote farmer 28/showFrame 0/stopJittering/pause 800/faceDirection Robin 1/pause 200/speak Robin \"{{i18n:OpeningEvent.03}}\"/pause 500/faceDirection farmer 3/pause 200/viewport move -1 0 5000/move Robin -7 0 0 farmer -7 0 0/pause 400/faceDirection Robin 0/speak Robin \"{{i18n:OpeningEvent.04}}\"/pause 300/faceDirection farmer 0/pause 500/playSound doorClose/warp Lewis 95 49/pause 1500/speak Lewis \"{{i18n:OpeningEvent.05}}\"/move Lewis 0 1 2/move Lewis 1 0 2/move Lewis 0 1 3/faceDirection farmer 1/faceDirection Robin 1/pause 600/speak Lewis \"{{i18n:OpeningEvent.06}}\"/pause 1000/faceDirection Lewis 3/pause 100/faceDirection Lewis 0/pause 500/speak Lewis \"{{i18n:OpeningEvent.07}}\"/pause 300/faceDirection Robin 0 true/faceDirection farmer 0/viewport move 0 -1 2000/pause 3000/speak Robin \"{{i18n:OpeningEvent.08}}\"/faceDirection Lewis 3 true/jump Lewis/shake Lewis 1600/textAboveHead Lewis \"{{i18n:OpeningEvent.09}}\"/showFrame Lewis 24/pause 500/faceDirection Robin 1 true/pause 100/faceDirection Robin 2 true/pause 100/animate Robin false true 100 32 33/faceDirection farmer 2/pause 1000/showFrame Lewis 12/stopAnimation Robin/pause 300/faceDirection Robin 1/showFrame Lewis 12/faceDirection farmer 1/speak Lewis \"{{i18n:OpeningEvent.10}}\"/showFrame Lewis 12/showFrame Robin 19/shake Robin 800/pause 1200/showFrame Robin 0/pause 600/animate Robin false true 300 34 35/textAboveHead Robin \"{{i18n:OpeningEvent.11}}\"/pause 1500/speak Lewis \"{{i18n:OpeningEvent.12}}\"/move Lewis 4 0 1 true/viewport move 1 0 2000/pause 3000/proceedPosition Lewis/faceDirection Lewis 0/pause 500/faceDirection Lewis 3/speak Lewis \"{{i18n:OpeningEvent.13}}\"/pause 300/move Lewis 8 0 1 true/faceDirection farmer 0/stopAnimation Robin/advancedMove Robin false 0 1 2 0 0 -1 5 0/pause 1000/globalFade/viewport -1000 -1000/playMusic none/pause 2000/playSound rooster/pause 1000/end beginGame",
+      }
     },
-	
-	//Marnie mentions farm animals can't leave fenced in areas (player has white egg in their inventory)
+    //Marnie mentions farm animals can't leave fenced in areas (player has white egg in their inventory)
     {
       "Action": "EditData",
       "Target": "data/events/farm",
-	  "When": { "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "false" },
+      "When": {
+        "FarmType": "Standard",
+        "SandboxLayout": "false",
+        "RemoveFences": "false"
+      },
       "Entries": {
-      "896152/i 176/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"Hi @! Now that you own farm animals, I thought I'd let you in on a little secret.$0\"/pause 400/emote farmer 8/pause 100/speak Marnie \"They won't wander out of the fenced areas on your farm, so you're free to leave them open!$1\"/pause 250/emote farmer 32/pause 100/end"
-	  }
+        "896152/i 176/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
     },
-	
-	//Marnie mentions farm animals can't leave fenced in areas (player has brown egg in their inventory)
+    //Marnie mentions farm animals can't leave fenced in areas (player has brown egg in their inventory)
     {
       "Action": "EditData",
       "Target": "data/events/farm",
-	  "When": { "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "false" },
+      "When": {
+        "FarmType": "Standard",
+        "SandboxLayout": "false",
+        "RemoveFences": "false"
+      },
       "Entries": {
-      "896152/i 180/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"Hi @! Now that you own farm animals, I thought I'd let you in on a little secret.$0\"/pause 400/emote farmer 8/pause 100/speak Marnie \"They won't wander out of the fenced areas on your farm, so you're free to leave them open!$1\"/pause 250/emote farmer 32/pause 100/end"
-	  }
+        "896152/i 180/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
     },
-	
-	//Marnie mentions farm animals can't leave fenced in areas (player has milk in their inventory)
+    //Marnie mentions farm animals can't leave fenced in areas (player has milk in their inventory)
     {
       "Action": "EditData",
       "Target": "data/events/farm",
-	  "When": { "FarmType": "Standard", "SandboxLayout": "false", "RemoveFences": "false" },
+      "When": {
+        "FarmType": "Standard",
+        "SandboxLayout": "false",
+        "RemoveFences": "false"
+      },
       "Entries": {
-      "896152/i 184/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"Hi @! Now that you own farm animals, I thought I'd let you in on a little secret.$0\"/pause 400/emote farmer 8/pause 100/speak Marnie \"They won't wander out of the fenced areas on your farm, so you're free to leave them open!$1\"/pause 250/emote farmer 32/pause 100/end"
-	  }
+        "896152/i 184/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 95 49 2 Marnie 95 50 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
     },
-	
   ]
 }

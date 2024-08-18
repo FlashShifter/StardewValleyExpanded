@@ -1,0 +1,171 @@
+{
+  "Changes": [
+    
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "LogName": "Gift tastes: Penny",
+      "TextOperations": [
+        /*Dislike*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            5
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+          "Delimiter": " "
+        }
+        /*Hate*/,
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            7
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+          "Delimiter": " "
+        }
+      ]
+    },
+    { //PENNY SCHEDULE EDITS
+      "Action": "EditData",
+      "Target": "characters/schedules/Penny",
+      "Entries": {
+        "9": "NOT friendship Sam 6/900 Trailer 1 8 0/1100 Town 78 95 2/1600 Trailer 12 6 0 penny_dishes/1840 Trailer 4 9 1 penny_sleep",
+        "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Bed",
+        "Tue": "830 Trailer 6 5 0/900 ArchaeologyHouse 17 9 2 penny_read/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Trailer 4 9 1 penny_sleep",
+        "summer": "810 Town 96 18 3/1300 Town 63 17 0/1800 Trailer 12 6 0 penny_dishes/2100 Trailer 4 9 1 penny_sleep",
+	  },
+    },
+    { //PENNY SCHEDULE EDIT 2
+      "Action": "EditData",
+      "Target": "characters/schedules/Penny",
+      "When": {
+        "Spouse": "Penny",
+        "IsCommunityCenterComplete": "true"
+      },
+      "Entries": {
+        "marriage_Mon": "950 BusStop 11 12 0 \"Strings\\schedules\\Penny:marriage_Mon.002\"/1100 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1300 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1330 Town 35 89 2 penny_read/1620 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1800 Bed",
+      },
+    },
+    {
+      //adds a new dialogue string to Penny
+      "Action": "EditData",
+      "Target": "Strings/Schedules/Penny",
+      "Entries": {
+        "marriage_Mon.002": "{{i18n:Penny.String}}"
+      }
+    },
+    //pam gets to spot at 10:10am
+    { //PENNY SCHEDULE - Sam
+      "Action": "EditData",
+      "Target": "characters/schedules/Penny",
+      "When": {
+        "Weather": "Sun",
+        "HasSeenEvent |contains=5553210": false
+      },
+      "Entries": {
+        "7": "900 Town 94 61 2 penny_read/1330 SamHouse 5 15 1/1600 Saloon 11 20 0/2100 Trailer 4 9 1 penny_sleep",
+        "21": "900 Town 94 61 2 penny_read/1330 SamHouse 5 15 1/1600 Saloon 11 20 0/2100 Trailer 4 9 1 penny_sleep",
+      },
+    },
+    { //PENNY SCHEDULE - Sam
+      "Action": "EditData",
+      "Target": "characters/schedules/Penny",
+      "When": {
+        "Weather": "Sun",
+        "HasSeenEvent": "5553210"
+      },
+      "Entries": {
+        "7": "900 Town 83 86 2 penny_read/1330 SamHouse 5 15 1/1600 Saloon 11 20 0/2100 Trailer 4 9 1 penny_sleep",
+        "21": "900 Town 83 86 2 penny_read/1330 SamHouse 5 15 1/1600 Saloon 11 20 0/2100 Trailer 4 9 1 penny_sleep",
+      },
+    },
+    { //PENNY SCHEDULE DIALOGUE
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "Entries": {
+        "SamHouse_5_15": "{{i18n:Penny.Dialogue.01}}",
+        "Saloon_11_20": "{{i18n:Penny.Dialogue.02}}",
+      },
+    },
+    { //PENNY SCHEDULE - Reversed
+      "Action": "EditData",
+      "Target": "characters/schedules/Penny",
+      "When": {
+        "Spouse": "Sam"
+      },
+      "Entries": {
+        "7": null,
+        "21": null
+      },
+    },
+    {
+      //Penny 7 heart event - Why did I become a teacher?
+      "Action": "EditData",
+      "Target": "Data/Events/ArchaeologyHouse",
+      "Entries": {
+        "6943962/f Penny 1750/t 600 1500": "none/-500 -500/farmer 10 14 1 Penny 17 12 0 Elliott 19 5 2 Susan 10 5 0 GuntherSilvian 5 8 2 Jas -25 -25 0 Vincent -26 -26 0 Caroline 32 8 0 Pierre 33 8 0/addTemporaryActor PennyClassMaterials 16 16 17 10 2 false/positionOffset PennyClassMaterials 12 36 true/positionOffset Elliott 22 -15 true/positionOffset Pierre 20 0 true/positionOffset Caroline -50 -10 true/positionOffset Susan 20 -25 true/showFrame Elliott 33 true/animate GuntherSilvian false true 2000 0 0 0 0 0 0 0 21/skippable/playMusic 50s/viewport 16 12 true/move farmer 5 0 0/move farmer 0 -2 0/pause 150/faceDirection farmer 1 true/pause 1000/emote farmer 8/pause 300/faceDirection Penny 3 true/pause 450/speak Penny \"{{i18n:Penny.Teaching.01}}\"/pause 500/speak Penny \"{{i18n:Penny.Teaching.02}}\"/pause 750/emote Penny 40/pause 150/speak Penny \"{{i18n:Penny.Teaching.03}}\"/pause 800/faceDirection Penny 0 true/pause 1200/faceDirection Penny 3 true/pause 450/speak Penny \"{{i18n:Penny.Teaching.04}}\"/pause 500/emote farmer 32/pause 500/showFrame Penny 20 true/pause 750/faceDirection farmer 2 true/pause 275/faceDirection farmer 3 true/pause 500/advancedMove farmer false -4 0 0 2 -2 0/pause 500/showFrame Penny 12 true/pause 750/faceDirection Penny 0 true/globalFade/viewport -1000 -1000/pause 1000/friendship Penny 50/end dialogue Penny \"{{i18n:Penny.Teaching.05}}\"",
+      }
+    },
+    {
+      //Penny 7 heart event - Why did I become a teacher? (if married, dating, or engaged)
+      "Action": "EditData",
+      "Target": "Data/Events/ArchaeologyHouse",
+      "When": {
+        "Relationship:Penny": "Married, Dating, Engaged"
+      },
+      "Entries": {
+        "6943962/f Penny 1750/t 600 1500": "none/-500 -500/farmer 10 14 1 Penny 17 12 0 Elliott 19 5 2 Susan 10 5 0 GuntherSilvian 5 8 2 Jas -25 -25 0 Vincent -26 -26 0 Caroline 32 8 0 Pierre 33 8 0/addTemporaryActor PennyClassMaterials 16 16 17 10 2 false/positionOffset PennyClassMaterials 12 36 true/positionOffset Elliott 22 -15 true/positionOffset Pierre 20 0 true/positionOffset Caroline -50 -10 true/positionOffset Susan 20 -25 true/showFrame Elliott 33 true/animate GuntherSilvian false true 2000 0 0 0 0 0 0 0 21/skippable/playMusic 50s/viewport 16 12 true/move farmer 5 0 0/move farmer 0 -2 0/pause 150/faceDirection farmer 1 true/pause 1000/emote farmer 8/pause 300/faceDirection Penny 3 true/pause 450/speak Penny \"{{i18n:Penny.Teaching.Relationship.01}}\"/pause 500/speak Penny \"{{i18n:Penny.Teaching.02}}\"/pause 750/emote Penny 40/pause 150/speak Penny \"{{i18n:Penny.Teaching.03}}\"/pause 800/faceDirection Penny 0 true/pause 1200/faceDirection Penny 3 true/pause 450/speak Penny \"{{i18n:Penny.Teaching.Relationship.04}}\"/pause 500/emote farmer 32/pause 500/showFrame Penny 20 true/pause 750/faceDirection farmer 2 true/pause 275/faceDirection farmer 3 true/pause 500/advancedMove farmer false -4 0 0 2 -2 0/pause 500/showFrame Penny 12 true/pause 750/faceDirection Penny 0 true/globalFade/viewport -1000 -1000/pause 1000/friendship Penny 50/end dialogue Penny \"{{i18n:Penny.Teaching.Relationship.05}}\"",
+      }
+    },
+    {
+      "Action": "Load", //16x16
+      "Target": "Characters/PennyClassMaterials",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/PennyClassMaterials.png"
+    },
+    { //PENNY EVENT DIALOGUE ADDITIONS
+      "Action": "EditData",
+      "Target": "characters/dialogue/penny",
+      "Entries": {
+        "penny_event1": "{{i18n:Penny.Teaching.CT.01}}",
+        "penny_event2": "{{i18n:Penny.Teaching.CT.02}}",
+        "penny_event3": "{{i18n:Penny.Teaching.CT.03}}",
+      }
+    },
+    { //PENNY 2 HEART EVENT PATHING FIX
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "34/f Penny 500/t 900 1400/w sunny": "50s/49 64/farmer 43 64 1 Penny 59 69 1 George 51 64 0 Gus 37 70 3 Abigail -100 -100 2/skippable/pause 700/emote George 28/pause 500/speak George \"{{i18n:Penny.2hearts.01}}\"/move Penny -1 0 0/move Penny 0 -5 3/move Penny -3 0 3/emote Penny 16/pause 300/speed Penny 4/move Penny -3 0 3/faceDirection George 1/pause 400/showFrame Penny 20/pause 400/speak Penny \"{{i18n:Penny.2hearts.02}}\"/pause 400/speed Penny 2/move Penny 0 1 3/move Penny -2 0 0/move Penny 0 -1 1/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/positionOffset Penny 2 0/pause 50/showFrame Penny 5/positionOffset Penny 2 0/pause 50/showFrame Penny 4/showFrame Penny 21/move George 1 0 1 true/emote George 16/positionOffset Penny 2 0/pause 50/showFrame Penny 22/positionOffset Penny 2 0/pause 50/faceDirection Penny 1/move Penny 1 0 1/pause 400/faceDirection Penny 0/playSound openBox/pause 600/faceDirection George 3/faceDirection Penny 1/speak Penny \"{{i18n:Penny.2hearts.03}}\"/pause 300/emote George 12/speak George \"{{i18n:Penny.2hearts.04}}\"/move farmer 6 0 1/pause 200/faceDirection George 3/emote George 8/faceDirection Penny 3/speak Penny \"{{i18n:Penny.2hearts.05}}\"/pause 400/faceDirection George 2/pause 800/showFrame George 16/pause 500/emote George 28/pause 1000/faceDirection Penny 1/speak George \"{{i18n:Penny.2hearts.06}}\"/pause 500/faceDirection George 3/pause 400/speak George \"{{i18n:Penny.2hearts.07}}\"/pause 400/speak Penny \"{{i18n:Penny.2hearts.08}}\"/warp Abigail 44 1/pause 500/move Abigail 0 8 2 true/move George 5 0 0 false/pause 550/move Abigail -18 0 2 true/warp George -100 -100/playSound doorClose/pause 600/emote Penny 28/pause 700/faceDirection Penny 3/playMusic spring_day_ambient/pause 600/speak Penny \"{{i18n:Penny.2hearts.09}}\"/pause 500/emote Penny 40/faceDirection Penny 2/pause 500/faceDirection Penny 3/speak Penny \"{{i18n:Penny.2hearts.10}}\"/showFrame Penny 20/pause 500/showFrame Penny 12/pause 900/move Penny 6 0 2 true/globalFade/viewport -1000 -1000/end",
+      }
+    },
+    {
+      //Nulls Vanilla for key change
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "181928/f Penny 2000/w sunny/t 900 1600": null
+      }
+
+    },
+    { //PENNY 8 HEART EVENT PATHING FIX
+      "Action": "EditData",
+      "Target": "data/events/forest",
+      "Entries": {
+        "181928/GameStateQuery !IS_PASSIVE_FESTIVAL_OPEN TroutDerby/f Penny 2000/w sunny/t 900 1600": "50s/-1000 -1000/farmer 75 40 2 Penny 71 45 2 Jas 71 50 3 Vincent 70 50 1/skippable/specificTemporarySprite pennyFieldTrip/positionOffset Penny 0 -16/animate Jas false true 90 16 17 18 19/viewport 71 45 true/move farmer 0 5 3/pause 600/faceDirection Penny 1/pause 600/speak Penny \"{{i18n:Penny.8hearts.01}}\"/emote farmer 8/speak Penny \"{{i18n:Penny.8hearts.02}}\"/speak Penny \"{{i18n:Penny.8hearts.03}}\"/fork eventEnd/faceDirection Penny 2/faceDirection farmer 2/showFrame Penny 26/pause 500/shake Penny 500/speak Penny \"{{i18n:Penny.8hearts.04}}\"/pause 80/stopAnimation Jas/faceDirection Jas 0 true/faceDirection Vincent 0/jump Vincent/jump Jas/pause 800/speed Vincent 4/speed Jas 4/move Vincent 0 -3 0 true/move Jas 0 -3 0 true/showFrame Penny 0/faceDirection Penny 2/faceDirection farmer 3/speak Penny \"{{i18n:Penny.8hearts.05}}\"/pause 500/speak Penny \"{{i18n:Penny.8hearts.06}}\"/animate Jas false true 50 20 21/animate Vincent false true 50 16 17/playSound dwop/pause 1200/speak Penny \"{{i18n:Penny.8hearts.07}}\"/stopAnimation Vincent/stopAnimation Jas/speak Jas \"{{i18n:Penny.8hearts.08}}\"/faceDirection Vincent 1/speak Penny \"{{i18n:Penny.8hearts.09}}\"/speak Jas \"{{i18n:Penny.8hearts.10}}\"/faceDirection Vincent 0/speak Penny \"{{i18n:Penny.8hearts.11}}\"/move Penny -1 0 1/move farmer -4 0 2/question fork0 \"{{i18n:Penny.8hearts.12}}\"/fork choseFarming/pause 500/question fork0 \"{{i18n:Penny.8hearts.13}}\"/fork choseMinerals/animate Vincent false true 50 16 17/playSound dwop/pause 300/faceDirection Penny 2/pause 500/stopAnimation Vincent/speak Penny \"{{i18n:Penny.8hearts.14}}\"/speak Vincent \"{{i18n:Penny.8hearts.15}}\"/speak Penny \"{{i18n:Penny.8hearts.16}}\"/emote Vincent 28/switchEvent fieldTripEnd",
+        "fieldTripEnd": "pause 400/emote Penny 40/speak Penny \"{{i18n:Penny.8hearts.fieldTripEnd.01}}\"/speed Jas 4/move Jas 0 3 1/speed Jas 4/move Jas -7 0 1 true/faceDirection Vincent 2 true/jump Vincent/pause 800/speed Vincent 4/move Vincent 0 3 1 false/speed Vincent 4/move Vincent -5 0 1/pause 500/faceDirection Vincent 2/faceDirection Jas 2/faceDirection Penny 1/faceDirection farmer 3/speak Penny \"{{i18n:Penny.8hearts.fieldTripEnd.02}}\"/faceDirection Penny 2/pause 500/faceDirection Penny 1/speak Penny \"{{i18n:Penny.8hearts.fieldTripEnd.03}}\"/viewport move 1 0 10000/pause 7000/stopMusic/globalFade/viewport -2000 -2000/speak Penny \"{{i18n:Penny.8hearts.fieldTripEnd.04}}\"/end dialogue Penny \"{{i18n:Penny.8hearts.fieldTripEnd.05}}\""
+      }
+    },
+    { //Penny Heart Event Pathing Fix - Trailer
+      "Action": "EditData",
+      "Target": "data/events/Trailer",
+      "Entries": {
+        "35/f Penny 1000/p Penny": "50s/-1000 -1000/farmer -30 30 0 Penny 12 7 0 Pam -100 -100 0/skippable/specificTemporarySprite pennyMess/viewport 12 7 true/pause 1000/speak Penny \"{{i18n:Penny.4hearts.01}}\"/pause 500/warp farmer 12 9/playSound doorClose/pause 500/faceDirection Penny 2/pause 500/emote Penny 16/pause 300/speak Penny \"{{i18n:Penny.4hearts.02}}\"/pause 500/move farmer 0 -1 0/pause 600/emote Penny 32/pause 300/speak Penny \"{{i18n:Penny.4hearts.03}}\"/pause 500/faceDirection Penny 1/faceDirection farmer 1/speak Penny \"{{i18n:Penny.4hearts.04}}\"/move farmer 1 0 1/move farmer 0 -2 1/move farmer 2 0 1/move Penny -1 0 0/animate Penny false true 100 24 25/animate farmer false true 100 35/pause 200/playSound dwop/removeSprite 16 6/pause 200/move Penny -1 0 0/animate Penny false true 100 24 25/stopAnimation farmer/faceDirection farmer 0/pause 1200/stopAnimation Penny/removeSprite 10 5/playSound dwop/move Penny -1 0 0/animate Penny false true 100 24 25/pause 900/animate farmer false true 100 41/pause 300/playSound dwop/removeSprite 15 5/stopAnimation farmer/pause 1400/stopAnimation Penny/move Penny 1 0 0/pause 800/warp Pam 12 9/playSound doorClose/stopMusic/move Pam 0 -1 0/faceDirection Penny 2/faceDirection farmer 3/faceDirection Pam 1/pause 500/faceDirection Pam 3/speak Pam \"{{i18n:Penny.4hearts.05}}\"/faceDirection Pam 1/faceDirection Pam 3/faceDirection Pam 0/speak Pam \"{{i18n:Penny.4hearts.06}}\"/move Penny 2 0 2/pause 500/emote Penny 28/pause 500/speak Penny \"{{i18n:Penny.4hearts.07}}\"/pause 300/move Pam -1 0 3/emote Pam 12/pause 400/speak Pam \"{{i18n:Penny.4hearts.08}}\"/pause 500/speak Penny \"{{i18n:Penny.4hearts.09}}\"/faceDirection Pam 0/shake Pam 5000/pause 600/speak Pam \"{{i18n:Penny.4hearts.10}}\"/pause 500/emote farmer 28/pause 500/faceDirection Pam 1/faceDirection Penny 1/move farmer -2 0 2/move farmer 0 2 3/pause 500/speak Pam \"{{i18n:Penny.4hearts.11}}\"/pause 500/move farmer -1 0 2/move farmer 0 1 2/pause 500/faceDirection farmer 0/faceDirection Penny 2/pause 700/faceDirection farmer 2/pause 500/warp farmer -40 -40/playSound doorClose/pause 500/move Pam 0 -1 1/pause 300/faceDirection Penny 3/speak Pam \"{{i18n:Penny.4hearts.12}}\"/speak Pam \"{{i18n:Penny.4hearts.13}}\"/pause 300/faceDirection Penny 2/pause 600/showFrame Penny 23/pause 700/speak Penny \"{{i18n:Penny.4hearts.14}}\"/pause 1000/mail PennyCleanTrailer/end warpOut"
+      }
+    },
+  ]
+}

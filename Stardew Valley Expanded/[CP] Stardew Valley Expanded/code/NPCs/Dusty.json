@@ -1,0 +1,53 @@
+{
+    "Changes": [
+        { //DUSTY CUTSCENE
+            "Action": "EditData",
+            "Target": "data/events/town",
+            "Entries": {
+                "5532011/f Alex 125/w sunny/t 900 1600": "playful/-500 -500/farmer 49 73 1 Pam 79 68 1 Abigail 72 54 2 Pierre 48 59 3 Lewis 46 59 1 Penny 44 77 2 Andy 37 6 2/addTemporaryActor Dusty 16 32 -300 -300 2 true/showFrame Penny 34 true/animate Andy true true 120 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 33 34 35 35 35 35 35 35 35 35 35 35 35 35 34 33 32 32/skippable/pause 1000/viewport 54 70 true/move farmer 7 0 1/playSound dog_bark true/pause 1000/faceDirection farmer 2/faceDirection farmer 3/pause 400/emote farmer 8/pause 100/move farmer -2 0 0/move farmer 0 -2 0/pause 300/playSound dog_bark true/speak Dusty \"!!!$1\"/pause 200/emote farmer 32/pause 100/viewport move 0 -1 3000 true/move farmer 0 -2 3/move farmer -1 0 0/pause 600/playSound dog_pant/pause 300/playSound dog_pant true/speak Dusty \"!!!$4\"/pause 1000/question fork0 \"{{i18n:Dusty.Event.01}}\"/fork 5532011_PetDusty/pause 200/stopMusic/pause 300/speak Dusty \"...$2\"/pause 800/globalFade/viewport -1000 -1000/end",
+                "5532011_PetDusty": "pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/showFrame farmer 15/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 100/positionOffset farmer 0 -1 true/pause 400/playSound rabbit/playSound rabbit/pause 800/playSound rabbit/playSound rabbit/pause 500/playSound rabbit/playSound rabbit/pause 200/playSound dog_bark/pause 400/showFrame farmer 12 true/playSound dog_pant/pause 320/playSound dog_pant/pause 300/playSound dog_pant/speak Dusty \"!!!$0\"/pause 200/emote farmer 20 true/pause 200/globalFade/viewport -1000 -1000/friendship Alex 50/end dialogue Alex \"{{i18n:Dusty.Event.02}}\"",
+            },
+        },
+        //DUSTY NPC
+        {
+            "Action": "Load",
+            "Target": "Portraits/Dusty",
+            "FromFile": "Assets/CharacterFiles/Portraits/Dusty/Dusty.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dusty",
+            "FromFile": "Assets/CharacterFiles/OverworldSprites/NoSprites/Dusty/Dusty.png"
+        },
+        { //Portrait #1
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "When": {
+                "Day": "1, 2, 5, 6, 9, 11, 13, 15, 17, 19, 22, 25, 27"
+            },
+            "Entries": {
+                "dustyPets": "{{i18n:Dusty.PlayerResponse.01}}"
+            }
+        },
+        { //Portrait #2
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "When": {
+                "Day": "4, 7, 10, 14, 18, 21, 23, 26"
+            },
+            "Entries": {
+                "dustyPets": "{{i18n:Dusty.PlayerResponse.02}}"
+            }
+        },
+        { //Portrait #3
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "When": {
+                "Day": "3, 8, 12, 16, 20, 24, 28"
+            },
+            "Entries": {
+                "dustyPets": "{{i18n:Dusty.PlayerResponse.03}}"
+            }
+        },
+    ]
+}
