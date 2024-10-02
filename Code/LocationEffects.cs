@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
+using StardewValley.Buildings;
 using StardewValley.Extensions;
 using StardewValley.TerrainFeatures;
+using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -171,7 +173,9 @@ namespace StardewValleyExpanded
     {
         public static void Postfix(GameLocation __instance, ref string __result)
         {
-            if ( __instance.Name == "Custom_CrimsonBadlands" || __instance.Name == "Custom_IridiumQuarry" )
+            if (__instance.Name == "Custom_CrimsonBadlands" || __instance.Name == "Custom_IridiumQuarry" ||
+                __instance.Name == "WitchSwamp" || __instance.Name == "Custom_ForbiddenMaze" ||
+                __instance.Name == "Custom_HenchmanBackyard")
                 __result = "sandyStep";
         }
     }

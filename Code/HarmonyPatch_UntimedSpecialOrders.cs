@@ -81,7 +81,9 @@ namespace StardewValleyExpanded
             "Krobus",
             "GilMinecarts",
             "DwarfCaveShortcut",
-            "CamillaBridge"
+            "CamillaBridge",
+            "LegendaryTrio",
+            "HenchmanHouseRepaired",
         };
 
 

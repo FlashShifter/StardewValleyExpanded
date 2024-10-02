@@ -113,7 +113,7 @@ namespace SpiritsEveChestEditor
                 return; //do nothing
 
             //look for a chest containing a golden pumpkin (null if not found)
-            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.Items.Any(item => item.QualifiedItemId == "373") == true) as Chest;
+            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.Items.Any(item => item.QualifiedItemId == "(O)373" ) == true) as Chest;
 
             if (chest == null) //if the chest was NOT found
                 return; //do nothing (but keep checking)

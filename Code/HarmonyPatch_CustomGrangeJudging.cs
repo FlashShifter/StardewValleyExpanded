@@ -61,9 +61,11 @@ namespace StardewValleyExpanded
         public static Dictionary<string, string> DialogueWhileJudging { get; set; } = new Dictionary<string, string>()
         {
             //base game dialogue
+            /*
             { "Marnie", "Strings\\StringsFromCSFiles:Event.cs.1602" },
             { "Pierre", "Strings\\StringsFromCSFiles:Event.cs.1604" },
             { "Willy", "Strings\\StringsFromCSFiles:Event.cs.1606" },
+            */
             
             //SVE dialogue
             { "Sophia", "Strings\\StringsFromCSFiles:SVE_GrangeJudging_Sophia" },

@@ -71,6 +71,18 @@ namespace StardewValleyExpanded
             {
                 return 500;
             }
+            else if (locationName == "WitchSwamp")
+            {
+                return 100;
+            }
+            else if (locationName == "Custom_ForbiddenMaze")
+            {
+                return 700;
+            }
+            else if (locationName == "Custom_HenchmanBackyard")
+            {
+                return 100;
+            }
 
             return 0; //default to 0 fireflies in all locations not specificed
         }
