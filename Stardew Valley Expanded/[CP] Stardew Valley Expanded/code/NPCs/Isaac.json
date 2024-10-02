@@ -21,9 +21,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -51,21 +51,26 @@
     },
     {
       //Isaac's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Isaac",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Isaac/Isaac.png"
     },
     {
       //Isaac's portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Isaac",
       "FromFile": "Assets/CharacterFiles/Portraits/Isaac/Isaac.png"
     },
     {
       //Isaac's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/Isaac",
       "FromFile": "assets/CharacterFiles/Schedules/Isaac/Isaac.json"
+    },
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Strings/Schedules/Isaac",
+      "FromFile": "Assets/Blank.json"
     },
     { //Isaac visits the adventurer guild
       "Action": "EditData",
@@ -79,16 +84,17 @@
         "11": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 16 3/1300 Custom_AdventurerSummit 42 27 1/1710 AdventureGuild 3 13 2",
         "26": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 6 13 2",
         "27": "0 Custom_Isaac_WarpRoom 3 3 2/610 AdventureGuild 11 14 3/1150 Custom_AdventurerSummit 34 25 1/1800 AdventureGuild 11 14 3",
-        "DesertFestival_1": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
-        "DesertFestival_2": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
-        "DesertFestival_3": "0 Desert 14 7 3 \"Strings\\schedules\\IsaacDesertFestival_Isaac\"",
+        "DesertFestival_1": "0 Desert 14 7 3/610 Desert 14 7 3 \"Strings\\schedules\\Isaac:DesertFestival_Isaac\"",
+        "DesertFestival_2": "0 Desert 14 7 3/610 Desert 14 7 3 \"Strings\\schedules\\Isaac:DesertFestival_Isaac\"",
+        "DesertFestival_3": "0 Desert 14 7 2/610 Desert 14 7 2 \"Strings\\schedules\\Isaac:DesertFestival_Isaac_AlesiaGone\"",
       }
     },
     {
       "Action": "EditData",
       "Target": "Strings/Schedules/Isaac",
       "Entries": {
-        "DesertFestival_Isaac": "{{i18n:DesertFestival_Isaac}}"
+        "DesertFestival_Isaac": "{{i18n:DesertFestival_Isaac}}",
+		"DesertFestival_Isaac_AlesiaGone": "{{i18n:DesertFestival_Isaac_AlesiaGone}}"
       }
     },
     {
@@ -107,7 +113,18 @@
       "Target": "characters/dialogue/Isaac",
       "When": {
         "HasSeenEvent": "908079",
-        "Day": "5, 11"
+        "Day": "5"
+      },
+      "Entries": {
+        "Fri": "{{i18n:Isaac.Guild.02}}"
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "characters/dialogue/Isaac",
+      "When": {
+        "HasSeenEvent": "908079",
+        "Day": "11"
       },
       "Entries": {
         "Thu": "{{i18n:Isaac.Guild.02}}"
@@ -135,13 +152,5 @@
         "Sat": "...$0",
       }
     },
-    /*{
-      //Isaac's AntiSocial Flag
-      "Action": "EditData",
-      "Target": "Data/AntiSocialNPCs",
-      "Entries": {
-        "Isaac": true
-      }
-    },*/
   ]
 }

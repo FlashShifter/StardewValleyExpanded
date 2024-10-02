@@ -31,7 +31,7 @@
             },
             "When": {
                 "Day": "3, 4, 13, 21, 23, 25",
-                "HasSeenEvent |contains=908079": true
+                "HasSeenEvent: anyPlayer |contains=908079": true
             },
             "Patchmode": "Overlay"
         },
@@ -48,7 +48,7 @@
             },
             "When": {
                 "Day": "7, 22, 28",
-                "HasSeenEvent |contains=908079": true
+                "HasSeenEvent: anyPlayer |contains=908079": true
             },
             "Patchmode": "Overlay"
         },
@@ -1331,7 +1331,7 @@
             "Target": "LooseSprites/Cursors_1_6",
             "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
             "When": {
-                "DisableGaldoranTheme": true,
+                "UseGaldoranThemeAllTimes": true
             },
             "Update": "OnLocationChange",
             "PatchMode": "Replace",
@@ -1354,7 +1354,7 @@
             "Target": "LooseSprites/Cursors_1_6",
             "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
             "When": {
-                "DisableGaldoranTheme": true,
+                "UseGaldoranThemeAllTimes": true
             },
             "Update": "OnLocationChange",
             "PatchMode": "Replace",
@@ -2290,7 +2290,6 @@
                 "Height": 11
             },
         },
-		
 		{ //Galdoran Theme 1.6 Update 1
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors_1_6",
@@ -2313,7 +2312,6 @@
                 "Height": 115
             },
         },
-		
 		{ //Galdoran Theme 1.6 Update 2
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors_1_6",
@@ -2334,6 +2332,52 @@
                 "Y": 234,
                 "Width": 201,
                 "Height": 96
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Baby Chicken Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 384,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 257,
+                "Y": 246,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		{
+            //Galdoran SDV 1.6 Purple Star Icon
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors_1_6",
+            "FromFile": "Assets/Tilesheets/Galdora_Interface.png",
+            "When": {
+                "UseGaldoranThemeAllTimes": true
+            },
+            "Update": "OnLocationChange",
+            "PatchMode": "Replace",
+            "FromArea": {
+                "X": 243,
+                "Y": 401,
+                "Width": 16,
+                "Height": 16
+            },
+            "ToArea": {
+                "X": 216,
+                "Y": 494,
+                "Width": 16,
+                "Height": 16
             },
         },
     ]

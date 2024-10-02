@@ -4,10 +4,38 @@
             "Action": "EditData",
             "Target": "Data/CraftingRecipes",
             "Entries": {
-                "Armor Elixir": "768 30 FlashShifter.StardewValleyExpandedCP_Void Soul 5 419 5 881 5//FlashShifter.StardewValleyExpandedCP_Armor_Elixir/false/none/{{i18n:object.armor-elixir.name}}",
-                "Haste Elixir": "769 35 FlashShifter.StardewValleyExpandedCP_Void Soul 5 245 1 226 1//FlashShifter.StardewValleyExpandedCP_Haste_Elixir/false/none/{{i18n:object.haste-elixir.name}}",
-                "Hero Elixir": "FlashShifter.StardewValleyExpandedCP_Void Pebble 3 FlashShifter.StardewValleyExpandedCP_Void_Soul 5 247 1 766 10/none/FlashShifter.StardewValleyExpandedCP_Hero_Elixir/false/none/{{i18n:object.haste-elixir.name}}"
-            }
-        }
+                "Armor Elixir": "768 50 FlashShifter.StardewValleyExpandedCP_Void_Soul 5 881 30 419 1//FlashShifter.StardewValleyExpandedCP_Armor_Elixir/false/Combat 7/{{i18n:object.armor-elixir.name}}",
+                "Haste Elixir": "769 50 FlashShifter.StardewValleyExpandedCP_Void_Soul 5 226 3 245 1//FlashShifter.StardewValleyExpandedCP_Haste_Elixir/false/Combat 8/{{i18n:object.haste-elixir.name}}",
+                "Hero Elixir": "766 50 FlashShifter.StardewValleyExpandedCP_Void_Soul 5 FlashShifter.StardewValleyExpandedCP_Void_Pebble 10 247 1/none/FlashShifter.StardewValleyExpandedCP_Hero_Elixir/false/Combat 9/{{i18n:object.hero-elixir.name}}",
+				"Seed Cookie": "FlashShifter.StardewValleyExpandedCP_Fir_Cone 1 FlashShifter.StardewValleyExpandedCP_Birch_Seed 1 309 1 310 1 311 1//FlashShifter.StardewValleyExpandedCP_Seed_Cookie/false/Foraging 3/{{i18n:object.seed-cookie.name}}",
+				"Small Hardwood Fence": "709 1//FlashShifter.StardewValleyExpandedCP_Small_Hardwood_Fence_Tilesheet/false/none/{{i18n:object.small-hardwood-fence.name}}",
+				"Hedge Fence": "771 3 388 1//FlashShifter.StardewValleyExpandedCP_Hedge_Fence_Tilesheet/false/Farming 6/{{i18n:object.hedge-fence.name}}",
+				"Bombardier Elixir": "768 30 769 30 FlashShifter.StardewValleyExpandedCP_Void_Soul 10 FlashShifter.StardewValleyExpandedCP_Void_Pebble 20 287 5//FlashShifter.StardewValleyExpandedCP_Bombardier_Elixir/false/Combat 9/{{i18n:object.bombardier-elixir.name}}",
+				"Butter Churner": "388 25 390 25 84 1 335 1//FlashShifter.StardewValleyExpandedCP_Butter_Churner/true/Farming 3/{{i18n:machine.butter-churner.name}}",
+		        "Yarn Spooler": "709 25 787 1 FlashShifter.StardewValleyExpandedCP_Fir_Wax 1 726 1//FlashShifter.StardewValleyExpandedCP_Yarn_Spooler/true/Farming 9/{{i18n:machine.yarn-spooler.name}}",
+			    "Sun Totem": "709 1 768 10 FlashShifter.StardewValleyExpandedCP_Birch_Water 1//FlashShifter.StardewValleyExpandedCP_Sun_Totem/false/Foraging 9/{{i18n:object.sun-totem.name}}",
+			    "Wind Totem": "709 1 767 10 FlashShifter.StardewValleyExpandedCP_Fir_Wax 1//FlashShifter.StardewValleyExpandedCP_Wind_Totem/false/Foraging 9/{{i18n:object.wind-totem.name}}",
+			}
+        },
+		{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+			"When": {
+	          "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	        },
+            "Entries": {
+				"Marsh Tonic": "766 30 FlashShifter.StardewValleyExpandedCP_Swamp_Essence 15 FlashShifter.StardewValleyExpandedCP_Swamp_Flower 10 245 1//FlashShifter.StardewValleyExpandedCP_Marsh_Tonic/false/null/{{i18n:object.marsh-tonic.name}}",
+			}
+        },
+		{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+			"When": {
+	          "HasMod|contains=Aimon111.WitchSwampOverhaulCP": true
+	        },
+            "Entries": {
+				"Marsh Tonic": "766 30 FlashShifter.StardewValleyExpandedCP_Swamp_Essence 15 FlashShifter.StardewValleyExpandedCP_Swamp_Flower 10 245 1//FlashShifter.StardewValleyExpandedCP_Marsh_Tonic/false/Combat 8/{{i18n:object.marsh-tonic.name}}",
+			}
+        },
     ]
 }

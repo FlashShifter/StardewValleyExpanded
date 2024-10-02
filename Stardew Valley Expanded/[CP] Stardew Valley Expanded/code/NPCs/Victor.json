@@ -22,9 +22,9 @@
           "Calendar": "AlwaysShown",
           "SocialTab": "UnknownUntilMet",
           "CanSocialize": true,
-          "CanVisitIslandCondition": true,
+          "CanVisitIsland": true,
           "ExcludeFromIntroductionsQuest": false,
-          "ExcludeFromPerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_VictorsRoom",
@@ -642,7 +642,7 @@
                 "X": 31,
                 "Y": 5
               },
-              "Direction": "left"
+              "Direction": "down"
             }
           ],
           "Appearance": [
@@ -674,7 +674,7 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Victor": "{{i18n:gifts.victor.love}}/224 787 444 551 FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:gifts.victor.like}}/254 346 348 349 392 394/{{i18n:gifts.victor.dislike}}/18 16 20 22 24 408 80 416 414 412 296 398 410 152 396 397 399/{{i18n:gifts.victor.hate}}/205 404 420 422 609 610 196 213 218 219 225 403 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom/{{i18n:gifts.victor.neutral}}/184 186 180 182 174 176 424 426/"
+        "Victor": "{{i18n:gifts.victor.love}}/224 787 444 551 FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Ramen FlashShifter.StardewValleyExpandedCP_Butterfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Ancient_Fiber FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:gifts.victor.like}}/254 346 348 349 392 394 FlashShifter.StardewValleyExpandedCP_Gold_Carrot/{{i18n:gifts.victor.dislike}}/18 16 20 22 24 408 80 416 414 412 296 398 410 152 396 397 399/{{i18n:gifts.victor.hate}}/205 404 420 422 609 610 196 213 218 219 225 403 FlashShifter.StardewValleyExpandedCP_Mega_Purple_Mushroom FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Green_Mushroom/{{i18n:gifts.victor.neutral}}/184 186 180 182 174 176 424 426/"
       },
     },
     {
@@ -708,55 +708,55 @@
     },
     //Loads Spouse Room
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Custom_VictorsRoom",
       "FromFile": "Assets/Maps/SpouseRooms/VictorsRoom.tbin",
     },
     //Loads Spouse Patio
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Victor_Spouse_Area",
       "FromFile": "Assets/Maps/SpouseRooms/Victor_Spouse_Area.tbin"
     },
     {
       //Victor's portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Victor",
       "FromFile": "assets/CharacterFiles/Portraits/Victor/Victor.png"
     },
     {
       //Victor's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Victor",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Victor/Victor.png"
     },
     {
       //Victor's portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Victor_Winter",
       "FromFile": "assets/CharacterFiles/Portraits/Victor/Victor_Winter.png"
     },
     {
       //Victor's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Victor_Winter",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Victor/Victor_Winter.png"
     },
     {
       //Victor's beach portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Victor_Beach",
       "FromFile": "assets/CharacterFiles/Portraits/Victor/Victor_Beach.png"
     },
     {
       //Victor's beach sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Victor_Beach",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Victor/Victor_Beach.png"
     },
     {
       //Victor's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/Victor",
       "FromFile": "assets/CharacterFiles/Schedules/Victor/Schedule.json"
     },
@@ -769,7 +769,7 @@
         "Spouse": "Victor"
       },
       "Entries": {
-        "Sat": "1000 SebastianRoom 5 9 3/2100 Bed",
+        "Sat": "1000 SebastianRoom 5 9 3/2100 bed",
       }
     },
     {
@@ -797,7 +797,7 @@
         "fall_1": "600 Custom_JenkinsHouse 31 5 1 Victor_Sleep/700 Custom_JenkinsHouse 6 8 0/900 Custom_JenkinsHouse 30 37 2/1000 Town 30 78 1/1400 Custom_JenkinsHouse 35 37 0/2000 Custom_JenkinsHouse 23 25 2 Victor_Book2/2200 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
         "winter_1": "600 Custom_JenkinsHouse 31 5 1 Victor_Sleep/700 Custom_JenkinsHouse 6 8 0/900 Custom_JenkinsHouse 30 37 0/1020 Town 30 78 1/1430 Custom_JenkinsHouse 35 37 0/2000 Custom_JenkinsHouse 18 27 1 Victor_Book2/2210 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
         "winter_24": "600 Custom_JenkinsHouse 31 5 1 Victor_Sleep/700 Custom_JenkinsHouse 6 8 0/900 Custom_JenkinsHouse 30 37 2/1010 Town 30 78 1/1500 Custom_JenkinsHouse 35 37 0/2000 Custom_JenkinsHouse 23 25 2 Victor_Book2/2230 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
-        "marriage_Fri": "830 Custom_JenkinsHouse 31 37 1 \"Strings\\schedules\\Victor:marriage.004\"/1200 Town 75 54 2 \"Strings\\schedules\\Victor:marriage.005\"/1400 Town 25 29 0 \"Strings\\schedules\\Victor:marriage.006\"/1600 Saloon 40 18 2 \"Strings\\schedules\\Victor:marriage.007\"/2100 Bed"
+        "marriage_Fri": "830 Custom_JenkinsHouse 31 37 1 \"Strings\\schedules\\Victor:marriage.004\"/1200 Town 75 54 2 \"Strings\\schedules\\Victor:marriage.005\"/1400 Town 25 29 0 \"Strings\\schedules\\Victor:marriage.006\"/1600 Saloon 40 18 2 \"Strings\\schedules\\Victor:marriage.007\"/2100 bed"
       }
     },
     {
@@ -1172,35 +1172,11 @@
       },
     },
     {
-      //VICTOR 12 HEART EVENT - part 1 (community center route, house upgrade = 2)
-      "Action": "EditData",
-      "Target": "Data/Events/farmhouse",
-      "When": {
-        "FarmhouseUpgrade": 2,
-        "IsCommunityCenterComplete": true
-      },
-      "Entries": {
-        "2000005/O Victor/f Victor 3000/w sunny/t 600 800": "none/-500 -500/farmer 14 14 3 Victor 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions Victor/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Victor 1 true/pause 500/speak Victor \"{{i18n:victor12hearts.01}}\"/pause 400/emote farmer 8/speak Victor \"{{i18n:victor12hearts.CC.02}}\"/pause 1000/speak Victor \"{{i18n:victor12hearts.03}}\"/pause 500/end dialogue Victor \"{{i18n:victor12hearts.04}}\""
-      },
-    },
-    {
-      //VICTOR 12 HEART EVENT - part 1 (joja route, house upgrade = 2)
-      "Action": "EditData",
-      "Target": "Data/Events/farmhouse",
-      "When": {
-        "FarmhouseUpgrade": 2,
-        "IsJojaMartComplete": true
-      },
-      "Entries": {
-        "2000005/O Victor/f Victor 3000/w sunny/t 600 800": "none/-500 -500/farmer 14 14 3 Victor 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions Victor/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Victor 1 true/pause 500/speak Victor \"{{i18n:victor12hearts.01}}\"/pause 400/emote farmer 8/speak Victor \"{{i18n:victor12hearts.02}}\"/pause 1000/speak Victor \"{{i18n:victor12hearts.03}}\"/pause 500/end dialogue Victor \"{{i18n:victor12hearts.04}}\""
-      },
-    },
-    {
       //VICTOR 12 HEART EVENT - part 1 (community center route, house upgrade = 3)
       "Action": "EditData",
       "Target": "Data/Events/farmhouse",
       "When": {
-        "FarmhouseUpgrade": 3,
+        "FarmhouseUpgrade|contains=2, 3": true,
         "IsCommunityCenterComplete": true
       },
       "Entries": {
@@ -1212,7 +1188,7 @@
       "Action": "EditData",
       "Target": "Data/Events/farmhouse",
       "When": {
-        "FarmhouseUpgrade": 3,
+        "FarmhouseUpgrade|contains=2, 3": true,
         "IsJojaMartComplete": true
       },
       "Entries": {
@@ -1257,12 +1233,12 @@
     },
     //Load temporary actors for Victor 12 heart event
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Dewey",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Animals/Dewey.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Luna",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Animals/Luna.png"
     },
@@ -1393,13 +1369,13 @@
         "HasSeenEvent |contains=2000009": false,
       },
       "Entries": {
-        "marriage_Mon": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Tue": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Wed": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Thu": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Fri": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Sat": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed",
-        "marriage_Sun": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 Bed"
+        "marriage_Mon": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Tue": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Wed": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Thu": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Fri": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Sat": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard1 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed",
+        "marriage_Sun": "730 Custom_ShearwaterBridge 32 20 2 Victor_Clipboard2 \"Strings\\schedules\\Victor:ShearwaterBridgeRenovation.001\"/1700 bed"
       }
     },
    
@@ -1408,7 +1384,7 @@
       "Action": "EditData",
       "Target": "Data/Events/farmhouse",
       "Entries": {
-        "2000009/e 2000008/O Victor/u 21 22 23 24 25 26 27 28/t 2000 2600": "none/-500 -500/farmer 14 14 3 Victor 7 14 0/addConversationTopic ShearwaterBridgeRenovationComplete 14/skippable/makeInvisible 7 14 8 1/pause 850/pause 1000/faceDirection Victor 0 true/ignoreCollisions Victor/viewport 7 14 true/speed farmer 1/move farmer -5 0 3/pause 500/faceDirection Victor 1 true/pause 800/speak Victor  \"{{i18n:victor14hearts.farmer1}}\"/pause 500/emote farmer 20/pause 250/speak Victor \"{{i18n:event-2000009.01}}\"/pause 700/showFrame farmer 97 true/pause 800/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-2000009.02}}\"/pause 1000/end dialogue Victor \"{{i18n:event-2000009.03}}\"",
+        "2000009/e 2000008/O Victor/u 21 22 23 24 25 26 27 28/t 2000 2600": "none/-500 -500/farmer 29 24 3 Victor 22 24 0/addConversationTopic ShearwaterBridgeRenovationComplete 14/skippable/makeInvisible 7 14 8 1/pause 850/pause 1000/faceDirection Victor 0 true/ignoreCollisions Victor/viewport 7 14 true/speed farmer 1/move farmer -5 0 3/pause 500/faceDirection Victor 1 true/pause 800/speak Victor  \"{{i18n:victor14hearts.farmer1}}\"/pause 500/emote farmer 20/pause 250/speak Victor \"{{i18n:event-2000009.01}}\"/pause 700/showFrame farmer 97 true/pause 800/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-2000009.02}}\"/pause 1000/end dialogue Victor \"{{i18n:event-2000009.03}}\"",
       }
     },
     {
@@ -1531,7 +1507,7 @@
     },
     //Loads Victor's Spaghetti Dinner Table (69x45), which is a meal I totally would want to eat. Wouldn't you?
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/VictorSpaghettiDinnerTable",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/VictorSpaghettiDinnerTable.png"
     },

@@ -21,9 +21,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -59,19 +59,19 @@
     },
     {
       //Jolyne's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Jolyne",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Jolyne/Jolyne.png"
     },
     {
       //Jolyne's portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Jolyne",
       "FromFile": "Assets/CharacterFiles/Portraits/Jolyne/Jolyne.png"
     },
     {
       //Jolyne's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/Jolyne",
       "FromFile": "assets/CharacterFiles/Schedules/Jolyne/Schedule.json"
     },

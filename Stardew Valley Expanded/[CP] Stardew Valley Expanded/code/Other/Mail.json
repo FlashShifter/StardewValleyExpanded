@@ -1,6 +1,6 @@
 {
     "Changes": [
-        { //ADD MAIL
+        {
             "Action": "EditData",
             "Target": "Data/Mail",
             "Entries": {
@@ -14,14 +14,13 @@
                 "VictorDewey": "{{i18n:Mail.VictorDewey}}",
                 "OliviaWine": "{{i18n:Mail.OliviaWine}}",
                 "OliviaCellar": "{{i18n:Mail.OliviaCellar}}",
-                //CUT CONTENT. You found a secret! ctrl + f AbigailJunimo to find a cut event "AbigailJunimo": "Hi @,^^I'm still processing what we talked about the other day. I've got more questions than answers. I can't believe that I'm not the only one. I know you won't, but please don't mention this to anyone. I think that this secret just has more secrets underneath it, and I'm not sure I'm ready to turn over all the rocks in my life. Let's talk more soon.^^  -Abby",
                 "GusSophia": "{{i18n:Mail.GusSophia}}",
                 "HaleyTalk": "{{i18n:Mail.HaleyTalk}}",
                 "KentSummit": "{{i18n:Mail.KentSummit}}",
                 "PierreSVERebate": "{{i18n:Mail.PierreSVERebate}}",
                 "JojaRockslideNotice": "{{i18n:Mail.JojaRockslideNotice}}",
-                //"SVEadvertisement1": "Dear resident:^^Our records indicate that you may not have a membership at JojaMart. Did you know that Joja has consistently scored top in the industry for quality and value? A membership may seem like a big investment, but it unlocks so much - it's a real lifechanger! Join today, and become part of the Joja family.^^JojaMart: We Value Your Business",
                 "SVEadvertisement2": "{{i18n:Mail.SVEadvertisement2}}",
+				//"SVEadvertisement1": "Dear resident:^^Our records indicate that you may not have a membership at JojaMart. Did you know that Joja has consistently scored top in the industry for quality and value? A membership may seem like a big investment, but it unlocks so much - it's a real lifechanger! Join today, and become part of the Joja family.^^JojaMart: We Value Your Business",
                 //"SVEadvertisement3": "Is work stressing you out? Why not take a trip to the Fern Islands? The Islands are a bustling center of commerce, famous for ring fruit! Even those on a tight budget will find plenty to enjoy! From the sparkling-clean beaches to lush tropical forests, the Fern Islands are a natural oasis that appeals to beachgoers, birdwatchers, and appreciators of nature from all walks of life. Come chase your bliss on the Fern Islands!^^This advertisement paid for by the Fern Islands Bureau of Tourism.",
                 //"SVEadvertisement4": "Getting sick of watering crops? Upgraded tools still not doing the job? Running a farm is hard work. Consider hiring some farmhands to help! Especially in high-output seasons like the fall, having a few spare folks around can be invaluable for saving time. Plus, you help create jobs for your local community. Check your local bulletin board to see if anyone's looking for work!",
                 //"SVEadvertisement5": "ON SALE FOR A LIMITED TIME:^^Special yeast starter with nutrients designed to optimize wine fermentation from a quality-controlled yeast ranch. Has produced award-winning wine consistently since the strain was started almost twenty years ago. Inquiries welcome at Sunshine Vineyard.",
@@ -48,10 +47,69 @@
                 "LanceLifeElixirs": "{{i18n:Mail.LanceLifeElixirs}}",
                 "AndyPaycheck": "{{i18n:Mail.AndyPaycheck}}",
                 "QiGoldenPiggyBankReward": "{{i18n:Mail.QiGoldenPIggyBankReward1}}FlashShifter.StardewValleyExpandedCP_Golden_Piggy_Bank{{i18n:Mail.QiGoldenPIggyBankReward2}}",
+				"AndyCooking": "{{i18n:Mail.AndyCooking}}",
+				"VictorCooking": "{{i18n:Mail.VictorCooking}}",
+				"OliviaCooking": "{{i18n:Mail.OliviaCooking}}",
+				"ClaireCooking": "{{i18n:Mail.ClaireCooking}}",
+				"GuntherSilvianCooking": "{{i18n:Mail.GuntherSilvianCooking}}",
+				"ScarlettCooking": "{{i18n:Mail.ScarlettCooking}}",
+				"MartinCooking": "{{i18n:Mail.MartinCooking}}",
+				"MorganCooking": "{{i18n:Mail.MorganCooking}}",
+				"LanceCooking": "{{i18n:Mail.LanceCooking}}",
+				"GusOrangeChicken": "{{i18n:Mail.GusOrangeChicken}}",
+				"HenchmanFired": "{{i18n:Mail.HenchmanFired}}",
+				"SusanCooking": "{{i18n:Mail.SusanCooking}}",
             }
         },
+		
+		//Marsh Tonic mail if Aimon's mod is not installed
+		{
+            "Action": "EditData",
+            "Target": "Data/Mail",
+			"When": {
+	          "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	        },
+            "Entries": {
+				"HenchmanMarshTonics": "{{i18n:Mail.HenchmanMarshTonics}}",
+            }
+        },
+		
+		//Allows Susan's cooking recipe to only be mailed to the player during the winter season and prevents a mailbox icon glitch
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+              "{{ModID}}_SusanGinger": {
+                "Id": "{{ModID}}_SusanGinger",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HEARTS Current Susan 3, SEASON Winter",
+                "Actions": [
+                  "AddMail Current SusanCooking tomorrow"
+                ]
+              }
+            }
+        },
+		
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+	          "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	        },
+            "Entries": {
+              "{{ModID}}_HenchmanTonics": {
+                "Id": "{{ModID}}_HenchmanTonics",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HAS_SEEN_EVENT Current 1337737",
+                "Actions": [
+                  "AddMail Current HenchmanMarshTonics tomorrow"
+                ]
+              }
+            }
+        },
+		
         { //loads custom letter backgrounds
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/LetterBackgrounds",
             "FromFile": "Assets/Tilesheets/SVE_Letter_Backgrounds.png"
         },
@@ -105,6 +163,7 @@
                 "1337308/e 502261/x JojaSeeds": "null",
                 "1337310/e 4269703/x ThiefOfJusticeMovie": "null",
                 "1337335/m 10000000/x QiGoldenPiggyBankReward": "null",
+				"1337336/e 8185293/x GusOrangeChicken": "null",
             }
         },
         {

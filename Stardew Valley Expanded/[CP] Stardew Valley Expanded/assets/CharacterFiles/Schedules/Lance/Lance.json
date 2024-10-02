@@ -1,42 +1,44 @@
 {
-  //Castle Village Outpost
-  "Mon": "0 Custom_CastleVillageOutpost 31 18 0/630 Custom_CastleVillageOutpost 31 18 0", 
-  
-  //Stardew Valley
-  "Tue": "0 AdventureGuild 6 13 0/610 AdventureGuild 6 13 2/1200 Custom_AdventurerSummit 41 28 1/1700 AdventureGuild 6 13 2/2100 Custom_AdventurerSummit 27 22 2/2300 AdventureGuild 6 13 2",
-  
-  //Stardew Valley
-  "Wed": "0 AdventureGuild 6 13 0/610 AdventureGuild 6 13 2/900 Mine 21 9 1/1200 Custom_AdventurerSummit 16 24 3/1500 Custom_AdventurerSummit 52 30 1/1930 AdventureGuild 6 13 2",
-  
-  //Ginger Island
-  "Thu": "0 IslandNorth 38 26 0/610 IslandNorth 38 26 2/1200 IslandNorth 43 26 2/1830 IslandNorth 49 23 2",
-  
-  //Ginger Island
-  "Fri": "0 IslandNorth 38 26 0/700 IslandNorth 16 15 0/1400 IslandNorth 41 26 0/2000 IslandNorth 38 26 2",
-  
-  //Highlands
-  "Sat": "0 Custom_HighlandsOutpost 9 6 0/700 Custom_HighlandsOutpost 11 6 0/1100 Custom_Highlands 120 111 3/1900 Custom_Highlands 127 113 2/2130 Custom_HighlandsOutpost 8 6 2",
-  
-  //Highlands
-  "Sun": "0 Custom_HighlandsOutpost 9 6 0/700 Custom_Highlands 122 111 3/1100 Custom_Highlands 139 123 1/1500 Custom_Highlands 122 111 3/1720 Custom_HighlandsOutpost 9 6 0/2030 Custom_Highlands 122 111 3/2340 Custom_HighlandsOutpost 9 6 0",
-  
-  //Green Rain
-  "GreenRain": "0 Custom_AdventurerSummit 34 26 2",
-  
-  //Marriage Schedules
-  
-  //Adventure Guild
-  "marriage_Tue": "700 Custom_AdventurerSummit 40 27 1 \"Strings\\schedules\\Lance:marriage.000\"/1500 Custom_AdventurerSummit 31 22 2 \"Strings\\schedules\\Lance:marriage.001\"/1700 BusStop -1 23 3",
-  
-  //The First Slash
-  "marriage_Wed": "700 Custom_FableReef 45 45 2 \"Strings\\schedules\\Lance:marriage.004\"/1500 Custom_FirstSlashGuild 15 16 0 \"Strings\\schedules\\Lance:marriage.005\"/1830 Custom_FirstSlashGuild 20 17 1 \"Strings\\schedules\\Lance:marriage.006\"/2130 Custom_FirstSlashGuestRoom 7 5 3/2200 Custom_FirstSlashGuestRoom 7 5 3 lance_sleep",
-  
-  //Highlands
-  "marriage_Sun": "700 Custom_Highlands 122 111 3 \"Strings\\schedules\\Lance:marriage.002\"/1430 Custom_Highlands 122 111 3 \"Strings\\schedules\\Lance:marriage.003\"/1600 BusStop -1 23 3",
-
-  //Desert Festival
-  "marriage_DesertFestival_1": "800 Desert 23 8 2 \"Strings\\schedules\\Lance:DesertFestival_Lance_marriage\"/2520 bed",
-  "marriage_DesertFestival_2": "800 Desert 23 8 2 \"Strings\\schedules\\Lance:DesertFestival_Lance_marriage\"/2520 bed",
-  
-
+  "Changes": [
+    {
+      "LogName": "Lance's schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Lance",
+      "When": {
+        "HasSeenEvent": "6951319"
+      },
+      "Entries": {
+        //Castle Village Outpost
+        "Mon": "0 Custom_CastleVillageOutpost 31 18 0/630 Custom_CastleVillageOutpost 31 18 0",
+        //Stardew Valley
+        "Tue": "0 AdventureGuild 6 13 0/610 AdventureGuild 6 13 2/1200 Custom_AdventurerSummit 41 28 1/1700 AdventureGuild 6 13 2/2100 Custom_AdventurerSummit 27 22 2/2300 AdventureGuild 6 13 2",
+        //Stardew Valley
+        "Wed": "0 AdventureGuild 6 13 0/610 AdventureGuild 6 13 2/900 Mine 21 9 1/1200 Custom_AdventurerSummit 16 24 3/1500 Custom_AdventurerSummit 52 30 1/1930 AdventureGuild 6 13 2",
+        //Ginger Island
+        "Thu": "0 IslandNorth 38 26 0/610 IslandNorth 38 26 2/1200 IslandNorth 43 26 2/1830 IslandNorth 49 23 2",
+        //Ginger Island
+        "Fri": "0 IslandNorth 38 26 0/700 IslandNorth 16 15 0/1400 IslandNorth 41 26 0/2000 IslandNorth 38 26 2",
+        //Highlands
+        "Sat": "0 Custom_HighlandsOutpost 9 6 0/700 Custom_HighlandsOutpost 11 6 0/1100 Custom_Highlands 120 111 3/1900 Custom_Highlands 127 113 2/2130 Custom_HighlandsOutpost 8 6 2",
+        //Highlands
+        "Sun": "0 Custom_HighlandsOutpost 9 6 0/700 Custom_Highlands 122 111 3/1100 Custom_Highlands 139 123 1/1500 Custom_Highlands 122 111 3/1720 Custom_HighlandsOutpost 9 6 0/2030 Custom_Highlands 122 111 3/2340 Custom_HighlandsOutpost 9 6 0",
+        //Green Rain
+        "GreenRain": "0 Custom_AdventurerSummit 34 26 2",
+        //Marriage Schedules
+        //Adventure Guild
+        "marriage_Tue": "700 Custom_AdventurerSummit 40 27 1 \"Strings\\schedules\\Lance:marriage.000\"/1500 Custom_AdventurerSummit 31 22 2 \"Strings\\schedules\\Lance:marriage.001\"/1700 bed",
+        //The First Slash
+        "marriage_Wed": "700 Custom_FableReef 45 45 2 \"Strings\\schedules\\Lance:marriage.FableReef.1\"/1500 Custom_FirstSlashGuild 15 16 0 \"Strings\\schedules\\Lance:marriage.FableReef.2\"/1830 Custom_FirstSlashGuild 20 17 1 \"Strings\\schedules\\Lance:marriage.FableReef.3\"/2130 Custom_FirstSlashGuestRoom 7 5 3/2200 Custom_FirstSlashGuestRoom 7 5 3 lance_sleep",
+        "marriage_{{season}}_4": "MAIL LanceMeetsKrobus/GOTO NO_SCHEDULE/GOTO KrobusMeet",
+        "marriage_{{season}}_18": "MAIL LanceMeetsKrobus/GOTO NO_SCHEDULE/GOTO KrobusMeet",
+        "KrobusMeet": "1700 Forest 96 91 1 \"Strings\\schedules\\Lance:KrobusDialogue\"/2550 Forest 96 91 1",
+        
+        //Highlands
+        "marriage_Sun": "700 Custom_Highlands 122 111 3 \"Strings\\schedules\\Lance:marriage.002\"/1430 Custom_Highlands 122 111 3 \"Strings\\schedules\\Lance:marriage.003\"/1600 bed",
+        //Desert Festival
+        "marriage_DesertFestival_1": "800 Desert 23 8 2 \"Strings\\schedules\\Lance:DesertFestival_Lance_marriage\"/2520 bed",
+        "marriage_DesertFestival_2": "800 Desert 23 8 2 \"Strings\\schedules\\Lance:DesertFestival_Lance_marriage\"/2520 bed",
+      }
+    }
+  ]
 }

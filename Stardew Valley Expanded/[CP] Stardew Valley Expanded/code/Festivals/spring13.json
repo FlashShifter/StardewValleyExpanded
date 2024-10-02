@@ -9,7 +9,7 @@
         "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:EggFestival.01}}\"/pause 800/playMusic none/speak Lewis \"{{i18n:EggFestival.02}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:EggFestival.03}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:EggFestival.04}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
         "AbbyWin": "pause 100/jump Abigail/faceDirection Vincent 3/pause 800/move Abigail 0 -1 0/faceDirection Vincent 0/speak Lewis \"{{i18n:EggFestival.05}}\"/pause 500/move Abigail 0 -1 0/playSound coin/pause 400/move Abigail 0 2 0/faceDirection Lewis 0/speak Lewis \"{{i18n:EggFestival.06}}\"/pause 1000/viewport move 1 -1 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
         "mainEvent": "pause 400/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 27 69 0 25 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/pause 100/jump Vincent/pause 250/pause 1200/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -4 15 0 0 1 3 0 0 1 5 0 0 2 12 0 0 11/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -2 26 0 0 5 25 0/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -21 -5 0 0 7 -18 0/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 18 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 22 15 0 0 -21 -25 0 4 7000/advancedMove Leo false -1 0 0 10 4 0 0 13 11 0 0 4 27 0 0 4 -12 0 0 -28 4 0 0 -7 10 0 0 -13/playSound whistle/playMusic tickTock/playerControl eggHunt",
-        "mainEvent_y2": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 29 70 0 26 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/pause 1000/positionOffset Demetrius 5 -10/positionOffset Jodi 5 -8/positionOffset Marnie -12 10/positionOffset Shane -6 -6/viewport 29 69 true unfreeze/pause 2000/speak Lewis \"It's time for the highlight of today's festivities... The Annual Spring Egg Hunt!$h\"/pause 100/jump Jas/jump Vincent/pause 1000/speak Lewis \"Calm down now, kiddos. You're going to need all your energy if you hope to find the most eggs and take home the exclusive prize.\"/pause 100/faceDirection Vincent 1 true/faceDirection Jas 3 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0/pause 800/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 125/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/pause 800/speak Lewis \"Now... Is everyone ready?\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"Let the egg hunt begin!$h\"/advancedMove Sophia false -1 0 0 -13 -11 0 0 6 -6 0 0 15 12 0 0 -1 19 0 0 -5 16 0 0 26/advancedMove Abigail false 0 5 -12 0 0 13 -6 0 0 4 31 0 0 10 -12 0 0 19 21 0 0 31/advancedMove Sam false 0 11 26 0 0 -9 -5 0 0 -19 17 0 0 20/advancedMove Jas false 3 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -13 0/advancedMove Vincent false 4 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -12 0/advancedMove Maru false 5 0 0 -7 11 0 0 2 19 0 0 8 -13 0 0 24 -15 0 0 -5 -2 0 0 10 6 0 0 -3/advancedMove Leo false 0 9 2 0 0 13 11 0 0 4 27 0 0 -3 4 0 0 -23/advancedMove Haley true 3 7000 2 5000/advancedMove Gus true 1 5500 0 -2 4 400 1 7000 2 400 0 2 2 400 1 1000/playSound whistle/playMusic tickTock/playerControl eggHunt",
+        "mainEvent_y2": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 29 70 0 26 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/pause 1000/positionOffset Demetrius 5 -10/positionOffset Jodi 5 -8/positionOffset Marnie -12 10/positionOffset Shane -6 -6/viewport 29 69 true unfreeze/pause 2000/speak Lewis \"{{i18n:EggFestival.07}}\"/pause 100/jump Jas/jump Vincent/pause 1000/speak Lewis \"{{i18n:EggFestival.08}}\"/pause 100/faceDirection Vincent 1 true/faceDirection Jas 3 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0/pause 800/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 125/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:EggFestival.09}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:EggFestival.10}}\"/advancedMove Sophia false -1 0 0 -13 -11 0 0 6 -6 0 0 15 12 0 0 -1 19 0 0 -5 16 0 0 26/advancedMove Abigail false 0 5 -12 0 0 13 -6 0 0 4 31 0 0 10 -12 0 0 19 21 0 0 31/advancedMove Sam false 0 11 26 0 0 -9 -5 0 0 -19 17 0 0 20/advancedMove Jas false 3 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -13 0/advancedMove Vincent false 4 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -12 0/advancedMove Maru false 5 0 0 -7 11 0 0 2 19 0 0 8 -13 0 0 24 -15 0 0 -5 -2 0 0 10 6 0 0 -3/advancedMove Leo false 0 9 2 0 0 13 11 0 0 4 27 0 0 -3 4 0 0 -23/advancedMove Haley true 3 7000 2 5000/advancedMove Gus true 1 5500 0 -2 4 400 1 7000 2 400 0 2 2 400 1 1000/playSound whistle/playMusic tickTock/playerControl eggHunt",
       }
     },
     { //Abigail win egg hunt movement change for even years
@@ -182,7 +182,6 @@
       "Action": "EditData",
       "Target": "Data/Festivals/spring13",
       "When": {
-        "IsOddYear": true
       },
       "TextOperations": [
         { //Victor
@@ -283,7 +282,6 @@
       "When": {
         "HasSeenEvent": "6665293",
         "HasMod |contains=CPBoardingHouse": false,
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -339,7 +337,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "1000077",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -367,7 +364,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -395,7 +391,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "GuntherUnlocked": "true",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -423,7 +418,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "3691371",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -452,7 +446,6 @@
       "When": {
         "ApplesHere": "true",
         "Roommate": "Apples",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -480,7 +473,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "Spouse": "Lance",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -508,7 +500,6 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "Hearts:Sandy": "{{Range: 5, 14}}",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -535,15 +526,12 @@
     {
       "Action": "EditData",
       "Target": "Data/Festivals/spring13",
-      "When": {
-        "IsOddYear": false,
-      },
       "TextOperations": [
         { //Victor
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Victor 34 81 left",
           "Delimiter": "/"
@@ -552,7 +540,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Victor 21 68 right",
           "Delimiter": "/"
@@ -561,7 +549,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Olivia 32 62 down",
           "Delimiter": "/"
@@ -570,7 +558,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Olivia 21 69 right",
           "Delimiter": "/"
@@ -579,7 +567,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Andy 26 59 right",
           "Delimiter": "/"
@@ -588,7 +576,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Andy 34 73 up",
           "Delimiter": "/"
@@ -597,7 +585,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Sophia 32 81 right",
           "Delimiter": "/"
@@ -606,7 +594,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Sophia 26 67 right",
           "Delimiter": "/"
@@ -615,7 +603,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "MarlonFay 17 73 down",
           "Delimiter": "/"
@@ -624,7 +612,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "MarlonFay 23 61 down",
           "Delimiter": "/"
@@ -637,14 +625,13 @@
       "When": {
         "HasSeenEvent": "6665293",
         "HasMod |contains=CPBoardingHouse": false,
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "MorrisTod 27 54 down",
           "Delimiter": "/"
@@ -653,7 +640,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "MorrisTod 30 67 down",
           "Delimiter": "/"
@@ -665,14 +652,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "1000077",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Susan 28 59 left",
           "Delimiter": "/"
@@ -681,7 +667,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Susan 35 73 up",
           "Delimiter": "/"
@@ -693,14 +679,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Claire 24 71 right",
           "Delimiter": "/"
@@ -709,7 +694,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Claire 21 71 right",
           "Delimiter": "/"
@@ -721,14 +706,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Martin 24 69 right",
           "Delimiter": "/"
@@ -737,7 +721,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Martin 21 73 right",
           "Delimiter": "/"
@@ -749,14 +733,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "GuntherUnlocked": "true",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "GuntherSilvian 35 70 down",
           "Delimiter": "/"
@@ -765,7 +748,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "GuntherSilvian 29 56 down",
           "Delimiter": "/"
@@ -777,14 +760,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "HasSeenEvent": "3691371",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Scarlett 33 82 up",
           "Delimiter": "/"
@@ -793,7 +775,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Scarlett 23 66 right",
           "Delimiter": "/"
@@ -806,14 +788,13 @@
       "When": {
         "ApplesHere": "true",
         "Roommate": "Apples",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Apples 11 51 down",
           "Delimiter": "/"
@@ -822,7 +803,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Apples 11 51 down",
           "Delimiter": "/"
@@ -834,14 +815,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "Spouse": "Lance",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Lance 22 61 down",
           "Delimiter": "/"
@@ -850,7 +830,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Lance 19 70 right",
           "Delimiter": "/"
@@ -862,14 +842,13 @@
       "Target": "Data/Festivals/spring13",
       "When": {
         "Hearts:Sandy": "{{Range: 5, 14}}",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Sandy 24 65 down",
           "Delimiter": "/"
@@ -878,7 +857,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "MainEvent_additionalCharacters"
+            "MainEvent_additionalCharacters_y2"
           ],
           "Value": "Sandy 35 70 left",
           "Delimiter": "/"
@@ -968,7 +947,7 @@
     },
     //map loads
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Town-EggFestival",
       "When": {
         "HasSeenEvent |contains=5553210": false
@@ -976,7 +955,7 @@
       "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival.tmx"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Town-EggFestival2",
       "When": {
         "HasSeenEvent |contains=5553210": false
@@ -985,7 +964,7 @@
     },
     //Joja Variants
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Town-EggFestival",
       "When": {
         "HasSeenEvent": "5553210",
@@ -993,7 +972,7 @@
       "FromFile": "Assets/Maps/FestivalMaps/Town-SVE-EggFestival_Joja.tmx"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Town-EggFestival2",
       "When": {
         "HasSeenEvent": "5553210",

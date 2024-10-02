@@ -21,9 +21,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -59,19 +59,19 @@
   },
   {
     //Sawyer's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Sawyer",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Sawyer.png"
   },
   {
     //Sawyer's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Sawyer",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Sawyer.png"
   },
   {
     //Sawyer's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Sawyer",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Sawyer/Schedule.json"
   },
@@ -94,9 +94,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -132,19 +132,19 @@
   },
   {
     //Gale's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Gale",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Gale.png"
   },
   {
     //Gale's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Gale",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Gale.png"
   },
   {
     //Gale's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Gale",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Gale/Schedule.json"
   },
@@ -167,9 +167,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -205,23 +205,23 @@
   },
   {
     //Brianna's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Brianna",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Brianna.png"
   },
   {
     //Brianna's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Brianna",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Brianna.png"
   },
   {
     //Brianna's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Brianna",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Brianna/Schedule.json"
   },
-  {
+  /*{
     //Brianna's dialogue patch
     "Action": "EditData",
     "Target": "Characters/Dialogue/Brianna",
@@ -231,7 +231,7 @@
     "Entries": {
       "Wed": "{{i18n:Brianna.Patch.01}}",
     },
-  },
+  },*/
   {
     "Action": "EditData",
     "Target": "Data/Characters",
@@ -251,9 +251,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -289,19 +289,19 @@
   },
   {
     //Drake's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Drake",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Drake.png"
   },
   {
     //Drake's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Drake",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Drake.png"
   },
   {
     //Drake's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Drake",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Drake/Schedule.json"
   },
@@ -316,7 +316,7 @@
       "Wed": "0 Custom_FirstSlashGuild 7 9 0/610 Custom_FirstSlashGuild 9 23 3/650 Custom_FirstSlashGuild 20 17 1/720 Custom_FirstSlashGuild 9 17 3/750 Custom_FirstSlashGuild 20 23 1/820 Custom_FirstSlashGuild 5 13 1/850 Custom_FirstSlashGuild 7 26 0/900 Custom_FirstSlashGuild 20 17 1/930 Custom_FirstSlashGuild 19 12 2/1030 Custom_FirstSlashGuild 20 17 1/1100 Custom_FirstSlashGuild 9 17 3/1130 Custom_FirstSlashGuild 9 23 3/1200 Custom_FirstSlashGuild 5 17 1/1230 Custom_FirstSlashGuild 5 23 1/1300 Custom_FirstSlashGuild 9 17 3/1330 Custom_FirstSlashGuild 9 23 3/1400 Custom_FirstSlashGuild 20 23 1/1420 Custom_FirstSlashGuild 20 17 1/1440 Custom_FirstSlashGuild 20 23 1/1500 Custom_FirstSlashGuild 9 23 3/1520 Custom_FirstSlashGuild 9 17 3/1540 Custom_FirstSlashGuild 5 23 1/1610 Custom_FirstSlashGuild 20 23 1/1640 Custom_FirstSlashGuild 20 17 1/1700 Custom_FirstSlashGuild 20 23 1/1720 Custom_FirstSlashGuild 9 23 3/1740 Custom_FirstSlashGuild 9 17 3/1800 Custom_FirstSlashGuild 10 12 2/1900 Custom_FirstSlashGuild 19 12 2/2000 Custom_FirstSlashGuild 10 12 2/2100 Custom_FirstSlashGuild 9 23 3/2200 Custom_FableReef 43 54 2",
     }
   },
-  {
+  /*{
     //Drake's dialogue patch
     "Action": "EditData",
     "Target": "Characters/Dialogue/Drake",
@@ -326,7 +326,7 @@
     "Entries": {
       "Thu": "{{i18n:Drake.Patch.01}}",
     },
-  },
+  },*/
   {
     "Action": "EditData",
     "Target": "Data/Characters",
@@ -346,9 +346,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -384,19 +384,19 @@
   },
   {
     //Edmund's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Edmund",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Edmund.png"
   },
   {
     //Edmund's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Edmund",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Edmund.png"
   },
   {
     //Edmund's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Edmund",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Edmund/Schedule.json"
   },
@@ -430,9 +430,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -468,19 +468,19 @@
   },
   {
     //Gertrude's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Gertrude",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Gertrude.png"
   },
   {
     //Gertrude's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Gertrude",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Gertrude.png"
   },
   {
     //Gertrude's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Gertrude",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Gertrude/Schedule.json"
   },
@@ -511,9 +511,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -541,19 +541,19 @@
   },
   {
     //Brock's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Brock",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Brock.png"
   },
   {
     //Brock's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Brock",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Brock.png"
   },
   {
     //Brock's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Brock",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Brock/Schedule.json"
   },
@@ -576,9 +576,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -614,19 +614,19 @@
   },
   {
     //Cordelia's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Cordelia",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Cordelia.png"
   },
   {
     //Cordelia's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Cordelia",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Cordelia.png"
   },
   {
     //Cordelia's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Cordelia",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Cordelia/Schedule.json"
   },
@@ -649,9 +649,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -687,19 +687,19 @@
   },
   {
     //Freya's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Freya",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Freya.png"
   },
   {
     //Freya's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Freya",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Freya.png"
   },
   {
     //Freya's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Freya",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Freya/Schedule.json"
   },
@@ -722,9 +722,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -760,19 +760,19 @@
   },
   {
     //Cassandra's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Cassandra",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Cassandra.png"
   },
   {
     //Cassandra's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Cassandra",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Cassandra.png"
   },
   {
     //Cassandra's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Cassandra",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Cassandra/Schedule.json"
   },
@@ -795,9 +795,9 @@
         "Calendar": "HiddenAlways",
         "SocialTab": "HiddenAlways",
         "CanSocialize": false,
-        "CanVisitIslandCondition": "FALSE",
+        "CanVisitIsland": "FALSE",
         "ExcludeFromIntroductionsQuest": true,
-        "ExcludeFromPerfectionScore": true,
+        "PerfectionScore": true,
         "EndSlideShow": "Hidden",
         "FriendsAndFamily": {},
         "UnlockConditions": null,
@@ -833,19 +833,19 @@
   },
   {
     //Emin's sprites
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/Emin",
     "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/Emin.png"
   },
   {
     //Emin's portraits (fake)
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Portraits/Emin",
     "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Emin.png"
   },
   {
     //Emin's schedule
-    "Action": "Load",
+    "Action": "Load", "Priority": "Low",
     "Target": "Characters/schedules/Emin",
     "FromFile": "assets/CharacterFiles/Schedules/Adventurers/Emin/Schedule.json"
   },
@@ -871,9 +871,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "Hidden",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -911,28 +911,28 @@
 	
     { 
 	  //ADVENTURERNPC's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
 	  "Target": "Characters/ADVENTURERNPC",
 	  "FromFile": "Assets/CharacterFiles/OverworldSprites/Adventurers/ADVENTURERNPC.png"
     },
 
     {
 	 //ADVENTURERNPC's portraits (fake)
-     "Action": "Load",
+     "Action": "Load", "Priority": "Low",
 	 "Target": "Portraits/ADVENTURERNPC",
 	 "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/ADVENTURERNPC.png"
     },
 	
 	{
       //ADVENTURERNPC's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/ADVENTURERNPC",
       "FromFile": "assets/CharacterFiles/Schedules/Adventurers/ADVENTURERNPC/Schedule.json"
     },
 	
     {
       //ADVENTURERNPC's dialogue
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Dialogue/ADVENTURERNPC",
       "FromFile": "assets/CharacterFiles/Dialogue/Adventurers/ADVENTURERNPC/Dialogue.json"
     },

@@ -5,41 +5,52 @@
 			"Target": "Data/NPCGiftTastes",
 			"LogName": "Gift tastes: Marnie",
 			"TextOperations": [
-			  /*Love*/
-			  {
-				"Operation": "Append",
-				"Target": [
-				  "Fields",
-				  "Marnie",
-				  1
-				],
-				"Value": "FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
-				"Delimiter": " "
-			  }
-			  /*Dislike*/,
-			  {
-				"Operation": "Append",
-				"Target": [
-				  "Fields",
-				  "Marnie",
-				  5
-				],
-				"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
-				"Delimiter": " "
-			  }
-			  /*Neutral*/,
-			  {
-				"Operation": "Append",
-				"Target": [
-				  "Fields",
-				  "Marnie",
-				  9
-				],
-				"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
-				"Delimiter": " "
-			  }
+				/*Love*/
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Marnie",
+						1
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine",
+					"Delimiter": " "
+				}
+				/*Like*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Marnie",
+						3
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Gold_Carrot",
+					"Delimiter": " "
+				}
+				/*Dislike*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Marnie",
+						5
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+					"Delimiter": " "
+				}
+				/*Neutral*/ ,
+				{
+					"Operation": "Append",
+					"Target": [
+						"Fields",
+						"Marnie",
+						9
+					],
+					"Value": "FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine",
+					"Delimiter": " "
+				}
 			]
-		  },
+		},
 		{ //MARNIE SCHEDULE EDITS
 			"Action": "EditData",
 			"Target": "characters/schedules/Marnie",
@@ -107,47 +118,36 @@
 		},
 		{ //Changes name, description, and health/energy recovered when consumed
 			"Action": "EditData",
-			"Target": "Data/objectinformation",
+			"Target": "Data/Objects",
 			"When": {
-				"HasSeenEvent": "1000026"
+				"HasSeenEvent: anyPlayer| contains=1000026": true,
 			},
-			"Fields": {
-				"424": {
-					2: 100,
-					4: "{{i18n:Cheesewheel.01}}",
-					5: "{{i18n:Cheesewheel.02}}"
-				},
-				"426": {
-					2: 130,
-					4: "{{i18n:Cheesewheel.03}}",
-					5: "{{i18n:Cheesewheel.04}}"
-				}
-			},
+			"TargetField": [
+				424
+			],
+			"Entries": {
+				"Price": 276,
+				"DisplayName": "{{i18n:Cheesewheel.01}}",
+				"Description": "{{i18n:Cheesewheel.02}}",
+				"Edibility": 100,
+			}
 		},
-		{ //Increases cheese sell price by 20%
-			"Action": "EditData",
-			"Target": "Data/objectinformation",
-			"When": {
-				"HasSeenEvent": "1000026"
-			},
-			"Fields": {
-				"424": {
-					1: "276"
-				},
-				"426": {
-					1: "480"
-				},
-			},
+		{ //Changes name, description, and health/energy recovered when consumed
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {
+			"HasSeenEvent: anyPlayer| contains=1000026": true,
 		},
-		/*{	 //Increases cheese sell price to vanilla amount
-     "Action": "EditData",
-     "Target": "Data/objectinformation",
-     "When": { "HasSeenEvent": "1000026", "LowerProfitMargins": true },
-	 "Fields": {
-	 "424": { 1: "230" },
-	 "426": { 1: "400" },
-	 },
-},*/
+		"TargetField": [
+			426
+		],
+		"Entries": {
+			"Price": 480,
+			"DisplayName": "{{i18n:Cheesewheel.03}}",
+			"Description": "{{i18n:Cheesewheel.04}}",
+			"Edibility": 130,
+		}
+	},
 		{ //Changes cheese sprites to a wheel
 			"Action": "EditImage",
 			"Target": "Maps/springobjects",

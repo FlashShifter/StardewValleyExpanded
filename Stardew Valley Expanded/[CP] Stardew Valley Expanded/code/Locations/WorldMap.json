@@ -1,6 +1,56 @@
 {
   "Changes": [
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/CrimsonBadlands",
+      "FromFile": "assets/Maps/WorldMaps/CrimsonBadlands.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/FableReef",
+      "FromFile": "assets/Maps/WorldMaps/FableReef.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/spring_GrampletonSuburbs",
+      "FromFile": "assets/Maps/WorldMaps/GrampletonSuburbs/spring_GrampletonSuburbs_Worldmap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/summer_GrampletonSuburbs",
+      "FromFile": "assets/Maps/WorldMaps/GrampletonSuburbs/summer_GrampletonSuburbs_Worldmap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/fall_GrampletonSuburbs",
+      "FromFile": "assets/Maps/WorldMaps/GrampletonSuburbs/fall_GrampletonSuburbs_Worldmap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/winter_GrampletonSuburbs",
+      "FromFile": "assets/Maps/WorldMaps/GrampletonSuburbs/winter_GrampletonSuburbs_Worldmap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/spring_Highlands",
+      "FromFile": "assets/Maps/WorldMaps/Highlands/spring_Highlands_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/summer_Highlands",
+      "FromFile": "assets/Maps/WorldMaps/Highlands/summer_Highlands_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/fall_Highlands",
+      "FromFile": "assets/Maps/WorldMaps/Highlands/fall_Highlands_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/winter_Highlands",
+      "FromFile": "assets/Maps/WorldMaps/Highlands/winter_Highlands_WorldMap.png"
+    },
+    {
       "Action": "EditData",
       "Target": "Data/WorldMap",
       "TargetField": [
@@ -95,35 +145,16 @@
         }
       },
     },
-    {
+	
+	{
       "Action": "EditData",
       "Target": "Data/WorldMap",
+	  "When": { "FarmType |contains=FrontierFarm": false },
       "TargetField": [
         "Valley",
         "MapAreas",
       ],
       "Entries": {
-        "FlashShifter.StardewValleyExpanded_TownMap_GrandpasShedOutside": {
-          "Id": "Custom_GrandpasShedOutside",
-          "PixelArea": {
-            "X": 0,
-            "Y": 0,
-            "Width": 300,
-            "Height": 180
-          },
-          "WorldPositions": [
-            {
-              "Id": "Custom_GrandpasShedOutside",
-              "LocationName": "Custom_GrandpasShedOutside",
-              "MapPixelArea": {
-                "X": 131,
-                "Y": 81,
-                "Width": 0,
-                "Height": 0
-              },
-            }
-          ]
-        },
         "FlashShifter.StardewValleyExpanded_IndoorTownMap_GrandpasShedRuins": {
           "Id": "Custom_GrandpasShedRuins",
           "PixelArea": {
@@ -132,6 +163,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.GrandpaShed}}",
           "WorldPositions": [
             {
               "Id": "Custom_GrandpasShedRuins",
@@ -153,6 +185,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.GrandpaShed}}",
           "WorldPositions": [
             {
               "Id": "Custom_GrandpasShed",
@@ -167,17 +200,51 @@
           ]
         },
         "FlashShifter.StardewValleyExpanded_IndoorTownMap_GrandpasShedGreenhouse": {
-          "Id": "Custom_",
+          "Id": "Custom_GrandpasShedGreenhouse",
           "PixelArea": {
             "X": 0,
             "Y": 0,
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.GrandpaShed}}",
           "WorldPositions": [
             {
-              "Id": "Custom_",
-              "LocationName": "Custom_",
+              "Id": "Custom_GrandpasShedGreenhouse",
+              "LocationName": "Custom_GrandpasShedGreenhouse",
+              "MapPixelArea": {
+                "X": 131,
+                "Y": 81,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+      },
+    },
+	
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+      ],
+      "Entries": {
+        "FlashShifter.StardewValleyExpanded_TownMap_GrandpasShedOutside": {
+          "Id": "Custom_GrandpasShedOutside",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+		  "ScrollText": "{{i18n:NPCMapLocation.GrandpaShed}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_GrandpasShedOutside",
+              "LocationName": "Custom_GrandpasShedOutside",
               "MapPixelArea": {
                 "X": 131,
                 "Y": 81,
@@ -195,6 +262,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.EnchantedGrove}}",
           "WorldPositions": [
             {
               "Id": "Custom_EnchantedGrove",
@@ -216,6 +284,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.WillyHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_WillyRoom",
@@ -237,6 +306,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.SusanHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_SusanHouse",
@@ -250,21 +320,22 @@
             }
           ]
         },
-        "FlashShifter.StardewValleyExpanded_IndoorTownMap_TownEast": {
-          "Id": "Custom_TownEast",
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_Garden": {
+          "Id": "Custom_Garden",
           "PixelArea": {
             "X": 0,
             "Y": 0,
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.Garden}}",
           "WorldPositions": [
             {
-              "Id": "Custom_TownEast",
-              "LocationName": "Custom_TownEast",
+              "Id": "Custom_Garden",
+              "LocationName": "Custom_Garden",
               "MapPixelArea": {
-                "X": 285,
-                "Y": 99,
+                "X": 245,
+                "Y": 113,
                 "Width": 0,
                 "Height": 0
               },
@@ -279,6 +350,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.JenkinsResidence}}",
           "WorldPositions": [
             {
               "Id": "Custom_JenkinsHouse",
@@ -300,6 +372,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.JenkinsResidence}}",
           "WorldPositions": [
             {
               "Id": "Custom_OliviaCellar",
@@ -321,6 +394,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.SophiaHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_SophiaHouse",
@@ -342,6 +416,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.SophiaHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_SophiaCellar",
@@ -363,6 +438,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.GuntherHome}}",
           "WorldPositions": [
             {
               "Id": "Custom_GuntherRoom",
@@ -384,6 +460,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.JojaEmporium}}",
           "WorldPositions": [
             {
               "Id": "Custom_JojaEmporium",
@@ -405,6 +482,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.Townhouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_MorrisHouse",
@@ -426,6 +504,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.MorrisProperty}}",
           "WorldPositions": [
             {
               "Id": "Custom_MorrisProperty",
@@ -447,6 +526,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.AuroraVineyard}}",
           "WorldPositions": [
             {
               "Id": "Custom_AuroraVineyard",
@@ -468,6 +548,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.AuroraVineyard}}",
           "WorldPositions": [
             {
               "Id": "Custom_AuroraVineyardRefurbished",
@@ -489,6 +570,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.AuroraVineyard}}",
           "WorldPositions": [
             {
               "Id": "Custom_AuroraVineyardCellarRefurbished",
@@ -510,6 +592,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:LocationData.Sprite_Spring}}",
           "WorldPositions": [
             {
               "Id": "Custom_SpriteSpringCave",
@@ -531,6 +614,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:FrontierName}}",
           "WorldPositions": [
             {
               "Id": "Custom_ForestWest",
@@ -552,6 +636,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.AppleRoom}}",
           "WorldPositions": [
             {
               "Id": "Custom_ApplesRoom",
@@ -573,6 +658,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.SpriteSpring}}",
           "WorldPositions": [
             {
               "Id": "Custom_SpriteSpring2",
@@ -580,6 +666,48 @@
               "MapPixelArea": {
                 "X": 19,
                 "Y": 157,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+		"FlashShifter.StardewValleyExpanded_TownMap_ForbiddenMaze": {
+          "Id": "Custom_ForbiddenMaze",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+		  "ScrollText": "{{i18n:LocationData.ForbiddenMaze}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_ForbiddenMaze",
+              "LocationName": "Custom_ForbiddenMaze",
+              "MapPixelArea": {
+                "X": 175,
+                "Y": 6,
+                "Width": 0,
+                "Height": 0
+              },
+            },
+			{
+              "Id": "Custom_HenchmanHouse",
+              "LocationName": "Custom_HenchmanHouse",
+              "MapPixelArea": {
+                "X": 175,
+                "Y": 6,
+                "Width": 0,
+                "Height": 0
+              },
+            },
+			{
+              "Id": "Custom_HenchmanBackyard",
+              "LocationName": "Custom_HenchmanBackyard",
+              "MapPixelArea": {
+                "X": 175,
+                "Y": 6,
                 "Width": 0,
                 "Height": 0
               },
@@ -594,6 +722,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:LocationData.Adventurer_Summit}}",
           "WorldPositions": [
             {
               "Id": "Custom_AdventurerSummit",
@@ -615,6 +744,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.ShearwaterBridge}}",
           "WorldPositions": [
             {
               "Id": "Custom_ShearwaterBridge",
@@ -636,6 +766,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.MarnieShed}}",
           "WorldPositions": [
             {
               "Id": "Custom_MarnieShed",
@@ -657,6 +788,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.AndysHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_AndyHouse",
@@ -678,6 +810,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:NPCMapLocation.AndysHouse}}",
           "WorldPositions": [
             {
               "Id": "Custom_AndyCellar",
@@ -699,6 +832,7 @@
             "Width": 300,
             "Height": 180
           },
+		  "ScrollText": "{{i18n:DisplayName.WizardsBasement}}",
           "WorldPositions": [
             {
               "Id": "Custom_WizardBasement",
@@ -726,6 +860,7 @@
               "Text": "{{i18n:NPCMapLocation.BlueMoonVineyard}}",
             }
           ],
+		  "ScrollText": "{{i18n:LocationData.Blue_Moon_Vineyard}}",
           "WorldPositions": [
             {
               "Id": "Custom_BlueMoonVineyard",
@@ -915,7 +1050,7 @@
           "BaseTexture": [
             {
               "Id": "Custom_CrimsonBadlands",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/CrimsonBadlands.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\CrimsonBadlands",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -933,7 +1068,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Crimson Badlands",
+              "ScrollText": "{{i18n:LocationData.Crimson_Badlands}}",
               "WorldPositions": [
                 {
                   "Id": "Custom_CrimsonBadlands",
@@ -970,7 +1105,7 @@
                 "Width": 60,
                 "Height": 35
               },
-              "ScrollText": "Iridium Quarry",
+              "ScrollText": "{{i18n:DisplayName.IridiumQuarry}}",
               "Tooltips": [
                 {
                   "Id": "Custom_IridiumQuarry",
@@ -998,7 +1133,7 @@
                 "Width": 10,
                 "Height": 10
               },
-              "ScrollText": "Treasure Cave",
+              "ScrollText": "{{i18n:DisplayName.TreasureCave}}",
               "Tooltips": [
                 {
                   "Id": "Custom_TreasureCave",
@@ -1026,7 +1161,7 @@
                 "Width": 10,
                 "Height": 10
               },
-              "ScrollText": "Rail Cart",
+              "ScrollText": "{{i18n:DisplayName.RailCart}}",
               "Tooltips": [
                 {
                   "Id": "Custom_DesertRailway",
@@ -1054,7 +1189,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Castle Village Outpost",
+              "ScrollText": "{{i18n:DisplayName.CastleVillageOutpost}}",
               "Tooltips": [
                 {
                   "Id": "Custom_CastleVillageOutpost",
@@ -1064,7 +1199,7 @@
                     "Width": 40,
                     "Height": 33
                   },
-                  "Text": "Castle Village Outpost",
+                  "Text": "{{i18n:DisplayName.CastleVillageOutpost}}",
                 },
               ],
               "WorldPositions": [
@@ -1086,7 +1221,7 @@
           "BaseTexture": [
             {
               "Id": "Custom_FableReef",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/FableReef.png}}",
+              "Texture":  "Mods\\FlashShifter.StardewValleyExpandedCP\\FableReef",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1104,8 +1239,8 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Fable Reef",
-              "Tootips": [
+              "ScrollText": "{{i18n:DisplayName.FableReef}}",
+              "Tooltips": [
                 {
                   "Text": "Fable Reef"
                 },
@@ -1131,7 +1266,7 @@
                 "Width": 25,
                 "Height": 25
               },
-              "ScrollText": "First Slash Guild",
+              "ScrollText": "{{i18n:DisplayName.FirstSlashGuild}}",
               "Tooltips": [
                 {
                   "Id": "Custom_FirstSlashGuild",
@@ -1159,7 +1294,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "First Slash Guild",
+              "ScrollText": "{{i18n:DisplayName.FirstSlashGuild}}",
               "WorldPositions": [
                 {
                   "Id": "Custom_FirstSlashGuestRoom",
@@ -1179,7 +1314,7 @@
           "BaseTexture": [
             {
               "Id": "Custom_GrampletonSuburbs",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/GrampletonSuburbs/spring_GrampletonSuburbs_Worldmap.png}}",
+              "Texture":  "Mods\\FlashShifter.StardewValleyExpandedCP\\spring_GrampletonSuburbs",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1196,7 +1331,7 @@
             },
             {
               "Id": "Custom_GrampletonSuburbs",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/GrampletonSuburbs/summer_GrampletonSuburbs_Worldmap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\summer_GrampletonSuburbs",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1207,7 +1342,7 @@
             },
             {
               "Id": "Custom_GrampletonSuburbs",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/GrampletonSuburbs/fall_GrampletonSuburbs_Worldmap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\fall_GrampletonSuburbs",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1218,7 +1353,7 @@
             },
             {
               "Id": "Custom_GrampletonSuburbs",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/GrampletonSuburbs/winter_GrampletonSuburbs_Worldmap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\winter_GrampletonSuburbs",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1237,7 +1372,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Grampleton Suburbs",
+              "ScrollText": "{{i18n:DisplayName.GrampletonSuburbs}}",
               "WorldPositions": [
                 {
                   "Id": "Custom_GrampletonSuburbs",
@@ -1259,7 +1394,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Grampleton Suburbs Train Station",
+              "ScrollText": "{{i18n:DisplayName.GrampletonSuburbsTrainStation}}",
               "Tooltips": [
                 {
                   "Id": "Custom_GrampletonSuburbsTrainStation",
@@ -1293,7 +1428,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Scarlett's House",
+              "ScrollText": "{{i18n:DisplayName.ScarlettHouse}}",
               "Tooltips": [
                 {
                   "Id": "Custom_ScarlettsHouse",
@@ -1325,7 +1460,7 @@
           "BaseTexture": [
             {
               "Id": "Custom_Highlands",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/Highlands/spring_Highlands_WorldMap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\spring_Highlands",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1336,7 +1471,7 @@
             },
             {
               "Id": "Custom_Highlands",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/Highlands/summer_Highlands_WorldMap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\summer_Highlands",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1347,7 +1482,7 @@
             },
             {
               "Id": "Custom_Highlands",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/Highlands/fall_Highlands_WorldMap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\fall_Highlands",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1358,7 +1493,7 @@
             },
             {
               "Id": "Custom_Highlands",
-              "Texture": "{{InternalAssetKey: assets/Maps/WorldMaps/Highlands/winter_Highlands_WorldMap.png}}",
+              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\winter_Highlands",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
@@ -1377,7 +1512,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Highlands",
+              "ScrollText": "{{i18n:DisplayName.Highlands}}",
               "WorldPositions": [
                 {
                   "Id": "Custom_Highlands",
@@ -1406,6 +1541,21 @@
                 }
               ]
             },
+			{
+              "Id": "Custom_BullyRex",
+              "Tooltips": [
+                {
+                  "Id": "Custom_BullyRex",
+                  "Text": "Bully Rex",
+                  "PixelArea": {
+                    "X": 93,
+                    "Y": 10,
+                    "Width": 17,
+                    "Height": 10
+                  }
+                }
+              ]
+            },
             {
               "Id": "Custom_HighlandsOutpost",
               "PixelArea": {
@@ -1414,7 +1564,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Highlands Outpost",
+              "ScrollText": "{{i18n:DisplayName.HighlandsOutpost}}",
               "Tooltips": [
                 {
                   "Id": "Custom_HighlandsOutpost",
@@ -1448,7 +1598,7 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Highlands Cavern",
+              "ScrollText": "{{i18n:DisplayName.HighlandsCavern}}",
               "Tooltips": [
                 {
                   "Id": "Custom_HighlandsCavern",
@@ -1474,7 +1624,41 @@
                 }
               ]
             },
-            {
+			{
+              "Id": "Custom_DiamondCavern",
+              "PixelArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 300,
+                "Height": 180
+              },
+              "ScrollText": "{{i18n:DisplayName.DiamondCavern}}",
+              "Tooltips": [
+                {
+                  "Id": "Custom_DiamondCavern",
+                  "Text": "Diamond Cavern",
+                  "PixelArea": {
+                    "X": 85,
+                    "Y": 29,
+                    "Width": 7,
+                    "Height": 6
+                  }
+                },
+              ],
+              "WorldPositions": [
+                {
+                  "Id": "Custom_DiamondCavern",
+                  "LocationName": "Custom_DiamondCavern",
+                  "MapPixelArea": {
+                    "X": 87,
+                    "Y": 31,
+                    "Width": 1,
+                    "Height": 1
+                  },
+                }
+              ]
+            },
+			{
               "Id": "Custom_HighlandsCavernPrison",
               "PixelArea": {
                 "X": 0,
@@ -1482,10 +1666,17 @@
                 "Width": 300,
                 "Height": 180
               },
-              "ScrollText": "Highlands Cavern",
-              "Tootips": [
+              "ScrollText": "{{i18n:DisplayName.HighlandsCavern}}",
+              "Tooltips": [
                 {
-                  "Text": "Highlands Cavern"
+                  "Id": "Custom_HighlandsCavernPrison",
+                  "Text": "Highlands Cavern Prison",
+                  "PixelArea": {
+                    "X": 107,
+                    "Y": 35,
+                    "Width": 10,
+                    "Height": 10
+                  }
                 },
               ],
               "WorldPositions": [

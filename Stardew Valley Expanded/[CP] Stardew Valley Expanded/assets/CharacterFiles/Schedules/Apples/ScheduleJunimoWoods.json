@@ -1,7 +1,19 @@
 {
-
-"spring": "0 Custom_JunimoWoods 32 95 0/610 Custom_JunimoWoods 32 95 3/800 Custom_JunimoWoods 36 99 2/1030 Custom_JunimoWoods 47 101 3/1130 Custom_JunimoWoods 30 100 3/1150 Custom_JunimoWoods 47 101 3/1210 Custom_JunimoWoods 30 100 3/1230 Custom_JunimoWoods 47 101 3/1250 Custom_JunimoWoods 47 101 3/1310 Custom_JunimoWoods 30 100 3/1330 Custom_JunimoWoods 47 101 3/1350 Custom_JunimoWoods 30 100 3/1410 Custom_JunimoWoods 47 101 3/1430 Custom_JunimoWoods 30 100 3/1450 Custom_JunimoWoods 47 101 3/1510 Custom_JunimoWoods 30 100 3/1530 Custom_JunimoWoods 47 101 3/1550 Custom_JunimoWoods 30 100 3/1610 Custom_JunimoWoods 47 101 3/1630 Custom_JunimoWoods 30 100 3/1650 Custom_JunimoWoods 47 101 3/1710 Custom_JunimoWoods 30 100 3/1730 Custom_JunimoWoods 47 101 3/1750 Custom_JunimoWoods 30 100 3/1810 Custom_JunimoWoods 47 101 3/1830 Custom_JunimoWoods 30 100 3/1850 Custom_JunimoWoods 47 101 3/1910 Custom_JunimoWoods 30 100 3/1930 Custom_JunimoWoods 47 101 3/1950 Custom_JunimoWoods 30 100 3/2010 Custom_JunimoWoods 32 95 3",
-
-//Apples hangs out with Peaches on Fridays if rooming with the player
-"marriage_Fri": "700 Forest 20 113 2/1100 Forest 20 113 3/1130 Forest 20 113 2 Apples_Dance2 \"Strings\\schedules\\Apples:Roommate.001\""
+    "Changes": [
+        {
+            //Apples' Schedule - moved to Junimo Woods
+            "Action": "EditData",
+            "Target": "Characters/schedules/Apples",
+            "When": {
+                "ApplesHere": "true",
+                "HasSeenEvent |contains=7776006": true,
+                "HasSeenEvent |contains=7776012": true
+            },
+            "Entries": {
+                "spring": "0 Custom_JunimoWoods 32 95 0/610 Custom_JunimoWoods 32 95 3/800 Custom_JunimoWoods 36 99 2/1030 Custom_JunimoWoods 47 101 3/1130 Custom_JunimoWoods 30 100 3/1150 Custom_JunimoWoods 47 101 3/1210 Custom_JunimoWoods 30 100 3/1230 Custom_JunimoWoods 47 101 3/1250 Custom_JunimoWoods 47 101 3/1310 Custom_JunimoWoods 30 100 3/1330 Custom_JunimoWoods 47 101 3/1350 Custom_JunimoWoods 30 100 3/1410 Custom_JunimoWoods 47 101 3/1430 Custom_JunimoWoods 30 100 3/1450 Custom_JunimoWoods 47 101 3/1510 Custom_JunimoWoods 30 100 3/1530 Custom_JunimoWoods 47 101 3/1550 Custom_JunimoWoods 30 100 3/1610 Custom_JunimoWoods 47 101 3/1630 Custom_JunimoWoods 30 100 3/1650 Custom_JunimoWoods 47 101 3/1710 Custom_JunimoWoods 30 100 3/1730 Custom_JunimoWoods 47 101 3/1750 Custom_JunimoWoods 30 100 3/1810 Custom_JunimoWoods 47 101 3/1830 Custom_JunimoWoods 30 100 3/1850 Custom_JunimoWoods 47 101 3/1910 Custom_JunimoWoods 30 100 3/1930 Custom_JunimoWoods 47 101 3/1950 Custom_JunimoWoods 30 100 3/2010 Custom_JunimoWoods 32 95 3",
+                //Apples hangs out with Peaches on Fridays if rooming with the player
+                "marriage_Fri": "700 Forest 20 113 2/1100 Forest 20 113 3/1130 Forest 20 113 2 Apples_Dance2 \"Strings\\schedules\\Apples:Roommate.001\""
+            },
+        },
+    ],
 }

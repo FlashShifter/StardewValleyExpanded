@@ -5,6 +5,28 @@
 			"Target": "Data/NPCGiftTastes",
 			"LogName": "Gift tastes: Shane",
 			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop",
+				"Delimiter": " "
+			  },
+			  /*Dislike*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Shane",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Gold_Carrot",
+				"Delimiter": " "
+			  },
 			  /*Dislike*/
 			  {
 				"Operation": "Append",
@@ -42,7 +64,7 @@
 		  },
 		  {
 			//Fake portrait for 8 hearts
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Portraits/Shane_JojaMart",
 			"FromFile": "assets/CharacterFiles/Portraits/NoPortraits/Shane_JojaMart.png"
 		  },
@@ -55,7 +77,7 @@
 				"Day |contains=22": true
 			},
 			"Entries": {
-				"marriage_Mon": "830 AnimalShop 22 6 0 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 Bed",
+				"marriage_Mon": "830 AnimalShop 22 6 0 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 bed",
 			},
 		},
 		{ //SHANE SCHEDULE EDITS
@@ -110,7 +132,7 @@
 			},
 			"Update": "OnLocationChange"
 		},
-		{ //CHARLIE EVENT - Shane 12 heart event - vanilla farms
+		{ //CHARLIE EVENT - Shane 12 heart event - vanilla farms sharing similar spouse area coordinates
 			"Action": "EditData",
 			"Target": "data/events/farmhouse",
 			"When": {
@@ -130,6 +152,17 @@
 				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 81 5 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 79 5 4 1/positionOffset Shane 20 5 true/pause 800/viewport 81 5 clamp true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 80 5/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
 			},
 		},
+		{ //CHARLIE EVENT - Shane 12 heart event - Meadowlands farm
+			"Action": "EditData",
+			"Target": "data/events/farmhouse",
+			"When": {
+				"FarmType": "MeadowlandsFarm"
+			},
+			"Entries": {
+				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 90 8 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 88 8 4 1/positionOffset Shane 20 5 true/pause 800/viewport 92 5 clamp true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 72 4/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
+			},
+		},
+		
 		{ //CHARLIE EVENT - Shane 12 heart event - Grandpa's Farm
 			"Action": "EditData",
 			"Target": "data/events/farmhouse",
@@ -138,7 +171,7 @@
 				"HasMod |contains=flashshifter.GrandpasFarm": true
 			},
 			"Entries": {
-				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 80 41 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/makeInvisible 78 41 4 1/positionOffset Shane 20 5 true/pause 800/viewport 79 41 true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 79 41/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
+				"1836459/e 3900074/O Shane/f Shane 3000/t 610 1600/w sunny/z winter": "continue/-500 -500/Shane 80 40 2/changeLocation farm/addTemporaryActor CharlieChicken 16 32 -30 -30 2/positionOffset Shane 20 5 true/pause 800/viewport 49 7 true/skippable/pause 2000/speak Shane \"{{i18n:Shane.Charlie.01}}\"/pause 1500/warp CharlieChicken 48 6/playSound doorClose/pause 500/playSound cluck/pause 600/faceDirection Shane 3/pause 500/speak Shane \"{{i18n:Shane.Charlie.02}}\"/pause 500/faceDirection CharlieChicken 1 true/pause 650/playSound cluck/shake CharlieChicken 500/pause 500/playSound cluck/pause 500/jump CharlieChicken/pause 800/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.03}}\"/pause 650/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/showFrame Shane 15 true/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 50/positionOffset Shane -1 0 true/pause 300/shake Shane 500/pause 200/playSound dwop/warp CharlieChicken -30 -30/pause 700/faceDirection Shane 3 true/pause 300/showFrame Shane 28 true/pause 2000/speak Shane \"{{i18n:Shane.Charlie.04}}\"/pause 500/playSound cluck/pause 300/shake Shane 800/pause 600/playSound cluck/pause 500/speak Shane \"{{i18n:Shane.Charlie.05}}\"/pause 300/shake Shane 600/pause 200/playSound cluck/pause 800/playSound cluck/globalFade/viewport -1000 -1000/pause 1000/end dialogue Shane \"{{i18n:Shane.Charlie.06}}\"",
 			},
 		},
 		//after players see Shane's 14 heart event...

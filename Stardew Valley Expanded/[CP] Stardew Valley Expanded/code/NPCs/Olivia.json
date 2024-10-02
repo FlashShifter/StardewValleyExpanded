@@ -22,9 +22,9 @@
           "Calendar": "AlwaysShown",
           "SocialTab": "UnknownUntilMet",
           "CanSocialize": true,
-          "CanVisitIslandCondition": true,
+          "CanVisitIsland": true,
           "ExcludeFromIntroductionsQuest": false,
-          "ExcludeFromPerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_OliviasRoom",
@@ -194,7 +194,7 @@
                 "X": 18,
                 "Y": 5
               },
-              "Direction": "left"
+              "Direction": "down"
             }
           ],
           "Appearance": [
@@ -225,7 +225,7 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Olivia": "{{i18n:Olivia.Gifts.Loved}}/348 124 125 220 221 FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Olivia.Gifts.Liked}}/336 432 276 608 421 FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish/{{i18n:Olivia.Gifts.Disliked}}/18 16 20 22 24 408 80 416 414 412 296 398 410 152 396 397 399 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink/{{i18n:Olivia.Gifts.Hated}}/330 284 149 151 459 346 304 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Olivia.Gifts.Neutral}}/446 402 418/"
+        "Olivia": "{{i18n:Olivia.Gifts.Loved}}/348 124 125 220 221 FlashShifter.StardewValleyExpandedCP_Fish_Dumpling FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Goldenrod FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Olivia.Gifts.Liked}}/336 432 276 608 421 FlashShifter.StardewValleyExpandedCP_Amber FlashShifter.StardewValleyExpandedCP_Gold_Carrot FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_King_Salmon FlashShifter.StardewValleyExpandedCP_Butterfish/{{i18n:Olivia.Gifts.Disliked}}/18 16 20 22 24 408 80 416 414 412 296 398 410 152 396 397 399 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink/{{i18n:Olivia.Gifts.Hated}}/330 284 149 151 459 346 304 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Olivia.Gifts.Neutral}}/446 402 418/"
       }
     },
     {
@@ -254,55 +254,55 @@
     },
     //Spouse Room
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Custom_OliviasRoom",
       "FromFile": "Assets/Maps/SpouseRooms/OliviasRoom.tbin",
     },
     //Spouse Patio
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Olivia_Spouse_Area",
       "FromFile": "Assets/Maps/SpouseRooms/Olivia_Spouse_Area.tbin"
     },
     {
       //Olivia's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Olivia",
       "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia.png"
     },
     {
       //Olivia's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Olivia",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia.png"
     },
     {
       //Olivia's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Olivia_Winter",
       "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia_Winter.png"
     },
     {
       //Olivia's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Olivia_Winter",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia_Winter.png"
     },
     {
       //Olivia's beach portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Olivia_Beach",
       "FromFile": "assets/CharacterFiles/Portraits/Olivia/Olivia_Beach.png"
     },
     {
       //Olivia's beach sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Olivia_Beach",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Olivia/Olivia_Beach.png"
     },
     {
       //Olivia's Schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/Olivia",
       "FromFile": "assets/CharacterFiles/Schedules/Olivia/Schedule.json"
     },
@@ -316,7 +316,7 @@
       "Entries": {
         "Mon": "600 Custom_JenkinsHouse 19 5 1 Olivia_Sleep/610 Custom_JenkinsHouse 5 8 0/700 Custom_JenkinsHouse 34 37 0 Olivia_Wash/1320 Town 24 72 3/1600 Town 59 47 2/1900 Custom_JenkinsHouse 16 12 0 Olivia_Art/2200 Custom_JenkinsHouse 19 5 1 Olivia_Sleep",
         "Thu": "600 Custom_JenkinsHouse 19 5 1 Olivia_Sleep/610 Custom_JenkinsHouse 5 8 0/700 Custom_JenkinsHouse 34 37 0 Olivia_Wash/1030 Custom_JenkinsHouse 16 12 0 Olivia_Art/1310 Town 24 72 3/1600 Town 59 47 2/1900 Custom_JenkinsHouse 16 12 0 Olivia_Art/2200 Custom_JenkinsHouse 19 5 1 Olivia_Sleep",
-        "marriage_Mon": "800 SeedShop 3 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1130 SeedShop 12 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1230 Town 24 72 3 \"Strings\\schedules\\Olivia:marriage.002\"/1600 Town 72 54 2 \"Strings\\schedules\\Olivia:marriage.003\"/2000 Bed"
+        "marriage_Mon": "800 SeedShop 3 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1130 SeedShop 12 23 0 \"Strings\\schedules\\Olivia:marriage.001\"/1230 Town 24 72 3 \"Strings\\schedules\\Olivia:marriage.002\"/1600 Town 72 54 2 \"Strings\\schedules\\Olivia:marriage.003\"/2000 bed"
       }
     },
     {
@@ -547,7 +547,7 @@
     },
     //fake portrait for 10heart
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Marcello",
       "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Marcello.png"
     },
@@ -572,17 +572,7 @@
       "Action": "EditData",
       "Target": "Data/Events/farmhouse",
       "When": {
-        "FarmhouseUpgrade": 2
-      },
-      "Entries": {
-        "8982807/O Olivia/f Olivia 3000/d Mon Wed Thu Fri Sat Sun/w sunny/t 600 800": "none/-500 -500/farmer 14 14 3 Olivia 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.12hearts1.01}}\"/pause 700/move farmer -1 0 3/pause 550/showFrame Olivia 5 true/shake Olivia 200/pause 350/showFrame Olivia 4 true/pause 250/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/emote Olivia 16 true/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote farmer 32/speak Olivia \"{{i18n:Olivia.12hearts1.02}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Olivia \"{{i18n:Olivia.12hearts1.04}}\"/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts1.05}}\""
-      }
-    },
-    { //OLIVIA 12 Heart - part 1 - 'Yoga?'
-      "Action": "EditData",
-      "Target": "Data/Events/farmhouse",
-      "When": {
-        "FarmhouseUpgrade": 3
+        "FarmhouseUpgrade|contains=2, 3": true
       },
       "Entries": {
         "8982807/O Olivia/f Olivia 3000/d Mon Wed Thu Fri Sat Sun/w sunny/t 600 800": "none/-500 -500/farmer 29 24 3 Olivia 22 24 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/ignoreCollisions farmer/ignoreCollisions Olivia/viewport 23 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection Olivia 1 true/pause 500/speak Olivia \"{{i18n:Olivia.12hearts1.01}}\"/pause 700/move farmer -1 0 3/pause 550/showFrame Olivia 5 true/shake Olivia 200/pause 350/showFrame Olivia 4 true/pause 250/faceDirection farmer 2 true/pause 250/playSound pickUpItem/showFrame farmer 90 true/pause 400/showFrame farmer 91 true/pause 300/showFrame farmer 92 true/pause 200/playSound gulp/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/emote Olivia 16 true/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/showFrame farmer 93 true/playSound gulp/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 93 true/pause 200/showFrame farmer 92 true/pause 200/showFrame farmer 91 true/pause 200/showFrame farmer 90 true/pause 200/showFrame farmer 0 true/pause 1000/faceDirection farmer 3 true/pause 600/emote farmer 32/speak Olivia \"{{i18n:Olivia.12hearts1.02}}\"/pause 1000/speak Olivia \"{{i18n:Olivia.12hearts1.03}}\"/pause 550/jump farmer/pause 900/speak Olivia \"{{i18n:Olivia.12hearts1.04}}\"/pause 500/end dialogue Olivia \"{{i18n:Olivia.12hearts1.05}}\""
@@ -627,52 +617,52 @@
       }
     },
     {
-      "Action": "Load", //650x66
+      "Action": "Load", "Priority": "Low", //650x66
       "Target": "Characters/GrampletonTrain", //It's a train. It travels across the country. choo choo im a train
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonTrain.png"
     },
     {
-      "Action": "Load", //120x60
+      "Action": "Load", "Priority": "Low", //120x60
       "Target": "Characters/GrampletonTaxi", //It's a taxi. It drives people around and stuff.
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonTaxi.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC1", //yellow hat guy
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC1.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC2", //Scarlett rip off
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC2.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC3", //Sakura Vineyard show person
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC3.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC4", //Pirate guy
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC4.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC5", //Farmer guy
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC5.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC6", //Fancy lady
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC6.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC7", //Fancy lord
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC7.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/GenericNPC8", //Martin rip off
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenericNPC8.png"
     },

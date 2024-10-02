@@ -26,9 +26,9 @@
           "SpouseWantsChildren": false,
           "SopuseGetsJealous": false,
           "CanSocialize": true,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "TrailingGroup",
           "SpouseRoom": {
             "MapAsset": "Custom_ApplesRoommate",
@@ -52,7 +52,7 @@
                 "X": 3,
                 "Y": 3
               },
-              "Direction": "left"
+              "Direction": "down"
             }
           ],
           "TextureName": null,
@@ -88,25 +88,30 @@
     },
     //Roommate Room
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Maps/Custom_ApplesRoommate",
       "FromFile": "Assets/Maps/SpouseRooms/ApplesRoommate.tbin",
   },
     {
       //Apples' Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Apples",
       "FromFile": "assets/CharacterFiles/Portraits/Apples/Apples.png"
     },
     {
       //Apples' Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Apples",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Apples/Apples.png"
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/Apples",
+      "FromFile": "Assets/Blank.json"
+    },
+    /*{
       //Apples' Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Apples",
       "When": {
         "ApplesHere": "true",
@@ -117,7 +122,7 @@
     },
     {
       //Apples' Schedule - with Peaches
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Apples",
       "When": {
         "ApplesHere": "true",
@@ -128,7 +133,7 @@
     },
     {
       //Apples' Schedule - moved to Junimo Woods
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Apples",
       "When": {
         "ApplesHere": "true",
@@ -136,7 +141,7 @@
         "HasSeenEvent |contains=7776012": true
       },
       "FromFile": "assets/CharacterFiles/Schedules/Apples/ScheduleJunimoWoods.json"
-    },
+    },*/
     {
       "Action": "EditData",
       "Target": "Strings/StringsFromCSFiles",
@@ -163,7 +168,7 @@
       "Action": "EditData",
       "Target": "Data/MoviesReactions",
       "Entries": {
-        "Victor": {
+        "Apples": {
           "NPCName": "Apples",
           "Reactions": [
             {
@@ -329,12 +334,12 @@
     },
     //Load temporary actors for events
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/ApplesSad",
       "FromFile": "Assets/CharacterFiles/Portraits/Apples/ApplesSad.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/ApplesSad",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Apples/ApplesSad.png"
     },
@@ -407,7 +412,7 @@
       "Action": "EditData",
       "Target": "data/events/Custom_AuroraVineyard",
       "Entries": {
-        "7776007/e 7776006": "junimoStarSong/-500 -500/Apples 8 6 1 farmer -1000 -1000 1/addTemporaryActor Peaches 16 32 10 6 3 true character/changeLocation Custom_ApplesRoom/pause 600/viewport 9 7 true/skippable/pause 1000/jump Peaches/playSound junimoMeep1/pause 800/jump Apples/playSound junimoMeep1/pause 800/jump Peaches/playSound junimoMeep1/pause 900/jump Apples/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Peaches \"{{i18n:Apples.8hearts.01}}\"/pause 400/playSound junimoMeep1/pause 500/playSound junimoMeep1/jump Apples/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:Apples.8hearts.02}}\"/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection Apples 2 true/pause 400/playSound junimoMeep1/pause 500/playSound junimoMeep1/animate Apples false true 200 20 21 20 23/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/jump Peaches/pause 700/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 500/faceDirection Peaches 2 true/pause 500/playSound junimoMeep1/pause 500/animate Peaches false true 200 24 25 26 27/pause 600/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 800/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 500/end dialogue Apples \"{{i18n:Apples.8hearts.03}}\"",
+        "7776007/e 7776006": "junimoStarSong/-500 -500/Apples 8 6 1 farmer -300 -300 1/addTemporaryActor Peaches 16 32 10 6 3 true character/changeLocation Custom_ApplesRoom/pause 600/viewport 9 7 true/skippable/pause 1000/jump Peaches/playSound junimoMeep1/pause 800/jump Apples/playSound junimoMeep1/pause 800/jump Peaches/playSound junimoMeep1/pause 900/jump Apples/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Peaches \"{{i18n:Apples.8hearts.01}}\"/pause 400/playSound junimoMeep1/pause 500/playSound junimoMeep1/jump Apples/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/speak Apples \"{{i18n:Apples.8hearts.02}}\"/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection Apples 2 true/pause 400/playSound junimoMeep1/pause 500/playSound junimoMeep1/animate Apples false true 200 20 21 20 23/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 600/playSound junimoMeep1/jump Peaches/pause 700/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 500/faceDirection Peaches 2 true/pause 500/playSound junimoMeep1/pause 500/animate Peaches false true 200 24 25 26 27/pause 600/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 800/playSound junimoMeep1/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 500/end dialogue Apples \"{{i18n:Apples.8hearts.03}}\"",
       },
     },
     { //Apples 10 heart event Part 1 - 'The Junimos'
@@ -433,14 +438,15 @@
     },
     { //Increases Starfruit sell price by 10% (affects starfruit wine as well)
       "Action": "EditData",
-      "Target": "Data/objectinformation",
-      "Fields": {
-        "268": {
-          1: "825"
-        }
+      "Target": "Data/Objects",
+      "TargetField": [
+        268
+      ],
+      "Entries": {
+        "Price": 825
       },
       "When": {
-        "HasSeenEvent": "7776009"
+        "HasSeenEvent: anyPlayer| contains=7776009": true,
       }
     },
     /*{	//Increases Starfruit sell price by 10% - lower profit margin configuration = true
@@ -451,62 +457,62 @@
 },*/
     //Load temporary actors for Apples 10 heart event
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Junimo",
       "FromFile": "Assets/CharacterFiles/Portraits/Junimos/Junimo.png"
     },
     /*{  Does this overwrite vanilla junimo sprites in the community center? - test needed
-     "Action": "Load",
+     "Action": "Load", "Priority": "Low",
 	 "Target": "Characters/Junimo",
 	 "FromFile": "Assets/CharacterFiles/NoSprites/Junimo.png"
 },*/
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo1",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo1.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo2",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo2.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo3",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo3.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo4",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo4.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo5",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo5.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo6",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo6.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo7",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo7.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo8",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo8.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo9",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo9.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Junimo10",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Junimos/Junimo10.png"
     },
@@ -539,7 +545,7 @@
         "HasSeenEvent |contains=7776010": true
       },
       "Entries": {
-        "7776011_RepairAuroraVineyard/": "pause 500/addMailReceived PlayerWantsAuroraVineyard/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/jump Apples/pause 500/playSound junimoMeep1/pause 300/speak Apples \"{{i18n:Apples.AuroraRestore.RepairAuroraVineyard.01}}\"/pause 500/end",
+        "7776011_RepairAuroraVineyard": "pause 500/addMailReceived PlayerWantsAuroraVineyard/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/jump Apples/pause 500/playSound junimoMeep1/pause 300/speak Apples \"{{i18n:Apples.AuroraRestore.RepairAuroraVineyard.01}}\"/pause 500/end",
       }
     },
     {
@@ -639,7 +645,7 @@
         "Height": 16
       },
       "When": {
-        "HasSeenEvent": "7776012"
+        "HasSeenEvent: anyPlayer| contains=7776012": true
       },
       "Update": "OnLocationChange"
     },

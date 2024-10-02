@@ -3,75 +3,98 @@
   "ConfigSchema": {
     "Mist_Effects": {
       "AllowValues": "true, false",
-      "Default": "true"
+      "Default": "true",
+      "Description": "Adds mist during rainy days to many maps. This does impact performance, so disable this if you're experiencing lag on rainy days.",
     },
     "Farm_Sandbox_Layout": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Transforms IF2R into a more standard farm map, excluding predetermined crop fields, shed building, and static fences. There's an image of this version in the IF2R section. The configuration file is located within the [CP] IF2R Folder. Players may set this configuration to /“true/” on existing SVE saves using IF2R.",
     },
     "Farm_Light_Debris": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Balances resource intake and makes the farmland more manageable. Must be toggled to true before save file creation to take effect.",
     },
     "Dirt_Crop_Field_1": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Dirt_Crop_Field_2": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Dirt_Crop_Field_3": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Dirt_Crop_Field_4": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Dirt_Crop_Field_5": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Dirt_Crop_Field_6": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crop fields can be toggled between grass and dirt variants."
     },
     "Remove_Fences_In_Front_Of_Grandpas_Shed": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes the fences in-between the shed and crop field 6.",
     },
     "Remove_Farm_Animal_Area_Fences": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes the fencing in the middle of IF2R.",
     },
     "Remove_Fences_Left_Of_Crop_Field_1": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes fence left of crop field 1"
     },
     "Remove_Central_Cherry_Blossom_Tree_And_Water_Trough": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes the fences beside the river."
     },
     "Remove_Cherry_Blossom_Tree_From_Southeast_Hill": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes the large pink tree and water trough below the fenced animal area",
     },
     "Remove_Fences_From_Backyard": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes all fences around the farmhouse.",
     },
     "Remove_Minecart_System": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes the minecarts around the farmland.",
     },
     "Remove_Objects_From_Greenhouse": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes static plants, boxes, flowers, and barrels from the IF2R greenhouse interior.",
     },
     "Disable_IF2R_Greenhouse": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "When set to true disables the IF2R greenhouse. Useful for compatibility",
+    },
+    "Disable_Farm_Cave": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "When set to true disables the IF2R farm cave. Useful for compatibility",
     }
   },
   "DynamicTokens": [
@@ -81,13 +104,6 @@
     },
   ],
   "CustomLocations": [
-    {
-      "Name": "Custom_DeepCave",
-      "FromMapFile": "Assets/NewLocations/DeepCave.tbin",
-      "MigrateLegacyNames": [
-        "DeepCave"
-      ]
-    },
     {
       "Name": "Custom_MinecartCave",
       "FromMapFile": "Assets/NewLocations/MinecartCave.tbin",
@@ -102,6 +118,14 @@
       "Action": "Load",
       "Target": "Maps/z_MineCartCaveShadows, Maps/CavernObjects, Maps/Mine_Inverted, Maps/Farm_Shadow, Maps/z_petbowl",
       "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Custom_DeepCave",
+      "FromFile": "Assets/NewLocations/DeepCave.tbin",
+      "MigrateLegacyNames": [
+        "DeepCave"
+      ]
     },
     { //mist tilesheets
       "Action": "Load",
@@ -122,6 +146,28 @@
       "ToArea": { "X": 0, "Y": 43, "Width": 142, "Height": 61 },
       "When": { "FarmType": "Standard", "HasMod |contains=flashshifter.GrandpasFarm": false }
     },*/
+	
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Spring_IF2R_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Spring_IF2R_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Summer_IF2R_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Summer_IF2R_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Fall_IF2R_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Fall_IF2R_WorldMap.png"
+    },
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Winter_IF2R_WorldMap",
+      "FromFile": "assets/Maps/WorldMaps/Winter_IF2R_WorldMap.png"
+    },
+	
     {
       "Action": "EditImage",
       "Target": "LooseSprites/Map",
@@ -221,6 +267,7 @@
       "FromFile": "assets/Maps/FarmCave.tbin",
       "When": {
         "FarmType": "Standard",
+        "Disable_Farm_Cave": false,
         "HasMod |contains=flashshifter.GrandpasFarm": false,
         "HasMod |contains=Hesper.HotSpringFarmcave": false,
         "HasMod |contains=Andrewiste.SlightlyRedesignedFarmCave": false,
@@ -233,65 +280,6 @@
         "Width": 37,
         "Height": 25
       },
-    },
-    { //default farm cave warp coordinates
-      "Action": "EditMap",
-      "Target": "Maps/FarmCave",
-      "MapProperties": {
-        "Warp": "8 12 Farm 136 95"
-      },
-      "When": {
-        "FarmType": "Standard",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/FarmCave",
-      "When": {
-        "HasMod": "Hesper.HotSpringFarmcave",
-        "FarmType": "Standard",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      },
-      "MapProperties": {
-        "Warp": "8 12 Farm 136 95"
-      }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/FarmCave",
-      "When": {
-        "HasMod": "Andrewiste.SlightlyRedesignedFarmCave",
-        "FarmType": "Standard",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      },
-      "MapProperties": {
-        "Warp": "8 12 Farm 136 95"
-      }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/FarmCave",
-      "When": {
-        "HasMod": "grapefruitcult.slightymoreinterestingfarmcave",
-        "FarmType": "Standard",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      },
-      "MapProperties": {
-        "Warp": "8 12 Farm 136 95"
-      }
-    },
-    {
-      "Action": "EditMap",
-      "Target": "Maps/FarmCave",
-      "When": {
-        "HasMod": "Froststar11.FairyFarmCave",
-        "FarmType": "Standard",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      },
-      "MapProperties": {
-        "Warp": "8 12 Farm 136 95"
-      }
     },
     //Changes standard farm icon
     {
@@ -365,7 +353,23 @@
     {
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
+      "FromFile": "assets/Maps/IF2R_Sandbox.tmx",
+      "When": {
+        "Farm_Sandbox_Layout": "true",
+        "HasMod |contains=flashshifter.GrandpasFarm": false
+      },
+	  "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 163,
+        "Height": 156
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/FarmLightDebris.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 0,
         "Y": 0,
@@ -379,19 +383,10 @@
       }
     },
     {
-      "Action": "Load",
-      "Target": "Maps/Farm,Maps",
-      "FromFile": "assets/Maps/IF2R_Sandbox.tmx",
-      "When": {
-        "Farm_Sandbox_Layout": "true",
-        "Farm_Light_Debris": "false",
-        "HasMod |contains=flashshifter.GrandpasFarm": false
-      }
-    },
-    {
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField1.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 43,
         "Y": 19,
@@ -409,6 +404,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField2.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 65,
         "Y": 19,
@@ -426,6 +422,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField3.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 51,
         "Y": 41,
@@ -443,6 +440,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField4.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 65,
         "Y": 41,
@@ -460,6 +458,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField5.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 104,
         "Y": 48,
@@ -477,6 +476,7 @@
       "Action": "EditMap",
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/MapPatches/DirtCropField6.tbin",
+	  "PatchMode": "Overlay",
       "ToArea": {
         "X": 127,
         "Y": 48,
@@ -858,7 +858,7 @@
         }
       ]
     },
-  /*  { //BusStop IF2R Warps
+    /*  { //BusStop IF2R Warps
       "Action": "EditMap",
       "Target": "Maps/BusStop",
       "MapProperties": {
@@ -918,6 +918,41 @@
       },
       "Entries": {
         "896152/i 184/t 600 1800/y 1/z winter": "none/-1000 -1000/farmer 64 16 2 Marnie 64 18 0/skippable/pause 1000/speak Marnie \"{{i18n:MarnieEvent.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:MarnieEvent.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "Custom_DeepCave": {
+          "DisplayName": "{{i18n:DeepCave}}",
+          "DefaultArrivalTile": {
+            "X": 21,
+            "Y": 10,
+          },
+          "CreateOnLoad": {
+            "AlwaysActive": true,
+            "MapPath": "Maps\\Custom_DeepCave"
+          },
+          "FormerLocationNames": [
+            "DeepCave"
+          ],
+          "Fish": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)156",
+              "ItemId": "(O)156",
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)158",
+              "ItemId": "(O)158",
+            },
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_(O)CaveJelly",
+              "ItemId": "(O)CaveJelly",
+              "Chance": 0.06
+            },
+          ]
+        }
       }
     },
     //Robin if2r event dialogue additions

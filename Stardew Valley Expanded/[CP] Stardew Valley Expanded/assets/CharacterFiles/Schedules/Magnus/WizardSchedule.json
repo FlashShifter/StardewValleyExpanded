@@ -1,28 +1,32 @@
 {
-//Checks books in room, brews potions, meditates in basement, meditates upstairs
-"Mon": "610 WizardHouse 1 5 0/900 WizardHouse 3 19 2/950 WizardHouse 2 22 0/1030 WizardHouse 1 19 0/1100 WizardHouse 3 22 0/1130 WizardHouse 8 13 0/1200 Custom_WizardBasement 23 6 2 Wizard_Meditate/1630 WizardHouse 5 17 2/1800 WizardHouse 10 17 2 Wizard_Meditate/2000 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Brews potions, meditates, goes to sleep
-"Tue": "930 WizardHouse 3 22 0/1130 WizardHouse 2 17 3/1150 WizardHouse 8 13 0/1240 WizardHouse 10 17 2 Wizard_Meditate/1600 WizardHouse 3 19 2 Wizard_LookDown/1700 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//In basement all day
-"Wed": "900 WizardHouse 3 17 1/1130 Custom_WizardBasement 23 6 2 Wizard_Meditate/1800 Custom_WizardBasement 14 5 0/1840 Custom_WizardBasement 18 5 0/1940 WizardHouse 3 22 0/2120 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Meditates all morning, checks plants, brews potions
-"Thu": "630 WizardHouse 10 17 2 Wizard_Meditate/1210 WizardHouse 10 29 0/1240 WizardHouse 11 32 1/1300 WizardHouse 7 32 3/1320 WizardHouse 2 29 0/1340 WizardHouse 2 29 3/1400 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//In basement all morning reading, goes outside and meditates, brews potions
-"Fri": "610 WizardHouse 2 17 3/630 Custom_WizardBasement 4 18 3/730 Custom_WizardBasement 4 16 3/750 Custom_WizardBasement 4 14 3/820 Custom_WizardBasement 4 10 3/850 Custom_WizardBasement 10 13 0/920 Custom_WizardBasement 11 13 0/940 Custom_WizardBasement 13 13 0/1000 Custom_WizardBasement 19 13 0/1020 Custom_WizardBasement 21 13 0/1040 Custom_WizardBasement 14 5 0/1110 Custom_WizardBasement 19 5 0/1130 Custom_WizardBasement 23 5 0/1210 WizardHouse 4 17 2/1330 Forest 14 29 2 Wizard_Meditate/1640 WizardHouse 4 17 2/1740 WizardHouse 3 22 0/1840 WizardHouse 3 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Stands in one spot for the day (it's like the "CLASSIC" spot in vanilla SDV)
-"Sat": "730 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Meditates outside, gathers samples from magic crops, goes inside
-"Sun": "610 WizardHouse 5 17 2/630 Forest 14 29 2 Wizard_Meditate/830 WizardHouse 5 15 2/1050 Forest 5 21 3/1140 Forest 3 19 2/1220 Forest 3 23 0/1240 Forest 5 21 3/1300 WizardHouse 8 13 0/1400 WizardHouse 2 17 3/1430 WizardHouse 10 17 2 Wizard_Concentrate2/1600 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Checks books in room, brews potions, meditates in basement, meditates upstairs
-"rain": "610 WizardHouse 1 5 0/900 WizardHouse 3 19 2/950 WizardHouse 2 22 0/1030 WizardHouse 1 19 0/1100 WizardHouse 3 22 0/1130 WizardHouse 8 13 0/1200 Custom_WizardBasement 23 6 2 Wizard_Meditate/1630 WizardHouse 5 17 2/1800 WizardHouse 10 17 2 Wizard_Meditate/2000 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
-
-//Desert Festival
-"marriage_DesertFestival_1": "800 Desert 37 17 0 \"Strings\\schedules\\Wizard:DesertFestival_Wizard_marriage\"/2510 bed",
+    "Changes": [
+        {
+            //Wizard's Schedule
+            "Action": "EditData",
+            "Target": "Characters/schedules/Wizard",
+            "When": {
+                "HasSeenEvent": "112"
+            },
+            "Entries": {
+                //Checks books in room, brews potions, meditates in basement, meditates upstairs
+                "Mon": "610 WizardHouse 1 5 0/900 WizardHouse 3 19 2/950 WizardHouse 2 22 0/1030 WizardHouse 1 19 0/1100 WizardHouse 3 22 0/1130 WizardHouse 8 13 0/1200 Custom_WizardBasement 23 6 2 Wizard_Meditate/1630 WizardHouse 5 17 2/1800 WizardHouse 10 17 2 Wizard_Meditate/2000 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Brews potions, meditates, goes to sleep
+                "Tue": "930 WizardHouse 3 22 0/1130 WizardHouse 2 17 3/1150 WizardHouse 8 13 0/1240 WizardHouse 10 17 2 Wizard_Meditate/1600 WizardHouse 3 19 2 Wizard_LookDown/1700 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //In basement all day
+                "Wed": "900 WizardHouse 3 17 1/1130 Custom_WizardBasement 23 6 2 Wizard_Meditate/1800 Custom_WizardBasement 14 5 0/1840 Custom_WizardBasement 18 5 0/1940 WizardHouse 3 22 0/2120 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Meditates all morning, checks plants, brews potions
+                "Thu": "630 WizardHouse 10 17 2 Wizard_Meditate/1210 WizardHouse 10 29 0/1240 WizardHouse 11 32 1/1300 WizardHouse 7 32 3/1320 WizardHouse 2 29 0/1340 WizardHouse 2 29 3/1400 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //In basement all morning reading, goes outside and meditates, brews potions
+                "Fri": "610 WizardHouse 2 17 3/630 Custom_WizardBasement 4 18 3/730 Custom_WizardBasement 4 16 3/750 Custom_WizardBasement 4 14 3/820 Custom_WizardBasement 4 10 3/850 Custom_WizardBasement 10 13 0/920 Custom_WizardBasement 11 13 0/940 Custom_WizardBasement 13 13 0/1000 Custom_WizardBasement 19 13 0/1020 Custom_WizardBasement 21 13 0/1040 Custom_WizardBasement 14 5 0/1110 Custom_WizardBasement 19 5 0/1130 Custom_WizardBasement 23 5 0/1210 WizardHouse 4 17 2/1330 Forest 14 29 2 Wizard_Meditate/1640 WizardHouse 4 17 2/1740 WizardHouse 3 22 0/1840 WizardHouse 3 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Stands in one spot for the day (it's like the "CLASSIC" spot in vanilla SDV)
+                "Sat": "730 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Meditates outside, gathers samples from magic crops, goes inside
+                "Sun": "610 WizardHouse 5 17 2/630 Forest 14 29 2 Wizard_Meditate/830 WizardHouse 5 15 2/1050 Forest 5 21 3/1140 Forest 3 19 2/1220 Forest 3 23 0/1240 Forest 5 21 3/1300 WizardHouse 8 13 0/1400 WizardHouse 2 17 3/1430 WizardHouse 10 17 2 Wizard_Concentrate2/1600 WizardHouse 4 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Checks books in room, brews potions, meditates in basement, meditates upstairs
+                "rain": "610 WizardHouse 1 5 0/900 WizardHouse 3 19 2/950 WizardHouse 2 22 0/1030 WizardHouse 1 19 0/1100 WizardHouse 3 22 0/1130 WizardHouse 8 13 0/1200 Custom_WizardBasement 23 6 2 Wizard_Meditate/1630 WizardHouse 5 17 2/1800 WizardHouse 10 17 2 Wizard_Meditate/2000 WizardHouse 5 17 2/2300 WizardHouse 3 4 2 Wizard_Sleep",
+                //Desert Festival
+                "marriage_DesertFestival_1": "800 Desert 37 17 0 \"Strings\\schedules\\Wizard:DesertFestival_Wizard_marriage\"/2510 bed",
+            }
+        }
+    ]
 }

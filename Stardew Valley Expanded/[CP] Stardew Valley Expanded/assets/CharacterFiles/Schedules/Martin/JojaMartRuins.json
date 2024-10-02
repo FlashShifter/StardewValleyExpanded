@@ -1,9 +1,21 @@
 {
-  //Doesn't work when joja is in ruins
-  "Tue": "0 Custom_Martin_WarpRoom 1 3 3",
-  "Sat": "0 Custom_Martin_WarpRoom 1 3 3",
-  "spring": "0 Custom_Martin_WarpRoom 1 3 3",
-  
-  //Visits SDV library
-  "Sun": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0"
+  "Changes": [
+    {
+      //Martin's Schedule - Joja Mart ruins
+      "Action": "EditData",
+      "Target": "Characters/schedules/Martin",
+      "When": {
+        "HasSeenEvent": "191393",
+        "HasFlag |contains=ccMovieTheater": false
+      },
+      "Entries": {
+        //Doesn't work when joja is in ruins
+        "Tue": "0 Custom_Martin_WarpRoom 1 3 3",
+        "Sat": "0 Custom_Martin_WarpRoom 1 3 3",
+        "spring": "0 Custom_Martin_WarpRoom 1 3 3",
+        //Visits SDV library
+        "Sun": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0"
+      }
+    }
+  ]
 }

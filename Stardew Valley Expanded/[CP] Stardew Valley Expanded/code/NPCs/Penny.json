@@ -6,7 +6,29 @@
       "Target": "Data/NPCGiftTastes",
       "LogName": "Gift tastes: Penny",
       "TextOperations": [
-        /*Dislike*/
+        /*Love*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            1
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop",
+          "Delimiter": " "
+        },
+		/*Like*/
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            3
+          ],
+          "Value": "FlashShifter.StardewValleyExpandedCP_Gold_Carrot",
+          "Delimiter": " "
+        },
+		/*Dislike*/
         {
           "Operation": "Append",
           "Target": [
@@ -35,7 +57,7 @@
       "Target": "characters/schedules/Penny",
       "Entries": {
         "9": "NOT friendship Sam 6/900 Trailer 1 8 0/1100 Town 78 95 2/1600 Trailer 12 6 0 penny_dishes/1840 Trailer 4 9 1 penny_sleep",
-        "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Bed",
+        "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 bed",
         "Tue": "830 Trailer 6 5 0/900 ArchaeologyHouse 17 9 2 penny_read/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Trailer 4 9 1 penny_sleep",
         "summer": "810 Town 96 18 3/1300 Town 63 17 0/1800 Trailer 12 6 0 penny_dishes/2100 Trailer 4 9 1 penny_sleep",
 	  },
@@ -48,7 +70,7 @@
         "IsCommunityCenterComplete": "true"
       },
       "Entries": {
-        "marriage_Mon": "950 BusStop 11 12 0 \"Strings\\schedules\\Penny:marriage_Mon.002\"/1100 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1300 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1330 Town 35 89 2 penny_read/1620 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1800 Bed",
+        "marriage_Mon": "950 BusStop 21 12 0 \"Strings\\schedules\\Penny:marriage_Mon.003\"/1100 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1300 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1330 Town 35 89 2 penny_read/1620 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1800 bed",
       },
     },
     {
@@ -56,7 +78,7 @@
       "Action": "EditData",
       "Target": "Strings/Schedules/Penny",
       "Entries": {
-        "marriage_Mon.002": "{{i18n:Penny.String}}"
+        "marriage_Mon.003": "{{i18n:Penny.String}}"
       }
     },
     //pam gets to spot at 10:10am
@@ -123,7 +145,7 @@
       }
     },
     {
-      "Action": "Load", //16x16
+      "Action": "Load", "Priority": "Low", //16x16
       "Target": "Characters/PennyClassMaterials",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/PennyClassMaterials.png"
     },

@@ -1,19 +1,29 @@
 {
-"spring": "610 Town 88 51 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Mon": "610 Town 88 51 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Tue": "610 Town 100 60 2/900 Town 86 63 3/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Wed": "610 Town 43 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Thu": "610 Town 72 54 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Fri": "610 Town 93 52 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Sat": "610 Town 97 63 1/900 Town 88 51 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"Sun": "610 Town 76 54 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"rain": "610 Town 92 44 3/630 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-
-//Advertising
-"3": "610 Town 43 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"10": "610 Town 44 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"17": "610 Town 42 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-"24": "610 Town 43 60 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
-
-"JojaMart_Replacement": "Town 92 44 0"
+    "Changes": [
+        {
+            //Morris' Schedule
+            "Action": "EditData",
+            "Target": "Characters/schedules/MorrisTod",
+            "When": {
+                "HasSeenEvent |contains=5553210": false
+            },
+            "Entries": {
+                "spring": "610 Town 88 51 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Mon": "610 Town 88 51 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Tue": "610 Town 100 60 2/900 Town 86 63 3/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Wed": "610 Town 43 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Thu": "610 Town 72 54 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Fri": "610 Town 93 52 2/940 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Sat": "610 Town 97 63 1/900 Town 88 51 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "Sun": "610 Town 76 54 2/930 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "rain": "610 Town 92 44 3/630 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                //Advertising
+                "3": "610 Town 43 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "10": "610 Town 44 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "17": "610 Town 42 59 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "24": "610 Town 43 60 1 Morris_Coupon/900 JojaMart 24 26 3/2300 BusStop 22 8 0/2510 BusStop 22 9 0/2520 Custom_DayEnd_WarpRoom 3 3 0",
+                "JojaMart_Replacement": "Town 92 44 0"
+            }
+        }
+    ]
 }

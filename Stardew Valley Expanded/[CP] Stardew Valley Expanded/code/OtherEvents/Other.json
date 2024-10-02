@@ -129,7 +129,7 @@
                 "PlayerKilled": "none/-100 -100/farmer 6 6 1 Lance 8 6 3/changeLocation Custom_HighlandsOutpost/positionOffset farmer 20 0 true/positionOffset Lance -25 0 true/pause 500/message \"{{i18n:Lance.PlayerKilled.01}}\"/pause 900/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceSound/pause 600/viewport 7 6 true/pause 1500/shake Lance 500/pause 250/speak Lance \"{{i18n:Lance.PlayerKilled.02}}\"/pause 1000/speak Lance \"{{i18n:Lance.PlayerKilled.03}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/hospitaldeath/faceDirection farmer 2 true/end position 6 6"
             },
         },
-        { //Edits death strings
+        { //Edits Highlands death strings
             "Action": "EditData",
             "Target": "Strings/StringsFromCSFiles",
             "When": {
@@ -149,10 +149,10 @@
             },
             "Update": "OnLocationChange",
             "Entries": {
-                "PlayerKilled": "none/-100 -100/farmer 24 19 0 Camilla 24 16 2/changeLocation Custom_GaldoranVoid/pause 500/message \"{{i18n:Camilla.PlayerKilled.01}}\"/pause 900/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostMusic/pause 600/viewport 24 18 true/pause 1500/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 450/speak Camilla \"{{i18n:Camilla.PlayerKilled.02}}\"/pause 300/showFrame Camilla 0 true/pause 650/speak Camilla \"{{i18n:Camilla.PlayerKilled.03}}\"/pause 800/move Camilla 0 1 2/pause 800/showFrame Camilla 1 true/pause 300/shake Camilla 700/pause 600/screenFlash 1/playSound wand/warp farmer -20 -20/pause 400/showFrame Camilla 0 true/pause 450/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/stopMusic/hospitaldeath/faceDirection farmer 2 true/end position 31 28"
+                "PlayerKilled": "none/-100 -100/farmer 24 19 0 Camilla 24 16 2/changeLocation Custom_GaldoranVoid/pause 500/message \"{{i18n:Camilla.PlayerKilled.01}}\"/pause 900/playMusic FlashShifter.StardewValleyExpandedCP_CastleVillageOutpostMusic/pause 600/viewport 24 18 true/pause 1500/shake Camilla 200/pause 200/showFrame Camilla 16 true/pause 450/speak Camilla \"{{i18n:Camilla.PlayerKilled.02}}\"/pause 300/showFrame Camilla 0 true/pause 650/speak Camilla \"{{i18n:Camilla.PlayerKilled.03}}\"/pause 800/move Camilla 0 1 2/pause 800/showFrame Camilla 1 true/pause 300/shake Camilla 700/pause 600/screenFlash 1/playSound wand/warp farmer -20 -20/pause 400/showFrame Camilla 0 true/pause 450/globalFade/viewport -1000 -1000/changeLocation Custom_CastleVillageOutpost/stopMusic/SVE_BadlandsDeath/faceDirection farmer 2 true/end position 31 28"
             },
         },
-        { //Edits death strings
+        { //Edits Badlands death strings
             "Action": "EditData",
             "Target": "Strings/StringsFromCSFiles",
             "When": {
@@ -162,6 +162,33 @@
             "Entries": {
                 "Event.cs.1068": "{{i18n:Camilla.PlayerKilled.04}}",
                 "Event.cs.1070": "{{i18n:Camilla.PlayerKilled.04}}",
+            },
+        },
+		{ //Edits death scene if player is killed in Marshlands
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "When": {
+                "LocationName": "Custom_ForbiddenMaze",
+				"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+				"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "PlayerKilled": "none/-1000 -1000/farmer -15 2 2 SVE_Henchman 24 16 2/changeLocation Custom_HenchmanHouse/pause 1500/speak SVE_Henchman \"{{i18n:Henchman.Event.Death}}\"/pause 1000/hospitaldeath/faceDirection farmer 2 true/end position 2 5"
+            },
+        },
+        { //Edits Marshland death strings
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "When": {
+                "LocationName": "Custom_ForbiddenMaze, Custom_HenchmanHouse, Custom_HenchmanBackyard",
+				"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+				"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "Event.cs.1068": "{{i18n:Henchman.Event.Death2}}",
+                "Event.cs.1070": "{{i18n:Henchman.Event.Death2}}",
             },
         },
         { //Marlon and Gil - Mine
@@ -231,6 +258,26 @@
                 "1091881/e 3073013": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
             },
         },
+        { //SPRITE SPRING PATH OPEN - compatibility patch
+        "Action": "EditData",
+        "Target": "data/events/Custom_ForestWest",
+        "When": {
+            "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
+        },
+        "Entries": {
+            "1091881/e Parrot.RomRas_MagicInkStandardPart2": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
+        },
+    },
+    { //SPRITE SPRING PATH OPEN - compatibility patch
+        "Action": "EditData",
+        "Target": "data/events/Custom_ForestWest",
+        "When": {
+            "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
+        },
+        "Entries": {
+            "1091881/e Parrot.RomRas_MagicInkMarriedPart2": "none/-500 -500/farmer -100 -100 2/viewport 119 103 true/viewport move -1 -1 8000 true/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:SpriteSprings.02}}\"/pause 1300/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 500/playSound grassyStep/playSound grassyStep/pause 800/message \"{{i18n:SpriteSprings.03}}\"/pause 1000/end position 116 121",
+        },
+    },
         { //SPRITE SPRING PATH OPEN - directly teleports players if sprite spring is the last nexus warp
             "Action": "EditData",
             "Target": "data/events/Custom_ForestWest",
@@ -315,12 +362,12 @@
 		    },
         },
 		{
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Characters/WillyBag",
             "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/WillyBag.png"
         },
 		{
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Characters/ShimmeringWater",
             "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ShimmeringWater.png"
         },
@@ -328,12 +375,66 @@
             "Action": "EditData",
             "Target": "data/events/forest",
             "When": {
-                "IsCommunityCenterComplete": true
+                "HasSeenEvent:anyPlayer |contains=191393": true
             },
             "Entries": {
                 "1091881/": "none/-500 -500/farmer -100 -100 2/viewport 19 109 clamp true/skippable/pause 2500/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 800/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/playSound junimoMeep1/end position 19 107",
             },
         },
+		
+		{   //Bear's friends are buyable at Marnie's Ranch - player has earn at least 5,000,000g, complete warehouse/community center, and saw the bear's woods event
+            "Action": "EditData",
+            "Target": "data/events/forest",
+            "When": {
+                "HasSeenEvent:anyPlayer |contains=191393, 502261": true
+            },
+            "Entries": {
+                "8402751/t 600 1700/e 2120303/m 5000000": "continue/-500 -500/farmer 90 24 0 Marnie 0 0 2 Andy 64 96 2/addTemporaryActor Bear 32 32 -30 -30 2 true character/viewport 90 17 clamp true/move farmer 0 -6 0/warp Bear 89 16/playSound doorClose/pause 500/emote farmer 16/pause 200/shake Bear 1350/pause 200/playSound trashbear/pause 400/speak Bear \"{{i18n:Bear.Event.09}}\"/pause 1250/faceDirection Bear 3/pause 900/faceDirection Bear 2 true/pause 500/speak Bear \"{{i18n:Bear.Event.10}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Marnie \"{{i18n:Bear.Event.11}}\"",
+            },
+        },
+		
+		{   //Winery Unlocked - Lewis - player sold 500 wine bottles
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasSeenEvent:anyPlayer |contains=191393, 502261": true,
+				"HasSeenEvent:anyPlayer |contains=5553213": false
+            },
+            "Entries": {
+                "8402752/s 348 500/t 600 1150": "continue/-500 -500/farmer 1 1 1 Lewis 1 1 1/pause 1500/speak Lewis \"{{i18n:Winery.Unlocked.1}}\"/pause 600/emote farmer 32 true/pause 250/globalFade/viewport -1000 -1000/pause 1000/end dialogue Lewis \"{{i18n:Winery.Unlocked.1}}\""
+            },
+        },
+		{   //Winery Unlocked - Morris - player sold 500 wine bottles
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasSeenEvent:anyPlayer |contains=502261": true,
+				"HasSeenEvent:anyPlayer |contains=5553213": true
+            },
+            "Entries": {
+                "8402752/s 348 500/t 600 1150": "continue/-500 -500/farmer 1 1 1 MorrisTod 1 1 1/pause 1500/speak MorrisTod \"{{i18n:Winery.Unlocked.1}}\"/pause 600/emote farmer 32 true/pause 250/globalFade/viewport -1000 -1000/pause 1000/end dialogue MorrisTod \"{{i18n:Winery.Unlocked.1}}\""
+            },
+        },
+		
+		{   //Prevents diamond wand chest from spawning again when player obtains it.
+            "Action": "EditData",
+            "Target": "data/events/custom_highlandsoutpost",
+            "Entries": {
+                "67363138/e 65360187": "none/-500 -500/Lance 1 1 1/pause 10/end",
+            },
+        },
+		
+		{   //Prevents monster splitter and heavy shield chests from spawning again when player obtains them.
+            "Action": "EditData",
+            "Target": "data/events/custom_castlevillageoutpost",
+			"When": {
+			  "HasFlag|contains=LegendaryTrioSlayed": true
+			},
+            "Entries": {
+                "67363139": "none/-500 -500/Lance 1 1 1/pause 10/end",
+            },
+        },
+		
         { //Adds spouse strings for the movie theater
             "Action": "EditData",
             "Target": "Strings/Characters",
@@ -344,6 +445,7 @@
                 "MovieInvite_Spouse_Claire": "{{i18n:Movie.SpouseInvite.04}}",
                 "MovieInvite_Spouse_Wizard": "{{i18n:Movie.SpouseInvite.05}}",
                 "MovieInvite_Spouse_Lance": "{{i18n:Movie.SpouseInvite.06}}",
+				"MovieInvite_Spouse_Scarlett": "{{i18n:Movie.SpouseInvite.07}}",
             }
         },
     ]

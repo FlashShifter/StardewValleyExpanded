@@ -3,6 +3,9 @@
         {
             "Action": "EditData",
             "Target": "Data/Weddings",
+            "TargetField": [
+                "Attendees"
+            ],
             "Entries": {
                 "Sophia": {
                     "ID": "Sophia",
@@ -18,11 +21,29 @@
                 },
                 "Andy": {
                     "ID": "Andy",
-                    "Setup": "29 70 0"
+                    "Setup": "Andy 29 70 0"
                 },
                 "Susan": {
                     "ID": "Susan",
-                    "Setup": "30 70 0"
+                    "Setup": "Susan 30 70 0"
+                }
+            }
+        },
+		{   //Scarlett's dad's will attend wedding
+            "Action": "EditData",
+            "Target": "Data/Weddings",
+			"When": { "Relationship: Scarlett": "Dating, Engaged, Married", },
+            "TargetField": [
+                "Attendees"
+            ],
+            "Entries": {
+                "Treyvon": {
+                    "ID": "Treyvon",
+                    "Setup": "Treyvon 29 62 2"
+                },
+                "HankSVE": {
+                    "ID": "HankSVE",
+                    "Setup": "HankSVE 30 62 2",
                 }
             }
         },
@@ -144,6 +165,29 @@
                 "Height": 43
             }
         },
+		
+		/*
+		
+		//Prevents Fir and Birch trees in Pelican Town from being chopped down by the player
+		{
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "Assets/Maps/MapPatches/Town_Prevent_Custom_Trees_From_Being_Cut_Down.tmx",
+			"PatchMode": "Overlay",
+			"Priority": "Late",
+            "When": {
+                "HasSeenEvent: anyPlayer|contains=60367": true
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 130,
+                "Height": 116
+            }
+        },
+		
+		*/
+		
         //Highlands Patches and Content
         {
             "Action": "EditMap",
@@ -176,6 +220,8 @@
                 "Height": 156
             }
         },
+		
+		//Edits projectile Graphics while at Highlands during a rainy day (makes projectile foggy)
         {
             "Action": "EditImage",
             "Target": "Tilesheets/Projectiles",
@@ -192,6 +238,45 @@
             },
             "Update": "OnLocationChange"
         },
+		
+		//Edits projectile Graphics while in Forbidden Maze
+		  {
+            "Action": "EditImage",
+            "Target": "Characters/Monsters/Fireball",
+            "FromFile": "Assets/Tilesheets/Slimeball.png",
+            "PatchMode": "Replace",
+            "When": {
+                "LocationName": "Custom_ForbiddenMaze",
+            },
+            "Update": "OnLocationChange"
+          },
+		  {
+            "Action": "EditImage",
+            "Target": "Tilesheets/Fireball",
+            "FromFile": "Assets/Tilesheets/Slimeball_Large.png",
+            "PatchMode": "Replace",
+            "When": {
+                "LocationName": "Custom_ForbiddenMaze",
+            },
+            "Update": "OnLocationChange"
+          },
+		  {
+            "Action": "EditImage",
+            "Target": "Tilesheets/Projectiles",
+            "FromFile": "Assets/Tilesheets/GreenSlime_Projectile.png",
+            "ToArea": {
+                "X": 32,
+                "Y": 16,
+                "Width": 16,
+                "Height": 16
+            },
+            "When": {
+                "LocationName": "Custom_ForbiddenMaze",
+            },
+            "Update": "OnLocationChange"
+        },
+		  
+		//Highlands background changes
         {
             "Action": "EditImage",
             "Target": "Maps/{{season}}_Highlands_Background_Day",
@@ -258,82 +343,7 @@
             },
             "Update": "OnLocationChange"
         },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Season |contains=Spring": true,
-                "Season |contains=Summer, Fall, Winter": false,
-                "Weather |contains=Rain, Storm": false
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "spring_day_ambient"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Season |contains=Summer": true,
-                "Season |contains=Spring, Fall, Winter": false,
-                "Weather |contains=Rain, Storm": false
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "summer_day_ambient"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Season |contains=Fall": true,
-                "Season |contains=Spring, Summer, Winter": false,
-                "Weather |contains=Rain, Storm": false
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "fall_day_ambient"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Season |contains=Winter": true,
-                "Season |contains=Spring, Summer, Fall": false,
-                "Weather |contains=Rain, Storm": false
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "winter_day_ambient"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Season |contains=Winter": false,
-                "Weather |contains=Rain, Storm": false,
-                "Time": "{{Range: 1800, 2600}}"
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "spring_night_ambient"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Target": "Maps/Custom_Highlands",
-            "When": {
-                "Weather |contains=Rain, Storm": true
-            },
-            "Update": "OnLocationChange",
-            "MapProperties": {
-                "Music": "rain"
-            }
-        },
+		
         //LOAD FENCES
         {
             //Basic Fences
@@ -711,6 +721,126 @@
                 "Arcade_Couch/2/1": "1/1/down/couch/-1/-1/false"
             }
         },
+
+		{ //Edits farmhouse kitchen textures 1
+            "Action": "EditImage",
+            "Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Tilesheets/RedesignedKitchen_Tileset.png",
+			"Patchmode": "Replace",
+            "When": {
+                "RetexturedFarmhouseKitchen": "true"
+            },
+			"ToArea": {
+                "X": 16,
+                "Y": 192,
+                "Width": 80,
+                "Height": 48
+            },
+            "FromArea": {
+                "X": 16,
+                "Y": 192,
+                "Width": 80,
+                "Height": 48
+            },
+        },
+		
+		{ //Edits farmhouse kitchen textures 2
+            "Action": "EditImage",
+            "Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Tilesheets/RedesignedKitchen_Tileset.png",
+			"Patchmode": "Replace",
+            "When": {
+                "RetexturedFarmhouseKitchen": "true"
+            },
+			"ToArea": {
+                "X": 176,
+                "Y": 192,
+                "Width": 16,
+                "Height": 128
+            },
+            "FromArea": {
+                "X": 176,
+                "Y": 192,
+                "Width": 16,
+                "Height": 128
+            },
+        },
+		
+		{ //Edits farmhouse kitchen textures 3
+            "Action": "EditImage",
+            "Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Tilesheets/RedesignedKitchen_Tileset.png",
+			"Patchmode": "Replace",
+            "When": {
+                "RetexturedFarmhouseKitchen": "true"
+            },
+			"ToArea": {
+                "X": 0,
+                "Y": 304,
+                "Width": 16,
+                "Height": 16
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 304,
+                "Width": 16,
+                "Height": 16
+            },
+        },
+		
+		//Minecart Data
+        {
+           "Action": "EditData",
+           "Target": "Data/Minecarts",
+           "Entries": {
+               "GrampletonSuburbs": {
+                   "Destinations": [
+                       {
+                           "ID": "FlashShifter.Pondwood",
+                           "DisplayName": "Pondwood",
+                           "TargetLocation": "Custom_GrampletonSuburbsTrainStation",
+						   "Price": 1000,
+                           "TargetTile": {
+                               "X": 35,
+                               "Y": 15
+                           },
+                           "TargetDirection": "down",
+                       },
+                   ]
+               },
+			   "Railroad": {
+                   "Destinations": [
+                       {
+                           "ID": "FlashShifter.Railroad",
+                           "DisplayName": "Stardew Valley",
+                           "TargetLocation": "Railroad",
+                           "TargetTile": {
+                               "X": 37,
+                               "Y": 40
+                           },
+                           "TargetDirection": "down",
+                       },
+                   ]
+               }
+           }
+        },
+		
+		//Winery Config
+		{
+            "Action": "EditMap",
+            "Target": "Maps/SVE_Winery",
+            "FromFile": "Assets/Maps/Buildings/Winery_Cleared.tmx",
+            "ToArea": {
+                "X": 28,
+                "Y": 3,
+                "Width": 8,
+                "Height": 19
+            },
+            "When": {
+                "RemoveWineryDecorations": true
+            },
+        },
+
         /*{
             "Action": "EditImage",
             "Target": "Tilesheets/ChairTiles",

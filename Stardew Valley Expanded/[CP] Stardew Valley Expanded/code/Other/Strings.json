@@ -1044,16 +1044,25 @@
 				"HanksGarage.11": "{{i18n:String.1041}}",
 				"SecretWoods.1": "{{i18n:String.1042}}",
 				"GrandpasFarm.1": "{{i18n:String.1043}}",
+				"ForbiddenMaze.1": "{{i18n:String.1044}}",
+				"ForbiddenMaze.2": "{{i18n:String.1045}}",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+			"MapPage.cs.11100": "{{i18n:AdventurerGuild.Time}}"
 			}
 		},
 		//CHARACTER SCHEDULE STRING LOADS
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Strings/Schedules/Kent",
 			"FromFile": "assets/XNBs/Kent.xnb"
 		},
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Strings/Schedules/Marlon",
 			"FromFile": "assets/XNBs/MarlonFay.xnb"
 		},

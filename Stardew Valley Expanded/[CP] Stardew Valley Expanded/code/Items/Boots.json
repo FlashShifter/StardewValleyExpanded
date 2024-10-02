@@ -1,0 +1,21 @@
+{
+  "Changes": [
+  
+    //Boots images
+    {
+        "Action": "Load",
+        "Target": "FlashShifter.StardewValleyExpandedCP/SVE_Boots, FlashShifter.StardewValleyExpandedCP/SVE_Boot_Colors",
+        "FromFile": "assets/items/boots/{{TargetWithoutPath}}.png"
+    },
+	
+	//Boots data
+    {
+      "Action": "EditData",
+      "Target": "Data/Boots",
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_Galdoran_Knight_Boots": "Galdoran Knight Boots/{{i18n:boots.galdoran-knight-boots.description}}/50000/8/0/0/{{i18n:boots.galdoran-knight-boots.name}}/FlashShifter.StardewValleyExpandedCP\\SVE_Boot_Colors/0/FlashShifter.StardewValleyExpandedCP\\SVE_Boots",
+		"FlashShifter.StardewValleyExpandedCP_Galdoran_Mage_Boots": "Galdoran Mage Boots/{{i18n:boots.galdoran-mage-boots.description}}/100000/0/10/1/{{i18n:boots.galdoran-mage-boots.name}}/FlashShifter.StardewValleyExpandedCP\\SVE_Boot_Colors/1/FlashShifter.StardewValleyExpandedCP\\SVE_Boots",
+       }
+	}
+  ]
+}

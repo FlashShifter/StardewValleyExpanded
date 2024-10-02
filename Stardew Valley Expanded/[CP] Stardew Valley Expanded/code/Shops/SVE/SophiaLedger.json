@@ -2,6 +2,11 @@
 
     "Changes": [
         {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/SophiaLedger",
+            "FromFile": "assets/CharacterFiles/Shops/Ledgers/SophiaLedger.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Shops",
             "Entries": {
@@ -9,8 +14,13 @@
                     "Owners": [
                         {
                             "Name": "AnyOrNone",
-							"Dialogue": "",
-                            "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Ledgers/SophiaLedger.png}}"
+							"Dialogues": [
+                                {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_Default",
+                                "Dialogue": "", 
+                                },
+							],
+                            "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\SophiaLedger"
                         }
                     ],
 

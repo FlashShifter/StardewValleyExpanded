@@ -1,32 +1,36 @@
 {
-//Aurora Vineyard
-"Mon": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Forest West
-"Tue": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 16 10 0/730 Custom_AuroraVineyard 14 17 2/930 Custom_ForestWest 57 18 2 Apples_Dance2/1500 Custom_AuroraVineyard 12 16 2/1700 Custom_ApplesRoom 9 8 2 Apples_Dance1/1930 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Aurora Vineyard
-"Wed": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/800 Custom_AuroraVineyard 20 17 2/1200 Custom_AuroraVineyard 8 6 1/1500 Custom_AuroraVineyard 12 9 2 Apples_Dance2/1800 Custom_ApplesRoom 8 6 2 Apples_Dance1/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Apples Room
-"Thu": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/800 Custom_ApplesRoom 9 7 2 Apples_Dance1/1200 Custom_ApplesRoom 6 8 3/1600 Custom_ApplesRoom 5 9 2 Apples_Dance2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Forest West
-"Fri": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/830 Custom_AuroraVineyard 13 17 2 Apples_Dance2/1000 Custom_ForestWest 59 18 2 Apples_Wave/1500 Custom_AuroraVineyard 20 7 2 Apples_Dance1/1730 Custom_AuroraVineyard 11 9 2 Apples_Dance2/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Aurora Vineyard
-"Sat": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/900 Custom_AuroraVineyard 13 17 1/1200 Custom_AuroraVineyard 12 7 2 Apples_Dance1/1400 Custom_AuroraVineyard 22 18 2 Apples_Dance2/1800 Custom_ApplesRoom 5 9 2 Apples_Dance1/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Aurora Vineyard
-"Sun": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/830 Custom_ApplesRoom 5 9 2 Apples_Dance1/1000 Custom_AuroraVineyard 11 8 2/1300 Custom_ForestWest 57 18 2 Apples_Sleep/1730 Custom_ApplesRoom 5 8 2 Apples_Dance1/1900 Custom_ApplesRoom 5 8 2 Apples_Dance2/2100 5 8 2 Apples_Sleep",
-
-//Same as Mon schedule
-"rain": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 13 17 2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Aurora Vineyard
-"spring": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 13 17 2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
-
-//Apples hangs out with Peaches on Fridays if rooming with the player
-"marriage_Fri": "700 Forest 20 113 2/1100 Forest 20 113 3/1130 Forest 20 113 2 Apples_Dance2 \"Strings\\schedules\\Apples:Roommate.001\""  
-
+    "Changes": [
+        {
+            //Apples' Schedule - with Peaches
+            "Action": "EditData",
+            "Target": "Characters/schedules/Apples",
+            "When": {
+                "ApplesHere": "true",
+                "HasSeenEvent |contains=7776006": true,
+                "HasSeenEvent |contains=7776012": false
+            },
+            "Entries": {
+            //Aurora Vineyard
+            "Mon": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Forest West
+            "Tue": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 16 10 0/730 Custom_AuroraVineyard 14 17 2/930 Custom_ForestWest 57 18 2 Apples_Dance2/1500 Custom_AuroraVineyard 12 16 2/1700 Custom_ApplesRoom 9 8 2 Apples_Dance1/1930 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Aurora Vineyard
+            "Wed": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/800 Custom_AuroraVineyard 20 17 2/1200 Custom_AuroraVineyard 8 6 1/1500 Custom_AuroraVineyard 12 9 2 Apples_Dance2/1800 Custom_ApplesRoom 8 6 2 Apples_Dance1/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Apples Room
+            "Thu": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/800 Custom_ApplesRoom 9 7 2 Apples_Dance1/1200 Custom_ApplesRoom 6 8 3/1600 Custom_ApplesRoom 5 9 2 Apples_Dance2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Forest West
+            "Fri": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/830 Custom_AuroraVineyard 13 17 2 Apples_Dance2/1000 Custom_ForestWest 59 18 2 Apples_Wave/1500 Custom_AuroraVineyard 20 7 2 Apples_Dance1/1730 Custom_AuroraVineyard 11 9 2 Apples_Dance2/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Aurora Vineyard
+            "Sat": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/900 Custom_AuroraVineyard 13 17 1/1200 Custom_AuroraVineyard 12 7 2 Apples_Dance1/1400 Custom_AuroraVineyard 22 18 2 Apples_Dance2/1800 Custom_ApplesRoom 5 9 2 Apples_Dance1/2100 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Aurora Vineyard
+            "Sun": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/830 Custom_ApplesRoom 5 9 2 Apples_Dance1/1000 Custom_AuroraVineyard 11 8 2/1300 Custom_ForestWest 57 18 2 Apples_Sleep/1730 Custom_ApplesRoom 5 8 2 Apples_Dance1/1900 Custom_ApplesRoom 5 8 2 Apples_Dance2/2100 5 8 2 Apples_Sleep",
+            //Same as Mon schedule
+            "rain": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 13 17 2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Aurora Vineyard
+            "spring": "0 Custom_Apples_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 8 2/730 Custom_AuroraVineyard 11 8 2 Apples_Dance1/1100 Custom_AuroraVineyard 20 7 2 Apples_Dance2/1500 Custom_AuroraVineyard 13 17 2/2000 Custom_ApplesRoom 5 8 2 Apples_Sleep",
+            //Apples hangs out with Peaches on Fridays if rooming with the player
+            "marriage_Fri": "700 Forest 20 113 2/1100 Forest 20 113 3/1130 Forest 20 113 2 Apples_Dance2 \"Strings\\schedules\\Apples:Roommate.001\""
+            },
+        },
+    ]
 }

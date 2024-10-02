@@ -22,9 +22,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -63,19 +63,24 @@
     },
     {
       //Peaches' sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Peaches",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Peaches/Peaches.png"
     },
     {
       //Peaches' portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Peaches",
       "FromFile": "Assets/CharacterFiles/Portraits/Peaches/Peaches.png"
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/Peaches",
+      "FromFile": "Assets/Blank.json"
+    },
+    /*{
       //Peaches' schedule 
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Peaches",
       "When": {
         "HasSeenEvent |contains=7776006": true,
@@ -85,14 +90,14 @@
     },
     {
       //Peaches' schedule - JunimoWoods
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Peaches",
       "When": {
         "HasSeenEvent |contains=7776006": true,
         "HasSeenEvent |contains=7776012": true
       },
       "FromFile": "assets/CharacterFiles/Schedules/Peaches/ScheduleJunimoWoods.json"
-    },
+    },*/
     {
       //Peaches schedule - roommates with apples
       "Action": "EditData",
@@ -125,9 +130,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "Hidden",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -156,19 +161,19 @@
     
     {
       //Highlands Dwarf's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/HighlandsDwarf",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/HighlandsDwarf/HighlandsDwarf.png"
     },
     {
       //Highlands Dwarf's portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/HighlandsDwarf",
       "FromFile": "Assets/CharacterFiles/Portraits/HighlandsDwarf/HighlandsDwarf.png"
     },
     {
       //Highlands Dwarf's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/HighlandsDwarf",
       "FromFile": "assets/CharacterFiles/Schedules/HighlandsDwarf/Schedule.json"
     },
@@ -177,21 +182,21 @@
       "Action": "EditData",
       "Target": "data/events/Custom_HighlandsCavern",
       "Entries": {
-        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key/n HasDwarvishTranslationGuide": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
       }
     },
     { //Golden Key TAGGED - highlands
       "Action": "EditData",
       "Target": "data/events/Custom_Highlands",
       "Entries": {
-        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key/n HasDwarvishTranslationGuide": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
       }
     },
     { //Golden Key TAGGED - farmhouse
       "Action": "EditData",
       "Target": "data/events/farmhouse",
       "Entries": {
-        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
+        "55134261/i FlashShifter.StardewValleyExpandedCP_Golden_Key/n HasDwarvishTranslationGuide": "continue/-500 -500/farmer -100 -100 0/pause 50/end"
       }
     },
     {
@@ -213,21 +218,21 @@
     "Action": "EditData",
     "Target": "data/events/Custom_HighlandsCavernPrison",
     "Entries": {
-      "55134259/e 55134261/k 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.02}}\"/pause 750/faceDirection farmer 1 true/pause 400/move farmer 2 0 0 true/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 350/faceDirection HighlandsDwarf 1 true/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.03}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.04}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
+      "55134259/e 55134261/k 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key/n HasDwarvishTranslationGuide": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.02}}\"/pause 750/faceDirection farmer 1 true/pause 400/move farmer 2 0 0 true/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 350/faceDirection HighlandsDwarf 1 true/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.03}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.FirstKey.04}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
     }
   },
   { //Highlands Dwarf event - first entry, player has no key
     "Action": "EditData",
     "Target": "data/events/Custom_HighlandsCavernPrison",
     "Entries": {
-      "55134260/k 55134259": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.02}}\"/pause 500/emote farmer 32/pause 400/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2 true/viewport move 0 1 1000 true/pause 400/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.03}}\"/pause 1250/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.04}}\"/pause 500/globalFade/viewport -1000 -1000/end position 19 22"
+      "55134260/k 55134259/n HasDwarvishTranslationGuide": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 0/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 0/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/pause 500/emote farmer 8/pause 600/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 1500/speed HighlandsDwarf 1/move HighlandsDwarf 0 1 2/pause 800/shake HighlandsDwarf 600/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.01}}\"/pause 1000/jump farmer/pause 1100/shake HighlandsDwarf 400/pause 250/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.02}}\"/pause 500/emote farmer 32/pause 400/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 500/move farmer 0 2 2 true/viewport move 0 1 1000 true/pause 400/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.03}}\"/pause 1250/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.FirstNoKey.04}}\"/pause 500/globalFade/viewport -1000 -1000/end position 19 22"
     }
   },
   { //Highlands Dwarf event - second entry, player has the key
     "Action": "EditData",
     "Target": "data/events/Custom_HighlandsCavernPrison",
     "Entries": {
-      "55134259/e 55134261/e 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 2/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 2/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/move farmer 2 0 0/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 250/move HighlandsDwarf 0 1 1/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.01}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.02}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
+      "55134259/e 55134261/e 55134260/i FlashShifter.StardewValleyExpandedCP_Golden_Key/n HasDwarvishTranslationGuide": "Upper_Ambient/-500 -500/farmer -100 -100 0 HighlandsDwarf 18 16 2/removeItem FlashShifter.StardewValleyExpandedCP_Golden_Key/changeLocation Custom_HighlandsCavernPrisonEvent/move HighlandsDwarf 0 0 2/viewport 19 19 true/skippable/pause 3000/warp farmer 19 24/move farmer 0 -4 0/move farmer 2 0 0/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsCavernPrison/playSound openBox/pause 750/playSound money/pause 150/viewport 19 19 true/pause 650/faceDirection farmer 1 true/pause 250/move farmer 1 0 1/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 250/move HighlandsDwarf 0 1 1/move HighlandsDwarf 3 0 2/move HighlandsDwarf 0 3 2/pause 500/faceDirection HighlandsDwarf 1 true/pause 500/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.01}}\"/pause 500/faceDirection HighlandsDwarf 2 true/pause 250/faceDirection HighlandsDwarf 3 true/pause 500/viewport move 0 1 2000 true/move HighlandsDwarf -2 0 2/move HighlandsDwarf 0 2 2 true/move farmer -3 0 2 true/pause 2250/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 0 true/pause 750/speak HighlandsDwarf \"{{i18n:Highland.SecondKey.02}}\"/pause 750/faceDirection HighlandsDwarf 1 true/pause 250/faceDirection HighlandsDwarf 2 true/pause 500/move HighlandsDwarf 0 2 2/warp HighlandsDwarf -25 -25/pause 1000/globalFade/viewport -1000 -1000/end position 19 20"
     }
   },
     {
@@ -241,14 +246,14 @@
         "Height": 11
       },
       "When": {
-        "HasSeenEvent": "55134259"
+        "HasSeenEvent: anyPlayer| contains=55134259": true,
       },
     },
     {
       "Action": "EditMap",
       "Target": "Maps/Custom_Highlands",
       "When": {
-        "HasSeenEvent": "55134259"
+        "HasSeenEvent: anyPlayer| contains=55134259": true,
       },
       "TextOperations": [
         {
@@ -269,7 +274,7 @@
         "HasSeenEvent": "55134259"
       },
       "Entries": {
-        "55134263/": "continue/-500 -500/farmer 129 139 0 HighlandsDwarf -30 -30 -30/addConversationTopic highlandsDwarf 10/skippable/viewport 129 135 true/viewport move 0 -1 4000 true/move farmer 0 -8 0 true/pause 4750/faceDirection farmer 3 true/pause 800/emote farmer 8 true/pause 200/globalFade/viewport -1000 -1000/warp farmer 116 135/faceDirection farmer 0 true/positionOffset farmer -25 -10 true/viewport 116 134 true/pause 1500/speak HighlandsDwarf \"{{i18n:Highland.NewHome.01}}\"/pause 1000/speak HighlandsDwarf \"{{i18n:Highland.NewHome.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 300/end position 116 135"
+        "55134263/n HasDwarvishTranslationGuide": "continue/-500 -500/farmer 129 139 0 HighlandsDwarf -30 -30 -30/addConversationTopic highlandsDwarf 10/skippable/viewport 129 135 true/viewport move 0 -1 4000 true/move farmer 0 -8 0 true/pause 4750/faceDirection farmer 3 true/pause 800/emote farmer 8 true/pause 200/globalFade/viewport -1000 -1000/warp farmer 116 135/faceDirection farmer 0 true/positionOffset farmer -25 -10 true/viewport 116 134 true/pause 1500/speak HighlandsDwarf \"{{i18n:Highland.NewHome.01}}\"/pause 1000/speak HighlandsDwarf \"{{i18n:Highland.NewHome.02}}\"/pause 500/globalFade/viewport -1000 -1000/pause 300/end position 116 135"
       }
     },
     //HANK NPC
@@ -294,9 +299,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -333,19 +338,19 @@
     },
     {
       //Hank's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/HankSVE",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Hank/Hank.png"
     },
     {
       //Hank's portraits (fake)
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/HankSVE",
       "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Hank.png"
     },
     {
       //Hank's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/HankSVE",
       "FromFile": "assets/CharacterFiles/Schedules/Hank/Schedule.json"
     },
@@ -370,9 +375,9 @@
           "Calendar": "HiddenAlways",
           "SocialTab": "HiddenAlways",
           "CanSocialize": false,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -410,63 +415,63 @@
     },
     {
       //Treyvon's sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Treyvon",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Treyvon/Treyvon.png"
     },
     {
       //Treyvon's portraits (fake)
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Treyvon",
       "FromFile": "Assets/CharacterFiles/Portraits/NoPortraits/Treyvon.png"
     },
     {
       //Treyvon's schedule
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/schedules/Treyvon",
       "FromFile": "assets/CharacterFiles/Schedules/Treyvon/Schedule.json"
     },
 
     //SUKI NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Suki",
       "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Suki_IceFestival",
       "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki_IceFestival.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Suki_DesertFestival",
       "FromFile": "Assets/CharacterFiles/Portraits/Suki/Suki_DesertFestival.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Suki",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/NoSprites/Suki/Suki.png"
     },
     //JACE NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Jace",
       "FromFile": "Assets/CharacterFiles/Portraits/Jace/Jace.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Jace",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Jace/Jace.png"
     },
     //AXEL NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Axel",
       "FromFile": "Assets/CharacterFiles/Portraits/Axel/Axel.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Axel",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Axel/Axel.png"
     },
@@ -519,34 +524,34 @@
     },
     //BROOKLYN NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Brooklyn",
       "FromFile": "Assets/CharacterFiles/Portraits/Brooklyn/Brooklyn.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Brooklyn",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Brooklyn/Brooklyn.png"
     },
     //ZOEY NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Zoey",
       "FromFile": "Assets/CharacterFiles/Portraits/Zoey/Zoey.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Zoey",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Zoey/Zoey.png"
     },
     //CHLOE NPC
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Chloe",
       "FromFile": "Assets/CharacterFiles/Portraits/Chloe/Chloe.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Chloe",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Chloe/Chloe.png"
     },
