@@ -144,6 +144,19 @@
       },
       "Update": "OnLocationChange"
     },
+	{
+      //Martin's Theater Portrait 4
+      "Action": "EditImage",
+      "Target": "Portraits/Martin",
+      "FromFile": "assets/CharacterFiles/Portraits/Martin/Martin_Theater.png",
+      "When": {
+       "HasSeenEvent |contains=191393": true,
+	   "HasSeenEvent |contains=3219873": true,
+       "LocationName": "MovieTheater",
+       "Day": "22" 
+      },
+      "Update": "OnLocationChange"
+    },
     {
       //Martin's Theater Sprites
       "Action": "EditImage",
@@ -181,6 +194,19 @@
         "HasSeenEvent |contains=502261": false,
         "LocationName": "MovieTheater",
         "HasSeenEvent |contains=4269703": true
+      },
+      "Update": "OnLocationChange"
+    },
+	{
+      //Martin's Theater Sprites 4
+      "Action": "EditImage",
+      "Target": "Characters/Martin",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Martin/Martin_Theater.png",
+      "When": {
+       "HasSeenEvent |contains=191393": true,
+	   "HasSeenEvent |contains=3219873": true,
+       "LocationName": "MovieTheater",
+       "Day": "22" 
       },
       "Update": "OnLocationChange"
     },
@@ -718,6 +744,29 @@
         "Spouse": "Claire",
         "DayofWeek": "Tuesday, Friday, Saturday"
       },
+      "Entries": {
+        "Martin": {
+          "NPCName": "Martin",
+          "Reactions": [
+            {
+              "Tag": "*",
+              "Response": "reject",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            }
+          ]
+        }
+      }
+    },
+	{ //Martin will reject movie invitations on Community Day
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "When": {
+		"HasSeenEvent |contains=191393": true,
+		"HasSeenEvent |contains=3219873": true,
+		"Day": "22",
+	  },
       "Entries": {
         "Martin": {
           "NPCName": "Martin",

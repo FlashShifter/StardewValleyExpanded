@@ -7,7 +7,7 @@
     },
     "LargerGreenhouse": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "true"
     },
     "RemoveGreenhouseObjects": {
       "AllowValues": "true, false",
@@ -804,6 +804,7 @@
     {
       "Action": "Load",
       "Target": "Maps/Greenhouse",
+	  "Priority": "Low",
       "FromFile": "assets/Maps/Greenhouse_FrontierFarm.tbin",
       "When": {
         "LargerGreenhouse": "true",
@@ -1313,6 +1314,9 @@
         "NightTiles": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
       }
     },
+	
+	
+	
     //Ravine Minecart
     {
       "Action": "EditMap",
@@ -1921,6 +1925,9 @@
         "Height": 156
       },
       "When": {
+	    "Day|contains=0,1": true,
+		"Year": 1,
+		"Season": "Spring",
 		"InstantlyUnlockBridge": true
       },
     },

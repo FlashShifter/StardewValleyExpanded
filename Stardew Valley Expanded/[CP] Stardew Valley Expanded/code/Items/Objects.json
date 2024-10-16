@@ -2659,7 +2659,7 @@
 					"ArtifactSpotChances": {
 					  "Forest": 0.03,
 					  "Mountain": 0.04,
-					  "Custom_AdventuerSummit": 0.2,
+					  "Custom_AdventurerSummit": 0.2,
 					  "Backwoods": 0.05
 					},
                     "ExcludeFromFishingCollection": true,
@@ -2683,18 +2683,18 @@
                     "Edibility": -300,
                     "IsDrink": false,
 					"ArtifactSpotChances": {
-					  "Mountain": 0.05,
-					  "Railroad": 0.05,
-					  "Forest": 0.05,
-					  "Backwoods": 0.03,
-					  "Custom_AdventuerSummit": 0.05,
+					  "Mountain": 0.1,
+					  "Railroad": 0.07,
+					  "Forest": 0.06,
+					  "Backwoods": 0.04,
+					  "Custom_AdventurerSummit": 0.33,
 					  "Custom_BlueMoonVineyard": 0.02,
-					  "Farm": 0.02,
-					  "UndergroundMine": 0.02
+					  "Farm": 0.03,
+					  "UndergroundMine": 0.1
 					},
                     "ExcludeFromFishingCollection": true,
                     "ExcludeFromShippingCollection": false,
-                    "ExcludeFromRandomSale": true,
+                    "ExcludeFromRandomSale": false,
 					"ContextTags": [
 					    "color_yellow",
                         "dye_strong",
@@ -2716,7 +2716,7 @@
 					  "Desert": 0.05,
 					  "Railroad": 0.05,
 					  "Backwoods": 0.05,
-					  "Custom_AdventuerSummit": 0.05,
+					  "Custom_AdventurerSummit": 0.05,
 					  "Farm": 0.01,
 					  "UndergroundMine": 0.02
 					},
@@ -2770,7 +2770,7 @@
 					  "Forest": 0.05,
 					  "Mountain": 0.05,
 					  "Railroad": 0.05,
-					  "Custom_AdventuerSummit": 0.05,
+					  "Custom_AdventurerSummit": 0.05,
 					  "Backwoods": 0.05
 					},
                     "ExcludeFromFishingCollection": true,
@@ -3153,8 +3153,8 @@
                     "Name": "Void Mayo Sandwich",
                     "DisplayName": "{{i18n:object.void-mayo-sandwich.name}}",
                     "Description": "{{i18n:object.void-mayo-sandwich.description}}",
-                    "Type": "Cooking",
-                    "Category": -7,
+                    "Type": "Fruit",
+                    "Category": -79,
                     "Price": 100,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\VoidMayoSandwich",
                     "SpriteIndex": 0,
@@ -3679,7 +3679,7 @@
                     "Price": 900,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Yarn",
                     "SpriteIndex": 0,
-                    "Edibility": 0,
+                    "Edibility": -300,
                     "IsDrink": false,
                     "ExcludeFromFishingCollection": false,
                     "ExcludeFromShippingCollection": false,
@@ -3750,10 +3750,10 @@
                     "Description": "{{i18n:object.honey-jar.description}}",
                     "Type": "Basic",
                     "Category": -17,
-                    "Price": 850,
+                    "Price": 1000,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Honey Jar",
                     "SpriteIndex": 0,
-                    "Edibility": 65,
+                    "Edibility": 50,
                     "IsDrink": false,
                     "ExcludeFromFishingCollection": false,
                     "ExcludeFromShippingCollection": false,
@@ -3935,6 +3935,77 @@
 					    "color_gold",
                     ]
                 },
+				"FlashShifter.StardewValleyExpandedCP_Goldfish": {
+                    "Name": "Goldfish",
+                    "DisplayName": "{{i18n:object.goldfish.name}}",
+                    "Description": "{{i18n:object.goldfish.description}}",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 80,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Goldfish",
+                    "SpriteIndex": 0,
+                    "Edibility": 9,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": false,
+                    "ExcludeFromShippingCollection": false,
+                    "ExcludeFromRandomSale": false,
+                    "ContextTags": [
+                        "color_orange",
+                        "fish_river",
+                        "fish_goldfish",
+						"fish_carnivorous",
+						"fish_talk_stiff",
+						"season_spring"
+                    ]
+                },
+				"FlashShifter.StardewValleyExpandedCP_Gar": {
+                    "Name": "Gar",
+                    "DisplayName": "{{i18n:object.gar.name}}",
+                    "Description": "{{i18n:object.gar.description}}",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 175,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Gar",
+                    "SpriteIndex": 0,
+                    "Edibility": 20,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": false,
+                    "ExcludeFromShippingCollection": false,
+                    "ExcludeFromRandomSale": false,
+                    "ContextTags": [
+                        "color_brown",
+                        "fish_river",
+                        "fish_gar",
+						"fish_carnivorous",
+						"fish_talk_stiff",
+						"season_summer",
+						"season_fall"
+                    ]
+                },
+				"FlashShifter.StardewValleyExpandedCP_Turretfish": {
+                    "Name": "Turretfish",
+                    "DisplayName": "{{i18n:object.turretfish.name}}",
+                    "Description": "{{i18n:object.turretfish.description}}",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 10000,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Turretfish",
+                    "SpriteIndex": 0,
+                    "Edibility": -50,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": false,
+                    "ExcludeFromShippingCollection": false,
+                    "ExcludeFromRandomSale": true,
+                    "ContextTags": [
+                        "color_grey",
+                        "fish_ocean",
+                        "fish_turretfish",
+						"fish_semi_rare",
+						"fish_legendary",
+						"fish_pond_ignore"
+                    ]
+                },
+				
 				
 
 				/*"FlashShifter.StardewValleyExpandedCP_???": {
@@ -4828,7 +4899,6 @@
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Swamp Essence",
             "FromFile": "assets/Items/Objects/Swamp Essence.png",
         },
-		
 		{
             "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Magic Lamp",
@@ -4843,6 +4913,21 @@
             "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Gold Slime Egg",
             "FromFile": "assets/Items/Objects/Gold Slime Egg.png",
+        },
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Goldfish",
+            "FromFile": "assets/Items/Objects/Goldfish.png",
+        },
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Gar",
+            "FromFile": "assets/Items/Objects/Gar.png",
+        },
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Turretfish",
+            "FromFile": "assets/Items/Objects/Turretfish.png",
         },
     ]
 }

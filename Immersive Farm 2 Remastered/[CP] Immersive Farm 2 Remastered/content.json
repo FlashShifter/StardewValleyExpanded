@@ -248,6 +248,7 @@
     {
       "Action": "Load",
       "Target": "Maps/Greenhouse",
+	  "Priority": "Low",
       "FromFile": "assets/Maps/Greenhouse.tbin",
       "When": {
         "Disable_IF2R_Greenhouse": false,
@@ -346,7 +347,6 @@
       "Target": "Maps/Farm,Maps",
       "FromFile": "assets/Maps/IF2R.tmx",
       "When": {
-        "Farm_Sandbox_Layout": "false",
         "HasMod |contains=flashshifter.GrandpasFarm": false
       }
     },
@@ -668,7 +668,6 @@
         "Farm_Sandbox_Layout": "false",
         "HasMod |contains=flashshifter.GrandpasFarm": false,
         "FarmType": "Standard",
-        "HasSeenEvent |Contains=2554908": false
       },
       "ToArea": {
         "X": 138,
@@ -688,7 +687,6 @@
         "Farm_Sandbox_Layout": "true",
         "HasMod |contains=flashshifter.GrandpasFarm": false,
         "FarmType": "Standard",
-        "HasSeenEvent |Contains=2554908": false
       },
       "ToArea": {
         "X": 138,

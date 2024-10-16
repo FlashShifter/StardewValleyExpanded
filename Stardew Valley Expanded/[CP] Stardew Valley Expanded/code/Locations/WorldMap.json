@@ -50,6 +50,16 @@
       "Target": "Mods/FlashShifter.StardewValleyExpandedCP/winter_Highlands",
       "FromFile": "assets/Maps/WorldMaps/Highlands/winter_Highlands_WorldMap.png"
     },
+	
+	//Edits Adventurer Guild open time on the world map
+	{
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "Entries": {
+	    "MapPage.cs.11100": "{{i18n:AdventureGuild.Hours}}",
+      }
+    },
+	
     {
       "Action": "EditData",
       "Target": "Data/WorldMap",
@@ -614,7 +624,7 @@
             "Width": 300,
             "Height": 180
           },
-		  "ScrollText": "{{i18n:FrontierName}}",
+		  "ScrollText": "{{i18n:LocationData.Forest_West}}",
           "WorldPositions": [
             {
               "Id": "Custom_ForestWest",

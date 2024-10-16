@@ -25,7 +25,6 @@
       "AllowValues": "true, false",
       "Default": "false",
       "Description": "Removes pond from later game expanded area of farm",
-
     },
     "GrassCropField": {
       "AllowValues": "true, false",
@@ -44,7 +43,7 @@
     },
     "LargerGreenhouse": {
       "AllowValues": "true, false",
-      "Default": "false",
+      "Default": "true",
       "Description": "Makes the greenhouse slightly bigger, with designated fruit tree spots.",
     },
     "RemoveGreenhouseObjects": {
@@ -256,6 +255,7 @@
     {
       "Action": "Load",
       "Target": "Maps/Greenhouse,Maps",
+	  "Priority": "Low",
       "FromFile": "assets/Maps/Greenhouse_GrandpasFarm.tbin",
       "When": {
         "LargerGreenhouse": "true"

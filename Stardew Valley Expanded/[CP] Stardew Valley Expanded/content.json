@@ -46,12 +46,12 @@
     "SVECommunityBundles": {
       "AllowValues": "true, false",
       "Default": "true",
-      "Description": "Adds SVE objects to community center bundles.",
+      "Description": "Adds SVE objects to community center bundles. Doesn't affect remixed bundles and only applies on a newly created save file.",
     },
     "HardSVECommunityBundles": {
       "AllowValues": "true, false",
       "Default": "false",
-      "Description": "Adds SVE objects to community center bundles and makes it very difficult.",
+      "Description": "Adds SVE objects to community center bundles and makes them more difficult. Doesn't affect remixed bundles and only applies on a newly created save file.",
     },
     "RetexturedFarmhouseKitchen": {
       "AllowValues": "true, false",
@@ -88,19 +88,11 @@
       "Default": "false",
       "Description": "Removes SVE Joja Shop patches, giving other mods editing the vanilla shop priority.",
     },
-    /*"LowerProfitMargins": {
-      "AllowValues": "true, false",
-      "Default": "false"
-            },*/
     "BalancedCrafting": {
       "AllowValues": "true, false",
       "Default": "false",
       "Description": "Crafting requires more/different resources. Some craftables are easier to make. Recommended if players are using the /“Automation/” mod and/or IF2R to balance resource intake.",
     },
-    /*"HarderBundles": {
-      "AllowValues": "true, false",
-      "Default": "false"
-            },*/
     "HarderBuildingConstruction": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -111,10 +103,20 @@
       "Default": "false",
       "Description": "Monsters receive a significant buff in damage dealt to players (double), with slight increases in HP. Shadow Brutes and Mummies have large HP and damage buffs.",
     },
-	"ReduceCrimsonBadlandsMonsterSpawns": {
+	"ChallengingMarshlands": {
       "AllowValues": "true, false",
       "Default": "false",
-      "Description": "Reduces how many monsters spawn in the Crimson Badlands by a large margin. Makes the area easier to traverse and reduces lag.",
+      "Description": "Increases spawns of ghost waves and swamp golems in the Forbidden Maze. Players can find even more forage.",
+    },
+	"ChallengingHighlandsCavern": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Increases monster spawns. Players can find even more gems and minerals.",
+    },
+	"ChallengingBadlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Dramatically increases monster spawns and difficulty traversing the Crimson Badlands - the adventurer's true test. This toggle is very resource intensive, so having a strong PC is recommended.",
     },
     "OlderSophiaPortraits": {
       "AllowValues": "true, false",
@@ -149,16 +151,38 @@
   },
   "DynamicTokens": [
     {
-      "Name": "ReduceCrimsonBadlandsMonsterSpawnsToken",
+      "Name": "ChallengingBadlandsToken",
       "Value": "AddMail",
     },
     {
-      "Name": "ReduceCrimsonBadlandsMonsterSpawnsToken",
+      "Name": "ChallengingBadlandsToken",
       "Value": "RemoveMail",
       "When": {
-        "ReduceCrimsonBadlandsMonsterSpawns": "false"
+        "ChallengingBadlands": "false"
       }
     },
+	{
+      "Name": "ChallengingMarshlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "ChallengingMarshlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "ChallengingMarshlands": "false"
+      }
+    },
+	{
+      "Name": "ChallengingHighlandsCavernToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "ChallengingHighlandsCavernToken",
+      "Value": "RemoveMail",
+      "When": {
+        "ChallengingHighlandsCavern": "false"
+      }
+    },	
     //// Map where Ench Grove warp is placed
     {
       "Name": "SelectedWarpMap",
@@ -900,21 +924,49 @@
         }
       }
     },*/
-	
-	//Crimson Badlands less monsters config trigger action data
+
+	//Challenging config trigger actions
 	{
       "Action": "EditData",
       "Target": "Data/TriggerActions",
       "Entries": {
-          "SVE_ReduceCrimsonBadlandsMonsterSpawns": {
-              "Id": "SVE_ReduceCrimsonBadlandsMonsterSpawns",
+          "SVE_ChallengingBadlands": {
+              "Id": "SVE_ChallengingBadlands",
               "Trigger": "DayStarted",
               "HostOnly": true,
-              "Action": "{{ReduceCrimsonBadlandsMonsterSpawnsToken}} Current SVE_ReduceCrimsonBadlandsMonsterSpawns received",
+              "Action": "{{ChallengingBadlandsToken}} Current SVE_ChallengingBadlands",
               "MarkActionApplied": false
           }
       }
     },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_ChallengingMarshlands": {
+              "Id": "SVE_ChallengingMarshlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{ChallengingMarshlandsToken}} Current SVE_ChallengingMarshlands",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_ChallengingHighlandsCavern": {
+              "Id": "SVE_ChallengingHighlandsCavern",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{ChallengingHighlandsCavernToken}} Current SVE_ChallengingHighlandsCavern",
+              "MarkActionApplied": false
+          }
+      }
+    },
+    
+	//Custom Locations
     {
       "Action": "Load",
       "Priority": "Low",
