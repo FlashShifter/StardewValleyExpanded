@@ -674,7 +674,7 @@ namespace StardewValleyExpanded
         {
             public static void Postfix(Building __instance, int tile_x, int tile_y, string property_name, string layer_name, ref string property_value, ref bool __result)
             {
-                if (__instance.buildingType.Value == "FlashShifter.StardewValleyExpandedCP_PremiumBarn")
+                if (__instance.buildingType.Value == "FlashShifter.StardewValleyExpandedCP_PremiumBarn" && __instance.daysOfConstructionLeft.Value <= 0)
                 {
                     var interior = __instance.GetIndoors();
                     if (tile_x == __instance.tileX.Value + __instance.humanDoor.X + 8 &&
@@ -701,7 +701,7 @@ namespace StardewValleyExpanded
                     return;
                 }
 
-                if (__instance.buildingType.Value == "FlashShifter.StardewValleyExpandedCP_PremiumBarn")
+                if (__instance.buildingType.Value == "FlashShifter.StardewValleyExpandedCP_PremiumBarn" && __instance.daysOfConstructionLeft.Value <= 0)
                 {
                     var interior = __instance.GetIndoors();
                     if (tileLocation.X == __instance.tileX.Value + __instance.humanDoor.X + 8 &&
@@ -784,7 +784,9 @@ namespace StardewValleyExpanded
                 if (location.Name != "FlashShifter.StardewValleyExpandedCP_Winery")
                     return;
 
-                __instance.MinutesUntilReady = Math.Max( 1, (int)((__instance.MinutesUntilReady / 10) * 0.85f) ) * 10;
+                //__instance.MinutesUntilReady = Math.Max( 1, (int)((__instance.MinutesUntilReady / 10) * 0.85f) ) * 10;
+                if (__instance is Cask cask)
+                    cask.agingRate.Value *= 0.85f;
             }
         }
 
