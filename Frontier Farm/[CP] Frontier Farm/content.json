@@ -17,6 +17,14 @@
       "AllowValues": "true, false",
       "Default": "false"
     },
+	"RemoveEasternVerticalFence": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveStonePathways": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
 	"SmallerBackyardFence": {
       "AllowValues": "true, false",
       "Default": "false"
@@ -738,6 +746,25 @@
 	
     //Configurations
     
+
+	//RemoveStonePathways
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_RemoveStonePathways.tmx",
+	  "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveStonePathways": true,
+		"SandboxLayout": false
+      }
+    },
 	//Removes Picnic Table
     {
       "Action": "EditMap",
@@ -754,6 +781,22 @@
 		"RemovePicnicTable": true
       }
     },
+	//Remove Vertical Fence
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_VerticalFenceRemoved.tmx",
+      "ToArea": {
+        "X": 131,
+        "Y": 30,
+        "Width": 5,
+        "Height": 27
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveEasternVerticalFence": true
+      }
+    },	
 	//Smaller Backyard Fence
     {
       "Action": "EditMap",
@@ -1177,7 +1220,6 @@
       "Action": "EditData",
       "Target": "data/events/farm",
       "When": {
-        "HasFlag |contains=beenToWoods": true,
         "HasSeenEvent |contains=1000034": true,
         "FarmType": "FrontierFarm",
       },
@@ -1507,23 +1549,36 @@
 		"InstantlyUnlockDesertShortcut": false
       },
       "Entries": {
-        "1337439/t 2000 2600/H": "continue/118 26/farmer 118 26 2 Dwarf 118 27 0/skippable/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.11}}\"/pause 500/emote farmer 32/pause 350/end dialogue Dwarf \"{{i18n:DwarfTunnel.12}}\"",
+        "1337439/t 1800 2600/H": "continue/118 26/farmer 118 26 2 Dwarf 118 27 0/skippable/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.11}}\"/pause 500/emote farmer 32/pause 350/end dialogue Dwarf \"{{i18n:DwarfTunnel.12}}\"",
       },
     },
     //Event #4 - Calico Desert Shortcut - Bomb Explosions
-    {
+	{
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasFlag": "DesertTunnel",
+        "HasSeenEvent: anyPlayer|contains=1337439": true,
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "1337440/t 600 2600/H": "continue/-300 -300/farmer -1000 -1000 2/pause 500/globalFade/viewport -1000 -1000/pause 500/ignoreEventTileOffset/viewport 103 7 clamp true/pause 1000/playSound explosion/pause 1000/playSound explosion/pause 600/playSound explosion/pause 800/playSound explosion/pause 1250/end",
+      },
+    },
+    /*{
       "Action": "EditData",
       "Target": "data/events/farmhouse",
       "When": {
         "FarmType": "FrontierFarm",
         "HasFlag": "DesertTunnel",
-        "HasSeenEvent |contains=1337439": true,
+        "HasSeenEvent: anyPlayer|contains=1337439": true,
 		"InstantlyUnlockDesertShortcut": false
       },
       "Entries": {
         "1337440/t 600 2600/H": "none/-300 -300/farmer -1000 -1000 2/pause 1000/playSound explosion/pause 1000/playSound explosion/pause 600/playSound explosion/pause 800/playSound explosion/pause 2000/message \"{{i18n:DwarfTunnel.13}}\"/pause 1250/end",
       },
-    },
+    },*/
     //Map Patches
     {
       "Action": "EditMap",
@@ -1537,6 +1592,7 @@
       },
       "When": {
         "FarmType": "FrontierFarm",
+		"HasFlag": "DesertTunnel",
         "HasSeenEvent: anyPlayer|contains=1337439": true,
 		"InstantlyUnlockDesertShortcut": false
       }
@@ -1553,6 +1609,7 @@
       },
       "When": {
         "FarmType": "FrontierFarm",
+		"HasFlag": "DesertTunnel",
         "HasSeenEvent: anyPlayer|contains=1337439": true,
 		"InstantlyUnlockDesertShortcut": false
       }
@@ -1786,7 +1843,7 @@
 		"InstantlyUnlockBridge": false
       },
       "Entries": {
-        "1337427/t 2000 2600": "none/-200 -200/Camilla 10 41 2/ignoreEventTileOffset/pause 1000/changeLocation Farm/ambientLight 130 130 130/playMusic spring_night_ambient/animate Camilla false true 1000 18 19/viewport 10 41 clamp true/pause 2000/glow 0 0 255 true/playSound healSound/pause 1000/glow 0 255 0 false/pause 1000/playSound cacklingWitch/pause 500/glow 255 0 0 false/playSound healSound/pause 1760/glow 0 0 255 false/playSound healSound/pause 1760/glow 0 255 0 false/playSound healSound/pause 1000/globalFade/viewport -300 -300/pause 1000/end",
+        "1337427/t 600 2600": "continue/-200 -200/Camilla 10 41 2/ignoreEventTileOffset/pause 1000/changeLocation Farm/animate Camilla false true 1000 18 19/viewport 10 41 clamp true/pause 2000/glow 0 0 255 true/playSound healSound/pause 1000/glow 0 255 0 false/pause 1000/playSound cacklingWitch/pause 500/glow 255 0 0 false/playSound healSound/pause 1760/glow 0 0 255 false/playSound healSound/pause 1760/glow 0 255 0 false/playSound healSound/pause 1000/globalFade/viewport -300 -300/pause 1000/end",
       },
     },
     //Map Patches

@@ -199,7 +199,7 @@
                 "HasMod |contains=CasualInvidia.SpousesReactToDeath": false
             },
             "Entries": {
-                "PlayerKilled": "none/-100 -100/farmer 19 10 2 MarlonFay 18 10 1/addTemporaryActor GilSprite 19 32 21 10 2/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/speak MarlonFay \"@!$1\"/viewport 19 10 true/pause 1000/speak MarlonFay \"{{i18n:Mines.PlayerKilled.01}}\"/pause 500/showFrame 0/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 28/minedeath/end dialogue MarlonFay \"{{i18n:Mines.PlayerKilled.02}}\""
+                "PlayerKilled": "none/-100 -100/farmer 19 10 2 MarlonFay 18 10 1/addTemporaryActor GilSprite 19 32 21 10 2/pause 1500/showFrame 5/message \"{{i18n:Death.String.1}}\"/pause 1000/speak MarlonFay \"{{i18n:Death.String.2}}\"/viewport 19 10 true/pause 1000/speak MarlonFay \"{{i18n:Mines.PlayerKilled.01}}\"/pause 500/showFrame 0/pause 1000/faceDirection farmer 3 true/pause 500/emote farmer 28/minedeath/end dialogue MarlonFay \"{{i18n:Mines.PlayerKilled.02}}\""
             },
         },
         { //Lance - Ginger Island
@@ -211,7 +211,7 @@
                 "HasMod |contains=CasualInvidia.SpousesReactToDeath": false
             },
             "Entries": {
-                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Lance 15 33 3/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.01}}\"/viewport 13 33 clamp true/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.02}}\"/showFrame 0/pause 1000/emote farmer 28/minedeath/end"
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Lance 15 33 3/pause 1500/showFrame 5/message \"{{i18n:Death.String.1}}\"/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.01}}\"/viewport 13 33 clamp true/pause 1000/speak Lance \"{{i18n:Island.PlayerKilled.02}}\"/showFrame 0/pause 1000/emote farmer 28/minedeath/end"
             },
         },
         { //ENTER JUNIMMO WOODS
@@ -397,18 +397,18 @@
             "Action": "EditData",
             "Target": "data/events/farm",
             "When": {
-                "HasSeenEvent:anyPlayer |contains=191393, 502261": true,
+                //"HasSeenEvent:anyPlayer |contains=191393, 502261": true,
 				"HasSeenEvent:anyPlayer |contains=5553213": false
             },
             "Entries": {
                 "8402752/s 348 500/t 600 1150": "continue/-500 -500/farmer 1 1 1 Lewis 1 1 1/pause 1500/speak Lewis \"{{i18n:Winery.Unlocked.1}}\"/pause 600/emote farmer 32 true/pause 250/globalFade/viewport -1000 -1000/pause 1000/end dialogue Lewis \"{{i18n:Winery.Unlocked.1}}\""
             },
         },
-		{   //Winery Unlocked - Morris - player sold 500 wine bottles
+		{   //Winery Unlocked - Morris is mayor - player sold 500 wine bottles
             "Action": "EditData",
             "Target": "data/events/farm",
             "When": {
-                "HasSeenEvent:anyPlayer |contains=502261": true,
+                //"HasSeenEvent:anyPlayer |contains=502261": true,
 				"HasSeenEvent:anyPlayer |contains=5553213": true
             },
             "Entries": {

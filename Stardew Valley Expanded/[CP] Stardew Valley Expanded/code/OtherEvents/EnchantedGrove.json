@@ -447,6 +447,7 @@
             "LogName": "Statue Warp Graphic",
             "Action": "EditMap",
             "Target": "Maps/{{SelectedWarpMap}}",
+			"Priority": "Late",
             "FromFile": "assets/Maps/MapPatches/EnchantedGrove_Farm.tbin",
             "ToArea": {
                 "X": "{{Query: {{Ench_Grove_X}}-1}}",
@@ -458,12 +459,13 @@
                 "HasSeenEvent: anyPlayer| contains=908074": true
             },
             "Update": "OnLocationChange",
-            "PatchMode": "Overlay"
+            "PatchMode": "Overlay",
         },
         {
             "LogName": "Patches warp point on farm",
             "Action": "EditMap",
             "Target": "Maps/{{SelectedWarpMap}}",
+			"Priority": "Late",
             "When": {
                 "HasSeenEvent: anyPlayer| contains=908074": true,
             },
@@ -485,6 +487,7 @@
             "LogName": "Statue Light",
             "Action": "EditMap",
             "Target": "Maps/{{SelectedWarpMap}}",
+			"Priority": "Late",
             "When": {
                 "HasSeenEvent: anyPlayer| contains=908074": true,
             },
@@ -505,8 +508,9 @@
             "LogName": "Patches Warp point at enchanted grove - to farm",
             "Action": "EditMap",
             "Target": "Maps/Custom_EnchantedGrove",
+			"Priority": "Late",
             "When": {
-                "SelectedWarpMap |contains=Custom_GrandpasShedOutside": false
+                "SelectedWarpMap": "{{FarmMapAsset}}"
             },
             "Update": "OnLocationChange",
             "MapTiles": [
@@ -526,6 +530,7 @@
             "LogName": "Patches Warp point at enchanted grove - to Grandpa's Shed",
             "Action": "EditMap",
             "Target": "Maps/Custom_EnchantedGrove",
+			"Priority": "Late",
             "When": {
                 "SelectedWarpMap": "Custom_GrandpasShedOutside"
             },
@@ -738,9 +743,9 @@
                 "Height": 4
             },
             "When": {
-                "HasSeenEvent|contains=908072": true,
-                "HasSeenEvent|contains=908090": false,
-                "HasFlag |contains=jojaMember": true
+                "HasSeenEvent: anyPlayer| contains=908072": true,
+                "HasSeenEvent: anyPlayer| contains=908090": false,
+                "HasFlag: anyPlayer| contains=jojaMember": true
             },
             "Update": "OnLocationChange"
         },
@@ -755,8 +760,8 @@
                 "Height": 4
             },
             "When": {
-                "HasSeenEvent|contains=908090": true,
-                "HasFlag |contains=jojaMember": true
+                "HasSeenEvent: anyPlayer| contains=908090": true,
+                "HasFlag: anyPlayer| contains=jojaMember": true
             },
             "Update": "OnLocationChange"
         },
@@ -771,8 +776,8 @@
                 "Height": 10
             },
             "When": {
-                "HasSeenEvent|contains=908090": true,
-                "HasFlag |contains=jojaMember": true
+                "HasSeenEvent: anyPlayer| contains=908090": true,
+                "HasFlag: anyPlayer| contains=jojaMember": true
             },
             "Update": "OnLocationChange"
         },
@@ -787,8 +792,8 @@
                 "Height": 5
             },
             "When": {
-                "HasSeenEvent": "908090",
-                "HasFlag |contains=jojaMember": true
+                "HasSeenEvent: anyPlayer| contains=908090": true,
+                "HasFlag: anyPlayer| contains=jojaMember": true
             },
             "Update": "OnLocationChange"
         },
@@ -804,7 +809,7 @@
                 "Height": 4
             },
             "When": {
-                "HasSeenEvent|contains=7776012": true
+                "HasSeenEvent: anyPlayer| contains=7776012": true
             },
             "Update": "OnLocationChange"
         },
@@ -819,7 +824,7 @@
                 "Height": 4
             },
             "When": {
-                "HasSeenEvent|contains=7776012": true
+                "HasSeenEvent: anyPlayer| contains=7776012": true
             },
             "Update": "OnLocationChange"
         },
@@ -834,7 +839,7 @@
                 "Height": 10
             },
             "When": {
-                "HasSeenEvent|contains=7776012": true
+                "HasSeenEvent: anyPlayer| contains=7776012": true
             },
             "Update": "OnLocationChange"
         },
@@ -849,7 +854,7 @@
                 "Height": 5
             },
             "When": {
-                "HasSeenEvent|contains=7776012": true
+                "HasSeenEvent: anyPlayer| contains=7776012": true
             },
             "Update": "OnLocationChange"
         },
@@ -858,7 +863,7 @@
             "Action": "EditData",
             "Target": "data/events/Custom_SpriteSpring2",
             "When": {
-                "HasSeenEvent |contains=1111200": true
+                "HasSeenEvent: anyPlayer| contains=1111200": true
             },
             "Entries": {
                 "908076/e 908072": "none/-500 -500/farmer 11 23 1/pause 1000/playMusic FlashShifter.StardewValleyExpandedCP_GrenvilleFalls/pause 800/viewport 16 23 clamp true/skippable/move farmer 5 0 1/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/faceDirection farmer 0 true/pause 200/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.01}}\"/pause 600/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.02}}\"/pause 500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.03}}\"/pause 750/playSound pickUpItem/pause 1250/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 300/showFrame farmer 57 true/itemAboveHead joja/pause 3300/faceDirection farmer 2 true/pause 750/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/playSound junimoMeep1/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 400/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 400/message \"{{i18n:EnchantedGrove.Sprite.04}}\"/pause 850/faceDirection farmer 1 true/pause 500/globalFade/viewport -1000 -1000/pause 650/playSound pullItemFromWater/pause 800/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 500/playSound waterSlosh/pause 250/warp farmer 52 19/faceDirection farmer 2 true/pause 1000/viewport 52 20 clamp true/pause 2250/showFrame farmer 1 true/pause 125/startJittering/addTemporaryActor TulipBouquetObject 16 32 52 20 2 false/playSound stoneStep/pause 400/stopJittering/showFrame farmer 0/pause 1135/showFrame farmer 3 true/pause 950/screenFlash 2/playSound wand/playSound wand/addTemporaryActor MagicWarp 48 48 51 21 2 false/warp TulipBouquetObject -20 -20/addLantern 1000 52 20 1/pause 700/faceDirection farmer 2 true/playSound secret1/pause 2500/globalFade/viewport -1000 -1000/pause 1000/end warpOut",
@@ -1017,7 +1022,7 @@
                 "Height": 3
             },
             "When": {
-                "HasSeenEvent": "908091"
+                "HasSeenEvent: anyPlayer| contains=908091": true
             },
             "Update": "OnLocationChange"
         },
@@ -1025,7 +1030,7 @@
             "Action": "EditMap",
             "Target": "Maps/Town",
             "When": {
-                "HasSeenEvent": "908091"
+                "HasSeenEvent: anyPlayer| contains=908091": true
             },
             "Update": "OnLocationChange",
             "TextOperations": [
@@ -1051,7 +1056,7 @@
                 "Height": 11
             },
             "When": {
-                "HasFlag |contains=jojaMember": true
+                "HasFlag: anyPlayer| contains=jojaMember": true
             },
             "Update": "OnLocationChange"
         },
@@ -1066,7 +1071,7 @@
                 "Height": 5
             },
             "When": {
-                "HasSeenEvent": "908091"
+                "HasSeenEvent: anyPlayer| contains=908091": true
             },
             "Update": "OnLocationChange"
         },
@@ -1202,7 +1207,7 @@
             "Action": "EditMap",
             "Target": "Maps/Custom_JunimoWoods",
             "When": {
-                "HasSeenEvent": "908077"
+                "HasSeenEvent: anyPlayer| contains=908077": true
             },
             "Update": "OnLocationChange",
             "TextOperations": [
@@ -1391,7 +1396,7 @@
                 "Height": 15
             },
             "When": {
-                "HasSeenEvent |contains=908078": false
+                "HasSeenEvent: anyPlayer| contains=908078": false
             },
             "Update": "OnLocationChange"
         },
@@ -1406,7 +1411,7 @@
                 "Height": 5
             },
             "When": {
-                "HasSeenEvent": "908078"
+                "HasSeenEvent: anyPlayer| contains=908078": true
             },
             "Update": "OnLocationChange"
         },

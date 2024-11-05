@@ -85,7 +85,7 @@
                "Target": "Maps/Custom_MorrisHouse",
                "FromFile": "Assets/Maps/MapPatches/AuroraVineyardDeedShop.tbin",
                "When": {
-                    "HasSeenEvent": "746153083"
+                    "HasSeenEvent: anyPlayer| contains=746153083": true
                },
                "ToArea": {
                     "X": 4,
@@ -445,7 +445,7 @@
                     "Height": 29
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -471,6 +471,17 @@
                },
                "Update": "OnLocationChange"
           },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "AllowGiantCrops": "T"
+               },
+               "When": {
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
+               },
+               "Update": "OnLocationChange"
+          },
           {
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
@@ -478,7 +489,7 @@
                     "IsFarm": "T"
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -489,7 +500,18 @@
                     "ForceAllowTreePlanting": "T"
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
+               },
+               "Update": "OnLocationChange"
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "AllowGiantCrops": "T"
+               },
+               "When": {
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -519,7 +541,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -546,7 +568,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -584,7 +606,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -622,7 +644,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -661,7 +683,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard",
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true,
                     "Season": "Winter"
                },
                "Update": "OnLocationChange",

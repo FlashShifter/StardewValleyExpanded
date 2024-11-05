@@ -405,6 +405,14 @@
         "1004200_Agree": "pause 1000/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.01}}\"/pause 1500/showFrame MarlonFay 18/pause 1500/showFrame MarlonFay 0/pause 1200/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.02}}\"/pause 800/move MarlonFay 0 8 2 true/move farmer -1 0 2 true/pause 2000/globalFade/viewport -1000 -1000/pause 1200/end dialogue MarlonFay \"{{i18n:Marlon.4hearts.Agree.03}}\"",
       },
     },
+	{ //MARLON 4 HEART EVENT < expanded on during the "Legendary Trio" questline - not raining and is 6am ~ 6pm
+      "Action": "EditData",
+      "Target": "data/events/railroad",
+      "Entries": {
+        "1004200/b 1/w sunny/f MarlonFay 1000/t 600 1800": "fall_day_ambient/-500 -500/farmer 24 37 0 MarlonFay 24 15 2/pause 1000/skippable/viewport 22 28 true/viewport move 0 -1 4000 true/move MarlonFay 0 9 2 true/move farmer 0 -11 0 true/pause 5000/speak MarlonFay \"{{i18n:Marlon.4hearts.01}}\"/pause 1150/speak MarlonFay \"{{i18n:Marlon.4hearts.02}}\"/pause 1200/showFrame MarlonFay 19/pause 1600/speak MarlonFay \"{{i18n:Marlon.4hearts.03}}\"/pause 750/showFrame MarlonFay 0/pause 1250/speak MarlonFay \"{{i18n:Marlon.4hearts.04}}\"/pause 500/emote MarlonFay 40/speak MarlonFay \"{{i18n:Marlon.4hearts.05}}\"/move MarlonFay 0 1 2/pause 700/speak MarlonFay \"{{i18n:Marlon.4hearts.06}}\"/pause 500/question fork0 \"{{i18n:Marlon.4hearts.07}}\"/fork 1004200_Agree/pause 1000/speak MarlonFay \"{{i18n:Marlon.4hearts.08}}\"/pause 1200/speak MarlonFay \"{{i18n:Marlon.4hearts.09}}\"/move MarlonFay 0 8 2 true/move farmer -1 0 2 true/pause 2000/globalFade/viewport -1000 -1000/pause 1200/end position 21 27",
+        "1004200_Agree": "pause 1000/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.01}}\"/pause 1500/showFrame MarlonFay 18/pause 1500/showFrame MarlonFay 0/pause 1200/speak MarlonFay \"{{i18n:Marlon.4hearts.Agree.02}}\"/pause 800/move MarlonFay 0 8 2 true/move farmer -1 0 2 true/pause 2000/globalFade/viewport -1000 -1000/pause 1200/end dialogue MarlonFay \"{{i18n:Marlon.4hearts.Agree.03}}\"",
+      },
+    },
     { //SLIME HUTCH EGGS
       "Action": "EditData",
       "Target": "Data/Events/farm",
@@ -527,7 +535,7 @@
 	  "When": {
 	    "HasSeenEvent: AnyPlayer|contains=1925178": true, //player has been to treasure cave in the badlands
 		"HasSeenEvent: AnyPlayer|contains=55134263": true, //highland dwarf vendor unlocked
-		"HasSeenEvent: AnyPlayer|contains=1337731": true, //henchman npc unlocked
+		"HasSeenEvent: AnyPlayer|contains=1337731, 181091231": true, //henchman npc unlocked
 		"HasSeenEvent: AnyPlayer|contains=1004200": true, //marlon 4 heart
 	  },
       "Entries": {

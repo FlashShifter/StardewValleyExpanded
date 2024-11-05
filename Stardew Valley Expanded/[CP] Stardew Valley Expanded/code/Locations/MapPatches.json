@@ -1747,6 +1747,21 @@
                     "Height": 1
                }
           },
+		  { //Patches Witch Hut warp in wizard tower
+               "Action": "EditMap",
+               "Target": "Maps/Custom_WizardBasement",
+               "FromFile": "Assets/Maps/MapPatches/WizardBasement_WitchHut.tbin",
+               "When": {
+                    "HasWalletItem": "MagicInk"
+               },
+			   "Update": "OnLocationChange",
+               "ToArea": {
+                    "X": 11,
+                    "Y": 18,
+                    "Width": 1,
+                    "Height": 1
+               }
+          },
           /*{
                //Overrides grampleton fields music que during rainy days
                "Action": "EditMap",
@@ -3062,7 +3077,7 @@
                     "FarmType": "Standard"
                },
                "Entries": {
-                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{FarmName}} {{i18n:Farm}}^@ {{FarmName}} {{i18n:Farm}}",
+                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{i18n:Farm |FarmName={{FarmName}}}}^@ {{i18n:Farm |FarmName={{FarmName}}}}",
                }
           },
           {
@@ -3073,7 +3088,7 @@
                     "FarmType": "Standard"
                },
                "Entries": {
-                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{FarmName}} {{i18n:Farm}}^@ {{FarmName}} {{i18n:Farm}}",
+                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{i18n:Farm |FarmName={{FarmName}}}}^@ {{i18n:Farm |FarmName={{FarmName}}}}",
                }
           },
 		  

@@ -118,6 +118,16 @@
       "Default": "false",
       "Description": "Dramatically increases monster spawns and difficulty traversing the Crimson Badlands - the adventurer's true test. This toggle is very resource intensive, so having a strong PC is recommended.",
     },
+	"LowMemoryBadlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Massively reduces monster spawns in the Crimson Badlands to conserve memory for weak devices.",
+    },
+	"LowMemoryHighlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Massively reduces monster spawns in the Highlands to conserve memory for weak devices.",
+    },
     "OlderSophiaPortraits": {
       "AllowValues": "true, false",
       "Default": "false",
@@ -182,7 +192,29 @@
       "When": {
         "ChallengingHighlandsCavern": "false"
       }
-    },	
+    },
+	{
+      "Name": "LowMemoryBadlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "LowMemoryBadlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "LowMemoryBadlands": "false"
+      }
+    },
+	{
+      "Name": "LowMemoryHighlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "LowMemoryHighlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "LowMemoryBadlands": "false"
+      }
+    },
     //// Map where Ench Grove warp is placed
     {
       "Name": "SelectedWarpMap",
@@ -934,7 +966,7 @@
               "Id": "SVE_ChallengingBadlands",
               "Trigger": "DayStarted",
               "HostOnly": true,
-              "Action": "{{ChallengingBadlandsToken}} Current SVE_ChallengingBadlands",
+              "Action": "{{ChallengingBadlandsToken}} Current SVE_ChallengingBadlands received",
               "MarkActionApplied": false
           }
       }
@@ -947,7 +979,7 @@
               "Id": "SVE_ChallengingMarshlands",
               "Trigger": "DayStarted",
               "HostOnly": true,
-              "Action": "{{ChallengingMarshlandsToken}} Current SVE_ChallengingMarshlands",
+              "Action": "{{ChallengingMarshlandsToken}} Current SVE_ChallengingMarshlands received",
               "MarkActionApplied": false
           }
       }
@@ -960,12 +992,40 @@
               "Id": "SVE_ChallengingHighlandsCavern",
               "Trigger": "DayStarted",
               "HostOnly": true,
-              "Action": "{{ChallengingHighlandsCavernToken}} Current SVE_ChallengingHighlandsCavern",
+              "Action": "{{ChallengingHighlandsCavernToken}} Current SVE_ChallengingHighlandsCavern received",
               "MarkActionApplied": false
           }
       }
     },
-    
+	
+	//Low memory config trigger actions
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_LowMemoryBadlands": {
+              "Id": "SVE_LowMemoryBadlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{LowMemoryBadlandsToken}} Current SVE_LowMemoryBadlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_LowMemoryHighlands": {
+              "Id": "SVE_LowMemoryHighlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{LowMemoryHighlandsToken}} Current SVE_LowMemoryHighlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	
 	//Custom Locations
     {
       "Action": "Load",
@@ -1456,7 +1516,7 @@
     },
     {
       "Action": "Include",
-      "FromFile": "code/other/jukebox.json, code/items/Boots.json, code/other/Bundles.json, code/other/music.json, code/other/FarmAnimals.json, code/other/mail.json, code/locations/Critters.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/Locations/MapPatches.json, code/other/Strings.json, code/Other/Monsters.json, code/other/Fish.json, code/other/IncomingPhoneCalls.json, code/other/Buildings.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json, code/Locations/CJBWarps.json"
+      "FromFile": "code/other/jukebox.json, code/items/Boots.json, code/other/Bundles.json, code/other/music.json, code/other/FarmAnimals.json, code/other/mail.json, code/locations/Critters.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/other/Strings.json, code/Locations/MapPatches.json, code/Other/Monsters.json, code/other/Fish.json, code/other/IncomingPhoneCalls.json, code/other/Buildings.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json, code/Locations/CJBWarps.json"
     },
     {
       "Action": "Include",
