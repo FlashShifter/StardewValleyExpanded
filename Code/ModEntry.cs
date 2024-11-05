@@ -314,13 +314,13 @@ namespace StardewValleyExpanded
                     }
                 }
 
-                foreach (var light in Game1.currentLightSources.ToList())
+                foreach (var light in Game1.currentLightSources.Values.ToList())
                 {
                     if (light.textureIndex.Value == LightSource.townWinterTreeLight &&
                         light.position.Value == new Vector2(56, 46) * Game1.tileSize +
                         new Vector2(Game1.tileSize * 2, Game1.tileSize * 2.5f))
                     {
-                        Game1.currentLightSources.Remove(light);
+                        Game1.currentLightSources.Remove(light.Id);
                     }
                 }
             }
@@ -364,12 +364,12 @@ namespace StardewValleyExpanded
                 if (b.buildingType.Value == "FlashShifter.StardewValleyExpandedCP_PremiumBarn")
                 {
                     Point tileLoc = new(b.tileX.Value + 2, b.tileY.Value + 2);
-                    var l = new LightSource(4, tileLoc.ToVector2() * Game1.tileSize, 1f, Color.Black, tileLoc.X * 2000 + tileLoc.Y);
-                    Game1.currentLightSources.Add(l);
+                    var l = new LightSource($"SVE_PremiumBarnLight_{b.tileX.Value}_{b.tileY.Value}_1", 4, tileLoc.ToVector2() * Game1.tileSize, 1f, Color.Black, LightSource.LightContext.None);
+                    Game1.currentLightSources.Add(l.Id, l);
 
                     tileLoc = new(b.tileX.Value + 8, b.tileY.Value + 2);
-                    l = new LightSource(4, tileLoc.ToVector2() * Game1.tileSize, 1f, Color.Black, tileLoc.X * 2000 + tileLoc.Y);
-                    Game1.currentLightSources.Add(l);
+                    l = new LightSource($"SVE_PremiumBarnLight_{b.tileX.Value}_{b.tileY.Value}_2",4, tileLoc.ToVector2() * Game1.tileSize, 1f, Color.Black, LightSource.LightContext.None);
+                    Game1.currentLightSources.Add(l.Id, l);
                 }
             }
         }
@@ -536,9 +536,9 @@ namespace StardewValleyExpanded
             {
                 if (Game1.IsFall && Game1.dayOfMonth == 17)
                 {
-                    __instance.moveObject(9, 86, 7, 89, null);
-                    __instance.moveObject(21, 89, 22, 89, null);
-                    __instance.moveObject(63, 63, 55, 68, null);
+                    __instance.moveContents(9, 86, 7, 89, null);
+                    __instance.moveContents(21, 89, 22, 89, null);
+                    __instance.moveContents(63, 63, 55, 68, null);
                     __instance.tryPlaceObject(new Vector2(105, 90f), ItemRegistry.Create<StardewValley.Object>("(O)746"));
 
                     var f1 = __instance.furniture.FirstOrDefault(f => f.TileLocation == new Vector2(43, 89));
@@ -786,7 +786,7 @@ namespace StardewValleyExpanded
 
                 //__instance.MinutesUntilReady = Math.Max( 1, (int)((__instance.MinutesUntilReady / 10) * 0.85f) ) * 10;
                 if (__instance is Cask cask)
-                    cask.agingRate.Value *= 0.85f;
+                    cask.agingRate.Value /= 0.85f;
             }
         }
 
@@ -807,7 +807,7 @@ namespace StardewValleyExpanded
                     __result = false;
                     return false;
                 }
-                bool normal_gameplay = !Game1.eventUp && !Game1.isFestival() && !Game1.fadeToBlack && !Game1.player.swimming && !Game1.player.bathingClothes && !Game1.player.onBridge.Value;
+                bool normal_gameplay = !Game1.eventUp && !Game1.isFestival() && !Game1.fadeToBlack && !Game1.player.swimming.Value && !Game1.player.bathingClothes.Value && !Game1.player.onBridge.Value;
                 if (normal_gameplay)
                 {
                     Game1.playSound("warrior");

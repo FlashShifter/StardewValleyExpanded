@@ -79,7 +79,7 @@ namespace StardewValleyExpanded
 
         private static void Prefix(WorldChangeEvent __instance, ref Point targetTile)
         {
-            if (__instance.whichEvent == 8 || __instance.whichEvent == 9)
+            if (__instance.whichEvent.Value == 8 || __instance.whichEvent.Value == 9)
                 targetTile = new Point(48, 11);
         }
 

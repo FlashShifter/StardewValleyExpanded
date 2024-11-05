@@ -62,7 +62,8 @@ namespace StardewValleyExpanded
                         if (location.getTileIndexAt(x, y, "Front") == 3189) //if this tile should have a lightsource
                         {
                             //add a light to it
-                            Game1.currentLightSources.Add(new LightSource(
+                            Game1.currentLightSources.Add($"SVE_FH_{x}_{y}_FrontTile3189", new LightSource(
+                                $"SVE_FH_{x}_{y}_FrontTile3189",
                                 LightSource.sconceLight,                    //light type (affects shape; see the Light map property)
                                 new Vector2((x * 64) + 32, (y * 64) + 32),  //pixel position
                                 1f,                                         //radius (2f = double size, etc; higher values may ignore color)

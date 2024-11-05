@@ -240,15 +240,15 @@ namespace StardewValleyExpanded
                 {
                     id = (int)(position.X * 10099f + position.Y * 77f + (float)Game1.random.Next(99999));
                     light = new LightSource(
+                    $"SVEFirefly_{id}",
                     lightType, //use lightType
                     position,
                     (float)Game1.random.Next(4, 6) * 0.1f,
                     lightColor ?? (Color.Purple * 0.8f), //use lightColor if provided
-                    id,
                     LightSource.LightContext.None,
                     0L
                 );
-                    Game1.currentLightSources.Add(light);
+                    Game1.currentLightSources.Add(light.Id, light);
                 }
 
                 this.bodyColor = bodyColor ?? Color.White; //set body color (default white if not provided)

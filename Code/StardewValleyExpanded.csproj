@@ -24,6 +24,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+	
+	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
+		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
+	</PropertyGroup>
   
   <!-- mac workaround, remove later -->
   <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">

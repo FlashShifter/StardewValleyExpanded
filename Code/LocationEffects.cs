@@ -49,7 +49,7 @@ namespace StardewValleyExpanded
             Game1.ambientLight.A = (byte)Utility.Lerp((int)data.ambientLightColor.A, (int)Game1.outdoorLight.A, lerp);
             Color light_color = Color.Black;
             light_color.A = (byte)Utility.Lerp(255f, 0f, light_lerp);
-            foreach (LightSource light in Game1.currentLightSources)
+            foreach (LightSource light in Game1.currentLightSources.Values)
             {
                 if (light.lightContext.Value == LightSource.LightContext.MapLight)
                 {

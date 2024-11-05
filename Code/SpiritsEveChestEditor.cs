@@ -122,7 +122,7 @@ namespace SpiritsEveChestEditor
             Vector2 newTile = GetChestTile(); //get the chest's new tile position
 
             Vector2 oldTile = chest.TileLocation; //get the chest's original tile
-            Game1.currentLocation.moveObject((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y, null); //move the chest to its new tile
+            Game1.currentLocation.moveContents((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y, null); //move the chest to its new tile
             chest.Items.Clear(); //clear the old list of items
             chest.Items.AddRange(newItems); //add the new list of items
 
