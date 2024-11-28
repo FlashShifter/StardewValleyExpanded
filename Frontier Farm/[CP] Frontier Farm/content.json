@@ -25,6 +25,10 @@
       "AllowValues": "true, false",
       "Default": "false"
     },
+	"RemoveTreeHidingBackyardMouseStatue": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
 	"SmallerBackyardFence": {
       "AllowValues": "true, false",
       "Default": "false"
@@ -747,7 +751,7 @@
     //Configurations
     
 
-	//RemoveStonePathways
+	//Remove Stone Pathways
 	{
       "Action": "EditMap",
       "Target": "Maps/Farm_FrontierFarm",
@@ -763,6 +767,22 @@
         "FarmType": "FrontierFarm",
 		"RemoveStonePathways": true,
 		"SandboxLayout": false
+      }
+    },
+	//Remove Tree Hiding Backyard Mouse Statue
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_RemoveTreeHidingBackyardMouseStatue.tmx",
+      "ToArea": {
+        "X": 105,
+        "Y": 10,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveTreeHidingBackyardMouseStatue": true
       }
     },
 	//Removes Picnic Table
@@ -1169,7 +1189,7 @@
             {
               "Type": "Donate",
               "Text": "[GilMinecarts_Objective_1_Text]",
-              "RequiredCount": "12",
+              "RequiredCount": "24",
               "Data": {
                 "DropBox": "GilMinecartsChest",
                 "DropBoxGameLocation": "Farm",
@@ -1180,7 +1200,7 @@
             {
               "Type": "Donate",
               "Text": "[GilMinecarts_Objective_2_Text]",
-              "RequiredCount": "12",
+              "RequiredCount": "24",
               "Data": {
                 "DropBox": "GilMinecartsChest",
                 "DropBoxGameLocation": "Farm",
@@ -1255,7 +1275,6 @@
         "1337431/t 600 1150/H": "continue/118 26/farmer 118 26 2 MarlonFay 118 27 0/skippable/pause 1000/speak MarlonFay \"{{i18n:MarlonMinecarts.03}}\"/pause 500/emote farmer 32/end dialogue MarlonFay \"{{i18n:MarlonMinecarts.04}}\"",
       },
     },
-    //Map Patches
 	
     //Storage Chest
     {
@@ -1482,7 +1501,7 @@
             {
               "Type": "Deliver",
               "Text": "[DwarfCaveShortcut_Objective_1_Text]",
-              "RequiredCount": "20",
+              "RequiredCount": "36",
               "Data": {
                 "AcceptedContextTags": "item_diamond",
                 "TargetName": "Dwarf"
@@ -1549,7 +1568,7 @@
 		"InstantlyUnlockDesertShortcut": false
       },
       "Entries": {
-        "1337439/t 1800 2600/H": "continue/118 26/farmer 118 26 2 Dwarf 118 27 0/skippable/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.11}}\"/pause 500/emote farmer 32/pause 350/end dialogue Dwarf \"{{i18n:DwarfTunnel.12}}\"",
+        "1337439/t 600 2600/H": "continue/118 26/farmer 118 26 2 Dwarf 118 27 0/skippable/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.11}}\"/pause 500/emote farmer 32/pause 350/end dialogue Dwarf \"{{i18n:DwarfTunnel.12}}\"",
       },
     },
     //Event #4 - Calico Desert Shortcut - Bomb Explosions
@@ -1566,19 +1585,7 @@
         "1337440/t 600 2600/H": "continue/-300 -300/farmer -1000 -1000 2/pause 500/globalFade/viewport -1000 -1000/pause 500/ignoreEventTileOffset/viewport 103 7 clamp true/pause 1000/playSound explosion/pause 1000/playSound explosion/pause 600/playSound explosion/pause 800/playSound explosion/pause 1250/end",
       },
     },
-    /*{
-      "Action": "EditData",
-      "Target": "data/events/farmhouse",
-      "When": {
-        "FarmType": "FrontierFarm",
-        "HasFlag": "DesertTunnel",
-        "HasSeenEvent: anyPlayer|contains=1337439": true,
-		"InstantlyUnlockDesertShortcut": false
-      },
-      "Entries": {
-        "1337440/t 600 2600/H": "none/-300 -300/farmer -1000 -1000 2/pause 1000/playSound explosion/pause 1000/playSound explosion/pause 600/playSound explosion/pause 800/playSound explosion/pause 2000/message \"{{i18n:DwarfTunnel.13}}\"/pause 1250/end",
-      },
-    },*/
+
     //Map Patches
     {
       "Action": "EditMap",
@@ -1988,16 +1995,6 @@
 		"InstantlyUnlockBridge": true
       },
     },
-    /*
-              //Opening event pathing and viewport fix
-              {
-                "Action": "EditData",
-                "Target": "data/events/busstop",
-                "When": { "FarmType": "FrontierFarm" },
-                "Entries": {
-                "60367/u 0": "none/-1000 -1000/farmer 12 10 2 Robin 12 13 0 Lewis -100 -100 2/skippable/pause 500/playSound busDoorOpen/pause 5000/viewport 13 14 clamp true/move farmer 0 2 2/playMusic SettlingIn/speak Robin \"{{i18n:OpeningEvent.01}}\"/pause 400/faceDirection Robin 1 true/pause 250/faceDirection Robin 2 true/pause 400/viewport move 0 2 800/move Robin 0 5 2 true/pause 800/move farmer 0 4 2 true/fade/speed farmer 2/viewport -200 -200/changeLocation Farm/halt/warp Robin 132 28/faceDirection Robin 3/warp farmer 133 28/faceDirection farmer 3/viewport 126 28 clamp true/viewport move -1 0 4000/move Robin -8 0 3 farmer -8 0 3/pause 700/faceDirection Robin 2/speak Robin \"{{i18n:OpeningEvent.02}}\"/pause 500/faceDirection farmer 2/showFrame 94/jump farmer/startJittering/pause 1000/emote farmer 28/showFrame 0/stopJittering/pause 800/faceDirection Robin 1/pause 200/speak Robin \"{{i18n:OpeningEvent.03}}\"/pause 500/faceDirection farmer 3/pause 200/viewport move -1 0 5000/move Robin -7 0 0 farmer -7 0 0/pause 400/faceDirection Robin 0/speak Robin \"{{i18n:OpeningEvent.04}}\"/pause 300/faceDirection farmer 0/pause 500/playSound doorClose/warp Lewis 118 26/pause 1500/speak Lewis \"{{i18n:OpeningEvent.05}}\"/move Lewis 0 1 2/move Lewis 1 0 2/move Lewis 0 1 3/faceDirection farmer 1/faceDirection Robin 1/pause 600/speak Lewis \"{{i18n:OpeningEvent.06}}\"/pause 1000/faceDirection Lewis 3/pause 100/faceDirection Lewis 0/pause 500/speak Lewis \"{{i18n:OpeningEvent.07}}\"/pause 300/faceDirection Robin 0 true/faceDirection farmer 0/viewport move 0 -1 2000/pause 3000/speak Robin \"{{i18n:OpeningEvent.08}}\"/faceDirection Lewis 3 true/jump Lewis/shake Lewis 1600/textAboveHead Lewis \"{{i18n:OpeningEvent.09}}\"/showFrame Lewis 24/pause 500/faceDirection Robin 1 true/pause 100/faceDirection Robin 2 true/pause 100/animate Robin false true 100 32 33/faceDirection farmer 2/pause 1000/showFrame Lewis 12/stopAnimation Robin/pause 300/faceDirection Robin 1/showFrame Lewis 12/faceDirection farmer 1/speak Lewis \"{{i18n:OpeningEvent.10}}\"/showFrame Lewis 12/showFrame Robin 19/shake Robin 800/pause 1200/showFrame Robin 0/pause 600/animate Robin false true 300 34 35/textAboveHead Robin \"{{i18n:OpeningEvent.11}}\"/pause 1500/speak Lewis \"{{i18n:OpeningEvent.12}}\"/move Lewis 4 0 1 true/viewport move 1 0 2000/pause 3000/proceedPosition Lewis/faceDirection Lewis 0/pause 200/faceDirection Lewis 3/speak Lewis \"{{i18n:OpeningEvent.13}}\"/pause 300/faceDirection Lewis 0 true/pause 250/faceDirection Lewis 1 true/pause 285/move Lewis 8 0 1 true/faceDirection farmer 0/stopAnimation Robin/advancedMove Robin false 0 1 2 0 0 -1 5 0/pause 1000/globalFade/viewport -1000 -1000/playMusic none/pause 2000/playSound rooster/pause 1000/end beginGame",
-                }
-              },*/
 			  
     //Marnie mentions farm animals can't leave fenced in areas 
     //(player has white egg in their inventory)

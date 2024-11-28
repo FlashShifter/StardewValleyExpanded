@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="5" height="7" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="1347">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="4" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="1612">
  <tileset firstgid="1" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
   <tile id="150">
@@ -5947,7 +5947,7 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="13891" name="spring_island_tilesheet_1" tilewidth="16" tileheight="16" tilecount="1280" columns="32">
+ <tileset firstgid="13891" name="zspring_island_tilesheet_1" tilewidth="16" tileheight="16" tilecount="1280" columns="32">
   <image source="spring_island_tilesheet_1.png" width="512" height="640"/>
   <tile id="305">
    <properties>
@@ -5969,96 +5969,158 @@
  <tileset firstgid="15171" name="zspring_SVE_Tilesheet2" tilewidth="16" tileheight="16" tilecount="5700" columns="76">
   <image source="spring_SVE_Tilesheet2.png" width="1216" height="1200"/>
  </tileset>
- <layer id="1" name="Back" width="5" height="7">
+ <layer id="1" name="Back" width="4" height="8">
   <data encoding="base64" compression="zlib">
-   eJyrZWRg2MCAit1ZUDFMLAGI3aBiiUB9tVDsAeTXMULEpiHh6VAxXSBOAmJRIBYH4iogroTSM5DsBQCC1g/Q
+   eJyrZWRgqAXiNCCehoSnA/FZZgaGJCCdAMRbgOzzzBA2CG+Fsr2g6s4xQ9TA5J8zQzCMjwsDAIu+EPo=
   </data>
  </layer>
- <objectgroup id="2" name="Back">
-  <object id="1344" name="TileData" x="32" y="32" width="16" height="16">
+ <objectgroup id="2" name="Back" visible="0">
+  <object id="35" name="TileData" x="32" y="64" width="16" height="16">
    <properties>
+    <property name="NPCBarrier" value="t"/>
+    <property name="NoFurniture" value="Total"/>
     <property name="NoSpawn" value="All"/>
    </properties>
   </object>
-  <object id="1345" name="TileData" x="32" y="48" width="16" height="16">
+  <object id="37" name="TileData" x="48" y="64" width="16" height="16">
    <properties>
+    <property name="NoFurniture" value="Total"/>
     <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="38" name="TileData" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="39" name="TileData" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="40" name="TileData" x="32" y="16" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="41" name="TileData" x="48" y="16" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="43" name="TileData" x="48" y="32" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="70" name="TileData" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="71" name="TileData" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="72" name="TileData" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="74" name="TileData" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+  <object id="1317" name="TileData" x="0" y="112" width="16" height="16">
+   <properties>
+    <property name="NoSpawn" value="Tree"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="3" name="Back2" width="5" height="7">
+ <layer id="3" name="Back2" width="4" height="8">
   <properties>
    <property name="Draw" value="Back"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYMAOXrJhijGxMzAws+PQQAUAAHO8AQM=
+   eJxjYICA3YwMAwIAWJ8AvQ==
   </data>
  </layer>
- <layer id="21" name="Back4" width="5" height="7">
+ <layer id="21" name="Back4" width="4" height="8">
   <properties>
    <property name="Draw" value="Back"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYKAOaLdjYOiwQxW7DORfQROTt2dgULDHbgYA2mIEbA==
+   eJxjYGBg2MPIMGAAAFwLAL4=
   </data>
  </layer>
  <objectgroup id="6" name="Back3"/>
- <layer id="7" name="Buildings" width="5" height="7">
+ <layer id="7" name="Buildings" width="4" height="8">
   <data encoding="base64" compression="zlib">
-   eJy7xMjAcIGNgeEiEF8C4qtA/msgfg/E7ixANlDsHZDNwsTAwAHEIMDCzsDADmTLArEiVEweSCsAcTEDKmhiwARVjKj8IgaIPgBfeQs0
+   eJx7y8jA8B6IOxkYGIqAmI2JgYEDiGFAHshWROJbcjMw2HBD2NZAuguIu7kR8vlANhMjgp/HDTG3mAFVjQlUDQBKfge2
   </data>
  </layer>
- <objectgroup id="8" name="Buildings"/>
- <layer id="9" name="Buildings2" width="5" height="7">
+ <objectgroup id="8" name="Buildings" visible="0"/>
+ <layer id="9" name="Buildings2" width="4" height="8">
   <properties>
    <property name="Draw" value="Buildings"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYGBgSNZjwABJegwNaHyqAHl7BgYFe+xyABHLAu8=
+   eJxjYBhYAAAAgAAB
   </data>
  </layer>
  <objectgroup id="10" name="Buildings2"/>
- <layer id="11" name="Paths" width="5" height="7">
+ <layer id="11" name="Paths" width="4" height="8">
   <data encoding="base64" compression="zlib">
-   eJxjYKAduMROmnoAKTUA2g==
+   eJxjYMANjrEj2EfZUeWOs2OqxSaGDE4B+RfRxABh0wZ5
   </data>
  </layer>
  <objectgroup id="12" name="Paths" visible="0"/>
- <layer id="13" name="Front" width="5" height="7">
+ <layer id="13" name="Front" width="4" height="8">
   <data encoding="base64" compression="zlib">
-   eJy7a80AB7JALAfEmjYQ/is2BgYzIG3OgAr8gTgAiKPQxDMZCINILPpgAAD5sgUr
+   eJxjYMAPJLkZGGS4IWxpIJ0FxNnc+PVEAnEUAXNhAACNOQIQ
   </data>
  </layer>
  <objectgroup id="14" name="Front"/>
- <layer id="22" name="Front2" width="5" height="7">
+ <layer id="22" name="Front2" width="4" height="8">
   <properties>
    <property name="Draw" value="Front"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBg8AAAAjAAB
+   eJxjYBhYAAAAgAAB
   </data>
  </layer>
- <layer id="15" name="AlwaysFront" width="5" height="7">
+ <layer id="15" name="AlwaysFront" width="4" height="8">
   <data encoding="base64" compression="zlib">
-   eJxjYBgY4GzNwOACxK7WCDEAF6MBfg==
+   eJxjYBhYAAAAgAAB
   </data>
  </layer>
  <objectgroup id="16" name="AlwaysFront"/>
- <layer id="17" name="AlwaysFront2" width="5" height="7">
+ <layer id="17" name="AlwaysFront2" width="4" height="8">
   <properties>
    <property name="Draw" value="AlwaysFront"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBg8AAAAjAAB
+   eJxjYBhYAAAAgAAB
   </data>
  </layer>
  <objectgroup id="18" name="AlwaysFront2"/>
- <layer id="19" name="AlwaysFront3" width="5" height="7">
+ <layer id="19" name="AlwaysFront3" width="4" height="8">
   <properties>
    <property name="Draw" value="AlwaysFront"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBg8AAAAjAAB
+   eJxjYBhYAAAAgAAB
   </data>
  </layer>
  <objectgroup id="20" name="AlwaysFront3"/>

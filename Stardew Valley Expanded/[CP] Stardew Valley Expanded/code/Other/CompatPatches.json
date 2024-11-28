@@ -366,6 +366,23 @@
             "Entries": {
                 "100000000000": "T",
             }
-        },
+          },
+		  
+		  //Adds 2 extra museum spaces if Walk To Desert is installed
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/ArchaeologyHouse",
+               "FromFile": "Assets/Maps/MapPatches/ArchaeologyHouse_MoreSpace.tbin",
+               "When": {
+                    "HasMod |contains=Tarniyar.CP.WalkToDesert": true,
+					"HasMod |contains=RaffieJohn.ExtraSpace": false,
+               },
+               "ToArea": {
+                    "X": 43,
+                    "Y": 13,
+                    "Width": 4,
+                    "Height": 3
+               }
+          },
      ]
 }

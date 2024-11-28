@@ -46,7 +46,7 @@
 			"FlashShifter.StardewValleyExpandedCP_Ocean_Sunfish": "Ocean Sunfish/90/floater/64/80/600 2600/spring summer fall winter/sunny/null/5/.1/.12/0/false",
 			"FlashShifter.StardewValleyExpandedCP_Wolf_Snapper": "Wolf Snapper/110/dart/7/11/600 2600/spring summer fall/both/null/2/.06/.1/10/false",
 			"FlashShifter.StardewValleyExpandedCP_Goldfish": "Goldfish/25/dart/1/4/1000 1700/spring/sunny/683 .4/1/.08/.25/0/false",
-			"FlashShifter.StardewValleyExpandedCP_Gar": "Gar/85/mixed/1/4/600 2000/summer fall/rainy/683 .4/1/.07/.2/5/false",
+			"FlashShifter.StardewValleyExpandedCP_Gar": "Gar/85/mixed/55/75/600 2000/summer fall/rainy/683 .4/1/.07/.2/5/false",
 			"FlashShifter.StardewValleyExpandedCP_Turretfish": "Turretfish/999/mixed/50/50/600 2600/spring summer fall winter/both/683 .4/1/.06/.25/10/false",
          }
       },
@@ -2348,6 +2348,54 @@
 					 "684 8"
                   ]
                },
+            },
+         },
+      },
+	  {  //Wolf Snapper
+         "Action": "EditData",
+         "Target": "Data/FishPondData",
+         "Entries": {
+            "FlashShifter.StardewValleyExpandedCP_Wolf_Snapper": {
+               "ID": "FlashShifter.StardewValleyExpandedCP_Wolf_Snapper",
+               "RequiredTags": [
+                  "item_wolf_snapper",
+               ],
+               "SpawnTime": -1,
+               "ProducedItems": [
+                  {
+                     "RequiredPopulation": 0,
+                     "Chance": 0.45,
+                     "ItemID": 812,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 1
+                  }
+               ],
+               "PopulationGates": null,
+			   "MaxPopulation": 1
+            },
+         },
+      },
+	  {  //Turretfish
+         "Action": "EditData",
+         "Target": "Data/FishPondData",
+         "Entries": {
+            "FlashShifter.StardewValleyExpandedCP_Turretfish": {
+               "ID": "FlashShifter.StardewValleyExpandedCP_Turretfish",
+               "RequiredTags": [
+                  "item_turretfish",
+               ],
+               "SpawnTime": -1,
+               "ProducedItems": [
+                  {
+                     "RequiredPopulation": 0,
+                     "Chance": 0.25,
+                     "ItemID": 812,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 1
+                  }
+               ],
+               "PopulationGates": null,
+			   "MaxPopulation": 1
             },
          },
       },

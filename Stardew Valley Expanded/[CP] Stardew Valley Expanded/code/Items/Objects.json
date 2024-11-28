@@ -1,6 +1,6 @@
 {
     "Changes": [
-        {
+		{
             "Action": "EditData",
             "Target": "Data/Objects",
             "Entries": {
@@ -462,7 +462,7 @@
                     ],
                     "Buffs": [
                         {
-                            "Duration": 1600,
+                            "Duration": 5143,
                             "CustomAttributes": {
                                 "FarmingLevel": 0,
                                 "FishingLevel": 0,
@@ -614,25 +614,6 @@
                                 "Attack": 0
                             },
                         },
-                    ],
-                },
-				"FlashShifter.StardewValleyExpandedCP_Galdoran_Gem": {
-                    "Name": "Galdoran Gem",
-                    "DisplayName": "{{i18n:object.galdoran-gem.name}}",
-                    "Description": "{{i18n:object.galdoran-gem.description}}",
-                    "Type": "Gem",
-                    "Category": -2,
-                    "Price": 600,
-                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Galdoran Gem",
-                    "SpriteIndex": 0,
-                    "Edibility": -300,
-                    "IsDrink": false,
-                    "ExcludeFromFishingCollection": true,
-                    "ExcludeFromShippingCollection": false,
-                    "ExcludeFromRandomSale": true,
-					"ContextTags": [
-                        "color_red",
-                        "not_giftable",
                     ],
                 },
                 "FlashShifter.StardewValleyExpandedCP_Gemfish": {
@@ -835,7 +816,7 @@
                     "ExcludeFromRandomSale": true,
                     "Buffs": [
                         {
-                            "Duration": 1600,
+                            "Duration": 5143,
                             "CustomAttributes": {
                                 "FarmingLevel": 0,
                                 "FishingLevel": 0,
@@ -843,7 +824,7 @@
                                 "LuckLevel": 0,
                                 "ForagingLevel": 0,
                                 "MaxStamina": 0,
-                                "MagneticRadius": 800,
+                                "MagneticRadius": 999,
                                 "Speed": 0,
                                 "Defense": 0,
                                 "Attack": 0
@@ -2553,7 +2534,7 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": false,
                     "ContextTags": [
-                        "colow_red",
+                        "color_red",
 						"dye_medium",
 						"season_fall"
                     ]
@@ -2724,7 +2705,7 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": true,
 					"ContextTags": [
-					    "color_grey",
+					    "color_gray",
                         "dye_strong",
 						"statue_item"
                     ]
@@ -3315,7 +3296,7 @@
                     "Description": "{{i18n:object.butter.description}}",
                     "Type": "Basic",
                     "Category": -26,
-                    "Price": 200,
+                    "Price": 215,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Butter",
                     "SpriteIndex": 0,
                     "Edibility": 31,
@@ -3428,7 +3409,7 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": true,
                     "ContextTags": [
-                        "color_grey_white",
+                        "color_gray_white",
                         "fish_ocean",
                         "fish_shark",
 						"fish_carnivorous",
@@ -3492,7 +3473,7 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": true,
                     "ContextTags": [
-                        "color_grey",
+                        "color_gray",
                         "fish_lake",
                         "fish_tadpole",
 						"season_spring"
@@ -3598,7 +3579,7 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": true,
                     "ContextTags": [
-                        "color_grey",
+                        "color_gray",
                         "fish_ocean",
                         "fish_arrowhead_shark",
 						"fish_carnivorous",
@@ -3649,7 +3630,6 @@
 						"season_fall",
 						"fish_semi_rare",
 						"fish_legendary",
-						"fish_pond_ignore"
                     ]
                 },
 				"FlashShifter.StardewValleyExpandedCP_Camel_Wool": {
@@ -3997,17 +3977,14 @@
                     "ExcludeFromShippingCollection": false,
                     "ExcludeFromRandomSale": true,
                     "ContextTags": [
-                        "color_grey",
+                        "color_gray",
                         "fish_ocean",
                         "fish_turretfish",
 						"fish_semi_rare",
 						"fish_legendary",
-						"fish_pond_ignore"
                     ]
                 },
 				
-				
-
 				/*"FlashShifter.StardewValleyExpandedCP_???": {
                     "Name": "???",
                     "DisplayName": "{{i18n:object.???.name}}",
@@ -4029,6 +4006,64 @@
 				*/
             },
         },
+		
+		
+		//Galdoran Gem loads. Configurable museum donation object.			
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {
+			 "GaldoranGemMuseumMoveable": "false"
+			},
+            "Entries": {
+	        	"FlashShifter.StardewValleyExpandedCP_Galdoran_Gem": {
+                    "Name": "Galdoran Gem",
+                    "DisplayName": "{{i18n:object.galdoran-gem.name}}",
+                    "Description": "{{i18n:object.galdoran-gem.description}}",
+                    "Type": "None",
+                    "Category": 0,
+                    "Price": 600,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Galdoran Gem",
+                    "SpriteIndex": 0,
+                    "Edibility": -300,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": true,
+                    "ExcludeFromShippingCollection": false,
+                    "ExcludeFromRandomSale": true,
+					"ContextTags": [
+                        "color_red",
+                    ],
+                },
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {
+			 "GaldoranGemMuseumMoveable": "true"
+			},
+            "Entries": {
+	        	"FlashShifter.StardewValleyExpandedCP_Galdoran_Gem": {
+                    "Name": "Galdoran Gem",
+                    "DisplayName": "{{i18n:object.galdoran-gem.name}}",
+                    "Description": "{{i18n:object.galdoran-gem.description}}",
+                    "Type": "Minerals",
+                    "Category": -2,
+                    "Price": 600,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Galdoran Gem",
+                    "SpriteIndex": 0,
+                    "Edibility": -300,
+                    "IsDrink": false,
+                    "ExcludeFromFishingCollection": true,
+                    "ExcludeFromShippingCollection": false,
+                    "ExcludeFromRandomSale": true,
+					"ContextTags": [
+                        "color_red",
+                    ],
+                },
+			}
+		},
+		
 		
         //Loads object sprites
         {

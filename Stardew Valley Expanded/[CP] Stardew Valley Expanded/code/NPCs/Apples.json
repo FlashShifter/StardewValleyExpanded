@@ -39,6 +39,19 @@
               "Height": 9
             }
           },
+		  "SpousePatio": {
+            "MapAsset": "Apples_Roommate_Area",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
           "FriendsAndFamily": {},
           "WinterStarParticipant": false,
           "UnlockConditions": "",
@@ -91,7 +104,13 @@
       "Action": "Load", "Priority": "Low",
       "Target": "Maps/Custom_ApplesRoommate",
       "FromFile": "Assets/Maps/SpouseRooms/ApplesRoommate.tbin",
-  },
+    },
+	//Roommate Patio
+    {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Maps/Apples_Roommate_Area",
+      "FromFile": "Assets/Maps/SpouseRooms/Apples_Roommate_Area.tbin"
+    },
     {
       //Apples' Portraits
       "Action": "Load", "Priority": "Low",
@@ -526,6 +545,29 @@
         "7776010": "none/-500 -500/farmer 64 15 2/addTemporaryActor Junimo 16 32 -20 -20 2/addTemporaryActor WizardJunimo4 16 32 64 16 0/skippable/pause 1500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 200/playSound junimoMeep1/pause 225/playSound junimoMeep1/speak Junimo \"{{i18n:Apples.Roommate}}\"/pause 500/globalFade/viewport -1000 -1000/end",
       }
     },
+	
+	{ //Edits NPC.cs strings when rooming with Apples
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+	  "When": {
+        "Roommate |contains=Apples": true
+      },
+      "Entries": {
+        "NPC.cs.4496": "{{i18n:Apples.RoommateDialogue.cs.001}}",
+		"NPC.cs.4497": "{{i18n:Apples.RoommateDialogue.cs.002}}",
+		"NPC.cs.4490": "{{i18n:Apples.RoommateDialogue.cs.003}}",
+		"NPC.cs.4489": "{{i18n:Apples.RoommateDialogue.cs.004}}",
+		"NPC.cs.4486": "{{i18n:Apples.RoommateDialogue.cs.005}}",
+		"NPC.cs.4481": "{{i18n:Apples.RoommateDialogue.cs.006}}",
+		"NPC.cs.4474": "{{i18n:Apples.RoommateDialogue.cs.007}}",
+		"NPC.cs.4470": "{{i18n:Apples.RoommateDialogue.cs.008}}",
+		"NPC.cs.4488": "{{i18n:Apples.RoommateDialogue.cs.009}}",
+		"NPC.cs.4498": "{{i18n:Apples.RoommateDialogue.cs.0010}}",
+		"NPC.cs.4499": "{{i18n:Apples.RoommateDialogue.cs.011}}",
+		"NPC.cs.4500": "{{i18n:Apples.RoommateDialogue.cs.012}}"
+      },
+    },
+	
     { //Apples - Option to restore Aurora Vineyard
       "Action": "EditData",
       "Target": "data/events/farm",
