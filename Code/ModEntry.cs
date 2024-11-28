@@ -966,4 +966,13 @@ namespace StardewValleyExpanded
             }
         }
     }
+
+    [HarmonyPatch(typeof(GameLocation), "resetSharedState")]
+    public static class GameLocationFixDoorsWhenSleepingInSameLocationPatch
+    {
+        public static void Postfix(GameLocation __instance)
+        {
+            __instance.interiorDoors.ResetSharedState();
+        }
+    }
 }

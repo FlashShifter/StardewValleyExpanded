@@ -238,7 +238,9 @@ namespace StardewValleyExpanded
                 this.glowing = glowing; //set glowing
                 if (glowing) //only set up light-related fields if glowing is enabled
                 {
-                    id = (int)(position.X * 10099f + position.Y * 77f + (float)Game1.random.Next(99999));
+                    id = -1;
+                    while ( id == -1 && Game1.currentLightSources.ContainsKey( $"SVEFirefly_{id}" ) )
+                        id = (int)(position.X * 10099f + position.Y * 77f + (float)Game1.random.Next(99999));
                     light = new LightSource(
                     $"SVEFirefly_{id}",
                     lightType, //use lightType
