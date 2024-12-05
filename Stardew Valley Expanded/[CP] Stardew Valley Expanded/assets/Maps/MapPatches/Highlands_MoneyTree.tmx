@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="289">
+ <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths.png" width="64" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="PathType" value="NE"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="PathType" value="SE"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="PathType" value="WS"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="PathType" value="WN"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="PathType" value="Crossroad"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="PathType" value="End"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer id="11" name="Paths" width="1" height="1">
+  <data encoding="base64" compression="zlib">
+   eJxTZmBgAAAAkAAk
+  </data>
+ </layer>
+ <objectgroup id="12" name="Paths">
+  <object id="257" name="TileData" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="SpawnTree" value="fruit FlashShifter.StardewValleyExpandedCP_Tree_Coin 5 1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

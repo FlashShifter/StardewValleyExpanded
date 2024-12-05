@@ -13,7 +13,7 @@
                   "Abigail",
                   1
                 ],
-                "Value": "FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir",
+                "Value": "FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Lightning_Elixir FlashShifter.StardewValleyExpandedCP_Hero_Elixir FlashShifter.StardewValleyExpandedCP_Haste_Elixir FlashShifter.StardewValleyExpandedCP_Gravity_Elixir FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Barbarian_Elixir FlashShifter.StardewValleyExpandedCP_Armor_Elixir FlashShifter.StardewValleyExpandedCP_Aegis_Elixir",
                 "Delimiter": " "
               }
               /*Like*/,
@@ -24,7 +24,7 @@
                   "Abigail",
                   3
                 ],
-                "Value": "FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish",
+                "Value": "FlashShifter.StardewValleyExpandedCP_Gold_Carrot FlashShifter.StardewValleyExpandedCP_Void_Soul FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Puppyfish FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish",
                 "Delimiter": " "
               }
               /*Dislike*/,
@@ -74,7 +74,7 @@
             "Action": "EditData",
             "Target": "characters/schedules/Abigail",
             "Entries": {
-                "marriage_{{Season}}_20": "1100 SebastianRoom 3 10 0/2100 Bed",
+                "marriage_{{Season}}_20": "1100 SebastianRoom 3 10 0/2100 bed",
             },
         },
         { //ABIGAIL DIALOGUE
@@ -116,12 +116,12 @@
             },
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Characters/JojaPetStoreEmployee",
             "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaPetStoreEmployee.png"
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Characters/HamishCameo",
             "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/HamishCameo.png"
         },

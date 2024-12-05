@@ -1,110 +1,225 @@
 {
-  "Format": "2.0",
+  "Format": "2.3.0",
   //Hey. You. Yes, you. The person who opened the Content Json. There are spoilers in here!
   "ConfigSchema": {
     "WarpLocation": {
       "Default": "default",
       "AllowValues": "default, custom, Grandpa's Shed",
-      "Description": "'default' places the warp one tile below the bunny statue on SVE and vanilla maps. 'Custom' allows the warp point to be moved around on the farm. 'Grandpa's Shed' moves the warp point off the farm. Using a farm mod that adds a new farm type will place the warp by Grandpa's Shed regardless of choice. Selecting 'Grandpa's Shed' when playing on an SVE map will be the same as selecting 'default'."
+      "Description": "'default' places the warp one tile below the bunny statue on SVE and vanilla maps. 'Custom' allows the warp point to be moved around on the farm. 'Grandpa's Shed' moves the warp point off the farm. Selecting 'Grandpa's Shed' when playing on an SVE farm map will be the same as selecting 'default'.",
     },
     "EnchantedGroveWarpX": {
-      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100",
-      "Default": "48",
-      "Description": "Select the X coordinate for the warp point. Only matters when picking 'custom' for WarpLocation."
+      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156",
+      "Default": 48,
+      "Description": "Select the X coordinate for the warp point. Only matters when picking 'custom' for WarpLocation.",
     },
     "EnchantedGroveWarpY": {
-      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100",
-      "Default": "7",
-      "Description": "Select the Y coordinate for the warp point. Only matters when picking 'custom' for WarpLocation."
+      "AllowValues": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156",
+      "Default": 7,
+      "Description": "Select the Y coordinate for the warp point. Only matters when picking 'custom' for WarpLocation.",
     },
     //**************************
     "SeasonalEdits": {
       "Default": "true",
       "AllowValues": "true, false",
+      "Description": "Adds leaves to all building roofs during fall and snow to many objects during winter (fences, stop signs, plants, etc). Automatically adjusts colors if players have Starblue Valley or Eemie recolors installed.",
     },
     "ReplaceDefaultFences": {
       "AllowValues": "true, false",
-      "Default": "true"
+      "Default": "true",
+      "Description": "Replaces the standard fences with the matching static fences found throughout exterior locations. Automatically adjusts colors if players have Starblue Valley or Eemie recolors installed.",
     },
     "ReplaceHardwoodFences": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Replaces the hardwood fences with the matching static fences found throughout exterior locations. Automatically adjusts colors if players have Starblue Valley or Eemie recolors installed.",
     },
     "ImmersiveShadows": {
       "AllowValues": "true, false",
-      "Default": "true"
+      "Default": "true",
+      "Description": "Adds shadows to buildings and large objects in the world.",
     },
     "MistEffects": {
       "AllowValues": "true, false",
-      "Default": "true"
+      "Default": "true",
+      "Description": "Adds mist during rainy days to many maps. This does impact performance, so disable this if you're experiencing lag on rainy days.",
+    },
+    "SVECommunityBundles": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Adds SVE objects to community center bundles. Doesn't affect remixed bundles and only applies on a newly created save file.",
+    },
+    "HardSVECommunityBundles": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Adds SVE objects to community center bundles and makes them more difficult. Doesn't affect remixed bundles and only applies on a newly created save file.",
+    },
+    "RetexturedFarmhouseKitchen": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Redesigns the players kitchen sets for all farmhouse upgrades.",
+    },
+    "RemoveWineryDecorations": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Removes all the permanent decorations present in the winery farm building, allowing players to place their own decor or machines.",
     },
     "OriginalMinesEntrance": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Adds back the original mine entrance at the mountain, cutting down time it takes players to walk to the mines.",
     },
     "AlternativeCraftables": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Changes the design of the furnace, kiln, beehives, kegs, seed machine, cheese machine, and mayonnaise machine.",
     },
     "RemoveObjectsFromGrandpasShed": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes static plants, boxes, flowers, and barrels from the greenhouse interior.",
     },
     "RemoveSouthernCactusesFromDesert": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes a number of catuses in Calico Desert, allowing easier placement of objects such as kegs.",
     },
     "DisableSVEJojaMartShop": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes SVE Joja Shop patches, giving other mods editing the vanilla shop priority.",
     },
-    /*"LowerProfitMargins": {
-      "AllowValues": "true, false",
-      "Default": "false"
-            },*/
     "BalancedCrafting": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Crafting requires more/different resources. Some craftables are easier to make. Recommended if players are using the /“Automation/” mod and/or IF2R to balance resource intake.",
     },
-    /*"HarderBundles": {
-      "AllowValues": "true, false",
-      "Default": "false"
-            },*/
     "HarderBuildingConstruction": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Constructing buildings cost more resources and money.",
     },
     "StrongerMonsters": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Monsters receive a significant buff in damage dealt to players (double), with slight increases in HP. Shadow Brutes and Mummies have large HP and damage buffs.",
+    },
+	"ChallengingMarshlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Increases spawns of ghost waves and swamp golems in the Forbidden Maze. Players can find even more forage.",
+    },
+	"ChallengingHighlandsCavern": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Increases monster spawns. Players can find even more gems and minerals.",
+    },
+	"ChallengingBadlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Dramatically increases monster spawns and difficulty traversing the Crimson Badlands - the adventurer's true test. This toggle is very resource intensive, so having a strong PC is recommended.",
+    },
+	"LowMemoryBadlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Massively reduces monster spawns in the Crimson Badlands to conserve memory for weak devices.",
+    },
+	"LowMemoryHighlands": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Massively reduces monster spawns in the Highlands to conserve memory for weak devices.",
     },
     "OlderSophiaPortraits": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Makes Sophia's portraits look older!",
     },
     "VanillaSandyPortraits": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Removes SVE Sandy portraits, giving other mods editing the vanilla Sandy portraits priority.",
     },
     "MatureEvents": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Adds an additional 10 events that contain extremely serious topics, dark undertones, and moral ambiguity. If players wish to play SVE with these events, they must consent via toggling the configuration to /“true/”.",
     },
     "ShorterPathToBlueMoonVineyard": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Pushes the warp point from Cindersap Forest > Blue Moon Vineyard closer to Fairhaven Farm, cutting down on travel time.",
     },
-    "UseGaldoranThemeAllTimes": {
+	"GaldoranGemMuseumMoveable": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Allows the Galdoran Gem to be donated to the Stardew Valley Museum. Prevents players from getting soft locked after the item type change in the SVE 1.15.5 update if it was already donated and they attempted to move it to another spot.",
+    },
+	"UseGaldoranThemeAllTimes": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Changes the Stardew Valley region UI to the Galdoran region UI in all locations.",
     },
     "DisableGaldoranTheme": {
       "AllowValues": "true, false",
-      "Default": "false"
+      "Default": "false",
+      "Description": "Disables the Galdoran UI in all locations. Useful if players have a mod already editing the UI.",
     },
   },
   "DynamicTokens": [
-    ////////////
+    {
+      "Name": "ChallengingBadlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "ChallengingBadlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "ChallengingBadlands": "false"
+      }
+    },
+	{
+      "Name": "ChallengingMarshlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "ChallengingMarshlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "ChallengingMarshlands": "false"
+      }
+    },
+	{
+      "Name": "ChallengingHighlandsCavernToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "ChallengingHighlandsCavernToken",
+      "Value": "RemoveMail",
+      "When": {
+        "ChallengingHighlandsCavern": "false"
+      }
+    },
+	{
+      "Name": "LowMemoryBadlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "LowMemoryBadlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "LowMemoryBadlands": "false"
+      }
+    },
+	{
+      "Name": "LowMemoryHighlandsToken",
+      "Value": "AddMail",
+    },
+    {
+      "Name": "LowMemoryHighlandsToken",
+      "Value": "RemoveMail",
+      "When": {
+        "LowMemoryBadlands": "false"
+      }
+    },
     //// Map where Ench Grove warp is placed
     {
       "Name": "SelectedWarpMap",
@@ -112,283 +227,181 @@
     },
     {
       "Name": "SelectedWarpMap",
-      "Value": "Farm",
+      "Value": "{{FarmMapAsset}}",
       "When": {
+        "WarpLocation": "default, custom",
+      }
+    },
+    {
+      "Name": "SelectedWarpMap",
+      "Value": "{{FarmMapAsset}}",
+      "When": {
+        "HasMod": "flashshifter.immersivefarm2remastered, flashshifter.GrandpasFarm",
         "FarmType": "Standard",
-        "WarpLocation": "default, custom"
-      },
+      }
     },
     {
       "Name": "SelectedWarpMap",
-      "Value": "Farm_Mining",
+      "Value": "{{FarmMapAsset}}",
       "When": {
-        "FarmType": "Hilltop",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_Foraging",
-      "When": {
-        "FarmType": "Forest",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_Fishing",
-      "When": {
-        "FarmType": "Riverland",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_Combat",
-      "When": {
-        "FarmType": "Wilderness",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_FourCorners",
-      "When": {
-        "FarmType": "FourCorners",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_Island",
-      "When": {
-        "FarmType": "Beach",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_Ranching",
-      "When": {
-        "FarmType": "MeadowlandsFarm",
-        "WarpLocation": "default, custom"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm",
-      "When": {
-        "FarmType": "Standard",
-        "HasMod": "flashshifter.immersivefarm2remastered, flashshifter.GrandpasFarm"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "Farm_FrontierFarm",
-      "When": {
-        "FarmType": "FrontierFarm"
-      },
-    },
-    {
-      "Name": "SelectedWarpMap",
-      "Value": "zanderb14_IF2Fix",
-      "When": {
-        "FarmType": "zanderb14_IF2Fix",
-        "WarpLocation": "default, custom"
-      },
+        "FarmType": "FrontierFarm",
+      }
     },
     ////////////
     //// Enchanted Grove Warp Coordinates
-    // Base; remains if Custom selected
+    // Base, stays for default Standard, Forest, Hilltop, Riverland, Wilderness, as well as IF2R and IF2F
     {
       "Name": "Ench_Grove_X",
-      "Value": "{{Query: {{EnchantedGroveWarpX}} }}",
+      "Value": 48
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "{{Query: {{EnchantedGroveWarpY}} }}",
+      "Value": 7
     },
     //Grandpa's Shed
     {
       "Name": "Ench_Grove_X",
-      "Value": "20",
+      "Value": 20,
       "When": {
-        // Grandpa's Shed OR added farm type
-        "Query: {{WarpLocation |contains=Grandpa's Shed}} OR NOT {{FarmType |contains=Standard, Hilltop, Forest, Riverland, Wilderness, FourCorners, Beach, MeadowlandsFarm}}": true,
+        "SelectedWarpMap": "Custom_GrandpasShedOutside"
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "17",
+      "Value": 17,
       "When": {
-        // Grandpa's Shed OR added farm type
-        "Query: {{WarpLocation |contains=Grandpa's Shed}} OR NOT {{FarmType |contains=Standard, Hilltop, Forest, Riverland, Wilderness, FourCorners, Beach, MeadowlandsFarm}}": true,
-      }
-    },
-    //Standard, Forest, Hilltop, Riverland, Wilderness
-    {
-      "Name": "Ench_Grove_X",
-      "Value": "48",
-      "When": {
-        "FarmType |contains=Standard, Forest, Hilltop, Riverland, Wilderness": true,
-        "WarpLocation": "default",
-      }
-    },
-    {
-      "Name": "Ench_Grove_Y",
-      "Value": "7",
-      "When": {
-        "FarmType |contains=Standard, Forest, Hilltop, Riverland, Wilderness": true,
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Custom_GrandpasShedOutside"
       }
     },
     //Four Corners
     {
       "Name": "Ench_Grove_X",
-      "Value": "48",
+      "Value": 48,
       "When": {
-        "FarmType": "FourCorners",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm_FourCorners",
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "39",
+      "Value": 39,
       "When": {
-        "FarmType": "FourCorners",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm_FourCorners",
       }
     },
     //Beach
     {
       "Name": "Ench_Grove_X",
-      "Value": "82",
+      "Value": 82,
       "When": {
-        "FarmType": "Beach",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm_Island",
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "29",
+      "Value": 29,
       "When": {
-        "FarmType": "Beach",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm_Island",
       }
     },
     //Ranching
     {
       "Name": "Ench_Grove_X",
-      "Value": "71",
+      "Value": 71,
       "When": {
-        "FarmType": "MeadowlandsFarm",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm_Ranching",
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "6",
+      "Value": 6,
       "When": {
-        "FarmType": "MeadowlandsFarm",
-        "WarpLocation": "default",
-      }
-    },
-    //IF2R
-    {
-      "Name": "Ench_Grove_X",
-      "Value": "48",
-      "When": {
-        "FarmType": "Standard",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
-        "HasMod": "flashshifter.immersivefarm2remastered",
-      }
-    },
-    {
-      "Name": "Ench_Grove_Y",
-      "Value": "7",
-      "When": {
-        "FarmType": "Standard",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
-        "HasMod": "flashshifter.immersivefarm2remastered",
+        "SelectedWarpMap": "Farm_Ranching",
       }
     },
     //Grandpa's Farm
     {
       "Name": "Ench_Grove_X",
-      "Value": "79",
+      "Value": 79,
       "When": {
-        "FarmType": "Standard",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "SelectedWarpMap": "Farm",
         "HasMod": "flashshifter.GrandpasFarm"
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "16",
+      "Value": 16,
       "When": {
-        "FarmType": "Standard",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "SelectedWarpMap": "Farm",
         "HasMod": "flashshifter.GrandpasFarm"
       }
     },
     //Frontier
     {
       "Name": "Ench_Grove_X",
-      "Value": "112",
+      "Value": 112,
       "When": {
-        "FarmType": "FrontierFarm",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
+        "SelectedWarpMap": "Farm_FrontierFarm",
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "4",
+      "Value": 4,
       "When": {
-        "FarmType": "FrontierFarm",
-        "WarpLocation |contains=default, Grandpa's Shed": true,
-      }
-    },
-    //IF2F
-    {
-      "Name": "Ench_Grove_X",
-      "Value": "48",
-      "When": {
-        "FarmType": "zanderb14_IF2Fix",
-        "WarpLocation": "default"
-      }
-    },
-    {
-      "Name": "Ench_Grove_Y",
-      "Value": "7",
-      "When": {
-        "FarmType": "zanderb14_IF2Fix",
-        "WarpLocation": "default"
+        "SelectedWarpMap": "Farm_FrontierFarm",
       }
     },
     //Harvz Tiny Farm
     {
       "Name": "Ench_Grove_X",
-      "Value": "18",
+      "Value": 18,
       "When": {
-        "FarmType": "Standard",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm",
         "HasMod": "harvz.TinyFarm",
       }
     },
     {
       "Name": "Ench_Grove_Y",
-      "Value": "9",
+      "Value": 9,
       "When": {
-        "FarmType": "Standard",
-        "WarpLocation": "default",
+        "SelectedWarpMap": "Farm",
         "HasMod": "harvz.TinyFarm",
+      }
+    },
+    //Sevinae's Enchanted Grove Farm
+    {
+      "Name": "Ench_Grove_X",
+      "Value": 114,
+      "When": {
+        "SelectedWarpMap": "Enchanted_Grove_Farm",
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": 16,
+      "When": {
+        "SelectedWarpMap": "Enchanted_Grove_Farm",
+      }
+    },
+    // If Custom is selected
+    {
+      "Name": "Ench_Grove_X",
+      "Value": "{{EnchantedGroveWarpX}}",
+      "When": {
+        "WarpLocation": "custom"
+      }
+    },
+    {
+      "Name": "Ench_Grove_Y",
+      "Value": "{{EnchantedGroveWarpY}}",
+      "When": {
+        "WarpLocation": "custom"
       }
     },
     ////////////
     //// Quality Parsnip Movement
     {
       "Name": "QualParsMove",
-      "Value": "farmer -50 -50 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation farm/warp farmer {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}} + 4}}/faceDirection farmer 0 true/makeInvisible {{Ench_Grove_X}} {{Ench_Grove_Y}} 1 4/ignoreCollisions farmer/viewport {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}}+2}} true/move farmer 0 -2 0 true/pause 2000",
+      "Value": "farmer -50 -50 0/skippable/ignoreEventTileOffset/pause 1000/changeLocation farm/warp farmer {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}} + 4}}/faceDirection farmer 0 true/makeInvisible {{Ench_Grove_X}} {{Ench_Grove_Y}} 1 4/ignoreCollisions farmer/viewport {{Ench_Grove_X}} {{Query: {{Ench_Grove_Y}}+2}} clamp true/move farmer 0 -2 0 true/pause 2000",
     },
     //Grandpa's Farm default location
     {
@@ -419,7 +432,6 @@
         "SelectedWarpMap": "Custom_GrandpasShedOutside"
       }
     },
-    ////////////
     {
       "Name": "Date",
       "Value": "{{Season}} {{Day}}"
@@ -464,7 +476,23 @@
       "When": {
         "DayOfWeek": "Friday, Saturday, Sunday"
       }
-    }
+    },
+    ////////////
+    //For Dialogue
+    {
+      "Name": "DayCheck",
+      "Value": "{{season}}_{{day}}",
+    },
+    //For Joja Day checks
+    {
+      "Name": "DayCheck",
+      "Value": "JojaDay",
+      "When": {
+        "HasSeenEvent": "502261",
+        "Day": "22"
+      },
+    },
+    ///////////
   ],
   //NEW LOCATIONS
   "CustomLocations": [
@@ -675,13 +703,6 @@
       ],
     },
     {
-      "Name": "Custom_DayEnd_WarpRoom",
-      "FromMapFile": "assets/Maps/NewLocations/DayEnd_WarpRoom.tbin",
-      "MigrateLegacyNames": [
-        "DayEnd_WarpRoom"
-      ],
-    },
-    {
       "Name": "Custom_ApplesRoom",
       "FromMapFile": "assets/Maps/NewLocations/ApplesRoom.tbin",
       "MigrateLegacyNames": [
@@ -697,21 +718,21 @@
     },
     {
       "Name": "Custom_Countryside_BusStop_Bus",
-      "FromMapFile": "assets/Maps/NewLocations/Countryside_BusStop_Bus.tbin",
+      "FromMapFile": "assets/Maps/NewLocations/Countryside_BusStop_Bus.tmx",
       "MigrateLegacyNames": [
         "Countryside_BusStop_Bus"
       ],
     },
     {
       "Name": "Custom_Countryside_BusStop_NoBus",
-      "FromMapFile": "assets/Maps/NewLocations/Countryside_BusStop_NoBus.tbin",
+      "FromMapFile": "assets/Maps/NewLocations/Countryside_BusStop_NoBus.tmx",
       "MigrateLegacyNames": [
         "Countryside_BusStop_NoBus"
       ],
     },
     {
       "Name": "Custom_Countryside_ClaireHouse",
-      "FromMapFile": "assets/Maps/NewLocations/Countryside_ClaireHouse.tbin",
+      "FromMapFile": "assets/Maps/NewLocations/Countryside_ClaireHouse.tmx",
       "MigrateLegacyNames": [
         "Countryside_ClaireHouse"
       ],
@@ -863,40 +884,190 @@
     },
   ],
   "Changes": [
-    {
+    /*{
       "Action": "EditData",
       "Target": "Data/LocationContexts",
       "Entries": {
         "FlashShifter.StardewValleyExpandedCP_FableReefCustomContext": {
           "SeasonOverride": "Summer",
           "CopyWeatherFromLocation": "Island",
+        },
+        "FlashShifter.StardewValleyExpandedCP_Galdora": {
+          "DefaultMusic": "FlashShifter.StardewValleyExpandedCP_CrimsonSands",
+          "ReviveLocations": [
+            {
+              "Id": "Galdora",
+              "Location": "Custom_GaldoranVoid",
+              "Position": {
+                "X": 24,
+                "Y": 19,
+              },
+            },
+          ],
+          "PassOutLocations": [
+            {
+              "Id": "Galdora",
+              "Location": "Custom_CastleVillageOutpost",
+              "Position": {
+                "X": 31,
+                "Y": 28,
+              }
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpandedCP_Highlands": {
+          "ReviveLocations": [
+            {
+              "Id": "Highlands",
+              "Location": "Custom_HighlandsOutpost",
+              "Position": {
+                "X": 7,
+                "Y": 6,
+              },
+            },
+          ],
+          "PassOutLocations": [
+            {
+              "Id": "Highlands",
+              "Location": "Custom_HighlandsOutpost",
+              "Position": {
+                "X": 7,
+                "Y": 6,
+              }
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpandedCP_Swamp": {
+          "ReviveLocations": [
+            {
+              "Id": "Swamp",
+              "Location": "Custom_HenchmanHouse",
+              "Position": {
+                "X": 3,
+                "Y": 5,
+              },
+            },
+          ],
+          "PassOutLocations": [
+            {
+              "Id": "Swamp",
+              "Location": "Custom_HenchmanHouse",
+              "Position": {
+                "X": 3,
+                "Y": 5,
+              }
+            }
+          ]
         }
       }
-    },
+    },*/
 
+	//Challenging config trigger actions
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_ChallengingBadlands": {
+              "Id": "SVE_ChallengingBadlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{ChallengingBadlandsToken}} Current SVE_ChallengingBadlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_ChallengingMarshlands": {
+              "Id": "SVE_ChallengingMarshlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{ChallengingMarshlandsToken}} Current SVE_ChallengingMarshlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_ChallengingHighlandsCavern": {
+              "Id": "SVE_ChallengingHighlandsCavern",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{ChallengingHighlandsCavernToken}} Current SVE_ChallengingHighlandsCavern received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	
+	//Low memory config trigger actions
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_LowMemoryBadlands": {
+              "Id": "SVE_LowMemoryBadlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{LowMemoryBadlandsToken}} Current SVE_LowMemoryBadlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+          "SVE_LowMemoryHighlands": {
+              "Id": "SVE_LowMemoryHighlands",
+              "Trigger": "DayStarted",
+              "HostOnly": true,
+              "Action": "{{LowMemoryHighlandsToken}} Current SVE_LowMemoryHighlands received",
+              "MarkActionApplied": false
+          }
+      }
+    },
+	
+	//Custom Locations
     {
       "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_DayEnd_WarpRoom",
+      "FromFile": "assets/Maps/NewLocations/DayEnd_WarpRoom.tbin",
+      "MigrateLegacyNames": [
+        "DayEnd_WarpRoom"
+      ],
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_FableReef",
       "FromFile": "Assets/Maps/NewLocations/FableReef.tmx"
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_CrimsonBadlands",
       "FromFile": "Assets/Maps/NewLocations/CrimsonBadlands.tbin"
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_Atlantis",
       "FromFile": "Assets/Maps/NewLocations/Atlantis.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_CastleVillageOutpost",
       "FromFile": "Assets/Maps/NewLocations/CastleVillageOutpost.tbin",
     },
-
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_DesertRailway",
       "FromFile": "Assets/Maps/NewLocations/DesertRailway.tbin",
       "MigrateLegacyNames": [
@@ -905,57 +1076,103 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_EnchantedGrove",
       "FromFile": "Assets/Maps/NewLocations/EnchantedGrove.tbin"
     },
-
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_FirstSlashGuestRoom",
       "FromFile": "assets/Maps/NewLocations/FirstSlashGuestRoom.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_FirstSlashGuild",
       "FromFile": "assets/Maps/NewLocations/FirstSlashGuild.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_FirstSlashHallway",
       "FromFile": "assets/Maps/NewLocations/FirstSlashHallway.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrampletonCoast",
       "FromFile": "assets/Maps/NewLocations/GrampletonCoast.tmx",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrampletonTrainStation",
       "FromFile": "Assets/Maps/NewLocations/GrampletonTrainStation.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrenvilleFalls",
       "FromFile": "Assets/Maps/NewLocations/GrenvilleFalls.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "assets/Maps/NewLocations/ForbiddenMaze.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_HenchmanHouse",
+      "FromFile": "assets/Maps/NewLocations/HenchmanHouse.tbin",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_HenchmanBackyard",
+      "FromFile": "assets/Maps/NewLocations/HenchmanBackyard.tmx",
+    },
+	{
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_DinoIsland_North",
+      "FromFile": "assets/Maps/NewLocations/DinoIsland_North.tmx",
+    },
+	{
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_DinoIsland_South",
+      "FromFile": "assets/Maps/NewLocations/DinoIsland_South.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_HighlandsCavernPrison",
       "FromFile": "assets/Maps/NewLocations/HighlandsCavernPrison.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_HighlandsCavernPrisonEvent",
       "FromFile": "assets/Maps/NewLocations/HighlandsCavernPrisonEvent.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_DiamondCavern",
+      "FromFile": "assets/Maps/NewLocations/DiamondCavern.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_HighlandsOutpost",
       "FromFile": "assets/Maps/NewLocations/HighlandsOutpost.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_IridiumQuarry",
       "FromFile": "Assets/Maps/NewLocations/IridiumQuarry.tbin",
       "MigrateLegacyNames": [
@@ -964,36 +1181,43 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_JojaPetStore",
       "FromFile": "assets/Maps/NewLocations/JojaPetStore.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SakuraVineyard",
       "FromFile": "Assets/Maps/NewLocations/SakuraVineyard.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SakuraVineyardCellar",
       "FromFile": "Assets/Maps/NewLocations/SakuraVineyardCellar.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SakuraVineyardCottage",
       "FromFile": "Assets/Maps/NewLocations/SakuraVineyardCottage.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SakuraVineyardDiningRoom",
       "FromFile": "Assets/Maps/NewLocations/SakuraVineyardDiningRoom.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SpriteSpringCave",
       "FromFile": "Assets/Maps/NewLocations/SpriteSpringCave.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_TreasureCave",
       "FromFile": "Assets/Maps/NewLocations/TreasureCave.tbin",
       "MigrateLegacyNames": [
@@ -1002,6 +1226,7 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_Void",
       "FromFile": "Assets/Maps/NewLocations/Void.tbin",
       "MigrateLegacyNames": [
@@ -1010,6 +1235,7 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_WizardBasement",
       "FromFile": "Assets/Maps/NewLocations/WizardBasement.tbin",
       "MigrateLegacyNames": [
@@ -1018,6 +1244,7 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrandpasShedGreenhouse",
       "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedGreenhouse.tbin",
       "MigrateLegacyNames": [
@@ -1026,61 +1253,73 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_Courtyard",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_Courtyard.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_Entrance",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_Entrance.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_FoodCourt",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_FoodCourt.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_MainHall",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_MainHall.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_Stage",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_Stage.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZCCC_VendorFloor",
       "FromFile": "Assets/Maps/NewLocations/ZCCC_VendorFloor.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ZuzuCityStreet",
       "FromFile": "Assets/Maps/NewLocations/ZuzuCityStreet.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Summit",
       "FromFile": "assets/Maps/Locations/Summit.tmx"
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SVESummit",
       "FromFile": "assets/Maps/Locations/SVESummit.tmx"
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_AuroraVineyardRefurbished",
       "FromFile": "assets/Maps/NewLocations/AuroraVineyardRefurbished.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_AuroraVineyardCellarRefurbished",
       "FromFile": "assets/Maps/NewLocations/AuroraVineyardCellarRefurbished.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_AdventurerSummit",
       "FromFile": "assets/Maps/NewLocations/AdventurerSummit.tmx",
       "MigrateLegacyNames": [
@@ -1089,11 +1328,13 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_BlueMoonVineyard",
       "FromFile": "Assets/Maps/NewLocations/BlueMoonVineyard.tmx"
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ForestWest",
       "FromFile": "Assets/Maps/NewLocations/ForestWest.tbin",
       "MigrateLegacyNames": [
@@ -1102,21 +1343,43 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_Garden",
       "FromFile": "Assets/Maps/NewLocations/Garden.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrampletonSuburbsTrainStation",
       "FromFile": "assets/Maps/NewLocations/GrampletonSuburbsTrainStation.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrampletonSuburbs",
       "FromFile": "assets/Maps/NewLocations/GrampletonSuburbs.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_GrampletonSuburbsOutskirts",
+      "FromFile": "assets/Maps/NewLocations/GrampletonSuburbsOutskirts.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_GoGoatRanch",
+      "FromFile": "assets/Maps/NewLocations/GoGoatRanch.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_GoGoatRanch_Interior",
+      "FromFile": "assets/Maps/NewLocations/GoGoatRanch_Interior.tmx",
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_GrandpasShedOutside",
       "FromFile": "Assets/Maps/GrandpasShed/GrandpasShedOutside.tbin",
       "MigrateLegacyNames": [
@@ -1125,16 +1388,19 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_Highlands",
       "FromFile": "assets/Maps/NewLocations/Highlands.tmx",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_HighlandsCavern",
       "FromFile": "assets/Maps/NewLocations/HighlandsCavern.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_JunimoWoods",
       "FromFile": "Assets/Maps/NewLocations/JunimoWoods.tbin",
       "MigrateLegacyNames": [
@@ -1143,11 +1409,13 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_MorrisProperty",
       "FromFile": "assets/Maps/NewLocations/MorrisProperty.tbin",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_ShearwaterBridge",
       "FromFile": "Assets/Maps/NewLocations/ShearwaterBridge.tbin",
       "MigrateLegacyNames": [
@@ -1156,12 +1424,14 @@
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Custom_SpriteSpring2",
       "FromFile": "Assets/Maps/NewLocations/SpriteSpring2.tmx",
     },
     //Map Blank Load for Secret Woods Compat
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Data/Events/Custom_WoodsCompat",
       "FromFile": "Assets/Blank.json"
     },
@@ -1169,18 +1439,21 @@
     {
       //Dialogue Blank Loads
       "Action": "Load",
-      "Target": "Characters/Dialogue/Gunther, Characters/Dialogue/HankSVE, Characters/Dialogue/Treyvon, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Alesia, Characters/Dialogue/Andy, Characters/Dialogue/Apples, Characters/Dialogue/Camilla,  Characters/Dialogue/Claire, Characters/Dialogue/MarriageDialogueClaire, Characters/Dialogue/Isaac, Characters/Dialogue/Jolyne, Characters/Dialogue/MarlonFay, Characters/Dialogue/Marlon, Characters/Dialogue/Martin,Characters/Dialogue/**Martin**, Characters/Dialogue/MorrisTod, Characters/Dialogue/Morgan, Characters/Dialogue/Olivia, Characters/Dialogue/MarriageDialogueOlivia, Characters/Dialogue/ScarlettFake, Characters/Dialogue/Scarlett, Characters/Dialogue/Sophia, Characters/Dialogue/MarriageDialogueSophia, Characters/Dialogue/Susan, Strings/schedules/Susan, Characters/Dialogue/Victor, Characters/Dialogue/MarriageDialogueVictor, Strings/schedules/Victor, Characters/Dialogue/HighlandsDwarf, Characters/Dialogue/Jadu, Characters/Dialogue/Sawyer, Characters/Dialogue/Gale, Characters/Dialogue/Brianna, Characters/Dialogue/Drake, Characters/Dialogue/Edmund, Characters/Dialogue/Gertrude, Characters/Dialogue/Brock, Characters/Dialogue/Cordelia, Characters/Dialogue/Freya, Characters/Dialogue/Cassandra, Characters/Dialogue/Emin, Characters/Dialogue/MarriageDialogueApples",
+      "Priority": "Low",
+      "Target": "Characters/Dialogue/SVE_Henchman, Characters/Dialogue/Gunther, Characters/Dialogue/HankSVE, Characters/Dialogue/Treyvon, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Alesia, Characters/Dialogue/Andy, Characters/Dialogue/Apples, Characters/Dialogue/Camilla,  Characters/Dialogue/Claire, Characters/Dialogue/MarriageDialogueClaire, Characters/Dialogue/Isaac, Characters/Dialogue/Jolyne, Characters/Dialogue/MarlonFay, Characters/Dialogue/Marlon, Characters/Dialogue/Martin,Characters/Dialogue/**Martin**, Characters/Dialogue/MorrisTod, Characters/Dialogue/Morgan, Characters/Dialogue/Olivia, Characters/Dialogue/MarriageDialogueOlivia, Characters/Dialogue/ScarlettFake, Characters/Dialogue/Scarlett, Characters/Dialogue/Sophia, Characters/Dialogue/MarriageDialogueSophia, Characters/Dialogue/MarriageDialogueScarlett, Characters/Dialogue/Susan, Strings/schedules/Susan, Characters/Dialogue/Victor, Characters/Dialogue/MarriageDialogueVictor, Strings/schedules/Victor, Characters/Dialogue/HighlandsDwarf, Characters/Dialogue/Jadu, Characters/Dialogue/Sawyer, Characters/Dialogue/Gale, Characters/Dialogue/Brianna, Characters/Dialogue/Drake, Characters/Dialogue/Edmund, Characters/Dialogue/Gertrude, Characters/Dialogue/Brock, Characters/Dialogue/Cordelia, Characters/Dialogue/Freya, Characters/Dialogue/Cassandra, Characters/Dialogue/Emin, Characters/Dialogue/MarriageDialogueApples",
       "FromFile": "Assets/Blank.json"
     },
     {
       //Schedule Dialogue Blank Loads
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Strings/schedules/Andy, Strings/schedules/Apples, Strings/schedules/Claire, Strings/Schedules/Wizard, Strings/schedules/Martin,  Strings/schedules/MorrisTod, Strings/schedules/Olivia, Strings/schedules/ScarlettFake, Strings/schedules/Scarlett, Strings/schedules/Sophia",
       "FromFile": "Assets/Blank.json"
     },
     {
       //Charlie's dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Dialogue/CharlieChicken",
       "When": {
         "HasSeenEvent |contains=3900074": true
@@ -1190,6 +1463,7 @@
     {
       //Lance's Schedule Dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Strings/schedules/Lance",
       "When": {
         "HasSeenEvent": "6951319"
@@ -1199,6 +1473,7 @@
     {
       //Lance's marriage dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Dialogue/MarriageDialogueLance",
       "When": {
         "HasSeenEvent": "6951319"
@@ -1208,35 +1483,33 @@
     {
       //Lance's dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Dialogue/Lance",
-      "When": {
-        "HasSeenEvent": "6951319"
-      },
       "FromFile": "Assets/Blank.json"
     },
     {
       //Wizard's Marriage Dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Dialogue/MarriageDialogueWizard",
-      "When": {
-        "HasMod |contains=Parrot.RomRas": false
-      },
       "FromFile": "Assets/Blank.json"
     },
     //Character Loads for Antisocial NPCs
     {
       //Peaches' dialogue
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Characters/Dialogue/Peaches",
-      "When": {
-        "HasSeenEvent |contains=7776006": true
-      },
       "FromFile": "Assets/Blank.json"
     },
     // INCLUDES
     {
       "Action": "Include",
-      "FromFile": "code/Items/BigCraftables.json, code/Items/Objects.json, code/Items/Weapons.json, code/Items/Crops.json, code/Items/CookingRecipes.json, code/Items/UniversalGiftTaste.json"
+      "FromFile": "Assets/CharacterFiles/Schedules/Apples/Schedule.json, Assets/CharacterFiles/Schedules/Apples/ScheduleJunimoWoods.json, Assets/CharacterFiles/Schedules/Apples/SchedulePeaches.json, Assets/CharacterFiles/Schedules/Apples/Schedule.json, Assets/CharacterFiles/Schedules/Peaches/Schedule.json, Assets/CharacterFiles/Schedules/Peaches/ScheduleJunimoWoods.json, Assets/CharacterFiles/Schedules/Charlie/Schedule.json, Assets/CharacterFiles/Schedules/Claire/JojaMart.json, Assets/CharacterFiles/Schedules/Claire/JojaMartRuins.json, Assets/CharacterFiles/Schedules/Claire/MovieTheater.json, Assets/CharacterFiles/Schedules/Gunther/Schedule.json, Assets/CharacterFiles/Schedules/Gunther/FakeSchedule.json, Assets/CharacterFiles/Schedules/Krobus/Schedule.json, Assets/CharacterFiles/Schedules/Lance/Lance.json, Assets/CharacterFiles/Schedules/Magnus/WizardSchedule.json, Assets/CharacterFiles/Schedules/Marlon/BeforeGuildMember.json, Assets/CharacterFiles/Schedules/Marlon/Schedule.json, Assets/CharacterFiles/Schedules/Martin/JojaMart.json, Assets/CharacterFiles/Schedules/Martin/JojaMartRuins.json, Assets/CharacterFiles/Schedules/Martin/MovieTheater.json, Assets/CharacterFiles/Schedules/Morris/Schedule.json, Assets/CharacterFiles/Schedules/Morris/ScheduleMayor.json, Assets/CharacterFiles/Schedules/Scarlett/Schedule.json,  Assets/CharacterFiles/Schedules/Susan/Schedule.json, Assets/CharacterFiles/Schedules/Susan/FakeSchedule.json",
+    },
+    {
+      "Action": "Include",
+      "FromFile": "code/Items/BigCraftables.json, code/Items/Objects.json, code/Items/Weapons.json, code/Items/Fences.json, code/Items/Crops.json, code/Items/CraftingRecipes.json, code/Items/CookingRecipes.json, code/Items/UniversalGiftTaste.json, code/Items/Furniture.json, code/Items/Machines.json, code/Trees/FruitTrees.json, code/Trees/WildTrees.json"
     },
     {
       "Action": "Include",
@@ -1244,15 +1517,15 @@
     },
     {
       "Action": "Include",
-      "FromFile": "code/Shops/Vanilla/Joja.json, code/Shops/Vanilla/Willy.json, code/Shops/vanilla/Gus.json, code/Shops/vanilla/Krobus.json, code/Shops/vanilla/Marlon.json, code/Shops/vanilla/hospital.json, code/Shops/vanilla/casino.json, code/Shops/SVE/AuroraLedger.json, code/Shops/SVE/SophiaLedger.json, code/Shops/SVE/AlesiaVendor.json, code/Shops/SVE/IsaacVendor.json, code/Shops/SVE/CamillaVendor.json, code/Shops/SVE/HighlandsDwarfShop.json, code/Shops/SVE/AdventurerLedger.json, code/Shops/SVE/BearVendor.json, code/Shops/SVE/BlueJunimoVendor.json, code/Shops/SVE/GreyJunimoVendor.json, code/Shops/SVE/RedJunimoVendor.json, code/Shops/SVE/YellowJunimoVendor.json, code/Shops/SVE/OrangeJunimoVendor.json, code/Shops/SVE/PurpleJunimoVendor.json, code/Shops/SVE/BrooklynVendor.json, code/Shops/SVE/ZoeyVendor.json, code/Shops/SVE/ChloeVendor1.json, code/Shops/SVE/ChloeVendor2.json, code/Shops/SVE/ChloeVendor3.json, code/Shops/SVE/ChloeVendor4.json, code/Shops/SVE/JaceVendor.json, code/Shops/SVE/AxelVendor1.json, code/Shops/SVE/AxelVendor2.json, code/Shops/SVE/LewisLedger.json, code/Shops/SVE/MorrisLedger.json ",
+      "FromFile": "code/Shops/vanilla/Suki.json, code/Shops/vanilla/Joja.json, code/Shops/vanilla/DesertTrader.json, code/Shops/vanilla/Willy.json, code/Shops/vanilla/Robin.json, code/Shops/vanilla/Clint.json, code/Shops/vanilla/Gus.json, code/Shops/vanilla/Pierre.json, code/Shops/vanilla/Sandy.json, code/Shops/vanilla/Luau.json, code/Shops/vanilla/FlowerFestival.json, code/Shops/vanilla/Fair.json, code/Shops/vanilla/Alex.json, code/Shops/vanilla/Krobus.json, code/Shops/vanilla/Marlon.json, code/Shops/vanilla/hospital.json, code/Shops/vanilla/casino.json, code/Shops/SVE/AuroraLedger.json, code/Shops/SVE/SophiaLedger.json, code/Shops/SVE/AlesiaVendor.json, code/Shops/SVE/IsaacVendor.json, code/Shops/SVE/CamillaVendor.json, code/Shops/SVE/HighlandsDwarfShop.json, code/Shops/SVE/AdventurerLedger.json, code/Shops/SVE/BearVendor.json, code/Shops/SVE/BlueJunimoVendor.json, code/Shops/SVE/GreyJunimoVendor.json, code/Shops/SVE/RedJunimoVendor.json, code/Shops/SVE/YellowJunimoVendor.json, code/Shops/SVE/OrangeJunimoVendor.json, code/Shops/SVE/PurpleJunimoVendor.json, code/Shops/SVE/BrooklynVendor.json, code/Shops/SVE/ZoeyVendor.json, code/Shops/SVE/ChloeVendor1.json, code/Shops/SVE/ChloeVendor2.json, code/Shops/SVE/ChloeVendor3.json, code/Shops/SVE/ChloeVendor4.json, code/Shops/SVE/JaceVendor.json, code/Shops/SVE/AxelVendor1.json, code/Shops/SVE/AxelVendor2.json, code/Shops/SVE/LewisLedger.json, code/Shops/SVE/MorrisLedger.json, code/Shops/SVE/FurnitureCatalogue2.json",
     },
     {
       "Action": "Include",
-      "FromFile": "code/other/jukebox.json, code/other/music.json, code/other/mail.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/Locations/MapPatches.json, code/other/Strings.json, code/Other/Monsters.json, code/other/Fish.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json "
+      "FromFile": "code/other/jukebox.json, code/items/Boots.json, code/other/Bundles.json, code/other/music.json, code/other/FarmAnimals.json, code/other/mail.json, code/locations/Critters.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/GarbageCans.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/other/Strings.json, code/Locations/MapPatches.json, code/Other/Monsters.json, code/other/Fish.json, code/other/IncomingPhoneCalls.json, code/other/Buildings.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json, code/Locations/CJBWarps.json"
     },
     {
       "Action": "Include",
-      "FromFile": "code/npcs/victor.json, code/npcs/olivia.json, code/npcs/andy.json, code/npcs/susan.json, code/npcs/sophia.json, code/npcs/marlonfay.json, code/npcs/morgan.json, code/npcs/magnus.json, code/npcs/apples.json, code/npcs/asNPCs.json, code/npcs/Claire.json, code/npcs/Camilla.json, code/npcs/Lance.json, code/npcs/Adventurers.json, code/npcs/Scarlett.json, code/npcs/Gunther.json, code/npcs/Martin.json, code/npcs/Morris.json, code/npcs/MatureEvents.json, code/npcs/isaac.json, code/npcs/alesia.json, code/npcs/jolyne.json, code/npcs/gil.json, code/npcs/jadu.json"
+      "FromFile": "code/npcs/victor.json, code/npcs/olivia.json, code/npcs/andy.json, code/npcs/henchman.json,code/npcs/susan.json, code/npcs/sophia.json, code/npcs/marlonfay.json, code/npcs/morgan.json, code/npcs/magnus.json, code/npcs/apples.json, code/npcs/asNPCs.json, code/npcs/Claire.json, code/npcs/Camilla.json, code/npcs/Lance.json, code/npcs/Adventurers.json, code/npcs/Scarlett.json, code/npcs/Gunther.json, code/npcs/Martin.json, code/npcs/Morris.json, code/npcs/MatureEvents.json, code/npcs/isaac.json, code/npcs/alesia.json, code/npcs/jolyne.json, code/npcs/gil.json, code/npcs/jadu.json"
     },
     {
       "Action": "Include",
@@ -1260,11 +1533,11 @@
     },
     {
       "Action": "Include",
-      "FromFile": "code/npcs/sandy.json,  code/npcs/emily.json, code/npcs/lewis.json,  code/npcs/marnie.json, code/npcs/gus.json, code/npcs/evelyn.json, code/npcs/george.json, code/npcs/jodi.json, code/npcs/harvey.json, code/npcs/penny.json, code/npcs/penny.json, code/npcs/sam.json, code/npcs/clint.json, code/npcs/leah.json, code/npcs/elliott.json, code/npcs/alex.json, code/npcs/haley.json, code/npcs/sebastian.json, code/npcs/willy.json, code/npcs/abigail.json, code/npcs/pierre.json, code/npcs/caroline.json, code/npcs/kent.json, code/npcs/vincent.json, code/npcs/shane.json, code/npcs/jas.json, code/npcs/demetrius.json, code/npcs/linus.json, code/npcs/leo.json, code/npcs/maru.json, code/npcs/krobus.json, code/npcs/qi.json, code/npcs/robin.json, code/npcs/dusty.json, code/npcs/bear.json, code/npcs/charlie.json,  code/npcs/dwarf.json, code/npcs/pam.json"
+      "FromFile": "code/npcs/sandy.json,  code/npcs/emily.json, code/npcs/lewis.json,  code/npcs/marnie.json, code/npcs/gus.json, code/npcs/evelyn.json, code/npcs/george.json, code/npcs/jodi.json, code/npcs/harvey.json, code/npcs/penny.json, code/npcs/sam.json, code/npcs/clint.json, code/npcs/leah.json, code/npcs/elliott.json, code/npcs/alex.json, code/npcs/haley.json, code/npcs/sebastian.json, code/npcs/willy.json, code/npcs/abigail.json, code/npcs/pierre.json, code/npcs/caroline.json, code/npcs/kent.json, code/npcs/vincent.json, code/npcs/shane.json, code/npcs/jas.json, code/npcs/demetrius.json, code/npcs/linus.json, code/npcs/leo.json, code/npcs/maru.json, code/npcs/krobus.json, code/npcs/qi.json, code/npcs/robin.json, code/npcs/dusty.json, code/npcs/bear.json, code/npcs/charlie.json,  code/npcs/dwarf.json, code/npcs/pam.json"
     },
     {
       "Action": "Include",
-      "FromFile": "Assets/CharacterFiles/Dialogue/Andy/dialogue.json, Assets/CharacterFiles/Dialogue/Alesia/Alesia.json, Assets/CharacterFiles/Dialogue/Apples/dialogue.json, Assets/CharacterFiles/Dialogue/Apples/RoommateDialogue.json, Assets/CharacterFiles/Dialogue/Camilla/Camilla.json, Assets/CharacterFiles/Dialogue/Charlie/dialogue.json, Assets/CharacterFiles/Dialogue/Claire/Claire.json, Assets/CharacterFiles/Dialogue/Claire/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Gunther/dialogue.json, Assets/CharacterFiles/Dialogue/Gunther/Fakedialogue.json, Assets/CharacterFiles/Dialogue/Hank/dialogue.json, Assets/CharacterFiles/Dialogue/Hank/Introductiondialogue.json, Assets/CharacterFiles/Dialogue/HighLandsDwarf/dialogue.json, Assets/CharacterFiles/Dialogue/Isaac/Isaac.json, Assets/CharacterFiles/Dialogue/Jadu/Jadu.json, Assets/CharacterFiles/Dialogue/Jolyne/dialogue.json, Assets/CharacterFiles/Dialogue/Lance/dialogue.json, Assets/CharacterFiles/Dialogue/Lance/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Magnus/MarriageDialogueWizard.json, Assets/CharacterFiles/Dialogue/Marlon/dialogue.json, Assets/CharacterFiles/Dialogue/Martin/Martin.json, Assets/CharacterFiles/Dialogue/Martin/MartinTempActor.json, Assets/CharacterFiles/Dialogue/Morgan/dialogue.json, Assets/CharacterFiles/Dialogue/Morris/dialogue.json, Assets/CharacterFiles/Dialogue/Olivia/dialogue.json, Assets/CharacterFiles/Dialogue/Olivia/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Peaches/dialogue.json, Assets/CharacterFiles/Dialogue/Scarlett/dialogue.json, Assets/CharacterFiles/Dialogue/Scarlett/Fakedialogue.json, Assets/CharacterFiles/Dialogue/Sophia/dialogue.json, Assets/CharacterFiles/Dialogue/Sophia/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Susan/dialogue.json, Assets/CharacterFiles/Dialogue/Treyvon/dialogue.json, Assets/CharacterFiles/Dialogue/Treyvon/Introductiondialogue.json, Assets/CharacterFiles/Dialogue/Victor/dialogue.json, Assets/CharacterFiles/Dialogue/Victor/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Brianna/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Cassandra/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Brock/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Cordelia/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Drake/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Edmund/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Emin/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Freya/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Gale/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Gertrude/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Sawyer/dialogue.json"
+      "FromFile": "Assets/CharacterFiles/Dialogue/Henchman/dialogue.json, Assets/CharacterFiles/Dialogue/Andy/dialogue.json, Assets/CharacterFiles/Dialogue/Alesia/Alesia.json, Assets/CharacterFiles/Dialogue/Apples/dialogue.json, Assets/CharacterFiles/Dialogue/Apples/RoommateDialogue.json, Assets/CharacterFiles/Dialogue/Camilla/Camilla.json, Assets/CharacterFiles/Dialogue/Charlie/dialogue.json, Assets/CharacterFiles/Dialogue/Claire/Claire.json, Assets/CharacterFiles/Dialogue/Claire/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Gunther/dialogue.json, Assets/CharacterFiles/Dialogue/Gunther/Fakedialogue.json, Assets/CharacterFiles/Dialogue/Hank/dialogue.json, Assets/CharacterFiles/Dialogue/Hank/Introductiondialogue.json, Assets/CharacterFiles/Dialogue/HighLandsDwarf/dialogue.json, Assets/CharacterFiles/Dialogue/Isaac/Isaac.json, Assets/CharacterFiles/Dialogue/Jadu/Jadu.json, Assets/CharacterFiles/Dialogue/Jolyne/dialogue.json, Assets/CharacterFiles/Dialogue/Lance/dialogue.json, Assets/CharacterFiles/Dialogue/Lance/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Magnus/MarriageDialogueWizard.json, Assets/CharacterFiles/Dialogue/Marlon/dialogue.json, Assets/CharacterFiles/Dialogue/Martin/Martin.json, Assets/CharacterFiles/Dialogue/Martin/MartinTempActor.json, Assets/CharacterFiles/Dialogue/Morgan/dialogue.json, Assets/CharacterFiles/Dialogue/Morris/dialogue.json, Assets/CharacterFiles/Dialogue/Olivia/dialogue.json, Assets/CharacterFiles/Dialogue/Olivia/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Peaches/dialogue.json, Assets/CharacterFiles/Dialogue/Scarlett/dialogue.json, Assets/CharacterFiles/Dialogue/Scarlett/Fakedialogue.json, Assets/CharacterFiles/Dialogue/Sophia/dialogue.json, Assets/CharacterFiles/Dialogue/Sophia/MarriageDialogue.json, Assets/CharacterFiles/Dialogue/Scarlett/MarriageDialogue.json, Assets/CharacterFiles/Dialogue/Susan/dialogue.json, Assets/CharacterFiles/Dialogue/Treyvon/dialogue.json, Assets/CharacterFiles/Dialogue/Treyvon/Introductiondialogue.json, Assets/CharacterFiles/Dialogue/Victor/dialogue.json, Assets/CharacterFiles/Dialogue/Victor/Marriagedialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Brianna/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Cassandra/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Brock/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Cordelia/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Drake/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Edmund/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Emin/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Freya/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Gale/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Gertrude/dialogue.json, Assets/CharacterFiles/Dialogue/Adventurers/Sawyer/dialogue.json"
     },
     {
       "Action": "Include",
@@ -1272,11 +1545,13 @@
     },
     { //Adds custom tilesheets and allows other modders to target SVE assets
       "Action": "Load",
-      "Target": "Maps/spring_z_extras,Maps/summer_z_extras,Maps/fall_z_extras,Maps/winter_z_extras,Maps/spring_z_Waterfalls,Maps/summer_z_Waterfalls,Maps/fall_z_Waterfalls,Maps/winter_z_Waterfalls,Maps/spring_ValleyBackdrop,Maps/summer_ValleyBackdrop,Maps/fall_ValleyBackdrop,Maps/winter_ValleyBackdrop,Maps/spring_GrampletonSuburbsTilesheet,Maps/summer_GrampletonSuburbsTilesheet,Maps/fall_GrampletonSuburbsTilesheet,Maps/winter_GrampletonSuburbsTilesheet,Maps/spring_MorrisModernHouse,Maps/summer_MorrisModernHouse,Maps/fall_MorrisModernHouse,Maps/winter_MorrisModernHouse,Maps/HanksGarage_Tilesheet,Maps/Lighthouse,Maps/EmilyBedEvent,Maps/VanillaCraftables,Maps/VanillaCursors,Maps/VanillaFloors,Maps/VanillaFlooring,Maps/VanillaFurniture,Maps/VanillaSpringObjects,Maps/VanillaWallsAndFloors,Maps/z_SVEbuildingShadow,Maps/z_FireLight,Maps/AuroraVineyardPicture,Maps/StardustFarmPicture,Maps/z_SVE_Halloween2Shadow,Maps/z_RailwayTilesheet,Maps/z_CastleVillage,Maps/z_Leaves_Roofs,Maps/z_Leaves,Maps/z_mine,Maps/z_RedEyes,Maps/GuntherExpedition2_Shadows,Maps/JunimoWoods_Shadow,Maps/ForestWest_Shadow,Maps/MovieTheater_Blank,Maps/SpriteSpring_Effects,Maps/SpriteSpring_Shadows,Maps/z_WizardTowerLights,Maps/z_WizardBasementLights,Maps/z_CalderaLights,Maps/IridiumQuarry,Maps/IridiumQuarry_Shadow,Maps/zGrandpasFarm_UnderCanopyShadow,Maps/zGrandpasFarm_CanopyShadow,Maps/EnchantedGrove_CrimsonLight,Maps/EnchantedGrove_Shadows,Maps/EnchantedGrove_Colors,Maps/EnchantedGrove_WarpLights,Maps/CastleVillage_Tilesheet,Maps/Outpost_CrimsonLight,Maps/CrimsonBadlandsMap,Maps/Galdora_Interface,Maps/z_Island_S_CoralReefs,Maps/z_Island_W_CoralReefs,Maps/z_Island_SE_CoralReefs,Maps/AtlantisTilesheet,Maps/AtlantisTilesheet_MaskEffect,Maps/AtlantisTilesheetRuins,Maps/BathroomTilesheet,Maps/SpriteSpringCave_Effects,Maps/SandstormEffect,Maps/RemoveBenchChairTiles,Maps/Arcade_Couch,Maps/JojaPetStore,Maps/spring_ShearwaterBridgeRenovated,Maps/summer_ShearwaterBridgeRenovated,Maps/fall_ShearwaterBridgeRenovated,Maps/winter_ShearwaterBridgeRenovated,Maps/ShearwaterBridgeConeBarricade,Maps/Highlands_CanopyTreeShadows,Maps/HighlandsBackground,Maps/HighlandsCavern_OreTilesheet,Maps/HighlandsCavern_ShadowTilesheet,Maps/HighlandsCavern_LightingTilesheet,Maps/spring_RedBaneberry_Tilesheet,Maps/summer_RedBaneberry_Tilesheet,Maps/fall_RedBaneberry_Tilesheet,Maps/winter_RedBaneberry_Tilesheet,Maps/FirstSlashGuildBuilding,Maps/VoidDen_Tilesheet,Maps/JojaEmporiumWarpCircle,Maps/SakuraVineyardDiningRoomTilesheet,Maps/GrampletonTrainStationTilesheet,Maps/SakuraVineyardTilesheet,Maps/CherryBlossomPetals,Maps/ZCCC_Entrance_Tilesheet,Maps/ZCCC_FoodCourt_Tilesheet,Maps/ZCCC_Courtyard_NPCs,Maps/ZCCC_MainHall_Tilesheet,Maps/ZCCC_Stage_Tilesheet,Maps/ZCCC_VendorFloor_Tilesheet,Maps/ZuzuCityStreet_Tilesheet,Maps/ZuzuCity",
+      "Priority": "Low",
+      "Target": "Maps/spring_z_extras,Maps/summer_z_extras,Maps/fall_z_extras,Maps/winter_z_extras,Maps/spring_SVE_Tilesheet2,Maps/summer_SVE_Tilesheet2,Maps/fall_SVE_Tilesheet2,Maps/winter_SVE_Tilesheet2,Maps/spring_z_Waterfalls,Maps/summer_z_Waterfalls,Maps/fall_z_Waterfalls,Maps/winter_z_Waterfalls,Maps/spring_ValleyBackdrop,Maps/summer_ValleyBackdrop,Maps/fall_ValleyBackdrop,Maps/winter_ValleyBackdrop,Maps/spring_GrampletonSuburbsTilesheet,Maps/summer_GrampletonSuburbsTilesheet,Maps/fall_GrampletonSuburbsTilesheet,Maps/winter_GrampletonSuburbsTilesheet,Maps/spring_MorrisModernHouse,Maps/summer_MorrisModernHouse,Maps/fall_MorrisModernHouse,Maps/winter_MorrisModernHouse,Maps/HanksGarage_Tilesheet,Maps/Lighthouse,Maps/EmilyBedEvent,Maps/VanillaCraftables,Maps/VanillaCursors,Maps/VanillaFloors,Maps/VanillaFlooring,Maps/VanillaFurniture,Maps/VanillaSpringObjects,Maps/VanillaWallsAndFloors,Maps/DinoIsland_North_Mask,Maps/ForbiddenMaze_Shadow,Maps/ForbiddenMaze_Darkness,Maps/z_SVEbuildingShadow,Maps/z_FireLight,Maps/AuroraVineyardPicture,Maps/StardustFarmPicture,Maps/z_SVE_Halloween2Shadow,Maps/z_RailwayTilesheet,Maps/z_CastleVillage,Maps/z_Leaves_Roofs,Maps/z_Leaves,Maps/z_mine,Maps/z_RedEyes,Maps/GuntherExpedition2_Shadows,Maps/JunimoWoods_Shadow,Maps/ForestWest_Shadow,Maps/MovieTheater_Blank,Maps/SpriteSpring_Effects,Maps/SpriteSpring_Shadows,Maps/z_WizardTowerLights,Maps/z_WizardBasementLights,Maps/z_CalderaLights,Maps/IridiumQuarry,Maps/IridiumQuarry_Shadow,Maps/zGrandpasFarm_UnderCanopyShadow,Maps/zGrandpasFarm_CanopyShadow,Maps/EnchantedGrove_CrimsonLight,Maps/EnchantedGrove_Shadows,Maps/EnchantedGrove_Colors,Maps/EnchantedGrove_WarpLights,Maps/CastleVillage_Tilesheet,Maps/Outpost_CrimsonLight,Maps/CrimsonBadlandsMap,Maps/Galdora_Interface,Maps/z_Island_S_CoralReefs,Maps/z_Island_W_CoralReefs,Maps/z_Island_SE_CoralReefs,Maps/AtlantisTilesheet,Maps/AtlantisTilesheet_MaskEffect,Maps/AtlantisTilesheetRuins,Maps/BathroomTilesheet,Maps/SpriteSpringCave_Effects,Maps/SandstormEffect,Maps/RemoveBenchChairTiles,Maps/Arcade_Couch,Maps/JojaPetStore,Maps/spring_ShearwaterBridgeRenovated,Maps/summer_ShearwaterBridgeRenovated,Maps/fall_ShearwaterBridgeRenovated,Maps/winter_ShearwaterBridgeRenovated,Maps/ShearwaterBridgeConeBarricade,Maps/Highlands_CanopyTreeShadows,Maps/HighlandsBackground,Maps/HighlandsCavern_OreTilesheet,Maps/HighlandsCavern_ShadowTilesheet,Maps/HighlandsCavern_LightingTilesheet,Maps/spring_RedBaneberry_Tilesheet,Maps/summer_RedBaneberry_Tilesheet,Maps/fall_RedBaneberry_Tilesheet,Maps/winter_RedBaneberry_Tilesheet,Maps/FirstSlashGuildBuilding,Maps/VoidDen_Tilesheet,Maps/JojaEmporiumWarpCircle,Maps/SakuraVineyardDiningRoomTilesheet,Maps/GrampletonTrainStationTilesheet,Maps/SakuraVineyardTilesheet,Maps/CherryBlossomPetals,Maps/ZCCC_Entrance_Tilesheet,Maps/ZCCC_FoodCourt_Tilesheet,Maps/ZCCC_Courtyard_NPCs,Maps/ZCCC_MainHall_Tilesheet,Maps/ZCCC_Stage_Tilesheet,Maps/ZCCC_VendorFloor_Tilesheet,Maps/ZuzuCityStreet_Tilesheet,Maps/ZuzuCity",
       "FromFile": "Assets/Tilesheets/{{TargetWithoutPath}}.png",
     },
     { //Mist effect tilesheets
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/z_railroad_mist,Maps/z_backwoods_mist,Maps/z_Mountain_mist,Maps/z_ForestWest_Mist,Maps/z_Forest_Mist,Maps/Highlands_Fog,Maps/Highlands_FogBackground,Maps/z_AdventurerSummit_Mist",
       "FromFile": "Assets/Tilesheets/{{TargetWithoutPath}}.png",
       "When": {

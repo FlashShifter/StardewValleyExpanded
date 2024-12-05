@@ -1,0 +1,2123 @@
+{
+  "Format": "2.0",
+  "ConfigSchema": {
+    "SandboxLayout": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "LargerGreenhouse": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+    "RemoveGreenhouseObjects": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "RemovePicnicTable": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveEasternVerticalFence": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveStonePathways": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveTreeHidingBackyardMouseStatue": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"SmallerBackyardFence": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"InstantlyUnlockBridge": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"InstantlyUnlockDesertShortcut": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "MistEffects": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+  },
+  "CustomLocations": [
+    {
+      "Name": "Custom_FrontierFarm_HiddenCave",
+      "FromMapFile": "Assets/NewLocations/FrontierFarm_HiddenCave.tmx",
+    },
+    {
+      "Name": "Custom_FrontierFarm_UndergroundTunnel",
+      "FromMapFile": "Assets/NewLocations/FrontierFarm_UndergroundTunnel.tmx",
+    },
+    {
+      "Name": "Custom_FerngillRepublicFrontier_HotSpring",
+      "FromMapFile": "Assets/NewLocations/FerngillRepublicFrontier_HotSpring.tmx",
+    },
+    {
+      "Name": "Custom_FerngillRepublicFrontier_Cave",
+      "FromMapFile": "Assets/NewLocations/FerngillRepublicFrontier_Cave.tmx",
+    },
+  ],
+  "DynamicTokens": [
+    {
+      "Name": "GrandpaShedComplete",
+      "Value": "{{HasSeenEvent: currentPlayer, hostPlayer |contains=2554906}}"
+    },
+  ],
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/AdditionalFarms",
+      "Entries": {
+        "FlashShifter.FrontierFarm/FrontierFarm": {
+          "ID": "FrontierFarm",
+          "TooltipStringPath": "Strings/UI:FrontierFarm",
+          "MapName": "Farm_FrontierFarm",
+          "IconTexture": "Mods/FlashShifter.FrontierFarm/Icon",
+          "WorldMapTexture": "Mods/FlashShifter.FrontierFarm/WorldMap"
+        }
+      }
+    },
+    { //Load tilesheets
+      "Action": "Load",
+      "Target": "Maps/HiddenCave_Shadow, Maps/HiddenCave_Copper, Maps/HiddenCave_Iron, Maps/HiddenCave_Gold, Maps/HiddenCave_Gems, Maps/HiddenCave_Blank",
+      "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
+    },
+    //Load mist tilesheets
+    {
+      "Action": "Load",
+      "Target": "Maps/z_FrontierFarm_Mist,Maps/z_FerngillRepublicFrontier_mist",
+      "FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png",
+      "When": {
+        "MistEffects": "true"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.FrontierFarm/Icon",
+      "FromFile": "Assets/Tilesheets/Icon.png"
+    },
+    //Farm Name + Description
+    {
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+        "FrontierFarm": "{{i18n:FrontierFarm.Description}}"
+      }
+    },
+    {
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/NewLocations/FerngillRepublicFrontier.tmx",
+    },
+    { //Adds mist effects to the farm
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MistEffects/FrontierFarm_Mist.tmx",
+      "When": {
+        "MistEffects": "true",
+        "Weather": "Rain, Storm",
+        "FarmType": "FrontierFarm"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      }
+    },
+    { //Adds mist effects to the Ferngill Republic Frontier
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MistEffects/FerngillRepublicFrontier_Mist.tmx",
+      "When": {
+        "MistEffects": "true",
+        "Weather": "Rain, Storm",
+        "FarmType": "FrontierFarm"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 156
+      }
+    },
+    { //Adds mist effects to the Ferngill Republic Frontier Hot Spring
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier_HotSpring",
+      "FromFile": "Assets/MistEffects/FerngillRepublicFrontier_HotSpring_Mist.tmx",
+      "When": {
+        "MistEffects": "true",
+        "Weather": "Rain, Storm",
+        "FarmType": "FrontierFarm"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 55,
+        "Height": 38
+      }
+    },
+    //Location Data
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      /*"TargetField": [
+                  "ArtifactSpots"
+                ],*/
+      "Entries": {
+        "(O)114": {
+          "Id": "(O)114",
+          "ItemID": "(O)114",
+          "Chance": 0.30
+        },
+        "(O)100": {
+          "Id": "(O)100",
+          "ItemID": "(O)100",
+          "Chance": 0.20
+        },
+        "(O)101": {
+          "Id": "(O)101",
+          "ItemID": "(O)101",
+          "Chance": 0.20
+        },
+        "(O)105": {
+          "Id": "(O)105",
+          "ItemID": "(O)105",
+          "Chance": 0.20
+        },
+        "(O)110": {
+          "Id": "(O)110",
+          "ItemID": "(O)110",
+          "Chance": 0.20
+        },
+        "(O)111": {
+          "Id": "(O)111",
+          "ItemID": "(O)111",
+          "Chance": 0.20
+        },
+        "(O)112": {
+          "Id": "(O)112",
+          "ItemID": "(O)112",
+          "Chance": 0.20
+        },
+        "(O)113": {
+          "Id": "(O)113",
+          "ItemID": "(O)113",
+          "Chance": 0.20
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      /*"TargetField": [
+                  "Fish",
+                ],*/
+      "Entries": {
+        "FlashShifter.FrontierFarm_142": {
+          "Id": "FlashShifter.FrontierFarm_142",
+          "ItemId": "(O)142",
+          "Condition": "LOCATION_Season Here Spring Summer Fall Winter",
+        },
+        "FlashShifter.FrontierFarm_132": {
+          "Id": "FlashShifter.FrontierFarm_132",
+          "ItemId": "(O)132",
+          "Condition": "LOCATION_Season Here Spring Summer Fall Winter",
+        },
+        "FlashShifter.FrontierFarm_145": {
+          "Id": "FlashShifter.FrontierFarm_145",
+          "ItemId": "(O)145",
+          "Condition": "LOCATION_Season Here Spring Summer",
+        },
+        "FlashShifter.FrontierFarm_137": {
+          "Id": "FlashShifter.FrontierFarm_137",
+          "ItemId": "(O)137",
+          "Condition": "LOCATION_Season Here Spring Fall",
+        },
+        "FlashShifter.FrontierFarm_706": {
+          "Id": "FlashShifter.FrontierFarm_706",
+          "ItemId": "(O)706",
+          "Condition": "LOCATION_Season Here Spring Summer Fall",
+        },
+        "FlashShifter.FrontierFarm_Minnow": {
+          "Id": "FlashShifter.FrontierFarm_Minnow",
+          "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Minnow",
+          "Condition": "LOCATION_Season Here Spring Summer Fall Winter",
+        },
+        "FlashShifter.FrontierFarm_704": {
+          "Id": "FlashShifter.FrontierFarm_704",
+          "ItemId": "(O)704",
+          "Condition": "LOCATION_Season Here Summer",
+        },
+        "FlashShifter.FrontierFarm_139": {
+          "Id": "FlashShifter.FrontierFarm_139",
+          "ItemId": "(O)139",
+          "Condition": "LOCATION_Season Here Fall",
+        },
+        "FlashShifter.FrontierFarm_141": {
+          "Id": "FlashShifter.FrontierFarm_141",
+          "ItemId": "(O)141",
+          "Condition": "LOCATION_Season Here Winter",
+        },
+        "FlashShifter.FrontierFarm_707": {
+          "Id": "FlashShifter.FrontierFarm_707",
+          "ItemId": "(O)707",
+          "Condition": "LOCATION_Season Here Winter",
+        },
+      }
+    },
+    //Farm Map
+    {
+      "Action": "Load",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/Maps/FrontierFarm.tmx",
+    },
+    //Sandbox Layout
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/Maps/FrontierFarm_Sandbox.tmx",
+      "When": {
+        "SandboxLayout": "true",
+        "FarmType": "FrontierFarm"
+      },
+      "Priority": "Early",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      }
+    },
+    //Farm Icon
+    //Farm World Map
+    {
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.FrontierFarm/WorldMap",
+      "FromFile": "Assets/Maps/WorldMaps/WorldMap_Blank.png",
+    },
+    //Patches Seasonal World Map
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map",
+      "FromFile": "Assets/Maps/WorldMaps/spring_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Spring"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Summer",
+      "FromFile": "Assets/Maps/WorldMaps/summer_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Summer"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Fall",
+      "FromFile": "Assets/Maps/WorldMaps/fall_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Fall"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Winter",
+      "FromFile": "Assets/Maps/WorldMaps/winter_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Winter"
+      },
+      "Update": "OnLocationChange"
+    },
+    //Changes player icon position on frontier Farm
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+        "Farm",
+        "WorldPositions",
+        "Farm",
+      ],
+      "Entries": {
+        "MapPixelArea": {
+          "X": 79,
+          "Y": 70,
+          "Width": 0,
+          "Height": 0
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+        "Farm",
+        "WorldPositions",
+        "FarmCave",
+      ],
+      "Entries": {
+        "MapPixelArea": {
+          "X": 53,
+          "Y": 55,
+          "Width": 0,
+          "Height": 0
+        },
+      },
+    },
+    /*
+              {
+                "Action": "EditData",
+                "Target": "Data/WorldMap",
+                "TargetField": [
+                  "Valley",
+                  "MapAreas",
+                ],
+                "Entries": {
+                   "FlashShifter.StardewValleyExpanded_IndoorTownMap_FrontierFarm": {
+                    "Id": "FrontierFarm",
+                    "PixelArea": {
+                      "X": 0,
+                      "Y": 0,
+                      "Width": 300,
+                      "Height": 180
+                    },
+                    "WorldPositions": [
+                      {
+                        "Id": "FrontierFarm",
+                        "LocationName": "FrontierFarm",
+                        "MapPixelArea": {
+                          "X": 19,
+                          "Y": 157,
+                          "Width": 0,
+                          "Height": 0
+                        },
+                      }
+                    ]
+                  },
+                    "FlashShifter.StardewValleyExpanded_IndoorTownMap_FarmCave": {
+                    "Id": "FarmCave",
+                    "PixelArea": {
+                      "X": 0,
+                      "Y": 0,
+                      "Width": 300,
+                      "Height": 180
+                    },
+                    "ScrollText": "{{i18n:FrontierName.FarmCave}}",
+                    "WorldPositions": [
+                      {
+                        "Id": "FarmCave",
+                        "LocationName": "FarmCave",
+                        "MapPixelArea": {
+                          "X": 53,
+                          "Y": 59,
+                          "Width": 0,
+                          "Height": 0
+                        },
+                      }
+                    ]
+                  },
+                },
+              },
+              
+              */
+    //Custom Location World Positions
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "When": {
+        "FarmType": "FrontierFarm"
+      },
+      "Update": "OnLocationChange",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+      ],
+      "Entries": {
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_FerngillRepublicFrontier": {
+          "Id": "Custom_FerngillRepublicFrontier",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:FrontierName}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_FerngillRepublicFrontier",
+              "LocationName": "Custom_FerngillRepublicFrontier",
+              "MapPixelArea": {
+                "X": 5,
+                "Y": 80,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_FerngillRepublicFrontier_HotSpring": {
+          "Id": "Custom_FerngillRepublicFrontier_HotSpring",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:FrontierName.HotSpring}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_FerngillRepublicFrontier_HotSpring",
+              "LocationName": "Custom_FerngillRepublicFrontier_HotSpring",
+              "MapPixelArea": {
+                "X": 5,
+                "Y": 40,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_FerngillRepublicFrontier_Cave": {
+          "Id": "Custom_FerngillRepublicFrontier_Cave",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:FrontierName.Cave}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_FerngillRepublicFrontier_Cave",
+              "LocationName": "Custom_FerngillRepublicFrontier_Cave",
+              "MapPixelArea": {
+                "X": 5,
+                "Y": 40,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_FrontierFarm_UndergroundTunnel": {
+          "Id": "Custom_FrontierFarm_UndergroundTunnel",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:FrontierName.DesertTunnel}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_FrontierFarm_UndergroundTunnel",
+              "LocationName": "Custom_FrontierFarm_UndergroundTunnel",
+              "MapPixelArea": {
+                "X": 55,
+                "Y": 40,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_GrandpasShedRuins": {
+          "Id": "FarmCave",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:DisplayName.GrandpasShed}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_GrandpasShedRuins",
+              "LocationName": "Custom_GrandpasShedRuins",
+              "MapPixelArea": {
+                "X": 12,
+                "Y": 64,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_GrandpasShed": {
+          "Id": "FarmCave",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:DisplayName.GrandpasShed}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_GrandpasShed",
+              "LocationName": "Custom_GrandpasShed",
+              "MapPixelArea": {
+                "X": 12,
+                "Y": 64,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_GrandpasShedGreenhouse": {
+          "Id": "FarmCave",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:DisplayName.GrandpasShed}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_GrandpasShedGreenhouse",
+              "LocationName": "Custom_GrandpasShedGreenhouse",
+              "MapPixelArea": {
+                "X": 12,
+                "Y": 64,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+        "FlashShifter.StardewValleyExpanded_IndoorTownMap_HiddenCave": {
+          "Id": "Custom_HiddenCave",
+          "PixelArea": {
+            "X": 0,
+            "Y": 0,
+            "Width": 300,
+            "Height": 180
+          },
+          "ScrollText": "{{i18n:FrontierName.HiddenCave}}",
+          "WorldPositions": [
+            {
+              "Id": "Custom_HiddenCave",
+              "LocationName": "Custom_HiddenCave",
+              "MapPixelArea": {
+                "X": 86,
+                "Y": 62,
+                "Width": 0,
+                "Height": 0
+              },
+            }
+          ]
+        },
+      }
+    },
+    //Patches Forest, Woods, Bus Stop, and Desert
+    {
+      "Action": "EditMap",
+      "Target": "Maps/BusStop",
+      "FromFile": "Assets/MapPatches/FrontierFarm_BusStopWarps.tmx",
+      "ToArea": {
+        "X": 0,
+        "Y": 22,
+        "Width": 27,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "Assets/MapPatches/FrontierFarm_ForestShortcut.tbin",
+      "ToArea": {
+        "X": 37,
+        "Y": 0,
+        "Width": 6,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "FromFile": "Assets/MapPatches/FrontierFarm_WoodsShortcut.tmx",
+      "ToArea": {
+        "X": 64,
+        "Y": 0,
+        "Width": 8,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Desert",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Desert_Corner_Mountain.tmx",
+      "ToArea": {
+        "X": 35,
+        "Y": 146,
+        "Width": 25,
+        "Height": 10
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    //Fall leaves
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Leaves.tmx",
+      "When": {
+        "Season": "Fall"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      }
+    },
+    //Patches fixed grandpa's shed
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_ShedFixed.tmx",
+      "When": {
+        "GrandpaShedComplete": true
+      },
+      "ToArea": {
+        "X": 14,
+        "Y": 11,
+        "Width": 10,
+        "Height": 11
+      }
+    },
+	
+	
+    //Configurations
+    
+
+	//Remove Stone Pathways
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_RemoveStonePathways.tmx",
+	  "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveStonePathways": true,
+		"SandboxLayout": false
+      }
+    },
+	//Remove Tree Hiding Backyard Mouse Statue
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_RemoveTreeHidingBackyardMouseStatue.tmx",
+      "ToArea": {
+        "X": 105,
+        "Y": 10,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveTreeHidingBackyardMouseStatue": true
+      }
+    },
+	//Removes Picnic Table
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_RemovePicnicTable.tmx",
+      "ToArea": {
+        "X": 129,
+        "Y": 17,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemovePicnicTable": true
+      }
+    },
+	//Remove Vertical Fence
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_VerticalFenceRemoved.tmx",
+      "ToArea": {
+        "X": 131,
+        "Y": 30,
+        "Width": 5,
+        "Height": 27
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveEasternVerticalFence": true
+      }
+    },	
+	//Smaller Backyard Fence
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_SmallerBackyardFence1.tmx",
+      "ToArea": {
+        "X": 104,
+        "Y": 19,
+        "Width": 3,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_SmallerBackyardFence2.tmx",
+      "ToArea": {
+        "X": 122,
+        "Y": 22,
+        "Width": 12,
+        "Height": 3
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "assets/MapPatches/FrontierFarm_SmallerBackyardFence3.tmx",
+      "ToArea": {
+        "X": 132,
+        "Y": 15,
+        "Width": 2,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+    //Load greenhouse
+    {
+      "Action": "Load",
+      "Target": "Maps/Greenhouse",
+	  "Priority": "Low",
+      "FromFile": "assets/Maps/Greenhouse_FrontierFarm.tbin",
+      "When": {
+        "LargerGreenhouse": "true",
+        "FarmType": "FrontierFarm"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Greenhouse",
+      "FromFile": "assets/MapPatches/Greenhouse_Cleared_FrontierFarm.tbin",
+      "When": {
+        "LargerGreenhouse": "true",
+        "RemoveGreenhouseObjects": "true",
+        "FarmType": "FrontierFarm"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 27,
+        "Height": 32
+      }
+    },
+    //Greenhouse is moved
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Greenhouse_Dirt",
+      "FromFile": "Assets/MapPatches/FrontierFarm_GreenhousePatch.tmx",
+      "When": {
+        "FarmType": "FrontierFarm"
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 9,
+        "Height": 6
+      },
+    },
+    //Farm Strings
+    {
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "Entries": {
+        "FrontierFarm.1": "@ {{FarmName}}{{i18n:Signpost}}",
+        "FrontierFarm.2": "{{i18n:Minecarts}}"
+      }
+    },
+    //Fish Data
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "Custom_FerngillRepublicFrontier": {
+          "DisplayName": "{{i18n:FrontierName}}",
+          "DefaultArrivalTile": {
+            "X": 145,
+            "Y": 32,
+          },
+          "CreateOnLoad": {
+            "AlwaysActive": true,
+            "MapPath": "Maps\\Custom_FerngillRepublicFrontier"
+          },
+          "CanPlantHere": true,
+          "FishAreas": {
+            "Ocean": {
+              "DisplayName": null,
+              "Position": {
+                "X": 0,
+                "Y": 140,
+                "Width": 155,
+                "Height": 15,
+              },
+              "CrabPotFishTypes": [
+                "ocean"
+              ]
+            },
+            "River": {
+              "DisplayName": null,
+              "Position": {
+                "X": 0,
+                "Y": 0,
+                "Width": 155,
+                "Height": 140,
+              },
+            },
+          },
+          "Fish": [
+            {
+              "Id": "FlashShifter.FrontierFarm_128",
+              "ItemId": "(O)128",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Summer"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_130",
+              "ItemId": "(O)130",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Summer Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_148",
+              "ItemId": "(O)148",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Spring Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_149",
+              "ItemId": "(O)149",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Summer"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_151",
+              "ItemId": "(O)151",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_155",
+              "ItemId": "(O)155",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Summer Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_267",
+              "ItemId": "(O)267",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Spring Summer"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_269",
+              "ItemId": "(O)269",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_701",
+              "ItemId": "(O)701",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Summer Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_708",
+              "ItemId": "(O)708",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Spring Summer Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_798",
+              "ItemId": "(O)798",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_Starfish",
+              "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Starfish",
+              "FishAreaID": "Ocean",
+              "Condition": "LOCATION_Season Here Spring Summer Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_SeaJelly",
+              "ItemId": "(O)SeaJelly",
+              "FishAreaID": "Ocean",
+              "Chance": 0.06
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_DulseSeaweed",
+              "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed",
+              "FishAreaID": "Ocean",
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_136",
+              "ItemId": "(O)136",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Spring Summer Fall Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_143",
+              "ItemId": "(O)143",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Spring Summer Fall"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_144",
+              "ItemId": "(O)144",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Summer Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_698",
+              "ItemId": "(O)698",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Summer Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_699",
+              "ItemId": "(O)699",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Fall Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_704",
+              "ItemId": "(O)704",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Summer"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_707",
+              "ItemId": "(O)707",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_Bull_Trout",
+              "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Bull_Trout",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Fall Winter"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_King_Salmon",
+              "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_King_Salmon",
+              "FishAreaID": "River",
+              "Condition": "LOCATION_Season Here Spring Summer"
+            },
+            {
+              "Id": "FlashShifter.FrontierFarm_RiverJelly",
+              "ItemId": "(O)RiverJelly",
+              "FishAreaID": "River",
+              "Chance": 0.06
+            },
+          ],
+          "ArtifactSpots": [
+            {
+              "Id": "(O)382",
+              "ItemId": "(O)382",
+              "Chance": 0.06
+            },
+            {
+              "Id": "(O)581",
+              "ItemId": "(O)581",
+              "Chance": 0.10
+            },
+            {
+              "Id": "(O)378",
+              "ItemId": "(O)378",
+              "Chance": 0.10
+            },
+            {
+              "Id": "(O)102",
+              "ItemId": "(O)102",
+              "Chance": 0.15
+            },
+            {
+              "Id": "(O)390",
+              "ItemId": "(O)390",
+              "Chance": 0.25
+            },
+            {
+              "Id": "(O)330",
+              "ItemId": "(O)330",
+              "Chance": 1.0
+            },
+          ]
+        }
+      }
+    },
+    //Makes gem appearances dynamic to players mining level
+    {
+      "Action": "EditImage",
+      "Target": "Maps/HiddenCave_Copper",
+      "FromFile": "Assets/Tilesheets/HiddenCave_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/HiddenCave_Iron",
+      "FromFile": "Assets/Tilesheets/HiddenCave_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/HiddenCave_Gold",
+      "FromFile": "Assets/Tilesheets/HiddenCave_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/HiddenCave_Gems",
+      "FromFile": "Assets/Tilesheets/HiddenCave_Blank.png",
+      "When": {
+        "SkillLevel:Mining": "0, 1, 2, 3, 4, 5, 6, 7, 9"
+      }
+    },
+    //***** Start Questlines *****
+    //Functional Farm Minecarts Questline
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "GilMinecarts": {
+          "Name": "[GilMinecarts_Name]",
+          "Requester": "Gil",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_1337429, !event_1337431",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[GilMinecarts_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "[GilMinecarts_Objective_1_Text]",
+              "RequiredCount": "24",
+              "Data": {
+                "DropBox": "GilMinecartsChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "145 38.2",
+                "AcceptedContextTags": "item_iron_bar"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "[GilMinecarts_Objective_2_Text]",
+              "RequiredCount": "24",
+              "Data": {
+                "DropBox": "GilMinecartsChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "145 38.2",
+                "AcceptedContextTags": "item_copper_bar"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "FunctionalMinecarts"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {}
+            }
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "GilMinecarts_Name": "{{i18n:GilMinecarts.01}}",
+        "GilMinecarts_Text": "{{i18n:GilMinecarts.02}}",
+        "GilMinecarts_Objective_1_Text": "{{i18n:GilMinecarts.03}}",
+        "GilMinecarts_Objective_2_Text": "{{i18n:GilMinecarts.04}}",
+      }
+    },
+    //Event #1 - Functional Minecarts   <<ID tagged by quest
+    //To start quest: Player must have fixed minecarts in the valley, visited the woods at least once, and is a guild member.
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent |contains=1000034": true,
+        "FarmType": "FrontierFarm",
+      },
+      "Entries": {
+        "1337429/A cc_Minecart/t 600 1150/H": "continue/-500 -500/farmer 118 26 2 MarlonFay 118 27 0/pause 1200/speak MarlonFay \"{{i18n:MarlonMinecarts.01}}\"/pause 500/end"
+      },
+    },
+    //Event #2 - Functional Minecarts   <<ID tagged by framework
+    {
+      "Action": "EditData",
+      "Target": "data/events/adventureguild",
+      "When": {
+        "FarmType": "FrontierFarm",
+      },
+      "Entries": {
+        "1337430/e 1337429/H": "MarlonsTheme/-500 -500/MarlonFay 4 11 2 farmer 6 17 0 Gil -30 -30 0/viewport 6 12 clamp true/skippable/move farmer 0 -4 1/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1000/speak Gil \"{{i18n:GilMinecarts.05}}\"/pause 300/emote farmer 8/pause 200/speak Gil \"{{i18n:GilMinecarts.06}}\"/pause 400/jump farmer/pause 800/faceDirection MarlonFay 1 true/pause 500/speak Gil \"{{i18n:GilMinecarts.07}}\"/pause 500/globalFade/viewport -200 -200/pause 500/end dialogue MarlonFay \"{{i18n:MarlonMinecarts.02}}\""
+      },
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Gil",
+      "FromFile": "Assets/Tilesheets/GilSprite.png"
+    },
+    //Event #3 - Functional Minecarts <<Triggers map patch
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasFlag": "FunctionalMinecarts",
+      },
+      "Entries": {
+        "1337431/t 600 1150/H": "continue/118 26/farmer 118 26 2 MarlonFay 118 27 0/skippable/pause 1000/speak MarlonFay \"{{i18n:MarlonMinecarts.03}}\"/pause 500/emote farmer 32/end dialogue MarlonFay \"{{i18n:MarlonMinecarts.04}}\"",
+      },
+    },
+	
+    //Storage Chest
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Gil_Storage_Chest.tmx",
+      "ToArea": {
+        "X": 145,
+        "Y": 38,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337430": true,
+        "HasSeenEvent: anyPlayer|contains=1337431": false,
+        "FarmType": "FrontierFarm",
+      },
+      "Update": "OnLocationChange"
+    },
+    //Right Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart1.tmx",
+      "ToArea": {
+        "X": 144,
+        "Y": 38,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Middle Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart2.tmx",
+      "ToArea": {
+        "X": 84,
+        "Y": 22,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Left Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart3.tmx",
+      "ToArea": {
+        "X": 25,
+        "Y": 30,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Adds light sources to Minecart Lamps
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "Light"
+          ],
+          "Value": "26 29 4 85 21 4 145 37 4",
+          "Delimiter": " "
+        }
+      ]
+    },
+    //Adds day/night tiles to minecart lamps
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      },
+      "MapProperties": {
+        "DayTiles": "Buildings 26 29 510 Buildings 85 21 510 Buildings 145 37 510",
+        "NightTiles": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
+      }
+    },
+	
+	
+	
+    //Ravine Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart4.tmx",
+      "ToArea": {
+        "X": 134,
+        "Y": 30,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Mountain Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart5.tmx",
+      "ToArea": {
+        "X": 71,
+        "Y": 5,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Grasslands Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart6.tmx",
+      "ToArea": {
+        "X": 66,
+        "Y": 66,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Beach Minecart
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Minecart7.tmx",
+      "ToArea": {
+        "X": 47,
+        "Y": 127,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      }
+    },
+    //Adds light sources to Minecart Lamps
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "MapProperties",
+            "Light"
+          ],
+          "Value": "135 29 4 72 4 4 67 65 4 48 126 4",
+          "Delimiter": " "
+        }
+      ]
+    },
+    //Adds day/night tiles to minecart lamps
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337431": true,
+        "FarmType": "FrontierFarm",
+      },
+      "MapProperties": {
+        "DayTiles": "Buildings 135 29 510 Buildings 72 4 510 Buildings 67 65 510 Buildings 48 126 510",
+        "NightTiles": "Buildings 135 29 507 Buildings 72 4 507 Buildings 67 65 507 Buildings 48 126 507",
+      }
+    },
+	
+    //Calico Desert Shortcut Questline
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+	  "When": {
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "DwarfCaveShortcut": {
+          "Name": "[DwarfCaveShortcut_Name]",
+          "Requester": "Dwarf",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_1337437, !event_1337439",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[DwarfCaveShortcut_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Deliver",
+              "Text": "[DwarfCaveShortcut_Objective_1_Text]",
+              "RequiredCount": "36",
+              "Data": {
+                "AcceptedContextTags": "item_diamond",
+                "TargetName": "Dwarf"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "DesertTunnel"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {}
+            }
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "DwarfCaveShortcut_Name": "{{i18n:DwarfTunnel.01}}",
+        "DwarfCaveShortcut_Text": "{{i18n:DwarfTunnel.02}}",
+        "DwarfCaveShortcut_Objective_1_Text": "{{i18n:DwarfTunnel.03}}",
+      }
+    },
+    //Event #1 - Calico Desert Shortcut   <<ID tagged by quest
+    //To start quest: Player must have 2 hearts with the Dwarf, unlocked the desert bus, and have seen Sandy's introduction event
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "1337437/e 67/A cc_Bus/f Dwarf 500/t 2000 2600/H": "continue/-500 -500/farmer 118 26 2 Dwarf 118 27 0/pause 1250/emote farmer 8/pause 500/speak Dwarf \"{{i18n:DwarfTunnel.04}}\"/pause 1000/end dialogue Dwarf \"{{i18n:DwarfTunnel.05}}\""
+      },
+    },
+    //Event #2 - Calico Desert Shortcut   <<ID tagged by framework
+    {
+      "Action": "EditData",
+      "Target": "data/events/mine",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasSeenEvent |contains=1337437": true,
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "1337438": "Upper_Ambient/-500 -500/farmer 36 8 1 Dwarf 43 6 2/viewport 43 8 clamp true/skippable/move farmer 7 0 1/pause 300/faceDirection farmer 0 true/pause 425/speak Dwarf \"{{i18n:DwarfTunnel.06}}\"/pause 350/emote farmer 8/pause 500/speak Dwarf \"{{i18n:DwarfTunnel.07}}\"/pause 500/playSound dwop/playSound dwop/animate Dwarf false true 250 16 16 17 18 19/pause 1250/speak Dwarf \"{{i18n:DwarfTunnel.08}}\"/pause 500/jump farmer/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.09}}\"/pause 500/globalFade/viewport -1000 -1000/pause 500/end dialogue Dwarf \"{{i18n:DwarfTunnel.10}}\""
+      },
+    },
+    //Event #3 - Calico Desert Shortcut <<Triggers map patch
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasFlag": "DesertTunnel",
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "1337439/t 600 2600/H": "continue/118 26/farmer 118 26 2 Dwarf 118 27 0/skippable/pause 1000/speak Dwarf \"{{i18n:DwarfTunnel.11}}\"/pause 500/emote farmer 32/pause 350/end dialogue Dwarf \"{{i18n:DwarfTunnel.12}}\"",
+      },
+    },
+    //Event #4 - Calico Desert Shortcut - Bomb Explosions
+	{
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasFlag": "DesertTunnel",
+        "HasSeenEvent: anyPlayer|contains=1337439": true,
+		"InstantlyUnlockDesertShortcut": false
+      },
+      "Entries": {
+        "1337440/t 600 2600/H": "continue/-300 -300/farmer -1000 -1000 2/pause 500/globalFade/viewport -1000 -1000/pause 500/ignoreEventTileOffset/viewport 103 7 clamp true/pause 1000/playSound explosion/pause 1000/playSound explosion/pause 600/playSound explosion/pause 800/playSound explosion/pause 1250/end",
+      },
+    },
+
+    //Map Patches
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_DesertShortcutPatch.tmx",
+      "ToArea": {
+        "X": 101,
+        "Y": 2,
+        "Width": 5,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"HasFlag": "DesertTunnel",
+        "HasSeenEvent: anyPlayer|contains=1337439": true,
+		"InstantlyUnlockDesertShortcut": false
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Desert",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Desert_Shortcut_Entrance.tmx",
+      "ToArea": {
+        "X": 46,
+        "Y": 148,
+        "Width": 3,
+        "Height": 4
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"HasFlag": "DesertTunnel",
+        "HasSeenEvent: anyPlayer|contains=1337439": true,
+		"InstantlyUnlockDesertShortcut": false
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_DesertShortcutPatch.tmx",
+      "ToArea": {
+        "X": 101,
+        "Y": 2,
+        "Width": 5,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockDesertShortcut": true
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Desert",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Desert_Shortcut_Entrance.tmx",
+      "ToArea": {
+        "X": 46,
+        "Y": 148,
+        "Width": 3,
+        "Height": 4
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockDesertShortcut": true
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FrontierFarm_UndergroundTunnel",
+      "When": {
+        "Season": "Spring",
+		"Day": "15, 16, 17"
+      },
+      "MapProperties": {
+        "Warp": "59 -1 Desert 1 27 60 36 Farm 103 6",
+      }
+    },
+	
+    //Fixed Bridge Questline
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+	  "When": {
+		"InstantlyUnlockBridge": false
+      },
+      "Entries": {
+        "CamillaBridge": {
+          "Name": "[CamillaBridge_Name]",
+          "Requester": "Camilla",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_1337426, !event_1337427",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[CamillaBridge_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_1_Text]",
+              "RequiredCount": "20",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_void_soul"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_2_Text]",
+              "RequiredCount": "25",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_red_slime_egg"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_3_Text]",
+              "RequiredCount": "10",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_monster_fruit"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_4_Text]",
+              "RequiredCount": "40",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_swamp_essence"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_5_Text]",
+              "RequiredCount": "1",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_snatcher_worm"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_6_Text]",
+              "RequiredCount": "30",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_cinder_shard"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_7_Text]",
+              "RequiredCount": "15",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_iridium_bar"
+              }
+            },
+			{
+              "Type": "Donate",
+              "Text": "[CamillaBridge_Objective_8_Text]",
+              "RequiredCount": "100",
+              "Data": {
+                "DropBox": "CamillaBridgeChest",
+                "DropBoxGameLocation": "Farm",
+                "DropBoxIndicatorLocation": "10 40.2",
+                "AcceptedContextTags": "item_hardwood"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "MagicBridgeRefurbish"
+              }
+            },
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "CamillaBridge_Name": "{{i18n:CamillaBridge.01}}",
+        "CamillaBridge_Text": "{{i18n:CamillaBridge.02}}",
+        "CamillaBridge_Objective_1_Text": "{{i18n:CamillaBridge.item.01}}",
+        "CamillaBridge_Objective_2_Text": "{{i18n:CamillaBridge.item.02}}",
+        "CamillaBridge_Objective_3_Text": "{{i18n:CamillaBridge.item.03}}",
+        "CamillaBridge_Objective_4_Text": "{{i18n:CamillaBridge.item.04}}",
+        "CamillaBridge_Objective_5_Text": "{{i18n:CamillaBridge.item.05}}",
+		"CamillaBridge_Objective_6_Text": "{{i18n:CamillaBridge.item.06}}",
+		"CamillaBridge_Objective_7_Text": "{{i18n:CamillaBridge.item.07}}",
+		"CamillaBridge_Objective_8_Text": "{{i18n:CamillaBridge.item.08}}",
+      }
+    },
+	
+    //Event #1 - Bridge Magic   <<ID tagged by quest
+    //To start quest: Players unlocked the Crimson Badlands. adds questline to player journal
+    {
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasSeenEvent |contains=908079": true,
+		"InstantlyUnlockBridge": false
+      },
+      "Entries": {
+        "1337426/t 600 2600/w sunny": "continue/-200 -200/farmer 118 26 2/pause 10/end",
+      },
+    },
+    //Event #2 - Bridge Magic   <<ID tagged by framework (day)
+	{
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": false
+      },
+      "Entries": {
+        "1337422/e 1337426/t 600 1800/w sunny": "none/-400 -400/farmer 19 41 3 Camilla 10 41 3/ignoreEventTileOffset/changeLocation Farm/skippable/playMusic spring_day_ambient/makeInvisible 10 41 10 1/viewport 12 41 clamp true/move farmer -7 0 3/pause 500/emote farmer 8/pause 1250/speak Camilla \"{{i18n:CamillaBridge.08}}\"/pause 300/screenFlash 1/playSound wand/warp Camilla 5 41/faceDirection Camilla 1 true/pause 500/speak Camilla \"{{i18n:CamillaBridge.09}}\"/pause 1000/move farmer -2 0 3/pause 1000/speak Camilla \"{{i18n:CamillaBridge.10}}\"/pause 500/emote farmer 32/pause 500/speak Camilla \"{{i18n:CamillaBridge.11}}\"/pause 750/faceDirection Camilla 2 true/pause 500/showFrame Camilla 17/pause 200/playSound cacklingWitch/pause 650/showFrame Camilla 18/pause 500/showFrame Camilla 19/pause 600/playSound wand/screenFlash 1/warp Camilla -30 -30/pause 1500/globalFade/viewport -1000 -1000/pause 500/end",
+      },
+    },
+    //Event #2 - Bridge Magic   <<ID tagged by framework (night)
+    {
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": false
+      },
+      "Entries": {
+        "1337422/e 1337426/t 1810 2600/w sunny": "none/-400 -400/farmer 19 41 3 Camilla 10 41 3/ignoreEventTileOffset/changeLocation Farm/skippable/playMusic spring_night_ambient/makeInvisible 10 41 10 1/viewport 12 41 clamp true/move farmer -7 0 3/pause 500/emote farmer 8/pause 1250/speak Camilla \"{{i18n:CamillaBridge.08}}\"/pause 300/screenFlash 1/playSound wand/warp Camilla 5 41/faceDirection Camilla 1 true/pause 500/speak Camilla \"{{i18n:CamillaBridge.09}}\"/pause 1000/move farmer -2 0 3/pause 1000/speak Camilla \"{{i18n:CamillaBridge.10}}\"/pause 500/emote farmer 32/pause 500/speak Camilla \"{{i18n:CamillaBridge.11}}\"/pause 750/faceDirection Camilla 2 true/pause 500/showFrame Camilla 17/pause 200/playSound cacklingWitch/pause 650/showFrame Camilla 18/pause 500/showFrame Camilla 19/pause 600/playSound wand/screenFlash 1/warp Camilla -30 -30/pause 1500/globalFade/viewport -1000 -1000/pause 500/end",
+      },
+    },
+    //Event #3 - Bridge Magic   <<Triggers map patch
+    {
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasFlag": "MagicBridgeRefurbish",
+		"InstantlyUnlockBridge": false
+      },
+      "Entries": {
+        "1337427/t 600 2600": "continue/-200 -200/Camilla 10 41 2/ignoreEventTileOffset/pause 1000/changeLocation Farm/animate Camilla false true 1000 18 19/viewport 10 41 clamp true/pause 2000/glow 0 0 255 true/playSound healSound/pause 1000/glow 0 255 0 false/pause 1000/playSound cacklingWitch/pause 500/glow 255 0 0 false/playSound healSound/pause 1760/glow 0 0 255 false/playSound healSound/pause 1760/glow 0 255 0 false/playSound healSound/pause 1000/globalFade/viewport -300 -300/pause 1000/end",
+      },
+    },
+    //Map Patches
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Fixed_Bridge.tmx",
+      "ToArea": {
+        "X": 6,
+        "Y": 39,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasSeenEvent: anyPlayer|contains=1337427": true,
+		"InstantlyUnlockBridge": false
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Fixed_Bridge.tmx",
+      "ToArea": {
+        "X": 151,
+        "Y": 29,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "HasSeenEvent: anyPlayer|contains=1337427": true,
+		"InstantlyUnlockBridge": false
+      },
+      "Update": "OnLocationChange"
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Fixed_Bridge.tmx",
+      "ToArea": {
+        "X": 6,
+        "Y": 39,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": true
+      },
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Fixed_Bridge.tmx",
+      "ToArea": {
+        "X": 151,
+        "Y": 29,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+		"InstantlyUnlockBridge": true
+      },
+    },
+    //Stone Storage Chest
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_Camilla_Storage_Chest.tmx",
+      "ToArea": {
+        "X": 10,
+        "Y": 40,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337422": true,
+        "HasFlag |contains=MagicBridgeRefurbish": false,
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": false
+      },
+      "Update": "OnLocationChange"
+    },
+    //Allows location to appear at Robin's for building construction
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "When": {
+        "HasSeenEvent |contains=1337427": true,
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": false
+      },
+      "MapProperties": {
+        "CanBuildHere": "T",
+      },
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "When": {
+        "FarmType": "FrontierFarm",
+		"InstantlyUnlockBridge": true
+      },
+      "MapProperties": {
+        "CanBuildHere": "T",
+      },
+    },
+    //Patches in debris for "Ferngill Republic Frontier" until Camilla's event is seen. This prevents debris from spawning back each year once cleared
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FerngillRepublicFrontier_Paths.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 156
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337427": false,
+		"InstantlyUnlockBridge": false
+      },
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Custom_FerngillRepublicFrontier",
+      "FromFile": "Assets/MapPatches/FerngillRepublicFrontier_Paths.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 156
+      },
+      "When": {
+	    "Day|contains=0,1": true,
+		"Year": 1,
+		"Season": "Spring",
+		"InstantlyUnlockBridge": true
+      },
+    },
+			  
+    //Marnie mentions farm animals can't leave fenced in areas 
+    //(player has white egg in their inventory)
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "SandboxLayout": "false"
+      },
+      "Entries": {
+        "896152/i 176/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 118 26 2 Marnie 118 27 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
+    },
+    //(player has brown egg in their inventory)
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "SandboxLayout": "false"
+      },
+      "Entries": {
+        "896152/i 180/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 118 26 2 Marnie 118 27 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
+    },
+    //(player has milk in their inventory)
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "FarmType": "FrontierFarm",
+        "SandboxLayout": "false"
+      },
+      "Entries": {
+        "896152/i 184/t 600 1800/y 1/z winter": "continue/-1000 -1000/farmer 118 26 2 Marnie 118 27 0/skippable/pause 1000/speak Marnie \"{{i18n:Marnie.Event.01}}\"/pause 400/emote farmer 8/pause 100/speak Marnie \"{{i18n:Marnie.Event.02}}\"/pause 250/emote farmer 32/pause 100/end"
+      }
+    },
+	//Minecart Data
+    {
+      "Action": "EditData",
+      "Target": "Data/Minecarts",
+      "Entries": {
+          "FrontierFarm": {
+              "UnlockCondition": "PLAYER_HAS_SEEN_EVENT Any 1337431",
+              "Destinations": [
+                  {
+                      "ID": "FlashShifter.FrontierFarm_Right",
+                      "DisplayName": "{{i18n:minecart.Right}}",
+                      "TargetLocation": "Farm",
+                      "TargetTile": {
+                          "X": 144,
+                          "Y": 39
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FrontierFarm_Middle",
+                      "DisplayName": "{{i18n:minecart.Middle}}",
+                      "TargetLocation": "Farm",
+                      "TargetTile": {
+                          "X": 84,
+                          "Y": 23
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FrontierFarm_Left",
+                      "DisplayName": "{{i18n:minecart.Left}}",
+                      "TargetLocation": "Farm",
+                      "TargetTile": {
+                          "X": 25,
+                          "Y": 31
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FernGillRepublic_Ravine",
+                      "DisplayName": "{{i18n:minecart.Ravine}}",
+                      "Condition": "PLAYER_HAS_SEEN_EVENT Any 1337427",
+                      "TargetLocation": "Custom_FerngillRepublicFrontier",
+                      "TargetTile": {
+                          "X": 134,
+                          "Y": 31
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FernGillRepublic_Mountain",
+                      "DisplayName": "{{i18n:minecart.Mountain}}",
+                      "Condition": "PLAYER_HAS_SEEN_EVENT Any 1337427",
+                      "TargetLocation": "Custom_FerngillRepublicFrontier",
+                      "TargetTile": {
+                          "X": 71,
+                          "Y": 6
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FernGillRepublic_Grassland",
+                      "DisplayName": "{{i18n:minecart.Grassland}}",
+                      "Condition": "PLAYER_HAS_SEEN_EVENT Any 1337427",
+                      "TargetLocation": "Custom_FerngillRepublicFrontier",
+                      "TargetTile": {
+                          "X": 66,
+                          "Y": 67
+                      },
+                      "TargetDirection": "down",
+                  },
+                  {
+                      "ID": "FlashShifter.FernGillRepublic_Beach",
+                      "DisplayName": "{{i18n:minecart.Beach}}",
+                      "Condition": "PLAYER_HAS_SEEN_EVENT Any 1337427",
+                      "TargetLocation": "Custom_FerngillRepublicFrontier",
+                      "TargetTile": {
+                          "X": 47,
+                          "Y": 128
+                      },
+                      "TargetDirection": "down",
+                  },
+              ]
+          }
+      }
+  },
+  ]
+}

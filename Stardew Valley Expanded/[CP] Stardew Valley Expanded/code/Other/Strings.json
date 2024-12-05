@@ -4,9 +4,9 @@
 			"Action": "EditData",
 			"Target": "Strings/StringsFromMaps",
 			"Entries": {
-				"Backwoods.1": "= {{FarmName}}{{i18n:String.01}}",
-				"BusStop.1": "{{i18n:String.02}}{{FarmName}}{{i18n:String.03}}",
-				"Forest.1": "` {{FarmName}}{{i18n:String.04}}",
+				"Backwoods.1": "{{i18n:String.01|FarmName={{FarmName}}}}",
+				"BusStop.1": "{{i18n:String.02 |FarmName={{FarmName}}}}",
+				"Forest.1": "{{i18n:String.04 |FarmName={{FarmName}}}}",
 				"Forest.5": "{{i18n:String.05}}",
 				"Forest.6": "{{i18n:String.06}}",
 				"Forest.7": "{{i18n:String.07}}",
@@ -66,7 +66,6 @@
 				"Forest.61": "{{i18n:String.59}}",
 				"Forest.62": "{{i18n:String.60}}",
 				"Forest.63": "{{i18n:String.61}}",
-				"Backwoods.1": "{{i18n:String.62}}",
 				"PelicanTown.1": "{{i18n:String.63}}",
 				"PelicanTown.2": "{{i18n:String.64}}",
 				"PelicanTown.3": "{{i18n:String.65}}",
@@ -490,8 +489,8 @@
 				"ForestWest.8": "{{i18n:String.485}}",
 				"ForestWest.9": "{{i18n:String.486}}",
 				"ForestWest.10": "{{i18n:String.487}}",
-				"ForestWest.11": "@ {{FarmName}}{{i18n:String.488}}",
-				"ForestWest.12": "{{FarmName}}{{i18n:String.489}}",
+				"ForestWest.11": "{{i18n:String.488|FarmName={{FarmName}}}}",
+				"ForestWest.12": "{{i18n:String.489|FarmName={{FarmName}}}}",
 				"AuroraVineyard.1": "{{i18n:String.490}}",
 				"AuroraVineyard.2": "{{i18n:String.491}}",
 				"AuroraVineyard.3": "{{i18n:String.492}}",
@@ -1044,16 +1043,25 @@
 				"HanksGarage.11": "{{i18n:String.1041}}",
 				"SecretWoods.1": "{{i18n:String.1042}}",
 				"GrandpasFarm.1": "{{i18n:String.1043}}",
+				"ForbiddenMaze.1": "{{i18n:String.1044}}",
+				"ForbiddenMaze.2": "{{i18n:String.1045}}",
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+			"MapPage.cs.11100": "{{i18n:AdventurerGuild.Time}}"
 			}
 		},
 		//CHARACTER SCHEDULE STRING LOADS
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Strings/Schedules/Kent",
 			"FromFile": "assets/XNBs/Kent.xnb"
 		},
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Strings/Schedules/Marlon",
 			"FromFile": "assets/XNBs/MarlonFay.xnb"
 		},

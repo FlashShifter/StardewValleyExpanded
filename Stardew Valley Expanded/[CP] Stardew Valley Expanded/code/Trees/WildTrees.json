@@ -1,0 +1,227 @@
+{
+  "Changes": [
+     
+	//Loads tree sprites
+	{
+     "Action": "Load",
+     "Target": "Mods/FlashShifter.StardewValleyExpandedCP/spring_Birch_Tree, Mods/FlashShifter.StardewValleyExpandedCP/summer_Birch_Tree, Mods/FlashShifter.StardewValleyExpandedCP/fall_Birch_Tree, Mods/FlashShifter.StardewValleyExpandedCP/winter_Birch_Tree, Mods/FlashShifter.StardewValleyExpandedCP/spring_Fir_Tree, Mods/FlashShifter.StardewValleyExpandedCP/summer_Fir_Tree, Mods/FlashShifter.StardewValleyExpandedCP/fall_Fir_Tree, Mods/FlashShifter.StardewValleyExpandedCP/winter_Fir_Tree",
+     "FromFile": "Assets/Trees/{{TargetWithoutPath}}.png",
+    },   
+
+    //Wild Tree Data
+	{
+    "Action": "EditData",
+    "Target": "Data/WildTrees",
+    "Entries": {
+	 
+	//Birch Tree
+    "FlashShifter.StardewValleyExpandedCP_Birch_Tree": {
+    "Textures": [
+      {
+        "Condition": null,
+        "Season": "Summer",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/summer_Birch_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Fall",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/fall_Birch_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Winter",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/winter_Birch_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Spring",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/spring_Birch_Tree"
+      }
+    ],
+    "SeedItemId": "FlashShifter.StardewValleyExpandedCP_Birch_Seed",
+    "SeedPlantable": true,
+    "GrowthChance": 0.2,
+    "FertilizedGrowthChance": 1.0,
+    "SeedSpreadChance": 0.15,
+    "SeedOnShakeChance": 0.05,
+    "SeedOnChopChance": 0.75,
+    "DropWoodOnChop": true,
+    "DropHardwoodOnLumberChop": true,
+    "IsLeafy": true,
+    "IsLeafyInWinter": false,
+    "IsLeafyInFall": true,
+    "PlantableLocationRules": null,
+    "GrowsInWinter": false,
+    "IsStumpDuringWinter": false,
+    "AllowWoodpeckers": false,
+    "UseAlternateSpriteWhenNotShaken": false,
+    "UseAlternateSpriteWhenSeedReady": false,
+    "DebrisColor": null,
+    "SeedDropItems": null,
+    "ChopItems": [
+      {
+        "MinSize": null,
+        "MaxSize": null,
+        "ForStump": true,
+        "Season": null,
+        "Chance": 1.0,
+        "Condition": null,
+        "Id": "(O)92",
+        "ItemId": "(O)92",
+        "RandomItemId": null,
+        "MaxItems": null,
+        "MinStack": 1,
+        "MaxStack": -1,
+        "Quality": -1,
+        "ObjectInternalName": null,
+        "ObjectDisplayName": null,
+        "ToolUpgradeLevel": -1,
+        "IsRecipe": false,
+        "StackModifiers": null,
+        "StackModifierMode": "Stack",
+        "QualityModifiers": null,
+        "QualityModifierMode": "Stack",
+        "ModData": null,
+        "PerItemCondition": null
+      }
+    ],
+    "TapItems": [
+      {
+        "PreviousItemId": null,
+        "DaysUntilReady": 3,
+        "DaysUntilReadyModifiers": null,
+        "DaysUntilReadyModifierMode": "Stack",
+        "Season": null,
+        "Chance": 1.0,
+        "Condition": null,
+        "Id": "Default",
+        "ItemId": "FlashShifter.StardewValleyExpandedCP_Birch_Water",
+        "RandomItemId": null,
+        "MaxItems": null,
+        "MinStack": 1,
+        "MaxStack": -1,
+        "Quality": -1,
+        "ObjectInternalName": null,
+        "ObjectDisplayName": null,
+        "ToolUpgradeLevel": -1,
+        "IsRecipe": false,
+        "StackModifiers": null,
+        "StackModifierMode": "Stack",
+        "QualityModifiers": null,
+        "QualityModifierMode": "Stack",
+        "ModData": null,
+        "PerItemCondition": null
+      }
+    ],
+    "ShakeItems": null,
+    "CustomFields": null,
+    "GrowsMoss": false
+    },
+	
+	//Fir Tree
+    "FlashShifter.StardewValleyExpandedCP_Fir_Tree": {
+    "Textures": [
+      {
+        "Condition": null,
+        "Season": "Summer",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/summer_Fir_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Fall",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/fall_Fir_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Winter",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/winter_Fir_Tree"
+      },
+      {
+        "Condition": null,
+        "Season": "Spring",
+        "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/spring_Fir_Tree"
+      }
+    ],
+    "SeedItemId": "FlashShifter.StardewValleyExpandedCP_Fir_Cone",
+    "SeedPlantable": true,
+    "GrowthChance": 0.2,
+    "FertilizedGrowthChance": 1.0,
+    "SeedSpreadChance": 0.15,
+    "SeedOnShakeChance": 0.05,
+    "SeedOnChopChance": 0.75,
+    "DropWoodOnChop": true,
+    "DropHardwoodOnLumberChop": true,
+    "IsLeafy": true,
+    "IsLeafyInWinter": true,
+    "IsLeafyInFall": true,
+    "PlantableLocationRules": null,
+    "GrowsInWinter": false,
+    "IsStumpDuringWinter": false,
+    "AllowWoodpeckers": true,
+    "UseAlternateSpriteWhenNotShaken": false,
+    "UseAlternateSpriteWhenSeedReady": false,
+    "DebrisColor": null,
+    "SeedDropItems": null,
+    "ChopItems": [
+      {
+        "MinSize": null,
+        "MaxSize": null,
+        "ForStump": true,
+        "Season": null,
+        "Chance": 1.0,
+        "Condition": null,
+        "Id": "(O)92",
+        "ItemId": "(O)92",
+        "RandomItemId": null,
+        "MaxItems": null,
+        "MinStack": 1,
+        "MaxStack": -1,
+        "Quality": -1,
+        "ObjectInternalName": null,
+        "ObjectDisplayName": null,
+        "ToolUpgradeLevel": -1,
+        "IsRecipe": false,
+        "StackModifiers": null,
+        "StackModifierMode": "Stack",
+        "QualityModifiers": null,
+        "QualityModifierMode": "Stack",
+        "ModData": null,
+        "PerItemCondition": null
+      }
+    ],
+    "TapItems": [
+      {
+        "PreviousItemId": null,
+        "DaysUntilReady": 11,
+        "DaysUntilReadyModifiers": null,
+        "DaysUntilReadyModifierMode": "Stack",
+        "Season": null,
+        "Chance": 1.0,
+        "Condition": null,
+        "Id": "Default",
+        "ItemId": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+        "RandomItemId": null,
+        "MaxItems": null,
+        "MinStack": 1,
+        "MaxStack": -1,
+        "Quality": -1,
+        "ObjectInternalName": null,
+        "ObjectDisplayName": null,
+        "ToolUpgradeLevel": -1,
+        "IsRecipe": false,
+        "StackModifiers": null,
+        "StackModifierMode": "Stack",
+        "QualityModifiers": null,
+        "QualityModifierMode": "Stack",
+        "ModData": null,
+        "PerItemCondition": null
+      }
+    ],
+    "ShakeItems": null,
+    "CustomFields": null,
+    "GrowsMoss": false
+    },
+   }
+  }
+ ]
+}

@@ -13,14 +13,14 @@
                },
                "Update": "OnLocationChange",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                }
           },
           { //Andy House Clean - Fireplace sound effect map property patch
                "Action": "EditMap",
                "Target": "Maps/Custom_AndyHouse",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                },
                "MapProperties": {
                     "BrookSounds": "18 13 1",
@@ -40,7 +40,7 @@
                },
                "Update": "OnLocationChange",
                "When": {
-                    "HasSeenEvent": "191393, 502261"
+                    "HasSeenEvent: anyPlayer|contains=191393, 502261": true
                }
           },
           {
@@ -54,7 +54,7 @@
                     "Height": 5
                },
                "When": {
-                    "HasSeenEvent": "5404269"
+                    "HasSeenEvent: anyPlayer|contains=5404269": true
                },
                "Update": "OnLocationChange"
           },
@@ -69,7 +69,7 @@
                     "Height": 16
                },
                "When": {
-                    "HasSeenEvent": "5515272"
+                    "HasSeenEvent: anyPlayer|contains=5515272": true,
                },
                "Update": "OnLocationChange"
           },
@@ -84,7 +84,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent |contains=418172": true
+                    "HasSeenEvent: anyPlayer|contains=418172, 3073012, 3073013, Parrot.RomRas_MagicInkStandardPart2, Parrot.RomRas_MagicInkMarriedPart2": true 
                },
                "Update": "OnLocationChange"
           },
@@ -99,7 +99,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent |contains=3073012": true,
+                    "HasSeenEvent: anyPlayer|contains=3073012": true,
                     "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
                },
                "Update": "OnLocationChange"
@@ -115,7 +115,7 @@
                     "Height": 39
                },
                "When": {
-                    "HasSeenEvent |contains=3073013": true,
+                    "HasSeenEvent: anyPlayer|contains=3073013": true,
                     "HasMod": "Nom0ri.RomRas, Parrot.RomRas"
                },
                "Update": "OnLocationChange"
@@ -125,13 +125,13 @@
                "Target": "Maps/Custom_ForestWest",
                "FromFile": "assets/Maps/MapPatches/BearUnlocked.tbin",
                "ToArea": {
-                    "X": 10,
+                    "X": 9,
                     "Y": 3,
-                    "Width": 1,
+                    "Width": 3,
                     "Height": 2
                },
                "When": {
-                    "HasSeenEvent": "2120303"
+                    "HasSeenEvent: anyPlayer|contains=2120303": true,
                },
                "Update": "OnLocationChange"
           },
@@ -146,8 +146,8 @@
                     "Height": 1
                },
                "When": {
-                    "HasSeenEvent": "77759254",
-                    "HasSeenEvent |contains=7775926": false
+                    "HasSeenEvent: anyPlayer|contains=77759254": true,
+                    "HasSeenEvent: anyPlayer|contains=7775926": false
                },
                "Update": "OnLocationChange"
           },
@@ -162,7 +162,7 @@
                     "Height": 1
                },
                "When": {
-                    "HasSeenEvent": "7775926"
+                    "HasSeenEvent: anyPlayer|contains=7775926": true
                },
                "Update": "OnLocationChange"
           },
@@ -177,8 +177,8 @@
                     "Height": 24
                },
                "When": {
-                    "HasSeenEvent": "7775925",
-                    "HasSeenEvent |contains=7776001": false
+                    "HasSeenEvent: anyPlayer|contains=7775925": true,
+                    "HasSeenEvent: anyPlayer|contains=7776001": false
                },
                "Update": "OnLocationChange"
           },
@@ -194,7 +194,7 @@
                },
                "When": {
                     "Relationship:Apples": "Friendly",
-                    "HasSeenEvent |contains=7775925, 7776001": false
+                    "HasSeenEvent: anyPlayer|contains=7775925, 7776001": false
                },
                "Update": "OnLocationChange"
           },
@@ -209,7 +209,7 @@
                     "Height": 24
                },
                "When": {
-                    "HasSeenEvent": "7776001"
+                    "HasSeenEvent: anyPlayer|contains=7776001": true
                },
                "Update": "OnLocationChange"
           },
@@ -224,7 +224,7 @@
                     "Height": 15
                },
                "When": {
-                    "HasSeenEvent": "7776006"
+                    "HasSeenEvent: anyPlayer|contains=7776006": true
                },
                "Update": "OnLocationChange"
           },
@@ -239,7 +239,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasSeenEvent": "2554903"
+                    "HasSeenEvent: anyPlayer|contains=2554903": true
                },
                "Update": "OnLocationChange"
           },
@@ -392,19 +392,19 @@
           },
           //EXTERIOR MAP LOADS
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town",
                "FromFile": "Assets/Maps/Locations/Town.tmx",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town",
                "FromFile": "Assets/Maps/MapPatches/Town_Joja.tmx",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           { //Town Winter Night Lights
@@ -447,11 +447,12 @@
                "Action": "EditMap",
                "Target": "Maps/Railroad",
                "When": {
-                    "HasFlag |contains=Farm_Eternal": false
+                    "HasFlag |contains=Farm_Eternal": false,
                },
                "AddWarps": [
                     "48 0 Custom_SVESummit 11 28" 
-               ]
+               ],
+			   "Update": "OnLocationChange"
           },
           { //Mountain Winter Night Lights
                "Action": "EditMap",
@@ -475,7 +476,7 @@
                "Action": "EditMap",
                "Target": "Maps/Town",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "MapProperties": {
                     "DayTiles": "AlwaysFront 33 53 907 AlwaysFront 11 7 907 AlwaysFront 27 7 907 AlwaysFront 21 20 907 AlwaysFront 31 20 907 AlwaysFront 21 27 907 AlwaysFront 31 27 907 AlwaysFront 24 50 907 AlwaysFront 17 50 907 AlwaysFront 4 50 907 AlwaysFront 24 58 907 AlwaysFront 20 64 907 AlwaysFront 27 72 907 AlwaysFront 30 72 907 AlwaysFront 38 64 907 AlwaysFront 27 86 907 AlwaysFront 14 86 907 AlwaysFront 1 86 907 AlwaysFront 25 111 369 AlwaysFront 52 98 907 AlwaysFront 56 98 907 AlwaysFront 50 77 907 AlwaysFront 37 77 907 AlwaysFront 52 49 907 AlwaysFront 86 56 907 Buildings 41 69 560 Buildings 92 79 186 AlwaysFront 79 8 907 AlwaysFront 69 22 907 AlwaysFront 56 22 907 AlwaysFront 49 22 907 AlwaysFront 41 33 907 AlwaysFront 54 33 907 AlwaysFront 119 46 907 AlwaysFront 123 68 907 AlwaysFront 95 68 907 AlwaysFront 104 68 907 AlwaysFront 72 90 907 AlwaysFront 96 90 907",
@@ -487,7 +488,7 @@
                "Action": "EditMap",
                "Target": "Maps/Town",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -506,7 +507,7 @@
                "Action": "EditMap",
                "Target": "Maps/Town",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -522,27 +523,27 @@
                ]
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Beach",
                "FromFile": "Assets/maps/locations/Beach.tmx"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Forest",
                "FromFile": "Assets/maps/locations/Forest.tmx",
           },
 		  {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Forest-SewerClean",
                "FromFile": "Assets/maps/MapPatches/Forest-SewerClean.tbin",
           },
 		  {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/MasteryCave",
                "FromFile": "Assets/maps/locations/MasteryCave.tmx",
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/BusStop",
                "FromFile": "Assets/maps/locations/BusStop.tmx",
           },
@@ -551,7 +552,7 @@
                "Target": "Maps/Forest",
                "FromFile": "Assets/maps/MapPatches/Forest_Joja.tmx",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "ToArea": {
                     "X": 66,
@@ -580,7 +581,7 @@
                "Action": "EditMap",
                "Target": "Maps/Forest",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "MapProperties": {
                     "Light": "9 19 4 90 14 4 87 6 4 56 68 4 115 23 4 101 23 4 87 23 4 73 23 4 67 9 4",
@@ -589,7 +590,7 @@
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Woods",
                "FromFile": "Assets/maps/locations/Woods2.tmx",
           },
@@ -622,13 +623,13 @@
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Railroad",
                "FromFile": "Assets/maps/locations/Railroad.tmx",
           },
           /* Removed because of the new 1.6 "Cursed Event"
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Summit",
                "FromFile": "Assets/maps/locations/Summit.tmx",
           },*/
@@ -637,7 +638,7 @@
                "Target": "Maps/Railroad",
                "FromFile": "Assets/Maps/MapPatches/Railroad_Joja.tmx",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "ToArea": {
                     "X": 0,
@@ -650,7 +651,7 @@
                "Action": "EditMap",
                "Target": "Maps/Railroad",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "TextOperations": [
                     {
@@ -683,7 +684,7 @@
                ]
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Mountain",
                "FromFile": "Assets/Maps/Locations/Mountain.tmx",
           },
@@ -709,7 +710,7 @@
                "Target": "Maps/Mountain",
                "FromFile": "Assets/Maps/MapPatches/Mountain_Joja.tmx",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "ToArea": {
                     "X": 0,
@@ -740,7 +741,7 @@
                "Action": "EditMap",
                "Target": "Maps/Mountain",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -759,7 +760,7 @@
                "Action": "EditMap",
                "Target": "Maps/Mountain",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -778,7 +779,7 @@
                "Action": "EditMap",
                "Target": "Maps/Mountain",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -794,7 +795,7 @@
                ]
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Backwoods",
                "FromFile": "Assets/Maps/Locations/Backwoods.tbin",
           },
@@ -803,7 +804,7 @@
                "Target": "Maps/Backwoods",
                "FromFile": "Assets/Maps/MapPatches/Backwoods_Joja.tbin",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "ToArea": {
                     "X": 40,
@@ -816,7 +817,7 @@
                "Action": "EditMap",
                "Target": "Maps/Backwoods",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -835,7 +836,7 @@
                "Action": "EditMap",
                "Target": "Maps/Backwoods",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -854,7 +855,7 @@
                "Action": "EditMap",
                "Target": "Maps/Backwoods",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
                "MapProperties": {
                     "Light": "46 12 4"
@@ -876,139 +877,127 @@
           },
           //INTERIOR MAP LOADS
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/AdventureGuild",
                "FromFile": "Assets/maps/locations/AdventureGuild.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/AnimalShop",
                "FromFile": "Assets/maps/locations/AnimalShop.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/ArchaeologyHouse",
                "FromFile": "Assets/maps/locations/ArchaeologyHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Blacksmith",
                "FromFile": "Assets/maps/locations/Blacksmith.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Club",
                "FromFile": "Assets/maps/locations/Club.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/FishShop",
                "FromFile": "Assets/maps/locations/FishShop.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/HaleyHouse",
                "FromFile": "Assets/maps/locations/HaleyHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/HarveyRoom",
                "FromFile": "Assets/maps/locations/HarveyRoom.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Hospital",
                "FromFile": "Assets/maps/locations/Hospital.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/JojaMart",
                "FromFile": "Assets/maps/locations/JojaMart.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/JoshHouse",
                "FromFile": "Assets/maps/locations/JoshHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/LeahHouse",
                "FromFile": "Assets/maps/locations/LeahHouse.tmx"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/ManorHouse",
                "FromFile": "Assets/maps/locations/ManorHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Mine",
                "FromFile": "Assets/maps/locations/Mine.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Saloon",
                "FromFile": "Assets/maps/locations/Saloon.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/SamHouse",
                "FromFile": "Assets/maps/locations/SamHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/SandyHouse",
                "FromFile": "assets/maps/locations/SandyHouse.tbin",
           },
           {
-               "Action": "EditMap",
-               "Target": "Maps/SandyHouse",
-               "MapProperties": {
-                    "Warp": "4 10 Desert 20 15 17 0 Club 8 13 1 5 Custom_Sandy_WarpRoom 3 3"
-               }
-          },
-          {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Desert",
                "FromFile": "Assets/maps/locations/Desert.tbin",
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/ScienceHouse",
                "FromFile": "Assets/maps/locations/ScienceHouse.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/SebastianRoom",
                "FromFile": "Assets/maps/locations/SebastianRoom.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/SeedShop",
                "FromFile": "Assets/maps/locations/SeedShop.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Trailer",
                "FromFile": "Assets/maps/locations/Trailer.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Trailer_big",
                "FromFile": "Assets/maps/locations/Trailer_big.tbin"
           },
           {
-               "Action": "Load",
-               "Target": "Maps/WitchHut",
-               "FromFile": "Assets/maps/locations/WitchHut.tbin"
-          },
-          {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/WizardHouse",
                "FromFile": "Assets/maps/locations/WizardHouse.tbin"
           },
 		  {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/WizardHouseBasement",
                "FromFile": "Assets/maps/locations/WizardHouseBasement.tmx"
           },
@@ -1039,12 +1028,12 @@
           },
           //PATCHING LOADS
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-Theater",
                "FromFile": "Assets/Maps/MapPatches/Town-Theater.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/MovieTheater",
                "FromFile": "Assets/maps/locations/MovieTheater.tbin",
                "When": {
@@ -1052,19 +1041,19 @@
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-TheaterCC",
                "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC.tmx",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-TheaterCC",
                "FromFile": "Assets/Maps/MapPatches/Town-TheaterCC_Pavement.tbin",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           /*{
@@ -1131,44 +1120,44 @@
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-TrashGone",
                "FromFile": "Assets/Maps/MapPatches/Town-TrashGone.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-TrashGone",
                "FromFile": "Assets/Maps/MapPatches/Town-TrashGone_Joja.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-DogHouse",
                "FromFile": "Assets/Maps/MapPatches/Town-DogHouse.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Town-DogHouse",
                "FromFile": "Assets/Maps/MapPatches/Town-DogHouse_Joja.tbin",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Mountain-BridgeFixed",
                "FromFile": "Assets/maps/locations/Mountain-BridgeFixed.tbin"
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Mountain_Shortcuts",
                "FromFile": "Assets/Maps/MapPatches/Mountain_Shortcuts.tbin",
                "When": {
@@ -1176,7 +1165,7 @@
                },
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Mountain_Shortcuts",
                "FromFile": "Assets/Maps/MapPatches/Mountain_Shortcuts_Ridgeside.tbin",
                "When": {
@@ -1184,24 +1173,24 @@
                },
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Backwoods_Staircase",
                "FromFile": "Assets/Maps/MapPatches/Backwoods_Staircase.tbin",
                "When": {
-                    "HasSeenEvent |contains= 5553210": false
+                    "HasSeenEvent: hostPlayer|contains=5553210": false
                },
           },
           {
-               "Action": "Load",
+               "Action": "Load",  
                "Target": "Maps/Backwoods_Staircase",
                "FromFile": "Assets/maps/MapPatches/Backwoods_Staircase_Joja.tbin",
                "When": {
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                },
           },
           { //Leaf patches
                "Action": "EditMap",
-               "Target": "Maps/Town",
+               "Target": "Maps/Town, Maps/Town-Fair, Maps/Town-Fair2, Maps/Town-Halloween, Maps/Town-Halloween2",
                "FromFile": "Assets/Maps/MapPatches/Town_Leaves.tbin",
                "When": {
                     "Season": "Fall",
@@ -1681,7 +1670,7 @@
                "Action": "EditMap",
                "Target": "Maps/BusStop",
                "MapProperties": {
-                    "NPCWarp": "22 8 Custom_DayEnd_WarpRoom 3 3"
+                    "NPCWarp": "22 8 Custom_DayEnd_WarpRoom 3 3 23 8 Custom_DayEnd_WarpRoom 3 3"
                }
           },
           { //Patches Grampleton Fields warps at shearwater bridge
@@ -1758,7 +1747,22 @@
                     "Height": 1
                }
           },
-          {
+		  { //Patches Witch Hut warp in wizard tower
+               "Action": "EditMap",
+               "Target": "Maps/Custom_WizardBasement",
+               "FromFile": "Assets/Maps/MapPatches/WizardBasement_WitchHut.tbin",
+               "When": {
+                    "HasWalletItem": "MagicInk"
+               },
+			   "Update": "OnLocationChange",
+               "ToArea": {
+                    "X": 11,
+                    "Y": 18,
+                    "Width": 1,
+                    "Height": 1
+               }
+          },
+          /*{
                //Overrides grampleton fields music que during rainy days
                "Action": "EditMap",
                "Target": "Maps/Custom_GrampletonFields",
@@ -1769,14 +1773,14 @@
                "MapProperties": {
                     "Music": "rain"
                }
-          },
+          },*/
           { //Removes warping ability until players see wizard basement event
                "Action": "EditMap",
                "Target": "Maps/Custom_GrampletonFields",
                "FromFile": "Assets/Maps/MapPatches/GrampletonFields_NoWarp.tbin",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
-                    "HasSeenEvent |contains=1000035": false
+                    "HasSeenEvent: anyPlayer|contains=1000035": false
                },
                "ToArea": {
                     "X": 154,
@@ -1791,7 +1795,7 @@
                "Target": "Maps/Custom_AdventurerSummit",
                "FromFile": "Assets/Maps/MapPatches/AdventurerSummit_Railroad_Shortcut.tmx",
                "When": {
-                    "HasSeenEvent |contains=1000077": true
+                    "HasSeenEvent: anyPlayer|contains=1000077": true
                },
                "ToArea": {
                     "X": 11,
@@ -1899,7 +1903,7 @@
                },
                "When": {
                     "HasFlag": "ccMovieTheaterJoja",
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           {
@@ -1914,7 +1918,7 @@
                },
                "When": {
                     "HasFlag": "ccMovieTheaterJoja",
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           {
@@ -1929,7 +1933,7 @@
                },
                "When": {
                     "HasFlag": "ccMovieTheaterJoja",
-                    "HasSeenEvent": "5553210"
+                    "HasSeenEvent: hostPlayer|contains=5553210": true
                }
           },
           { //Calico Desert configuration - makes it easier for players to place objects such as kegs and barrels
@@ -2220,7 +2224,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2236,7 +2240,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2252,7 +2256,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           {
@@ -2268,7 +2272,7 @@
                "Update": "OnLocationChange",
                "PatchMode": "Replace",
                "When": {
-                    "HasSeenEvent |contains=5553210": true
+                    "HasSeenEvent: anyPlayer|contains=5553210": true
                }
           },
           /*{
@@ -2326,8 +2330,8 @@
                "Target": "LooseSprites/Map",
                "FromFile": "Assets/Maps/WorldMaps/Patches/{{Season}}_MorrisHouse.png",
                "When": {
-                    "HasSeenEvent |contains=6663408": true,
-                    "HasSeenEvent |contains=5553210": false
+                    "HasSeenEvent: anyPlayer|contains=6663408": true,
+                    "HasSeenEvent: anyPlayer|contains=5553210": false
                },
                "ToArea": {
                     "X": 227,
@@ -2358,7 +2362,7 @@
                "When": {
                     "HasMod": "flashshifter.immersivefarm2remastered",
                     "FarmType": "Standard",
-                    "HasSeenEvent |contains=5553210": false,
+                    "HasSeenEvent: anyPlayer|contains=5553210": false,
                     "HasMod |contains=flashshifter.GrandpasFarm": false
                }
           },
@@ -2375,7 +2379,7 @@
                "When": {
                     "HasMod": "flashshifter.immersivefarm2remastered",
                     "FarmType": "Standard",
-                    "HasSeenEvent": "5553210",
+                    "HasSeenEvent: anyPlayer|contains=5553210": true,
                     "HasMod |contains=flashshifter.GrandpasFarm": false
                }
           },
@@ -2975,6 +2979,96 @@
                     "Height": "400"
                }
           },
+		  
+		  //Patches different ambience and music to the Highlands
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Weather |contains=Rain, Storm": false,
+                    "Time": "{{Range: 600, 1900}}"
+               },
+               "MapProperties": {
+                    "Music": "FlashShifter.StardewValleyExpandedCP_HighlandsTheme"
+               }
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Weather |contains=Rain, Storm": true,
+                    "Time": "{{Range: 600, 1900}}"
+               },
+               "MapProperties": {
+                    "Music": "FlashShifter.StardewValleyExpandedCP_HighlandsTheme_Rain"
+               }
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Weather |contains=Rain, Storm": true,
+                    "Time": "{{Range: 1910, 2600}}"
+               },
+               "MapProperties": {
+                    "Music": "rain"
+               }
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Season |contains=Winter": true,
+                    "Time": "{{Range: 1610, 2600}}"
+               },
+               "MapProperties": {
+                    "Music": "winter_day_ambient"
+               }
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Season |contains=Spring, Summer, Fall": true,
+					"Weather |contains=Rain, Storm": false,
+                    "Time": "{{Range: 1910, 2600}}"
+               },
+               "MapProperties": {
+                    "Music": "spring_night_ambient"
+               }
+          },
+		  
+		  //Patches different ambience and music to the Highlands Outpost
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_HighlandsOutpost",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Weather |contains=Rain, Storm": false,
+                    "Time": "{{Range: 600, 1900}}"
+               },
+               "MapProperties": {
+                    "Music": "FlashShifter.StardewValleyExpandedCP_HighlandsTheme"
+               }
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_HighlandsOutpost",
+			   "Update": "OnLocationChange",
+               "When": {
+                    "Weather |contains=Rain, Storm": true,
+                    "Time": "{{Range: 600, 1900}}"
+               },
+               "MapProperties": {
+                    "Music": "FlashShifter.StardewValleyExpandedCP_HighlandsTheme_Rain"
+               }
+          },
+
           { //Patches directions to player farm at bus stop
                "Action": "EditData",
                "Target": "Strings/StringsFromMaps",
@@ -2983,7 +3077,7 @@
                     "FarmType": "Standard"
                },
                "Entries": {
-                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{FarmName}} {{i18n:Farm}}^@ {{FarmName}} {{i18n:Farm}}",
+                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{i18n:Farm |FarmName={{FarmName}}}}^@ {{i18n:Farm |FarmName={{FarmName}}}}",
                }
           },
           {
@@ -2994,8 +3088,164 @@
                     "FarmType": "Standard"
                },
                "Entries": {
-                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{FarmName}} {{i18n:Farm}}^@ {{FarmName}} {{i18n:Farm}}",
+                    "BusStop.1": "` {{i18n:BusStop}}^> {{i18n:PelicanTown}}^= {{i18n:Farm |FarmName={{FarmName}}}}^@ {{i18n:Farm |FarmName={{FarmName}}}}",
                }
           },
+		  
+		  //Temporarily overlays paths layer on first day of save file creation to prevent debris from ever spawning back again in these locations:
+		  
+		  //Garden
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Garden",
+               "FromFile": "assets/Maps/MapPatches/Garden_Paths.tbin",
+			   "PatchMode": "Overlay",
+               "ToArea": {
+                 "X": 14,
+                 "Y": 14,
+                 "Width": 17,
+                 "Height": 12
+                },
+                "When": {
+				     "Year": 1,
+                     "Season": "Spring",
+				     "Day": "0, 1"
+                },
+          },
+		  
+		  //Grandpa's Shed Outside
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_GrandpasShedOutside",
+               "FromFile": "assets/Maps/GrandpasShed/GrandpasShedOutside_Paths.tbin",
+			   "PatchMode": "Overlay",
+               "ToArea": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 34,
+                 "Height": 30
+                },
+                "When": {
+				     "Year": 1,
+                     "Season": "Spring",
+				     "Day": "0, 1"
+                },
+          },
+		  
+		  //Forbidden Maze patches
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchWarpCave",
+               "FromFile": "assets/Maps/MapPatches/WitchWarpCave_Patch.tbin",
+               "ToArea": {
+                 "X": 4,
+                 "Y": 5,
+                 "Width": 1,
+                 "Height": 1
+                },
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchSwamp",
+               "FromFile": "assets/Maps/MapPatches/WitchSwamp_Patch.tbin",
+               "ToArea": {
+                 "X": 20,
+                 "Y": 42,
+                 "Width": 1,
+                 "Height": 1
+                },
+          },
+		  
+		  //Adds new warp point to Wizard's warp hall
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchHut",
+               "FromFile": "assets/Maps/MapPatches/WitchHut_Warp.tbin",
+               "ToArea": {
+                 "X": 11,
+                 "Y": 11,
+                 "Width": 1,
+                 "Height": 1
+                },
+          },
+		  
+		  //Adds ambient lights to witch swamp
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchSwamp",
+               "When": {
+                    "HasMod |contains=Aimon111.WitchSwampOverhaulCP": false,
+               },
+               "MapProperties": {
+                    "AmbientLight": "130 110 100",
+               },
+          },
+		  
+		  //Adds light sources to witch swamp
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchSwamp",
+               "FromFile": "assets/Maps/MapPatches/WitchSwamp_Light.tbin",
+			   "PatchMode": "Overlay",
+			   "When": {
+                    "HasMod |contains=Aimon111.WitchSwampOverhaulCP": false,
+               },
+               "ToArea": {
+                 "X": 20,
+                 "Y": 20,
+                 "Width": 1,
+                 "Height": 1
+                },
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/WitchSwamp",
+               "FromFile": "assets/Maps/MapPatches/WitchSwamp_Light.tbin",
+			   "PatchMode": "Overlay",
+			   "When": {
+                    "HasMod |contains=Aimon111.WitchSwampOverhaulCP": false,
+               },
+               "ToArea": {
+                 "X": 20,
+                 "Y": 42,
+                 "Width": 1,
+                 "Height": 1
+                },
+          },
+		  
+		  //Highlands Money Tree
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+               "FromFile": "assets/Maps/MapPatches/Highlands_MoneyTree.tmx",
+			   "PatchMode": "Overlay",
+               "ToArea": {
+                 "X": 32,
+                 "Y": 10,
+                 "Width": 1,
+                 "Height": 1
+                },
+                "When": {
+				     "Day": "0, 1, 2"
+                },
+          },
+		  
+		  //Highlands Fruit Trees
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Highlands",
+               "FromFile": "assets/Maps/MapPatches/Highlands_FruitTrees.tmx",
+			   "PatchMode": "Overlay",
+               "ToArea": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 156,
+                 "Height": 156
+                },
+                "When": {
+				     "Day": "0, 1, 2, 13, 14"
+                },
+          },
+		  
      ]
 }

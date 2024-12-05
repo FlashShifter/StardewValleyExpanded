@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="8" height="19" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="96">
+ <properties>
+  <property name="AmbientLight" value="100 100 100"/>
+  <property name="CanCaskHere" value="T"/>
+  <property name="DayTiles" value="Front 5 3 469 Front 5 4 501 Front 14 3 469 Front 14 4 501 Front 29 3 469 Front 29 4 501"/>
+  <property name="Light" value="31 19 4 34 14 4 31 14 4 34 10 4 31 10 4 31 6 4 34 6 4 25 6 4 25 10 4 25 14 4 19 14 4 19 10 4 19 6 4 13 6 4 13 10 4 13 14 4 5 15 4 5 7 4"/>
+  <property name="NightTiles" value="Front 5 3 1219 Front 5 4 1251 Front 14 3 1219 Front 14 4 1251 Front 29 3 1219 Front 29 4 1251"/>
+  <property name="Warp" value="31 23 Farm 1 1"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths.png" width="64" height="256"/>
+ </tileset>
+ <tileset firstgid="2241" name="spring_z_extras" tilewidth="16" tileheight="16" tilecount="6400" columns="25">
+  <image source="spring_z_extras.png" width="400" height="4096"/>
+ </tileset>
+ <tileset firstgid="8641" name="VanillaFurniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="VanillaFurniture.png" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="11617" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="13592" name="z_SVEbuildingShadow" tilewidth="16" tileheight="16" tilecount="600" columns="24">
+  <image source="z_SVEbuildingShadow.png" width="384" height="400"/>
+ </tileset>
+ <tileset firstgid="14192" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2.png" width="512" height="656"/>
+ </tileset>
+ <layer id="1" name="Back" width="8" height="19">
+  <data encoding="base64" compression="zlib">
+   eJzTY2Rg0KMAEwK61gwNDkwMDfZMWGmGx8wMDQ1Adj0TJg1SB5JPANLxTNhpfPobRvU3gOIAn36QPC31AwAng3tL
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Back2" width="8" height="19">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJybacYABjOgNDKQM4XQF00x5agB+LDYOSo/vOQB36QHNw==
+  </data>
+ </layer>
+ <objectgroup id="4" name="Back2"/>
+ <layer id="15" name="Back3" width="8" height="19">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B2AAACYAAB
+  </data>
+ </layer>
+ <layer id="16" name="Back4" width="8" height="19">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B2AAACYAAB
+  </data>
+ </layer>
+ <layer id="5" name="Buildings" width="8" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAPAgngQgIYH8jlIKBgFBAEmQTC0JGAfkLyhMxPJKAfAGZOCEs=
+  </data>
+ </layer>
+ <objectgroup id="6" name="Buildings"/>
+ <layer id="7" name="Buildings2" width="8" height="19">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfyJlSoHkUjAgAALPXAFQ=
+  </data>
+ </layer>
+ <objectgroup id="8" name="Buildings2"/>
+ <layer id="9" name="Front" width="8" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBguMbIgBX4cUDobzjk8ziwixMrPwoIg8UD7QAiwDIGhDuXQPme0LgHAINXBpg=
+  </data>
+ </layer>
+ <objectgroup id="10" name="Front"/>
+ <layer id="11" name="Paths" width="8" height="19" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAf6OTAzh61f3AAWrgJAA3bA/g=
+  </data>
+ </layer>
+ <objectgroup id="12" name="Paths"/>
+ <layer id="13" name="AlwaysFront" width="8" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAN+MzwSNJBfhQMbXAUiAE5+gHW
+  </data>
+ </layer>
+ <objectgroup id="14" name="AlwaysFront"/>
+</map>

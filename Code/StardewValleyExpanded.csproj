@@ -8,10 +8,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
 
     <EnableHarmony>true</EnableHarmony>
+	  <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +24,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+	
+	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
+		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
+	</PropertyGroup>
   
   <!-- mac workaround, remove later -->
   <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">

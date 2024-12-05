@@ -4,6 +4,8 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/MarriageDialogueApples",
       "Entries": {
+	    "funLeave_Apples":  "{{i18n:Apples.RoommateVary.0{{Random:{{Range:1,4}}}}}}",
+		"patio_Apples": "{{i18n:Apples.RoommateDialogue.000}}",
         "spouseRoom_Apples": "{{i18n:Apples.RoommateDialogue.001}}",
         "Rainy_Day_0": "{{i18n:Apples.RoommateDialogue.002}}",
         "Rainy_Day_1": "{{i18n:Apples.RoommateDialogue.003}}",
@@ -89,184 +91,13 @@
         "summer_Apples": "{{i18n:Apples.RoommateDialogue.078}}",
         "fall_Apples": "{{i18n:Apples.RoommateDialogue.079}}",
         "winter_Apples": "{{i18n:Apples.RoommateDialogue.080}}",
+		"spring_8": "{{i18n:Apples.RoommateDialogue.081}}",
+		"summer_8": "{{i18n:Apples.RoommateDialogue.082}}",
+		"summer_15": "{{i18n:Apples.RoommateDialogue.083}}",
+		"fall_26": "{{i18n:Apples.RoommateDialogue.084}}",
+		"winter_1": "{{i18n:Apples.RoommateDialogue.085}}",
+		"winter_28": "{{i18n:Apples.RoommateDialogue.086}}"
       },
-    },
-    //Apples goes to play with Peaches on Fridays when rooming with the player 
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Spring 5",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.01}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Spring 12",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.02}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Spring 19",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.03}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Spring 26",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.04}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Summer 5",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.05}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Summer 12",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.06}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Summer 19",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.07}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Summer 26",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.08}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Fall 5",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.09}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Fall 12",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.10}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Fall 19",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.11}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Fall 26",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.12}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Winter 5",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.13}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Winter 12",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.14}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Winter 19",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.15}}",
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/MarriageDialogueApples",
-      "When": {
-        "Date": "Winter 26",
-        "Weather|contains=Rain, Storm": false
-      },
-      "Entries": {
-        "funLeave_Apples": "{{i18n:Apples.RoommateVary.16}}",
-      }
     },
   ]
 }

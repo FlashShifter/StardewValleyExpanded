@@ -1,35 +1,42 @@
 {
-//visits community garden
-"Mon": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 103 98 2/2030 Custom_GunthersRoom 18 9 0",
-//visits bridge
-"Tue": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 77 95 2/2100 Custom_GunthersRoom 18 9 0",
-//visits park
-"Wed": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 96 65 2/2010 Custom_GunthersRoom 18 9 0",
-//visits memorial
-"Thu": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 110 27 0/2100 Custom_GunthersRoom 18 9 0",
-//visits saloon
-"Fri": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2200 Custom_GunthersRoom 18 9 0",
-//visits bench by river
-"Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 88 103 2/1950 Custom_GunthersRoom 18 9 0",
-//visits saloon - counter
-"Sun": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2100 Custom_GunthersRoom 18 9 0",
-
-//visits beach
-"summer_Mon": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Beach 22 24/2130 Custom_GunthersRoom 18 9 0",
-"summer_Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Beach 22 24/2130 Custom_GunthersRoom 18 9 0",
-
-//visits grave
-"fall_Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Town 47 88 0/2030 Custom_GunthersRoom 18 9 0",
-
-//visits saloon
-"winter_Thu": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2200 Custom_GunthersRoom 18 9 0",
-//"winter_17": work on night market schedule
-
-//visits saloon
-"spring": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2220 Custom_GunthersRoom 18 9 0",
-"rain": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2220 Custom_GunthersRoom 18 9 0",
-
-//Stays in museum all day
-"7": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2",
-"21": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2"
+    "Changes": [
+        {
+            //Gunther's Schedule
+            "Action": "EditData",
+            "Target": "Characters/schedules/GuntherSilvian",
+            "When": {
+                "GuntherUnlocked": "true"
+            },
+            "Entries": {
+                //visits community garden
+                "Mon": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 103 98 2/2030 Custom_GunthersRoom 18 9 0",
+                //visits bridge
+                "Tue": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 77 95 2/2100 Custom_GunthersRoom 18 9 0",
+                //visits park
+                "Wed": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 96 65 2/2010 Custom_GunthersRoom 18 9 0",
+                //visits memorial
+                "Thu": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 110 27 0/2100 Custom_GunthersRoom 18 9 0",
+                //visits saloon
+                "Fri": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2200 Custom_GunthersRoom 18 9 0",
+                //visits bench by river
+                "Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Town 88 103 2/1950 Custom_GunthersRoom 18 9 0",
+                //visits saloon - counter
+                "Sun": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/630 Town 101 98 2/740 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2100 Custom_GunthersRoom 18 9 0",
+                //visits beach
+                "summer_Mon": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Beach 22 24/2130 Custom_GunthersRoom 18 9 0",
+                "summer_Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Beach 22 24/2130 Custom_GunthersRoom 18 9 0",
+                //visits grave
+                "fall_Sat": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Town 47 88 0/2030 Custom_GunthersRoom 18 9 0",
+                //visits saloon
+                "winter_Thu": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2200 Custom_GunthersRoom 18 9 0",
+                //"winter_17": work on night market schedule
+                //visits saloon
+                "spring": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2220 Custom_GunthersRoom 18 9 0",
+                "rain": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2/1800 Saloon 11 20 0/2220 Custom_GunthersRoom 18 9 0",
+                //Stays in museum all day
+                "7": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2",
+                "21": "0 ArchaeologyHouse 5 8 2/610 ArchaeologyHouse 5 8 2"
+            }
+        }
+    ]
 }

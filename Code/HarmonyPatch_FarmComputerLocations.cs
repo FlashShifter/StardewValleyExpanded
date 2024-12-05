@@ -119,7 +119,7 @@ namespace StardewValleyExpanded
                         int amount = 0;
                         foreach (TerrainFeature t in loc.terrainFeatures.Values)
                         {
-                            if (t is HoeDirt && (t as HoeDirt).crop != null && !(t as HoeDirt).crop.dead)
+                            if (t is HoeDirt && (t as HoeDirt).crop != null && !(t as HoeDirt).crop.dead.Value)
                             {
                                 amount++;
                             }
@@ -187,7 +187,7 @@ namespace StardewValleyExpanded
                         int amount = 0;
                         foreach (TerrainFeature t in loc.terrainFeatures.Values)
                         {
-                            if (t is HoeDirt && (t as HoeDirt).crop != null && (t as HoeDirt).needsWatering() && (int)(t as HoeDirt).state != 1)
+                            if (t is HoeDirt && (t as HoeDirt).crop != null && (t as HoeDirt).needsWatering() && (int)(t as HoeDirt).state.Value != 1)
                             {
                                 amount++;
                             }

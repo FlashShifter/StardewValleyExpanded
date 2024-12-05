@@ -156,6 +156,9 @@ namespace StardewValleyExpanded
 
         private static void DisableShadowsHere(GameLocation location)
         {
+            if (Game1.netWorldState.Value.hasWorldStateID("SVE_BetrayalShrineActivated"))
+                return;
+
             FixMonsterSlayerQuest(); //if necessary, auto-complete and hide the local player's shadow slayer quest
 
             if (!ShouldDisableShadowsHere(location)) //if shadows should NOT be disabled here

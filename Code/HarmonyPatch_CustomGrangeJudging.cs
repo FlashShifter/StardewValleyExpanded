@@ -61,9 +61,11 @@ namespace StardewValleyExpanded
         public static Dictionary<string, string> DialogueWhileJudging { get; set; } = new Dictionary<string, string>()
         {
             //base game dialogue
+            /*
             { "Marnie", "Strings\\StringsFromCSFiles:Event.cs.1602" },
             { "Pierre", "Strings\\StringsFromCSFiles:Event.cs.1604" },
             { "Willy", "Strings\\StringsFromCSFiles:Event.cs.1606" },
+            */
             
             //SVE dialogue
             { "Sophia", "Strings\\StringsFromCSFiles:SVE_GrangeJudging_Sophia" },
@@ -101,19 +103,24 @@ namespace StardewValleyExpanded
                 
                 __instance.setUpAdvancedMove(AdvancedMove1.Split(' '), lewisDoneJudgingGrange); //perform AdvancedMove1, then call __instance.lewisDoneJudgingGrange()
                 __instance.getActorByName("Lewis").CurrentDialogue.Clear();
+                if (__instance.getActorByName("Marnie") != null)
+                {
+                    for (int i = __instance.npcControllers.Count - 1; i >= 0; i--)
+                    {
+                        if (__instance.npcControllers[i].puppet.Name.Equals("Marnie"))
+                        {
+                            __instance.npcControllers.RemoveAt(i);
+                        }
+                    }
+                }
                 __instance.setUpAdvancedMove(AdvancedMove2.Split(' ')); //perform AdvancedMove2
 
-                foreach (var actor in __instance.actors) //for each entry in the judging dialogue
+                foreach (NPC actor in __instance.actors)
                 {
-                    foreach (var entry in DialogueWhileJudging) //for each entry in the post-judging dialogue
+                    Dialogue dialogue = actor.TryGetDialogue("Fair_Judging");
+                    if (dialogue != null)
                     {
-                        if (__instance.getActorByName(entry.Key) is NPC npc) //if the NPC exists
-                            if (Game1.content.LoadStringReturnNullIfNotFound(entry.Value) is string dialogue) //if the dialogue loaded successfully
-                                npc.setNewDialogue(new Dialogue(npc, "WhileJudging", dialogue));
-                            else
-                                Monitor.Log($"Couldn't load grange judging dialogue. Target asset: \"{entry.Value}\"", LogLevel.Debug);
-                        else
-                            Monitor.Log($"Couldn't find NPC to load grange judging dialogue. NPC name: \"{entry.Key}\"", LogLevel.Debug);
+                        actor.setNewDialogue(dialogue);
                     }
                 }
 

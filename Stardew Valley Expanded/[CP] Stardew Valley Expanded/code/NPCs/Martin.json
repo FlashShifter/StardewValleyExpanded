@@ -21,9 +21,9 @@
           "Calendar": "AlwaysShown",
           "SocialTab": "UnknownUntilMet",
           "CanSocialize": true,
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": false,
-          "ExcludeFromPerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "FriendsAndFamily": {},
           "WinterStarParticipant": false,
@@ -69,18 +69,18 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Martin": "{{i18n:Martin.Gifts.Loved}}/350 233 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger/{{i18n:Martin.Gifts.Liked}}/184 186 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Martin.Gifts.Disliked}}/-75 196 197 199 200 205 219 218 231 242 FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Martin.Gifts.Hated}}/348 346 459 303 304 283 -4 80 648 FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Martin.Gifts.Neutral}}/270 FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Ancient_Fiber/"
+        "Martin": "{{i18n:Martin.Gifts.Loved}}/350 233 FlashShifter.StardewValleyExpandedCP_Candy FlashShifter.StardewValleyExpandedCP_Grilled_Cheese_Sandwich FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger/{{i18n:Martin.Gifts.Liked}}/184 186 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Martin.Gifts.Disliked}}/-75 196 197 199 200 205 219 218 231 242 FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Martin.Gifts.Hated}}/348 346 459 303 304 283 -4 80 648 FlashShifter.StardewValleyExpandedCP_Void_Eel FlashShifter.StardewValleyExpandedCP_Starfish FlashShifter.StardewValleyExpandedCP_Seahorse FlashShifter.StardewValleyExpandedCP_Sea_Sponge FlashShifter.StardewValleyExpandedCP_Minnow FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Clownfish FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Martin.Gifts.Neutral}}/270 FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Ancient_Fiber/"
       }
     },
     {
       //Martin's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Martin",
       "FromFile": "Assets/CharacterFiles/Portraits/Martin/Martin.png"
     },
     {
       //Martin's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Martin",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Martin/Martin.png"
     },
@@ -144,6 +144,19 @@
       },
       "Update": "OnLocationChange"
     },
+	{
+      //Martin's Theater Portrait 4
+      "Action": "EditImage",
+      "Target": "Portraits/Martin",
+      "FromFile": "assets/CharacterFiles/Portraits/Martin/Martin_Theater.png",
+      "When": {
+       "HasSeenEvent |contains=191393": true,
+	   "HasSeenEvent |contains=3219873": true,
+       "LocationName": "MovieTheater",
+       "Day": "22" 
+      },
+      "Update": "OnLocationChange"
+    },
     {
       //Martin's Theater Sprites
       "Action": "EditImage",
@@ -184,15 +197,28 @@
       },
       "Update": "OnLocationChange"
     },
+	{
+      //Martin's Theater Sprites 4
+      "Action": "EditImage",
+      "Target": "Characters/Martin",
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Martin/Martin_Theater.png",
+      "When": {
+       "HasSeenEvent |contains=191393": true,
+	   "HasSeenEvent |contains=3219873": true,
+       "LocationName": "MovieTheater",
+       "Day": "22" 
+      },
+      "Update": "OnLocationChange"
+    },
     {
       //Martin's Winter Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Martin_Winter",
       "FromFile": "assets/CharacterFiles/Portraits/Martin/Martin_Winter.png"
     },
     {
-      //Andy's Winter Sprites
-      "Action": "Load",
+      //Martin's Winter Sprites
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Martin_Winter",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Martin/Martin_Winter.png"
     },
@@ -208,8 +234,13 @@
       }
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/Martin",
+      "FromFile": "Assets/Blank.json"
+    },
+   /* {
       //Martin's Schedule - Joja Mart
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Martin",
       "When": {
         "HasSeenEvent |contains=191393": false
@@ -218,7 +249,7 @@
     },
     {
       //Martin's Schedule - Joja Mart ruins
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Martin",
       "When": {
         "HasSeenEvent": "191393",
@@ -228,14 +259,14 @@
     },
     {
       //Martin's Schedule - Movie Theater built
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Martin",
       "When": {
         "HasFlag": "ccMovieTheater",
         "HasSeenEvent": "191393"
       },
       "FromFile": "assets/CharacterFiles/Schedules/Martin/MovieTheater.json"
-    },
+    },*/
     /*{
       //Martin's Schedule - Movie Theater - no schedule on festival days
       "Action": "EditData",
@@ -263,8 +294,8 @@
         "Spouse": "Claire"
       },
       "Entries": {
-        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0",
-        "rain": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
+        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2400 BusStop 22 9 0/2410 Custom_DayEnd_WarpRoom 3 3 0",
+        "rain": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2400 BusStop 22 9 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -277,7 +308,7 @@
         "HasSeenEvent |contains=4269703": true
       },
       "Entries": {
-        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
+        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/800 JojaMart 9 25 1 Martin_Idle/2200 BusStop 22 8 0/2400 BusStop 22 9 0/2410 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -290,8 +321,8 @@
         "Spouse": "Claire"
       },
       "Entries": {
-        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
-        "rain": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+        "Fri": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2330 BusStop 22 9 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
+        "rain": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2330 BusStop 22 9 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     {
@@ -305,7 +336,7 @@
         "HasSeenEvent |contains=4269703": true
       },
       "Entries": {
-        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+        "Wed": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2330 BusStop 22 9 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
       }
     },
     //This puts Martin in town on days he attends a festival. He is sometimes trapped in the warp room otherwise. 
@@ -317,10 +348,10 @@
         "HasSeenEvent": "3219873",
       },
       "Entries": {
-        "Spring_13": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Spring_24": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Fall_16": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Fall_27": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Spring_13": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Spring_24": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Fall_16": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Fall_27": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
       }
     },
     {
@@ -331,10 +362,10 @@
         "IsOddYear": false
       },
       "Entries": {
-        "Summer_11": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Summer_28": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Winter_8": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-        "Winter_25": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Summer_11": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Summer_28": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Winter_8": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        "Winter_25": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1450 BusStop 22 9 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
       }
     },
     /*
@@ -550,7 +581,7 @@
       "Action": "EditData",
       "Target": "Data/MoviesReactions",
       "Entries": {
-        "MorrisTod": {
+        "Martin": {
           "NPCName": "Martin",
           "Reactions": [
             {
@@ -728,6 +759,29 @@
         }
       }
     },
+	{ //Martin will reject movie invitations on Community Day
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "When": {
+		"HasSeenEvent |contains=191393": true,
+		"HasSeenEvent |contains=3219873": true,
+		"Day": "22",
+	  },
+      "Entries": {
+        "Martin": {
+          "NPCName": "Martin",
+          "Reactions": [
+            {
+              "Tag": "*",
+              "Response": "reject",
+              "Whitelist": [],
+              "SpecialResponses": null,
+              "ID": "reaction_0"
+            }
+          ]
+        }
+      }
+    },
     /*
     {
       "Action": "EditData",
@@ -754,7 +808,7 @@
         "HasSeenEvent |contains=191393": false
       },
       "Entries": {
-        "3219970/f Martin 500": "none/-500 -500/farmer 5 18 3 Martin 9 25 1 Morris 24 26 3 Claire 10 19 1 Sam 22 7 2 Pam 11 25 3 Andy 25 16 3 Jodi 9 8 0/positionOffset Morris -10 -15/animate Sam false true 100 40 40 41 41 42 42 41 41/animate Claire false true 125 48 49 50 51 52 53 54 55 57 58 59/skippable/pause 800/playMusic Hospital_Ambient/pause 700/viewport 13 25 true/pause 1500/speak Pam \"{{i18n:Martin.2hearts.01}}\"/pause 750/speak Martin \"{{i18n:Martin.2hearts.02}}\"/pause 1150/shake Martin 500/pause 800/speak Martin \"{{i18n:Martin.2hearts.03}}\"/pause 1200/speak Pam \"{{i18n:Martin.2hearts.Joja.04}}\"/pause 1200/faceDirection Martin 0 true/pause 650/speak Martin \"{{i18n:Martin.2hearts.05}}\"/pause 750/stopAnimation Claire/pause 500/faceDirection Claire 2 true/pause 500/speak Claire \"{{i18n:Martin.2hearts.06}}\"/pause 600/move Claire 0 3 3/textAboveHead Pam \"{{i18n:Martin.2hearts.07}}\"/move Claire -3 0 3 true/pause 750/faceDirection Martin 1 true/pause 750/move Claire 0 4 1/move Claire 2 0 0/pause 400/faceDirection Martin 2 true/pause 1400/speak Claire \"{{i18n:Martin.2hearts.08}}\"/pause 500/speak Martin \"{{i18n:Martin.2hearts.09}}\"/pause 600/faceDirection Martin 1 true/pause 600/shake Martin 400/pause 400/playSound money/pause 650/faceDirection Claire 1 true/pause 600/speak Martin \"{{i18n:Martin.2hearts.10}}\"/speak Pam \"{{i18n:Martin.2hearts.11}}\"/globalFade/viewport -1000 -1000/warp Pam -50 -50/viewport 13 25 true/pause 800/faceDirection Martin 2 true/pause 600/faceDirection Claire 0 true/pause 600/speak Martin \"{{i18n:Martin.2hearts.12}}\"/pause 600/speak Claire \"{{i18n:Martin.2hearts.13}}\"/pause 600/speak Martin \"{{i18n:Martin.2hearts.14}}\"/pause 500/speak Claire \"{{i18n:Martin.2hearts.15}}\"/pause 500/globalFade/viewport -1000 -1000/pause 600/end dialogue Martin\"{{i18n:Martin.2hearts.16}}\"",
+        "3219970/f Martin 500": "none/-500 -500/farmer 5 18 3 Martin 9 25 1 Morris 24 26 3 Claire 10 19 1 Sam 22 7 2 Pam 11 25 3 Andy 25 16 3 Jodi 9 8 0/positionOffset Morris -10 -15/animate Sam false true 100 40 40 41 41 42 42 41 41/animate Claire false true 125 48 49 50 51 52 53 54 55 57 58 59/skippable/pause 800/playMusic Hospital_Ambient/pause 700/viewport 13 25 true/pause 1500/speak Pam \"{{i18n:Martin.2hearts.01}}\"/pause 750/speak Martin \"{{i18n:Martin.2hearts.02}}\"/pause 1150/shake Martin 500/pause 800/speak Martin \"{{i18n:Martin.2hearts.03}}\"/pause 1200/speak Pam \"{{i18n:Martin.2hearts.Joja.04}}\"/pause 1200/faceDirection Martin 0 true/pause 650/speak Martin \"{{i18n:Martin.2hearts.05}}\"/pause 750/stopAnimation Claire/pause 500/faceDirection Claire 2 true/pause 500/speak Claire \"{{i18n:Martin.2hearts.06}}\"/pause 600/move Claire 0 3 3/textAboveHead Pam \"{{i18n:Martin.2hearts.07}}\"/move Claire -3 0 3 true/pause 750/faceDirection Martin 1 true/pause 750/move Claire 0 4 1/move Claire 2 0 0/pause 400/faceDirection Martin 2 true/pause 1400/speak Claire \"{{i18n:Martin.2hearts.08}}\"/pause 500/speak Martin \"{{i18n:Martin.2hearts.09}}\"/pause 600/faceDirection Martin 1 true/pause 600/shake Martin 400/pause 400/playSound money/pause 650/faceDirection Claire 1 true/pause 600/speak Martin \"{{i18n:Martin.2hearts.10}}\"/speak Pam \"{{i18n:Martin.2hearts.11}}\"/globalFade/viewport -1000 -1000/warp Pam -50 -50/viewport 13 25 true/pause 800/faceDirection Martin 2 true/pause 600/faceDirection Claire 0 true/pause 600/speak Martin \"{{i18n:Martin.2hearts.12}}\"/pause 600/speak Claire \"{{i18n:Martin.2hearts.13}}\"/pause 600/speak Martin \"{{i18n:Martin.2hearts.14}}\"/pause 500/speak Claire \"{{i18n:Martin.2hearts.15}}\"/pause 500/globalFade/viewport -1000 -1000/pause 600/end dialogue Martin \"{{i18n:Martin.2hearts.16}}\"",
       },
     },
     { //Martin 2 heart event - Customer Service - Theater
@@ -768,22 +822,22 @@
       },
     },
     { //theater temp actor loads
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/**Martin**",
       "FromFile": "Assets/CharacterFiles/Portraits/Martin/Martin_Theater.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/**Martin**",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Martin/Martin_Theater.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/**Claire**",
       "FromFile": "Assets/CharacterFiles/Portraits/Claire/Claire_Theater.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/**Claire**",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Claire/Claire_Theater.png"
     },
@@ -795,7 +849,7 @@
       },
     },
     {
-      "Action": "Load", //16x16
+      "Action": "Load", "Priority": "Low", //16x16
       "Target": "Characters/GenealogyBook",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GenealogyBook.png"
     },
@@ -818,7 +872,7 @@
         "Spouse |contains=Claire": false
       },
       "Entries": {
-        "3219972/e 3219971/f Martin 1500/t 1000 1700": "none/-500 -500/farmer -50 -50 0 **Martin** 5 5 0 **Claire** 8 5 2 Jodi -20 -20 0 Clint -21 -21 0/pause 500/playMusic movieTheater/pause 500/showFrame **Claire** 34 true/viewport 11 9 true/skippable/pause 2250/shake **Claire** 500/pause 1300/shake **Claire** 680/pause 1400/speak **Claire** \"{{i18n:Martin.6hearts.01}}\"/pause 600/faceDirection **Martin** 1 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.02}}\"/pause 800/shake **Claire** 700/pause 1200/emote **Martin** 16 true/pause 1000/move **Martin** 2 0 1 true/pause 500/shake **Claire** 400/pause 600/speak **Claire** \"{{i18n:Martin.6hearts.03}}\"/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.04}}\"/pause 500/shake **Claire** 500/pause 1000/speak **Claire** \"{{i18n:Martin.6hearts.05}}\"/pause 300/speak **Martin** \"{{i18n:Martin.6hearts.06}}\"/pause 400/shake **Claire** 400/warp farmer 13 15/pause 350/move farmer 0 -7 3 true/pause 1500/faceDirection **Martin** 2 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.07}}\"/pause 600/move farmer -6 0 0 true/pause 1500/shake **Claire** 600/pause 1500/move farmer 0 -1 0/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.08}}\"/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.09}}\"/pause 500/faceDirection **Martin** 1 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.10}}\"/pause 500/shake **Claire** 500/pause 900/faceDirection **Martin** 2 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.Theater.11}}\"/pause 500/speak **Claire** \"{{i18n:Martin.6hearts.12}}\"/pause 500/faceDirection **Martin** 1 true/pause 500/globalFade/viewport -1000 -1000/warp Andy 27 19/faceDirection Andy 1 true/warp **Claire** -50 -50/warp **Martin** -49 -49/warp farmer 8 5/faceDirection farmer 2 true/warp Jodi 8 7/pause 500/faceDirection **Martin** 0 true/positionOffset farmer -5 20/viewport 11 9 true/pause 2000/playSound money/pause 650/speak Jodi \"{{i18n:Martin.6hearts.13}}\"/pause 150/emote farmer 32/pause 300/faceDirection Jodi 1 true/pause 300/faceDirection Jodi 2 true/pause 300/move Jodi 0 1 2/move Jodi 5 0 0/move Jodi 0 -4 0/pause 300/warp Jodi -30 -30/pause 550/warp **Martin** 13 15/pause 300/speed **Martin** 5/move **Martin** 0 -7 3/speed **Martin** 5/move **Martin** -5 0 0/speed **Martin** 5/move **Martin** 0 -1 0/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.14}}\"/pause 300/emote **Martin** 40/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.15}}\"/pause 600/shake **Martin** 450/pause 700/speak **Martin** \"{{i18n:Martin.6hearts.Theater.16}}\"/pause 500/emote **Martin** 40/pause 150/speak **Martin** \"{{i18n:Martin.6hearts.17}}\"/pause 500/globalFade/viewport -1000 -1000/warp farmer -30 -30/warp Clint 8 7/warp **Martin** 8 5/faceDirection **Martin** 2 true/viewport 11 9 true/pause 1500/speak Clint \"{{i18n:Martin.6hearts.Theater.18}}\"/pause 800/speak **Martin** \"{{i18n:Martin.6hearts.19}}\"/pause 1500/showFrame **Martin** 16 true/pause 600/speak **Martin** \"{{i18n:Martin.6hearts.20}}\"/pause 500/addConversationTopic ClaireSick/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end"
+        "3219972/e 3219971/f Martin 1500/t 1000 1700": "none/-500 -500/farmer -50 -50 0 **Martin** 5 5 0 **Claire** 8 5 2 Jodi -20 -20 0 Clint -21 -21 0/pause 500/playMusic movieTheater/pause 500/showFrame **Claire** 34 true/viewport 11 9 true/skippable/pause 2250/shake **Claire** 500/pause 1300/shake **Claire** 680/pause 1400/speak **Claire** \"{{i18n:Martin.6hearts.01}}\"/pause 600/faceDirection **Martin** 1 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.02}}\"/pause 800/shake **Claire** 700/pause 1200/emote **Martin** 16 true/pause 1000/move **Martin** 2 0 1 true/pause 500/shake **Claire** 400/pause 600/speak **Claire** \"{{i18n:Martin.6hearts.03}}\"/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.04}}\"/pause 500/shake **Claire** 500/pause 1000/speak **Claire** \"{{i18n:Martin.6hearts.05}}\"/pause 300/speak **Martin** \"{{i18n:Martin.6hearts.06}}\"/pause 400/shake **Claire** 400/warp farmer 13 15/pause 350/move farmer 0 -7 3 true/pause 1500/faceDirection **Martin** 2 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.07}}\"/pause 600/move farmer -6 0 0 true/pause 1500/shake **Claire** 600/pause 1500/move farmer 0 -1 0/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.08}}\"/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.09}}\"/pause 500/faceDirection **Martin** 1 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.10}}\"/pause 500/shake **Claire** 500/pause 900/faceDirection **Martin** 2 true/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.Theater.11}}\"/pause 500/speak **Claire** \"{{i18n:Martin.6hearts.12}}\"/pause 500/faceDirection **Martin** 1 true/pause 500/globalFade/viewport -1000 -1000/warp **Claire** -50 -50/warp **Martin** -49 -49/warp farmer 8 5/faceDirection farmer 2 true/warp Jodi 8 7/pause 500/faceDirection **Martin** 0 true/positionOffset farmer -5 20/viewport 11 9 true/pause 2000/playSound money/pause 650/speak Jodi \"{{i18n:Martin.6hearts.13}}\"/pause 150/emote farmer 32/pause 300/faceDirection Jodi 1 true/pause 300/faceDirection Jodi 2 true/pause 300/move Jodi 0 1 2/move Jodi 5 0 0/move Jodi 0 -4 0/pause 300/warp Jodi -30 -30/pause 550/warp **Martin** 13 15/pause 300/speed **Martin** 5/move **Martin** 0 -7 3/speed **Martin** 5/move **Martin** -5 0 0/speed **Martin** 5/move **Martin** 0 -1 0/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.14}}\"/pause 300/emote **Martin** 40/pause 500/speak **Martin** \"{{i18n:Martin.6hearts.15}}\"/pause 600/shake **Martin** 450/pause 700/speak **Martin** \"{{i18n:Martin.6hearts.Theater.16}}\"/pause 500/emote **Martin** 40/pause 150/speak **Martin** \"{{i18n:Martin.6hearts.17}}\"/pause 500/globalFade/viewport -1000 -1000/warp farmer -30 -30/warp Clint 8 7/warp **Martin** 8 5/faceDirection **Martin** 2 true/viewport 11 9 true/pause 1500/speak Clint \"{{i18n:Martin.6hearts.Theater.18}}\"/pause 800/speak **Martin** \"{{i18n:Martin.6hearts.19}}\"/pause 1500/showFrame **Martin** 16 true/pause 600/speak **Martin** \"{{i18n:Martin.6hearts.20}}\"/pause 500/addConversationTopic ClaireSick/globalFade/viewport -1000 -1000/stopMusic/pause 1000/end"
       },
     },
     {
@@ -850,7 +904,7 @@
         "Relationship:Claire |contains=Married, Engaged, Dating": false
       },
       "Entries": {
-        "3219973/f Martin 2000/t 1800 2200/z winter/w sunny": "spring_night_ambient/-500 -500/Martin 15 11 0 Claire 17 11 0/changeLocation Custom_BusStop_NoBus/positionOffset Martin -15 -4/viewport 17 12 clamp true/skippable/pause 3000/shake Martin 500/pause 1500/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.01}}\"/pause 500/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.02}}\"/pause 300/speak Martin \"{{i18n:Martin.8hearts.03}}\"/pause 1500/faceDirection Claire 0 true/pause 1000/faceDirection Martin 0 true/pause 2500/shake Martin 500/pause 1250/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.04}}\"/pause 650/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.05}}\"/pause 400/speak Martin \"{{i18n:Martin.8hearts.06}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.07}}\"/pause 1000/faceDirection Claire 0 true/pause 1200/faceDirection Martin 0 true/pause 2500/shake Martin 750/pause 1250/speak Martin \"{{i18n:Martin.8hearts.08}}\"/pause 500/faceDirection Claire 3 true/pause 600/speak Claire \"{{i18n:Martin.8hearts.09}}\"/pause 800/shake Martin 400/pause 700/speak Martin \"{{i18n:Martin.8hearts.10}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.11}}\"/pause 500/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.12}}\"/pause 1000/shake Martin 500/pause 1000/speak Martin \"{{i18n:Martin.8hearts.13}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.14}}\"/pause 400/speak Martin \"{{i18n:Martin.8hearts.15}}\"/pause 1000/shake Martin 300/pause 700/stopMusic/speak Martin \"{{i18n:Martin.8hearts.16}}\"/pause 1650/speak Martin \"{{i18n:Martin.8hearts.17}}\"/pause 1000/emote Claire 40/pause 1000/speak Martin \"{{i18n:Martin.8hearts.18}}\"/pause 1000/speak Claire \"{{i18n:Martin.8hearts.19}}\"/speak Martin \"{{i18n:Martin.8hearts.20}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.21}}\"/pause 800/playMusic spring_night_ambient/pause 500/faceDirection Martin 2 true/pause 400/showFrame Martin 16 true/pause 1750/speed Claire 1/move Claire -1 0 3/pause 800/speak Claire \"{{i18n:Martin.8hearts.22}}\"/pause 1000/shake Martin 500/pause 1000/speak Martin \"{{i18n:Martin.8hearts.23}}\"/pause 650/speak Claire \"{{i18n:Martin.8hearts.24}}\"/pause 800/shake Martin 300/pause 700/speak Martin \"{{i18n:Martin.8hearts.25}}\"/pause 1000/speak Claire \"{{i18n:Martin.8hearts.26}}\"/pause 1000/faceDirection Claire 2 true/pause 300/speed Claire 1/move Claire 0 2 3/speed Claire 1/move Claire -1 0 2/speed Claire 1/move Claire 0 2 2 true/pause 200/showFrame Martin 0 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.27}}\"/pause 650/faceDirection Claire 1 true/pause 300/faceDirection Claire 0 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.28}}\"/pause 700/speak Martin \"{{i18n:Martin.8hearts.29}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.30}}\"/pause 1000/faceDirection Claire 1 true/pause 300/faceDirection Claire 2 true/pause 300/speed Claire 1/move Claire 0 8 2 true/pause 1750/faceDirection Martin 1 true/pause 300/faceDirection Martin 0 true/pause 1500/shake Martin 500/pause 1000/addConversationTopic MartinConfession/globalFade/viewport -1000 -1000/pause 1000/end"
+        "3219973/f Martin 2000/t 1800 2200/z winter/w sunny": "spring_night_ambient/-500 -500/farmer 3 3 0 Martin 15 11 0 Claire 17 11 0/changeLocation Custom_BusStop_NoBus/positionOffset Martin -15 -4/warp farmer -50 -50/viewport 17 12 clamp true/skippable/pause 3000/shake Martin 500/pause 1500/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.01}}\"/pause 500/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.02}}\"/pause 300/speak Martin \"{{i18n:Martin.8hearts.03}}\"/pause 1500/faceDirection Claire 0 true/pause 1000/faceDirection Martin 0 true/pause 2500/shake Martin 500/pause 1250/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.04}}\"/pause 650/faceDirection Claire 3 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.05}}\"/pause 400/speak Martin \"{{i18n:Martin.8hearts.06}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.07}}\"/pause 1000/faceDirection Claire 0 true/pause 1200/faceDirection Martin 0 true/pause 2500/shake Martin 750/pause 1250/speak Martin \"{{i18n:Martin.8hearts.08}}\"/pause 500/faceDirection Claire 3 true/pause 600/speak Claire \"{{i18n:Martin.8hearts.09}}\"/pause 800/shake Martin 400/pause 700/speak Martin \"{{i18n:Martin.8hearts.10}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.11}}\"/pause 500/faceDirection Martin 1 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.12}}\"/pause 1000/shake Martin 500/pause 1000/speak Martin \"{{i18n:Martin.8hearts.13}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.14}}\"/pause 400/speak Martin \"{{i18n:Martin.8hearts.15}}\"/pause 1000/shake Martin 300/pause 700/stopMusic/speak Martin \"{{i18n:Martin.8hearts.16}}\"/pause 1650/speak Martin \"{{i18n:Martin.8hearts.17}}\"/pause 1000/emote Claire 40/pause 1000/speak Martin \"{{i18n:Martin.8hearts.18}}\"/pause 1000/speak Claire \"{{i18n:Martin.8hearts.19}}\"/speak Martin \"{{i18n:Martin.8hearts.20}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.21}}\"/pause 800/playMusic spring_night_ambient/pause 500/faceDirection Martin 2 true/pause 400/showFrame Martin 16 true/pause 1750/speed Claire 1/move Claire -1 0 3/pause 800/speak Claire \"{{i18n:Martin.8hearts.22}}\"/pause 1000/shake Martin 500/pause 1000/speak Martin \"{{i18n:Martin.8hearts.23}}\"/pause 650/speak Claire \"{{i18n:Martin.8hearts.24}}\"/pause 800/shake Martin 300/pause 700/speak Martin \"{{i18n:Martin.8hearts.25}}\"/pause 1000/speak Claire \"{{i18n:Martin.8hearts.26}}\"/pause 1000/faceDirection Claire 2 true/pause 300/speed Claire 1/move Claire 0 2 3/speed Claire 1/move Claire -1 0 2/speed Claire 1/move Claire 0 2 2 true/pause 200/showFrame Martin 0 true/pause 500/speak Martin \"{{i18n:Martin.8hearts.27}}\"/pause 650/faceDirection Claire 1 true/pause 300/faceDirection Claire 0 true/pause 500/speak Claire \"{{i18n:Martin.8hearts.28}}\"/pause 700/speak Martin \"{{i18n:Martin.8hearts.29}}\"/pause 500/speak Claire \"{{i18n:Martin.8hearts.30}}\"/pause 1000/faceDirection Claire 1 true/pause 300/faceDirection Claire 2 true/pause 300/speed Claire 1/move Claire 0 8 2 true/pause 1750/faceDirection Martin 1 true/pause 300/faceDirection Martin 0 true/pause 1500/shake Martin 500/pause 1000/addConversationTopic MartinConfession/globalFade/viewport -1000 -1000/pause 1000/end"
       },
     },
     {

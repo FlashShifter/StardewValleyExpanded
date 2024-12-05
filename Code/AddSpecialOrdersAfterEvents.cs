@@ -147,6 +147,19 @@ namespace StardewValleyExpanded
                 HasSeenEvents = "1337430",
                 HasNotSeenEvents = "1337431"
             },
+            new SpecialOrderConditions()
+            {
+                OrderKey = "LegendaryTrio",
+                HasSeenEvents = "1337930",
+                HasNotSeenEvents = "1337931"
+            },
+
+            new SpecialOrderConditions()
+            {
+                OrderKey = "HenchmanHouseRepaired",
+                HasSeenEvents = "1337730",
+                HasNotSeenEvents = "1337731"
+            },
         };
 
 

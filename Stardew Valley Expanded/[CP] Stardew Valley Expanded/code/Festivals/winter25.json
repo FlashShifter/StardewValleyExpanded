@@ -15,6 +15,7 @@
                 "Morgan": "{{i18n:Morgan.WinterStar}}",
                 "MorrisTod": "{{i18n:Morris.WinterStar}}",
                 "Sandy": "{{i18n:Sandy.WinterStar}}",
+				"Scarlett": "{{i18n:Scarlett.Christmas}}",
                 "Sophia": "{{i18n:winterstar.Sophia.1}}",
                 "Susan": "{{i18n:Susan.WinterStar}}",
                 "Victor_y2": "{{i18n:victor.Christmas2}}",
@@ -53,7 +54,6 @@
                 "Spouse": "Claire"
             }
         },
-        
         { //- EMILY SHUT CLINT DOWN
             "Action": "EditData",
             "Target": "data/festivals/winter25",
@@ -105,7 +105,6 @@
             }
         },
         //y2
-        
         {
             "Action": "EditData",
             "Target": "data/festivals/winter25",
@@ -179,9 +178,6 @@
         { //christmas festival data
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
-            "When": {
-                "IsOddYear": true
-            },
             "TextOperations": [
                 { //Victor
                     "Operation": "Append",
@@ -244,7 +240,6 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent |contains=191393": false,
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -258,12 +253,29 @@
                 },
             ]
         },
+		{ //Scarlett christmas festival data
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "When": {
+                "HasSeenEvent": "3691371",
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Scarlett 51 72 down",
+                    "Delimiter": "/"
+                },
+            ]
+        },
         { //Gunther christmas festival data
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
             "When": {
                 "GuntherUnlocked": "true",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -282,7 +294,6 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "5978924",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -302,7 +313,6 @@
             "When": {
                 "ApplesHere": "true",
                 "Roommate": "Apples",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -321,7 +331,6 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "3219873",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -340,7 +349,6 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "Spouse": "Lance",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -359,7 +367,6 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "Hearts:Sandy": "{{Range: 5, 14}}",
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -380,7 +387,6 @@
                 "Spouse |contains=Wizard": true,
                 "HasMod |contains=Parrot.RomRas": false,
                 "HasMod |contains=Jellonip.RRRR": false,
-                "IsOddYear": true
             },
             "TextOperations": [
                 {
@@ -398,15 +404,12 @@
         { //YEAR TWO christmas festival data
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
-            "When": {
-                "IsOddYear": false
-            },
             "TextOperations": [
                 { //Victor
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Victor 22 67 up",
                     "Delimiter": "/"
@@ -415,7 +418,7 @@
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Olivia 24 67 up",
                     "Delimiter": "/"
@@ -424,7 +427,7 @@
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Andy 36 72 left",
                     "Delimiter": "/"
@@ -433,7 +436,7 @@
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Susan 32 73 up",
                     "Delimiter": "/"
@@ -442,7 +445,7 @@
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Sophia 21 66 right",
                     "Delimiter": "/"
@@ -451,7 +454,7 @@
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "MarlonFay 34 56 down",
                     "Delimiter": "/"
@@ -463,14 +466,13 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent |contains=191393": false,
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "MorrisTod 27 54 down",
                     "Delimiter": "/"
@@ -482,14 +484,13 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "GuntherUnlocked": "true",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "GuntherSilvian 36 69 left",
                     "Delimiter": "/"
@@ -501,14 +502,13 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "5978924",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Morgan 32 65 right",
                     "Delimiter": "/"
@@ -521,14 +521,13 @@
             "When": {
                 "ApplesHere": "true",
                 "Roommate": "Apples",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Apples 8 63 right",
                     "Delimiter": "/"
@@ -540,52 +539,49 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "3219873",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Claire 38 60 right",
                     "Delimiter": "/"
                 },
             ]
         },
-		{ //Martin christmas festival data
+        { //Martin christmas festival data
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "3219873",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Martin 39 59 down",
                     "Delimiter": "/"
                 },
             ]
         },
-		{ //Scarlett christmas festival data
+        { //Scarlett christmas festival data
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
             "When": {
                 "HasSeenEvent": "3691371",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Scarlett 24 49 right",
                     "Delimiter": "/"
@@ -597,14 +593,13 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "Spouse": "Lance",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Lance 32 57 down",
                     "Delimiter": "/"
@@ -616,14 +611,13 @@
             "Target": "Data/Festivals/winter25",
             "When": {
                 "Hearts:Sandy": "{{Range: 5, 14}}",
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Sandy 6 52 down",
                     "Delimiter": "/"
@@ -637,14 +631,13 @@
                 "Spouse |contains=Wizard": true,
                 "HasMod |contains=Parrot.RomRas": false,
                 "HasMod |contains=Jellonip.RRRR": false,
-                "IsOddYear": false
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
                     "Target": [
                         "Entries",
-                        "Set-Up_additionalCharacters"
+                        "Set-Up_additionalCharacters_y2"
                     ],
                     "Value": "Wizard 11 63 down",
                     "Delimiter": "/"
@@ -654,6 +647,7 @@
         //Festival Loads
         {
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Maps/Town-Christmas",
             "When": {
                 "HasSeenEvent |contains=5553210": false,
@@ -662,6 +656,7 @@
         },
         {
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Maps/Town-Christmas2",
             "When": {
                 "HasSeenEvent |contains=5553210": false,
@@ -670,6 +665,7 @@
         },
         {
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Maps/Town-Christmas",
             "When": {
                 "HasSeenEvent": "5553210"
@@ -678,6 +674,7 @@
         },
         {
             "Action": "Load",
+            "Priority": "Low",
             "Target": "Maps/Town-Christmas2",
             "When": {
                 "HasSeenEvent": "5553210"

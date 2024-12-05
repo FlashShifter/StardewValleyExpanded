@@ -2,6 +2,11 @@
 
     "Changes": [
         {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/adventurerLedger",
+            "FromFile": "assets/CharacterFiles/Shops/Ledgers/AdventurerLedger.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Shops",
             "Entries": {
@@ -9,8 +14,13 @@
                     "Owners": [
                         {   
                             "Name": "AnyOrNone",
-							"Dialogue": "",
-                            "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Ledgers/AdventurerLedger.png}}"
+							"Dialogues": [
+                                {
+                                "Id": "FlashShifter.StardewValleyExpandedCP_Default",
+                                "Dialogue": "", 
+                                },
+							],
+                            "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\AdventurerLedger"
                         }
                     ],
 
@@ -34,6 +44,11 @@
                             "Id": "FlashShifter.StardewValleyExpandedCP_Fancy_Wood_Lamp-post",
                             "ItemId": "FlashShifter.StardewValleyExpandedCP_Fancy_Wood_Lamp-post",
                             "Price": 8000,
+                        },
+						{
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Adventurer_Map",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Adventurer_Map",
+                            "Price": 6000,
                         },
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_Adventurer_Gear",

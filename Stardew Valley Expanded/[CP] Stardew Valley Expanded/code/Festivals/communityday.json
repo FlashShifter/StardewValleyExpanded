@@ -5,6 +5,9 @@
 
 			"Action": "EditData", 
 			"Target": "Data/PassiveFestivals",
+			"When": {
+				"HasSeenEvent": "191393",
+			},
 			"Entries": {
 				"FlashShifter.StardewValleyExpandedCP_CommunityDay": {
 					"DisplayName": "{{i18n:CommunityDay_Name}}",
@@ -42,7 +45,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/CommunityCenter_Refurbished",
 			"When": {
-				"HasSeenEvent": "191393",
+				"HasSeenEvent: anyPlayer| contains=191393": true,
 				"Day": "22"
 			},
 			"MapProperties": {
@@ -61,7 +64,7 @@
 			},
 		},
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Maps/CommunityCenter_Ruins",
 			"When": {
 				"HasSeenEvent": "191393"
@@ -69,7 +72,7 @@
 			"FromFile": "Assets/Maps/MapPatches/CommunityCenter_Refurbished.tbin"
 		},
 		{
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Maps/CommunityCenter_Refurbished",
 			"When": {
 				"HasSeenEvent": "191393"
@@ -94,7 +97,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Town",
 			"When": {
-				"HasSeenEvent": "191393"
+				"HasSeenEvent: anyPlayer| contains=191393": true,
 			},
 			"TextOperations": [
 				{
@@ -112,7 +115,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/CommunityCenter_Refurbished",
 			"When": {
-				"HasSeenEvent": "191393"
+				"HasSeenEvent: anyPlayer| contains=191393": true,
 			},
 			"Update": "OnLocationChange",
 			"TextOperations": [
@@ -131,7 +134,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/CommunityCenter_Refurbished",
 			"When": {
-				"HasSeenEvent": "191393"
+				"HasSeenEvent: anyPlayer| contains=191393": true,
 			},
 			"Update": "OnLocationChange",
 			"TextOperations": [
@@ -150,11 +153,8 @@
 		{ //LEWIS Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Lewis",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "630 ManorHouse 7 5 0/730 CommunityCenter 55 6 0/1000 CommunityCenter 47 5 0/1030 CommunityCenter 53 5 0/1100 CommunityCenter 31 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1320 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1450 CommunityCenter 47 13 0 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1540 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1810 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1900 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1950 ManorHouse 22 4 1 lewis_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "630 ManorHouse 7 5 0/730 CommunityCenter 55 6 0/1000 CommunityCenter 47 5 0/1030 CommunityCenter 53 5 0/1100 CommunityCenter 31 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1320 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1450 CommunityCenter 47 13 0 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1540 CommunityCenter 31 13 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1810 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1900 CommunityCenter 33 12 2 \"Strings\\schedules\\Lewis:CommunityDay_Lewis\"/1950 ManorHouse 22 4 1 lewis_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -204,11 +204,8 @@
 		{ //MARNIE Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Marnie",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 AnimalShop 24 15 0/810 AnimalShop 12 14 2/1030 AnimalShop 15 15 2/1100 CommunityCenter 30 14 1 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1800 CommunityCenter 19 22 0 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1850 AnimalShop 13 5 3 marnie_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 AnimalShop 24 15 0/810 AnimalShop 12 14 2/1030 AnimalShop 15 15 2/1100 CommunityCenter 30 14 1 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1800 CommunityCenter 19 22 0 \"Strings\\schedules\\Marnie:CommunityDay_Marnie\"/1850 AnimalShop 13 5 3 marnie_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -258,11 +255,8 @@
 		{ //JAS Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Jas",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "810 AnimalShop 24 15 2/920 AnimalShop 7 5 2 jas_read/1030 AnimalShop 16 17 3/1100 CommunityCenter 19 20 3 jas_read \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1820 CommunityCenter 19 20 2 \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1850 AnimalShop 2 7 3 jas_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "810 AnimalShop 24 15 2/920 AnimalShop 7 5 2 jas_read/1030 AnimalShop 16 17 3/1100 CommunityCenter 19 20 3 jas_read \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1820 CommunityCenter 19 20 2 \"Strings\\schedules\\Jas:CommunityDay_Jas\"/1850 AnimalShop 2 7 3 jas_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -312,11 +306,8 @@
 		{ //SHANE Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Shane",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "820 AnimalShop 28 15 0/940 AnimalShop 4 15 0/1030 AnimalShop 14 17 1/1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1900 AnimalShop 27 4 1 shane_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "820 AnimalShop 28 15 0/940 AnimalShop 4 15 0/1030 AnimalShop 14 17 1/1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane\"/1900 AnimalShop 27 4 1 shane_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -366,13 +357,8 @@
 		{ //SHANE Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Shane",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Shane",
-				"Day": "22"
-			},
 			"Entries": {
-				"Marriage_Mon": "1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1900 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1100 CommunityCenter 2 5 2 shane_drink \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1840 CommunityCenter 11 12 2 \"Strings\\schedules\\Shane:CommunityDay_Shane_Married\"/1900 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -422,11 +408,8 @@
 		{ //GUS Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Gus",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "730 Saloon 29 6 0/900 Town 40 14 0/1120 CommunityCenter 6 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1240 CommunityCenter 4 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1430 CommunityCenter 7 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1520 CommunityCenter 5 5 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1610 CommunityCenter 7 7 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1630 CommunityCenter 13 6 3 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1730 CommunityCenter 8 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1830 Saloon 23 4 2 gus_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "730 Saloon 29 6 0/900 Town 40 14 0/1120 CommunityCenter 6 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1240 CommunityCenter 4 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1430 CommunityCenter 7 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1520 CommunityCenter 5 5 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1610 CommunityCenter 7 7 2 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1630 CommunityCenter 13 6 3 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1730 CommunityCenter 8 5 0 \"Strings\\schedules\\Gus:CommunityDay_Gus\"/1830 Saloon 23 4 2 gus_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -476,11 +459,8 @@
 		{ //LINUS Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Linus",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1850 Tent 4 3 1 linus_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1850 Tent 4 3 1 linus_sleep",
 			},
 		},
 		{ //LINUS Community Day Schedule - Leo
@@ -491,7 +471,7 @@
 				"HasSeenEvent |contains=6497428": true
 			},
 			"Entries": {
-				"22": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1700 CommunityCenter 16 22 1 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1750 Tent 4 3 1 linus_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "640 Tent 2 2 0/840 Mountain 28 9 1/1110 CommunityCenter 8 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1420 CommunityCenter 14 5 0 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1530 CommunityCenter 7 5 2 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1700 CommunityCenter 16 22 1 \"Strings\\schedules\\Linus:CommunityDay_Linus\"/1750 Tent 4 3 1 linus_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -547,7 +527,7 @@
 				"HasSeenEvent |contains=6497428": true
 			},
 			"Entries": {
-				"22": "0 LeoTreeHouse 4 3 2/830 Mountain 30 9 3/1110 CommunityCenter 18 22 0 leo_sit_up \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1720 CommunityCenter 17 22 3 \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1750 LeoTreeHouse 4 3 2",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 LeoTreeHouse 4 3 2/830 Mountain 30 9 3/1110 CommunityCenter 18 22 0 leo_sit_up \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1720 CommunityCenter 17 22 3 \"Strings\\schedules\\Leo:CommunityDay_Leo\"/1750 LeoTreeHouse 4 3 2",
 			}
 		},
 		{ //Spring Dialogue
@@ -597,11 +577,8 @@
 		{ //HARVEY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Harvey",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "710 HarveyRoom 19 7 0/830 Hospital 6 15 2/1230 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey\"/1600 HarveyRoom 13 4 2 harvey_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "710 HarveyRoom 19 7 0/830 Hospital 6 15 2/1230 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey\"/1600 HarveyRoom 13 4 2 harvey_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -651,13 +628,8 @@
 		{ //HARVEY Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Harvey",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Harvey",
-				"Day": "22"
-			},
 			"Entries": {
-				"Marriage_Mon": "1030 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey_Married\"/1820 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 5 7 2 \"Strings\\schedules\\Harvey:CommunityDay_Harvey_Married\"/1820 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -707,11 +679,8 @@
 		{ //PAM Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Pam",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "900 Town 73 69 2/1000 Town 79 68 1/1040 CommunityCenter 7 10 0 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1650 CommunityCenter 5 12 2 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1900 Town 79 68 1",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "900 Town 73 69 2/1000 Town 79 68 1/1040 CommunityCenter 7 10 0 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1650 CommunityCenter 5 12 2 \"Strings\\schedules\\Pam:CommunityDay_Pam\"/1900 Town 79 68 1",
 			},
 		},
 		{ //Spring Dialogue
@@ -761,11 +730,8 @@
 		{ //PENNY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Penny",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "840 CommunityCenter 13 19 0/1130 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny\"/1840 Trailer 4 9 1 penny_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "840 CommunityCenter 13 19 0/1130 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny\"/1840 Trailer 4 9 1 penny_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -815,13 +781,8 @@
 		{ //PENNY Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Penny",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Penny",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny_Married\"/1840 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 17 19 2 penny_read \"Strings\\schedules\\Penny:CommunityDay_Penny_Married\"/1840 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -871,12 +832,8 @@
 		{ //SCARLETT Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Scarlett",
-			"When": {
-				"HasSeenEvent": "191393",
-				"HasSeenEvent": "3691371"
-			},
 			"Entries": {
-				"22": "0 Custom_SophiaHouse 23 6 0/610 Custom_SophiaHouse 23 6 1/800 Custom_SophiaHouse 26 23 0/1000 CommunityCenter 11 23 0 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1300 CommunityCenter 11 20 2 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1800 CommunityCenter 11 19 3 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1820 Custom_SophiaHouse 23 6 1 scarlett_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_SophiaHouse 23 6 0/610 Custom_SophiaHouse 23 6 1/800 Custom_SophiaHouse 26 23 0/1000 CommunityCenter 11 23 0 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1300 CommunityCenter 11 20 2 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1800 CommunityCenter 11 19 3 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett\"/1820 Custom_SophiaHouse 23 6 1 scarlett_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -923,14 +880,62 @@
 				"CommunityDay_Scarlett": "{{i18n:CommunityDay.Dialogue.56}}"
 			}
 		},
+		{   //SCARLETT Community Day - MARRIED
+			"Action": "EditData",
+			"Target": "characters/schedules/Scarlett",
+			"Entries": {
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 11 23 0 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett_Married\"/1300 CommunityCenter 11 20 2 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett_Married\"/1800 CommunityCenter 11 19 3 \"Strings\\schedules\\Scarlett:CommunityDay_Scarlett_Married\"/1820 bed",
+			},
+		},
+		{ //Spring Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Spring",
+				"Season |contains=Summer, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett_Married": "{{i18n:CommunityDay.Dialogue.224}}"
+			}
+		},
+		{ //Summer Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Summer",
+				"Season |contains=Spring, Fall, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett_Married": "{{i18n:CommunityDay.Dialogue.225}}"
+			}
+		},
+		{ //Fall Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Fall",
+				"Season |contains=Spring, Summer, Winter": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett_Married": "{{i18n:CommunityDay.Dialogue.226}}"
+			}
+		},
+		{ //Winter Dialogue - MARRIED
+			"Action": "EditData",
+			"Target": "strings/schedules/Scarlett",
+			"When": {
+				"Season": "Winter",
+				"Season |contains=Spring, Summer, Fall": false
+			},
+			"Entries": {
+				"CommunityDay_Scarlett_Married": "{{i18n:CommunityDay.Dialogue.227}}",
+			}
+		},
 		{ //SOPHIA Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Sophia",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "0 Custom_SophiaHouse 24 6 0/610 Custom_SophiaHouse 24 6 1 Sophia_Sleep/800 Custom_SophiaHouse 24 23 2/1000 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1620 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1820 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_SophiaHouse 24 6 0/610 Custom_SophiaHouse 24 6 1 Sophia_Sleep/800 Custom_SophiaHouse 24 23 2/1000 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1620 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia\"/1820 Custom_SophiaHouse 24 6 1 Sophia_Sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -981,13 +986,8 @@
 			//SOPHIA Community Day - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Sophia",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Sophia",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1410 CommunityCenter 9 20 3 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1430 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1620 CommunityCenter 9 19 2 Sophia_read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1820 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1410 CommunityCenter 9 20 3 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1430 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1540 CommunityCenter 10 19 0 \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1620 CommunityCenter 9 19 2 Sophia_Read \"Strings\\schedules\\Sophia:CommunityDay_Sophia_Married\"/1820 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1037,11 +1037,8 @@
 		{ //MARU Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Maru",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "750 ScienceHouse 27 9 0/850 ScienceHouse 9 5 0/1100 ScienceHouse 4 22 1/1150 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru\"/1640 ScienceHouse 2 4 0 maru_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "750 ScienceHouse 27 9 0/850 ScienceHouse 9 5 0/1100 ScienceHouse 4 22 1/1150 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru\"/1640 ScienceHouse 2 4 0 maru_sleep",
 				"winter": "800 ScienceHouse 5 6 1 maru_tinker/900 ScienceHouse 19 18 0/1100 CommunityCenter 31 10 0/1700 ScienceHouse 5 6 1 maru_tinker/2200 ScienceHouse 2 4 3 maru_sleep"
 			},
 		},
@@ -1092,13 +1089,8 @@
 		{ //MARU Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Maru",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Maru",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru_Married\"/1820 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 3 10 0 \"Strings\\schedules\\Maru:CommunityDay_Maru_Married\"/1820 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1148,11 +1140,8 @@
 		{ //DEMETRIUS Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Demetrius",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "750 ScienceHouse 29 9 0/1100 ScienceHouse 6 22 3/1150 CommunityCenter 3 7 2 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1650 CommunityCenter 15 26 1 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1730 ScienceHouse 19 4 1 demetrius_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "750 ScienceHouse 29 9 0/1100 ScienceHouse 6 22 3/1150 CommunityCenter 3 7 2 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1650 CommunityCenter 15 26 1 \"Strings\\schedules\\Demetrius:CommunityDay_Demetrius\"/1730 ScienceHouse 19 4 1 demetrius_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1202,11 +1191,8 @@
 		{ //ROBIN Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Robin",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "640 ScienceHouse 28 9 0/740 ScienceHouse 8 18 2/1120 ScienceHouse 7 20 1/1150 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1430 CommunityCenter 18 27 2 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1500 CommunityCenter 18 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1520 CommunityCenter 16 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1540 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1710 CommunityCenter 17 26 3 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1730 ScienceHouse 21 4 2 robin_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "640 ScienceHouse 28 9 0/740 ScienceHouse 8 18 2/1120 ScienceHouse 7 20 1/1150 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1430 CommunityCenter 18 27 2 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1500 CommunityCenter 18 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1520 CommunityCenter 16 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1540 CommunityCenter 17 26 0 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1710 CommunityCenter 17 26 3 \"Strings\\schedules\\Robin:CommunityDay_Robin\"/1730 ScienceHouse 21 4 2 robin_sleep",
 				"Mon": "800 ScienceHouse 8 18 2/1700 CommunityCenter 17 26 0/1940 ScienceHouse 16 5 0/2200 ScienceHouse 21 4 1 robin_sleep"
 			},
 		},
@@ -1257,11 +1243,8 @@
 		{ //SEBASTIAN Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Sebastian",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "840 SebastianRoom 3 5 0/910 ScienceHouse 27 9 0/1110 ScienceHouse 9 20 3/1150 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian\"/1550 SebastianRoom 11 18 1 sebastian_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "840 SebastianRoom 3 5 0/910 ScienceHouse 27 9 0/1110 ScienceHouse 9 20 3/1150 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian\"/1550 SebastianRoom 11 18 1 sebastian_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1311,13 +1294,8 @@
 		{ //SEBASTIAN Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Sebastian",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Sebastian",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian_Married\"/1550 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 37 13 3 \"Strings\\schedules\\Sebastian:CommunityDay_Sebastian_Married\"/1550 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1367,11 +1345,8 @@
 		{ //CLINT Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Clint",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "740 Blacksmith 4 5 0/920 Town 100 81 0/1030 Town 97 77 0/1100 Town 102 77 0/1130 Town 96 65 1/1230 CommunityCenter 5 10 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1510 CommunityCenter 62 14 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1630 CommunityCenter 65 14 1 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1710 CommunityCenter 60 16 3 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1750 Blacksmith 10 4 2 clint_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "740 Blacksmith 4 5 0/920 Town 100 81 0/1030 Town 97 77 0/1100 Town 102 77 0/1130 Town 96 65 1/1230 CommunityCenter 5 10 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1510 CommunityCenter 62 14 0 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1630 CommunityCenter 65 14 1 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1710 CommunityCenter 60 16 3 \"Strings\\schedules\\Clint:CommunityDay_Clint\"/1750 Blacksmith 10 4 2 clint_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1421,11 +1396,8 @@
 		{ //HALEY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Haley",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "710 HaleyHouse 8 7 1/810 HaleyHouse 21 16 2/920 HaleyHouse 18 16 2/1010 HaleyHouse 6 16 0/1050 HaleyHouse 3 20 1/1120 CommunityCenter 9 21 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1820 HaleyHouse 2 5 2 haley_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "710 HaleyHouse 8 7 1/810 HaleyHouse 21 16 2/920 HaleyHouse 18 16 2/1010 HaleyHouse 6 16 0/1050 HaleyHouse 3 20 1/1120 CommunityCenter 9 21 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley\"/1820 HaleyHouse 2 5 2 haley_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1475,13 +1447,8 @@
 		{ //HALEY Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Haley",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Haley",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 9 20 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1820 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 9 20 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1400 CommunityCenter 10 27 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1440 CommunityCenter 11 26 0 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1520 CommunityCenter 11 26 3 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1610 CommunityCenter 12 26 2 \"Strings\\schedules\\Haley:CommunityDay_Haley_Married\"/1820 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1531,11 +1498,8 @@
 		{ //EMILY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Emily",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "730 HaleyHouse 19 16 0/820 HaleyHouse 14 16 0/930 HaleyHouse 16 8 0/1050 HaleyHouse 5 20 3/1120 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1820 HaleyHouse 19 4 2 emily_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "730 HaleyHouse 19 16 0/820 HaleyHouse 14 16 0/930 HaleyHouse 16 8 0/1050 HaleyHouse 5 20 3/1120 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily\"/1820 HaleyHouse 19 4 2 emily_sleep",
 				"Fri": "900 HaleyHouse 16 5 2/1000 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:Fri.000\"/1530 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
 			},
 		},
@@ -1586,13 +1550,8 @@
 		{ //EMILY Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Emily",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Emily",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1820 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 9 26 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1350 CommunityCenter 9 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1520 CommunityCenter 10 26 1 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1610 CommunityCenter 12 28 0 \"Strings\\schedules\\Emily:CommunityDay_Emily_Married\"/1820 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1644,7 +1603,6 @@
 			"Target": "characters/schedules/Sandy",
 			"When": {
 				"Hearts:Sandy": "5, 6, 7, 8, 9, 10",
-				"HasSeenEvent": "191393"
 			},
 			"Entries": {
 				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Sandy_WarpRoom 3 3 2/800 HaleyHouse 4 22 0/1120 CommunityCenter 11 23 0 \"Strings\\schedules\\Sandy:CommunityDay_Sandy\"/1810 HaleyHouse 21 4 3",
@@ -1697,11 +1655,8 @@
 		{ //ALEX Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Alex",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "800 JoshHouse 5 17 0/900 JoshHouse 14 5 2 alex_lift_weights/1020 JoshHouse 10 18 2/1100 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex\"/1730 CommunityCenter 34 10 0/1920 JoshHouse 8 19 2/2030 JoshHouse 20 4 2 alex_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "800 JoshHouse 5 17 0/900 JoshHouse 14 5 2 alex_lift_weights/1020 JoshHouse 10 18 2/1100 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex\"/1730 CommunityCenter 34 10 0/1920 JoshHouse 8 19 2/2030 JoshHouse 20 4 2 alex_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1751,13 +1706,8 @@
 		{ //ALEX Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Alex",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Alex",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex_Married\"/1810 CommunityCenter 34 10 0/1910 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 36 12 2 \"Strings\\schedules\\Alex:CommunityDay_Alex_Married\"/1810 CommunityCenter 34 10 0/1910 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -1807,11 +1757,8 @@
 		{ //GEORGE Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/George",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 JoshHouse 5 20 3/830 JoshHouse 15 22 0/1030 JoshHouse 11 20 3/1100 CommunityCenter 32 10 0 \"Strings\\schedules\\George:CommunityDay_George\"/1920 JoshHouse 16 22 0",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 JoshHouse 5 20 3/830 JoshHouse 15 22 0/1030 JoshHouse 11 20 3/1100 CommunityCenter 32 10 0 \"Strings\\schedules\\George:CommunityDay_George\"/1920 JoshHouse 16 22 0",
 			},
 		},
 		{ //Spring Dialogue
@@ -1861,11 +1808,8 @@
 		{ //EVELYN Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Evelyn",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 JoshHouse 3 17 0/810 JoshHouse 3 19 2/910 JoshHouse 18 17 0/1000 JoshHouse 4 17 0/1030 JoshHouse 8 20 1/1100 CommunityCenter 33 10 0 \"Strings\\schedules\\Evelyn:CommunityDay_Evelyn\"/1920 JoshHouse 3 5 0",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 JoshHouse 3 17 0/810 JoshHouse 3 19 2/910 JoshHouse 18 17 0/1000 JoshHouse 4 17 0/1030 JoshHouse 8 20 1/1100 CommunityCenter 33 10 0 \"Strings\\schedules\\Evelyn:CommunityDay_Evelyn\"/1920 JoshHouse 3 5 0",
 				"Thu": "800 JoshHouse 3 17 0 square_3_1_0/1040 JoshHouse 17 22 3/1210 CommunityCenter 33 10 0 \"Strings\\schedules\\Evelyn:Thu.000\"/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1"
 			},
 		},
@@ -1916,11 +1860,8 @@
 		{ //VICTOR Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Victor",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 Custom_JenkinsHouse 30 37 0/850 Custom_JenkinsHouse 24 25 2 Victor_Book2/1050 Custom_JenkinsHouse 20 39 1/1120 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor\"/1710 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 Custom_JenkinsHouse 30 37 0/850 Custom_JenkinsHouse 24 25 2 Victor_Book2/1050 Custom_JenkinsHouse 20 39 1/1120 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor\"/1710 Custom_JenkinsHouse 31 5 1 Victor_Sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -1971,13 +1912,8 @@
 			//Victor Community Day - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Victor",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Victor",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor_Married\"/1710 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 27 19 2 Victor_Book2 \"Strings\\schedules\\Victor:CommunityDay_Victor_Married\"/1710 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2027,11 +1963,8 @@
 		{ //OLIVIA Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Olivia",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "630 Custom_JenkinsHouse 19 8 2 Olivia_Yoga/910 Custom_JenkinsHouse 33 37 2/1050 Custom_JenkinsHouse 22 39 3/1120 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia\"/1730 Custom_JenkinsHouse 20 5 3 Olivia_Sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "630 Custom_JenkinsHouse 19 8 2 Olivia_Yoga/910 Custom_JenkinsHouse 33 37 2/1050 Custom_JenkinsHouse 22 39 3/1120 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia\"/1730 Custom_JenkinsHouse 20 5 3 Olivia_Sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2082,13 +2015,8 @@
 			//OLIVIA Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Olivia",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Olivia",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1000 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia_Married\"/1730 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1000 CommunityCenter 26 9 2 Olivia_Wine2/1310 CommunityCenter 26 9 3 \"Strings\\schedules\\Olivia:CommunityDay_Olivia_Married\"/1730 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2138,11 +2066,8 @@
 		{ //JODI Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Jodi",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "710 SamHouse 5 5 0/900 SamHouse 17 5 1/1030 SamHouse 4 13 1/1130 CommunityCenter 25 8 2 jodi_sit_down \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1810 CommunityCenter 25 9 2 \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1820 SamHouse 19 5 1 jodi_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "710 SamHouse 5 5 0/900 SamHouse 17 5 1/1030 SamHouse 4 13 1/1130 CommunityCenter 25 8 2 jodi_sit_down \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1810 CommunityCenter 25 9 2 \"Strings\\schedules\\Jodi:CommunityDay_Jodi\"/1820 SamHouse 19 5 1 jodi_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2192,11 +2117,8 @@
 		{ //VINCENT Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Vincent",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "830 SamHouse 1 6 1/940 SamHouse 10 22 0/1040 SamHouse 5 13 3/1130 CommunityCenter 15 20 1 vincent_read_right/1610 CommunityCenter 14 19 0/1650 CommunityCenter 15 20 1 vincent_read_right/1750 CommunityCenter 25 10 0/1820 SamHouse 9 22 3 vincent_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "830 SamHouse 1 6 1/940 SamHouse 10 22 0/1040 SamHouse 5 13 3/1130 CommunityCenter 15 20 1 vincent_read_right/1610 CommunityCenter 14 19 0/1650 CommunityCenter 15 20 1 vincent_read_right/1750 CommunityCenter 25 10 0/1820 SamHouse 9 22 3 vincent_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2254,11 +2176,8 @@
 		{ //KENT Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Kent",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "710 SamHouse 6 5 0/900 SamHouse 18 5 3/1030 SamHouse 4 16 3/1130 CommunityCenter 53 13 2 \"Strings\\schedules\\Kent:CommunityDay_Kent\"/1800 SamHouse 20 5 1 kent_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "710 SamHouse 6 5 0/900 SamHouse 18 5 3/1030 SamHouse 4 16 3/1130 CommunityCenter 53 13 2 \"Strings\\schedules\\Kent:CommunityDay_Kent\"/1800 SamHouse 20 5 1 kent_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2321,11 +2240,8 @@
 		{ //SAM Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Sam",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "850 SamHouse 7 5 0/1000 SamHouse 14 13 0/1030 SamHouse 2 16 1/1130 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam\"/1730 SamHouse 21 13 1 sam_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "850 SamHouse 7 5 0/1000 SamHouse 14 13 0/1030 SamHouse 2 16 1/1130 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam\"/1730 SamHouse 21 13 1 sam_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2375,13 +2291,8 @@
 		{ //SAM Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Sam",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Sam",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam_Married\"/1730 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 35 13 1 \"Strings\\schedules\\Sam:CommunityDay_Sam_Married\"/1730 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2431,11 +2342,8 @@
 		{ //ABIGAIL Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Abigail",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "800 SeedShop 9 5 0/900 SeedShop 35 9 0/1000 SeedShop 3 6 0 abigail_videogames/1130 SeedShop 6 22 2/1230 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail\"/1730 SeedShop 2 9 2 abigail_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "800 SeedShop 9 5 0/900 SeedShop 35 9 0/1000 SeedShop 3 6 0 abigail_videogames/1130 SeedShop 6 22 2/1230 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail\"/1730 SeedShop 2 9 2 abigail_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2485,13 +2393,8 @@
 		{ //ABIGAIL Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Abigail",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Abigail",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail_Married\"/1730 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 36 14 0 \"Strings\\schedules\\Abigail:CommunityDay_Abigail_Married\"/1730 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2541,11 +2444,8 @@
 		{ //CAROLINE Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Caroline",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 SeedShop 37 5 0/900 SeedShop 33 6 1/1000 SeedShop 22 5 3/1130 SeedShop 7 24 0/1230 CommunityCenter 24 9 1 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1810 CommunityCenter 24 11 2 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1900 SeedShop 25 4 1 caroline_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 SeedShop 37 5 0/900 SeedShop 33 6 1/1000 SeedShop 22 5 3/1130 SeedShop 7 24 0/1230 CommunityCenter 24 9 1 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1810 CommunityCenter 24 11 2 \"Strings\\schedules\\Caroline:CommunityDay_Caroline\"/1900 SeedShop 25 4 1 caroline_sleep",
 				"Sat": "800 SeedShop 37 6 3/1100 CommunityCenter 26 9 2 caroline_read/1700 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
 			},
 		},
@@ -2596,11 +2496,8 @@
 		{ //PIERRE Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Pierre",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "700 SeedShop 39 5 0/900 SeedShop 37 6 3/1000 SeedShop 20 5 1/1130 SeedShop 6 24 0/1230 CommunityCenter 31 15 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1810 CommunityCenter 24 12 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1900 SeedShop 23 4 1 pierre_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "700 SeedShop 39 5 0/900 SeedShop 37 6 3/1000 SeedShop 20 5 1/1130 SeedShop 6 24 0/1230 CommunityCenter 31 15 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1810 CommunityCenter 24 12 0 \"Strings\\schedules\\Pierre:CommunityDay_Pierre\"/1900 SeedShop 23 4 1 pierre_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2650,11 +2547,8 @@
 		{ //ELLIOTT Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Elliott",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "720 ElliottHouse 1 5 0/840 Beach 49 19 2/1010 Beach 36 15 3/1050 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1900 ElliottHouse 1 5 0",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "720 ElliottHouse 1 5 0/840 Beach 49 19 2/1010 Beach 36 15 3/1050 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott\"/1900 ElliottHouse 1 5 0",
 			},
 		},
 		{ //Spring Dialogue
@@ -2704,13 +2598,8 @@
 		{ //ELLIOTT Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Elliott",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Elliott",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1900 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1600 CommunityCenter 23 18 3 \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1650 CommunityCenter 24 17 2 elliott_read \"Strings\\schedules\\Elliott:CommunityDay_Elliott_Married\"/1900 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2760,11 +2649,8 @@
 		{ //WILLY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Willy",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "830 Beach 41 36 2/1000 Beach 34 15 1/1020 Beach 34 15 1/1050 CommunityCenter 46 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1250 CommunityCenter 42 10 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1420 CommunityCenter 38 11 2 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1550 CommunityCenter 45 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1620 FishShop 8 5 0",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "830 Beach 41 36 2/1000 Beach 34 15 1/1020 Beach 34 15 1/1050 CommunityCenter 46 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1250 CommunityCenter 42 10 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1420 CommunityCenter 38 11 2 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1550 CommunityCenter 45 13 0 \"Strings\\schedules\\Willy:CommunityDay_Willy\"/1620 FishShop 8 5 0",
 			},
 		},
 		{ //Spring Dialogue
@@ -2814,11 +2700,8 @@
 		{ //LEAH Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Leah",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "830 LeahHouse 12 14 0/1110 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1740 LeahHouse 2 4 3 leah_sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "830 LeahHouse 12 14 0/1110 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah\"/1740 LeahHouse 2 4 3 leah_sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2868,13 +2751,8 @@
 		{ //LEAH Community Day Schedule - MARRIED
 			"Action": "EditData",
 			"Target": "characters/schedules/Leah",
-			"When": {
-				"HasSeenEvent": "191393",
-				"Spouse": "Leah",
-				"Day": "22"
-			},
 			"Entries": {
-				"marriage_Mon": "1030 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1740 Bed",
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1030 CommunityCenter 36 17 1 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1410 CommunityCenter 38 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1430 CommunityCenter 41 14 2 leah_draw \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1700 CommunityCenter 41 16 2 \"Strings\\schedules\\Leah:CommunityDay_Leah_Married\"/1740 bed",
 			},
 		},
 		{ //Spring Dialogue - MARRIED
@@ -2924,11 +2802,8 @@
 		{ //ANDY Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Andy",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "630 Custom_AndyHouse 18 6 0/820 CommunityCenter 39 16 2 Andy_Farm2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1230 CommunityCenter 43 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1310 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1330 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1410 CommunityCenter 8 5 0 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1520 CommunityCenter 43 11 2 Andy_Drink2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1750 Custom_AndyHouse 9 6 1 Andy_Sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "630 Custom_AndyHouse 18 6 0/820 CommunityCenter 39 16 2 Andy_Farm2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1230 CommunityCenter 43 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1310 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1330 CommunityCenter 38 16 2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1410 CommunityCenter 8 5 0 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1520 CommunityCenter 43 11 2 Andy_Drink2 \"Strings\\schedules\\Andy:CommunityDay_Andy\"/1750 Custom_AndyHouse 9 6 1 Andy_Sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -2978,11 +2853,8 @@
 		{ //SUSAN Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/Susan",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "650 Custom_SusanHouse 24 15 0/740 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 3 19 0 Susan_Craft/1010 CommunityCenter 36 18 1 Susan_Farm1 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1240 CommunityCenter 37 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1410 CommunityCenter 42 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1530 CommunityCenter 46 13 0 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1740 Custom_SusanHouse 24 6 1 Susan_Sleep",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "650 Custom_SusanHouse 24 15 0/740 Custom_SusanHouse 26 15 0/820 Custom_SusanHouse 3 19 0 Susan_Craft/1010 CommunityCenter 36 18 1 Susan_Farm1 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1240 CommunityCenter 37 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1410 CommunityCenter 42 16 2 Susan_Farm2 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1530 CommunityCenter 46 13 0 \"Strings\\schedules\\Susan:CommunityDay_Susan\"/1740 Custom_SusanHouse 24 6 1 Susan_Sleep",
 			},
 		},
 		{ //Spring Dialogue
@@ -3032,11 +2904,8 @@
 		{ //MARLON Community Day Schedule
 			"Action": "EditData",
 			"Target": "characters/schedules/MarlonFay",
-			"When": {
-				"HasSeenEvent": "191393"
-			},
 			"Entries": {
-				"22": "730 AdventureGuild 6 16 2/800 CommunityCenter 54 13 2 Marlon_Sneaky \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1320 CommunityCenter 54 13 2 Marlon_Look \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1830 CommunityCenter 50 12 2 \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1930 Custom_AdventurerSummit 33 22 2 Marlon_Sneaky",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "730 AdventureGuild 6 16 2/800 CommunityCenter 54 13 2 Marlon_Sneaky \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1320 CommunityCenter 54 13 2 Marlon_Look \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1830 CommunityCenter 50 12 2 \"Strings\\schedules\\Marlon:CommunityDay_MarlonFay\"/1930 Custom_AdventurerSummit 33 22 2 Marlon_Sneaky",
 			},
 		},
 		{ //Spring Dialogue
@@ -3101,7 +2970,7 @@
 			"Target": "Maps/AdventureGuild",
 			"FromFile": "Assets/Maps/MapPatches/GuildShopClosed.tbin",
 			"When": {
-				"HasSeenEvent": "191393",
+				"HasSeenEvent: anyPlayer| contains=191393": true,
 				"Day": "22"
 			},
 			"ToArea": {
@@ -3117,10 +2986,9 @@
 			"When": {
 				"HasSeenEvent |contains=191393": true,
 				"HasSeenEvent |contains=3219873": true,
-				"Day": "22"
 			},
 			"Entries": {
-				"22": "0 Custom_Claire_WarpRoom 3 3 2/1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire\"/1710 BusStop 22 8 0/1900 Custom_DayEnd_WarpRoom 2 2 0",
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Claire_WarpRoom 3 3 2/1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire\"/1710 BusStop 22 8 0/1850 BusStop 22 9 0/1900 Custom_DayEnd_WarpRoom 2 2 0",
 			}
 		},
 		{ //Spring Dialogue
@@ -3173,10 +3041,9 @@
 			"When": {
 				"HasSeenEvent |contains=191393": true,
 				"HasSeenEvent |contains=3219873": true,
-				"Day": "22"
 			},
 			"Entries": {
-				"marriage_Mon": "1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire\"/1710 BusStop -2 23 3"
+				"marriage_FlashShifter.StardewValleyExpandedCP_CommunityDay": "1130 CommunityCenter 25 11 0 \"Strings\\schedules\\Claire:CommunityDay_Claire_Married\"/1710 bed"
 			}
 		},
 		{ //Spring Dialogue - MARRIED
@@ -3232,7 +3099,7 @@
 				"HasFlag": "ccMovieTheater"
 			},
 			"Entries": {
-				"22": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
+				"FlashShifter.StardewValleyExpandedCP_CommunityDay": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 9 0/2330 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0"
 			}
 		},
 	]

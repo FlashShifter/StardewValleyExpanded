@@ -71,6 +71,18 @@ namespace StardewValleyExpanded
             {
                 return 500;
             }
+            else if (locationName == "WitchSwamp")
+            {
+                return 100;
+            }
+            else if (locationName == "Custom_ForbiddenMaze")
+            {
+                return 700;
+            }
+            else if (locationName == "Custom_HenchmanBackyard")
+            {
+                return 100;
+            }
 
             return 0; //default to 0 fireflies in all locations not specificed
         }
@@ -226,17 +238,19 @@ namespace StardewValleyExpanded
                 this.glowing = glowing; //set glowing
                 if (glowing) //only set up light-related fields if glowing is enabled
                 {
-                    id = (int)(position.X * 10099f + position.Y * 77f + (float)Game1.random.Next(99999));
+                    id = -1;
+                    while ( id == -1 && Game1.currentLightSources.ContainsKey( $"SVEFirefly_{id}" ) )
+                        id = (int)(position.X * 10099f + position.Y * 77f + (float)Game1.random.Next(99999));
                     light = new LightSource(
+                    $"SVEFirefly_{id}",
                     lightType, //use lightType
                     position,
                     (float)Game1.random.Next(4, 6) * 0.1f,
                     lightColor ?? (Color.Purple * 0.8f), //use lightColor if provided
-                    id,
                     LightSource.LightContext.None,
                     0L
                 );
-                    Game1.currentLightSources.Add(light);
+                    Game1.currentLightSources.Add(light.Id, light);
                 }
 
                 this.bodyColor = bodyColor ?? Color.White; //set body color (default white if not provided)

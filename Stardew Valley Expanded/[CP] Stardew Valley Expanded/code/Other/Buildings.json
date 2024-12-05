@@ -1,0 +1,436 @@
+{
+    "Changes": [
+	
+        //Loads Custom Building Artwork
+		{
+            "Action": "Load",
+            "Target": "Buildings/SVE_PremiumCoop",
+            "FromFile": "assets/Buildings/PremiumCoop.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Buildings/SVE_PremiumBarn",
+            "FromFile": "assets/Buildings/PremiumBarn.png",
+        },
+		{
+            "Action": "Load",
+            "Target": "Buildings/SVE_Winery",
+            "FromFile": "assets/Buildings/Winery.png",
+        },
+		
+		//Loads Custom Building Maps
+        {
+            "Action": "Load",
+            "Target": "Maps/SVE_PremiumCoop",
+            "FromFile": "assets/Maps/Buildings/PremiumCoop.tmx"
+        },
+		{
+            "Action": "Load",
+            "Target": "Maps/SVE_PremiumBarn",
+            "FromFile": "assets/Maps/Buildings/PremiumBarn.tmx"
+        },
+		{
+            "Action": "Load",
+            "Target": "Maps/SVE_Winery",
+            "FromFile": "assets/Maps/Buildings/Winery.tmx"
+        },
+		
+		//Loads Custom Paint Masks
+		{
+            "Action": "Load",
+            "Target": "Buildings/SVE_PremiumBarn_PaintMask",
+            "FromFile": "assets/Buildings/PremiumBarn_PaintMask.png"
+        },
+		{
+            "Action": "Load",
+            "Target": "Buildings/SVE_PremiumCoop_PaintMask",
+            "FromFile": "assets/Buildings/PremiumCoop_PaintMask.png"
+        },
+		{
+            "Action": "Load",
+            "Target": "Buildings/SVE_Winery_PaintMask",
+            "FromFile": "assets/Buildings/Winery_PaintMask.png"
+        },
+		{
+            "Action": "EditData",
+            "Target": "Data/PaintData",
+            "Entries": {
+			    "FlashShifter.StardewValleyExpandedCP_PremiumBarn": "Building/-10 0/Roof/-10 5/Trim/-5 0",
+				"FlashShifter.StardewValleyExpandedCP_PremiumCoop": "Building/-12 0/Roof/-10 5/Trim/-10 5",
+				"FlashShifter.StardewValleyExpandedCP_Winery": "Building/-10 0/Roof/-10 5/Trim/-5 5",
+		    }
+		},
+		
+		//Custom Building Data
+        {
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_Winery": {
+                    "Name": "{{i18n:building.winery.name}}",
+                    "Description": "{{i18n:building.winery.description}}",
+                    "Texture": "Buildings\\SVE_Winery",
+                    "Builder": "Robin",
+                    "Size": {
+                        "X": 12,
+                        "Y": 5,
+                    },
+                    "BuildCondition": "!BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_Winery 1 10 true, PLAYER_HAS_SEEN_EVENT Any 8402752",
+                    "BuildDays": 7,
+                    "BuildCost": 1000000,
+                    "BuildMaterials": [
+                        {
+                            "Id": "(BC)12",
+                            "ItemId": "(BC)12",
+                            "Amount": 50
+                        },
+                        {
+                            "Id": "(O)337",
+                            "ItemId": "(O)337",
+                            "Amount": 30
+                        },
+                        {
+                            "Id": "(O)709",
+                            "ItemId": "(O)709",
+                            "Amount": 200
+                        },
+                    ],
+                    "BuildMenuDrawOffset": {
+                        "X": -140,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 9,
+                        "Y": 4,
+                    },
+                    "IndoorMap": "SVE_Winery",
+                },
+                "FlashShifter.StardewValleyExpandedCP_PremiumCoop": {
+                    "Name": "{{i18n:building.premium-coop.name}}",
+                    "Description": "{{i18n:building.premium-coop.description}}",
+                    "Texture": "Buildings\\SVE_PremiumCoop",
+                    "Builder": "Robin",
+                    "Size": {
+                        "X": 9,
+                        "Y": 4,
+                    },
+					"FadeWhenBehind": true,
+					"SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 144,
+                        "Height": 144
+                    },
+                    "CollisionMap": "XXXXXXOOO\nXXXXXXXXX\nXXXXXXXXX\nXXXXXXOOO",
+                    "SortTileOffset": "2.5",
+					"BuildCondition": "ANY \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\"",
+                    "BuildDays": 4,
+                    "BuildCost": 200000,
+                    "BuildMaterials": [
+                        {
+                            "ID": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "Amount": 20
+                        },
+						{
+                            "ID": "(O)709",
+                            "ItemId": "(O)709",
+                            "Amount": 125
+                        },
+						{
+                            "ID": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 600
+                        },
+                    ],
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 0
+                    },
+                    "HumanDoor": {
+                        "X": 7,
+                        "Y": 2,
+                    },
+                    "AnimalDoor": {
+                        "X": 2,
+                        "Y": 3,
+                        "Width": 2,
+                        "Height": 1
+                    },
+					"AnimalDoorOpenDuration": 0.3125,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.3125,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+					"NonInstancedIndoorLocation": null,
+					"DrawLayers": [
+					    {
+                            "Id": "Default_Overlay",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 90,
+                              "Y": 146,
+                              "Width": 40,
+                              "Height": 12
+                              },
+							"DrawPosition": "28, 116",
+                            "DrawInBackground": false,
+						},
+						{
+                            "Id": "Default_AnimalDoor",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 0,
+                              "Y": 144,
+                              "Width": 40,
+                              "Height": 16
+                              },
+							"DrawPosition": "28, 127",
+							"DrawInBackground": false,
+							"SortTileOffset": 0.02,
+							"OnlyDrawIfChestHasContents": null,
+							"FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+							"AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -12
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 48,
+                              "Y": 144,
+                              "Width": 40,
+                              "Height": 16
+                              },
+							"DrawPosition": "28, 127",
+                            "DrawInBackground": false,
+							"SortTileOffset": 1.0,
+							"OnlyDrawIfChestHasContents": null,
+							"FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+							"AnimalDoorOffset": {
+							  "X": 0,
+							  "Y": 0
+                            }
+						}	
+                    ],
+                    "IndoorMap": "SVE_PremiumCoop",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 16,
+                    "ValidOccupantTypes": [
+                        "Coop"
+                    ],
+                    "IndoorItems": [
+                        {
+                          "Id": "Default_FeedHopper",
+                          "ItemId": "(BC)99",
+                          "Tile": {
+                            "X": 22,
+                            "Y": 4
+                          },
+                          "Indestructible": true
+                        },
+                        {
+                          "Id": "Default_Incubator",
+                          "ItemId": "(BC)101",
+                          "Tile": {
+                            "X": 3,
+                            "Y": 4
+                          },
+                          "Indestructible": true
+                        },
+						{
+                            "Id": "Default_Heater",
+                            "ItemId": "(BC)104",
+                            "Tile": {
+                              "X": 4,
+                              "Y": 11
+                            },
+                            "Indestructible": false
+                        },
+                        {
+                            "Id": "Default_AutoPetter",
+                            "ItemId": "(BC)272",
+                            "Tile": {
+                              "X": 3,
+                              "Y": 6
+                            },
+                            "Indestructible": false
+                        },
+						{
+                            "Id": "Default_AutoGrabber",
+                            "ItemId": "(BC)165",
+                            "Tile": {
+                              "X": 23,
+                              "Y": 7
+                            },
+                            "Indestructible": false
+                        }
+                      ],
+                },
+                "FlashShifter.StardewValleyExpandedCP_PremiumBarn": {
+                    "Name": "{{i18n:building.premium-barn.name}}",
+                    "Description": "{{i18n:building.premium-barn.description}}",
+                    "Texture": "Buildings\\SVE_PremiumBarn",
+                    "Builder": "Robin",
+                    "Size": {
+                        "X": 11,
+                        "Y": 4,
+                    },
+                    "SourceRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 176,
+                        "Height": 144
+                    },
+					"FadeWhenBehind": true,
+					"BuildCondition": "ANY \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\"",
+                    "BuildDays": 4,
+                    "BuildCost": 250000,
+                    "BuildMaterials": [
+                        {
+                            "ID": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "Amount": 30
+                        },
+						{
+                            "ID": "(O)709",
+                            "ItemId": "(O)709",
+                            "Amount": 200
+                        },
+						{
+                            "ID": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 950
+                        },
+                    ],
+                    "BuildMenuDrawOffset": {
+                        "X": 0,
+                        "Y": 5
+                    },
+					//2nd door on the right is added via C#
+                    "HumanDoor": {
+                        "X": 1,
+                        "Y": 3,
+                    },
+                    "AnimalDoor": {
+                        "X": 4,
+                        "Y": 3,
+                        "Width": 3,
+                        "Height": 1
+                    },
+					"AnimalDoorOpenDuration": 0.75,
+                    "AnimalDoorOpenSound": "doorCreak",
+                    "AnimalDoorCloseDuration": 0.6,
+                    "AnimalDoorCloseSound": "doorCreakReverse",
+					"NonInstancedIndoorLocation": null,
+					"DrawLayers": [
+					    {
+                            "Id": "Default_Overlay",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 98,
+                              "Y": 144,
+                              "Width": 44,
+                              "Height": 32
+                              },
+							"DrawPosition": "66, 83",
+                            "DrawInBackground": false,
+						},
+						{
+                            "Id": "Default_AnimalDoor",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 2,
+                              "Y": 146,
+                              "Width": 44,
+                              "Height": 28
+                              },
+							"DrawPosition": "66, 115",
+							"DrawInBackground": false,
+							"SortTileOffset": 0.02,
+							"OnlyDrawIfChestHasContents": null,
+							"FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+							"AnimalDoorOffset": {
+                                "X": 0,
+                                "Y": -24
+                            }
+                        },
+                        {
+                            "Id": "Default_AnimalDoor_Open",
+							"Texture": null,
+                            "SourceRect": {
+                              "X": 50,
+                              "Y": 146,
+                              "Width": 44,
+                              "Height": 28
+                              },
+							"DrawPosition": "66, 115",
+                            "DrawInBackground": false,
+							"SortTileOffset": 1.0,
+							"OnlyDrawIfChestHasContents": null,
+							"FrameDuration": 90,
+                            "FrameCount": 1,
+                            "FramesPerRow": -1,
+							"AnimalDoorOffset": {
+							  "X": 0,
+							  "Y": 0
+                            }
+						}	
+                    ],
+                    "IndoorMap": "SVE_PremiumBarn",
+                    "IndoorMapType": "StardewValley.AnimalHouse",
+                    "MaxOccupants": 16,
+                    "ValidOccupantTypes": [
+                        "Barn"
+                    ],
+					"AllowAnimalPregnancy": true,
+                    "IndoorItems": [
+                        {
+                          "Id": "Default_FeedHopper",
+                          "ItemId": "(BC)99",
+                          "Tile": {
+                            "X": 4,
+                            "Y": 4
+                          },
+                          "Indestructible": true
+                        },
+                        {
+                            "Id": "Default_Heater",
+                            "ItemId": "(BC)104",
+                            "Tile": {
+                              "X": 7,
+                              "Y": 7
+                            },
+                            "Indestructible": false
+                        },
+						{
+                            "Id": "Default_AutoPetter",
+                            "ItemId": "(BC)272",
+                            "Tile": {
+                              "X": 10,
+                              "Y": 16
+                            },
+                            "Indestructible": false
+                        },
+						{
+                            "Id": "Default_AutoGrabber",
+                            "ItemId": "(BC)165",
+                            "Tile": {
+                              "X": 17,
+                              "Y": 16
+                            },
+                            "Indestructible": false
+                        }
+                    ],
+                },
+            }
+        },
+    ]
+}

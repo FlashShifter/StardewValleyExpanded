@@ -15,19 +15,11 @@
 	},
 },
 
-{   //???
-	"Action": "EditData",
-	"Target": "data/events/farmhouse",
-	"When": { "HasSeenEvent":"3219880", "FarmhouseUpgrade": 2 },
-	"Entries": { 
-    "3219877/O SPOUSE/f SPOUSE 3500/t 600 800/u 2 3 4 8 9 10": "none/-500 -500/farmer 14 14 3 SPOUSE 7 14 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 8 14 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection SPOUSE 1 true/pause 500/speak SPOUSE \"???\"/pause 500/globalFade/viewport -1000 -1000/end dialogue SPOUSE \"???\""                                   
-	},
-},
 
 {   //???
 	"Action": "EditData",
 	"Target": "data/events/farmhouse",
-	"When": { "HasSeenEvent":"3219880", "FarmhouseUpgrade": 3 },
+	"When": { "HasSeenEvent":"3219880", "FarmhouseUpgrade|contains=2, 3": true},
 	"Entries": { 
     "3219877/O SPOUSE/f SPOUSE 3500/t 600 800/u 2 3 4 8 9 10": "none/-500 -500/farmer 29 24 3 SPOUSE 23 24 0/skippable/makeInvisible 7 14 8 1/pause 750/playMusic 50s/pause 500/viewport 23 24 true/speed farmer 1/move farmer -5 0 3/pause 800/faceDirection SPOUSE 1 true/pause 500/speak SPOUSE \"???\"/pause 500/globalFade/viewport -1000 -1000/end dialogue SPOUSE \"???\""                                   
 	},

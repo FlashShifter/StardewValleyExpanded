@@ -20,7 +20,7 @@
                     "AreaOfEffect": -1,
                     "CritChance": 1.0,
                     "CritMultiplier": 1.0,
-                    "CanBeLostOnDeath": true,
+                    "CanBeLostOnDeath": false,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\DiamondWand",
                     "SpriteIndex": 0,
                     "CustomFields": {}
@@ -34,14 +34,14 @@
                     "Knockback": 1.0,
                     "Speed": 10,
                     "Precision": 100,
-                    "Defense": 10,
+                    "Defense": 15,
                     "Type": 1,
                     "MineBaseLevel": 0,
                     "MineMinLevel": -1,
                     "AreaOfEffect": -1,
                     "CritChance": 0.3,
                     "CritMultiplier": 3.0,
-                    "CanBeLostOnDeath": true,
+                    "CanBeLostOnDeath": false,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Dagger",
                     "SpriteIndex": 0,
                     "CustomFields": {}
@@ -52,17 +52,17 @@
                     "Description": "{{i18n:weapon.tempered-galaxy-hammer.description}}",
                     "MinDamage": 90,
                     "MaxDamage": 110,
-                    "Knockback": 2.5,
+                    "Knockback": 1.0,
                     "Speed": 1,
                     "Precision": 100,
-                    "Defense": 25,
+                    "Defense": 20,
                     "Type": 2,
                     "MineBaseLevel": 0,
                     "MineMinLevel": -1,
                     "AreaOfEffect": -1,
                     "CritChance": 0.0,
                     "CritMultiplier": 3.0,
-                    "CanBeLostOnDeath": true,
+                    "CanBeLostOnDeath": false,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Hammer",
                     "SpriteIndex": 0,
                     "CustomFields": {}
@@ -76,39 +76,91 @@
                     "Knockback": 1.0,
                     "Speed": 5,
                     "Precision": 100,
-                    "Defense": 15,
+                    "Defense": 10,
                     "Type": 3,
                     "MineBaseLevel": 0,
                     "MineMinLevel": -1,
                     "AreaOfEffect": -1,
                     "CritChance": 0.15,
                     "CritMultiplier": 3.0,
-                    "CanBeLostOnDeath": true,
+                    "CanBeLostOnDeath": false,
                     "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Tempered Galaxy Sword",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                },
+				"FlashShifter.StardewValleyExpandedCP_Monster_Splitter": {
+                    "Name": "Monster Splitter",
+                    "DisplayName": "{{i18n:weapon.monster-splitter.name}}",
+                    "Description": "{{i18n:weapon.monster-splitter.description}}",
+                    "MinDamage": 850,
+                    "MaxDamage": 1000,
+                    "Knockback": 2.0,
+                    "Speed": -32,
+                    "Precision": 100,
+                    "Defense": 0,
+                    "Type": 2,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 0,
+                    "CritMultiplier": 1.5,
+                    "CanBeLostOnDeath": false,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Monster Splitter",
+                    "SpriteIndex": 0,
+                    "CustomFields": {}
+                },
+				"FlashShifter.StardewValleyExpandedCP_Heavy_Shield": {
+                    "Name": "Heavy Shield",
+                    "DisplayName": "{{i18n:weapon.heavy-shield.name}}",
+                    "Description": "{{i18n:weapon.heavy-shield.description}}",
+                    "MinDamage": 24,
+                    "MaxDamage": 48,
+                    "Knockback": 1.0,
+                    "Speed": -80,
+                    "Precision": 100,
+                    "Defense": 35,
+                    "Type": 3,
+                    "MineBaseLevel": 0,
+                    "MineMinLevel": -1,
+                    "AreaOfEffect": -1,
+                    "CritChance": 0,
+                    "CritMultiplier": 0,
+                    "CanBeLostOnDeath": false,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Heavy Shield",
                     "SpriteIndex": 0,
                     "CustomFields": {}
                 }
             },
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/DiamondWand",
             "FromFile": "assets/Items/Weapons/DiamondWand.png",
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Dagger",
             "FromFile": "assets/Items/Weapons/Tempered Galaxy Dagger.png",
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Hammer",
             "FromFile": "assets/Items/Weapons/Tempered Galaxy Hammer.png",
         },
         {
-            "Action": "Load",
+            "Action": "Load", "Priority": "Low",
             "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Tempered Galaxy Sword",
             "FromFile": "assets/Items/Weapons/Tempered Galaxy Sword.png",
+        },
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Monster Splitter",
+            "FromFile": "assets/Items/Weapons/Monster Splitter.png",
+        },
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Heavy Shield",
+            "FromFile": "assets/Items/Weapons/Heavy Shield.png",
         },
         { //WEAPON DATA	
             "Action": "EditData",
@@ -169,22 +221,22 @@
                 "26": {
                     "MinDamage": 23,
                     "MaxDamage": 32,
-                    "Defence": 5
+                    "Defense": 5
                 },
                 "27": {
                     "MinDamage": 18,
                     "MaxDamage": 27,
-                    "Defence": 3
+                    "Defense": 3
                 },
                 "28": {
                     "MinDamage": 55,
                     "MaxDamage": 67,
-                    "Defence": 7
+                    "Defense": 7
                 },
                 "29": {
                     "MinDamage": 85,
                     "MaxDamage": 100,
-                    "Defence": 10
+                    "Defense": 10
                 }, //Galaxy Hammer
                 "34": {
                     "Description": "{{i18n:GalaxySlingshot}}"
@@ -203,28 +255,28 @@
                 "54": {
                     "MinDamage": 75,
                     "MaxDamage": 100,
-                    "Defence": 7,
+                    "Defense": 7,
                 },
                 "55": {
                     "MinDamage": 80,
                     "MaxDamage": 90,
-                    "Defence": 15,
+                    "Defense": 15,
                 },
                 "56": {
                     "MinDamage": 36,
                     "MaxDamage": 42,
-                    "Defence": 8,
+                    "Defense": 8,
                     "CritChance":.012
                 },
-                "61": {
+                /*"61": {
                     "MinDamage": 40,
                     "MaxDamage": 70
-                },
+                },*/
                 "62": {
                     "MinDamage": 140,
                     "MaxDamage": 160,
                     "Precision": 100,
-                    "Defence": 0,
+                    "Defense": 0,
                     "CritChance":.20,
                     "CritMultiplier": 3
                 }, //INFINITY BLADE: High damage. Good all-around weapon
@@ -233,15 +285,15 @@
                     "MaxDamage": 175,
                     "Knockback": 3,
                     "Precision": 100,
-                    "Defence": 15,
+                    "Defense": 15,
                     "CritChance": 0,
                     "CritMultiplier": 3
-                }, //INFINITY HAMMER: High damage and knockback, medium defense. Low speed and no crit 
+                }, //INFINITY HAMMER: High damage and knockback, medium Defense. Low speed and no crit 
                 "64": {
                     "MinDamage": 60,
                     "MaxDamage": 80,
                     "Precision": 100,
-                    "Defence": 5,
+                    "Defense": 5,
                     "CritChance":.35,
                     "CritMultiplier": 3
                 } //INFINITY DAGGER: Very high damange, very high crit. Small range

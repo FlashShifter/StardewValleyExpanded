@@ -113,7 +113,7 @@ namespace SpiritsEveChestEditor
                 return; //do nothing
 
             //look for a chest containing a golden pumpkin (null if not found)
-            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.Items.Any(item => item.QualifiedItemId == "373") == true) as Chest;
+            Chest chest = Game1.currentLocation.Objects.Values.FirstOrDefault(added => added is Chest c && c.Items.Any(item => item.QualifiedItemId == "(O)373" ) == true) as Chest;
 
             if (chest == null) //if the chest was NOT found
                 return; //do nothing (but keep checking)
@@ -122,7 +122,7 @@ namespace SpiritsEveChestEditor
             Vector2 newTile = GetChestTile(); //get the chest's new tile position
 
             Vector2 oldTile = chest.TileLocation; //get the chest's original tile
-            Game1.currentLocation.moveObject((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y, null); //move the chest to its new tile
+            Game1.currentLocation.moveContents((int)oldTile.X, (int)oldTile.Y, (int)newTile.X, (int)newTile.Y, null); //move the chest to its new tile
             chest.Items.Clear(); //clear the old list of items
             chest.Items.AddRange(newItems); //add the new list of items
 

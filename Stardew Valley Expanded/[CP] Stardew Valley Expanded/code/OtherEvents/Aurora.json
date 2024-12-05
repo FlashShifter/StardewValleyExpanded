@@ -49,16 +49,16 @@
                     "MorrisTod_Objective_1_Text3": "{{i18n:Morris.AuroraString.03}}",
                }
           },
-          { //Buying Aurora Vineyard - part 1 
+          { //Buying Aurora Vineyard - part 1     Requirements: Player has visited Joja Emporium at least once, player has built Morris' townhouse, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
                "Action": "EditData",
                "Target": "data/events/farm",
                "When": {
                     "HasSeenEvent |contains=5553214": true,
                     "HasSeenEvent |contains=8050109": true,
                     "HasFlag |contains=Island_Resort": true
-               }, //Player has visited Joja Emporium at least once, player has built Morris' townhouse, must be sunny, must be a Tuesday, must be host player, removed the railroad boulder, built the island resort
+               },
                "Entries": {
-                    "746153081/e 6663408/k 8033858/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
+                    "746153081/e 6663408/u 2 9 16 23/t 600 1100/w sunny/H": "continue/-500 -500/farmer 95 49 2 MorrisTod 95 51 0/pause 1250/speak MorrisTod \"{{i18n:Joja.Aurora1.01}}\"/pause 400/emote farmer 16/pause 200/speak MorrisTod \"{{i18n:Joja.Aurora1.02}}\"/globalFade/viewport -1000 -1000/pause 1000/question fork0 \"{{i18n:Joja.Aurora1.03}}\"/fork 746153081_PurchasedAuroraVineyard/pause 1000/message \"{{i18n:Joja.Aurora1.04}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.05}}\"",
                     "746153081_PurchasedAuroraVineyard": "pause 400/addMailReceived PlayerWillBuyAuroraVineyard/pause 100/message \"{{i18n:Joja.Aurora1.Purchased.01}}\"/pause 500/end dialogue MorrisTod \"{{i18n:Joja.Aurora1.Purchased.02}}\""
                },
           },
@@ -85,7 +85,7 @@
                "Target": "Maps/Custom_MorrisHouse",
                "FromFile": "Assets/Maps/MapPatches/AuroraVineyardDeedShop.tbin",
                "When": {
-                    "HasSeenEvent": "746153083"
+                    "HasSeenEvent: anyPlayer| contains=746153083": true
                },
                "ToArea": {
                     "X": 4,
@@ -133,22 +133,22 @@
                },
           },
           { //19x28
-               "Action": "Load",
+               "Action": "Load", "Priority": "Low",
                "Target": "Characters/JojaWorker1",
                "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorker1.png"
           },
           { //19x28
-               "Action": "Load",
+               "Action": "Load", "Priority": "Low",
                "Target": "Characters/JojaWorker2",
                "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorker2.png"
           },
           { //21x21
-               "Action": "Load",
+               "Action": "Load", "Priority": "Low",
                "Target": "Characters/JojaWorkerBox",
                "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorkerBox.png"
           },
           { //31x21
-               "Action": "Load",
+               "Action": "Load", "Priority": "Low",
                "Target": "Characters/JojaWorkerSuppliesPile",
                "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaWorkerSuppliesPile.png"
           },
@@ -430,7 +430,7 @@
                     "Height": 29
                },
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true,
                },
                "Update": "OnLocationChange"
           },
@@ -445,7 +445,7 @@
                     "Height": 29
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -456,7 +456,7 @@
                     "IsFarm": "T"
                },
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange"
           },
@@ -467,7 +467,18 @@
                     "ForceAllowTreePlanting": "T"
                },
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
+               },
+               "Update": "OnLocationChange"
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "AllowGiantCrops": "T"
+               },
+               "When": {
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange"
           },
@@ -478,7 +489,7 @@
                     "IsFarm": "T"
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -489,7 +500,18 @@
                     "ForceAllowTreePlanting": "T"
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
+               },
+               "Update": "OnLocationChange"
+          },
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/Custom_Forestwest",
+               "MapProperties": {
+                    "AllowGiantCrops": "T"
+               },
+               "When": {
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -504,7 +526,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange"
           },
@@ -519,7 +541,7 @@
                     "Height": 2
                },
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange"
           },
@@ -527,7 +549,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -546,7 +568,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -565,7 +587,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -584,7 +606,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -603,7 +625,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasSeenEvent": "746153084"
+                    "HasSeenEvent: anyPlayer| contains=746153084": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -622,7 +644,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard"
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true
                },
                "Update": "OnLocationChange",
                "TextOperations": [
@@ -641,7 +663,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasSeenEvent": "746153084",
+                    "HasSeenEvent: anyPlayer| contains=746153084": true,
                     "Season": "Winter"
                },
                "Update": "OnLocationChange",
@@ -661,7 +683,7 @@
                "Action": "EditMap",
                "Target": "Maps/Custom_Forestwest",
                "When": {
-                    "HasFlag": "PlayerWantsAuroraVineyard",
+                    "HasFlag: anyPlayer| contains=PlayerWantsAuroraVineyard": true,
                     "Season": "Winter"
                },
                "Update": "OnLocationChange",

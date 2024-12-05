@@ -6,6 +6,17 @@
 			"Target": "Data/NPCGiftTastes",
 			"LogName": "Gift tastes: Clint",
 			"TextOperations": [
+			  /*Love*/
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Clint",
+				  1
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop",
+				"Delimiter": " "
+			  },
 			  /*Like*/
 			  {
 				"Operation": "Append",
@@ -14,7 +25,7 @@
 				  "Clint",
 				  3
 				],
-				"Value": "FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola",
+				"Value": "FlashShifter.StardewValleyExpandedCP_Amber FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola FlashShifter.StardewValleyExpandedCP_Gold_Carrot",
 				"Delimiter": " "
 			  }
 			  /*Hate*/,
@@ -86,7 +97,7 @@
 			"Action": "EditData",
 			"Target": "data/events/town",
 			"Entries": {
-				"1000014/t 1000 1600/f Clint 2000/w sunny/e 1000034": "playful/-500 -500/farmer 92 90 0 Clint 94 77 0 Penny 102 68 1/showFrame Penny 18/pause 700/viewport 99 77 true/pause 250/playSound clank/move farmer 0 -4 1/playSound clank/move farmer 1 0 0/move farmer 0 -3 0/playSound hammer/move farmer 0 -1 0/emote farmer 8/move farmer 3 0 1/playSound clank/move farmer 2 0 1/playSound clank/move farmer 4 0 0/playSound clank/textAboveHead Clint \"{{i18n:Clint.Event1.01}}\"/move farmer 0 -4 0/playSound clank/move farmer 0 -1 3/move farmer -2 0 3/playSound clank/pause 700/textAboveHead Clint \"{{i18n:Clint.Event1.02}}\"/pause 1000/playSound hammer/pause 550/playSound clank/pause 2000/move Clint 4 0 1/pause 500/speak Clint \"{{i18n:Clint.Event1.03}}\"/pause 1000/move Clint 0 0 3/pause 1000/speak Clint \"{{i18n:Clint.Event1.04}}\"/pause 1000/move Clint 0 0 1/pause 1500/speak Clint \"{{i18n:Clint.Event1.05}}\"/stopMusic/pause 1500/speak Clint \"{{i18n:Clint.Event1.06}}\"/pause 800/speak Clint \"{{i18n:Clint.Event1.07}}\"/pause 1000/speak Clint \"{{i18n:Clint.Event1.08}}\"/pause 1100/move Clint 0 0 3/pause 1100/move Clint 0 0 1/pause 1000/speak Clint \"{{i18n:Clint.Event1.09}}\"/pause 1200/move Clint -4 0 3 true/pause 150/globalFade/viewport -1000 -1000/pause 700/end dialogue Clint \"{{i18n:Clint.Event1.10}}\"",
+				"1000014/t 1000 1600/f Clint 2000/w sunny/e 1000034": "playful/-500 -500/farmer 92 90 0 Clint 94 77 0 Penny 102 68 1/showFrame Penny 18/pause 700/viewport 99 77 true/skippable/pause 250/playSound clank/move farmer 0 -4 1/playSound clank/move farmer 1 0 0/move farmer 0 -3 0/playSound hammer/move farmer 0 -1 0/emote farmer 8/move farmer 3 0 1/playSound clank/move farmer 2 0 1/playSound clank/move farmer 4 0 0/playSound clank/textAboveHead Clint \"{{i18n:Clint.Event1.01}}\"/move farmer 0 -4 0/playSound clank/move farmer 0 -1 3/move farmer -2 0 3/playSound clank/pause 700/textAboveHead Clint \"{{i18n:Clint.Event1.02}}\"/pause 1000/playSound hammer/pause 550/playSound clank/pause 2000/move Clint 4 0 1/pause 500/speak Clint \"{{i18n:Clint.Event1.03}}\"/pause 1000/move Clint 0 0 3/pause 1000/speak Clint \"{{i18n:Clint.Event1.04}}\"/pause 1000/move Clint 0 0 1/pause 1500/speak Clint \"{{i18n:Clint.Event1.05}}\"/stopMusic/pause 1500/speak Clint \"{{i18n:Clint.Event1.06}}\"/pause 800/speak Clint \"{{i18n:Clint.Event1.07}}\"/pause 1000/speak Clint \"{{i18n:Clint.Event1.08}}\"/pause 1100/move Clint 0 0 3/pause 1100/move Clint 0 0 1/pause 1000/speak Clint \"{{i18n:Clint.Event1.09}}\"/pause 1200/move Clint -4 0 3 true/pause 150/globalFade/viewport -1000 -1000/pause 700/end dialogue Clint \"{{i18n:Clint.Event1.10}}\"",
 			},
 		},
 		{ //CLINT EVENT 2

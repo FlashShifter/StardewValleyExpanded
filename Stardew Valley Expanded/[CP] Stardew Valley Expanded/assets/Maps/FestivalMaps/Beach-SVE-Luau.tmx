@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="104" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="13">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="104" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="79">
  <properties>
   <property name="DayTiles" value="Front 44 31 369 Front 90 35 369"/>
   <property name="Fall_Objects" value="372 .9 382 .6"/>
@@ -1575,7 +1575,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="8" name="Set-Up" width="104" height="50" visible="0">
+ <layer id="8" name="Set-Up" width="104" height="50">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1691,19 +1691,9 @@
     <property name="Action" value="Shop Festival_Luau_Pierre"/>
    </properties>
   </object>
-  <object id="2" name="TileData" x="576" y="128" width="16" height="16">
-   <properties>
-    <property name="Message" value="A fragrant vase of summer flowers."/>
-   </properties>
-  </object>
   <object id="3" name="TileData" x="784" y="160" width="16" height="16">
    <properties>
     <property name="Action" value="LockedDoorWarp 3 9 ElliottHouse 1000 1800 Elliott 500"/>
-   </properties>
-  </object>
-  <object id="4" name="TileData" x="688" y="176" width="16" height="16">
-   <properties>
-    <property name="Message" value="It's a fresh salad, slathered in a fruity dressing."/>
    </properties>
   </object>
   <object id="5" name="TileData" x="560" y="192" width="16" height="16">
@@ -1721,21 +1711,6 @@
     <property name="Action" value="LuauSoup"/>
    </properties>
   </object>
-  <object id="8" name="TileData" x="672" y="208" width="16" height="16">
-   <properties>
-    <property name="Message" value="Glazed ham."/>
-   </properties>
-  </object>
-  <object id="9" name="TileData" x="688" y="208" width="16" height="16">
-   <properties>
-    <property name="Message" value="Glazed ham."/>
-   </properties>
-  </object>
-  <object id="10" name="TileData" x="576" y="272" width="16" height="16">
-   <properties>
-    <property name="Message" value="A fragrant vase of summer flowers."/>
-   </properties>
-  </object>
   <object id="11" name="TileData" x="480" y="528" width="16" height="16">
    <properties>
     <property name="Action" value="LockedDoorWarp 5 9 FishShop 900 1700"/>
@@ -1744,6 +1719,291 @@
   <object id="12" name="TileData" x="592" y="528" width="16" height="16">
    <properties>
     <property name="Action" value="DropBox WillyBarrel"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="512" y="240" width="16" height="16">
+   <properties>
+    <property name="Message" value="A fragrant vase of summer flowers."/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="320" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.1&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="288" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.1&quot;"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="416" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="24" name="TileData" x="416" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="25" name="TileData" x="448" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="26" name="TileData" x="688" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="27" name="TileData" x="192" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="28" name="TileData" x="192" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.4&quot;"/>
+   </properties>
+  </object>
+  <object id="29" name="TileData" x="768" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.3&quot;"/>
+   </properties>
+  </object>
+  <object id="30" name="TileData" x="784" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.3&quot;"/>
+   </properties>
+  </object>
+  <object id="31" name="TileData" x="784" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.3&quot;"/>
+   </properties>
+  </object>
+  <object id="32" name="TileData" x="768" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.3&quot;"/>
+   </properties>
+  </object>
+  <object id="33" name="TileData" x="624" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="34" name="TileData" x="624" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="35" name="TileData" x="608" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="36" name="TileData" x="608" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="37" name="TileData" x="592" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="38" name="TileData" x="592" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="39" name="TileData" x="576" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="40" name="TileData" x="576" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="41" name="TileData" x="560" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="42" name="TileData" x="560" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="43" name="TileData" x="544" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="44" name="TileData" x="544" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="45" name="TileData" x="528" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="46" name="TileData" x="528" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="47" name="TileData" x="512" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="48" name="TileData" x="512" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="51" name="TileData" x="512" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="52" name="TileData" x="512" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="53" name="TileData" x="528" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="54" name="TileData" x="528" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="55" name="TileData" x="544" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="56" name="TileData" x="544" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="57" name="TileData" x="560" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="58" name="TileData" x="560" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="59" name="TileData" x="576" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="60" name="TileData" x="576" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="61" name="TileData" x="592" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="62" name="TileData" x="592" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="63" name="TileData" x="608" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="64" name="TileData" x="608" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="65" name="TileData" x="624" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="66" name="TileData" x="624" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="67" name="TileData" x="672" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="68" name="TileData" x="688" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="69" name="TileData" x="688" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="70" name="TileData" x="672" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="71" name="TileData" x="672" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="72" name="TileData" x="688" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="73" name="TileData" x="448" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="74" name="TileData" x="464" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="75" name="TileData" x="448" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="76" name="TileData" x="464" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="77" name="TileData" x="464" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
+   </properties>
+  </object>
+  <object id="78" name="TileData" x="448" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Beach-Luau.2&quot;"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,11 +1,23 @@
 {
-  //Works at movie theater
-  "Tue": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/1530 BusStop 22 8 0/1740 Custom_DayEnd_WarpRoom 3 3 0",
-  "Sat": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
-
-  //Visits SDV library
-  "Sun": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
-  
-  //Doesn't come to the valley on Mon, Wed, Thu, or Fri
-  "spring": "0 Custom_Martin_WarpRoom 1 3 3",
+  "Changes": [
+    {
+      //Martin's Schedule - Movie Theater built
+      "Action": "EditData",
+      "Target": "Characters/schedules/Martin",
+      "When": {
+        "HasFlag": "ccMovieTheater",
+        "HasSeenEvent": "191393"
+      },
+      "Entries": {
+        //Works at movie theater
+        "Tue": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/1530 BusStop 22 9 0/1730 BusStop 22 8 0/1740 Custom_DayEnd_WarpRoom 3 3 0",
+        "Sat": "0 Custom_Martin_WarpRoom 1 3 3/650 Town 92 44 2/850 MovieTheater 7 5 2 Martin_Blink/2130 BusStop 22 9 0/2330 BusStop 22 8 0/2340 Custom_DayEnd_WarpRoom 3 3 0",
+        //Visits SDV library
+        "Sun": "0 Custom_Martin_WarpRoom 1 3 3/800 ArchaeologyHouse 7 16 2 Martin_Read/1240 BusStop 22 9 0/1450 BusStop 22 8 0/1500 Custom_DayEnd_WarpRoom 3 3 0",
+        //Doesn't come to the valley on Mon, Wed, Thu, or Fri
+        "spring": "0 Custom_Martin_WarpRoom 1 3 3",
+        "GreenRain": "0 Custom_Martin_WarpRoom 1 3 3",
+      }
+    }
+  ]
 }

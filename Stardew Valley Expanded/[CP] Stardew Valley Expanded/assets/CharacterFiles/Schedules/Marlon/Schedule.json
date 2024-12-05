@@ -1,28 +1,36 @@
 {
-//Supplies
-"Mon": "610 AdventureGuild 4 11 2/700 Custom_AdventurerSummit 27 19 2/750 Custom_AdventurerSummit 27 19 3/820 Custom_AdventurerSummit 27 19 1/840 Custom_AdventurerSummit 27 19 2/900 Custom_AdventurerSummit 27 19 3/920 Custom_AdventurerSummit 27 18 3/940 Custom_AdventurerSummit 27 19 1/1000 Custom_AdventurerSummit 27 19 2/1020 Custom_AdventurerSummit 27 19 3/1040 Custom_AdventurerSummit 27 18 3/1100 Custom_AdventurerSummit 38 19 3/1140 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
-//Outside building
-"Tue": "610 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
-//Mine entrance
-"Wed": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 20 16 2/1120 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 20 16 2",
-//Grave
-"Thu": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 62 5 0 Marlon_Grave/1110 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 62 5 0 Marlon_Grave",
-//Dock
-"Fri": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 51 30 2/1120 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 51 30 2",
-//Sewer
-"Sat": "0 Town 35 99 0/620 Town 35 99 2 Marlon_Sneaky/820 AdventureGuild 4 11 2",
-//Cliff
-"Sun": "610 AdventureGuild 4 11 2/700 Custom_AdventurerSummit 41 28 1/1130 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
-
-//Visits adventurer graveyard - fall
-"fall_Tue": "0 Railroad 14 19 0/920 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
-"fall_Sun": "610 AdventureGuild 4 11 2/2200 Railroad 14 20 0",
-
-//Visits adventurer graveyard - winter
-"winter_Tue": "610 AdventureGuild 4 11 2/2200 Railroad 14 20 0",
-"winter_Sun": "0 Railroad 14 19 0/920 AdventureGuild 4 11 2",
-
-//Mines
-"rain": "610 AdventureGuild 4 11 2/800 Mine 23 7 2/1120 AdventureGuild 4 11 2/2200 Mine 23 7 2"
-
+    "Changes": [
+        {
+            //Marlon's Schedule
+            "Action": "EditData",
+            "Target": "Characters/schedules/MarlonFay",
+            "When": {
+                "HasFlag": "landslideDone"
+            },
+            "Entries": {
+                //Supplies
+                "Mon": "610 AdventureGuild 4 11 2/700 Custom_AdventurerSummit 27 19 2/750 Custom_AdventurerSummit 27 19 3/820 Custom_AdventurerSummit 27 19 1/840 Custom_AdventurerSummit 27 19 2/900 Custom_AdventurerSummit 27 19 3/920 Custom_AdventurerSummit 27 18 3/940 Custom_AdventurerSummit 27 19 1/1000 Custom_AdventurerSummit 27 19 2/1020 Custom_AdventurerSummit 27 19 3/1040 Custom_AdventurerSummit 27 18 3/1100 Custom_AdventurerSummit 38 19 3/1140 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
+                //Outside building
+                "Tue": "610 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
+                //Mine entrance
+                "Wed": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 20 16 2/1120 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 20 16 2",
+                //Grave
+                "Thu": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 62 5 0 Marlon_Grave/1110 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 62 5 0 Marlon_Grave",
+                //Dock
+                "Fri": "610 AdventureGuild 4 11 2/630 Custom_AdventurerSummit 51 30 2/1120 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 51 30 2",
+                //Sewer
+                "Sat": "0 Town 35 99 0/620 Town 35 99 2 Marlon_Sneaky/820 AdventureGuild 4 11 2",
+                //Cliff
+                "Sun": "610 AdventureGuild 4 11 2/700 Custom_AdventurerSummit 41 28 1/1130 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
+                //Visits adventurer graveyard - fall
+                "fall_Tue": "0 Railroad 14 19 0/920 AdventureGuild 4 11 2/2200 Custom_AdventurerSummit 33 22 2",
+                "fall_Sun": "610 AdventureGuild 4 11 2/2200 Railroad 14 20 0",
+                //Visits adventurer graveyard - winter
+                "winter_Tue": "610 AdventureGuild 4 11 2/2200 Railroad 14 20 0",
+                "winter_Sun": "0 Railroad 14 19 0/920 AdventureGuild 4 11 2",
+                //Mines
+                "rain": "610 AdventureGuild 4 11 2/800 Mine 23 7 2/1120 AdventureGuild 4 11 2/2200 Mine 23 7 2"
+            }
+        }
+    ]
 }

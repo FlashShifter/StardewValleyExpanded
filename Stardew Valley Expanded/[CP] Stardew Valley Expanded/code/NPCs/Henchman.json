@@ -1,0 +1,663 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE_Henchman": {
+          "DisplayName": "{{i18n:Name.Henchman}}",
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Negative",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": false,
+          "LoveInterest": "",
+          "Calendar": "HiddenAlways",
+          "SocialTab": "AlwaysShown",
+          "CanSocialize": true,
+          "CanVisitIsland": false,
+          "ExcludeFromIntroductionsQuest": true,
+          "PerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "FriendsAndFamily": {},
+          "UnlockConditions": "PLAYER_HAS_MAIL Any HenchmanHouseFixed Any",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_HenchmanHouse",
+              "Condition": null,
+              "Location": "Custom_HenchmanHouse",
+              "Tile": {
+                "X": 4,
+                "Y": 5
+              },
+              "Direction": "down"
+            }
+          ],
+		  "Appearance": [
+            {
+              "Id": "Henchman Portrait",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Henchman",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            },
+			{
+              "Id": "Henchman Portrait SVE",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/SVE_Henchman",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            },
+          ],
+          "TextureName": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "CustomFields": {}
+        },
+      },
+    },
+	{
+      //Henchman's Portraits
+      "Action": "Load", "Priority": "Low",
+      "Target": "Portraits/SVE_Henchman",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "FromFile": "assets/CharacterFiles/Portraits/Henchman/Henchman.png"
+    },
+    {
+      //Henchman's Sprites
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/SVE_Henchman",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "FromFile": "assets/CharacterFiles/OverworldSprites/Henchman/Henchman.png"
+    },
+    {
+      //Henchman's Schedule
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/Schedules/SVE_Henchman",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "FromFile": "assets/CharacterFiles/Schedules/Henchman/Schedule.json"
+    },
+    {
+      //Henchman's gift tastes
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE_Henchman": "{{i18n:Henchman.Gifts.Loved}}/308 FlashShifter.StardewValleyExpandedCP_Marsh_Tonic FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Supernatural_Goo FlashShifter.StardewValleyExpandedCP_Void_Shard FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi FlashShifter.StardewValleyExpandedCP_Void_Root FlashShifter.StardewValleyExpandedCP_Void_Pebble FlashShifter.StardewValleyExpandedCP_Void_Delight FlashShifter.StardewValleyExpandedCP_Swirl_Stone/{{i18n:Henchman.Gifts.Liked}}/FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Void_Soul 305 795 305 -28/{{i18n:Henchman.Gifts.Disliked}}/-5 -6 -18 -75 -79/{{i18n:Henchman.Gifts.Hated}}/-20 -21/{{i18n:Henchman.Gifts.Neutral}}/-80 -2 -4/"
+      }
+    },
+    {
+      //Henchman's Animations
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "Henchman_Idle": "0/0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 0 0 0 0 0/0",
+		"Henchman_VoidMayo": "16/16/16",
+		"Henchman_Down": "17/17/17",
+      }
+    },
+	
+	//Henchman schedule after home is repaired
+	{
+      "Action": "EditData",
+      "Target": "Characters/Schedules/SVE_Henchman",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=418172": true,
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasSeenEvent|contains=1337736": false,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+      "Entries": {
+        "Mon": "0 Custom_HenchmanHouse 4 5 2/610 Custom_ForbiddenMaze 117 12 2 square_9_5/2500 Custom_HenchmanHouse 3 5 2 Henchman_Down", //Ponders about outside all day
+		"Tue": "0 Custom_HenchmanHouse 4 5 2/610 Custom_HenchmanHouse 8 8 0", //At table all day 
+		"Wed": "0 Custom_HenchmanHouse 4 5 2/610 Custom_ForbiddenMaze 115 10 2", //outside home all day
+		"Thu": "0 Custom_HenchmanHouse 4 5 2/800 Custom_HenchmanHouse 6 4 2 Henchman_Idle", //Idle animation all day
+		"Fri": "0 Custom_HenchmanHouse 3 5 2 square_5_5", //Ponders about in home all day
+		"Sat": "0 Custom_HenchmanHouse 4 5 2/610 Custom_HenchmanHouse 8 6 2 Henchman_VoidMayo", //eats void mayo all day
+		"Sun": "0 Custom_HenchmanHouse 4 5 2/700 Custom_ForbiddenMaze 115 10 2/2000 Custom_HenchmanHouse 6 6 2" //Outside most of day and goes inside home
+      },
+    },
+	
+	//Henchman schedule after he gets his job back
+	{
+      "Action": "EditData",
+      "Target": "Characters/Schedules/SVE_Henchman",
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=418172": true,
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasSeenEvent|contains=1337736": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+      "Entries": {
+        "Mon": "0 Custom_HenchmanHouse 4 5 2/610 Custom_ForbiddenMaze 117 12 2 square_9_5/2500 Custom_HenchmanHouse 3 5 2 Henchman_Down", //Ponders about outside all day
+		"Tue": "0 Custom_HenchmanHouse 4 5 2/610 Custom_HenchmanHouse 8 8 0/1000 WitchSwamp 21 21 2/1800 Custom_HenchmanHouse 8 8 0", //At table, goes to work, returns
+		"Wed": "0 Custom_HenchmanHouse 4 5 2/610 Custom_ForbiddenMaze 115 10 2/1000 WitchSwamp 20 26 2/1700 Custom_ForbiddenMaze 115 10 2", //outside home in morning, goes to work, returns
+		"Thu": "0 Custom_HenchmanHouse 4 5 2/800 Custom_HenchmanHouse 6 4 2 Henchman_Idle/1100 WitchSwamp 19 21 2/2000 Custom_HenchmanHouse 6 4 2 Henchman_Idle", //Idle animation in house, goes to work, returns
+		"Fri": "0 Custom_HenchmanHouse 3 5 2 square_5_5/800 WitchSwamp 20 26 2/1800 Custom_HenchmanHouse 3 5 2 square_5_5", //Ponders about in home, goes to work, returns home
+		"Sat": "0 Custom_HenchmanHouse 4 5 2/610 Custom_HenchmanHouse 8 6 2 Henchman_VoidMayo/1200 WitchSwamp 19 21 2/2000 Custom_HenchmanHouse 8 6 2 Henchman_VoidMayo", //eats void mayo, goes to work, eats more void mayo
+		"Sun": "0 Custom_HenchmanHouse 4 5 2/700 Custom_ForbiddenMaze 115 10 2/1200 WitchSwamp 19 21 2/2000 Custom_HenchmanHouse 6 6 2" //Outside in morning, goes to work, returns and goes inside home
+      },
+    },
+     
+	 
+	//Henchman Event #1 - Witch fly by - first entry in Forbidden Maze
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "1337728/t 600 2600": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-1000 -1000/farmer -200 -200 0/skippable/pause 1000/viewport 39 146 true/pause 2500/playSound wand/screenFlash 1/warp farmer 39 147/pause 1250/emote farmer 8/pause 500/move farmer 0 -5 0 true/viewport move 0 -2 3000 true/pause 500/addTemporaryActor SwampWitch 36 150 80 145 2/ignoreCollisions SwampWitch/speed SwampWitch 10/move SwampWitch -1200 0 3 true/pause 2000/playSound cacklingWitch/pause 300/faceDirection farmer 1 true/pause 400/emote farmer 16 true/pause 1400/faceDirection farmer 0 true/pause 300/faceDirection farmer 3 true/pause 2250/globalfade/viewport -1000 -1000/pause 300/end position 39 143",
+      },
+    },
+    {
+      "Action": "Load", "Priority": "Low", //36x150
+      "Target": "Characters/SwampWitch",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwampWitch.png"
+    },
+    
+	//Henchman Questline
+	{
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+        "HenchmanHouseRepaired": {
+          "Name": "[HenchmanHouseRepair_Name]",
+          "Requester": "SVE_Henchman",
+          "Duration": "Month",
+          "Repeatable": "False",
+          "RequiredTags": "event_1337730, !event_1337731",
+          "OrderType": "StardewValleyExpanded",
+          "SpecialRule": "",
+          "Text": "[HenchmanHouseRepair_Text]",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "[HenchmanHouseRepair_Objective_1_Text]",
+              "RequiredCount": "50",
+              "Data": {
+                "DropBox": "HenchmanDoor",
+                "DropBoxGameLocation": "Custom_ForbiddenMaze",
+                "DropBoxIndicatorLocation": "116 8",
+                "AcceptedContextTags": "item_swamp_flower"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "[HenchmanHouseRepair_Objective_2_Text]",
+              "RequiredCount": "12",
+              "Data": {
+                "DropBox": "HenchmanDoor",
+                "DropBoxGameLocation": "Custom_ForbiddenMaze",
+                "DropBoxIndicatorLocation": "116 8",
+                "AcceptedContextTags": "item_red_mushroom"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "[HenchmanHouseRepair_Objective_3_Text]",
+              "RequiredCount": "12",
+              "Data": {
+                "DropBox": "HenchmanDoor",
+                "DropBoxGameLocation": "Custom_ForbiddenMaze",
+                "DropBoxIndicatorLocation": "116 8",
+                "AcceptedContextTags": "item_purple_mushroom"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "[HenchmanHouseRepair_Objective_4_Text]",
+              "RequiredCount": "12",
+              "Data": {
+                "DropBox": "HenchmanDoor",
+                "DropBoxGameLocation": "Custom_ForbiddenMaze",
+                "DropBoxIndicatorLocation": "116 8",
+                "AcceptedContextTags": "item_morel"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "[HenchmanHouseRepair_Objective_5_Text]",
+              "RequiredCount": "12",
+              "Data": {
+                "DropBox": "HenchmanDoor",
+                "DropBoxGameLocation": "Custom_ForbiddenMaze",
+                "DropBoxIndicatorLocation": "116 8",
+                "AcceptedContextTags": "item_chanterelle"
+              }
+            },
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "HenchmanHouseFixed"
+              }
+            },
+          ]
+        },
+      },
+    },
+    {
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "HenchmanHouseRepair_Name": "{{i18n:Henchman.Questline.01}}",
+        "HenchmanHouseRepair_Text": "{{i18n:Henchman.Questline.02}}",
+        "HenchmanHouseRepair_Objective_1_Text": "{{i18n:Henchman.Questline.03}}", //swamp flower
+        "HenchmanHouseRepair_Objective_2_Text": "{{i18n:Henchman.Questline.04}}", //red mushroom
+        "HenchmanHouseRepair_Objective_3_Text": "{{i18n:Henchman.Questline.05}}", //purple mushroom
+        "HenchmanHouseRepair_Objective_4_Text": "{{i18n:Henchman.Questline.06}}", //morel
+        "HenchmanHouseRepair_Objective_5_Text": "{{i18n:Henchman.Questline.07}}"  //chanterelle
+      }
+    },
+    //Event #1 - Henchman's House - sends mail
+    {
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "1105729/e 418172/x HenchmanFired/t 600 2600": "continue/-200 -200/farmer 1 1 1/pause 10/end",
+      },
+    },
+	//Event #2 - Henchman's House - makes questline appear in player journal
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+	  "When": {
+        "HasSeenEvent |contains=1105729": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+      "Entries": {
+        "1337730/t 600 2600": "continue/-200 -200/farmer 1 1 1/pause 10/end",
+      },
+    },
+	//Event #3 - Henchman's House - actual story event
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "1337729/t 600 2600/e 1337730": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-400 -400/farmer 124 12 0 SVE_Henchman 116 12 0/pause 500/skippable/viewport 116 12 true/move farmer -6 0 3/pause 1000/faceDirection SVE_Henchman 1 true/pause 650/showFrame SVE_Henchman 18 true/jump SVE_Henchman/shake SVE_Henchman 3000/pause 650/speak SVE_Henchman \"{{i18n:Henchman.Event.01}}\"/pause 250/showFrame SVE_Henchman 0 true/pause 650/faceDirection SVE_Henchman 1 true/pause 600/speak SVE_Henchman \"{{i18n:Henchman.Event.02}}\"/pause 1000/faceDirection SVE_Henchman 0/pause 800/emote SVE_Henchman 28/pause 600/speak SVE_Henchman \"{{i18n:Henchman.Event.03}}\"/pause 2000/faceDirection farmer 0 true/pause 2250/faceDirection SVE_Henchman 1 true/pause 750/speak SVE_Henchman \"{{i18n:Henchman.Event.04}}\"/pause 600/faceDirection farmer 3 true/pause 500/jump farmer/pause 1300/shake SVE_Henchman 750/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.05}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/end position 118 12",
+      },
+    },
+    //Event #4 - Henchman's House - henchman will now become an NPC
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+	  "When": {
+	    "HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "1337731/t 600 2600": "continue/30 30/farmer 1 1 1 SVE_Henchman 2 2 2/skippable/pause 1500/speak SVE_Henchman \"{{i18n:Henchman.Event.06}}\"/pause 1000/emote SVE_Henchman 40/speak SVE_Henchman \"{{i18n:Henchman.Event.07}}\"/pause 1000/faceDirection SVE_Henchman 1 true/pause 400/faceDirection SVE_Henchman 2 true/pause 1000/showFrame SVE_Henchman 21 true/pause 600/speak SVE_Henchman \"{{i18n:Henchman.Event.08}}\"/pause 500/end",
+      },
+    },
+	
+	//Henchman House defaults to being locked and points players to go to the right as a hint
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/ForbiddenMaze_HenchmanHouseLocked.tmx",
+      "ToArea": {
+        "X": 116,
+        "Y": 9,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+		"HasSeenEvent: anyPlayer|contains=418172": false,
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": false,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+
+	//Witch makes Henchman homeless after player steals magic ink from her home. Unpatches after questline completion.
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/ForbiddenMaze_HenchmanHouseOvergrown.tmx",
+      "ToArea": {
+        "X": 115,
+        "Y": 8,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+		"HasSeenEvent: anyPlayer|contains=418172": true,
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": false,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+	
+	//Pathway to Henchman's home is re-connected after it's repaired.
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/ForbiddenMaze_HenchmanHousePathway.tmx",
+      "ToArea": {
+        "X": 131,
+        "Y": 11,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+		"HasSeenEvent: anyPlayer|contains=418172": true,
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+	
+	//Pathway to Henchman's home is auto patched if Aimon is installed
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/ForbiddenMaze_HenchmanHousePathway.tmx",
+      "ToArea": {
+        "X": 131,
+        "Y": 11,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": true
+      },
+    },
+	
+	//Henchman 2 heart event - Void Mayo Sandwhich
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_HenchmanHouse",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE.Henchman.2heart/f SVE_Henchman 500": "Upper_Ambient/-200 -200/farmer -30 -30 0 SVE_Henchman 8 4 0/skippable/pause 1500/showFrame SVE_Henchman 22 true/viewport 5 7 true/pause 1000/shake SVE_Henchman 600/playSound gulp/pause 900/shake SVE_Henchman 750/pause 100/playSound gulp/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.09}}\"/pause 750/warp farmer 5 10/playSound doorClose/pause 350/move farmer 0 -3 0 true/pause 300/showFrame SVE_Henchman 8 true/pause 650/faceDirection SVE_Henchman 3 true/pause 300/faceDirection SVE_Henchman 2 true/pause 500/jump SVE_Henchman/pause 1000/move SVE_Henchman 0 2 2/move SVE_Henchman -1 0 3/move SVE_Henchman 0 1 3 true/pause 100/faceDirection farmer 1 true/pause 650/speak SVE_Henchman \"{{i18n:Henchman.Event.10}}\"/pause 500/emote SVE_Henchman 40/pause 200/speak SVE_Henchman \"{{i18n:Henchman.Event.11}}\"/pause 500/faceDirection SVE_Henchman 2 true/pause 500/move SVE_Henchman 0 1 2/move SVE_Henchman 1 0 0/pause 500/showFrame SVE_Henchman 22 true/pause 600/shake SVE_Henchman 2000/pause 100/playSound slime/pause 500/playSound slimeHit/pause 500/playSound slimedead/pause 650/showFrame SVE_Henchman 8 true/pause 500/emote SVE_Henchman 56/pause 250/faceDirection SVE_Henchman 3 true/pause 500/move SVE_Henchman -1 0 0/move SVE_Henchman 0 -1 0/move SVE_Henchman -1 0 3/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.12}}\"/pause 900/showFrame SVE_Henchman 15 true/pause 100/playSound dwop/shake SVE_Henchman 600/pause 300/showFrame SVE_Henchman 12 true/pause 650/speak SVE_Henchman \"{{i18n:Henchman.Event.13}}\"/pause 800/faceDirection farmer 2 true/pause 600/farmerEat FlashShifter.StardewValleyExpandedCP_Void_Mayo_Sandwich/pause 4000/startJittering/pause 1000/stopJittering/pause 600/animate farmer false true 650 104 105/playMusic ragtime/pause 1000/emote SVE_Henchman 16 true/pause 750/speak SVE_Henchman \"{{i18n:Henchman.Event.14}}\"/pause 400/emote farmer 12 true/pause 1000/speak SVE_Henchman \"{{i18n:Henchman.Event.15}}\"/pause 250/faceDirection SVE_Henchman 2 true/pause 250/faceDirection SVE_Henchman 1 true/pause 250/move SVE_Henchman 1 0 2/move SVE_Henchman 0 1 2/move SVE_Henchman 1 0 0/pause 250/globalFade/viewport -1000 -1000/pause 1500/playSound slimedead/playSound slimedead/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.16}}\"/pause 250/stopMusic/pause 1000/end dialogue SVE_Henchman \"{{i18n:Henchman.Event.17}}\""
+      },
+    },
+	
+	//Henchman 4 heart event - Marsh Tonic Recipe
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE.Henchman.4heart/f SVE_Henchman 1000/t 600 2600/e SVE.Henchman.2heart": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-200 -200/farmer 122 10 3 SVE_Henchman 115 10 2/addCraftingRecipe FlashShifter.StardewValleyExpandedCP_Marsh_Tonic/pause 1250/viewport 116 10 clamp true/skippable/move farmer -5 0 3 true/pause 1750/faceDirection SVE_Henchman 1 true/pause 2500/emote SVE_Henchman 40/pause 1500/speak SVE_Henchman \"{{i18n:Henchman.Event.18}}\"/pause 1000/move SVE_Henchman 1 0 1/pause 500/faceDirection SVE_Henchman 0 true/pause 500/playSound doorClose/warp SVE_Henchman -40 -40/pause 650/move farmer -1 0 3/pause 500/faceDirection farmer 0 true/pause 500/playSound doorClose/warp farmer -41 -41/pause 1250/speak SVE_Henchman \"{{i18n:Henchman.Event.19}}\"/pause 1000/playSound Ship/pause 750/playSound Ship/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.20}}\"/pause 500/playSound slimedead/pause 600/playSound slimedead/pause 400/playSound slimedead/pause 200/playSound slimedead/pause 350/speak SVE_Henchman \"{{i18n:Henchman.Event.21}}\"/pause 500/playSound grassyStep/playSound grassyStep/pause 600/playSound grassyStep/playSound grassyStep/pause 700/playSound grassyStep/playSound grassyStep/pause 400/speak SVE_Henchman \"{{i18n:Henchman.Event.22}}\"/pause 250/playSound crafting/pause 600/playSound crafting/pause 200/playSound ghost/pause 1000/playSound crafting/pause 600/pause 200/playSound ghost/pause 900/playSound crafting/pause 500/playSound crafting/pause 1000/speak SVE_Henchman \"{{i18n:Henchman.Event.23}}\"/pause 500/playSound crafting/playSound crafting/pause 500/playSound crafting/playSound crafting/pause 500/playSound crafting/playSound crafting/pause 200/playSound ghost/playSound ghost/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.24}}\"/pause 500/playSound rabbit/playSound rabbit/pause 400/playSound rabbit/playSound rabbit/pause 300/playSound rabbit/playSound rabbit/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.25}}\"/pause 500/farmerEat FlashShifter.StardewValleyExpandedCP_Marsh_Tonic/pause 2000/playSound getNewSpecialItem/pause 2000/message \"{{i18n:Henchman.Event.26}}\"/pause 800/speak SVE_Henchman \"{{i18n:Henchman.Event.27}}\"/pause 500/globalFade/viewport -1000 -1000/pause 1000/end dialogue SVE_Henchman \"{{i18n:Henchman.Event.28}}\""
+      },
+    },
+	
+	//Marsh Tonic Recipe catch event for players who missed it before SVE 1.15.1
+    {
+      "Action": "EditData",
+      "Target": "data/events/Farmhouse",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE.Henchman.MarshTonicCatch/e SVE.Henchman.4heart": "continue/-200 -200/farmer 122 10 3/addCraftingRecipe FlashShifter.StardewValleyExpandedCP_Marsh_Tonic/pause 10/end"
+      },
+    },
+	
+	//Henchman 6 heart event - Swamp Foraging
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE.Henchman.6heart/f SVE_Henchman 1500/t 600 2600/e SVE.Henchman.4heart": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-200 -200/farmer 87 21 1 SVE_Henchman 94 21 1/makeInvisible 79 14 22 19/addTemporaryActor SwampFlowerObject 16 32 79 19 2 false/addTemporaryActor SwampFlowerObject 16 32 81 20 2 false/addTemporaryActor SwampFlowerObject 16 32 84 17 2 false/addTemporaryActor SwampFlowerObject 16 32 85 15 2 false/addTemporaryActor SwampFlowerObject 16 32 83 24 2 false/addTemporaryActor SwampFlowerObject 16 32 91 14 2 false/addTemporaryActor SwampFlowerObject 16 32 92 18 2 false/addTemporaryActor SwampFlowerObject 16 32 95 17 2 false/addTemporaryActor SwampFlowerObject 16 32 95 25 2 false/addTemporaryActor SwampFlowerObject 16 32 96 23 2 false/addTemporaryActor SwampFlowerObject 16 32 98 20 2 false/addTemporaryActor SwampFlowerObject1 16 32 95 21 2 false/addTemporaryActor SwampFlowerObject2 16 32 94 22 2 false/addTemporaryActor SwampGolemActor 16 24 -10 -10 2 false/showFrame SwampGolemActor 16 true/pause 1250/viewport 93 21 clamp true/skippable/pause 250/ignoreCollisions SVE_Henchman/ignoreCollisions farmer/move farmer 5 0 1/pause 1000/showFrame SVE_Henchman 5 true/shake SVE_Henchman 800/pause 600/warp SwampFlowerObject1 -50 -50/playSound pickUpItem/pause 400/showFrame SVE_Henchman 4 true/pause 1000/faceDirection SVE_Henchman 2 true/pause 300/faceDirection SVE_Henchman 3 true/pause 1000/speak SVE_Henchman \"{{i18n:Henchman.Event.33}}\"/pause 500/faceDirection SVE_Henchman 2 true/pause 500/showFrame SVE_Henchman 3 true/shake SVE_Henchman 750/pause 200/playSound pickUpItem/warp SwampFlowerObject2 -49 -49/pause 500/showFrame SVE_Henchman 0 true/pause 500/faceDirection SVE_Henchman 3 true/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.34}}\"/pause 1000/emote SVE_Henchman 40/pause 800/faceDirection SVE_Henchman 2 true/pause 750/showFrame SVE_Henchman 17 true/pause 50/playSound dwop/pause 1500/speak SVE_Henchman \"{{i18n:Henchman.Event.35}}\"/pause 500/emote farmer 60/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.36}}\"/pause 1000/speak SVE_Henchman \"{{i18n:Henchman.Event.32}}\"/pause 1000/showFrame SVE_Henchman 0 true/pause 600/faceDirection SVE_Henchman 3 true/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.37}}\"/pause 500/emote farmer 32/pause 400/emote SVE_Henchman 32/pause 800/playSound ghost/pause 350/faceDirection farmer 2 true/pause 300/playSound rockGolemHit/pause 400/faceDirection SVE_Henchman 2 true/pause 300/playSound ghost/pause 350/playSound ghost/jump SVE_Henchman/pause 400/playSound rockGolemHit/pause 400/faceDirection SVE_Henchman 3 true/pause 300/playSound ghost/pause 300/faceDirection farmer 1 true/pause 350/playSound rockGolemHit/speak SVE_Henchman \"{{i18n:Henchman.Event.38}}\"/pause 300/playSound ghost/pause 200/faceDirection farmer 2 true/pause 250/faceDirection farmer 3 true/pause 100/playSound ghost/pause 100/speed farmer 3/move farmer -10 0 3 true/pause 100/playSound ghost/globalFade/viewport -1000 -1000/pause 500/playSound ghost/pause 500/playSound rockGolemHit/pause 300/playSound rockGolemHit/halt/warp farmer -20 -20/showFrame SwampGolemActor 16 true/faceDirection SVE_Henchman 2 true/pause 300/playSound ghost/pause 250/viewport 93 21 clamp true/pause 4000/speak SVE_Henchman \"{{i18n:Henchman.Event.39}}\"/pause 750/playSound rockGolemSpawn/warp SwampGolemActor 93 21/showFrame SwampGolemActor 17/pause 100/showFrame SwampGolemActor 18/pause 100/showFrame SwampGolemActor 18/pause 100/showFrame SwampGolemActor 19/pause 100/showFrame SwampGolemActor 20/pause 100/showFrame SwampGolemActor 21/pause 100/showFrame SwampGolemActor 22/pause 100/showFrame SwampGolemActor 23/pause 1000/faceDirection SVE_Henchman 3 true/pause 500/emote SVE_Henchman 16 true/pause 1000/faceDirection SwampGolemActor 1 true/move SwampGolemActor 0 0 1/pause 1250/speak SVE_Henchman \"{{i18n:Henchman.Event.40}}\"/pause 3000/faceDirection SwampGolemActor 2 true/pause 750/playSound rockGolemSpawn/showFrame SwampGolemActor 23/pause 100/showFrame SwampGolemActor 22/pause 100/showFrame SwampGolemActor 21/pause 100/showFrame SwampGolemActor 20/pause 100/showFrame SwampGolemActor 19/pause 100/showFrame SwampGolemActor 18/pause 100/showFrame SwampGolemActor 17/pause 100/showFrame SwampGolemActor 16/pause 100/warp SwampGolemActor -4 -4/pause 2250/speak SVE_Henchman \"...$2\"/pause 1000/faceDirection SVE_Henchman 2 true/pause 250/faceDirection SVE_Henchman 1 true/pause 500/move SVE_Henchman 4 0 0/globalFade/viewport -1000 -1000/pause 1000/end dialogue SVE_Henchman \"{{i18n:Henchman.Event.41}}\"",
+      },
+    },
+	
+	//Loads Henchman 6 heart event temp actors
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/SwampFlowerObject",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwampFlowerObject.png",
+    },
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/SwampFlowerObject1",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwampFlowerObject.png",
+    },
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/SwampFlowerObject2",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwampFlowerObject.png",
+    },
+	{
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/SwampGolemActor",
+      "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SwampGolemActor.png",
+    },
+	
+	//Henchman 8 heart event - Part 1 - A Nightly Visit
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+	  "When": {
+	    "HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+	  },
+      "Entries": {
+        "SVE.Henchman.8heart.p1/f SVE_Henchman 2000/t 2200 2600/e SVE.Henchman.6heart": "continue/-200 -200/farmer 2 2 2 SVE_Henchman 2 2 0/pause 2000/speak SVE_Henchman \"{{i18n:Henchman.Event.42}}\"/pause 750/emote SVE_Henchman 40/pause 250/speak SVE_Henchman \"{{i18n:Henchman.Event.43}}\"/pause 1000/end"
+      },
+    },
+	
+	//Henchman 8 heart event - Part 2 - Dark Shrine Tribute
+    {
+      "Action": "EditData",
+      "Target": "data/events/Custom_ForbiddenMaze",
+      "Entries": {
+        "SVE.Henchman.8heart.p2/": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-200 -200/farmer 124 11 3 SVE_Henchman 119 9 2/pause 1000/viewport 119 9 clamp true/skippable/move farmer -5 0 0 true/pause 2000/jump SVE_Henchman/pause 800/speak SVE_Henchman \"{{i18n:Henchman.Event.44}}\"/pause 750/faceDirection SVE_Henchman 3 true/pause 250/faceDirection SVE_Henchman 0 true/pause 500/advancedMove SVE_Henchman false 0 -2 -3 0/pause 400/advancedMove farmer false 0 -4 -2 0/pause 500/globalFade/viewport -1000 -1000/pause 1000/halt/changeLocation Custom_HenchmanBackyard/warp SVE_Henchman 31 27/warp farmer 31 30/faceDirection SVE_Henchman 0 true/faceDirection farmer 0 true/pause 500/viewport 31 22 clamp true/move SVE_Henchman 0 -5 0 true/move farmer 0 -6 0 true/pause 3000/faceDirection SVE_Henchman 1 true/pause 300/faceDirection SVE_Henchman 2 true/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.45}}\"/pause 1000/faceDirection farmer 1 true/pause 800/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 1000/faceDirection farmer 0 true/pause 350/emote farmer 32/pause 400/speak SVE_Henchman \"{{i18n:Henchman.Event.46}}\"/addTemporaryActor SwampWitch 36 150 58 25 2/ignoreCollisions SwampWitch/speed SwampWitch 10/move SwampWitch -1200 0 3 true/pause 500/playSound cacklingWitch/pause 500/faceDirection farmer 1 true/pause 500/faceDirection SVE_Henchman 1 true/pause 500/emote SVE_Henchman 16 true/pause 1000/faceDirection SVE_Henchman 2 true/pause 250/faceDirection SVE_Henchman 3 true/pause 200/faceDirection farmer 0 true/pause 200/faceDirection farmer 3 true/pause 500/jump SVE_Henchman/pause 800/jump SVE_Henchman/pause 1000/faceDirection SVE_Henchman 2 true/pause 250/faceDirection farmer 0 true/pause 100/speak SVE_Henchman \"{{i18n:Henchman.Event.47}}\"/pause 500/speed SVE_Henchman 3/move SVE_Henchman 0 25 2 true/move farmer 1 0 1 true/pause 850/faceDirection farmer 2 true/pause 2500/faceDirection farmer 3 true/pause 250/faceDirection farmer 0 true/pause 500/emote farmer 40 true/pause 350/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Henchman.Event.48}}\"/pause 1000/end dialogue SVE_Henchman \"{{i18n:Henchman.Event.49}}\""
+      },
+      "When": {
+	    "HasSeenEvent|contains=SVE.Henchman.8heart.p1": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+	
+	//Removed red book from Henchman house
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_HenchmanHouse",
+      "FromFile": "Assets/Maps/MapPatches/HenchmanRedBookRemoved.tbin",
+      "ToArea": {
+        "X": 1,
+        "Y": 6,
+        "Width": 1,
+        "Height": 1
+      },
+      "When": {
+		"HasSeenEvent|contains=SVE.Henchman.8heart.p1": true, //Henchman 8 heart part 1
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+	
+	//Pathway to Henchman's dark shrine backyard
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/HenchmanBackyardPathway.tmx",
+      "ToArea": {
+        "X": 113,
+        "Y": 0,
+        "Width": 7,
+        "Height": 8
+      },
+      "When": {
+		"HasSeenEvent: anyPlayer|contains=418172": true, //Magic ink obtained
+		"HasSeenEvent: anyPlayer|contains=SVE.Henchman.8heart.p1": true, //Henchman 8 heart part 1
+		"HasFlag: anyPlayer|contains=HenchmanHouseFixed": true, //Henchman house repaired
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+    
+	//Dark Shrine of Money
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_HenchmanBackyard",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 48,
+            "Y": 29
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Success": "O FlashShifter.StardewValleyExpandedCP_Tree_Coin 1",
+            "Action": "SVE_Lock 20 FlashShifter.StardewValleyExpandedCP_Supernatural_Goo money",
+            "Default": "{{i18n:DarkShrine.Money.01}}",
+            "Failure": "{{i18n:DarkShrine.Money.02}}",
+          }
+        }
+      ]
+    },
+	
+	//Dark Shrine of Life
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_HenchmanBackyard",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 16,
+            "Y": 13
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Success": "O 773 1",
+            "Action": "SVE_Lock 15 FlashShifter.StardewValleyExpandedCP_Sludge coldSpell",
+            "Default": "{{i18n:DarkShrine.Life.01}}",
+            "Failure": "{{i18n:DarkShrine.Life.02}}",
+          }
+        }
+      ]
+    },
+	
+	//>>> Dark Shrine of Betrayal, Moss, and Invasion are added via C# <<<
+
+	//Patches NPC Warps to witch swamp and forbidden maze
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "MapProperties": {
+        "NPCWarp": "142 10 WitchSwamp 20 41"
+       },
+	  "When": {
+        "HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/WitchSwamp",
+      "MapProperties": {
+        "NPCWarp": "20 43 Custom_ForbiddenMaze 141 10"
+       },
+	  "When": {
+        "HasFlag: anyPlayer|contains=HenchmanHouseFixed": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      }
+    },
+	
+	//Henchman 10 heart event - A Witch's Henchman
+    {
+      "Action": "EditData",
+      "Target": "data/events/WitchSwamp",
+      "Entries": {
+        "SVE.Henchman.10heart/f SVE_Henchman 2500": "FlashShifter.StardewValleyExpandedCP_ForbiddenMaze_Ambient/-200 -200/farmer 21 35 0 SVE_Henchman 20 27 2/pause 1000/viewport 20 29 clamp true/skippable/move farmer 0 -4 0/move farmer -1 0 3/move farmer 0 -2 0/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.50}}\"/pause 1000/emote farmer 40/pause 500/jump SVE_Henchman/pause 800/shake SVE_Henchman 2000/speak SVE_Henchman \"{{i18n:Henchman.Event.51}}\"/pause 1000/faceDirection SVE_Henchman 3 true/pause 800/faceDirection SVE_Henchman 2 true/pause 250/faceDirection SVE_Henchman 1 true/pause 850/faceDirection SVE_Henchman 2 true/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.52}}\"/pause 500/faceDirection SVE_Henchman 1 true/pause 500/move SVE_Henchman 1 0 1/pause 250/faceDirection SVE_Henchman 2 true/pause 300/faceDirection SVE_Henchman 3 true/pause 750/move farmer 0 -2 0 true/viewport move 0 -1 1500 true/pause 1300/faceDirection farmer 1 true/pause 500/speak SVE_Henchman \"{{i18n:Henchman.Event.53}}\"/pause 500/emote farmer 32/pause 500/faceDirection farmer 0 true/pause 500/move farmer 0 -6 0 true/pause 750/faceDirection SVE_Henchman 0 true/globalFade/viewport -1000 -1000/pause 1000/end dialogue SVE_Henchman \"{{i18n:Henchman.Event.54}}\""
+      },
+      "When": {
+	    "HasSeenEvent|contains=SVE.Henchman.8heart.p2": true,
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": false
+      },
+    },
+	
+	//Removes SVE Henchman's house if Aimon's mod is installed
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/ForbiddenMaze_NoHenchmanHouse.tmx",
+      "ToArea": {
+        "X": 114,
+        "Y": 4,
+        "Width": 5,
+        "Height": 7
+      },
+      "When": {
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": true
+      },
+    },
+	
+	//Pathway to Henchman's dark shrine backyard unlocked after magic ink is returned to wizard if Aimon's mod is installed
+	{ 
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ForbiddenMaze",
+      "FromFile": "Assets/Maps/MapPatches/HenchmanBackyardPathway_NoHenchmanHouse.tmx",
+      "ToArea": {
+        "X": 113,
+        "Y": 0,
+        "Width": 7,
+        "Height": 8
+      },
+      "When": {
+		"HasSeenEvent: anyPlayer|contains=418172": true, //Magic ink obtained
+		"HasMod|contains=Aimon111.WitchSwampOverhaulCP": true
+      },
+    },
+	
+	//RomRas Magic Ink Compat Patch (this mod nulls vanilla event ID 418172)
+	{
+      "Action": "EditData",
+      "Target": "data/TriggerActions",
+       "Entries": {
+        "{{ModID}}_RomRasMagicInkCompat": {
+          "Id": "{{ModID}}_RomRasMagicInkCompat",
+          "Trigger": "LocationChanged",
+          "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current Parrot.RomRas_MagicInkStandardPart2\" \"PLAYER_HAS_SEEN_EVENT Current Parrot.RomRas_MagicInkMarriedPart2\"",
+          "Actions": [
+            "MarkEventSeen Current 418172"
+          ]
+        }
+      }
+    },
+	
+  ]
+}

@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
+using StardewValley.Buildings;
 using StardewValley.Extensions;
 using StardewValley.TerrainFeatures;
+using StardewValley.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +49,7 @@ namespace StardewValleyExpanded
             Game1.ambientLight.A = (byte)Utility.Lerp((int)data.ambientLightColor.A, (int)Game1.outdoorLight.A, lerp);
             Color light_color = Color.Black;
             light_color.A = (byte)Utility.Lerp(255f, 0f, light_lerp);
-            foreach (LightSource light in Game1.currentLightSources)
+            foreach (LightSource light in Game1.currentLightSources.Values)
             {
                 if (light.lightContext.Value == LightSource.LightContext.MapLight)
                 {
@@ -171,7 +173,9 @@ namespace StardewValleyExpanded
     {
         public static void Postfix(GameLocation __instance, ref string __result)
         {
-            if ( __instance.Name == "Custom_CrimsonBadlands" || __instance.Name == "Custom_IridiumQuarry" )
+            if (__instance.Name == "Custom_CrimsonBadlands" || __instance.Name == "Custom_IridiumQuarry" ||
+                __instance.Name == "WitchSwamp" || __instance.Name == "Custom_ForbiddenMaze" ||
+                __instance.Name == "Custom_HenchmanBackyard")
                 __result = "sandyStep";
         }
     }

@@ -238,14 +238,15 @@
     },
     { //Increases strawberry sale price by 25%
       "Action": "EditData",
-      "Target": "Data/objectinformation",
+      "Target": "Data/Objects",
       "When": {
-        "HasSeenEvent": "5407915"
+        "HasSeenEvent: anyplayer| contains=5407915": true,
       },
-      "Fields": {
-        "400": {
-          1: "150"
-        }, //strawberries 120g > 150g
+      "TargetField": [
+        400
+      ],
+      "Entries": {
+        "Price": 150
       },
       "Update": "OnTimeChange"
     },
@@ -364,34 +365,38 @@
       }
     },
     //event adds 1 heart of friendship to everyone at the banquet
-    { //Wine heals 200% more stamina and health
+    //Wine heals 200% more stamina and health
+    {
       "Action": "EditData",
-      "Target": "Data/objectinformation",
+      "Target": "Data/Objects",
       "When": {
-        "HasSeenEvent": "5407916"
+        "HasSeenEvent: anyplayer| contains=5407917": true,
       },
+      "TargetField": [
+        348
+      ],
       "Entries": {
-        "348": "Wine/400/60/Basic -26/{{i18n:Olivia.OrderEvent.Wine}}/{{i18n:Olivia.OrderEvent.Item348}}/drink/0 0 0 0 0 0 0 0 0 0 0/0",
+        "Edibility": 60,
       },
       "Update": "OnTimeChange"
     },
     {
-      "Action": "Load", //46x47
+      "Action": "Load", "Priority": "Low", //46x47
       "Target": "Characters/ReceptionTable1",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ReceptionTable1.png"
     },
     {
-      "Action": "Load", //46x47
+      "Action": "Load", "Priority": "Low", //46x47
       "Target": "Characters/ReceptionTable2",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ReceptionTable2.png"
     },
     {
-      "Action": "Load", //46x47
+      "Action": "Load", "Priority": "Low", //46x47
       "Target": "Characters/ReceptionTable3",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ReceptionTable3.png"
     },
     {
-      "Action": "Load", //16x32
+      "Action": "Load", "Priority": "Low", //16x32
       "Target": "Characters/ArtGuy",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/ArtGuy.png"
     },
@@ -496,37 +501,61 @@
         "5407917/w sunny/z winter/z spring/z summer/t 600 1700": "none/-500 -500/farmer 54 52 2 Susan 52 52 2 MarlonFay 14 19 0 Linus 53 14 2/addTemporaryActor SusanBigPumpkin 48 55 51 55 2 false/positionOffset SusanBigPumpkin -3 -5/addTemporaryActor SusanBigPumpkin 48 55 55 56 2 false/addTemporaryActor SusanBigPumpkin 48 55 53 59 2 false/pause 500/playMusic playful/pause 400/viewport 53 53 clamp true/pause 1500/jump Susan/pause 1000/speak Susan \"{{i18n:Susan.OrderEvent.Fall.01}}\"/pause 1500/faceDirection Susan 1 true/pause 625/faceDirection farmer 3 true/stopMusic/pause 500/speak Susan \"{{i18n:Susan.OrderEvent.02}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_SusanHouse/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic/warp MarlonFay -100 -100/warp Linus -100 -100/warp Susan 3 15/warp farmer 5 15/faceDirection Susan 0 true/faceDirection farmer 3 true/positionOffset farmer 10 10/viewport 10 16 clamp true/pause 2000/faceDirection Susan 1 true/pause 500/speak Susan \"{{i18n:Susan.OrderEvent.03}}\"/pause 750/move Susan 1 0 1/pause 600/playSound newRecipe/showFrame Susan 5 true/pause 200/shake Susan 400/pause 600/move Susan 0 0 1/pause 500/playSound reward/message \"{{i18n:Susan.OrderEvent.04}}\"/pause 800/speak Susan \"{{i18n:Susan.OrderEvent.05}}\"/pause 750/showFrame farmer 97 true/pause 500/friendship Susan 125/globalFade/viewport -1000 -1000/end dialogue Susan \"{{i18n:Susan.OrderEvent.06}}\""
       }
     },
-    { //pale ale, mead, and beer sale price increases 50%
+    //pale ale, mead, and beer sale price increases 50%
+    {
       "Action": "EditData",
-      "Target": "Data/objectinformation",
+      "Target": "Data/Objects",
       "When": {
-        "HasSeenEvent": "5407917"
+        "HasSeenEvent: anyPlayer| contains=5407917": true,
       },
-      "Fields": {
-        "303": {
-          1: "450"
-        }, //pale ale
-        "459": {
-          1: "300"
-        }, //mead
-        "346": {
-          1: "300"
-        }, //beer
+      "TargetField": [
+        303
+      ],
+      "Entries": {
+        "Price": 450
       },
       "Update": "OnTimeChange"
     },
     {
-      "Action": "Load", //48x55
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "When": {
+        "HasSeenEvent: anyPlayer| contains=5407917": true,
+      },
+      "TargetField": [
+        459
+      ],
+      "Entries": {
+        "Price": 450
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "When": {
+        "HasSeenEvent: anyPlayer| contains=5407917": true,
+      },
+      "TargetField": [
+        346
+      ],
+      "Entries": {
+        "Price": 300
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "Load", "Priority": "Low", //48x55
       "Target": "Characters/SusanBigCauliflower",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SusanBigCauliflower.png"
     },
     {
-      "Action": "Load", //48x55
+      "Action": "Load", "Priority": "Low", //48x55
       "Target": "Characters/SusanBigMelon",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SusanBigMelon.png"
     },
     {
-      "Action": "Load", //48x55
+      "Action": "Load", "Priority": "Low", //48x55
       "Target": "Characters/SusanBigPumpkin",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SusanBigPumpkin.png"
     },
@@ -666,6 +695,13 @@
         "5407919/e 5515272/e 5407918/z winter/t 1000 1800": "none/-500 -500/Sophia 15 24 0 farmer 16 24 0 Pierre 24 55 2 Caroline 25 55 2/pause 500/playMusic kindadumbautumn/pause 500/positionOffset Sophia 7 -7/viewport 16 25 clamp true/pause 1750/jump Sophia/pause 800/jump Sophia/pause 300/faceDirection farmer 3 true/pause 900/faceDirection Sophia 1 true/pause 500/speak Sophia \"{{i18n:Sophia.OrderEvent2.Married.01}}\"/pause 600/showFrame farmer 101 true/showFrame Sophia 28 true/playSound dwop/specificTemporarySprite heart 16 23/pause 2000/move farmer 0 0 3/showFrame Sophia 4 true/pause 500/speak Sophia \"{{i18n:Sophia.OrderEvent2.Married.02}}\"/pause 600/showFrame farmer 97 true/pause 1000/move farmer 0 0 3/pause 400/speak Sophia \"{{i18n:Sophia.OrderEvent2.Married.03}}\"/pause 500/emote farmer 32/pause 600/speak Sophia \"{{i18n:Sophia.OrderEvent2.Married.04}}\"/pause 800/faceDirection Sophia 0 true/pause 750/faceDirection farmer 0 true/pause 500/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 750/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/positionOffset Sophia 1 0/pause 50/pause 600/emote Sophia 20/globalFade/viewport -1000 -1000 true/pause 1000/playSound reward/message \"{{i18n:Sophia.OrderEvent2.Married.05}}\"/pause 1000/end dialogue Sophia \"{{i18n:Sophia.OrderEvent2.Married.06}}\""
       }
     },
+    { //Recognizes 1000 monsters killed to gate Marlon special order
+      "Action": "EditData",
+      "Target": "data/events/town",
+      "Entries": {
+        "5555295/gameStateQuery PLAYER_STAT Any monstersKilled 1000/H": "continue/-200 -200/farmer -20 -20 2 MarlonFay -21 -21 0/pause 50/end"
+      }
+    },
     { //Marlons's special order
       "Action": "EditData",
       "Target": "Data/SpecialOrders",
@@ -675,7 +711,7 @@
           "Requester": "MarlonFay",
           "Duration": "Month",
           "Repeatable": "False",
-          "RequiredTags": "!event_5407921",
+          "RequiredTags": "!event_5407921, event_5555295",
           "OrderType": "",
           "SpecialRule": "",
           "Text": "[MarlonFay_Text]",
@@ -771,11 +807,11 @@
         "HasFlag": "CompletedCamillaTask"
       },
       "Entries": {
-        "5407921/t 600 1800": "continue/-500 -500/MarlonFay 30 25 0 Jadu -50 -50 0 farmer 33 25 3 Abigail 35 26 2/addTemporaryActor BombCrate 32 32 29 24 2 false/positionOffset BombCrate 0 16/showFrame Abigail 80 true/addTemporaryActor GilSprite 19 32 35 26 2/pause 800/viewport 32 25 clamp true/pause 1750/emote MarlonFay 40/pause 800/faceDirection MarlonFay 1 true/pause 500/Speed MarlonFay 1/move MarlonFay 1 0 1/pause 400/speak MarlonFay \"{{i18n:Marlon.OrderEvent.01}}\"/pause 600/screenFlash 2/playSound wand/warp Jadu 32 30/pause 400/faceDirection MarlonFay 2 true/pause 250/faceDirection farmer 2 true/pause 300/Speed Jadu 1/move Jadu 0 -3 0/playMusic FlashShifter.StardewValleyExpandedCP_CamillasTower/pause 1000/speak Jadu \"{{i18n:Marlon.OrderEvent.02}}\"/pause 500/textAboveHead Abigail \"{{i18n:Marlon.OrderEvent.03}}\"/pause 1500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.04}}\"/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.05}}\"/pause 400/advancedMove Jadu false -2 0 0 -1 -1 0 0 -1/pause 500/faceDirection farmer 3 true/pause 500/faceDirection MarlonFay 3 true/pause 500/move farmer -1 0 0/move farmer 0 -1 3/pause 150/showFrame Jadu 8 true/pause 1350/speak Jadu \"{{i18n:Marlon.OrderEvent.06}}\"/pause 1500/showFrame Jadu 4 true/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.07}}\"/pause 1250/showFrame Jadu 8 true/pause 600/showFrame Jadu 11 true/pause 400/shake Jadu 1000/pause 400/playSound wand/screenFlash 1/warp BombCrate -30 -30/pause 1000/showFrame Jadu 8 true/pause 750/showFrame Jadu 4 true/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.08}}\"/pause 1000/showFrame Jadu 0 true/pause 600/showFrame Jadu 19 true/pause 250/showFrame Jadu 16 true/pause 400/shake Jadu 600/stopMusic/pause 250/playSound wand/screenFlash 2/warp Jadu -50 -50/pause 1650/faceDirection MarlonFay 0 true/pause 200/move MarlonFay 0 -1 0/pause 100/faceDirection MarlonFay 1 true/pause 500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.09}}\"/pause 500/globalFade/viewport -1000 -1000/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic/warp GilSprite -30 -30/changeLocation AdventureGuild/warp farmer 4 5/faceDirection farmer 1 true/warp GilSprite -20 -20/warp Abigail -20 -20/warp MarlonFay 5 5/faceDirection MarlonFay 0 true/viewport 7 6 true/pause 1500/shake MarlonFay 500/pause 150/playSound newRecipe/pause 800/faceDirection MarlonFay 3 true/pause 400/speak MarlonFay \"{{i18n:Marlon.OrderEvent.10}}\"/pause 500/playSound reward/message \"{{i18n:Marlon.OrderEvent.11}}\"/pause 500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.12}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogueWarpOut MarlonFay \"{{i18n:Marlon.OrderEvent.13}}\""
+        "5407921/t 600 1800": "continue/-500 -500/MarlonFay 30 25 0 Jadu -50 -50 0 farmer 33 25 3 Abigail 35 26 2/addTemporaryActor BombCrate 32 32 29 24 2 false/positionOffset BombCrate 0 16/showFrame Abigail 55 true/addTemporaryActor GilSprite 19 32 35 26 2/pause 800/viewport 32 25 clamp true/pause 1750/emote MarlonFay 40/pause 800/faceDirection MarlonFay 1 true/pause 500/Speed MarlonFay 1/move MarlonFay 1 0 1/pause 400/speak MarlonFay \"{{i18n:Marlon.OrderEvent.01}}\"/pause 600/screenFlash 2/playSound wand/warp Jadu 32 30/pause 400/faceDirection MarlonFay 2 true/pause 250/faceDirection farmer 2 true/pause 300/Speed Jadu 1/move Jadu 0 -3 0/playMusic FlashShifter.StardewValleyExpandedCP_CamillasTower/pause 1000/speak Jadu \"{{i18n:Marlon.OrderEvent.02}}\"/pause 500/textAboveHead Abigail \"{{i18n:Marlon.OrderEvent.03}}\"/pause 1500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.04}}\"/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.05}}\"/pause 400/advancedMove Jadu false -2 0 0 -1 -1 0 0 -1/pause 500/faceDirection farmer 3 true/pause 500/faceDirection MarlonFay 3 true/pause 500/move farmer -1 0 0/move farmer 0 -1 3/pause 150/showFrame Jadu 8 true/pause 1350/speak Jadu \"{{i18n:Marlon.OrderEvent.06}}\"/pause 1500/showFrame Jadu 4 true/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.07}}\"/pause 1250/showFrame Jadu 8 true/pause 600/showFrame Jadu 11 true/pause 400/shake Jadu 1000/pause 400/playSound wand/screenFlash 1/warp BombCrate -30 -30/pause 1000/showFrame Jadu 8 true/pause 750/showFrame Jadu 4 true/pause 500/speak Jadu \"{{i18n:Marlon.OrderEvent.08}}\"/pause 1000/showFrame Jadu 0 true/pause 600/showFrame Jadu 19 true/pause 250/showFrame Jadu 16 true/pause 400/shake Jadu 600/stopMusic/pause 250/playSound wand/screenFlash 2/warp Jadu -50 -50/pause 1650/faceDirection MarlonFay 0 true/pause 200/move MarlonFay 0 -1 0/pause 100/faceDirection MarlonFay 1 true/pause 500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.09}}\"/pause 500/globalFade/viewport -1000 -1000/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic/warp GilSprite -30 -30/changeLocation AdventureGuild/warp farmer 4 5/faceDirection farmer 1 true/warp GilSprite -20 -20/warp Abigail -20 -20/warp MarlonFay 5 5/faceDirection MarlonFay 0 true/viewport 7 6 true/pause 1500/shake MarlonFay 500/pause 150/playSound newRecipe/pause 800/faceDirection MarlonFay 3 true/pause 400/speak MarlonFay \"{{i18n:Marlon.OrderEvent.10}}\"/pause 500/playSound reward/message \"{{i18n:Marlon.OrderEvent.11}}\"/pause 500/faceDirection MarlonFay 3 true/pause 500/speak MarlonFay \"{{i18n:Marlon.OrderEvent.12}}\"/pause 500/globalFade/viewport -1000 -1000/end dialogueWarpOut MarlonFay \"{{i18n:Marlon.OrderEvent.13}}\""
       }
     },
     {
-      "Action": "Load", //32x32
+      "Action": "Load", "Priority": "Low", //32x32
       "Target": "Characters/BombCrate",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BombCrate.png"
     },
@@ -857,7 +893,7 @@
       "Target": "Maps/Railroad",
       "FromFile": "Assets/Maps/MapPatches/RemoveRailroadBoulder.tbin",
       "When": {
-        "HasSeenEvent": "8050109"
+        "HasSeenEvent: anyPlayer| contains=8050109": true
       },
       "ToArea": {
         "X": 43,
@@ -1029,32 +1065,32 @@
       "Action": "EditData",
       "Target": "data/events/farmhouse",
       "Entries": {
-        "77759254/e 191393/e 1000037/j 138/t 600 630/H": "none/-500 -500/Abigail -301 -301 2/pause 1500/changeLocation Custom_ForestWest/viewport 58 16 true/pause 2000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 1000/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Apples.OrderEvent1.01}}\"/pause 1250/end dialogue Abigail \"{{i18n:Apples.OrderEvent1.02}}\"",
+        "77759254/e 191393/e 1000037/j 138/t 600 2400/H": "none/-500 -500/Abigail -301 -301 2/broadcastEvent/pause 1500/changeLocation Custom_ForestWest/viewport 58 16 true/pause 2000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 1000/globalFade/viewport -1000 -1000/pause 1500/message \"{{i18n:Apples.OrderEvent1.01}}\"/pause 1250/end dialogue Abigail \"{{i18n:Apples.OrderEvent1.02}}\"",
       },
     },
     { //Event #2 - ???          <<Tagged by quest
       "Action": "EditData",
       "Target": "data/events/Custom_AuroraVineyard",
       "Entries": {
-        "77759294/e 77759254/k 7775927/H": "continue/-500 -500/farmer 11 12 0/pause 500/viewport 11 10 true/viewport move 0 -1 2000 true/skippable/move farmer 0 -4 0 true/pause 1000/playSound junimoMeep1/pause 900/playSound junimoMeep1/pause 400/faceDirection farmer 1 true/pause 500/emote farmer 8/pause 300/viewport move 1 0 4500 true/move farmer 9 0 0 true/pause 800/playSound junimoMeep1/pause 1200/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 1750/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/faceDirection farmer 3 true/pause 600/playSound junimoMeep1/pause 600/faceDirection farmer 0 true/pause 300/faceDirection farmer 1 true/pause 400/playSound junimoMeep1/pause 600/faceDirection farmer 0 true/pause 1150/emote farmer 40/pause 600/message \"{{i18n:Apples.OrderEvent2.01}}\"/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/end position 20 8",
+        "77759294/e 77759254/k 7775927/H": "continue/-500 -500/farmer 11 12 0/broadcastEvent/pause 500/viewport 11 10 true/viewport move 0 -1 2000 true/skippable/move farmer 0 -4 0 true/pause 1000/playSound junimoMeep1/pause 900/playSound junimoMeep1/pause 400/faceDirection farmer 1 true/pause 500/emote farmer 8/pause 300/viewport move 1 0 4500 true/move farmer 9 0 0 true/pause 800/playSound junimoMeep1/pause 1200/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 1750/playSound junimoMeep1/pause 1000/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 500/faceDirection farmer 3 true/pause 600/playSound junimoMeep1/pause 600/faceDirection farmer 0 true/pause 300/faceDirection farmer 1 true/pause 400/playSound junimoMeep1/pause 600/faceDirection farmer 0 true/pause 1150/emote farmer 40/pause 600/message \"{{i18n:Apples.OrderEvent2.01}}\"/pause 500/playSound junimoMeep1/pause 400/playSound junimoMeep1/end position 20 8",
       },
     },
     { //Event #3 - The Junimo Scroll     <<Tagged by framework   (player hasn't encounted Camilla at enchanted grove yet)
       "Action": "EditData",
       "Target": "data/events/forest",
       "Entries": {
-        "7775926/e 77759294/k 908078/H": "continue/-500 -500/farmer 20 53 0 Wizard -100 -100 1 Camilla -101 -101 0/skippable/pause 1000/showFrame Wizard 16/viewport 20 50 clamp true/viewport move 0 -1 3250/move farmer 0 -7 0 true/pause 3200/screenFlash 2/playSound wand/warp Wizard 20 44/positionOffset Wizard 20 0/pause 450/jump farmer/pause 500/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.01}}\"/pause 400/emote farmer 40/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.02}}\"/pause 500/emote farmer 8 true/pause 1000/message \"{{i18n:Apples.OrderEvent3.03}}\"/pause 700/faceDirection farmer 3 true/pause 400/showFrame farmer 89 true/pause 500/playSound newRecipe/pause 200/addTemporaryActor JunimoScroll 10 11 20 46 2 false/positionOffset JunimoScroll -15 -5/pause 1500/message \"{{i18n:Apples.OrderEvent3.04}}\"/pause 1000/warp JunimoScroll -50 -50/playSound newRecipe/pause 400/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/playSound doorClose/changeLocation WizardHouse/faceDirection farmer 0 true/pause 200/playSound doorClose/pause 500/warp farmer 10 19/warp Wizard 10 17/faceDirection Wizard 2 true/playMusic WizardSong/pause 1000/viewport 8 18 true/pause 1300/speak Wizard \"{{i18n:Apples.OrderEvent3.06}}\"/pause 700/move farmer 0 -1 0/pause 600/ShowFrame farmer 15/playSound newRecipe/pause 600/move farmer 0 0 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.07}}\"/pause 800/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 200/move farmer 0 1 2/pause 200/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 800/showFrame Wizard 16/pause 800/glow 0 0 255/playSound healSound/pause 1200/playSound healSound/glow 0 255 0/pause 1000/shake Wizard 1000/pause 1000/emote Wizard 12/pause 800/shake Wizard 700/glow 122 122 200/playSound healSound/pause 1500/glow 100 50 20/playSound healSound/pause 1700/showFrame Wizard 0/pause 1800/showFrame Wizard 18/pause 800/speak Wizard \"{{i18n:Apples.OrderEvent3.08}}\"/pause 1000/emote Wizard 40/pause 700/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.09}}\"/pause 700/showFrame Wizard 16/pause 1000/shake Wizard 1000/pause 1700/showFrame Wizard 0/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.10}}\"/pause 400/emote farmer 8/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.11}}\"/screenFlash 2/playSound wand/warp Camilla 10 21/playMusic FlashShifter.StardewValleyExpandedCP_EnchantedWaltz/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 100/jump farmer/showFrame farmer 94 true/pause 900/move farmer 0 0 2/speak Camilla \"{{i18n:Apples.OrderEvent3.12}}\"/pause 200/screenFlash 2/playSound wand/warp Camilla 8 17/faceDirection Camilla 1 true/pause 500/faceDirection Wizard 3 true/pause 400/faceDirection farmer 3 true/pause 300/speak Camilla \"{{i18n:Apples.OrderEvent3.13}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.14}}\"/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.15}}\"/pause 600/move Camilla 1 0 1 true/pause 300/faceDirection farmer 0/pause 700/showFrame Wizard 13/pause 400/showFrame Camilla 20/playSound newRecipe/pause 200/showFrame Wizard 12/pause 2000/playSound healSound/screenFlash 1/pause 600/playSound healSound/screenFlash 1/pause 1000/emote Camilla 48/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.16}}\"/pause 500/showFrame Camilla 4/playSound newRecipe/pause 650/faceDirection Camilla 2 true/pause 500/speak Camilla \"{{i18n:Apples.OrderEvent3.17}}\"/pause 200/emote farmer 32/pause 800/screenFlash 2/playSound wand/warp Camilla 10 21/faceDirection Camilla 0 true/pause 500/faceDirection Wizard 2 true/pause 300/faceDirection farmer 3 true/pause 200/faceDirection farmer 2 true/pause 200/emote farmer 16 true/pause 350/speak Camilla \"{{i18n:Apples.OrderEvent3.18}}\"/screenFlash 2/playSound wand/warp Camilla 8 19/faceDirection Camilla 1 true/pause 300/faceDirection farmer 3 true/pause 200/speak Camilla \"{{i18n:Apples.OrderEvent3.19}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.20}}\"/pause 250/faceDirection Camilla 0 true/pause 300/emote Camilla 12/pause 500/move Camilla 0 -2 1 true/pause 300/faceDirection farmer 0 true/pause 300/faceDirection Wizard 3 true/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.21}}\"/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.22}}\"/speak Camilla \"{{i18n:Apples.OrderEvent3.23}}\"/faceDirection Camilla 1 true/pause 400/showFrame Camilla 17/pause 200/showFrame Camilla 18/pause 200/showFrame Camilla 19/pause 200/screenFlash 2/playSound wand/warp Camilla -300 -300/stopMusic/pause 1200/emote Wizard 40/pause 600/playMusic WizardSong/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.24}}\"/pause 1000/showFrame Wizard 18/pause 600/shake Wizard 600/pause 1000/showFrame Wizard 0/pause 500/move Wizard -2 0 2/move Wizard 0 1 3 true/pause 200/faceDirection farmer 3 true/pause 150/move Wizard -1 0 2/move Wizard 0 1 3/move Wizard -1 0 3/pause 1000/speak Wizard \"{{i18n:Apples.OrderEvent3.25}}\"/pause 800/faceDirection Wizard 2/pause 700/showFrame Wizard 18/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.26}}\"/pause 700/showFrame Wizard 0/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.27}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1400/end dialogue Wizard \"{{i18n:Apples.OrderEvent3.28}}\"",
+        "7775926/e 77759294/k 908078/H": "continue/-500 -500/farmer 20 53 0 Wizard -100 -100 1 Camilla -101 -101 0/broadcastEvent/skippable/pause 1000/showFrame Wizard 16/viewport 20 50 clamp true/viewport move 0 -1 3250/move farmer 0 -7 0 true/pause 3200/screenFlash 2/playSound wand/warp Wizard 20 44/positionOffset Wizard 20 0/pause 450/jump farmer/pause 500/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.01}}\"/pause 400/emote farmer 40/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.02}}\"/pause 500/emote farmer 8 true/pause 1000/message \"{{i18n:Apples.OrderEvent3.03}}\"/pause 700/faceDirection farmer 3 true/pause 400/showFrame farmer 89 true/pause 500/playSound newRecipe/pause 200/addTemporaryActor JunimoScroll 10 11 20 46 2 false/positionOffset JunimoScroll -15 -5/pause 1500/message \"{{i18n:Apples.OrderEvent3.04}}\"/pause 1000/warp JunimoScroll -50 -50/playSound newRecipe/pause 400/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/playSound doorClose/changeLocation WizardHouse/faceDirection farmer 0 true/pause 200/playSound doorClose/pause 500/warp farmer 10 19/warp Wizard 10 17/faceDirection Wizard 2 true/playMusic WizardSong/pause 1000/viewport 8 18 true/pause 1300/speak Wizard \"{{i18n:Apples.OrderEvent3.06}}\"/pause 700/move farmer 0 -1 0/pause 600/ShowFrame farmer 15/playSound newRecipe/pause 600/move farmer 0 0 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.07}}\"/pause 800/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 200/move farmer 0 1 2/pause 200/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 800/showFrame Wizard 16/pause 800/glow 0 0 255/playSound healSound/pause 1200/playSound healSound/glow 0 255 0/pause 1000/shake Wizard 1000/pause 1000/emote Wizard 12/pause 800/shake Wizard 700/glow 122 122 200/playSound healSound/pause 1500/glow 100 50 20/playSound healSound/pause 1700/showFrame Wizard 0/pause 1800/showFrame Wizard 18/pause 800/speak Wizard \"{{i18n:Apples.OrderEvent3.08}}\"/pause 1000/emote Wizard 40/pause 700/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.09}}\"/pause 700/showFrame Wizard 16/pause 1000/shake Wizard 1000/pause 1700/showFrame Wizard 0/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.10}}\"/pause 400/emote farmer 8/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.11}}\"/screenFlash 2/playSound wand/warp Camilla 10 21/playMusic FlashShifter.StardewValleyExpandedCP_EnchantedWaltz/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 100/jump farmer/showFrame farmer 94 true/pause 900/move farmer 0 0 2/speak Camilla \"{{i18n:Apples.OrderEvent3.12}}\"/pause 200/screenFlash 2/playSound wand/warp Camilla 8 17/faceDirection Camilla 1 true/pause 500/faceDirection Wizard 3 true/pause 400/faceDirection farmer 3 true/pause 300/speak Camilla \"{{i18n:Apples.OrderEvent3.13}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.14}}\"/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.15}}\"/pause 600/move Camilla 1 0 1 true/pause 300/faceDirection farmer 0/pause 700/showFrame Wizard 13/pause 400/showFrame Camilla 20/playSound newRecipe/pause 200/showFrame Wizard 12/pause 2000/playSound healSound/screenFlash 1/pause 600/playSound healSound/screenFlash 1/pause 1000/emote Camilla 48/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.16}}\"/pause 500/showFrame Camilla 4/playSound newRecipe/pause 650/faceDirection Camilla 2 true/pause 500/speak Camilla \"{{i18n:Apples.OrderEvent3.17}}\"/pause 200/emote farmer 32/pause 800/screenFlash 2/playSound wand/warp Camilla 10 21/faceDirection Camilla 0 true/pause 500/faceDirection Wizard 2 true/pause 300/faceDirection farmer 3 true/pause 200/faceDirection farmer 2 true/pause 200/emote farmer 16 true/pause 350/speak Camilla \"{{i18n:Apples.OrderEvent3.18}}\"/screenFlash 2/playSound wand/warp Camilla 8 19/faceDirection Camilla 1 true/pause 300/faceDirection farmer 3 true/pause 200/speak Camilla \"{{i18n:Apples.OrderEvent3.19}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.20}}\"/pause 250/faceDirection Camilla 0 true/pause 300/emote Camilla 12/pause 500/move Camilla 0 -2 1 true/pause 300/faceDirection farmer 0 true/pause 300/faceDirection Wizard 3 true/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.21}}\"/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.22}}\"/speak Camilla \"{{i18n:Apples.OrderEvent3.23}}\"/faceDirection Camilla 1 true/pause 400/showFrame Camilla 17/pause 200/showFrame Camilla 18/pause 200/showFrame Camilla 19/pause 200/screenFlash 2/playSound wand/warp Camilla -300 -300/stopMusic/pause 1200/emote Wizard 40/pause 600/playMusic WizardSong/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.24}}\"/pause 1000/showFrame Wizard 18/pause 600/shake Wizard 600/pause 1000/showFrame Wizard 0/pause 500/move Wizard -2 0 2/move Wizard 0 1 3 true/pause 200/faceDirection farmer 3 true/pause 150/move Wizard -1 0 2/move Wizard 0 1 3/move Wizard -1 0 3/pause 1000/speak Wizard \"{{i18n:Apples.OrderEvent3.25}}\"/pause 800/faceDirection Wizard 2/pause 700/showFrame Wizard 18/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.26}}\"/pause 700/showFrame Wizard 0/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.27}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1400/end dialogue Wizard \"{{i18n:Apples.OrderEvent3.28}}\"",
       },
     },
     { //Event #3 - The Junimo Scroll     <<Tagged by framework   (player encounted Camilla at enchanted grove)
       "Action": "EditData",
       "Target": "data/events/forest",
       "Entries": {
-        "7775926/e 77759294/e 908078/H": "continue/-500 -500/farmer 20 53 0 Wizard -100 -100 1 Camilla -101 -101 0/skippable/pause 1000/showFrame Wizard 16/viewport 20 50 clamp true/viewport move 0 -1 3250/move farmer 0 -7 0 true/pause 3200/screenFlash 2/playSound wand/warp Wizard 20 44/positionOffset Wizard 20 0/pause 450/jump farmer/pause 500/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.01}}\"/pause 400/emote farmer 40/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.02}}\"/pause 500/emote farmer 8 true/pause 1000/message \"{{i18n:Apples.OrderEvent3.03}}\"/pause 700/faceDirection farmer 3 true/pause 400/showFrame farmer 89 true/pause 500/playSound newRecipe/pause 200/addTemporaryActor JunimoScroll 10 11 20 46 2 false/positionOffset JunimoScroll -15 -5/pause 1500/message \"{{i18n:Apples.OrderEvent3.04}}\"/pause 1000/warp JunimoScroll -50 -50/playSound newRecipe/pause 400/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/playSound doorClose/changeLocation WizardHouse/faceDirection farmer 0 true/pause 200/playSound doorClose/pause 500/warp farmer 10 19/warp Wizard 10 17/faceDirection Wizard 2 true/playMusic WizardSong/pause 1000/viewport 8 18 true/pause 1300/speak Wizard \"{{i18n:Apples.OrderEvent3.06}}\"/pause 700/move farmer 0 -1 0/pause 600/ShowFrame farmer 15/playSound newRecipe/pause 600/move farmer 0 0 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.07}}\"/pause 800/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 200/move farmer 0 1 2/pause 200/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 800/showFrame Wizard 16/pause 800/glow 0 0 255/playSound healSound/pause 1200/playSound healSound/glow 0 255 0/pause 1000/shake Wizard 1000/pause 1000/emote Wizard 12/pause 800/shake Wizard 700/glow 122 122 200/playSound healSound/pause 1500/glow 100 50 20/playSound healSound/pause 1700/showFrame Wizard 0/pause 1800/showFrame Wizard 18/pause 800/speak Wizard \"{{i18n:Apples.OrderEvent3.08}}\"/pause 1000/emote Wizard 40/pause 700/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.09}}\"/pause 700/showFrame Wizard 16/pause 1000/shake Wizard 1000/pause 1700/showFrame Wizard 0/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.10}}\"/pause 400/emote farmer 8/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.11}}\"/screenFlash 2/playSound wand/warp Camilla 10 21/playMusic FlashShifter.StardewValleyExpandedCP_EnchantedWaltz/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 100/jump farmer/showFrame farmer 94 true/pause 900/move farmer 0 0 2/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.12}}\"/pause 200/screenFlash 2/playSound wand/warp Camilla 8 17/faceDirection Camilla 1 true/pause 500/faceDirection Wizard 3 true/pause 400/faceDirection farmer 3 true/pause 300/speak Camilla \"{{i18n:Apples.OrderEvent3.13}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.14}}\"/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.15}}\"/pause 600/move Camilla 1 0 1 true/pause 300/faceDirection farmer 0/pause 700/showFrame Wizard 13/pause 400/showFrame Camilla 20/playSound newRecipe/pause 200/showFrame Wizard 12/pause 2000/playSound healSound/screenFlash 1/pause 600/playSound healSound/screenFlash 1/pause 1000/emote Camilla 48/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.16}}\"/pause 500/showFrame Camilla 4/playSound newRecipe/pause 650/faceDirection Camilla 2 true/pause 500/speak Camilla \"{{i18n:Apples.OrderEvent3.17}}\"/pause 200/emote farmer 32/pause 800/screenFlash 2/playSound wand/warp Camilla 10 21/faceDirection Camilla 0 true/pause 500/faceDirection Wizard 2 true/pause 300/faceDirection farmer 3 true/pause 200/faceDirection farmer 2 true/pause 200/emote farmer 16 true/pause 350/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.18}}\"/screenFlash 2/playSound wand/warp Camilla 8 19/faceDirection Camilla 1 true/pause 300/faceDirection farmer 3 true/pause 200/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.19}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.20}}\"/pause 250/faceDirection Camilla 0 true/pause 300/emote Camilla 12/pause 500/move Camilla 0 -2 1 true/pause 300/faceDirection farmer 0 true/pause 300/faceDirection Wizard 3 true/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.21}}\"/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.22}}\"/speak Camilla \"{{i18n:Apples.OrderEvent3.23}}\"/faceDirection Camilla 1 true/pause 400/showFrame Camilla 17/pause 200/showFrame Camilla 18/pause 200/showFrame Camilla 19/pause 200/screenFlash 2/playSound wand/warp Camilla -300 -300/stopMusic/pause 1200/emote Wizard 40/pause 600/playMusic WizardSong/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.24}}\"/pause 1000/showFrame Wizard 18/pause 600/shake Wizard 600/pause 1000/showFrame Wizard 0/pause 500/move Wizard -2 0 2/move Wizard 0 1 3 true/pause 200/faceDirection farmer 3 true/pause 150/move Wizard -1 0 2/move Wizard 0 1 3/move Wizard -1 0 3/pause 1000/speak Wizard \"{{i18n:Apples.OrderEvent3.25}}\"/pause 800/faceDirection Wizard 2/pause 700/showFrame Wizard 18/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.26}}\"/pause 700/showFrame Wizard 0/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.27}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1400/end dialogue Wizard \"{{i18n:Apples.OrderEvent3.28}}\"",
+        "7775926/e 77759294/e 908078/H": "continue/-500 -500/farmer 20 53 0 Wizard -100 -100 1 Camilla -101 -101 0/broadcastEvent/skippable/pause 1000/showFrame Wizard 16/viewport 20 50 clamp true/viewport move 0 -1 3250/move farmer 0 -7 0 true/pause 3200/screenFlash 2/playSound wand/warp Wizard 20 44/positionOffset Wizard 20 0/pause 450/jump farmer/pause 500/faceDirection Wizard 2 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.01}}\"/pause 400/emote farmer 40/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.02}}\"/pause 500/emote farmer 8 true/pause 1000/message \"{{i18n:Apples.OrderEvent3.03}}\"/pause 700/faceDirection farmer 3 true/pause 400/showFrame farmer 89 true/pause 500/playSound newRecipe/pause 200/addTemporaryActor JunimoScroll 10 11 20 46 2 false/positionOffset JunimoScroll -15 -5/pause 1500/message \"{{i18n:Apples.OrderEvent3.04}}\"/pause 1000/warp JunimoScroll -50 -50/playSound newRecipe/pause 400/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.05}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/playSound doorClose/changeLocation WizardHouse/faceDirection farmer 0 true/pause 200/playSound doorClose/pause 500/warp farmer 10 19/warp Wizard 10 17/faceDirection Wizard 2 true/playMusic WizardSong/pause 1000/viewport 8 18 true/pause 1300/speak Wizard \"{{i18n:Apples.OrderEvent3.06}}\"/pause 700/move farmer 0 -1 0/pause 600/ShowFrame farmer 15/playSound newRecipe/pause 600/move farmer 0 0 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.07}}\"/pause 800/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 200/move farmer 0 1 2/pause 200/faceDirection farmer 1 true/pause 250/faceDirection farmer 0 true/pause 800/showFrame Wizard 16/pause 800/glow 0 0 255/playSound healSound/pause 1200/playSound healSound/glow 0 255 0/pause 1000/shake Wizard 1000/pause 1000/emote Wizard 12/pause 800/shake Wizard 700/glow 122 122 200/playSound healSound/pause 1500/glow 100 50 20/playSound healSound/pause 1700/showFrame Wizard 0/pause 1800/showFrame Wizard 18/pause 800/speak Wizard \"{{i18n:Apples.OrderEvent3.08}}\"/pause 1000/emote Wizard 40/pause 700/showFrame Wizard 0/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.09}}\"/pause 700/showFrame Wizard 16/pause 1000/shake Wizard 1000/pause 1700/showFrame Wizard 0/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.10}}\"/pause 400/emote farmer 8/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.11}}\"/screenFlash 2/playSound wand/warp Camilla 10 21/playMusic FlashShifter.StardewValleyExpandedCP_EnchantedWaltz/pause 300/faceDirection farmer 1 true/pause 200/faceDirection farmer 2 true/pause 100/jump farmer/showFrame farmer 94 true/pause 900/move farmer 0 0 2/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.12}}\"/pause 200/screenFlash 2/playSound wand/warp Camilla 8 17/faceDirection Camilla 1 true/pause 500/faceDirection Wizard 3 true/pause 400/faceDirection farmer 3 true/pause 300/speak Camilla \"{{i18n:Apples.OrderEvent3.13}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.14}}\"/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.15}}\"/pause 600/move Camilla 1 0 1 true/pause 300/faceDirection farmer 0/pause 700/showFrame Wizard 13/pause 400/showFrame Camilla 20/playSound newRecipe/pause 200/showFrame Wizard 12/pause 2000/playSound healSound/screenFlash 1/pause 600/playSound healSound/screenFlash 1/pause 1000/emote Camilla 48/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.16}}\"/pause 500/showFrame Camilla 4/playSound newRecipe/pause 650/faceDirection Camilla 2 true/pause 500/speak Camilla \"{{i18n:Apples.OrderEvent3.17}}\"/pause 200/emote farmer 32/pause 800/screenFlash 2/playSound wand/warp Camilla 10 21/faceDirection Camilla 0 true/pause 500/faceDirection Wizard 2 true/pause 300/faceDirection farmer 3 true/pause 200/faceDirection farmer 2 true/pause 200/emote farmer 16 true/pause 350/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.18}}\"/screenFlash 2/playSound wand/warp Camilla 8 19/faceDirection Camilla 1 true/pause 300/faceDirection farmer 3 true/pause 200/speak Camilla \"{{i18n:Apples.OrderEvent3.Alt.19}}\"/speak Wizard \"{{i18n:Apples.OrderEvent3.20}}\"/pause 250/faceDirection Camilla 0 true/pause 300/emote Camilla 12/pause 500/move Camilla 0 -2 1 true/pause 300/faceDirection farmer 0 true/pause 300/faceDirection Wizard 3 true/pause 400/speak Camilla \"{{i18n:Apples.OrderEvent3.21}}\"/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.22}}\"/speak Camilla \"{{i18n:Apples.OrderEvent3.23}}\"/faceDirection Camilla 1 true/pause 400/showFrame Camilla 17/pause 200/showFrame Camilla 18/pause 200/showFrame Camilla 19/pause 200/screenFlash 2/playSound wand/warp Camilla -300 -300/stopMusic/pause 1200/emote Wizard 40/pause 600/playMusic WizardSong/pause 200/faceDirection Wizard 2 true/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.24}}\"/pause 1000/showFrame Wizard 18/pause 600/shake Wizard 600/pause 1000/showFrame Wizard 0/pause 500/move Wizard -2 0 2/move Wizard 0 1 3 true/pause 200/faceDirection farmer 3 true/pause 150/move Wizard -1 0 2/move Wizard 0 1 3/move Wizard -1 0 3/pause 1000/speak Wizard \"{{i18n:Apples.OrderEvent3.25}}\"/pause 800/faceDirection Wizard 2/pause 700/showFrame Wizard 18/pause 400/speak Wizard \"{{i18n:Apples.OrderEvent3.26}}\"/pause 700/showFrame Wizard 0/pause 500/faceDirection Wizard 1 true/pause 500/speak Wizard \"{{i18n:Apples.OrderEvent3.27}}\"/pause 500/globalFade/viewport -1000 -1000/stopMusic/pause 1400/end dialogue Wizard \"{{i18n:Apples.OrderEvent3.28}}\"",
       },
     },
     { //adds Junimo Scroll temp actor   >>10x11
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/JunimoScroll",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JunimoScroll.png"
     },
@@ -1065,7 +1101,7 @@
         "HasFlag": "ApplesNowHappy"
       },
       "Entries": {
-        "7775925/e 7775926/H": "none/-500 -500/farmer -300 -300 2/pause 1200/changeLocation Custom_ForestWest/viewport 58 16 true/pause 1500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/glow 0 255 0/pause 150/playSound healSound/pause 800/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/glow 0 225 0/pause 150/playSound healSound/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Apples.OrderEvent4.01}}\"/pause 1000/addConversationTopic VineyardOvergrown 28/end",
+        "7775925/e 7775926/H": "none/-500 -500/farmer -300 -300 2/broadcastEvent/pause 1200/changeLocation Custom_ForestWest/viewport 58 16 true/pause 1500/playSound junimoMeep1/pause 300/playSound junimoMeep1/pause 400/glow 0 255 0/pause 150/playSound healSound/pause 800/playSound junimoMeep1/pause 600/playSound junimoMeep1/pause 700/glow 0 225 0/pause 150/playSound healSound/pause 700/playSound junimoMeep1/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:Apples.OrderEvent4.01}}\"/pause 1000/addConversationTopic VineyardOvergrown 28/end",
       },
     },
     { //Overgrows vineyard exterior
@@ -1080,8 +1116,7 @@
       },
       "When": {
         "HasSeenEvent |contains=7775925": true,
-        "HasSeenEvent |contains=746153083": false,
-        "HasSeenEvent |contains=7776012": false
+        "HasFlag |contains=PlayerWantsAuroraVineyard": false
       },
       "Update": "OnLocationChange"
     },
@@ -1096,7 +1131,7 @@
       "Action": "EditData",
       "Target": "data/events/Custom_AuroraVineyard",
       "Entries": {
-        "7775927/e 7775925/H": "communityCenter/-500 -500/farmer -300 -300 0 Apples -100 -100 2/pause 500/viewport 16 10 true/viewport move 0 1 6000 true/skippable/pause 4000/playSound doorClose/warp farmer 14 22/pause 800/move farmer 0 -4 0/pause 1000/faceDirection farmer 3/pause 1100/faceDirection farmer 0 true/pause 300/faceDirection farmer 1/pause 1250/move farmer 7 0 2/pause 1500/emote farmer 8/pause 500/move farmer 0 3 2/warp farmer -200 -200/playSound stairsdown/pause 750/globalFade/viewport -1000 -1000/changeLocation Custom_ApplesRoom/warp Apples 5 8/showFrame Apples 32/viewport 9 8 true/pause 4000/warp farmer 14 5/playSound stairsdown/pause 500/move farmer 0 3 2/pause 270/faceDirection farmer 3 true/pause 2250/move farmer -5 0 3/pause 1000/stopMusic/pause 1000/shake Apples 500/pause 1000/shake Apples 1000/pause 1000/showFrame Apples 0/playSound pickUpItem/jump Apples/pause 1200/playMusic junimoStarSong/playSound junimoMeep1/pause 800/faceDirection Apples 1 true/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.01}}\"/pause 800/move Apples 2 0 1/pause 800/playSound junimoMeep1/pause 700/playSound junimoMeep1/jump Apples/pause 800/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.02}}\"/pause 500/playSound junimoMeep1/pause 200/move Apples 1 0 1/pause 500/playSound junimoMeep1/jump Apples/pause 1000/move Apples 0 1 1/move Apples 2 0 0 true/pause 300/faceDirection farmer 2 true/pause 400/playSound junimoMeep1/pause 300/move Apples 0 -2 3 true/pause 300/faceDirection farmer 1 true/pause 700/move Apples -2 0 2 true/pause 200/playSound junimoMeep1/pause 100/faceDirection farmer 0 true/pause 700/move Apples 0 2 1 true/pause 300/faceDirection farmer 3 true/pause 700/move Apples 1 0 0 true/pause 250/faceDirection farmer 2 true/pause 500/jump Apples/pause 1000/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.03}}\"/pause 650/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 500/speak Apples \"{{i18n:Apples.OrderEvent5.04}}\"/pause 500/playSound junimoMeep1/pause 500/jump Apples/pause 900/jump Apples/pause 200/playSound junimoMeep1/pause 700/faceDirection Apples 1 true/pause 250/faceDirection Apples 2 true/pause 400/animate Apples false true 200 24 25 24 27/pause 800/playSound junimoMeep1/pause 500/animate farmer false true 300 102 103/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 1200/globalFade/viewport -1000 -1000/pause 1250/message \"{{i18n:Apples.OrderEvent5.05}}\"/pause 1200/message \"{{i18n:Apples.OrderEvent5.06}}\"/pause 1000/end dialogue Wizard \"{{i18n:Apples.OrderEvent5.07}}\""
+        "7775927/e 7775925/H": "communityCenter/-500 -500/farmer -300 -300 0 Apples -100 -100 2/broadcastEvent/pause 500/viewport 16 10 true/viewport move 0 1 6000 true/skippable/pause 4000/playSound doorClose/warp farmer 14 22/pause 800/move farmer 0 -4 0/pause 1000/faceDirection farmer 3/pause 1100/faceDirection farmer 0 true/pause 300/faceDirection farmer 1/pause 1250/move farmer 7 0 2/pause 1500/emote farmer 8/pause 500/move farmer 0 3 2/warp farmer -200 -200/playSound stairsdown/pause 750/globalFade/viewport -1000 -1000/changeLocation Custom_ApplesRoom/warp Apples 5 8/showFrame Apples 32/viewport 9 8 true/pause 4000/warp farmer 14 5/playSound stairsdown/pause 500/move farmer 0 3 2/pause 270/faceDirection farmer 3 true/pause 2250/move farmer -5 0 3/pause 1000/stopMusic/pause 1000/shake Apples 500/pause 1000/shake Apples 1000/pause 1000/showFrame Apples 0/playSound pickUpItem/jump Apples/pause 1200/playMusic junimoStarSong/playSound junimoMeep1/pause 800/faceDirection Apples 1 true/pause 700/playSound junimoMeep1/pause 600/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.01}}\"/pause 800/move Apples 2 0 1/pause 800/playSound junimoMeep1/pause 700/playSound junimoMeep1/jump Apples/pause 800/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.02}}\"/pause 500/playSound junimoMeep1/pause 200/move Apples 1 0 1/pause 500/playSound junimoMeep1/jump Apples/pause 1000/move Apples 0 1 1/move Apples 2 0 0 true/pause 300/faceDirection farmer 2 true/pause 400/playSound junimoMeep1/pause 300/move Apples 0 -2 3 true/pause 300/faceDirection farmer 1 true/pause 700/move Apples -2 0 2 true/pause 200/playSound junimoMeep1/pause 100/faceDirection farmer 0 true/pause 700/move Apples 0 2 1 true/pause 300/faceDirection farmer 3 true/pause 700/move Apples 1 0 0 true/pause 250/faceDirection farmer 2 true/pause 500/jump Apples/pause 1000/playSound junimoMeep1/speak Apples \"{{i18n:Apples.OrderEvent5.03}}\"/pause 650/playSound junimoMeep1/pause 400/playSound junimoMeep1/pause 500/speak Apples \"{{i18n:Apples.OrderEvent5.04}}\"/pause 500/playSound junimoMeep1/pause 500/jump Apples/pause 900/jump Apples/pause 200/playSound junimoMeep1/pause 700/faceDirection Apples 1 true/pause 250/faceDirection Apples 2 true/pause 400/animate Apples false true 200 24 25 24 27/pause 800/playSound junimoMeep1/pause 500/animate farmer false true 300 102 103/pause 1000/playSound junimoMeep1/pause 700/playSound junimoMeep1/pause 1200/globalFade/viewport -1000 -1000/pause 1250/message \"{{i18n:Apples.OrderEvent5.05}}\"/pause 1200/message \"{{i18n:Apples.OrderEvent5.06}}\"/pause 1000/end dialogue Wizard \"{{i18n:Apples.OrderEvent5.07}}\""
       },
     },
     { //Marlon's boat quest
@@ -1195,6 +1230,20 @@
       "When": {
         "Hearts:Lance": "{{Range: 2, 14}}",
         "HasSeenEvent |contains=6951321": true
+      },
+      "Entries": {
+        "65360182/t 600 1100": "none/-500 -500/farmer -200 -200 0 MarlonFay -30 -30 0/skippable/pause 1500/speak MarlonFay \"{{i18n:Marlon.Boat1.01}}\"/pause 1000/end",
+      },
+    },
+	//Event #1 - Marlon's Boat - Alternate Trigger    <<ID tagged by quest
+    {
+      "Action": "EditData",
+      "Target": "data/events/farm",
+      "When": {
+        "HasSeenEvent |contains=6951321": true,
+		"HasFlag |contains=galaxySword": true,
+		"HasFlag": "ccMovieTheater, ccMovieTheaterJoja",
+		"HasWalletItem": "SkullKey",
       },
       "Entries": {
         "65360182/t 600 1100": "none/-500 -500/farmer -200 -200 0 MarlonFay -30 -30 0/skippable/pause 1500/speak MarlonFay \"{{i18n:Marlon.Boat1.01}}\"/pause 1000/end",

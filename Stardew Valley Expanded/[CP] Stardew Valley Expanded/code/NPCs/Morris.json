@@ -1,6 +1,5 @@
 {
   "Changes": [
-
     {
       "Action": "EditData",
       "Target": "Data/Characters",
@@ -20,11 +19,11 @@
           "CanBeRomanced": false,
           "LoveInterest": "",
           "Calendar": "AlwaysShown",
-          "SocialTab": "AlwaysShown",
-          "CanSocialize": true,
-          "CanVisitIslandCondition": "FALSE",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": false,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": false,
           "EndSlideShow": "TrailingGroup",
           "FriendsAndFamily": {},
           "WinterStarParticipant": false,
@@ -35,8 +34,8 @@
               "Condition": null,
               "Location": "Town",
               "Tile": {
-                "X": 95,
-                "Y": 43
+                "X": 87,
+                "Y": 45
               },
               "Direction": "left"
             }
@@ -64,26 +63,26 @@
         },
       },
     },
+	
     {
       "Action": "EditData",
       "Target": "Data/Characters",
       "When": {
-        "HasSeenEvent": "191393"
+        "IsJojaMartComplete": "true"
       },
-      "Entries": {
-        "MorrisTod":{
-          "CanSocialize": false,
-          "UnlockCondition": false,
-          "SocialTab": "HiddenAlways",    
+      "Fields": {
+        "MorrisTod": {
+          "PerfectionScore": true,
         }
       }
     },
+	
     {
       //Morris' Gift Tastes
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "MorrisTod": "{{i18n:Morris.Gift.Loved}}/730 727 432 578 FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Morris.Gift.Liked}}/72 348 430 428 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Morris.Gift.Disliked}}/346 459 303 -81 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Morris.Gift.Hated}}/167 -74/{{i18n:Morris.Gift.Neutral}}/-75 -79 -80 FlashShifter.StardewValleyExpandedCP_Green_Mushroom/"
+        "MorrisTod": "{{i18n:Morris.Gift.Loved}}/730 727 432 578 FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Money_Bag FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine/{{i18n:Morris.Gift.Liked}}/72 336 348 430 428 FlashShifter.StardewValleyExpandedCP_Gold_Carrot FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Morris.Gift.Disliked}}/346 459 303 -81 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Morris.Gift.Hated}}/167 -74/{{i18n:Morris.Gift.Neutral}}/-75 -79 -80 FlashShifter.StardewValleyExpandedCP_Green_Mushroom/"
       }
     },
     {
@@ -96,43 +95,48 @@
     },
     {
       //Morris' Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/MorrisTod",
       "FromFile": "assets/CharacterFiles/Portraits/Morris/Morris.png"
     },
     {
       //Morris' Portraits - Vanilla
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Morris",
       "FromFile": "assets/CharacterFiles/Portraits/Morris/Morris.png"
     },
     {
       //Morris's Winter Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/MorrisTod_Winter",
       "FromFile": "assets/CharacterFiles/Portraits/Morris/MorrisTod_Winter.png"
     },
     {
       //Andy's Winter Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/MorrisTod_Winter",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Morris/MorrisTod_Winter.png"
     },
     {
       //Morris' Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/MorrisTod",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Morris/Morris.png"
     },
     {
       //Morris' Sprites - Vanilla
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Morris",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Morris/Morris.png"
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/MorrisTod",
+      "FromFile": "Assets/Blank.json"
+    },/*
+    {
       //Morris' Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/MorrisTod",
       "When": {
         "HasSeenEvent |contains=5553210": false
@@ -141,19 +145,19 @@
     },
     {
       //Morris' Mayor Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/MorrisTod",
       "When": {
-        "HasSeenEvent": "5553210"
+        "HasSeenEvent: anyPlayer| contains=5553210": true,
       },
       "FromFile": "assets/CharacterFiles/Schedules/Morris/ScheduleMayor.json"
-    },
+    },*/
     { //Morris' Townhouse Schedule
       "Action": "EditData",
       "Target": "characters/schedules/MorrisTod",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": false
+        "HasSeenEvent: anyPlayer|contains=6663408": true,
+        "HasSeenEvent: anyPlayer|contains=5553210": false
       },
       "Entries": {
         "spring": "0 Custom_MorrisHouse 16 6 2/610 Custom_MorrisHouse 14 25 2/900 JojaMart 24 26 3/2200 Custom_MorrisHouse 16 6 0",
@@ -176,8 +180,8 @@
       "Action": "EditData",
       "Target": "characters/schedules/MorrisTod",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": true
+        "HasSeenEvent: anyPlayer|contains=6663408": true,
+        "HasSeenEvent: |contains=5553210": true
       },
       "Entries": {
         "spring": "0 Custom_MorrisHouse 16 6 2/610 Custom_MorrisHouse 14 25 2/900 JojaMart 24 26 3/2200 Custom_MorrisHouse 16 6 0",
@@ -191,13 +195,12 @@
         "rain": "0 Custom_MorrisHouse 16 6 2/610 Custom_MorrisHouse 14 25 2/1000 JojaMart 24 26 3/2200 Custom_MorrisHouse 16 6 0",
       }
     },
-
     //MOVIE THEATER
     {
       "Action": "EditData",
       "Target": "Data/ConcessionTastes",
       "When": {
-        "HasSeenEvent |contains=191393": false
+        "HasSeenEvent: anyPlayer |contains=191393": false
       },
       "Entries": {
         "MorrisTod": {
@@ -219,7 +222,7 @@
       "Action": "EditData",
       "Target": "Data/MoviesReactions",
       "When": {
-        "HasSeenEvent |contains=191393": false,
+        "HasSeenEvent: anyPlayer |contains=191393": false,
         "HasMod |contains=Tanpoponoko.SeasonalOutfits": false
       },
       "Entries": {
@@ -400,7 +403,7 @@
       },
       "Update": "OnLocationChange",
       "When": {
-        "HasSeenEvent": "6663408"
+        "HasSeenEvent: anyPlayer| contains=6663408": true,
       }
     },
     {
@@ -415,7 +418,7 @@
       },
       "Update": "OnLocationChange",
       "When": {
-        "HasSeenEvent": "6663408"
+        "HasSeenEvent: anyPlayer| contains=6663408": true,
       }
     },
     {
@@ -430,16 +433,16 @@
       },
       "Update": "OnLocationChange",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": false
+        "HasSeenEvent: anyPlayer |contains=6663408": true,
+        "HasSeenEvent: anyPlayer |contains=5553210": false
       }
     },
     {
       "Action": "EditMap",
       "Target": "Maps/Town",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": false
+        "HasSeenEvent: anyPlayer |contains=6663408": true,
+        "HasSeenEvent: anyPlayer |contains=5553210": false
       },
       "Update": "OnLocationChange",
       "TextOperations": [
@@ -458,8 +461,8 @@
       "Action": "EditMap",
       "Target": "Maps/Town",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": false
+        "HasSeenEvent: anyPlayer |contains=6663408": true,
+        "HasSeenEvent: anyPlayer |contains=5553210": false
       },
       "Update": "OnLocationChange",
       "TextOperations": [
@@ -478,8 +481,8 @@
       "Action": "EditMap",
       "Target": "Maps/Town",
       "When": {
-        "HasSeenEvent |contains=6663408": true,
-        "HasSeenEvent |contains=5553210": false
+        "HasSeenEvent: anyPlayer |contains=6663408": true,
+        "HasSeenEvent: anyPlayer |contains=5553210": false
       },
       "Update": "OnLocationChange",
       "TextOperations": [
@@ -498,7 +501,7 @@
       "Action": "EditMap",
       "Target": "Maps/Town",
       "When": {
-        "HasSeenEvent |contains=6663408": true
+        "HasSeenEvent: anyPlayer |contains=6663408": true
       },
       "Update": "OnLocationChange",
       "TextOperations": [
@@ -650,7 +653,7 @@
         "6663501_MoneyIsNotEverything2": "pause 100/stopMusic/pause 350/emote Morris 16 true/pause 300/speak Morris \"{{i18n:Morris.2hearts.MoneyIsNotEverything2.01}}\"/pause 1000/faceDirection Morris 2/pause 1000/showFrame Morris 35/pause 800/speak Morris \"{{i18n:Morris.2hearts.MoneyIsNotEverything2.02}}\"/pause 300/move Morris 0 0 1/pause 400/emote farmer 40 true/pause 250/speak Morris \"{{i18n:Morris.2hearts.MoneyIsNotEverything2.03}}\"/globalFade/viewport -1000 -1000/pause 1200/message \"{{i18n:Morris.2hearts.MoneyIsNotEverything2.04}}\"/pause 800/end",
       },
     },
-    { //MORRIS 4 HEART EVENT ------- ISSUE CHECK THIS FOR SHANE WORK SPRITE ISSUE
+    { //MORRIS 4 HEART EVENT
       "Action": "EditData",
       "Target": "Data/Events/jojamart",
       "When": {
@@ -669,18 +672,18 @@
         "HasSeenEvent |contains=191393": false
       },
       "Entries": {
-        "6663915/k 191393/w sunny/f MorrisTod 1500/t 2400 2600": "spring_night_ambient/-500 -500/farmer 80 53 1 Morris 95 51 0/pause 700/viewport 95 52 true/skippable/move farmer 15 0 0 true/pause 1300/shake Morris 500/playSound openBox/pause 1500/shake Morris 400/playSound openBox/pause 800/speak Morris \"{{i18n:Morris.6hearts.01}}\"/pause 600/emote Morris 12/pause 1000/faceDirection Morris 1 true/pause 250/faceDirection Morris 2 true/pause 400/speak Morris \"{{i18n:Morris.6hearts.02}}\"/pause 400/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 3 true/pause 350/faceDirection Morris 1 true/pause 500/emote farmer 40 true/pause 400/speak Morris \"{{i18n:Morris.6hearts.03}}\"/faceDirection farmer 0/pause 200/startJittering/playSound openBox/pause 180/playSound money/pause 350/stopJittering/pause 200/emote Morris 16 true/pause 300/faceDirection farmer 3/pause 450/speak Morris \"{{i18n:Morris.6hearts.04}}\"/pause 1000/question fork0 \"{{i18n:Morris.6hearts.05}}\"/pause 100/fork 6663915_LongHours/pause 400/speak Morris \"{{i18n:Morris.6hearts.06}}\"/pause 200/globalFade/viewport -1000 -1000/end dialogue Morris \"{{i18n:Morris.6hearts.07}}\"",
+        "6663915/k 191393/w sunny/f MorrisTod 1500/t 2400 2600": "spring_night_ambient/-500 -500/farmer 80 53 1 Morris 95 51 0/pause 700/viewport 95 52 true/skippable/move farmer 15 0 0 true/pause 1300/shake Morris 500/playSound openBox/pause 1500/shake Morris 400/playSound openBox/pause 800/speak Morris \"{{i18n:Morris.6hearts.01}}\"/pause 600/emote Morris 12/pause 1000/faceDirection Morris 1 true/pause 250/faceDirection Morris 2 true/pause 400/speak Morris \"{{i18n:Morris.6hearts.02}}\"/pause 400/move farmer 0 -1 1/move farmer 1 0 0/move farmer 0 -1 3 true/pause 350/faceDirection Morris 1 true/pause 500/emote farmer 40 true/pause 400/speak Morris \"{{i18n:Morris.6hearts.03}}\"/faceDirection farmer 0/pause 200/startJittering/playSound openBox/pause 180/playSound money/pause 350/stopJittering/pause 200/emote Morris 16 true/pause 300/faceDirection farmer 3/pause 450/speak Morris \"{{i18n:Morris.6hearts.04}}\"/pause 1000/question fork0 \"{{i18n:Morris.6hearts.05}}\"/pause 100/fork 6663915_LongHours/pause 400/speak Morris \"{{i18n:Morris.6hearts.06}}\"/pause 200/globalFade/viewport -1000 -1000/end dialogue MorrisTod \"{{i18n:Morris.6hearts.07}}\"",
         "6663915_LongHours": "pause 1000/faceDirection Morris 2/pause 700/move Morris 0 2 2 true/pause 450/faceDirection farmer 2 true/pause 1100/showFrame Morris 32/pause 1500/speak Morris \"{{i18n:Morris.6hearts.LongHours.01}}\"/pause 1000/showFrame Morris 0/pause 800/showFrame Morris 35/pause 1100/speak Morris \"{{i18n:Morris.6hearts.LongHours.02}}\"/pause 600/emote farmer 40 true/pause 800/faceDirection Morris 1 true/pause 250/faceDirection Morris 0 true/pause 450/speak Morris \"{{i18n:Morris.6hearts.LongHours.03}}\"/pause 600/faceDirection Morris 3 true/pause 500/move Morris -8 0 3 true/pause 500/faceDirection farmer 3 true/pause 1000/globalFade/viewport -1000 -1000/halt/pause 1200/message \"{{i18n:Morris.6hearts.LongHours.04}}\"/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.6hearts.LongHours.05}}\"",
       },
     },
-    { //MORRIS 8 HEART EVENT --- won't load shane srpites
+    { //MORRIS 8 HEART EVENT
       "Action": "EditData",
       "Target": "Data/Events/town",
       "When": {
         "HasSeenEvent |contains=191393": false
       },
       "Entries": {
-        "6665290/J/w sunny/t 1000 1800/f MorrisTod 2000": "springtown/-500 -500/farmer 54 36 0 Morris 54 25 0 Olivia 30 22 2 Caroline 29 23 1 Jodi 31 23 3 Penny 18 16 0 Jas 24 12 0 Vincent 18 14 2 Demetrius 27 29 0 Gus 37 14 0 Shane_JojaMart -200 -200 2 Shane -201 -201 2/pause 850/showFrame Morris 39/viewport 54 34 true/skippable/viewport move 0 -2 4500/move farmer 0 -7 0 true/pause 5150/showFrame Morris 38/pause 300/emote Morris 16/pause 150/showFrame Morris 39/pause 800/showFrame Morris 8/playSound bob/pause 900/showFrame Morris 0/pause 500/speak Morris \"{{i18n:Morris.8hearts.01}}\"/pause 600/warp Shane_JojaMart 53 20/playSound doorClose/pause 450/faceDirection Morris 1 true/pause 250/faceDirection Morris 0/move farmer -1 0 0/move farmer 0 -2 0 true/pause 800/move Shane_JojaMart 0 1 2 true/pause 700/speak Shane \"{{i18n:Morris.8hearts.02}}\"/pause 500/speak Morris \"{{i18n:Morris.8hearts.03}}\"/pause 300/emote Shane_JojaMart 16 true/pause 300/speak Shane \"{{i18n:Morris.8hearts.04}}\"/globalFade/viewport -1000 -1000/warp Shane_JojaMart -300 -300/viewport 54 25 true/pause 2000/question fork0 \"{{i18n:Morris.8hearts.05}}\"/pause 400/fork 6665290_ThatWasNice/move Morris 0 0 2/pause 400/speak Morris \"{{i18n:Morris.8hearts.06}}\"/switchEvent 6665290_JojaWarehouse",
+        "6665290/J/w sunny/t 1000 1800/f MorrisTod 2000": "springtown/-500 -500/farmer 54 36 0 Morris 54 25 0 Olivia 30 22 2 Caroline 29 23 1 Jodi 31 23 3 Penny 18 16 0 Jas 24 12 0 Vincent 18 14 2 Demetrius 27 29 0 Gus 37 14 0 Shane -201 -201 2/pause 850/showFrame Morris 39/viewport 54 34 true/skippable/viewport move 0 -2 4500/move farmer 0 -7 0 true/pause 5150/showFrame Morris 38/pause 300/emote Morris 16/pause 150/showFrame Morris 39/pause 800/showFrame Morris 8/playSound bob/pause 900/showFrame Morris 0/pause 500/speak Morris \"{{i18n:Morris.8hearts.01}}\"/pause 600/warp Shane 53 20/playSound doorClose/pause 450/faceDirection Morris 1 true/pause 250/faceDirection Morris 0/move farmer -1 0 0/move farmer 0 -2 0 true/pause 800/move Shane 0 1 2 true/pause 700/speak Shane \"{{i18n:Morris.8hearts.02}}\"/pause 500/speak Morris \"{{i18n:Morris.8hearts.03}}\"/pause 300/emote Shane 16 true/pause 300/speak Shane \"{{i18n:Morris.8hearts.04}}\"/globalFade/viewport -1000 -1000/warp Shane -300 -300/viewport 54 25 true/pause 2000/question fork0 \"{{i18n:Morris.8hearts.05}}\"/pause 400/fork 6665290_ThatWasNice/move Morris 0 0 2/pause 400/speak Morris \"{{i18n:Morris.8hearts.06}}\"/switchEvent 6665290_JojaWarehouse",
         "6665290_ThatWasNice": "faceDirection Morris 1 true/pause 250/faceDirection Morris 2 true/pause 400/speak Morris \"{{i18n:Morris.8hearts.ThatWasNice.01}}\"/pause 900/showFrame Morris 34/pause 1200/showFrame Morris 0/pause 800/speak Morris \"{{i18n:Morris.8hearts.ThatWasNice.02}}\"/switchEvent 6665290_JojaWarehouse",
         "6665290_JojaWarehouse": "pause 500/faceDirection Morris 1 true/pause 250/faceDirection Morris 0 true/pause 300/move Morris 0 -4 2 true/pause 400/move farmer 0 -4 0 true/stopMusic/globalFade/viewport -1000 -1000/pause 100/playSound doorClose/pause 700/playSound doorClose/pause 600/warp Jas -303 -303/warp Vincent -202 -156/warp Olivia -200 -200/warp Caroline -199 -199/warp Jodi -198 -198/warp Demetrius -197 -197/warp Penny -195 -195/warp Gus -150 -150/warp Morris 32 13/warp farmer 32 16/pause 200/changeLocation CommunityCenter/viewport 32 15 true/pause 2100/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.01}}\"/pause 1000/faceDirection Morris 3 true/pause 1000/faceDirection Morris 2 true/pause 350/faceDirection Morris 1 true/pause 1100/faceDirection Morris 2 true/pause 500/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.02}}\"/pause 300/emote farmer 32/pause 600/showFrame Morris 34/pause 800/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.03}}\"/pause 1100/showFrame Morris 0/pause 500/shake Morris 400/pause 500/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.04}}\"/pause 700/move Morris 0 0 2/pause 800/showFrame Morris 32/pause 700/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.05}}\"/pause 500/shake Morris 600/pause 1200/showFrame Morris 0/pause 500/showFrame Morris 28/pause 600/playSound bob/showFrame Morris 29/pause 700/showFrame Morris 30/pause 500/playMusic musicboxsong/pause 500/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.06}}\"/pause 1000/showFrame Morris 27/pause 1000/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.07}}\"/pause 800/showFrame Morris 30/pause 500/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.08}}\"/pause 1000/showFrame Morris 29/pause 600/playSound bob/showFrame Morris 28/pause 600/showFrame Morris 0/pause 1000/speak Morris \"{{i18n:Morris.8hearts.JojaWarehouse.09}}\"/pause 400/emote farmer 32/move farmer 0 -2 0 true/globalFade/viewport -1000 -1000/pause 1200/message \"{{i18n:Morris.8hearts.JojaWarehouse.10}}\"/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.8hearts.JojaWarehouse.11}}\"",
       },
@@ -752,14 +755,14 @@
         "HasFlag": "ccMovieTheaterJoja",
       },
       "Entries": {
-        "6665291/f MorrisTod 2500/e 6665290/e 6663408/y 2/w sunny/H": "continue/-500 -500/farmer -30 -30 0 Pierre -29 -29 0/skippable/pause 1500/speak Pierre \"{{i18n:Morris.10Hearts1.01}}\"/pause 1000/speak Pierre \"{{i18n:Morris.10Hearts1.02}}\"/pause 700/emote farmer 8/pause 150/speak Pierre \"{{i18n:Morris.10Hearts1.03}}\"/pause 700/speak Pierre \"{{i18n:Morris.10Hearts1.04}}\"/pause 500/end dialogue Lewis \"{{i18n:Morris.10Hearts1.05}}\"",
+        "6665291/f MorrisTod 2500/e 6665290/e 6663408/y 2/w sunny/H": "continue/-500 -500/farmer -30 -30 0 Pierre -29 -29 0/broadcastEvent/skippable/pause 1500/speak Pierre \"{{i18n:Morris.10Hearts1.01}}\"/pause 1000/speak Pierre \"{{i18n:Morris.10Hearts1.02}}\"/pause 700/emote farmer 8/pause 150/speak Pierre \"{{i18n:Morris.10Hearts1.03}}\"/pause 700/speak Pierre \"{{i18n:Morris.10Hearts1.04}}\"/pause 500/end dialogue Lewis \"{{i18n:Morris.10Hearts1.05}}\"",
       },
     },
     { //MORRIS 10 HEART EVENT - part 2 - 'campaigning'
       "Action": "EditData",
       "Target": "Data/Events/town",
       "Entries": {
-        "6665292/e 6665291/w sunny/t 900 1700/H": "none/-500 -500/farmer 28 77 0 Morris 28 67 2 Jodi 25 67 1 Kent 25 68 1 Pam 31 67 3 Andy 30 69 0 Demetrius 27 70 0 Robin 28 70 0 Gus 31 68 3/positionOffset Gus -14 25/positionOffset Robin -3 -4/positionOffset Demetrius 3 4/positionOffset Andy -10 20/positionOffset Pam -8 20/positionOffset Kent 7 10/animate Morris false true 4000 0 4 0 12/pause 750/playMusic springtown/pause 600/skippable/viewport 28 75 true/viewport move 0 -1 5000 true/move farmer 0 -5 0 true/pause 900/speak Morris \"{{i18n:Morris.10Hearts2.01}}\"/pause 500/speak Morris \"{{i18n:Morris.10Hearts2.02}}\"/pause 1000/shake Andy 400/textAboveHead Andy \"{{i18n:Morris.10Hearts2.03}}\"/pause 500/shake Jodi 400/textAboveHead Jodi \"{{i18n:Morris.10Hearts2.04}}\"/pause 1080/shake Demetrius 300/textAboveHead Demetrius \"{{i18n:Morris.10Hearts2.05}}\"/pause 400/faceDirection Robin 3 true/pause 600/globalFade/viewport -1000 -1000/warp Demetrius -100 -100/warp Robin -100 -100/warp Andy -100 -100/warp Kent 21 73/warp Jodi 23 73/faceDirection Jodi 3 true/warp Pam 33 65/faceDirection Pam 1 true/warp Gus 35 65/stopAnimation Morris/faceDirection Morris 2 true/pause 300/viewport 28 69 true/pause 400/move farmer 0 -3 0 true/pause 650/speak Morris \"{{i18n:Morris.10Hearts2.06}}\"/pause 700/speak Morris \"{{i18n:Morris.10Hearts2.07}}\"/pause 400/end dialogue MorrisTod \"{{i18n:Morris.10Hearts2.08}}\"",
+        "6665292/e 6665291/w sunny/t 900 1700/H": "none/-500 -500/farmer 28 77 0 Morris 28 67 2 Jodi 25 67 1 Kent 25 68 1 Pam 31 67 3 Andy 30 69 0 Demetrius 27 70 0 Robin 28 70 0 Gus 31 68 3/broadcastEvent/positionOffset Gus -14 25/positionOffset Robin -3 -4/positionOffset Demetrius 3 4/positionOffset Andy -10 20/positionOffset Pam -8 20/positionOffset Kent 7 10/animate Morris false true 4000 0 4 0 12/pause 750/playMusic springtown/pause 600/skippable/viewport 28 75 true/viewport move 0 -1 5000 true/move farmer 0 -5 0 true/pause 900/speak Morris \"{{i18n:Morris.10Hearts2.01}}\"/pause 500/speak Morris \"{{i18n:Morris.10Hearts2.02}}\"/pause 1000/shake Andy 400/textAboveHead Andy \"{{i18n:Morris.10Hearts2.03}}\"/pause 500/shake Jodi 400/textAboveHead Jodi \"{{i18n:Morris.10Hearts2.04}}\"/pause 1080/shake Demetrius 300/textAboveHead Demetrius \"{{i18n:Morris.10Hearts2.05}}\"/pause 400/faceDirection Robin 3 true/pause 600/globalFade/viewport -1000 -1000/warp Demetrius -100 -100/warp Robin -100 -100/warp Andy -100 -100/warp Kent 21 73/warp Jodi 23 73/faceDirection Jodi 3 true/warp Pam 33 65/faceDirection Pam 1 true/warp Gus 35 65/stopAnimation Morris/faceDirection Morris 2 true/pause 300/viewport 28 69 true/pause 400/move farmer 0 -3 0 true/pause 650/speak Morris \"{{i18n:Morris.10Hearts2.06}}\"/pause 700/speak Morris \"{{i18n:Morris.10Hearts2.07}}\"/pause 400/end dialogue MorrisTod \"{{i18n:Morris.10Hearts2.08}}\"",
       },
     },
     { //MORRIS 10 HEART EVENT - part 3 - 'the new mayor'
@@ -780,7 +783,7 @@
         "HasSeenEvent": "6665293"
       },
       "Entries": {
-        "6665294/w sunny/t 1100 1600/H": "continue/-200 -200/farmer -20 -20 2 Morris -21 -21 0/pause 1800/speak Morris \"{{i18n:Morris.10hearts4.01}}\"/pause 650/end",
+        "6665294/w sunny/t 1100 1600/H": "continue/-200 -200/farmer -20 -20 2 Morris -21 -21 0/broadcastEvent/pause 1800/speak Morris \"{{i18n:Morris.10hearts4.01}}\"/pause 650/end",
       }
     },
     { //lets time pass
@@ -830,7 +833,7 @@
         "HasSeenEvent": "5553210"
       },
       "Entries": {
-        "5553213/e 6665293/t 600 1830/w sunny/H": "none/-200 -200/farmer 27 67 0 Morris 28 64 2 MorrisTod -30 -30 2 Demetrius 25 67 0 Robin 26 67 0 Clint 30 67 0 Willy 31 67 0 Harvey 23 68 0 Maru 24 68 0 Haley 27 68 0 Emily 28 68 0 Gus 29 68 0 Elliott 32 68 0 Leah 33 68 0 George 24 69 0 Evelyn 25 69 0 Alex 26 69 0 Sophia 27 69 0 Olivia 28 69 0 Victor 29 69 0 Kent 30 69 0 Jodi 31 69 0 Vincent 32 69 0 Susan 24 70 0 Andy 25 70 0 GuntherSilvian 29 70 0 Pam 30 70 0 Penny 31 70 0 Jas 25 71 0 Marnie 26 71 0 Lewis 27 71 0 Pierre 28 71 0 Caroline 29 71 0 Abigail 30 71 0 Shane_JojaMart 26 63 2/addTemporaryActor JojaTruck 64 128 30 60 2 false/addTemporaryActor JojaTruck 64 128 25 60 2 false/positionOffset JojaTruck -20 0/addTemporaryActor ClaireJoja 16 32 24 63 2/addTemporaryActor MartinJoja 16 32 25 63 2/addTemporaryActor SamJoja 16 32 27 63 2/addTemporaryActor Jace 16 32 33 63 2/addTemporaryActor Zoey 16 32 32 63 2/addTemporaryActor Brooklyn 16 32 31 63 2/addTemporaryActor Chloe 16 32 30 63 2/addTemporaryActor Axel 16 32 29 64 2/positionOffset Demetrius -20 -10/positionOffset Robin -20 -12/positionOffset Harvey -4 -30/positionOffset Maru 0 -15/positionOffset Haley -25 0/positionOffset Emily -25 0/positionOffset Gus -12 0/positionOffset Clint -20 0/positionOffset Willy -15 -6/positionOffset Elliott 0 -20/positionOffset Leah 0 -35/positionOffset George -22 0/positionOffset Evelyn -22 0/positionOffset Alex -10 -30/positionOffset Kent 0 -25/positionOffset Jodi 0 -25/positionOffset Vincent -5 0/positionOffset Lewis 0 -30/positionOffset Pierre 0 -30/positionOffset Abigail 20 10/positionOffset Andy 20 0/positionOffset Penny 14 3/pause 500/playMusic sweet/pause 300/animate Axel false true 250 0 0 0 0 0 0 1 1 1 1 2 1 1 1 1 1 0 0 0 0 2 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 1 1 1 1 0 0 0/specificTemporarySprite jojaCeremony/addConversationTopic jojaEmporium 14/friendship Pierre -1000/friendship Caroline -750/friendship Abigail -250/skippable/viewport 29 66 true/pause 2500/speak Morris \"{{i18n:Morris.10hearts5.01}}\"/pause 750/showFrame Morris 35 true/pause 750/speak Morris \"{{i18n:Morris.10hearts5.02}}\"/pause 1000/speak Zoey \"{{i18n:Morris.10hearts5.03}}\"/speak Brooklyn \"{{i18n:Morris.10hearts5.04}}\"/speak Chloe \"{{i18n:Morris.10hearts5.05}}\"/speak Jace \"{{i18n:Morris.10hearts5.06}}\"/pause 750/showFrame Morris 0 true/pause 600/speak Morris \"{{i18n:Morris.10hearts5.07}}\"/pause 900/speak Axel \"{{i18n:Morris.10hearts5.08}}\"/pause 300/showFrame Morris 35/pause 450/faceDirection Lewis 1 true/pause 200/faceDirection Pierre 3 true/pause 100/faceDirection Demetrius 1 true/pause 250/faceDirection Robin 3 true/pause 100/faceDirection Pam 1 true/pause 600/faceDirection Penny 3 true/speak Morris \"{{i18n:Morris.10hearts5.09}}\"/pause 400/faceDirection Robin 0 true/pause 200/faceDirection Pierre 0 true/pause 100/faceDirection Demetrius 0 true/pause 200/faceDirection Penny 0 true/pause 75/faceDirection Lewis 0 true/pause 150/faceDirection Marnie 0 true/pause 150/faceDirection Jas 0 true/pause 50/faceDirection Pam 0 true/showFrame Morris 0 true/pause 500/speak Morris \"{{i18n:Morris.10hearts5.10}}\"/pause 650/globalFade/viewport -1000 -1000/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.10hearts5.11}}\"",
+        "5553213/e 6665293/t 600 1830/w sunny/H": "none/-200 -200/farmer 27 67 0 Morris 28 64 2 MorrisTod -30 -30 2 Demetrius 25 67 0 Robin 26 67 0 Clint 30 67 0 Willy 31 67 0 Harvey 23 68 0 Maru 24 68 0 Haley 27 68 0 Emily 28 68 0 Gus 29 68 0 Elliott 32 68 0 Leah 33 68 0 George 24 69 0 Evelyn 25 69 0 Alex 26 69 0 Sophia 27 69 0 Olivia 28 69 0 Victor 29 69 0 Kent 30 69 0 Jodi 31 69 0 Vincent 32 69 0 Susan 24 70 0 Andy 25 70 0 GuntherSilvian 29 70 0 Pam 30 70 0 Penny 31 70 0 Jas 25 71 0 Marnie 26 71 0 Lewis 27 71 0 Pierre 28 71 0 Caroline 29 71 0 Abigail 30 71 0 Shane_JojaMart 26 63 2/broadcastEvent/addTemporaryActor JojaTruck 64 128 30 60 2 false/addTemporaryActor JojaTruck 64 128 25 60 2 false/positionOffset JojaTruck -20 0/addTemporaryActor ClaireJoja 16 32 24 63 2/addTemporaryActor MartinJoja 16 32 25 63 2/addTemporaryActor SamJoja 16 32 27 63 2/addTemporaryActor Jace 16 32 33 63 2/addTemporaryActor Zoey 16 32 32 63 2/addTemporaryActor Brooklyn 16 32 31 63 2/addTemporaryActor Chloe 16 32 30 63 2/addTemporaryActor Axel 16 32 29 64 2/positionOffset Demetrius -20 -10/positionOffset Robin -20 -12/positionOffset Harvey -4 -30/positionOffset Maru 0 -15/positionOffset Haley -25 0/positionOffset Emily -25 0/positionOffset Gus -12 0/positionOffset Clint -20 0/positionOffset Willy -15 -6/positionOffset Elliott 0 -20/positionOffset Leah 0 -35/positionOffset George -22 0/positionOffset Evelyn -22 0/positionOffset Alex -10 -30/positionOffset Kent 0 -25/positionOffset Jodi 0 -25/positionOffset Vincent -5 0/positionOffset Lewis 0 -30/positionOffset Pierre 0 -30/positionOffset Abigail 20 10/positionOffset Andy 20 0/positionOffset Penny 14 3/pause 500/playMusic sweet/pause 300/animate Axel false true 250 0 0 0 0 0 0 1 1 1 1 2 1 1 1 1 1 0 0 0 0 2 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 1 1 1 1 0 0 0/specificTemporarySprite jojaCeremony/addConversationTopic jojaEmporium 14/friendship Pierre -1000/friendship Caroline -750/friendship Abigail -250/skippable/viewport 29 66 true/pause 2500/speak Morris \"{{i18n:Morris.10Hearts5.01}}\"/pause 750/showFrame Morris 35 true/pause 750/speak Morris \"{{i18n:Morris.10hearts5.02}}\"/pause 1000/speak Zoey \"{{i18n:Morris.10hearts5.03}}\"/speak Brooklyn \"{{i18n:Morris.10hearts5.04}}\"/speak Chloe \"{{i18n:Morris.10hearts5.05}}\"/speak Jace \"{{i18n:Morris.10hearts5.06}}\"/pause 750/showFrame Morris 0 true/pause 600/speak Morris \"{{i18n:Morris.10hearts5.07}}\"/pause 900/speak Axel \"{{i18n:Morris.10hearts5.08}}\"/pause 300/showFrame Morris 35/pause 450/faceDirection Lewis 1 true/pause 200/faceDirection Pierre 3 true/pause 100/faceDirection Demetrius 1 true/pause 250/faceDirection Robin 3 true/pause 100/faceDirection Pam 1 true/pause 600/faceDirection Penny 3 true/speak Morris \"{{i18n:Morris.10hearts5.09}}\"/pause 400/faceDirection Robin 0 true/pause 200/faceDirection Pierre 0 true/pause 100/faceDirection Demetrius 0 true/pause 200/faceDirection Penny 0 true/pause 75/faceDirection Lewis 0 true/pause 150/faceDirection Marnie 0 true/pause 150/faceDirection Jas 0 true/pause 50/faceDirection Pam 0 true/showFrame Morris 0 true/pause 500/speak Morris \"{{i18n:Morris.10hearts5.10}}\"/pause 650/globalFade/viewport -1000 -1000/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.10hearts5.11}}\"",
       }
     },
     { //MORRIS 10 HEART EVENT - part 5 - 'joja takeover' (raining)
@@ -840,10 +843,10 @@
         "HasSeenEvent": "5553210"
       },
       "Entries": {
-        "5553213/e 6665293/t 600 1830/w rainy/H": "rain/-200 -200/farmer 27 67 0 Morris 28 64 2 MorrisTod -30 -30 2 Demetrius 25 67 0 Robin 26 67 0 Clint 30 67 0 Willy 31 67 0 Harvey 23 68 0 Maru 24 68 0 Haley 27 68 0 Emily 28 68 0 Gus 29 68 0 Elliott 32 68 0 Leah 33 68 0 George 24 69 0 Evelyn 25 69 0 Alex 26 69 0 Sophia 27 69 0 Olivia 28 69 0 Victor 29 69 0 Kent 30 69 0 Jodi 31 69 0 Vincent 32 69 0 Susan 24 70 0 Andy 25 70 0 GuntherSilvian 29 70 0 Pam 30 70 0 Penny 31 70 0 Jas 25 71 0 Marnie 26 71 0 Lewis 27 71 0 Pierre 28 71 0 Caroline 29 71 0 Abigail 30 71 0 Shane_JojaMart 26 63 2/addTemporaryActor JojaTruck 64 128 30 60 2 false/addTemporaryActor JojaTruck 64 128 25 60 2 false/positionOffset JojaTruck -20 0/addTemporaryActor ClaireJoja 16 32 24 63 2/addTemporaryActor MartinJoja 16 32 25 63 2/addTemporaryActor SamJoja 16 32 27 63 2/addTemporaryActor Jace 16 32 33 63 2/addTemporaryActor Zoey 16 32 32 63 2/addTemporaryActor Brooklyn 16 32 31 63 2/addTemporaryActor Chloe 16 32 30 63 2/addTemporaryActor Axel 16 32 29 64 2/positionOffset Demetrius -20 -10/positionOffset Robin -20 -12/positionOffset Harvey -4 -30/positionOffset Maru 0 -15/positionOffset Haley -25 0/positionOffset Emily -25 0/positionOffset Gus -12 0/positionOffset Clint -20 0/positionOffset Willy -15 -6/positionOffset Elliott 0 -20/positionOffset Leah 0 -35/positionOffset George -22 0/positionOffset Evelyn -22 0/positionOffset Alex -10 -30/positionOffset Kent 0 -25/positionOffset Jodi 0 -25/positionOffset Vincent -5 0/positionOffset Lewis 0 -30/positionOffset Pierre 0 -30/positionOffset Abigail 20 10/positionOffset Andy 20 0/positionOffset Penny 14 3/pause 500/pause 300/animate Axel false true 250 0 0 0 0 0 0 1 1 1 1 2 1 1 1 1 1 0 0 0 0 2 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 1 1 1 1 0 0 0/specificTemporarySprite jojaCeremony/addConversationTopic jojaEmporium 14/friendship Pierre -1000/friendship Caroline -750/friendship Abigail -250/skippable/viewport 29 66 true/pause 2500/speak Morris \"{{i18n:Morris.10hearts5.01}}\"/pause 750/showFrame Morris 35 true/pause 750/speak Morris \"{{i18n:Morris.10hearts5.02}}\"/pause 1000/speak Zoey \"{{i18n:Morris.10hearts5.03}}\"/speak Brooklyn \"{{i18n:Morris.10hearts5.04}}\"/speak Chloe \"{{i18n:Morris.10hearts5.05}}\"/speak Jace \"{{i18n:Morris.10hearts5.06}}\"/pause 750/showFrame Morris 0 true/pause 600/speak Morris \"{{i18n:Morris.10hearts5.07}}\"/pause 900/speak Axel \"{{i18n:Morris.10hearts5.08}}\"/pause 300/showFrame Morris 35/pause 450/faceDirection Lewis 1 true/pause 200/faceDirection Pierre 3 true/pause 100/faceDirection Demetrius 1 true/pause 250/faceDirection Robin 3 true/pause 100/faceDirection Pam 1 true/pause 600/faceDirection Penny 3 true/speak Morris \"{{i18n:Morris.10hearts5.09}}\"/pause 400/faceDirection Robin 0 true/pause 200/faceDirection Pierre 0 true/pause 100/faceDirection Demetrius 0 true/pause 200/faceDirection Penny 0 true/pause 75/faceDirection Lewis 0 true/pause 150/faceDirection Marnie 0 true/pause 150/faceDirection Jas 0 true/pause 50/faceDirection Pam 0 true/showFrame Morris 0 true/pause 500/speak Morris \"{{i18n:Morris.10hearts5.10}}\"/pause 650/globalFade/viewport -1000 -1000/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.10hearts5.11}}\"",
+        "5553213/e 6665293/t 600 1830/w rainy/H": "rain/-200 -200/farmer 27 67 0 Morris 28 64 2 MorrisTod -30 -30 2 Demetrius 25 67 0 Robin 26 67 0 Clint 30 67 0 Willy 31 67 0 Harvey 23 68 0 Maru 24 68 0 Haley 27 68 0 Emily 28 68 0 Gus 29 68 0 Elliott 32 68 0 Leah 33 68 0 George 24 69 0 Evelyn 25 69 0 Alex 26 69 0 Sophia 27 69 0 Olivia 28 69 0 Victor 29 69 0 Kent 30 69 0 Jodi 31 69 0 Vincent 32 69 0 Susan 24 70 0 Andy 25 70 0 GuntherSilvian 29 70 0 Pam 30 70 0 Penny 31 70 0 Jas 25 71 0 Marnie 26 71 0 Lewis 27 71 0 Pierre 28 71 0 Caroline 29 71 0 Abigail 30 71 0 Shane_JojaMart 26 63 2/broadcastEvent/addTemporaryActor JojaTruck 64 128 30 60 2 false/addTemporaryActor JojaTruck 64 128 25 60 2 false/positionOffset JojaTruck -20 0/addTemporaryActor ClaireJoja 16 32 24 63 2/addTemporaryActor MartinJoja 16 32 25 63 2/addTemporaryActor SamJoja 16 32 27 63 2/addTemporaryActor Jace 16 32 33 63 2/addTemporaryActor Zoey 16 32 32 63 2/addTemporaryActor Brooklyn 16 32 31 63 2/addTemporaryActor Chloe 16 32 30 63 2/addTemporaryActor Axel 16 32 29 64 2/positionOffset Demetrius -20 -10/positionOffset Robin -20 -12/positionOffset Harvey -4 -30/positionOffset Maru 0 -15/positionOffset Haley -25 0/positionOffset Emily -25 0/positionOffset Gus -12 0/positionOffset Clint -20 0/positionOffset Willy -15 -6/positionOffset Elliott 0 -20/positionOffset Leah 0 -35/positionOffset George -22 0/positionOffset Evelyn -22 0/positionOffset Alex -10 -30/positionOffset Kent 0 -25/positionOffset Jodi 0 -25/positionOffset Vincent -5 0/positionOffset Lewis 0 -30/positionOffset Pierre 0 -30/positionOffset Abigail 20 10/positionOffset Andy 20 0/positionOffset Penny 14 3/pause 500/pause 300/animate Axel false true 250 0 0 0 0 0 0 1 1 1 1 2 1 1 1 1 1 0 0 0 0 2 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 1 1 1 1 0 0 0/specificTemporarySprite jojaCeremony/addConversationTopic jojaEmporium 14/friendship Pierre -1000/friendship Caroline -750/friendship Abigail -250/skippable/viewport 29 66 true/pause 2500/speak Morris \"{{i18n:Morris.10Hearts5.01}}\"/pause 750/showFrame Morris 35 true/pause 750/speak Morris \"{{i18n:Morris.10hearts5.02}}\"/pause 1000/speak Zoey \"{{i18n:Morris.10hearts5.03}}\"/speak Brooklyn \"{{i18n:Morris.10hearts5.04}}\"/speak Chloe \"{{i18n:Morris.10hearts5.05}}\"/speak Jace \"{{i18n:Morris.10hearts5.06}}\"/pause 750/showFrame Morris 0 true/pause 600/speak Morris \"{{i18n:Morris.10hearts5.07}}\"/pause 900/speak Axel \"{{i18n:Morris.10hearts5.08}}\"/pause 300/showFrame Morris 35/pause 450/faceDirection Lewis 1 true/pause 200/faceDirection Pierre 3 true/pause 100/faceDirection Demetrius 1 true/pause 250/faceDirection Robin 3 true/pause 100/faceDirection Pam 1 true/pause 600/faceDirection Penny 3 true/speak Morris \"{{i18n:Morris.10hearts5.09}}\"/pause 400/faceDirection Robin 0 true/pause 200/faceDirection Pierre 0 true/pause 100/faceDirection Demetrius 0 true/pause 200/faceDirection Penny 0 true/pause 75/faceDirection Lewis 0 true/pause 150/faceDirection Marnie 0 true/pause 150/faceDirection Jas 0 true/pause 50/faceDirection Pam 0 true/showFrame Morris 0 true/pause 500/speak Morris \"{{i18n:Morris.10hearts5.10}}\"/pause 650/globalFade/viewport -1000 -1000/pause 1000/end dialogue MorrisTod \"{{i18n:Morris.10hearts5.11}}\"",
       }
     },
-    { //Tags players entering Joja Emporium for the first time - triggers Axel rotations
+    { //Tags players entering Joja Emporium for the first time >>> triggers Axel rotations
       "Action": "EditData",
       "Target": "data/events/Custom_JojaEmporium",
       "Entries": {
@@ -873,27 +876,27 @@
 },*/
     //Load temporary actors for Morris 10 heart event
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/VotingBooth1",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/VotingBooth1.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/VotingBooth2",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/VotingBooth2.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/JojaTruck", //Yes. That's right. A truck.
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/JojaTruck.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/MartinJoja",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/MartinJoja.png"
     },
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/SamJoja",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/SamJoja.png"
     },
@@ -926,15 +929,17 @@
     },
     { //joja cola becomes an artisan good instead of trash
       "Action": "EditData",
-      "Target": "Data/objectinformation",
+      "Target": "Data/Objects",
       "When": {
-        "HasSeenEvent": "6665293"
+        "HasSeenEvent: anyPlayer| contains=6665293": true
       },
-      "Fields": {
-        "167": {
-          3: "Basic -26"
-        },
-      },
+      "TargetField": [
+        167
+      ],
+      "Entries": {
+        "Type": "Basic",
+        "Category": -26
+      }
     },
     //joja conversation topic additions
     {

@@ -22,9 +22,9 @@
           "Calendar": "HiddenUntilMet",
           "SocialTab": "HiddenUntilMet",
           "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 103042015",
-          "CanVisitIslandCondition": "FALSE",
+          "CanVisitIsland": "FALSE",
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": true,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -56,7 +56,7 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "GuntherSilvian": "{{i18n:Gunther.Gifts.Loved}}/207 557 212 104 106 107 108 109 121 122 124 125 578/{{i18n:Gunther.Gifts.Liked}}/72 96 97 98 99 100 101 103 105 110 111 112 113 114 115 116 117 118 119 120 123 126 127 579 580 581 582 583 584 585 586 587 588 589 -2 -7 -12 -75 -79 -80 FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Big_Conch/{{i18n:Gunther.Gifts.Disliked}}/346 -4 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Galdoran_Gem FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Gunther.Gifts.Hated}}/167 78 FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Gunther.Gifts.Neutral}}/-15 -28 -81/"
+        "GuntherSilvian": "{{i18n:Gunther.Gifts.Loved}}/GoldenSpur FlashShifter.StardewValleyExpandedCP_Stone_of_Yoba FlashShifter.StardewValleyExpandedCP_Baked_Potato FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop 207 557 212 104 106 107 108 109 121 122 124 125 578/{{i18n:Gunther.Gifts.Liked}}/FlashShifter.StardewValleyExpandedCP_Gold_Carrot 72 96 97 98 99 100 101 103 105 110 111 112 113 114 115 116 117 118 119 120 123 126 127 579 580 581 582 583 584 585 586 587 588 589 -2 -7 -12 -75 -79 -80 FlashShifter.StardewValleyExpandedCP_Swirl_Stone FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Dried_Sand_Dollar FlashShifter.StardewValleyExpandedCP_Big_Conch/{{i18n:Gunther.Gifts.Disliked}}/346 -4 FlashShifter.StardewValleyExpandedCP_Stamina_Capsule FlashShifter.StardewValleyExpandedCP_Sports_Drink FlashShifter.StardewValleyExpandedCP_Galdoran_Gem FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Gunther.Gifts.Hated}}/167 78 FlashShifter.StardewValleyExpandedCP_Daggerfish/{{i18n:Gunther.Gifts.Neutral}}/-15 -28 -81/"
       }
     },
     {
@@ -73,14 +73,14 @@
 
     {
       //Gunther's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/GuntherSilvian",
       "FromFile": "assets/CharacterFiles/Portraits/Gunther/Gunther.png"
     },
  
     {
       //Gunther's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/GuntherSilvian",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Gunther/Gunther.png"
     },
@@ -91,8 +91,31 @@
       "FromFile": "assets/CharacterFiles/OverworldSprites/Gunther/Gunther.png"
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/GuntherSilvian",
+      "FromFile": "Assets/Blank.json"
+    },
+	
+	{
+      "Action": "EditData",
+      "Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+      "Entries": {
+        "Gunther": {
+            "Exclude": true
+        },
+      }
+    },
+	
+	
+		  /*"When": {
+	    "HasMod |contains=Bouhm.NPCMapLocations": true,
+		//"HasSeenEvent Any|contains=103042015": true
+	    }*/
+	
+	
+   /* {
       //Gunther's Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/GuntherSilvian",
       "When": {
         "GuntherUnlocked": "true"
@@ -101,13 +124,13 @@
     },
     {
       //Gunther's Fake Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/GuntherSilvian",
       "When": {
         "GuntherUnlocked": "false"
       },
       "FromFile": "assets/CharacterFiles/Schedules/Gunther/FakeSchedule.json"
-    },
+    },*/
    
     //MOVIE THEATER
     {
@@ -320,7 +343,7 @@
       },
     },
     { //add a mess of books
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/BookMess",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/BookMess.png"
     },
@@ -393,12 +416,12 @@
       },
     },
     { //add artifacts
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/UnearthedArtifacts",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/UnearthedArtifacts.png"
     },
     { //add slime actor
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/EvilSlime",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EvilSlime.png"
     },
@@ -421,14 +444,14 @@
         "593069354/e 593069353/t 1100 1600": "none/-500 -500/farmer 3 14 0 GuntherSilvian 26 13 1 Caroline 31 4 2 Pierre 34 4 2 Demetrius 32 18 0 Robin 30 18 0 Evelyn 27 15 1 George 29 12 0 Sophia 35 13 3 Gus 36 14 2 Lewis 45 9 0 Marnie 40 9 0 Jas 47 7 1 Jodi 45 18 0 Sam 48 16 3 Kent 43 18 0 Vincent 46 14 2 Elliott 44 12 1 Leah 45 12 3 Pam 37 16 3 Andy 30 8 2 Susan 32 8 0 Olivia 34 12 0 Victor 32 12 2 Haley 38 6 1 Emily 40 5 2 Clint 45 5 2 Harvey 27 6 3/advancedMove Harvey true 3 5000 0 2 3 4000 0 2 3 5000 0 -2 3 4000 0 -2/advancedmove Susan true 4 2850 3 0 4 7000 -3 0/advancedMove Pam false 3 8000 0 -6 3 5000/advancedMove Marnie true 4 3250 3 0 4 3270 -3 0/advancedMove Kent true 4 1750 -2 0 0 -2 1 5000 0 2 2 0 4 6000/advancedMove Evelyn true 1 3400 0 1 1 4600 0 -1/advancedMove Demetrius true 4 6500 3 0 4 6000 -3 0/advancedMove Emily true 2 4400 2 0 2 5300 -2 0/animate Clint false true 2000 0 0 0 12 0 0/animate Caroline false true 800 0 0 0 0 0 0 4 4 0 0 0 0 0 0 0 0 0/animate Sophia false true 1500 12 12 12 12 12 12 0 0 12/animate Jas false true 250 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 0 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 0 4 4 4 4/animate Lewis false true 1750 8 8 8 12 8 8 8 8 8/positionOffset Sophia -5 25 true/positionOffset Gus 4 12 true/positionOffset Pierre 20 -10 true/positionOffset Jas 0 -15 true/positionOffset Olivia -20 -25 true/positionOffset Victor -10 15 true/positionOffset Leah 12 -4 true/positionOffset Elliott -14 6 true/positionOffset Robin 10 -25 true/positionOffset Jodi -25 -15 true/positionOffset Andy 0 -15 true/positionOffset George -20 -12 true/positionOffset Vincent -20 -8 true/positionOffset Haley 5 32 true/positionOffset Clint -25 -7 true/positionOffset Lewis -15 -8 true/pause 750/playMusic junimoStarSong/pause 500/viewport 39 10 true/viewport move -1 0 14500/mail GuntherGaldoranGemReward/skippable/move farmer 0 -1 1/move farmer 4 0 2/move farmer 0 1 1/move farmer 4 0 0/move farmer 0 -1 1/move farmer 13 0 1/pause 1500/faceDirection GuntherSilvian 2 true/pause 300/faceDirection GuntherSilvian 3 true/pause 500/speak GuntherSilvian \"{{i18n:Gunther.8hearts2.01}}\"/pause 650/faceDirection GuntherSilvian 2 true/pause 250/faceDirection GuntherSilvian 1 true/pause 800/speak GuntherSilvian \"{{i18n:Gunther.8hearts2.02}}\"/pause 800/faceDirection GuntherSilvian 2 true/pause 275/faceDirection GuntherSilvian 3 true/pause 750/speak GuntherSilvian \"{{i18n:Gunther.8hearts2.03}}\"/pause 500/emote farmer 32/pause 250/globalFade/viewport -1000 -1000/pause 1000/addConversationTopic museumCompleted 7/end"
       }
     },
-    { //Adds rejection dialogue to all NPCs, preventing players from gifting their Mermaid Bracelet, Galdoran Gem
+    /*{ //Adds rejection dialogue to all NPCs, preventing players from gifting their Mermaid Bracelet, Galdoran Gem
       "Action": "EditData",
       "Target": "Characters/Dialogue/Alex, Characters/Dialogue/Elliott, Characters/Dialogue/Harvey, Characters/Dialogue/Sam, Characters/Dialogue/Sebastian, Characters/Dialogue/Shane, Characters/Dialogue/Abigail, Characters/Dialogue/Emily, Characters/Dialogue/Haley, Characters/Dialogue/Leah, Characters/Dialogue/Maru, Characters/Dialogue/Penny, Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Krobus, Characters/Dialogue/Leo, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard, Characters/Dialogue/Sophia, Characters/Dialogue/Olivia, Characters/Dialogue/Victor, Characters/Dialogue/Andy, Characters/Dialogue/Susan, Characters/Dialogue/Morgan, Characters/Dialogue/Apples, Characters/Dialogue/MarlonFay, Characters/Dialogue/GuntherSilvian, Characters/Dialogue/Claire, Characters/Dialogue/Martin, Characters/Dialogue/Lewis, Characters/Dialogue/MorrisTod, Characters/Dialogue/Lance, Characters/Dialogue/Scarlett",
       "Entries": {
         "reject_(O))Mermaid's Bracelet": "{{i18n:Gift.Rejection}}",
         "reject_(O)Galdoran Gem": "{{i18n:Gift.Rejection}}",
       }
-    },
+    },*/
     {
       "Action": "EditData",
       "Target": "characters/dialogue/GuntherSilvian",
@@ -699,7 +722,7 @@
       "Action": "EditData",
       "Target": "data/events/farm",
       "Entries": {
-        "103042015/e 295672/t 600 700/H": "continue/64 15/farmer 64 16 2 Gunther 64 18 0/pause 500/mail GuntherGift/skippable/pause 1500/speak Gunther \"{{i18n:Gunther.RustyKey.01}}\"/pause 300/jump farmer/pause 1200/speak Gunther \"{{i18n:Gunther.RustyKey.02}}\"/pause 500/emote farmer 32/speak Gunther \"{{i18n:Gunther.RustyKey.03}}\"/pause 500/end dialogue Gunther \"{{i18n:Gunther.RustyKey.04}}\"",
+        "103042015/e 295672/t 600 700/H": "continue/64 15/farmer 64 16 2 Gunther 64 18 0/pause 500/mail GuntherGift/skippable/pause 1500/speak Gunther \"{{i18n:Gunther.RustyKey.01}}\"/pause 300/jump farmer/pause 1200/speak Gunther \"{{i18n:Gunther.RustyKey.02}}\"/pause 500/emote farmer 32/speak Gunther \"{{i18n:Gunther.RustyKey.03}}\"/pause 500/end dialogue GuntherSilvian \"{{i18n:Gunther.RustyKey.04}}\"",
       }
     },
     { //GO AWAY GUNTHER

@@ -1,6 +1,11 @@
 {
     "Changes": [
         {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Bear_Vendor",
+            "FromFile": "assets/CharacterFiles/Shops/Miscellaneous/Bear_Vendor.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Shops",
             "Entries": {
@@ -8,7 +13,7 @@
                     "Owners": [
                         {
                             "Name": "AnyOrNone",
-                            "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Miscellaneous/Bear_Vendor.png}}",
+                            "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\Bear_Vendor",
                             "Dialogues": [
                                 {
                                     "Id": "FlashShifter.StardewValleyExpandedCP_Default",
@@ -43,10 +48,22 @@
                             "Price": 3500,
                             "AvailableStock": 5,
                         },
+						{
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Fir_Wax",
+                            "Price": 2000,
+                            "AvailableStock": 3,
+                        },
+						{
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Birch_Water",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Birch_Water",
+                            "Price": 1000,
+                            "AvailableStock": 3,
+                        },
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_MahoganySeed",
                             "ItemId": "292",
-                            "Price": 4000,
+                            "Price": 3000,
                             "AvailableStock": 3,
                         },
                         {
@@ -66,14 +83,12 @@
                             "ItemId": "FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal",
                             "IsRecipe": "true",
                             "Price": 12500,
-                            "AvailableStock": 1,
                         },
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_Flower_Cookie",
                             "ItemId": "FlashShifter.StardewValleyExpandedCP_Flower_Cookie",
                             "IsRecipe": "true",
                             "Price": 8750,
-                            "AvailableStock": 1,
                         },
                     ]
                 }

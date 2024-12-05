@@ -23,9 +23,9 @@
           "Calendar": "HiddenUntilMet",
           "SocialTab": "HiddenUntilMet",
           "CanSocialize": "PLAYER_HAS_SEEN_EVENT Any 1000077",
-          "CanVisitIslandCondition": true,
+          "CanVisitIsland": true,
           "ExcludeFromIntroductionsQuest": true,
-          "ExcludeFromPerfectionScore": false,
+          "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "FriendsAndFamily": {},
           "UnlockConditions": null,
@@ -70,7 +70,7 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Susan": "{{i18n:Susan.Gifts.Loved}}/611 230 211 220 221 223 222 608 233 234 612 FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie/{{i18n:Susan.Gifts.Liked}}/60 709 336 335 334 373 74 446/{{i18n:Susan.Gifts.Disliked}}/346 459 303 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Susan.Gifts.Hated}}/167 226 283 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Susan.Gifts.Neutral}}/348 350 395 -74/"
+        "Susan": "{{i18n:Susan.Gifts.Loved}}/611 230 211 220 221 223 222 608 233 234 612 FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Gingerbread_Man FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie/{{i18n:Susan.Gifts.Liked}}/60 709 336 335 334 373 74 446 FlashShifter.StardewValleyExpandedCP_Gold_Carrot/{{i18n:Susan.Gifts.Disliked}}/346 459 303 FlashShifter.StardewValleyExpandedCP_Dulse_Seaweed/{{i18n:Susan.Gifts.Hated}}/167 226 283 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola/{{i18n:Susan.Gifts.Neutral}}/348 350 395 -74/"
       }
     },
     {
@@ -89,43 +89,48 @@
     },
     {
       //Susan's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Susan",
       "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan.png"
     },
     {
       //Susan's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Susan",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan.png"
     },
     {
       //Susan's Portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Susan_Winter",
       "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan_Winter.png"
     },
     {
       //Susan's Sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Susan_Winter",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan_Winter.png"
     },
     {
       //Susan's beach portraits
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Portraits/Susan_Beach",
       "FromFile": "assets/CharacterFiles/Portraits/Susan/Susan_Beach.png"
     },
     {
       //Susan's beach sprites
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/Susan_Beach",
       "FromFile": "assets/CharacterFiles/OverworldSprites/Susan/Susan_Beach.png"
     },
     {
+      "Action": "Load", "Priority": "Low",
+      "Target": "Characters/schedules/Susan",
+      "FromFile": "Assets/Blank.json"
+    },
+    /*{
       //Susan's Fake Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Susan",
       "When": {
         "HasSeenEvent |contains=1000077": false
@@ -134,13 +139,13 @@
     },
     {
       //Susan's Schedule
-      "Action": "Load",
+      "Action": "EditData",
       "Target": "Characters/schedules/Susan",
       "When": {
         "HasSeenEvent": "1000077"
       },
       "FromFile": "assets/CharacterFiles/Schedules/Susan/Schedule.json"
-    },
+    },*/
     //MOVIE THEATER
     {
       "Action": "EditData",
@@ -342,7 +347,7 @@
     },
     //Load temporary actor for Susan 10 heart event
     {
-      "Action": "Load",
+      "Action": "Load", "Priority": "Low",
       "Target": "Characters/GrampletonWardrobe",
       "FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/GrampletonWardrobe.png"
     },

@@ -13,7 +13,18 @@
 				  "Emily",
 				  1
 				],
-				"Value": "FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose",
+				"Value": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg FlashShifter.StardewValleyExpandedCP_Prismatic_Pop FlashShifter.StardewValleyExpandedCP_Yarn FlashShifter.StardewValleyExpandedCP_Winter_Star_Rose",
+				"Delimiter": " "
+			  }
+			  /*Like*/,
+			  {
+				"Operation": "Append",
+				"Target": [
+				  "Fields",
+				  "Emily",
+				  3
+				],
+				"Value": "FlashShifter.StardewValleyExpandedCP_Gold_Carrot",
 				"Delimiter": " "
 			  }
 			  /*Dislike*/,
@@ -91,17 +102,17 @@
 			},
 		},
 		{ //64x160
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Characters/EmilyTent",
 			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyTent.png"
 		},
 		{ //32x32
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Characters/EmilyCampfire",
 			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyCampfire.png"
 		},
 		{ //32x32
-			"Action": "Load",
+			"Action": "Load", "Priority": "Low",
 			"Target": "Characters/EmilyCampingSet",
 			"FromFile": "Assets/CharacterFiles/OverworldSprites/Miscellaneous/EmilyCampingSet.png"
 		},

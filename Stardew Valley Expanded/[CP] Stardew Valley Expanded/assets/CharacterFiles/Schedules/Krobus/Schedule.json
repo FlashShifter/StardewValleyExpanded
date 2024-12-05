@@ -1,4 +1,41 @@
 {
-//Meets with Lance
-"Wed": "0 Custom_Krobus_WarpRoom 3 3 2/1940 Forest 98 91 3",
+  "Changes": [
+    {
+      "LogName": "Krobus schedule load",
+      "Action": "Load",
+      "Target": "Characters/schedules/Krobus",
+      "Priority": "Low",
+      "FromFile": "assets/blank.json"
+    },
+    { 
+      "LogName": "Krobus Schedule edit for Lance",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Krobus",
+      "When": {
+          "Spouse": "Lance",
+      },
+      "Entries": { //Meets with Lance
+          "{{Season}}_4": "MAIL LanceMeetsKrobus/GOTO NO_SCHEDULE/GOTO LanceMeet",
+          "{{Season}}_18": "MAIL LanceMeetsKrobus/GOTO NO_SCHEDULE/GOTO LanceMeet",
+          "LanceMeet": "1940 Forest 98 91 3 \"Strings\\schedules\\Krobus:LanceDialogue\"/2550 Forest 98 91 3",
+      }
+    },
+    {
+      "LogName": "Krobus schedule string load",
+      "Action": "Load",
+      "Target": "Strings/schedules/Krobus",
+      "Priority": "Low",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "LogName": "Krobus schedule string edits",
+      "Action": "EditData",
+      "Target": "Strings/schedules/Krobus",
+      "Entries": {
+        "LanceDialogue": "
+          {{i18n:Krobus.LanceDialogue.{{Season}}_{{Day}}
+          |default={{i18n:Krobus.LanceDialogue.{{Random:{{Range:1,5}}|key=LanceKrobusMeet}}}}}}",
+      }
+    }
+  ]
 }

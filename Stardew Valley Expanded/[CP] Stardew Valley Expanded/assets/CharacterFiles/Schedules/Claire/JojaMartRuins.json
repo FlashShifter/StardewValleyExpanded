@@ -1,11 +1,24 @@
 {
-  //Doesn't visit the valley while joja is in ruins
-  "Mon": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Tue": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Wed": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Thu": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Fri": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Sat": "0 Custom_Claire_WarpRoom 1 3 3",
-  "Sun": "0 Custom_Claire_WarpRoom 1 3 3",
-  "spring": "0 Custom_Claire_WarpRoom 1 3 3"
+  "Changes": [
+    {
+      //Claire's Schedule - Joja Mart ruins
+      "Action": "EditData",
+      "Target": "Characters/schedules/Claire",
+      "When": {
+        "HasSeenEvent": "191393",
+        "HasFlag |contains=ccMovieTheater": false
+      },
+      "Entries": {
+        //Doesn't visit the valley while joja is in ruins
+        "Mon": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Tue": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Wed": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Thu": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Fri": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Sat": "0 Custom_Claire_WarpRoom 1 3 3",
+        "Sun": "0 Custom_Claire_WarpRoom 1 3 3",
+        "spring": "0 Custom_Claire_WarpRoom 1 3 3"
+      }
+    }
+  ]
 }

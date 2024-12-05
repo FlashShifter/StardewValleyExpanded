@@ -2,86 +2,315 @@
     "Changes": [
         { //HARDER BUILDING CONSTRUCTION		
             "Action": "EditData",
-            "Target": "Data/Blueprints",
+            "Target": "Data/Buildings",
             "Fields": {
                 "Silo": {
-                    0: "390 300 330 15 334 5",
-                    17: "1000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 300
+                        },
+                        {
+                            "Id": "(O)330",
+                            "ItemId": "(O)330",
+                            "Amount": 15
+                        },
+                        {
+                            "Id": "(O)334",
+                            "ItemId": "(O)334",
+                            "Amount": 5
+                        }
+                    ],
+                    "BuildCost": 1000
                 },
                 "Mill": {
-                    0: "388 250 390 100 428 8",
-                    17: "8000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 250
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 100
+                        },
+                        {
+                            "Id": "(O)428",
+                            "ItemId": "(O)428",
+                            "Amount": 8
+                        },
+                    ],
+                    "BuildCost": 8000
                 },
                 "Earth Obelisk": {
-                    0: "337 20 86 10",
-                    17: "1000000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)337",
+                            "ItemId": "(O)337",
+                            "Amount": 20
+                        },
+                        {
+                            "Id": "(O)86",
+                            "ItemId": "(O)86",
+                            "Amount": 10
+                        },
+                    ],
+                    "BuildCost": 1000000
                 },
                 "Water Obelisk": {
-                    0: "337 10 372 10 393 10",
-                    17: "1000000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)337",
+                            "ItemId": "(O)337",
+                            "Amount": 10
+                        },
+                        {
+                            "Id": "(O)372",
+                            "ItemId": "(O)372",
+                            "Amount": 10
+                        },
+                        {
+                            "Id": "(O)393",
+                            "ItemId": "(O)393",
+                            "Amount": 10
+                        },
+                    ],
+                    "BuildCost": 1000000
                 },
                 "Desert Obelisk": {
-                    0: "337 25 88 10 90 10",
-                    17: "1000000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)337",
+                            "ItemId": "(O)337",
+                            "Amount": 25
+                        },
+                        {
+                            "Id": "(O)88",
+                            "ItemId": "(O)88",
+                            "Amount": 10
+                        },
+                        {
+                            "Id": "(O)90",
+                            "ItemId": "(O)90",
+                            "Amount": 10
+                        },
+                    ],
+                    "BuildCost": 1000000
                 },
                 "Junimo Hut": {
-                    0: "390 250 268 20 771 100",
-                    17: "40000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 250
+                        },
+                        {
+                            "Id": "(O)268",
+                            "ItemId": "(O)268",
+                            "Amount": 20
+                        },
+                        {
+                            "Id": "(O)771",
+                            "ItemId": "(O)771",
+                            "Amount": 100
+                        },
+                    ],
+                    "BuildCost": 40000
                 },
                 "Gold Clock": {
-                    17: "10000000"
+                    "BuildCost": 10000000
                 },
                 "Stable": {
-                    0: "709 120 335 10",
-                    17: "30000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)709",
+                            "ItemId": "(O)709",
+                            "Amount": 120
+                        },
+                        {
+                            "Id": "(O)335",
+                            "ItemId": "(O)335",
+                            "Amount": 10
+                        },
+                    ],
+                    "BuildCost": 30000
                 },
                 "Well": {
-                    0: "390 150",
-                    17: "1000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 150
+                        },
+                    ],
+                    "BuildCost": 1000
                 },
                 "Shipping Bin": {
-                    0: "388 150",
-                    17: "750"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 150
+                        },
+                    ],
+                    "BuildCost": 750
                 },
                 "Coop": {
-                    0: "388 400 390 100",
-                    17: "5000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 400
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 100
+                        },
+                    ],
+                    "BuildCost": 5000
                 },
                 "Big Coop": {
-                    0: "388 550 390 150",
-                    17: "12000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 550
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 150
+                        },
+                    ],
+                    "BuildCost": 12000
                 },
                 "Deluxe Coop": {
-                    0: "388 700 390 200",
-                    17: "25000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 700
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 200
+                        },
+                    ],
+                    "BuildCost": 25000
                 },
                 "Barn": {
-                    0: "388 450 390 150",
-                    17: "8000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 450
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 150
+                        },
+                    ],
+                    "BuildCost": 8000
                 },
                 "Big Barn": {
-                    0: "388 750 390 300",
-                    17: "16000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 750
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 300
+                        },
+                    ],
+                    "BuildCost": 16000
                 },
                 "Deluxe Barn": {
-                    0: "390 200 330 15 334 5",
-                    17: "35000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 950
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 450
+                        }
+                    ],
+                    "BuildCost": 35000
                 },
                 "Slime Hutch": {
-                    0: "390 950 338 10 337 3",
-                    17: "30000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 950
+                        },
+                        {
+                            "Id": "(O)338",
+                            "ItemId": "(O)338",
+                            "Amount": 10
+                        },
+                        {
+                            "Id": "(O)337",
+                            "ItemId": "(O)337",
+                            "Amount": 3
+                        },
+                    ],
+                    "BuildCost": 30000
                 },
                 "Shed": {
-                    0: "388 300",
-                    17: "15000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 300
+                        },
+                    ],
+                    "BuildCost": 15000
                 },
                 "Big Shed": {
-                    0: "388 750 390 300",
-                    17: "40000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)388",
+                            "ItemId": "(O)388",
+                            "Amount": 750
+                        },
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 300
+                        },
+                    ],
+                    "BuildCost": 40000
                 },
                 "Fish Pond": {
-                    0: "390 250 152 10 153 10",
-                    17: "15000"
+                    "BuildMaterials": [
+                        {
+                            "Id": "(O)390",
+                            "ItemId": "(O)390",
+                            "Amount": 250
+                        },
+                        {
+                            "Id": "(O)152",
+                            "ItemId": "(O)152",
+                            "Amount": 10
+                        },
+                        {
+                            "Id": "(O)153",
+                            "ItemId": "(O)153",
+                            "Amount": 10
+                        },
+                    ],
+                    "BuildCost": 15000
                 },
             },
             "When": {

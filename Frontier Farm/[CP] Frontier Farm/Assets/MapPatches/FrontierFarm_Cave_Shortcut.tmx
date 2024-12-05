@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="5" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="5">
+ <tileset firstgid="1" name="cave" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+  <image source="Mines/mine.png" width="256" height="288"/>
+  <tile id="0">
+   <properties>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Type" value="Stone"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Type" value="Stone"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Type" value="Stone"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="Type" value="Stone"/>
+   </properties>
+  </tile>
+  <tile id="165">
+   <properties>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="181">
+   <properties>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="183">
+   <properties>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="289" name="paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths.png" width="64" height="144"/>
+ </tileset>
+ <layer id="1" name="Back" width="5" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYICAbiC+BcS3GRCAWmIwvIuBoQFZbDcQv0FS9xrKZwbiV1A+AFxiF8w=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Buildings" width="5" height="8">
+  <data encoding="base64" compression="zlib">
+   eJwLYGBgCADipQwQcADKB+GtULELQOwGxO5A7AEVewDEYUAcDsQRUDFPIE4D4nQgzoCKRQJxGRCXA3EFVCwTiNuAuJ0BASoZsAMAhIQMEA==
+  </data>
+ </layer>
+ <objectgroup id="4" name="Buildings"/>
+ <layer id="5" name="Paths" width="5" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjcAAAAoAAB
+  </data>
+ </layer>
+ <objectgroup id="6" name="Paths"/>
+ <layer id="7" name="Front" width="5" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAOFND41jjU0RoAAC1IAFw=
+  </data>
+ </layer>
+ <objectgroup id="8" name="Front"/>
+ <layer id="9" name="AlwaysFront" width="5" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjcAAAAoAAB
+  </data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

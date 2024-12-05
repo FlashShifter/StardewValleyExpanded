@@ -1,29 +1,33 @@
 {
-//Aurora Vineyard
-"Mon": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 13 17 1/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Forest West
-"Tue": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 16 8 2/730 Custom_AuroraVineyard 13 17 2/930 Custom_ForestWest 59 18 2 Peaches_Dance1/1500 Custom_AuroraVineyard 12 17 0/1700 Custom_ApplesRoom 9 10 0/1930 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Aurora Vineyard
-"Wed": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/800 Custom_AuroraVineyard 20 18 0/1200 Custom_AuroraVineyard 9 6 3/1500 Custom_AuroraVineyard 11 9 2 Peaches_Dance1/1800 Custom_ApplesRoom 9 6 2 Peaches_Dance2/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Apples Room
-"Thu": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/800 Custom_ApplesRoom 9 8 0/1200 Custom_ApplesRoom 4 8 1/1600 Custom_ApplesRoom 6 9 2 Peaches_Dance1/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Forest West
-"Fri": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/830 Custom_AuroraVineyard 14 17 2 Peaches_Dance1/1000 Custom_ForestWest 57 18 2 Peaches_Wave/1500 Custom_AuroraVineyard 18 7 1/1730 Custom_AuroraVineyard 10 7 2 Peaches_Dance1/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Aurora Vineyard
-"Sat": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/900 Custom_AuroraVineyard 14 17 3/1200 Custom_AuroraVineyard 12 9 0/1400 Custom_AuroraVineyard 20 17 2 Peaches_Dance1/1800 Custom_ApplesRoom 9 6 2 Peaches_Dance2/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Aurora Vineyard
-"Sun": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/830 Custom_ApplesRoom 6 10 2 Peaches_Dance2/1000 Custom_AuroraVineyard 11 9 0/1300 Custom_ForestWest 59 18 2 Peaches_Sleep/1730 Custom_ApplesRoom 9 6 2 Peaches_Dance2/1900 Custom_ApplesRoom 9 6 2 Peaches_Dance1/2100 6 8 2 Peaches_Sleep",
-
-//Same as Mon schedule
-"rain": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
-//Aurora Vineyard
-"spring": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
-
+    "Changes": [
+        {
+            //Peaches' schedule 
+            "Action": "EditData",
+            "Target": "Characters/schedules/Peaches",
+            "When": {
+                "HasSeenEvent |contains=7776006": true,
+                "HasSeenEvent |contains=7776012": false
+            },
+            "Entries": {
+                //Aurora Vineyard
+                "Mon": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 13 17 1/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Forest West
+                "Tue": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 16 8 2/730 Custom_AuroraVineyard 13 17 2/930 Custom_ForestWest 59 18 2 Peaches_Dance1/1500 Custom_AuroraVineyard 12 17 0/1700 Custom_ApplesRoom 9 10 0/1930 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Aurora Vineyard
+                "Wed": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/800 Custom_AuroraVineyard 20 18 0/1200 Custom_AuroraVineyard 9 6 3/1500 Custom_AuroraVineyard 11 9 2 Peaches_Dance1/1800 Custom_ApplesRoom 9 6 2 Peaches_Dance2/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Apples Room
+                "Thu": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/800 Custom_ApplesRoom 9 8 0/1200 Custom_ApplesRoom 4 8 1/1600 Custom_ApplesRoom 6 9 2 Peaches_Dance1/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Forest West
+                "Fri": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/830 Custom_AuroraVineyard 14 17 2 Peaches_Dance1/1000 Custom_ForestWest 57 18 2 Peaches_Wave/1500 Custom_AuroraVineyard 18 7 1/1730 Custom_AuroraVineyard 10 7 2 Peaches_Dance1/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Aurora Vineyard
+                "Sat": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/900 Custom_AuroraVineyard 14 17 3/1200 Custom_AuroraVineyard 12 9 0/1400 Custom_AuroraVineyard 20 17 2 Peaches_Dance1/1800 Custom_ApplesRoom 9 6 2 Peaches_Dance2/2100 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Aurora Vineyard
+                "Sun": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 9 0/830 Custom_ApplesRoom 6 10 2 Peaches_Dance2/1000 Custom_AuroraVineyard 11 9 0/1300 Custom_ForestWest 59 18 2 Peaches_Sleep/1730 Custom_ApplesRoom 9 6 2 Peaches_Dance2/1900 Custom_ApplesRoom 9 6 2 Peaches_Dance1/2100 6 8 2 Peaches_Sleep",
+                //Same as Mon schedule
+                "rain": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+                //Aurora Vineyard
+                "spring": "0 Custom_Peaches_WarpRoom 2 3 3/630 Custom_ApplesRoom 5 10 0/730 Custom_AuroraVineyard 9 7 2 Peaches_Dance2/1100 Custom_AuroraVineyard 19 7 2 Peaches_Dance1/1500 Custom_AuroraVineyard 14 17 3/2000 Custom_ApplesRoom 6 8 2 Peaches_Sleep",
+            },
+        },
+    ],
 }

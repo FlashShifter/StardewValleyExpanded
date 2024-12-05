@@ -2,6 +2,11 @@
 
     "Changes": [
         {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Alesia_Vendor",
+            "FromFile": "assets/CharacterFiles/Shops/Adventurers/Alesia_Vendor.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Shops",
             "Entries": {
@@ -9,7 +14,7 @@
                     "Owners": [
                         {
                             "Name": "AnyOrNone",
-                            "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Adventurers/Alesia_Vendor.png}}",
+                            "Portrait": "Mods\\FlashShifter.StardewValleyExpandedCP\\Alesia_Vendor",
                             "Dialogues": [
                                 {
                                 "Id": "FlashShifter.StardewValleyExpandedCP_AlesiaShopDialogue",
@@ -26,44 +31,42 @@
                             "Price": 350000,
                             "AvailableStock": 1,
                             "AvailableStockLimit": "Player"
-                        }, 
+                        },
+						{
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Galdoran_Mage_Boots",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Galdoran_Mage_Boots",
+                            "Price": 250000,
+                            "AvailableStock": 1,
+                            "AvailableStockLimit": "Player"
+                        },
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_Explosive_Ammo",
                             "ItemId": "441",
                             "Price": 180,
-                            "AvailableStock": 30,
+                            "AvailableStock": 50,
                             "AvailableStockLimit": "Player"
                         }, 
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_Haste_Elixir",
                             "ItemId": "FlashShifter.StardewValleyExpandedCP_Haste_Elixir",
-                            "Price": 6000,
+                            "Price": 8000,
                             "AvailableStock": 3,
                             "AvailableStockLimit": "Player"
                         }, 
                         {
                             "Id": "FlashShifter.StardewValleyExpandedCP_Armor_Elixir",
                             "ItemId": "FlashShifter.StardewValleyExpandedCP_Armor_Elixir",
-                            "Price": 6000,
+                            "Price": 5000,
                             "AvailableStock": 3,
                             "AvailableStockLimit": "Player"
-                        }, 
-                        {
-                            "Id": "FlashShifter.StardewValleyExpandedCP_Haste_ElixirRecipe",
-                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Haste_Elixir",
-                            "IsRecipe": "true",
-                            "Price": 35000,
+                        },
+						{
+                            "Id": "FlashShifter.StardewValleyExpandedCP_Undeadfish",
+                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Undeadfish",
+                            "Price": 4000,
                             "AvailableStock": 1,
                             "AvailableStockLimit": "Player"
-                        }, 
-                        {
-                            "Id": "FlashShifter.StardewValleyExpandedCP_Armor_ElixirRecipe",
-                            "ItemId": "FlashShifter.StardewValleyExpandedCP_Armor_Elixir",
-                            "IsRecipe": "true",
-                            "Price": 50000,
-                            "AvailableStock": 1,
-                            "AvailableStockLimit": "Player"
-                        }, 
+                        },
                     ]
                 }
             }

@@ -14,6 +14,7 @@
         "MarlonFay": "{{i18n:Marlon.Ice}}",
         "Morgan": "{{i18n:Morgan.Ice}}",
         "MorrisTod": "{{i18n:Morris.Ice}}",
+		"Scarlett": "{{i18n:Scarlett.Ice}}",
         "Olivia": "{{i18n:Ice.Olivia.1}}",
         "Sandy": "{{i18n:Sandy.Ice}}",
         "Sophia": "{{i18n:ice.Sophia.1}}",
@@ -88,7 +89,7 @@
     },
     {
       "Action": "EditData",
-      "Target": "data/festivals/winter25",
+      "Target": "data/festivals/winter8",
       "Entries": {
         "Olivia": "{{i18n:Ice.Olivia.2}}",
       },
@@ -98,7 +99,7 @@
     },
     {
       "Action": "EditData",
-      "Target": "data/festivals/winter25",
+      "Target": "data/festivals/winter8",
       "Entries": {
         "Victor": "{{i18n:Ice.victor.2}}"
       },
@@ -107,7 +108,6 @@
       }
     },
     //y2
-    
     {
       "Action": "EditData",
       "Target": "data/festivals/winter8",
@@ -160,7 +160,7 @@
     },
     {
       "Action": "EditData",
-      "Target": "data/festivals/winter25",
+      "Target": "data/festivals/winter8",
       "Entries": {
         "Olivia_y2": "{{i18n:Ice.Olivia.2}}",
       },
@@ -170,7 +170,7 @@
     },
     {
       "Action": "EditData",
-      "Target": "data/festivals/winter25",
+      "Target": "data/festivals/winter8",
       "Entries": {
         "Victor_y2": "{{i18n:Ice.victor.2}}"
       },
@@ -181,9 +181,6 @@
     { //ice festival data
       "Action": "EditData",
       "Target": "Data/Festivals/winter8",
-      "When": {
-        "IsOddYear": true
-      },
       "TextOperations": [
         { //Victor
           "Operation": "Append",
@@ -300,7 +297,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "6665293",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -328,7 +324,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -351,12 +346,38 @@
         },
       ]
     },
+	{ //Scarlett ice festival data
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": {
+        "HasSeenEvent": "3691371",
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "Scarlett 58 19 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Main-Event_additionalCharacters"
+          ],
+          "Value": "Scarlett 57 39 right",
+          "Delimiter": "/"
+        },
+      ]
+    },
     { //Gunther ice festival data
       "Action": "EditData",
       "Target": "Data/Festivals/winter8",
       "When": {
         "GuntherUnlocked": "true",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -384,7 +405,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "ApplesHere": "true",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -412,7 +432,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "5978924",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -440,7 +459,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "Spouse": "Lance",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -468,7 +486,6 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "Hearts:Sandy": "{{Range: 5, 14}}",
-        "IsOddYear": true
       },
       "TextOperations": [
         {
@@ -494,15 +511,12 @@
     { //YEAR TWO ice festival data
       "Action": "EditData",
       "Target": "Data/Festivals/winter8",
-      "When": {
-        "IsOddYear": false
-      },
       "TextOperations": [
         { //Victor
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Victor 74 47 up",
           "Delimiter": "/"
@@ -511,7 +525,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Victor 59 37 right",
           "Delimiter": "/"
@@ -520,7 +534,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Olivia 56 31 down",
           "Delimiter": "/"
@@ -529,7 +543,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Olivia 59 38 right",
           "Delimiter": "/"
@@ -538,7 +552,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Andy 58 51 left",
           "Delimiter": "/"
@@ -547,7 +561,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Andy 63 27 down",
           "Delimiter": "/"
@@ -556,7 +570,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Susan 56 51 right",
           "Delimiter": "/"
@@ -565,7 +579,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Susan 62 28 right",
           "Delimiter": "/"
@@ -574,7 +588,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Sophia 76 46 up",
           "Delimiter": "/"
@@ -583,7 +597,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Sophia 84 36 left",
           "Delimiter": "/"
@@ -592,7 +606,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "MarlonFay 46 15 down",
           "Delimiter": "/"
@@ -601,7 +615,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "MarlonFay 77 23 down",
           "Delimiter": "/"
@@ -613,14 +627,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "6665293",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "MorrisTod 72 29 down",
           "Delimiter": "/"
@@ -629,7 +642,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "MorrisTod 72 32 down down",
           "Delimiter": "/"
@@ -641,14 +654,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Claire 61 44 up",
           "Delimiter": "/"
@@ -657,7 +669,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Claire 64 45 up",
           "Delimiter": "/"
@@ -669,14 +681,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "3219873",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Martin 60 43 right",
           "Delimiter": "/"
@@ -685,7 +696,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Martin 63 45 up",
           "Delimiter": "/"
@@ -697,14 +708,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "3691371",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Scarlett 60 26 down",
           "Delimiter": "/"
@@ -713,7 +723,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Scarlett 84 37 left",
           "Delimiter": "/"
@@ -725,14 +735,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "GuntherUnlocked": "true",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "GuntherSilvian 61 29 right",
           "Delimiter": "/"
@@ -741,7 +750,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "GuntherSilvian 66 46 up",
           "Delimiter": "/"
@@ -753,14 +762,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "ApplesHere": "true",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Apples 106 22 down",
           "Delimiter": "/"
@@ -769,7 +777,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Apples 70 56 up",
           "Delimiter": "/"
@@ -781,14 +789,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "HasSeenEvent": "5978924",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Morgan 31 13 up",
           "Delimiter": "/"
@@ -797,7 +804,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Morgan 31 13 up",
           "Delimiter": "/"
@@ -809,14 +816,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "Spouse": "Lance",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Lance 48 16 left",
           "Delimiter": "/"
@@ -825,7 +831,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Lance 53 33 right",
           "Delimiter": "/"
@@ -837,14 +843,13 @@
       "Target": "Data/Festivals/winter8",
       "When": {
         "Hearts:Sandy": "{{Range: 5, 14}}",
-        "IsOddYear": false
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Set-Up_additionalCharacters"
+            "Set-Up_additionalCharacters_y2"
           ],
           "Value": "Sandy 82 25 down",
           "Delimiter": "/"
@@ -853,7 +858,7 @@
           "Operation": "Append",
           "Target": [
             "Entries",
-            "Main-Event_additionalCharacters"
+            "Main-Event_additionalCharacters_y2"
           ],
           "Value": "Sandy 82 42 left",
           "Delimiter": "/"
@@ -863,11 +868,13 @@
     //Map Loads
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Forest-IceFestival",
       "FromFile": "Assets/Maps/FestivalMaps/Forest-SVE-IceFestival.tmx",
     },
     {
       "Action": "Load",
+      "Priority": "Low",
       "Target": "Maps/Forest-IceFestival2",
       "FromFile": "Assets/Maps/FestivalMaps/Forest-SVE-IceFestival2.tmx",
     },

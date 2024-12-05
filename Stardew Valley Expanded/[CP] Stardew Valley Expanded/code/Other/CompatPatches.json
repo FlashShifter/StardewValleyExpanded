@@ -51,12 +51,12 @@
                     "9_6": "GOTO spring",
                     "23_6": "GOTO spring",
                     "summer_Sun": "800 Town 96 18 3/1200 ScienceHouse 8 5 2 penny_sit_down/1800 PennysHouse 3 5 0 penny_dishes/2100 PennysHouse 10 5 1 penny_sleep",
-                    "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Bed",
+                    "marriageJob": "830 ArchaeologyHouse 17 9 2 penny_read \"Strings\\schedules\\Penny:marriageJob.000\"/1400 Town 86 99 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 bed",
                     "Tue": "830 PennysHouse 9 7 0 penny_sit \"Strings\\schedules\\Penny:Upgrade.0014\"/900 ArchaeologyHouse 17 9 2 penny_read/1400 Town 87 100 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 PennysHouse 10 5 1 penny_sleep",
                     "Wed": "GOTO Tue",
                     "Fri": "GOTO Tue",
                     "Sat": "1000 Town 32 89 2/1200 Town 12 13 1/1700 Town 29 91 3/2000 PennysHouse 10 5 1 penny_sleep",
-                    "marriage_Mon": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 Bed",
+                    "marriage_Mon": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 bed",
                     "spring": "800 Town 35 89 2 penny_read/1230 PennysHouse 3 5 0 penny_dishes \"Strings\\schedules\\Penny:Upgrade.0015\"/1600 Town 44 77 2 penny_sit_down/1840 PennysHouse 10 5 1 penny_sleep",
                }
           },
@@ -161,7 +161,7 @@
                               "MapProperties",
                               "Warp"
                          ],
-                         "Value": "60 23 Custom_WTDR_GhostTown 1 35 60 24 Custom_WTDR_GhostTown 1 35 60 25 Custom_WTDR_GhostTown 1 35 60 26 Custom_WTDR_GhostTown 1 35 60 27 Custom_WTDR_GhostTown 1 35 60 28 Custom_WTDR_GhostTown 1 35 60 29 Custom_WTDR_GhostTown 1 35",
+                         "Value": "60 23 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 24 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 25 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 26 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 27 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 28 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35 60 29 Tarniyar.CP.WalkToDesert_Ghost_Town 1 35",
                          "Delimiter": " "
                     }
                ]
@@ -324,6 +324,24 @@
                     "Height": 3
                }
           },
+		  //Forager's Nooks and Crannies Secret Woods Compatibility Patch
+           {
+            "Action": "EditMap",
+            "Target": "Maps/Woods",
+            "FromFile": "Assets/Maps/MapPatches/WoodsFaerieForageSVEPatch.tmx",
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 13,
+                "Height": 10
+            },
+            "PatchMode": "Replace",
+            "When": 
+            {
+                "HasMod: |contains=Wildflour.AtelierGoods": true,
+            },
+            "Priority": "Early",
+          },
           { //Patches purple star icon to down arrow for sign usage
                "Action": "EditImage",
                "Target": "LooseSprites/font_bold",
@@ -338,6 +356,33 @@
                     "LocationName": "Farm, Custom_BlueMoonVineyard, Backwoods, Forest, BusStop, Custom_GrampletonSuburbsTrainStation, Custom_GrampletonSuburbs"
                },
                "Update": "OnLocationChange"
+          },
+		  {
+            //Add events to the blocklist so they won't show up
+            //in the "Available Events" menu
+            //left-hand side is the event id, right side doesnt matter
+            "Action": "EditData",
+            "Target": "Mods/shekurika.EventLookup/blocklist",
+            "Entries": {
+                "100000000000": "T",
+            }
+          },
+		  
+		  //Adds 2 extra museum spaces if Walk To Desert is installed
+		  {
+               "Action": "EditMap",
+               "Target": "Maps/ArchaeologyHouse",
+               "FromFile": "Assets/Maps/MapPatches/ArchaeologyHouse_MoreSpace.tbin",
+               "When": {
+                    "HasMod |contains=Tarniyar.CP.WalkToDesert": true,
+					"HasMod |contains=RaffieJohn.ExtraSpace": false,
+               },
+               "ToArea": {
+                    "X": 43,
+                    "Y": 13,
+                    "Width": 4,
+                    "Height": 3
+               }
           },
      ]
 }

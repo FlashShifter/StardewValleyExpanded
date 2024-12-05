@@ -1,0 +1,267 @@
+{
+    "Changes":[
+          {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Camel",
+            "FromFile": "assets/FarmAnimals/Camel.png"
+          },
+		  {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Camel_Icon",
+            "FromFile": "assets/FarmAnimals/Camel_Icon.png"
+          },
+          {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Goose",
+            "FromFile": "assets/FarmAnimals/Goose.png"
+          },
+		  {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Goose_Icon",
+            "FromFile": "assets/FarmAnimals/Goose_Icon.png"
+          },
+		  {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Bear",
+            "FromFile": "assets/FarmAnimals/Bear.png"
+          },
+		  {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Bear_Icon",
+            "FromFile": "assets/FarmAnimals/Bear_Icon.png"
+          },
+          {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Entries": {
+			  "FlashShifter.StardewValleyExpandedCP_Camel": {
+                "DisplayName": "{{i18n:animal.camel.name}}",
+                "House": "Barn",
+                "Gender": "MaleOrFemale",
+                "PurchasePrice": 12000,
+                "SellPrice": 24000,
+                "ShopTexture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Camel_Icon",
+                "ShopSourceRect": {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 32,
+                  "Height": 16
+                },
+				"RequiredBuilding": "FlashShifter.StardewValleyExpandedCP_PremiumBarn",
+				"UnlockCondition": "BUILDINGS_CONSTRUCTED all FlashShifter.StardewValleyExpandedCP_PremiumBarn 1",
+                "ShopDisplayName": "{{i18n:animal.camel.name}}",
+                "ShopDescription": "{{i18n:animal.camel.description}}",
+                "ShopMissingBuildingDescription": "{{i18n:animals.barn}}",
+                "IncubationTime": -1,
+                "IncubatorParentSheetOffset": 1,
+                "BirthText": "null",
+                "DaysToMature": 0,
+                "DaysToProduce": 2,
+                "CanGetPregnant": false,
+                "HarvestType": "DropOvernight",
+                "ProduceItemIds": [
+                  {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Camel_Wool",
+					"ItemId": "FlashShifter.StardewValleyExpandedCP_Camel_Wool",
+                    "MinimumFriendship": 0
+                  }
+                ],
+				"ProfessionForFasterProduce": 3,
+				"ProfessionForHappinessBoost": 3,
+				"ProfessionForQualityBoost": 3,
+                "FriendshipForFasterProduce": -1,
+                "DeluxeProduceMinimumFriendship": 200,
+                "DeluxeProduceCareDivisor": 1200.0,
+                "DeluxeProduceLuckMultiplier": 0.0,
+                "ProfessionForHappinessBoost": 2,
+                "ProfessionForQualityBoost": 2,
+                "ProfessionForFasterProduce": -1,
+                "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Camel",
+                "BabyTexture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Camel",
+                "SpriteWidth": 32,
+                "SpriteHeight": 32,
+                "EmoteOffset": {
+                  "X": 0,
+                  "Y": -16
+                },
+                "CanSwim": false,
+				"Sound": "camel",
+				"UseFlippedRightForLeft": false,
+				"UseDoubleUniqueAnimationFrames": false,
+				"SleepFrame": 12,
+                "GrassEatAmount": 3,
+                "HappinessDrain": 4,
+                "UpDownPetHitboxTileSize": "1.5, 1.75",
+                "LeftRightPetHitboxTileSize": "1.75, 1.25",
+                "BabyUpDownPetHitboxTileSize": "1, 1.75",
+                "BabyLeftRightPetHitboxTileSize": "1.75, 1",
+                "StatToIncrementOnProduce": "",
+                "ShowInSummitCredits": true,
+				"ShadowWhenBaby": {
+                    "Visible": false,
+                },
+				"ShadowWhenAdult": {
+                    "Visible": false,
+                },
+                "CustomFields": {}
+              },
+			  "FlashShifter.StardewValleyExpandedCP_Goose": {
+                "DisplayName": "{{i18n:animal.goose.name}}",
+                "House": "Coop",
+                "Gender": "Female",
+                "PurchasePrice": 6000,
+                "SellPrice": 12000,
+                "ShopTexture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Goose_Icon",
+                "ShopSourceRect": {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 32,
+                  "Height": 16
+                },
+				"RequiredBuilding": "FlashShifter.StardewValleyExpandedCP_PremiumCoop",
+				"UnlockCondition": "BUILDINGS_CONSTRUCTED all FlashShifter.StardewValleyExpandedCP_PremiumCoop 1",
+                "ShopDisplayName": "{{i18n:animal.goose.name}}",
+                "ShopDescription": "{{i18n:animal.goose.description}}",
+                "ShopMissingBuildingDescription": "{{i18n:animals.coop}}",
+				"EggItemIds": [
+                  "FlashShifter.StardewValleyExpandedCP_Goose_Egg",
+                ],
+                "IncubationTime": 18000,
+                "IncubatorParentSheetOffset": 1,
+				"BirthText": "{{i18n:animal.goose.hatched}}",
+                "DaysToMature": 7,
+                "DaysToProduce": 2,
+                "CanGetPregnant": false,
+                "HarvestType": "DropOvernight",
+                "ProduceItemIds": [
+                  {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Goose_Egg",
+					"ItemId": "FlashShifter.StardewValleyExpandedCP_Goose_Egg",
+                    "MinimumFriendship": 0
+                  },
+				  {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg",
+					"ItemId": "FlashShifter.StardewValleyExpandedCP_Golden_Goose_Egg",
+					"Condition": "RANDOM 0.01",
+                    "MinimumFriendship": 0
+                  }
+                ],
+				"ProfessionForFasterProduce": 3,
+				"ProfessionForHappinessBoost": 3,
+				"ProfessionForQualityBoost": 3,
+                "FriendshipForFasterProduce": -1,
+                "DeluxeProduceMinimumFriendship": 200,
+                "DeluxeProduceCareDivisor": 1200.0,
+                "DeluxeProduceLuckMultiplier": 0.0,
+                "ProfessionForHappinessBoost": 2,
+                "ProfessionForQualityBoost": 2,
+                "ProfessionForFasterProduce": -1,
+                "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Goose",
+                "BabyTexture": "Animals\\BabyWhite Chicken",
+                "SpriteWidth": 16,
+                "SpriteHeight": 16,
+                "EmoteOffset": {
+                  "X": 0,
+                  "Y": -16
+                },
+				"SwimOffset": {
+                  "X": 0,
+                  "Y": 96
+                },
+                "CanSwim": true,
+				"Sound": "Duck",
+				"UseFlippedRightForLeft": false,
+				"UseDoubleUniqueAnimationFrames": true,
+				"SleepFrame": 16,
+                "GrassEatAmount": 2,
+                "HappinessDrain": 5,
+                "UpDownPetHitboxTileSize": "1, 1",
+                "LeftRightPetHitboxTileSize": "1, 1",
+                "BabyUpDownPetHitboxTileSize": "1, 1",
+                "BabyLeftRightPetHitboxTileSize": "1, 1",
+                "StatToIncrementOnProduce": "",
+                "ShowInSummitCredits": true,
+				"ShadowWhenBaby": {
+                    "Visible": true,
+                },
+				"ShadowWhenAdult": {
+                    "Visible": true,
+                },
+                "CustomFields": {}
+              },
+			  "FlashShifter.StardewValleyExpandedCP_Bear": {
+                "DisplayName": "{{i18n:animal.bear.name}}",
+                "House": "Barn",
+                "Gender": "MaleOrFemale",
+                "PurchasePrice": 14000,
+                "SellPrice": 28000,
+                "ShopTexture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Bear_Icon",
+                "ShopSourceRect": {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 32,
+                  "Height": 16
+                },
+				"RequiredBuilding": "FlashShifter.StardewValleyExpandedCP_PremiumBarn",
+				"UnlockCondition": "PLAYER_HAS_SEEN_EVENT Any 8402751",
+                "ShopDisplayName": "{{i18n:animal.bear.name}}",
+                "ShopDescription": "{{i18n:animal.bear.description}}",
+                "ShopMissingBuildingDescription": "{{i18n:animal.barn}}",
+                "IncubationTime": -1,
+                "IncubatorParentSheetOffset": 1,
+                "BirthText": "null",
+                "DaysToMature": 0,
+                "DaysToProduce": 0,
+                "CanGetPregnant": false,
+                "HarvestType": "DropOvernight",
+                "ProduceItemIds": [
+                  {
+                    "Id": "FlashShifter.StardewValleyExpandedCP_Honey_Jar",
+					"ItemId": "FlashShifter.StardewValleyExpandedCP_Honey_Jar",
+                    "MinimumFriendship": 0
+                  }
+                ],
+				"ProfessionForFasterProduce": 3,
+				"ProfessionForHappinessBoost": 3,
+				"ProfessionForQualityBoost": 3,
+                "FriendshipForFasterProduce": -1,
+                "DeluxeProduceMinimumFriendship": 200,
+                "DeluxeProduceCareDivisor": 1200.0,
+                "DeluxeProduceLuckMultiplier": 0.0,
+                "ProfessionForHappinessBoost": 2,
+                "ProfessionForQualityBoost": 2,
+                "ProfessionForFasterProduce": -1,
+                "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Bear",
+                "BabyTexture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Bear",
+                "SpriteWidth": 32,
+                "SpriteHeight": 32,
+                "EmoteOffset": {
+                  "X": 0,
+                  "Y": -16
+                },
+                "CanSwim": false,
+				"Sound": "trashbear",
+				"UseFlippedRightForLeft": false,
+				"UseDoubleUniqueAnimationFrames": false,
+				"SleepFrame": 12,
+                "GrassEatAmount": 0,
+                "HappinessDrain": 4,
+				"CanEatGoldenCrackers": true,
+                "UpDownPetHitboxTileSize": "1.5, 1.75",
+                "LeftRightPetHitboxTileSize": "1.75, 1.25",
+                "BabyUpDownPetHitboxTileSize": "1, 1.75",
+                "BabyLeftRightPetHitboxTileSize": "1.75, 1",
+                "StatToIncrementOnProduce": "",
+                "ShowInSummitCredits": true,
+				"ShadowWhenBaby": {
+                    "Visible": false,
+                },
+				"ShadowWhenAdult": {
+                    "Visible": false,
+                },
+                "CustomFields": {}
+              },
+            }
+        }
+    ]
+}

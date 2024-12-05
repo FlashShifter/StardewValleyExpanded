@@ -1,6 +1,16 @@
 {
     "Changes": [
         {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/MarlonShop",
+            "FromFile": "assets/CharacterFiles/Shops/Adventurers/Marlon_WinterVendor.png"
+        },
+        {
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/GilShop",
+            "FromFile": "assets/CharacterFiles/Portraits/Gil/Gil.png"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/Shops",
             "TargetField": [
@@ -32,7 +42,7 @@
             "Entries": {
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Evening": {
                     "Condition": "TIME 2200 2600",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Evening",
@@ -47,7 +57,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopGil_Morning": {
                     "Condition": "TIME 600 1200",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Morning",
@@ -62,7 +72,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureShopMarlon_Winter": {
                     "Condition": "SEASON Winter, TIME 1200 2200",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Adventurers/Marlon_WinterVendor.png}}",
+                    "Portrait": "MarlonFay",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Marlon Winter",
@@ -108,7 +118,7 @@
             "Entries": {
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Evening": {
                     "Condition": "TIME 2200 2600",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Evening",
@@ -123,7 +133,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryGil_Morning": {
                     "Condition": "TIME 600 1200",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Portraits/Gil/Gil.png}}",
+                    "Portrait": "Portraits/Gil",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Gil Morning",
@@ -138,7 +148,7 @@
                 },
                 "FlashShifter.StardewValleyExpandedCP_AdventureGuildRecoveryMarlon_Winter": {
                     "Condition": "SEASON Winter, TIME 1200 2200",
-                    "Portrait": "{{InternalAssetKey: assets/CharacterFiles/Shops/Adventurers/Marlon_WinterVendor.png}}",
+                    "Portrait": "MarlonFay",
                     "RandomizeDialogueOnOpen": false,
                     "ClosedMessage": null,
                     "ID": "Marlon Winter",

@@ -1,0 +1,91 @@
+{
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Hedge Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Hedge Fence Tilesheet.png",
+		},
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Hedge Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Hedge Fence Tilesheet Summer.png",
+			"Patchmode": "Replace",
+			"When": {
+			   "Season": "Summer"
+			}
+        },
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Hedge Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Hedge Fence Tilesheet Fall.png",
+			"Patchmode": "Replace",
+			"When": {
+			   "Season": "Fall"
+			}
+        },
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Hedge Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Hedge Fence Tilesheet Winter.png",
+			"Patchmode": "Replace",
+			"When": {
+			   "Season": "Winter"
+			}
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Small Hardwood Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Small Hardwood Fence Tilesheet.png",
+        },
+		{
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Small Hardwood Fence Tilesheet",
+            "FromFile": "assets/Items/Fences/Small Hardwood Fence Tilesheet Snow.png",
+			"Patchmode": "Overlay",
+			"Update": "OnLocationChange",
+			"When": {
+			   "SeasonalEdits": "true",
+			   "Season": "Winter",
+			   "LocationName |contains=Custom_ForbiddenMaze, Custom_CrimsonBadlands, Custom_CastleVillageOutpost, Custom_DesertRailway, Custom_IridiumQuarry, Custom_TreasureCave, Custom_GaldoranVoid": false
+			}
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Fences",
+            "Entries": {
+                "FlashShifter.StardewValleyExpandedCP_Small_Hardwood_Fence_Tilesheet": {
+                    "Health": 280,
+                    "RepairHealthAdjustmentMinimum": -20.0,
+                    "RepairHealthAdjustmentMaximum": 20.0,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Small Hardwood Fence Tilesheet",
+                    "PlacementSound": "axe",
+                    "RemovalSound": "axchop",
+                    "RemovalToolIds": [],
+                    "RemovalToolTypes": [
+                      "StardewValley.Tools.Axe"
+                    ],
+                    "RemovalDebrisType": 12,
+                    "HeldObjectDrawOffset": "0, -20",
+                    "LeftEndHeldObjectDrawX": -1.0,
+                    "RightEndHeldObjectDrawX": 0.0
+                  },
+                  "FlashShifter.StardewValleyExpandedCP_Hedge_Fence_Tilesheet": {
+                    "Health": 160,
+                    "RepairHealthAdjustmentMinimum": -6.0,
+                    "RepairHealthAdjustmentMaximum": 12.0,
+                    "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\Hedge Fence Tilesheet",
+                    "PlacementSound": "grassyStep",
+                    "RemovalSound": "grassyStep",
+                    "RemovalToolIds": [],
+                    "RemovalToolTypes": [
+                      "StardewValley.Tools.Axe"
+                    ],
+                    "RemovalDebrisType": 12,
+                    "HeldObjectDrawOffset": "0, -20",
+                    "LeftEndHeldObjectDrawX": -1.0,
+                    "RightEndHeldObjectDrawX": 0.0
+                  },
+            }
+        }
+    ]
+}

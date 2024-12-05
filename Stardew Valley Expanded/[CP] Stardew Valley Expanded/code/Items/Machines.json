@@ -1,0 +1,589 @@
+{
+  "Changes": [
+  
+    //Loads New Machine Artwork
+    {
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Butter Churner",
+      "FromFile": "assets/Items/Machines/Butter Churner.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Yarn Spooler",
+      "FromFile": "assets/Items/Machines/Yarn Spooler.png"
+    },
+	
+	//Loads New Machine Data
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_Butter_Churner": {
+          "Name": "Butter Churner",
+          "DisplayName": "{{i18n:machine.butter-churner.name}}",
+          "Description": "{{i18n:machine.butter-churner.description}}",
+          "Price": 50,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/Butter Churner",
+          "SpriteIndex": 0,
+          "ContextTags": null,
+          "CustomFields": null
+        },
+		"FlashShifter.StardewValleyExpandedCP_Yarn_Spooler": {
+          "Name": "Yarn Spool",
+          "DisplayName": "{{i18n:machine.yarn-spooler.name}}",
+          "Description": "{{i18n:machine.yarn-spooler.description}}",
+          "Price": 50,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP/Yarn Spooler",
+          "SpriteIndex": 0,
+          "ContextTags": null,
+          "CustomFields": null
+        }
+	  }
+    },
+	/*
+    //Makes Casks age 15% faster in the Winery
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)163",
+        "OutputRules"
+      ],
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_WineryKegsOutputRules": {
+          "Id": "FlashShifter.StardewValleyExpandedCP_WineryKegsOutputRules",
+          "Triggers": [
+            {
+              "Id": "ItemPlacedInMachine_Fruit",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": null,
+              "RequiredTags": [
+                "category_fruits"
+              ],
+              "RequiredCount": 1,
+              "Condition": "PLAYER_LOCATION_NAME Current FlashShifter.StardewValleyExpandedCP_Winery",
+            },
+            {
+              "Id": "ItemPlacedInMachine_Wine",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": null,
+              "RequiredTags": [
+                "keg_wine"
+              ],
+              "RequiredCount": 1,
+              "Condition": null
+            }
+          ],
+          "UseFirstValidOutput": true,
+          "OutputItem": [
+            {
+              "CustomData": null,
+              "OutputMethod": null,
+              "CopyColor": false,
+              "CopyPrice": false,
+              "CopyQuality": false,
+              "PreserveType": null,
+              "PreserveId": null,
+              "IncrementMachineParentSheetIndex": 0,
+              "PriceModifiers": [
+                {
+                  "Modification": "Multiply",
+                  "Amount": 100
+                }
+              ],
+              "PriceModifierMode": "Stack",
+              "Condition": null,
+              "Id": "FlashShifter.Test_Wine",
+              "ItemId": "FLAVORED_ITEM Wine DROP_IN_ID",
+              "RandomItemId": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+              "ObjectInternalName": "{0} SVE Wine",
+              "ObjectDisplayName": null,
+              "ToolUpgradeLevel": -1,
+              "IsRecipe": false,
+              "StackModifiers": null,
+              "StackModifierMode": "Stack",
+              "QualityModifiers": null,
+              "QualityModifierMode": "Stack"
+            }
+          ],
+          "MinutesUntilReady": 8500,
+          "DaysUntilReady": -1,
+          "InvalidCountMessage": null,
+          "RecalculateOnCollect": false
+        }
+      },
+    },*/
+	
+	//Makes Crystalarium accept Galdoran Gems
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)21",
+        "OutputRules"
+      ],
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_Galdoran_Gem": {
+        "Id": "FlashShifter.StardewValleyExpandedCP_Galdoran_Gem",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)FlashShifter.StardewValleyExpandedCP_Galdoran_Gem",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "CustomData": null,
+            "OutputMethod": null,
+            "CopyColor": false,
+            "CopyPrice": false,
+            "CopyQuality": false,
+            "PreserveType": null,
+            "PreserveId": null,
+            "IncrementMachineParentSheetIndex": 0,
+            "PriceModifiers": null,
+            "PriceModifierMode": "Stack",
+            "Condition": null,
+            "Id": "(O)FlashShifter.StardewValleyExpandedCP_Galdoran_Gem",
+            "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Galdoran_Gem",
+            "RandomItemId": null,
+            "MaxItems": null,
+            "MinStack": -1,
+            "MaxStack": -1,
+            "Quality": -1,
+            "ObjectInternalName": null,
+            "ObjectDisplayName": null,
+            "ToolUpgradeLevel": -1,
+            "IsRecipe": false,
+            "StackModifiers": null,
+            "StackModifierMode": "Stack",
+            "QualityModifiers": null,
+            "QualityModifierMode": "Stack",
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 4000,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": null,
+        "RecalculateOnCollect": false
+       },
+      },
+      /*"MoveEntries": [
+        {
+          "Id": "FlashShifter.StardewValleyExpandedCP_Galdoran_Gem",
+          "BeforeID": "Default_Diamond"
+        }
+      ]*/
+    },
+	
+	//Makes mayo machine give goose mayo when goose eggs are inputed
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)24",
+        "OutputRules"
+      ],
+      "Entries": {
+        "FlashShifter.StardewValleyExpandedCP_Goose_Egg_Mayo": {
+        "Id": "FlashShifter.StardewValleyExpandedCP_GooseEgg",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)FlashShifter.StardewValleyExpandedCP_Goose_Egg",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "CustomData": null,
+            "OutputMethod": null,
+            "CopyColor": false,
+            "CopyPrice": false,
+            "CopyQuality": false,
+            "PreserveType": null,
+            "PreserveId": null,
+            "IncrementMachineParentSheetIndex": 0,
+            "PriceModifiers": null,
+            "PriceModifierMode": "Stack",
+            "Condition": null,
+            "Id": "(O)FlashShifter.StardewValleyExpandedCP_Goose_Mayonnaise",
+            "ItemId": "(O)FlashShifter.StardewValleyExpandedCP_Goose_Mayonnaise",
+            "RandomItemId": null,
+            "MaxItems": null,
+            "MinStack": -1,
+            "MaxStack": -1,
+            "Quality": -1,
+            "ObjectInternalName": null,
+            "ObjectDisplayName": null,
+            "ToolUpgradeLevel": -1,
+            "IsRecipe": false,
+            "StackModifiers": null,
+            "StackModifierMode": "Stack",
+            "QualityModifiers": null,
+            "QualityModifierMode": "Stack",
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 180,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": null,
+        "RecalculateOnCollect": false
+       },
+      },
+      "MoveEntries": [
+        {
+          "Id": "FlashShifter.StardewValleyExpandedCP_GooseEgg",
+          "BeforeID": "Default_DinosaurEgg"
+        }
+      ]
+    },
+	
+	//New Machine Data
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+	    "(BC)FlashShifter.StardewValleyExpandedCP_Statue_Of_Treasure": {
+          "HasInput": false,
+          "InteractMethod": null,
+          "OutputRules": [
+            {
+              "Id": "Default",
+              "Triggers": [
+                {
+                  "Id": "DayUpdate",
+                  "Trigger": "DayUpdate",
+                }
+               ],
+               "UseFirstValidOutput": false,
+               "OutputItem": [
+                {
+                  "PriceModifierMode": "Stack",
+                  "Condition": null,
+                  "Id": "(O)275",
+                  "ItemId": "(O)275",
+                }
+               ]
+              }
+            ]
+        },
+        "(BC)FlashShifter.StardewValleyExpandedCP_Butter_Churner": {
+          "OutputRules": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_Milk_NoQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "milk_item",
+				  "quality_none"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_Milk_SilverQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "milk_item",
+				  "quality_silver"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 1,
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_Milk_GoldQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "milk_item",
+				  "quality_gold"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 2,
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_Milk_IridiumQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "milk_item",
+				  "quality_Iridium"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 3,
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_LargeMilk_NoQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "large_milk_item",
+				  "quality_none"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_LargeMilk_SilverQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "large_milk_item",
+				  "quality_silver"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 1,
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_LargeMilk_GoldQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "large_milk_item",
+				  "quality_gold"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 2,
+                  "IsRecipe": false,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+			{
+              "Id": "FlashShifter.StardewValleyExpandedCP_ChurnerRulesId_LargeMilk_IridiumQuality",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": null,
+				  "RequiredTags": [
+                  "large_milk_item",
+				  "quality_iridium"
+                  ],
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Butter",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Butter",
+				  "Quality": 3,
+                  "IsRecipe": false,
+				  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 60,
+            },
+          ],
+          "ReadyTimeModifierMode": "Stack",
+          "InvalidCountMessage": "{{i18n:machine.butter-churner.invalid}}",
+          "AllowLoadWhenFull": false,
+          "WobbleWhileWorking": true,
+          "ShowNextIndexWhileWorking": false,
+          "ShowNextIndexWhenReady": false,
+          "AllowFairyDust": true,
+          "IsIncubator": false,
+		  "LoadEffects": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Sounds": [
+               {
+                "Id": "Ship",
+                "Delay": 0
+               }
+             ],
+             "Interval": 100,
+             "Frames": null,
+             "ShakeDuration": -1,
+             "TemporarySprites": null
+            }
+          ]
+        },
+        "(BC)FlashShifter.StardewValleyExpandedCP_Yarn_Spooler": {
+          "OutputRules": [
+            {
+              "Id": "FlashShifter.StardewValleyExpandedCP_YarnRulesId",
+              "Triggers": [
+                {
+                  "Id": "ItemPlacedInMachine_Default",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Camel_Wool",
+                  "RequiredCount": 1,
+                },
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "Id": "FlashShifter.StardewValleyExpandedCP_Yarn",
+                  "ItemId": "FlashShifter.StardewValleyExpandedCP_Yarn",
+                  "IsRecipe": false,
+				  "CopyQuality": true,
+                  "StackModifierMode": "Stack",
+                  "QualityModifierMode": "Stack"
+                },
+              ],
+              "MinutesUntilReady": 120,
+            }
+          ],
+          "ReadyTimeModifierMode": "Stack",
+          "InvalidCountMessage": "{{i18n:machine.yarn-spooler.invalid}}",
+          "AllowLoadWhenFull": false,
+          "WobbleWhileWorking": true,
+          "ShowNextIndexWhileWorking": false,
+          "ShowNextIndexWhenReady": false,
+          "AllowFairyDust": true,
+          "IsIncubator": false,
+		  "LoadEffects": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Sounds": [
+               {
+                "Id": "Ship",
+                "Delay": 0
+               }
+             ],
+             "Interval": 100,
+             "Frames": null,
+             "ShakeDuration": -1,
+             "TemporarySprites": null
+            }
+          ]
+        },
+      }
+    },
+  ]
+}

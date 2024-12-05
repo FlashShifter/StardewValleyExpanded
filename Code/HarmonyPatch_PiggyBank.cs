@@ -55,7 +55,7 @@ namespace StardewValleyExpanded
         /// <param name="__instance">The instance calling the original method.</param>
         /// <param name="who">The farmer performing this action.</param>
         /// <param name="__result">The result of the original method.</param>
-        private static void Object_checkForAction(SObject __instance, Farmer who, ref bool __result)
+        private static void Object_checkForAction(SObject __instance, Farmer who, bool justCheckingForActivity, ref bool __result)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace StardewValleyExpanded
                 {
                     if (__instance.Name == PiggyBankName) //if this item is SVE's piggy bank (TODO: if name conflicts arise, convert this check to use "QualifiedItemID" and/or JsonAssets' API)
                     {
-                        __result = InteractWithPiggyBank(who, __instance); //try to perform the piggy bank action & override the original result
+                        __result = InteractWithPiggyBank(who, __instance, justCheckingForActivity); //try to perform the piggy bank action & override the original result
                         return;
                     }
                 }
@@ -79,7 +79,7 @@ namespace StardewValleyExpanded
         /// <param name="who">The player interacting with the piggy bank.</param>
         /// <param name="piggy">The piggy bank object.</param>
         /// <returns>True if the interaction was successfully handled. False if this method could not handle the interaction.</returns>
-        private static bool InteractWithPiggyBank(Farmer who, SObject piggy)
+        private static bool InteractWithPiggyBank(Farmer who, SObject piggy, bool justCheckingForActivity)
         {
             if (who == null) //if the action wasn't initiated by a player (uncaught "probing" logic, etc)
                 return false; //handling failed
@@ -87,15 +87,18 @@ namespace StardewValleyExpanded
             if (who.ActiveObject != null) //if the player is holding an object (basically anything other than a tool)
                 return false; //handling failed
 
-            if (who.Money > 0) //if this player at least 1 gold
+            if (!justCheckingForActivity)
             {
-                who.Money--;
-                who.currentLocation.playSound("money");
-                piggy.shakeTimer = 100;
-            }
-            else
-            {
-                who.currentLocation.playSound("cancel");
+                if (who.Money > 0) //if this player at least 1 gold
+                {
+                    who.Money--;
+                    who.currentLocation.playSound("money");
+                    piggy.shakeTimer = 100;
+                }
+                else
+                {
+                    who.currentLocation.playSound("cancel");
+                }
             }
 
             return true; //handling succeeded

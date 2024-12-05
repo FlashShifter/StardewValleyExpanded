@@ -1,6 +1,7 @@
 {
   "Changes": [
     {
+      "LogName": "Lance Schedule Strings",
       "Action": "EditData",
       "Target": "Strings/schedules/Lance",
       "Entries": 
@@ -9,22 +10,17 @@
   "marriage.001": "{{i18n:Lance.Marriage.001}}",
   "marriage.002": "{{i18n:Lance.Marriage.002}}",
   "marriage.003": "{{i18n:Lance.Marriage.003}}",
-  "marriage.004": "{{i18n:Lance.Marriage.004}}",
-  "marriage.005": "{{i18n:Lance.Marriage.005}}",
-  "marriage.006": "{{i18n:Lance.Marriage.006}}",
+  "marriage.FableReef.1": "$query PLAYER_HAS_MAIL Current SVE.LanceRice#{{i18n:Lance.Marriage.FableReefRice}}#$action RemoveMail Current SVE.LanceRice|{{i18n:Lance.Marriage.FableReef.1}}",
+  "marriage.FableReef.2": "$query PLAYER_HAS_MAIL Current SVE.LanceRice#{{i18n:Lance.Marriage.FableReefRice}}#$action RemoveMail Current SVE.LanceRice|{{i18n:Lance.Marriage.FableReef.2}}",
+  "marriage.FableReef.3": "$query PLAYER_HAS_MAIL Current SVE.LanceRice#{{i18n:Lance.Marriage.FableReefRice}}#$action RemoveMail Current SVE.LanceRice|{{i18n:Lance.Marriage.FableReef.3}}",
   "marriage.007": "{{i18n:Lance.Marriage.007}}",
   "NightMarket.001": "{{i18n:Lance.NightMarket.001}}",
   "NightMarket.002": "{{i18n:Lance.NightMarket.002}}",
   "NightMarket.003": "{{i18n:Lance.NightMarket.003}}",
-  "KrobusDialogue.001": "{{i18n:Lance.KrobusDialogue.001}}",
-  "KrobusDialogue.002": "{{i18n:Lance.KrobusDialogue.002}}",
-  "KrobusDialogue.003": "{{i18n:Lance.KrobusDialogue.003}}",
-  "KrobusDialogue.004": "{{i18n:Lance.KrobusDialogue.004}}",
-  "KrobusDialogue.005": "{{i18n:Lance.KrobusDialogue.005}}",
-  "KrobusDialogue.006": "{{i18n:Lance.KrobusDialogue.006}}",
-  "KrobusDialogue.007": "{{i18n:Lance.KrobusDialogue.007}}",
-  "DesertFestival_Lance_marriage": "{{i18n:DesertFestival_Lance_marriage}}"
-},
-    },
+  "KrobusDialogue": "{{i18n:Lance.KrobusDialogue.{{Season}}_{{Day}}
+    |default={{i18n:Lance.KrobusDialogue.{{Random:{{Range:1,5}}|key=LanceKrobusMeet}}}}}}",
+  "DesertFestival_Lance_marriage": "{{i18n:DesertFestival_Lance_marriage}}",
+      },
+    },  
   ]
 }
