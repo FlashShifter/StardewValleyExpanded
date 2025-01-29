@@ -163,5 +163,64 @@
                 },
             },
         },
+      // Suki Portraits
+      {
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+            "Traveler",
+            "Owners",
+            "AnyOrNone"
+        ],
+        "Entries": {
+          "Portrait": "Portraits/Suki"
+        }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+            "Traveler",
+            "Owners",
+            "AnyOrNone"
+        ],
+        "Entries": {
+          "Portrait": "Portraits/Suki"
+        }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+            "Traveler",
+            "Owners",
+        ],
+        "Entries": {
+          "FlashShifter.StardewValleyExpandedCP_DesertOpen": {
+            "Id": "FlashShifter.StardewValleyExpandedCP_DesertOpen",
+            "Condition": "IS_PASSIVE_FESTIVAL_TODAY DesertFestival",
+            "Portrait": "Portraits/Suki_DesertFestival",
+            "Name": "AnyOrNone"
+          }
+        },
+        "MoveEntries": [
+          {
+            "Id": "FlashShifter.StardewValleyExpandedCP_DesertOpen",
+            "BeforeID": "AnyOrNone"
+          }
+        ]
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+            "Festival_FestivalOfIce_TravelingMerchant",
+            "Owners",
+            "AnyOrNone"
+        ],
+        "Entries": {
+          "Portrait": "Portraits/Suki_IceFestival"
+        }
+      },
     ]
 }

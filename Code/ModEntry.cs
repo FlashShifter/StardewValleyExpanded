@@ -102,7 +102,7 @@ namespace StardewValleyExpanded
                         Helper.Reflection.GetField<HashSet<string>>(loc, "_appliedMapOverrides").GetValue().Clear();
                         loc.loadMap(loc.mapPath.Value, true);
 
-                        (string id, Point pos)[] allshrines = 
+                        (string id, Point pos)[] allshrines =
                         {
                             new("Betrayal", new(26, 23)),
                             new("Moss", new(36, 23)),
@@ -203,17 +203,6 @@ namespace StardewValleyExpanded
             HarmonyPatch_UntimedSpecialOrders.ApplyPatch(harmony, helper, Monitor);
             HarmonyPatch_FixCommunityShortcuts.ApplyPatch(harmony, helper, Monitor);
 
-            foreach (var ctor in typeof(ShopMenu).GetConstructors())
-            {
-                if (ctor.GetParameters().Length == 0)
-                    continue;
-
-                harmony.Patch(
-                    original: ctor,
-                    postfix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.setUpShopOwner_Postfix))
-                );
-            }
-
             harmony.Patch(AccessTools.Method(typeof(GameLocation), nameof(GameLocation.addOneTimeGiftBox)),
                 prefix: new HarmonyMethod(typeof(ModEntry), nameof(FixGuildGiftBoxPatch)));
 
@@ -275,7 +264,7 @@ namespace StardewValleyExpanded
 
             if (e.NewLocation.Name == "Custom_HenchmanBackyard")
             {
-                (string id, Point pos)[] allshrines = 
+                (string id, Point pos)[] allshrines =
                 {
                     new("Betrayal", new(26, 23)),
                     new("Moss", new(36, 23)),
@@ -422,38 +411,6 @@ namespace StardewValleyExpanded
             if (dc9?.Position == new Vector2(82, 51) * Game1.tileSize)
             {
                 dc9.Position += new Vector2(1, -1) * Game1.tileSize;
-            }
-        }
-
-        public static void setUpShopOwner_Postfix(string shopId, StardewValley.Menus.ShopMenu __instance)
-        {
-            try
-            {
-                if ("Traveler".Equals(shopId) //traveler's shop (default)
-                || ("TravelerNightMarket").Equals(shopId)) //traveler's shop (night market)
-                {
-                    __instance.portraitTexture = Game1.content.Load<Texture2D>("Portraits\\Suki");
-                    if (Game1.currentLocation is DesertFestival)
-                    {
-                        __instance.portraitTexture = Game1.content.Load<Texture2D>("Portraits\\Suki_DesertFestival");
-
-                        //imitate skipped code from the original method, adding a dialogue window beneath the portrait
-                        string ppDialogue = Game1.content.LoadString("Strings\\StringsFromCSFiles:ShopMenu.cs.11457");
-                        __instance.potraitPersonDialogue = Game1.parseText(ppDialogue, Game1.dialogueFont, 304);
-                    }
-                }
-                else if (Game1.dayOfMonth == 8 && Game1.currentSeason == "winter" && (Game1.player.currentLocation.currentEvent?.isFestival ?? false)) //ice festival shop
-                {
-                    __instance.portraitTexture = Game1.content.Load<Texture2D>("Portraits\\Suki_IceFestival");
-
-                    //imitate skipped code from the original method, adding a dialogue window beneath the portrait
-                    string ppDialogue = Game1.content.LoadString("Strings\\StringsFromCSFiles:ShopMenu.cs.11457");
-                    __instance.potraitPersonDialogue = Game1.parseText(ppDialogue, Game1.dialogueFont, 304);
-                }
-            }
-            catch (Exception ex)
-            {
-                modInstance.Monitor.LogOnce($"Harmony patch \"{nameof(setUpShopOwner_Postfix)}\" has encountered an error and may not function correctly:\n{ex.ToString()}", LogLevel.Error);
             }
         }
 
