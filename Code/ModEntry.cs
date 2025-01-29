@@ -190,7 +190,6 @@ namespace StardewValleyExpanded
             ActionProperties.ApplyPatch(harmony, Monitor);
             DisableShadowAttacks.ApplyPatch(harmony, helper, Monitor);
             HarmonyPatch_Mountain.Apply(harmony, this.Monitor);
-            HarmonyPatch_CustomFishPondColors.ApplyPatch(harmony, Monitor);
             HarmonyPatch_FarmComputerLocations.ApplyPatch(harmony, Monitor);
             HarmonyPatch_PiggyBank.ApplyPatch(harmony, Monitor);
             HarmonyPatch_FixDesertBusWarp.ApplyPatch(harmony, Monitor);
