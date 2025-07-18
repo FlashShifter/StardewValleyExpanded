@@ -2,34 +2,36 @@
   <PropertyGroup>
     <AssemblyName>StardewValleyExpanded</AssemblyName>
     <RootNamespace>StardewValleyExpanded</RootNamespace>
-    <Version>1.15.0</Version>
+    <Version>1.15.11</Version>
     <TargetFramework>net6.0</TargetFramework>
     <Platforms>AnyCPU</Platforms>
     <PlatformTarget>AnyCPU</PlatformTarget>
 
     <EnableHarmony>true</EnableHarmony>
-	  <LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
     <PackageReference Include="Pathoschild.Stardew.ModTranslationClassBuilder" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="assets\Dependencies.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="i18n\default.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ContentPacks Include="../[CP] Stardew Valley Expanded" Version="$(Version)" />
+    <ContentPacks Include="../[FTM] Stardew Valley Expanded" Version="$(Version)" />
   </ItemGroup>
-	
-	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
-		<StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
-		<StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
-	</PropertyGroup>
-  
+
+  <ItemGroup>
+    <None Update="assets\Dependencies.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="i18n\default.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+    <StartProgram>$(GamePath)\StardewModdingAPI.exe</StartProgram>
+    <StartWorkingDirectory>$(GamePath)</StartWorkingDirectory>
+  </PropertyGroup>
+
   <!-- mac workaround, remove later -->
   <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
     <StartAction>Program</StartAction>
