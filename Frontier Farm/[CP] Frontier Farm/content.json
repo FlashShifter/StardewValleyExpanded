@@ -373,7 +373,7 @@
       },
       "Update": "OnLocationChange"
     },
-    //Changes player icon position on frontier Farm
+    //Changes player icon position on Frontier Farm
     {
       "Action": "EditData",
       "Target": "Data/WorldMap",
@@ -386,11 +386,14 @@
       ],
       "Entries": {
         "MapPixelArea": {
-          "X": 79,
-          "Y": 70,
-          "Width": 0,
-          "Height": 0
+          "X": 0,
+          "Y": 55,
+          "Width": 102,
+          "Height": 44
         },
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
       },
     },
     {
@@ -410,6 +413,9 @@
           "Width": 0,
           "Height": 0
         },
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
       },
     },
     /*
@@ -1235,16 +1241,16 @@
       }
     },
     //Event #1 - Functional Minecarts   <<ID tagged by quest
-    //To start quest: Player must have fixed minecarts in the valley, visited the woods at least once, and is a guild member.
+    //To start quest: Player must have fixed minecarts in the valley.
     {
       "Action": "EditData",
       "Target": "data/events/farm",
       "When": {
-        "HasSeenEvent |contains=1000034": true,
         "FarmType": "FrontierFarm",
+        "HasFlag": "ccBoilerRoom"
       },
       "Entries": {
-        "1337429/A cc_Minecart/t 600 1150/H": "continue/-500 -500/farmer 118 26 2 MarlonFay 118 27 0/pause 1200/speak MarlonFay \"{{i18n:MarlonMinecarts.01}}\"/pause 500/end"
+        "1337429/t 600 2600/H": "continue/-500 -500/farmer 118 26 2 MarlonFay 118 27 0/pause 1000/speak MarlonFay \"{{i18n:MarlonMinecarts.01}}\"/pause 500/end"
       },
     },
     //Event #2 - Functional Minecarts   <<ID tagged by framework
@@ -1255,7 +1261,7 @@
         "FarmType": "FrontierFarm",
       },
       "Entries": {
-        "1337430/e 1337429/H": "MarlonsTheme/-500 -500/MarlonFay 4 11 2 farmer 6 17 0 Gil -30 -30 0/viewport 6 12 clamp true/skippable/move farmer 0 -4 1/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1000/speak Gil \"{{i18n:GilMinecarts.05}}\"/pause 300/emote farmer 8/pause 200/speak Gil \"{{i18n:GilMinecarts.06}}\"/pause 400/jump farmer/pause 800/faceDirection MarlonFay 1 true/pause 500/speak Gil \"{{i18n:GilMinecarts.07}}\"/pause 500/globalFade/viewport -200 -200/pause 500/end dialogue MarlonFay \"{{i18n:MarlonMinecarts.02}}\""
+        "1337430/e 1337429/H": "MarlonsTheme/-500 -500/MarlonFay 4 11 2 farmer 6 17 0 Gil -30 -30 0/viewport 6 12 clamp true/skippable/move farmer 0 -4 1/move farmer 2 0 0/move farmer 0 -1 1/move farmer 1 0 1/pause 1000/speak Gil \"{{i18n:GilMinecarts.05}}\"/pause 300/emote farmer 8/pause 200/speak Gil \"{{i18n:GilMinecarts.06}}\"/pause 400/jump farmer/pause 800/faceDirection MarlonFay 1 true/pause 500/speak Gil \"{{i18n:GilMinecarts.07}}\"/pause 500/globalFade/viewport -200 -200/pause 500/end"
       },
     },
     {
@@ -1693,7 +1699,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_void_soul"
+                "AcceptedContextTags": "item_void_soul",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1704,7 +1711,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_red_slime_egg"
+                "AcceptedContextTags": "item_red_slime_egg",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1715,7 +1723,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_monster_fruit"
+                "AcceptedContextTags": "item_monster_fruit",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1726,7 +1735,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_swamp_essence"
+                "AcceptedContextTags": "item_swamp_essence",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1737,7 +1747,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_snatcher_worm"
+                "AcceptedContextTags": "item_snatcher_worm",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1748,7 +1759,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_cinder_shard"
+                "AcceptedContextTags": "item_cinder_shard",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1759,7 +1771,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_iridium_bar"
+                "AcceptedContextTags": "item_iridium_bar",
+                "MinimumCapacity": "12"
               }
             },
 			{
@@ -1770,7 +1783,8 @@
                 "DropBox": "CamillaBridgeChest",
                 "DropBoxGameLocation": "Farm",
                 "DropBoxIndicatorLocation": "10 40.2",
-                "AcceptedContextTags": "item_hardwood"
+                "AcceptedContextTags": "item_hardwood",
+                "MinimumCapacity": "12"
               }
             },
           ],
@@ -1796,9 +1810,9 @@
         "CamillaBridge_Objective_3_Text": "{{i18n:CamillaBridge.item.03}}",
         "CamillaBridge_Objective_4_Text": "{{i18n:CamillaBridge.item.04}}",
         "CamillaBridge_Objective_5_Text": "{{i18n:CamillaBridge.item.05}}",
-		"CamillaBridge_Objective_6_Text": "{{i18n:CamillaBridge.item.06}}",
-		"CamillaBridge_Objective_7_Text": "{{i18n:CamillaBridge.item.07}}",
-		"CamillaBridge_Objective_8_Text": "{{i18n:CamillaBridge.item.08}}",
+		    "CamillaBridge_Objective_6_Text": "{{i18n:CamillaBridge.item.06}}",
+		    "CamillaBridge_Objective_7_Text": "{{i18n:CamillaBridge.item.07}}",
+		    "CamillaBridge_Objective_8_Text": "{{i18n:CamillaBridge.item.08}}"
       }
     },
 	
@@ -1810,7 +1824,7 @@
       "When": {
         "FarmType": "FrontierFarm",
         "HasSeenEvent |contains=908079": true,
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "Entries": {
         "1337426/t 600 2600/w sunny": "continue/-200 -200/farmer 118 26 2/pause 10/end",
@@ -1822,7 +1836,7 @@
       "Target": "data/events/farmhouse",
       "When": {
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "Entries": {
         "1337422/e 1337426/t 600 1800/w sunny": "none/-400 -400/farmer 19 41 3 Camilla 10 41 3/ignoreEventTileOffset/changeLocation Farm/skippable/playMusic spring_day_ambient/makeInvisible 10 41 10 1/viewport 12 41 clamp true/move farmer -7 0 3/pause 500/emote farmer 8/pause 1250/speak Camilla \"{{i18n:CamillaBridge.08}}\"/pause 300/screenFlash 1/playSound wand/warp Camilla 5 41/faceDirection Camilla 1 true/pause 500/speak Camilla \"{{i18n:CamillaBridge.09}}\"/pause 1000/move farmer -2 0 3/pause 1000/speak Camilla \"{{i18n:CamillaBridge.10}}\"/pause 500/emote farmer 32/pause 500/speak Camilla \"{{i18n:CamillaBridge.11}}\"/pause 750/faceDirection Camilla 2 true/pause 500/showFrame Camilla 17/pause 200/playSound cacklingWitch/pause 650/showFrame Camilla 18/pause 500/showFrame Camilla 19/pause 600/playSound wand/screenFlash 1/warp Camilla -30 -30/pause 1500/globalFade/viewport -1000 -1000/pause 500/end",
@@ -1834,7 +1848,7 @@
       "Target": "data/events/farmhouse",
       "When": {
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": false
+	    	"InstantlyUnlockBridge": false
       },
       "Entries": {
         "1337422/e 1337426/t 1810 2600/w sunny": "none/-400 -400/farmer 19 41 3 Camilla 10 41 3/ignoreEventTileOffset/changeLocation Farm/skippable/playMusic spring_night_ambient/makeInvisible 10 41 10 1/viewport 12 41 clamp true/move farmer -7 0 3/pause 500/emote farmer 8/pause 1250/speak Camilla \"{{i18n:CamillaBridge.08}}\"/pause 300/screenFlash 1/playSound wand/warp Camilla 5 41/faceDirection Camilla 1 true/pause 500/speak Camilla \"{{i18n:CamillaBridge.09}}\"/pause 1000/move farmer -2 0 3/pause 1000/speak Camilla \"{{i18n:CamillaBridge.10}}\"/pause 500/emote farmer 32/pause 500/speak Camilla \"{{i18n:CamillaBridge.11}}\"/pause 750/faceDirection Camilla 2 true/pause 500/showFrame Camilla 17/pause 200/playSound cacklingWitch/pause 650/showFrame Camilla 18/pause 500/showFrame Camilla 19/pause 600/playSound wand/screenFlash 1/warp Camilla -30 -30/pause 1500/globalFade/viewport -1000 -1000/pause 500/end",
@@ -1847,7 +1861,7 @@
       "When": {
         "FarmType": "FrontierFarm",
         "HasFlag": "MagicBridgeRefurbish",
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "Entries": {
         "1337427/t 600 2600": "continue/-200 -200/Camilla 10 41 2/ignoreEventTileOffset/pause 1000/changeLocation Farm/animate Camilla false true 1000 18 19/viewport 10 41 clamp true/pause 2000/glow 0 0 255 true/playSound healSound/pause 1000/glow 0 255 0 false/pause 1000/playSound cacklingWitch/pause 500/glow 255 0 0 false/playSound healSound/pause 1760/glow 0 0 255 false/playSound healSound/pause 1760/glow 0 255 0 false/playSound healSound/pause 1000/globalFade/viewport -300 -300/pause 1000/end",
@@ -1867,7 +1881,7 @@
       "When": {
         "FarmType": "FrontierFarm",
         "HasSeenEvent: anyPlayer|contains=1337427": true,
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "Update": "OnLocationChange"
     },
@@ -1884,7 +1898,7 @@
       "When": {
         "FarmType": "FrontierFarm",
         "HasSeenEvent: anyPlayer|contains=1337427": true,
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "Update": "OnLocationChange"
     },
@@ -1900,7 +1914,7 @@
       },
       "When": {
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": true
+		    "InstantlyUnlockBridge": true
       },
     },
     {
@@ -1914,7 +1928,7 @@
         "Height": 8
       },
       "When": {
-		"InstantlyUnlockBridge": true
+		    "InstantlyUnlockBridge": true
       },
     },
     //Stone Storage Chest
@@ -1932,7 +1946,7 @@
         "HasSeenEvent: anyPlayer|contains=1337422": true,
         "HasFlag |contains=MagicBridgeRefurbish": false,
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": false
+	    	"InstantlyUnlockBridge": false
       },
       "Update": "OnLocationChange"
     },
@@ -1943,7 +1957,7 @@
       "When": {
         "HasSeenEvent |contains=1337427": true,
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
       "MapProperties": {
         "CanBuildHere": "T",
@@ -1954,7 +1968,7 @@
       "Target": "Maps/Custom_FerngillRepublicFrontier",
       "When": {
         "FarmType": "FrontierFarm",
-		"InstantlyUnlockBridge": true
+		    "InstantlyUnlockBridge": true
       },
       "MapProperties": {
         "CanBuildHere": "T",
@@ -1974,7 +1988,7 @@
       },
       "When": {
         "HasSeenEvent: anyPlayer|contains=1337427": false,
-		"InstantlyUnlockBridge": false
+		    "InstantlyUnlockBridge": false
       },
     },
 	{
@@ -1990,9 +2004,9 @@
       },
       "When": {
 	    "Day|contains=0,1": true,
-		"Year": 1,
-		"Season": "Spring",
-		"InstantlyUnlockBridge": true
+		  "Year": 1,
+	  	"Season": "Spring",
+	    "InstantlyUnlockBridge": true
       },
     },
 			  

@@ -23,7 +23,7 @@
           "SocialTab": "UnknownUntilMet",
           "CanSocialize": true,
           "CanVisitIsland": true,
-          "ExcludeFromIntroductionsQuest": false,
+          "IntroductionsQuest": null,
           "PerfectionScore": true,
           "EndSlideShow": "MainGroup",
           "SpouseRoom": {
@@ -1141,7 +1141,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "2000004/e 2000003/t 600 1150/f Victor 2500/w sunny": "none/-500 -500/farmer -300 -300 1 Victor -301 -301 2 MarlonFay 34 103 2 Wizard 33 106 2 Krobus 32 104 2/pause 400/skippable/viewport 59 53 true/showFrame MarlonFay 12/showFrame Wizard 18/pause 2750/playSound doorClose/warp Victor 59 52/playMusic jaunty/pause 1150/textAboveHead Victor \"{{i18n:victor10hearts.01}}\"/shake Victor 1000/pause 2000/move Victor 0 1 1/viewport move 1 0 3500 true/move Victor 7 0 0/pause 800/shake Victor 500/playSound trashcanlid/pause 800/textAboveHead Victor \"{{i18n:victor10hearts.02}}\"/pause 2000/playSound trashcanlid/shake Victor 500/pause 700/move Victor 1 0 0/pause 600/playSound openBox/shake Victor 400/pause 1200/emote Victor 8/pause 600/playSound newRecipe/pause 800/emote Victor 40/pause 700/stopMusic/emote Victor 16/pause 500/jump Victor/pause 900/speed Victor 4/move Victor -9 0 3 true/globalFade/viewport -1000 -1000/warp farmer 5 54/warp Victor 27 54/pause 750/viewport 18 54 true/move farmer 6 0 1 true/speed Victor 4/move Victor -14 0 3 true/pause 300/emote farmer 16/speak Victor \"{{i18n:victor10hearts.03}}\"/pause 500/emote farmer 8/pause 500/speed Victor 3/move Victor -1 0 3/speak Victor \"{{i18n:victor10hearts.04}}\"/emote farmer 16/speak Victor \"{{i18n:victor10hearts.05}}\"/pause 300/emote farmer 32/speak Victor \"{{i18n:victor10hearts.06}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 1 2/move farmer 1 0 0 true/pause 200/move Victor 0 0 2/pause 250/emote Victor 20 true/pause 230/emote farmer 20 true/pause 750/speed Victor 2/move Victor 6 0 0 true/move farmer 6 0 0 true/pause 200/globalFade/viewport -1000 -1000/pause 500/warp Wizard -400 -400/warp Krobus -444 -444/warp MarlonFay -433 -433/warp farmer 20 27/warp Victor 19 27/changeLocation Custom_VictorSummit/positionOffset farmer 0 12 true/viewport 19 32 clamp true/viewport move 0 -1 4000 true/pause 4500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1400/playSound SpringBirds/pause 500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 1400/speak Victor \"{{i18n:victor10hearts.07}}\"/pause 400/move farmer 0 0 3/pause 500/speak Victor \"{{i18n:victor10hearts.08}}\"/pause 400/emote farmer 20/pause 200/move Victor 0 0 1/pause 400/speak Victor \"{{i18n:victor10hearts.09}}\"/pause 100/emote Victor 20/pause 350/speak Victor \"{{i18n:victor10hearts.10}}\"/pause 200/emote farmer 32/pause 200/speak Victor \"{{i18n:victor10hearts.11}}\"/emote Victor 16/pause 100/playMusic junimoStarSong/animate farmer true true 9999999 101/showFrame Victor 28/emote farmer 20 true/emote Victor 20 true/pause 1500/viewport move 0 -1 13000 true/pause 11000/globalFade/viewport -1000 -1000/end dialogue Victor \"{{i18n:victor10hearts.12}}\"",
+        "2000004/e 2000003/t 600 1150/f Victor 2500/w sunny": "none/-500 -500/farmer -300 -300 1 Victor -301 -301 2 MarlonFay 34 103 2 Wizard 33 106 2 Krobus 32 104 2/pause 400/skippable/viewport 59 53 true/showFrame MarlonFay 12/showFrame Wizard 18/pause 2750/playSound doorClose/warp Victor 59 52/playMusic jaunty/pause 1150/textAboveHead Victor \"{{i18n:victor10hearts.01}}\"/shake Victor 1000/pause 2000/move Victor 0 1 1/viewport move 1 0 3500 true/move Victor 7 0 0/pause 800/shake Victor 500/playSound trashcanlid/pause 800/textAboveHead Victor \"{{i18n:victor10hearts.02}}\"/pause 2000/playSound trashcanlid/shake Victor 500/pause 700/move Victor 1 0 0/pause 600/playSound openBox/shake Victor 400/pause 1200/emote Victor 8/pause 600/playSound newRecipe/pause 800/emote Victor 40/pause 700/stopMusic/emote Victor 16/pause 500/jump Victor/pause 900/speed Victor 4/move Victor -9 0 3 true/globalFade/viewport -1000 -1000/warp farmer 5 54/warp Victor 27 54/pause 750/viewport 18 54 true/move farmer 6 0 1 true/speed Victor 4/move Victor -14 0 3 true/pause 300/emote farmer 16/speak Victor \"{{i18n:victor10hearts.03}}\"/pause 500/emote farmer 8/pause 500/speed Victor 3/move Victor -1 0 3/speak Victor \"{{i18n:victor10hearts.04}}\"/emote farmer 16/speak Victor \"{{i18n:victor10hearts.05}}\"/pause 300/emote farmer 32/speak Victor \"{{i18n:victor10hearts.06}}\"/pause 300/emote farmer 32/pause 300/move farmer 0 1 2/move farmer 1 0 0 true/pause 200/move Victor 0 0 2/pause 250/emote Victor 20 true/pause 230/emote farmer 20 true/pause 750/speed Victor 2/move Victor 6 0 0 true/move farmer 6 0 0 true/pause 200/globalFade/viewport -1000 -1000/pause 500/warp Wizard -400 -400/warp Krobus -444 -444/warp MarlonFay -433 -433/warp farmer 20 27/warp Victor 19 27/changeLocation Custom_VictorSummit/positionOffset farmer 0 12 true/viewport 19 32 clamp true/viewport move 0 -1 4000 true/pause 4500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 600/playSound SpringBirds/pause 1400/playSound SpringBirds/pause 500/playSound SpringBirds/pause 400/playSound SpringBirds/pause 1400/speak Victor \"{{i18n:victor10hearts.07}}\"/pause 400/faceDirection farmer 3/pause 500/speak Victor \"{{i18n:victor10hearts.08}}\"/pause 400/emote farmer 20/pause 200/move Victor 0 0 1/pause 400/speak Victor \"{{i18n:victor10hearts.09}}\"/pause 100/emote Victor 20/pause 350/speak Victor \"{{i18n:victor10hearts.10}}\"/pause 200/emote farmer 32/pause 200/speak Victor \"{{i18n:victor10hearts.11}}\"/emote Victor 16/pause 100/playMusic junimoStarSong/animate farmer true true 9999999 101/showFrame Victor 28/emote farmer 20 true/emote Victor 20 true/pause 1500/viewport move 0 -1 13000 true/pause 11000/globalFade/viewport -1000 -1000/end dialogue Victor \"{{i18n:victor10hearts.12}}\"",
       },
       /*"When": {
         "Relationship:Victor": "Dating"
@@ -1498,14 +1498,14 @@
       "Action": "EditData",
       "Target": "Data/Events/farmhouse",
       "When": {
-        "HasSeenEvent |contains=2000009": true,
-        "Weather |contains=Rain, Snow": true
+        "HasSeenEvent|contains=2000009": true,
+        "Weather|contains=Rain, Snow": true
       },
       "Entries": {
         "2000011/e 2000009/k 2000010/O Victor": "continue/-500 -500/farmer 81 17 2 Victor 90 26 2/pause 500/speak Victor \"{{i18n:event-2000011.01}}\"/pause 500/end dialogue Victor \"{{i18n:event-2000011.02}}\""
       }
     },
-    //Loads Victor's Spaghetti Dinner Table (69x45), which is a meal I totally would want to eat. Wouldn't you?
+    //Loads Victor's Spaghetti Dinner Table (69x45)
     {
       "Action": "Load", "Priority": "Low",
       "Target": "Characters/VictorSpaghettiDinnerTable",
@@ -1527,10 +1527,11 @@
       "Action": "EditData",
       "Target": "Data/Events/farm",
       "When": {
-        "Relationship:Olivia": "Dating"
+        "Relationship:Olivia": "Dating",
+        "Relationship:Victor|contains=Dating": false
       },
       "Entries": {
-        "8982810/t 800 1600": "none/-500 -500/farmer 64 15 2 Victor 64 16 0/skippable/pause 1100/speak Victor \"{{i18n:event-8982809.01}}\"/pause 200/emote farmer 16/emote farmer 40 true/pause 300/speak Victor \"{{i18n:event-8982809.02}}\"/pause 400/move Victor 0 0 1/pause 500/move Victor 0 0 0/pause 350/speak Victor \"{{i18n:event-8982809.03}}\"/end dialogue Victor \"{{i18n:event-8982809.04}}\"",
+        "8982810/t 800 1600/k 6469705": "none/-500 -500/farmer 64 15 2 Victor 64 16 0/skippable/pause 1100/speak Victor \"{{i18n:event-8982809.01}}\"/pause 200/emote farmer 16/emote farmer 40 true/pause 300/speak Victor \"{{i18n:event-8982809.02}}\"/pause 400/move Victor 0 0 1/pause 500/move Victor 0 0 0/pause 350/speak Victor \"{{i18n:event-8982809.03}}\"/end dialogue Victor \"{{i18n:event-8982809.04}}\"",
       }
     },
   ]

@@ -15,7 +15,8 @@
           "GreenRain": "{{i18n:Apples.GreenRain}}",
           "AcceptGift_(O)StardropTea": "{{i18n:Apples.GiftStardropTea}}",
           "AcceptGift_(O)Raisins": "{{i18n:Apples.Raisins}}",
-		  "AcceptGift_(O)268": "{{i18n:Apples.Gifts.Starfruit}}",
+		      "AcceptGift_(O)268": "{{i18n:Apples.Gifts.Starfruit}}",
+          "SpouseStardrop": "{{i18n:Apples.Stardrop}}",
 
           //SPRING DIALOGUE
           "Mon": "{{i18n:Apples.CharacterDialogue.005}}",
@@ -87,5 +88,25 @@
           "apples_event3": "{{i18n:Apples.CharacterDialogue.062}}",
          },
       },
+
+      {
+        "Action": "EditData",
+        "Target": "Strings/StringsFromCSFiles",
+        "When": { "Roommate": "Apples" },
+        "Entries": 
+         {
+          //Fixes various strings, which are universal for every roommate/spouse, so they sound more like Apples
+          "NPC.cs.4406": "{{i18n:Apples.FixedRoommateDialogue.001}}", 
+          "NPC.cs.4421": "{{i18n:Apples.FixedRoommateDialogue.002}}", 
+          "NPC.cs.4422": "{{i18n:Apples.FixedRoommateDialogue.003}}", 
+          "NPC.cs.4423": "{{i18n:Apples.FixedRoommateDialogue.004}}", 
+          "NPC.cs.4424": "{{i18n:Apples.FixedRoommateDialogue.005}}", 
+          "NPC.cs.4432": "{{i18n:Apples.FixedRoommateDialogue.006}}",
+          "NPC.cs.4433": "{{i18n:Apples.FixedRoommateDialogue.007}}",
+          "NPC.cs.4463": "{{i18n:Apples.FixedRoommateDialogue.008}}",
+          "MultiplePetBowls_watered": "{{i18n:Apples.FixedRoommateDialogue.009}}",
+         },
+      },
+
     ]
 }
