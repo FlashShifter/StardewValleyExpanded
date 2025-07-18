@@ -3,6 +3,7 @@
         {
             "Action": "EditData",
             "Target": "Data/Shops",
+            "Priority": "Early - 100",
             "TargetField": [
                 "Traveler",
                 "Items"
@@ -144,83 +145,70 @@
                     "StackModifierMode": "Stack",
                     "QualityModifierMode": "Stack",
                   },
+               },
             },
-            
-        },
-		{
+		       {
+                    "Action": "EditData",
+                    "Target": "Data/Shops",
+                    "TargetField": [
+                    "Festival_FestivalOfIce_TravelingMerchant",
+                    "Items"
+                ],
+                "Entries": {
+                    "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar": {
+                        "Id": "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar",
+                        "ItemId": "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar",
+                        "Price": 12000,
+    					"IsRecipe": true,
+                    },
+                },
+            },
+    
+          {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Traveler",
+                "Owners",
+                "AnyOrNone"
+            ],
+            "Entries": {
+              "Portrait": "Portraits/Suki"
+            }
+          },
+          {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Traveler",
+                "Owners",
+            ],
+            "Entries": {
+              "FlashShifter.StardewValleyExpandedCP_DesertOpen": {
+                "Id": "{{ModId}}_DesertOpen",
+                "Condition": "IS_PASSIVE_FESTIVAL_TODAY DesertFestival",
+                "Portrait": "Portraits/Suki_DesertFestival",
+                "Name": "AnyOrNone"
+              }
+            },
+            "MoveEntries": [
+              {
+                "Id": "{{ModId}}_DesertOpen",
+                "BeforeID": "AnyOrNone"
+              }
+            ]
+          },
+          {
             "Action": "EditData",
             "Target": "Data/Shops",
             "TargetField": [
                 "Festival_FestivalOfIce_TravelingMerchant",
-                "Items"
+                "Owners",
+                "AnyOrNone"
             ],
             "Entries": {
-                "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar": {
-                    "Id": "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar",
-                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar",
-                    "Price": 12000,
-					"IsRecipe": true,
-                },
-            },
+              "Portrait": "Portraits/Suki_IceFestival"
+            }
         },
-      // Suki Portraits
-      {
-        "Action": "EditData",
-        "Target": "Data/Shops",
-        "TargetField": [
-            "Traveler",
-            "Owners",
-            "AnyOrNone"
-        ],
-        "Entries": {
-          "Portrait": "Portraits/Suki"
-        }
-      },
-      {
-        "Action": "EditData",
-        "Target": "Data/Shops",
-        "TargetField": [
-            "Traveler",
-            "Owners",
-            "AnyOrNone"
-        ],
-        "Entries": {
-          "Portrait": "Portraits/Suki"
-        }
-      },
-      {
-        "Action": "EditData",
-        "Target": "Data/Shops",
-        "TargetField": [
-            "Traveler",
-            "Owners",
-        ],
-        "Entries": {
-          "FlashShifter.StardewValleyExpandedCP_DesertOpen": {
-            "Id": "FlashShifter.StardewValleyExpandedCP_DesertOpen",
-            "Condition": "IS_PASSIVE_FESTIVAL_TODAY DesertFestival",
-            "Portrait": "Portraits/Suki_DesertFestival",
-            "Name": "AnyOrNone"
-          }
-        },
-        "MoveEntries": [
-          {
-            "Id": "FlashShifter.StardewValleyExpandedCP_DesertOpen",
-            "BeforeID": "AnyOrNone"
-          }
-        ]
-      },
-      {
-        "Action": "EditData",
-        "Target": "Data/Shops",
-        "TargetField": [
-            "Festival_FestivalOfIce_TravelingMerchant",
-            "Owners",
-            "AnyOrNone"
-        ],
-        "Entries": {
-          "Portrait": "Portraits/Suki_IceFestival"
-        }
-      },
     ]
 }

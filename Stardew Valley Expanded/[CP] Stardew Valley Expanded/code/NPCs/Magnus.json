@@ -24,7 +24,7 @@
             "Wizard",
             3
           ],
-          "Value": "FlashShifter.StardewValleyExpandedCP_Swamp_Essence FlashShifter.StardewValleyExpandedCP_Stone_of_Yoba FlashShifter.StardewValleyExpandedCP_Gold_Carrot FlashShifter.StardewValleyExpandedCP_Water_Grub FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Radioactive_Bass FlashShifter.StardewValleyExpandedCP_Poison_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lunaloo FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Baby_Lunaloo",
+          "Value": "FlashShifter.StardewValleyExpandedCP_Frog FlashShifter.StardewValleyExpandedCP_Swamp_Essence FlashShifter.StardewValleyExpandedCP_Stone_of_Yoba FlashShifter.StardewValleyExpandedCP_Gold_Carrot FlashShifter.StardewValleyExpandedCP_Water_Grub FlashShifter.StardewValleyExpandedCP_Smelly_Rafflesia FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Rusty_Blade FlashShifter.StardewValleyExpandedCP_Red_Baneberry FlashShifter.StardewValleyExpandedCP_Radioactive_Bass FlashShifter.StardewValleyExpandedCP_Poison_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Mushroom FlashShifter.StardewValleyExpandedCP_Monster_Fruit FlashShifter.StardewValleyExpandedCP_Meteor_Carp FlashShifter.StardewValleyExpandedCP_Lunaloo FlashShifter.StardewValleyExpandedCP_Kittyfish FlashShifter.StardewValleyExpandedCP_Goldenfish FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Baby_Lunaloo",
           "Delimiter": " "
         }
         /*Dislike*/ ,
@@ -430,7 +430,23 @@
         "marriage_Sat": "1000 Town 26 29 0",
       },
     },
-    //**end marriage dialogue
+	
+	{
+      "LogName": "Wizard basement event tagged as seen",
+      "Action": "EditData",
+      "Target": "data/TriggerActions",
+      "Entries": {
+        "{{ModID}}_WizardBasementEvent": {
+          "Id": "{{ModID}}_WizardBasementEvent",
+          "Trigger": "LocationChanged",
+          "Condition": "ANY \"YEAR 2\" \"PLAYER_HAS_SEEN_EVENT Current 418172\"",
+          "Actions": [
+            "MarkEventSeen Current 1000035"
+          ]
+        }
+      }
+    },
+	
     { //WIZARD EVENT - 'The Basement'
       "Action": "EditData",
       "Target": "data/events/Custom_WizardBasement",

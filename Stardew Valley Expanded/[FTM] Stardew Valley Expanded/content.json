@@ -12,87 +12,6 @@
             "Contents": [
               {
                 "Category": "Weapon",
-                "Name": "Diamond Wand"
-              }
-            ]
-          }
-        ],
-        "SummerItemIndex": [
-          {
-            "Category": "Chest",
-            "Contents": [
-              {
-                "Category": "Weapon",
-                "Name": "Diamond Wand"
-              }
-            ]
-          }
-        ],
-        "FallItemIndex": [
-          {
-            "Category": "Chest",
-            "Contents": [
-              {
-                "Category": "Weapon",
-                "Name": "Diamond Wand"
-              }
-            ]
-          }
-        ],
-        "WinterItemIndex": [
-          {
-            "Category": "Chest",
-            "Contents": [
-              {
-                "Category": "Weapon",
-                "Name": "Diamond Wand"
-              }
-            ]
-          }
-        ],
-        "UniqueAreaID": "Diamond Wand Chest",
-        "MapName": "Custom_HighlandsOutpost",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "12,6;12,6"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "None",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": null,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {
-            "HasSeenEvent": "65360187",
-            "HasSeenEvent|contains=67363138": "false"
-          },
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
-        },
-        "DaysUntilSpawnsExpire": 9001
-      },
-      {
-        "SpringItemIndex": [
-          {
-            "Category": "Chest",
-            "Contents": [
-              {
-                "Category": "Weapon",
                 "Name": "Monster Splitter"
               }
             ]
@@ -10838,54 +10757,6 @@
       },
       {
         "ObjectTypes": [
-          "Stump"
-        ],
-        "FindExistingObjectLocations": false,
-        "PercentExtraSpawnsPerSkillLevel": 0,
-        "RelatedSkill": "Foraging",
-        "UniqueAreaID": "Woods Stump Spawns",
-        "MapName": "Woods",
-        "MinimumSpawnsPerDay": 9,
-        "MaximumSpawnsPerDay": 9,
-        "IncludeTerrainTypes": [],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "32,49;32,49",
-          "54,59;54,59",
-          "57,51;57,51",
-          "63,30;63,30",
-          "66,24;66,24",
-          "63,9;63,9",
-          "69,8;69,8",
-          "38,21;38,21",
-          "49,13;49,13"
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": null,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "ObjectTypes": [
           "Log"
         ],
         "FindExistingObjectLocations": false,
@@ -11180,7 +11051,9 @@
           "96,98;53,63",
           "97,52;36,9"
         ],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "99,14;93,12"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -11228,7 +11101,9 @@
           "142,102;97,32",
           "97,52;36,9"
         ],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "99,14;93,12"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -11276,7 +11151,9 @@
           "51,92;8,49",
           "97,52;36,9"
         ],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "99,14;93,12"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -12010,6 +11887,8 @@
               "Damage": 60,
               "DodgeChance": 25,
               "ExtraLoot": true,
+              "StunImmunity": true,
+              "InstantKillImmunity": true,
               "Loot": [
                 "Mega Purple Mushroom",
                 422,
@@ -16927,6 +16806,8 @@
               "Damage": 100,
               "DodgeChance": 25,
               "ExtraLoot": false,
+              "StunImmunity": true,
+              "InstantKillImmunity": true,
               "Loot": [
                 "Galdoran Gem",
                 "Magic Lamp",
@@ -17574,13 +17455,16 @@
       {
         "MonsterTypes": [
           {
-            "MonsterName": "Wilderness Golem",
+            "MonsterName": "iridium golem",
             "Settings": {
               "HP": 10000,
               "Damage": 80,
               "SpawnWeight": 1,
               "DodgeChance": 25,
+              "SightRange": 8,
               "ExtraLoot": false,
+              "StunImmunity": true,
+              "InstantKillImmunity": true,
               "Loot": [
                 "Gold Slime Egg",
                 413,

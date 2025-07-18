@@ -1,0 +1,210 @@
+{
+    "Changes": [
+
+        //Marnie's buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/CheeseMastery",
+            "FromFile": "Assets/Items/Powers/CheeseMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_CheeseMastery": {
+                   "DisplayName": "{{i18n:power.cheese-mastery.name}}",
+                   "Description": "{{i18n:power.cheese-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\CheeseMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 1000026",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Andy's buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/StrawberryMastery",
+            "FromFile": "Assets/Items/Powers/StrawberryMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_StrawberryMastery": {
+                   "DisplayName": "{{i18n:power.strawberry-mastery.name}}",
+                   "Description": "{{i18n:power.strawberry-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\StrawberryMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 5407915",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Sophia's buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/GrapeMastery",
+            "FromFile": "Assets/Items/Powers/GrapeMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "When": {
+                "Spouse": "Sophia"
+            },
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_GrapeMastery": {
+                   "DisplayName": "{{i18n:power.grape-mastery.name}}",
+                   "Description": "{{i18n:power.grape-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\GrapeMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 8185300",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Susan's buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/BrewingMastery",
+            "FromFile": "Assets/Items/Powers/BrewingMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_BrewingMastery": {
+                   "DisplayName": "{{i18n:power.brewing-mastery.name}}",
+                   "Description": "{{i18n:power.brewing-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\BrewingMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 5407917",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Susan's buff 2
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/CraftingMastery",
+            "FromFile": "Assets/Items/Powers/CraftingMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_CraftingMastery": {
+                   "DisplayName": "{{i18n:power.crafting-mastery.name}}",
+                   "Description": "{{i18n:power.crafting-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\CraftingMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 1000083",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Apples' buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/StarfruitMastery",
+            "FromFile": "Assets/Items/Powers/StarfruitMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "When": {
+                "ApplesHere": true
+            },
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_StarfruitMastery": {
+                   "DisplayName": "{{i18n:power.starfruit-mastery.name}}",
+                   "Description": "{{i18n:power.starfruit-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\StarfruitMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 7776009",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Morgan's 10 heart buff
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/AnimalMastery",
+            "FromFile": "Assets/Items/Powers/AnimalMastery.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_AnimalMastery": {
+                   "DisplayName": "{{i18n:power.animal-mastery.name}}",
+                   "Description": "{{i18n:power.animal-mastery.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\AnimalMastery",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 5978939",
+                   "CustomFields": null
+                }
+            }
+        },
+
+        //Enchanted Grove
+        {
+            "Action": "Load",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/WarpMagic",
+            "FromFile": "Assets/Items/Powers/WarpMagic.png",
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                 "FlashShifter.StardewValleyExpanded_WarpMagic": {
+                   "DisplayName": "{{i18n:power.warp-magic.name}}",
+                   "Description": "{{i18n:power.warp-magic.description}}",
+                   "TexturePath": "Mods\\FlashShifter.StardewValleyExpandedCP\\WarpMagic",
+                   "TexturePosition": {
+                      "X": 0,
+                      "Y": 0
+                    },
+                   "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Any 908072",
+                   "CustomFields": null
+                }
+            }
+        }
+    ]
+}
