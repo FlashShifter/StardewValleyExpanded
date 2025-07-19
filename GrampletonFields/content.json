@@ -1,6 +1,14 @@
 ﻿{
-  "Format": "2.0",
+  "Format": "2.7.0",
+  "DynamicTokens": [
+    {
+      "Name": "MainModId",
+      "Value": "FlashShifter.StardewValleyExpandedCP"
+    }
+  ],
+
   "Changes": [
+    // add map
     {
       "Action": "Load",
       "Target": "Maps/Custom_GrampletonFields",
@@ -9,8 +17,8 @@
         "GrampletonFields"
       ]
     },
-    
-  
+
+    // add location
     {
       "Action": "EditData",
       "Target": "Data/Locations",
@@ -32,32 +40,32 @@
           "CanPlantHere": true,
           "ArtifactSpots": [
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)109",
+              "Id": "{{MainModId}}_(O)109",
               "ItemID": "(O)109",
               "Chance": 0.21
             },
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)114",
+              "Id": "{{MainModId}}_(O)114",
               "ItemID": "(O)114",
               "Chance": 0.25
             },
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)115",
+              "Id": "{{MainModId}}_(O)115",
               "ItemID": "(O)115",
               "Chance": 0.32
             },
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)119",
+              "Id": "{{MainModId}}_(O)119",
               "ItemID": "(O)119",
               "Chance": 1
             },
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)120",
+              "Id": "{{MainModId}}_(O)120",
               "ItemID": "(O)120",
               "Chance": 0.4
             },
             {
-              "Id": "FlashShifter.StardewValleyExpandedCP_(O)121",
+              "Id": "{{MainModId}}_(O)121",
               "ItemID": "(O)121",
               "Chance": 0.31
             },
@@ -65,28 +73,16 @@
         },
       }
     },
-	
-	{
-      "Action": "Load", "Priority": "Low",
-      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/spring_GrampletonFields",
-      "FromFile": "assets/spring_GrampletonFields.png"
-    },
+
+    // add tilesheets
     {
-      "Action": "Load", "Priority": "Low",
-      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/summer_GrampletonFields",
-      "FromFile": "assets/summer_GrampletonFields.png"
+      "Action": "Load",
+      "Priority": "Low",
+      "Target": "Mods/{{MainModId}}/spring_GrampletonFields, Mods/{{MainModId}}/summer_GrampletonFields, Mods/{{MainModId}}/fall_GrampletonFields, Mods/{{MainModId}}/winter_GrampletonFields",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    {
-      "Action": "Load", "Priority": "Low",
-      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/fall_GrampletonFields",
-      "FromFile": "assets/fall_GrampletonFields.png"
-    },
-    {
-      "Action": "Load", "Priority": "Low",
-      "Target": "Mods/FlashShifter.StardewValleyExpandedCP/winter_GrampletonFields",
-      "FromFile": "assets/winter_GrampletonFields.png"
-    },
-	
+
+    // add world map
     {
       "Action": "EditData",
       "Target": "Data/WorldMap",
@@ -95,14 +91,14 @@
           "BaseTexture": [
             {
               "Id": "Custom_GrampletonFields",
-              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\spring_GrampletonFields",
+              "Texture": "Mods\\{{MainModId}}\\spring_GrampletonFields",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
                 "Height": 180
               },
-			  "MapPixelArea": {
+              "MapPixelArea": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
@@ -112,14 +108,14 @@
             },
             {
               "Id": "Custom_GrampletonFields",
-              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\summer_GrampletonFields",
+              "Texture": "Mods\\{{MainModId}}\\summer_GrampletonFields",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
                 "Height": 180
               },
-			  "MapPixelArea": {
+              "MapPixelArea": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
@@ -129,14 +125,14 @@
             },
             {
               "Id": "Custom_GrampletonFields",
-              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\fall_GrampletonFields",
+              "Texture": "Mods\\{{MainModId}}\\fall_GrampletonFields",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
                 "Height": 180
               },
-			  "MapPixelArea": {
+              "MapPixelArea": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
@@ -146,14 +142,14 @@
             },
             {
               "Id": "Custom_GrampletonFields",
-              "Texture": "Mods\\FlashShifter.StardewValleyExpandedCP\\winter_GrampletonFields",
+              "Texture": "Mods\\{{MainModId}}\\winter_GrampletonFields",
               "SourceRect": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
                 "Height": 180
               },
-			  "MapPixelArea": {
+              "MapPixelArea": {
                 "X": 0,
                 "Y": 0,
                 "Width": 300,
@@ -231,5 +227,19 @@
         },
       },
     },
+
+    // add to Central Station if it's installed
+    {
+      "Action": "EditData",
+      "Target": "Mods/Pathoschild.CentralStation/Stops",
+      "Entries": {
+        "{{MainModId}}_GrampletonFields": {
+          "DisplayName": "{{i18n: Grampleton_Fields}}",
+          "ToLocation": "Custom_GrampletonFields",
+          "Network": "Train",
+          "ToTile": { "X": 94, "Y": 9 }
+        }
+      }
+    }
   ]
 }
