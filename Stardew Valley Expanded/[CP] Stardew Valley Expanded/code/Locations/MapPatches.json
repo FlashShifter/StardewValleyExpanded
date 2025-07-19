@@ -1736,7 +1736,7 @@
           { //Patches Grampleton Fields warp in wizard tower
                "Action": "EditMap",
                "Target": "Maps/Custom_WizardBasement",
-               "FromFile": "Assets/Maps/MapPatches/WizardBasement_GrampletonFields.tbin",
+               "FromFile": "Assets/Maps/MapPatches/WizardBasement_GrampletonFields.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields"
                },
@@ -1777,7 +1777,7 @@
           { //Removes warping ability until players see wizard basement event
                "Action": "EditMap",
                "Target": "Maps/Custom_GrampletonFields",
-               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_NoWarp.tbin",
+               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_NoWarp.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
                     "HasSeenEvent: anyPlayer|contains=1000035": false
@@ -1808,7 +1808,7 @@
           { //Patches Grampleton Fields railroad tracks warp
                "Action": "EditMap",
                "Target": "Maps/Railroad",
-               "FromFile": "Assets/Maps/MapPatches/Railroad_GrampletonFields.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Railroad_GrampletonFields.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields"
                },
@@ -1822,9 +1822,10 @@
           { //Patches Grampleton Fields railroad tracks warp
                "Action": "EditMap",
                "Target": "Maps/Railroad",
-               "FromFile": "Assets/Maps/MapPatches/Railroad2_GrampletonFields.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Railroad2_GrampletonFields.tmx",
                "When": {
-                    "HasMod": "flashshifter.GrampletonFields"
+                    "HasMod": "flashshifter.GrampletonFields",
+                    "HasMod |contains=Pathoschild.CentralStation": false
                },
                "ToArea": {
                     "X": 30,
@@ -1836,7 +1837,7 @@
           { //Patches Grampleton Fields railroad machine false until summer 3 year 1
                "Action": "EditMap",
                "Target": "Maps/Custom_GrampletonFields",
-               "FromFile": "Assets/Maps/MapPatches/Railroad3_GrampletonFields.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Railroad3_GrampletonFields.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
                     "query: {{DaysPlayed}} >=31": false
@@ -1851,7 +1852,7 @@
           { //Removes Grampleton Fields railroad entrnace until summer 3 year 1
                "Action": "EditMap",
                "Target": "Maps/Custom_GrampletonFields",
-               "FromFile": "Assets/Maps/MapPatches/Railroad4_GrampletonFields.tbin",
+               "FromFile": "Assets/Maps/MapPatches/Railroad4_GrampletonFields.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields",
                     "query: {{DaysPlayed}} >=31": false
@@ -1866,7 +1867,7 @@
           { //Patches Grampleton Fields beach boat
                "Action": "EditMap",
                "Target": "Maps/Beach",
-               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_Beach.tbin",
+               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_Beach.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields"
                },
@@ -1880,7 +1881,7 @@
           { //Patches Grampleton Fields night market boat
                "Action": "EditMap",
                "Target": "Maps/Beach-NightMarket",
-               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_Beach.tbin",
+               "FromFile": "Assets/Maps/MapPatches/GrampletonFields_Beach.tmx",
                "When": {
                     "HasMod": "flashshifter.GrampletonFields"
                },
