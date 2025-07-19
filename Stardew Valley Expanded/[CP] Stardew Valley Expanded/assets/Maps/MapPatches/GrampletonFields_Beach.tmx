@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="4" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+ <properties>
+  <property name="Arch" value="116 .005 117 .003 118 .02 126 .0001"/>
+  <property name="DayTiles" value="Front 44 31 369 Front 90 35 369"/>
+  <property name="Debris" value="8 .025 4 6 .008 4"/>
+  <property name="Fall_Objects" value="372 .9 382 .6"/>
+  <property name="Fish" value="128 .08 129 .2 130 .1 131 .2 146 .15 147 .2 148 .18 149 .12 150 .2 151 .18 152 .25 154 .15 155 .08 166 .001"/>
+  <property name="Light" value="44 33 4 90 35 4 44 32 6 90 36 6"/>
+  <property name="NightTiles" value="Front 44 31 368 Front 90 35 368"/>
+  <property name="Outdoors" value="T"/>
+  <property name="Spring_Objects" value="372 .9"/>
+  <property name="Summer_Objects" value="372 .9 394 .5"/>
+  <property name="Warp" value="37 -1 Town 54 108 38 -1 Town 54 108 39 -1 Town 54 108 40 -1 Town 54 108"/>
+  <property name="Winter_Objects" value="392 .8"/>
+ </properties>
+ <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths.png" width="64" height="256"/>
+ </tileset>
+ <tileset firstgid="65" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="527" columns="17">
+  <image source="spring_beach.png" width="272" height="496"/>
+ </tileset>
+ <tileset firstgid="592" name="z_SVEbuildingShadow" tilewidth="16" tileheight="16" tilecount="600" columns="24">
+  <image source="z_SVEbuildingShadow.png" width="384" height="400"/>
+ </tileset>
+ <tileset firstgid="1192" name="zspring_z_extras" tilewidth="16" tileheight="16" tilecount="6400" columns="25">
+  <image source="spring_z_extras.png" width="400" height="4096"/>
+ </tileset>
+ <layer id="1" name="Back" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+  </properties>
+  <data encoding="csv">
+554,140,140,140,
+556,140,140,140
+</data>
+ </layer>
+ <layer id="2" name="Back2" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Buildings" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+  </properties>
+  <data encoding="csv">
+0,555,0,0,
+0,572,0,0
+</data>
+ </layer>
+ <layer id="4" name="Buildings2" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="csv">
+0,4446,4447,4448,
+0,4471,4472,4473
+</data>
+ </layer>
+ <layer id="5" name="Front" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="Paths" width="4" height="2">
+  <properties>
+   <property name="@Description" value=""/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+</map>
