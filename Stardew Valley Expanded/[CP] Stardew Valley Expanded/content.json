@@ -493,6 +493,12 @@
       },
     },
     ///////////
+
+    // use Central Station instead of custom warps/patches if it's installed
+    {
+      "Name": "UseCentralStation",
+      "Value": "{{HasMod |contains=Pathoschild.CentralStation}}"
+    }
   ],
   //NEW LOCATIONS
   "CustomLocations": [
@@ -1521,7 +1527,7 @@
     },
     {
       "Action": "Include",
-      "FromFile": "code/other/jukebox.json, code/items/Boots.json, code/other/Bundles.json, code/other/music.json, code/other/FarmAnimals.json, code/other/mail.json, code/locations/Critters.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/GarbageCans.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/other/Strings.json, code/Locations/MapPatches.json, code/Other/Monsters.json, code/other/Fish.json, code/other/IncomingPhoneCalls.json, code/other/Buildings.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json, code/Locations/CJBWarps.json"
+      "FromFile": "code/other/CentralStation.json, code/other/jukebox.json, code/items/Boots.json, code/other/Bundles.json, code/other/music.json, code/other/FarmAnimals.json, code/other/mail.json, code/locations/Critters.json, code/Locations/Summit.json, code/Other/CompatPatches.json, code/Other/GarbageCans.json, code/Other/Construction.json, code/Locations/Galdora.json, code/Other/Craftables.json, code/other/Strings.json, code/Locations/MapPatches.json, code/Other/Monsters.json, code/other/Fish.json, code/other/IncomingPhoneCalls.json, code/other/Buildings.json, code/Locations/edits.json, code/Locations/sleeptiles.json, code/Locations/NPCMapLocationTracking.json, code/Locations/LocationsData.json, code/Locations/WorldMap.json, code/Locations/CJBWarps.json"
     },
     {
       "Action": "Include",
