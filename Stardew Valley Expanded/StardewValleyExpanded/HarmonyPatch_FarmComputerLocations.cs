@@ -80,9 +80,13 @@ public static class HarmonyPatch_FarmComputerLocations
     public static List<string> GreenhouseLocations = ["Custom_GrandpasShedGreenhouse"];
 
     /// <summary>Adds any extra farm locations' crops to this method's total.</summary>
+    /// <param name="__instance">The calling location instance.</param>
     /// <param name="__result">The result of the original method.</param>
-    private static void Farm_getTotalCrops(ref int __result)
+    private static void Farm_getTotalCrops(GameLocation __instance, ref int __result)
     {
+        if (__instance is not Farm)
+            return;
+
         try
         {
             foreach (string name in FarmLocations) // for each extra farm location
@@ -114,9 +118,13 @@ public static class HarmonyPatch_FarmComputerLocations
     }
 
     /// <summary>Adds any extra farm locations' crops to this method's total.</summary>
+    /// <param name="__instance">The calling location instance.</param>
     /// <param name="__result">The result of the original method.</param>
-    private static void Farm_getTotalCropsReadyForHarvest(ref int __result)
+    private static void Farm_getTotalCropsReadyForHarvest(GameLocation __instance, ref int __result)
     {
+        if (__instance is not Farm)
+            return;
+
         try
         {
             foreach (string name in FarmLocations) // for each extra farm location
@@ -148,9 +156,13 @@ public static class HarmonyPatch_FarmComputerLocations
     }
 
     /// <summary>Adds any extra farm locations' crops to this method's total.</summary>
+    /// <param name="__instance">The calling location instance.</param>
     /// <param name="__result">The result of the original method.</param>
-    private static void Farm_getTotalUnwateredCrops(ref int __result)
+    private static void Farm_getTotalUnwateredCrops(GameLocation __instance, ref int __result)
     {
+        if (__instance is not Farm)
+            return;
+
         try
         {
             foreach (string name in FarmLocations) // for each extra farm location
@@ -182,9 +194,13 @@ public static class HarmonyPatch_FarmComputerLocations
     }
 
     /// <summary>Adds any extra farm locations' crops to this method's total.</summary>
+    /// <param name="__instance">The calling location instance.</param>
     /// <param name="__result">The result of the original method.</param>
-    private static void Farm_getTotalOpenHoeDirt(ref int __result)
+    private static void Farm_getTotalOpenHoeDirt(GameLocation __instance, ref int __result)
     {
+        if (__instance is not Farm)
+            return;
+
         try
         {
             foreach (string name in FarmLocations) // for each extra farm location
@@ -216,9 +232,13 @@ public static class HarmonyPatch_FarmComputerLocations
     }
 
     /// <summary>Adds any extra greenhouse locations' crops to this method's total.</summary>
+    /// <param name="__instance">The calling location instance.</param>
     /// <param name="__result">The result of the original method.</param>
-    private static void Farm_getTotalGreenhouseCropsReadyForHarvest(ref int? __result)
+    private static void Farm_getTotalGreenhouseCropsReadyForHarvest(GameLocation __instance, ref int? __result)
     {
+        if (__instance is not Farm)
+            return;
+
         try
         {
             foreach (string name in GreenhouseLocations) // for each extra greenhouse location
